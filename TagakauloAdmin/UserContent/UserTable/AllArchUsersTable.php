@@ -5,13 +5,14 @@
                 <h3 class="box-title">All user List</h3>
             </div>
             <!-- /.box-header -->
-
+            <!-- Add Button
             <div class="container-fluid">
                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
                     <i class="fa fa-plus"></i> <span> Add User</span>
                 </button>
             </div>
             <br>
+-->
             <div class="modal fade" id="add-user">
                 <div class="modal-dialog">
                     <div class="modal-content">

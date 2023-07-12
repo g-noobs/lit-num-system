@@ -57,7 +57,7 @@
 }
 
 .custom-dropdown-menu li.divider {
-    margin: 5px 0;
+    margin: 3px 0;
     border-top: 1px solid #ccc;
 }
 
@@ -117,6 +117,7 @@
                                     <li><a href="#" data-user-type="teacher">Teacher</a></li>
                                     <li><a href="#" data-user-type="learner">Learner</a></li>
 
+                                    <li class="divider"></li>
                                 
                                     <li><a href="#" data-user-type="arch-all"><b>All Archive Users</b></a></li>
                                     <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a></li>
@@ -177,6 +178,7 @@
                 <?php include_once("../UserContent/UserTable/AllUserTableContent.php");?>
             </section>
         </div>
+    </div>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
         <?php include_once("../UserContent/CommonUser/JQueryUser.php");?>
