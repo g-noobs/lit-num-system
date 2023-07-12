@@ -11,9 +11,7 @@
                     <i class="fa fa-plus"></i> <span> Add User</span>
                 </button>
             </div>
-
             <br>
-
             <?php include_once "../UserContent/CommonUser/ModalClass.php";
                 $btnName = "Update";
                 $editActive = new ModalClass();

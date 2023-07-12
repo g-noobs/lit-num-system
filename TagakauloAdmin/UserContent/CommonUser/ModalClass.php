@@ -23,7 +23,6 @@ class ModalClass{
                                 <div class="form-group">
                                     <label for="gender">Select Gender:</label>
                                     <select class="form-control" name="gender" placeholder="Gender">
-                                    <option value = "" selected disabled hidden>Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>None</option>
@@ -40,7 +39,7 @@ class ModalClass{
                                         placeholder="Birthdate">
                                 </div>
                                 <div class="form-group">
-                                    <label for="user">Select Type of User:</label>
+                                    <label for="user">Select Type of Admin:</label>
                                     <input type="hidden" name="user" value="'. $value .'">
                                     <input type="text" readonly name="user" class="form-control" value="'. $value .'">
                                 </div>
@@ -72,7 +71,7 @@ class ModalClass{
                                 <form role="form" action="../UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
                                     <div class="form-group">
                                         <input type="text" name="userId" class="form-control" style="display: none;">
-                                        <button type="submit" class="btn btn-danger pull-left btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+                                        <button type="submit" class="btn btn-danger pull-left">Archive</button>
                                     </div>
                                 </form>
                             </div>
@@ -80,7 +79,6 @@ class ModalClass{
                                 <div class="modal-body">
                                     <div class="box-body">
                                         <div class="form-group">
-                                        <label for="name">User ID:</label>
                                             <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
                                         </div>
                                         <div class="form-group">
@@ -89,7 +87,6 @@ class ModalClass{
                                                 placeholder="Name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="gender">Select a gender:</label>
                                             <select class="form-control" name="gender" placeholder="Gender">
                                                 <option>Male</option>
                                                 <option>Female</option>
@@ -97,16 +94,13 @@ class ModalClass{
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="email">Enter Email:</label>
                                             <input type="email" name="email" class="form-control" id="exampleInputPassword1"
                                                 placeholder="Email">
                                         </div>
                                         <div class="form-group">
-                                            <label for="date">Choose a Date:</label>
                                             <input type="date" name="date" class="form-control" id="exampleInputPassword1">
                                         </div>
                                         <div class="form-group">
-                                            <label for="user">Type of user:</label>
                                             <select class="form-control" name="user" placeholder="User Type">
                                                 <option>Admin</option>
                                                 <option>Teacher</option>
@@ -144,31 +138,25 @@ class ModalClass{
                             <div class="modal-body">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="name">Enter Name:</label>
                                         <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                                             placeholder="Name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="gender">Select Gender:</label>
                                         <select class="form-control" name="gender" placeholder="Gender">
-                                            <option value = "" selected disabled hidden>Gender</option>
                                             <option>Male</option>
                                             <option>Female</option>
                                             <option>None</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Enter Email Address:</label>
                                         <input type="email" name="email" class="form-control" id="exampleInputPassword1"
                                             placeholder="Email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="date">Select Birthday:</label>
                                         <input type="date" name="date" class="form-control" id="exampleInputPassword1"
                                             placeholder="Birthdate">
                                     </div>
                                     <div class="form-group">
-                                        <label for="user">Select Type of User:</label>
                                         <select class="form-control" name="user" placeholder="User Type">
                                             <option>Admin</option>
                                             <option>Teacher</option>
@@ -224,7 +212,7 @@ class ModalClass{
                                 <form role="form" action="../UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
                                     <div class="form-group">
                                         <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
-                                        <button type="submit" class="btn btn-danger pull-left">Archive</button>
+                                        <button type="submit" class="btn btn-danger pull-left">Activate</button>
                                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </form>

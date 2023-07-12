@@ -13,11 +13,7 @@ class ValidateCredsClass extends Connection{
         if ($result && mysqli_num_rows($result) > 0){
            
             while($row = $result->fetch_assoc()){
-<<<<<<< HEAD
-                $_SESSION['user_id'] = $row['user_info_id'];               
-=======
                 
->>>>>>> f2374b2bea1531c30fcedf77fcc3b5d7dd370b80
                 $_SESSION['name'] = $row['name'];
                 
             }
