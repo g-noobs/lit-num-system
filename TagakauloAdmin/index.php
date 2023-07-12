@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+<?php session_start(); $_SESSION['loggedin'] = false; ?>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE | Log in</title>
+  <title>Authentication</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -36,13 +37,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Welcome!</p>
 
-    <form action="pages/dashboard.php" method="post">
+    <form action="ActionValidateUser.php" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username">
+        <input type="text" name="username" class="form-control" placeholder="Username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" name="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -78,9 +79,9 @@
 <script>
   $(function () {
     $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
+      checkboxClass: 'icheckbox_square-yellow',
       radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
+      increaseArea: '25%' /* optional */
     });
   });
 </script>

@@ -8,6 +8,20 @@ class AddDeleteClass extends Connection{
         parent :: __construct();
     }
 
+    function addMany($sql){
+        $result = $this->conn->multi_query($sql);
+            if($result=== TRUE){
+                $this->message = "Data updated successfully.";
+                $this->class = "success";
+            }
+            else{
+                $this->message = "Error inserting data ".$this->conn->error;
+                $this->class = "error";
+            }
+            header("Location: ../../pages/user.php");
+            exit();
+    }
+
     function addData($sql){
         $result = $this->conn->query($sql);
         if($result=== TRUE){
@@ -28,7 +42,7 @@ class AddDeleteClass extends Connection{
             $this->class = "success";
         }
         else{
-            $this->message = "Error inserting data ".$this->conn->error;
+            $this->message = "Error removing data ".$this->conn->error;
             $this->class = "error";
             
         }

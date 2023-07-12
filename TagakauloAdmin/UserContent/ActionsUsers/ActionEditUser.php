@@ -10,9 +10,16 @@ $values = array(
     'gender' => $_POST['gender'],
     'email' => $_POST['email'],
     'birthdate' => $_POST['date'],
-    'isActive' => '1',
-    'userType' => $_POST['user']
+    'status_id' => '1',
+    'user_level_id' => ''
 );
+if ($_POST['user']=== "Admin") {
+    $values['user_level_id'] = '0';
+} else if ($_POST['user'] === "Teacher") {
+    $values['user_level_id'] = '1';
+} else if ($_POST['user']=== "Learner") {
+    $values['user_level_id'] = '2';
+}
 
 $columns = implode(", ", array_keys($values));
 $placeholders = "'" . implode("', '", array_values($values)) . "'";

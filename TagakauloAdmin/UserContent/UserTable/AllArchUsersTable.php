@@ -47,7 +47,7 @@
                                         <select class="form-control" name="user" placeholder="User Type">
                                             <option>Admin</option>
                                             <option>Teacher</option>
-                                            <option>Student</option>
+                                            <option>Learner</option>
                                         </select>
                                     </div>
                                 </div>
@@ -67,7 +67,12 @@
             </div>
             <!-- /.modal ADD User-->
 
-            <?php include_once "../../UserContent/CommonUser/EditArchiveModal.php"; ?>
+            <?php include_once "../../UserContent/CommonUser/ModalClass.php";
+                $btnName = "Activate User";
+                $editActive = new ModalClass();
+                $editActive->editModal($btnName);
+
+            ?>
 
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
@@ -80,8 +85,8 @@
                     <tbody>
                         <?php 
                         include_once("../../Database/DisplayAllTableClass.php");
-                        $table = "tbl_user_info";
-                        $sql = "SELECT * FROM ".$table . " WHERE isActive = 0;";
+                        $table = "user_info_view";
+                        $sql = "SELECT * FROM $table WHERE status = 'Inactive'";
                         $userT = new DisplayAllTableClass();
                         $userT->userTable($sql);
                         ?>

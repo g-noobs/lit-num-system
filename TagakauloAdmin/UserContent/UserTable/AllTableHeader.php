@@ -2,7 +2,8 @@
 <th>ID</th>
 <th>Name</th>
 <th>Gender</th>
-<th>Email</th>
-<th>Birthdate</th>
+<th>Username</th>
+<th>Password</th>
 <th>User Type</th>
 <th>Account Status</th>
+<th>Actions</th>

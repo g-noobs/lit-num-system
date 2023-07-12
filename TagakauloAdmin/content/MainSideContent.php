@@ -57,11 +57,8 @@
                 <i class="fa fa-bar-chart"></i> <span>Reports</span>
             </a>
         </li>
-        <li>
-            <a href="../index.html">
-                <i class="fa fa-sign-out"></i> <span>Sign Out</span>
-            </a>
-        </li>
     </ul>
 </section>
 <!-- /.sidebar -->
+
+

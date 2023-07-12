@@ -2,19 +2,30 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Archived Learner's List</h3>
+                <h3 class="box-title">All user List</h3>
             </div>
             <!-- /.box-header -->
 
-            <?php include_once "../../UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Activate Student";
+            <div class="container-fluid">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                    <i class="fa fa-plus"></i> <span> Add User</span>
+                </button>
+            </div>
+            <br>
+            <!-- /.modal ADD User-->
+
+            <?php include_once "../../UserContent/CommonUser/ModalClass.php";
+                $btnName = "Update";
                 $editActive = new ModalClass();
-                $editActive->editModal($btnName);
+                $editActive->editModal($btnName,'');
+
+                $addNewUser = new ModalClass();
+                $addNewUser->addAnyModal();
+
             ?>
+             <!-- /.modal EditActive User-->
 
-
-
-            <div class="box-body">
+            <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -25,7 +36,7 @@
                         <?php 
                         include_once("../../Database/DisplayAllTableClass.php");
                         $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Inactive'";
+                        $sql = "SELECT * FROM $table WHERE status = 'Active'";
                         $userT = new DisplayAllTableClass();
                         $userT->userTable($sql);
                         ?>

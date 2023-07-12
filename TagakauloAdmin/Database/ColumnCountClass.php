@@ -5,8 +5,8 @@ class ColumnCountClass extends Connection{
         parent :: __construct();
     }
 
-    function userCount($table){
-        $sql = "SELECT COUNT(user_info_Id) as count FROM $table";  // Replace with your table name
+    function userCount($col,$table){
+        $sql = "SELECT COUNT($col) as count FROM $table";  // Replace with your table name
         $result = $this->conn->query($sql);
     
         if ($result->num_rows > 0) {
@@ -14,9 +14,9 @@ class ColumnCountClass extends Connection{
             $row = $result->fetch_assoc();
             $count = $row["count"];
             
-            echo $count;
+            return $count;
         } else {
-            echo "No rows found";
+            return 0;
         }
     }
 }

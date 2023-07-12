@@ -1,32 +1,33 @@
 <!-- Jquery-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
 <!-- Jquery Dropdown Menu-->
 <script>
 $(document).ready(function() {
-    $('.dropdown-menu a').click(function(e) {
+    $('.custom-dropdown-menu a').click(function(e) {
         e.preventDefault();
         var userType = $(this).data('user-type');
         var contentPath = '';
 
-        if (userType === 'admin') {
-            contentPath = '../UserContent/UserTable/AdminTableContent.php';
+        if (userType === 'all-active') {
+            contentPath = '../UserContent/UserTable/AllActiveUserTable.php';
         } else if (userType === 'teacher') {
             contentPath = '../UserContent/UserTable/TeacherTableContent.php';
-        } else if (userType === 'student') {
+        } else if (userType === 'learner') {
             contentPath = '../UserContent/UserTable/StudentTableContent.php';
-        } else if (userType === 'allUsers') {
-            contentPath = '../UserContent/UserTable/AllUserTableContent2.php';
+        } else if (userType === 'admin') {
+            contentPath = '../UserContent/UserTable/AdminTableContent.php';
         }else if (userType === 'arch-all') {
             contentPath = '../UserContent/UserTable/AllArchUsersTable.php';
         }else if (userType === 'arch-admin') {
             contentPath = '../UserContent/UserTable/ArchiveAdminTable.php';
         } else if (userType === 'arch-teacher') {
             contentPath = '../UserContent/UserTable/ArchivedTeacherTable.php';
-        } else if (userType === 'arch-student') {
+        } else if (userType === 'arch-learner') {
             contentPath = '../UserContent/UserTable/ArchivedStudentTable.php';
         }
-        $('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+        $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
             $("#mainContent").fadeOut(400, function() {
                 $(this).load(contentPath, function() {
@@ -75,6 +76,28 @@ $(document).ready(function() {
 
         // Show the modal
         $('#edit-user').modal('show');
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    // Click event for the edit icon
+    $('.action').click(function() {
+        // Get the row data
+        var userId = $(this).closest('tr').find('td:eq(1)')
+    .text(); // Assuming the user_info_Id is in the second column (index 1)
+        var name = $(this).closest('tr').find('td:eq(2)').text();
+        var gender = $(this).closest('tr').find('td:eq(3)').text();
+        var email = $(this).closest('tr').find('td:eq(4)').text();
+        var date = $(this).closest('tr').find('td:eq(5)').text();
+        var user = $(this).closest('tr').find('td:eq(6)').text();
+
+        // Populate the modal fields with the data
+        $('#activate-user').find('[name="userId"]').val(userId);
+        $('#archive-user').find('[name="userId"]').val(userId);
+
+        // Show the modal
+        $('#activate-user').modal('show');
     });
 });
 </script>
