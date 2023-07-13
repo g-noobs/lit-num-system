@@ -6,7 +6,8 @@ $values = array(
     'email' => $_POST['email'],
     'birthdate' => $_POST['date'],
     'status_id' => '1',
-    'user_level_id' => ''
+    'user_level_id' => '',
+    'added_byID'=>''
 );
 
 if ($_POST['user']=== "Admin") {
@@ -22,6 +23,7 @@ $columnCountClass = new ColumnCountClass();
 
 
 $values['user_info_id'] = "USR".(100001 + $columnCountClass->userCount("user_info_Id","tbl_user_info"));
+$values['added_byID']=$values['user_info_id'];
 
 include_once("../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
@@ -35,7 +37,7 @@ $user_info_id = $values['user_info_id'];
 
 $table = "tbl_user_info";
 // Assuming $table variable holds the table name
-$sql = "INSERT INTO $table (user_info_id , name, gender, email, birthdate, status_id, user_level_id) VALUES ('" .
+$sql = "INSERT INTO $table (user_info_id , name, gender, email, birthdate, status_id, user_level_id,added_byID) VALUES ('" .
     implode("','", array_values($values)) .
     "');";
 $table = "tbl_credentials";
