@@ -40,12 +40,7 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="container" style="background: white;">
-                    <h3>Admin Name: <?php echo $_SESSION['name'];?></h3>
-                    <a href='#'><span class='glyphicon glyphicon-edit'></span></a>
-                    <br>
-                    <button class="btn btn-primary" type="button" data-toggle="modal">Update</button>
-                </div>
+                <?php include_once("../ProfileContent/ProfileMain.php");?>
 
             </section>
             <!-- /.content-wrapper -->

@@ -23,6 +23,7 @@ class ModalClass{
                                 <div class="form-group">
                                     <label for="gender">Select Gender:</label>
                                     <select class="form-control" name="gender" placeholder="Gender">
+                                        <option value = "" selected disabled hidden>Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>None</option>
@@ -149,6 +150,7 @@ class ModalClass{
                                     <div class="form-group">
                                         <label for="gender">Gender:</label>
                                         <select class="form-control" name="gender" placeholder="Gender">
+                                            <option value = "" selected disabled hidden>Gender</option>
                                             <option>Male</option>
                                             <option>Female</option>
                                             <option>None</option>

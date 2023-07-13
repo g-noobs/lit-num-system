@@ -8,11 +8,8 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once("../bootstrap/css.php");?>
-    <style>
-    body {
-        overflow: hidden;
-    }
-    </style>
+
+    <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
 </head>
 
 <body class="sidebar-mini skin-yellow" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
@@ -44,19 +41,17 @@
                         <h4><b>Filter By: </b></h4>
                     </div>
                     <div class="col-sm-2">
-                        <div class="dropdown">
+                        <div class="custom-dropdown">
 
-                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                            <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
                                 style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;"> All
                                 User
                                 <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" data-user-type="allUsers"><b>Culture & Arts</b></a></li>
-                                <li><a href="#" data-user-type="admin">Folklore</a></li>
-                                <li><a href="#" data-user-type="teacher">Numbers</a></li>
-                                <li><a href="#" data-user-type="student">Letters</a></li>
-
-                                <li class="divider"></li>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a href="#" data-user-type="culture&arts">Culture & Arts</a></li>
+                                <li><a href="#" data-user-type="folklore">Folklore</a></li>
+                                <li><a href="#" data-user-type="numbers">Numbers</a></li>
+                                <li><a href="#" data-user-type="letters">Letters</a></li>
                             </ul>
                         </div>
                     </div>
