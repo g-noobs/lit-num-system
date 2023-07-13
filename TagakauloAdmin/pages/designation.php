@@ -33,18 +33,21 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Teacher
+                    <b style="color:#3D3848;">Manage Designation</b>
                 </h1>
             </section>
 
             <!-- Main content -->
             <section class="content">
                 <!-- Small boxes (Stat box) -->
-                <?php include("../content/UserTableContent.php");?>
+                <?php include_once("../CommonPHPClass/PHPClass.php");
+                    $display=new PHPClass();
+                    $display->displayError();
+                ?>
             </section>
             <!-- /.content-wrapper -->
-        <!-- jQuery 3 -->
-        <?php include_once("../bootstrap/js.php");?>
+            <!-- jQuery 3 -->
+            <?php include_once("../bootstrap/js.php");?>
 </body>
 
 </html>

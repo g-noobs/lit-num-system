@@ -33,15 +33,21 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Manage Level of Learning
+                    <b style="color:#3D3848;">Manage Level of Learning</b>
+
                 </h1>
             </section>
 
-
+            
+            <?php include_once("../CommonPHPClass/PHPClass.php");
+                    $display=new PHPClass();
+                    $display->displayError();
+                ?>
             <!-- Main content -->
             <section class="content">
                 <!-- Small boxes (Stat box) -->
-                <?php include("../content/UserTableContent.php");?>
+                
+               
             </section>
             <!-- /.content-wrapper -->
         </div>

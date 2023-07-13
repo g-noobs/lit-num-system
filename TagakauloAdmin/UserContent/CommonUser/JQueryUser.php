@@ -79,6 +79,8 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<!-- Activate and Archive button -->
 <script>
 $(document).ready(function() {
     // Click event for the edit icon

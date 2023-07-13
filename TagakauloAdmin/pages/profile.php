@@ -33,8 +33,8 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Profile
-                    <small></small>
+                <b style="color:#3D3848;">Admin Profile</b>
+
                 </h1>
             </section>
 
@@ -48,6 +48,7 @@
         <!-- ./wrapper -->
 
         <?php include_once("../bootstrap/js.php")?>
+        <?php include_once("../ProfileContent/JqueryProfile.php");?>
 </body>
 
 </html>

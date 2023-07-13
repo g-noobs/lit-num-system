@@ -55,14 +55,14 @@
                                     <li><a href="#" data-user-type="teacher">Teacher</a></li>
                                     <li><a href="#" data-user-type="learner">Learner</a></li>
 
-                                
+
                                     <li><a href="#" data-user-type="arch-all"><b>All Archive Users</b></a></li>
                                     <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a></li>
                                     <li><a href="#" data-user-type="arch-teacher"><small>Archived Teacher</small></a>
                                     </li>
                                     <li><a href="#" data-user-type="arch-learner"><small>Archived Learner</small></a>
                                     </li>
- 
+
                                 </ul>
                             </div>
                         </div>
@@ -107,8 +107,6 @@
                 $userArchive = new ModalClass();
                 $userArchive->archiveUserModal();
             ?>
-
-
             <!-- Main content -->;
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->

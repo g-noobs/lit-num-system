@@ -58,5 +58,56 @@ class DisplayAllTableClass extends Connection{
         }
         
     }
+
+    function quizTable($sql){
+        $result = $this->conn->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<tr>";
+                echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id=''><span class='glyphicon glyphicon-edit'></span></a></td>";
+                echo "<td>".$row["quiz_id"]. "</td>";
+                echo "<td>".$row["quiz_question"]. "</td>";
+                echo "<td>".$row["quiz_selectionA"]. "</td>";
+                echo "<td>".$row["quiz_selectionB"]. "</td>";
+                echo "<td>".$row["quiz_selectionC"]. "</td>";
+                echo "<td>".$row["quiz_selectionD"]. "</td>";
+                echo "<td>".$row["story_id"]. "</td>";
+                echo "<td>".$row["writer_id"]. "</td>";
+                echo "<td>".$row["score"]. "</td>";
+                echo "<td>".$row["date_created"]. "</td>";
+                echo "</tr>";
+            }
+        }
+    }
+
+    function displayAdminProfile($sql){
+        $result = $this->conn->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo '<div class="form-group">
+                        <label for="name">Enter Name:</label>
+                        <input type="text"  name="name" class="form-control" id="exampleInputEmail1" placeholder="Name" value="'.$row['name'].'">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Select Gender:</label>
+                        <select class="form-control" name="gender" value="'.$row['gender'].' placeholder="'.$row['gender'].'">
+                            <option value="'.$row['gender'].'" selected disabled hidden>'.$row['gender'].'</option>
+                            <option>MALE</option>
+                            <option>FEMALE</option>
+                            <option>None</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Enter Email Address:</label>
+                        <input type="email"  name="email" class="form-control" id="exampleInputPassword1" placeholder="Email" value="'.$row['email'].'">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Select Birthday:</label>
+                        <input type="date"  name="date" class="form-control" id="exampleInputPassword1" placeholder="Birthdate" value="'.$row['birthdate'].'">
+                    </div>';
+            }
+        }
+        
+    }
 }
 ?>

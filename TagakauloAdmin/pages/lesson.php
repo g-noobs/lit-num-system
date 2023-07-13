@@ -30,8 +30,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <b>Lessons</b>
-                    <small></small>
+                    <b style="color:#3D3848;">Manage Lesson</b>
                 </h1>
             </section>
             <br>

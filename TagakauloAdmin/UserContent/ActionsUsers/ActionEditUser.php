@@ -1,7 +1,4 @@
 <?php 
-include_once "../Database/Connection.php";
-
-$connection = $conn;
 $table = "tbl_user_info";
 
 $values = array(
@@ -35,6 +32,6 @@ $sql .= " WHERE user_info_Id = '{$values['user_info_Id']}'";
 
 //still follow the usual tracing of php class
 include_once("../../Database/AddDeleteClass.php");
-$addData = new AddDeleteClass($connection);
+$addData = new AddDeleteClass();
 $addData->updateData($sql);
 ?>

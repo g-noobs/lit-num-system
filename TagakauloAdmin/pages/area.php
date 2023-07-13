@@ -33,15 +33,17 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Area
-                    <small></small>
+                    <b style="color:#3D3848;">Manage Area</b>
                 </h1>
             </section>
 
             <!-- Main content -->
             <section class="content">
                 <!-- Small boxes (Stat box) -->
-                <?php include("../content/UserTableContent.php");?>
+                <?php include_once("../CommonPHPClass/PHPClass.php");
+                    $display=new PHPClass();
+                    $display->displayError();
+                ?>
             </section>
             <!-- /.content-wrapper -->
         </div>

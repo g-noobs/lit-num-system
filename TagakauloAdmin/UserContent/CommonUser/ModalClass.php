@@ -72,7 +72,7 @@ class ModalClass{
                                 <form role="form" action="../UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
                                     <div class="form-group">
                                         <input type="text" name="userId" class="form-control" style="display: none;">
-                                        <button type="submit" class="btn btn-danger pull-left">Archive</button>
+                                        <button type="submit" class="btn btn-danger pull-left btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
                                     </div>
                                 </form>
                             </div>
