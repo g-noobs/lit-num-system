@@ -7,9 +7,9 @@ class Connection{
     public $conn;
 
     public function __construct(){
-        $this->host = "localhost:3306";  // Replace with your server name
-        $this->username = "root";  // Replace with your MySQL username
-        $this->password = "";  // Replace with your MySQL password
+        $this->host = "192.168.1.3:3306";  // Replace with your server name
+        $this->username = "admin";  // Replace with your MySQL username
+        $this->password = "admin";  // Replace with your MySQL password
         $this->database = "db_tagakaulo";  // Replace with your database name
         $this->connect();
     }
