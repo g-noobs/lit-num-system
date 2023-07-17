@@ -4,9 +4,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     // Redirect the user to the login page
     header('Location: ../index.php');
     exit;
-}
+} 
 ?>
-<!-- Logo -->
+<!--Logo -->
 <a href="dashboard.php" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>A</b></span>
@@ -26,15 +26,16 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="#" class="user-image" alt="User Image">
-                    <span class="hidden-xs"> <?php echo $_SESSION['name']?></span>
+                    <span class="hidden-s"> <?php echo $_SESSION['name']?></span>
                 </a>
                 <ul class="dropdown-menu">
 
                     <li class="user-header">
                         <img src="#" class="img-circle" alt="User Image">
                         <p>
+                            Name: <?php echo $_SESSION['name']?>
                             Admin Information
-                            <small>Small Adming information</small>
+                            <small>Small Admin information</small>
                         </p>
                     </li>
 

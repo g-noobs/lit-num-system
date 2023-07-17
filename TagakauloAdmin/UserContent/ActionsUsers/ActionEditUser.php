@@ -3,7 +3,9 @@ $table = "tbl_user_info";
 
 $values = array(
     'user_info_Id' => $_POST['userId'],
-    'name' => $_POST['name'],
+    'personal_id' =>$_POST['personal_id'],
+    'first_name' => $_POST['first_name'],
+    'last_name' =>$_POST['last_name'],
     'gender' => $_POST['gender'],
     'email' => $_POST['email'],
     'birthdate' => $_POST['date'],

@@ -11,6 +11,16 @@ class DisplayAllTableClass extends Connection{
     
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
+                if($row["user_level_description"] === "Admin"){
+                    $username = $row['email'];
+                    $password = "******";
+                    $modalTarget = "";
+                }
+                else{
+                    $username = $row["personal_id"];
+                    $password = $row["password"];
+                    $modalTarget = "#edit-user";
+                }
                 echo "<tr>";
 
                 echo "<td><a href='#'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
@@ -28,10 +38,10 @@ class DisplayAllTableClass extends Connection{
                     $data_target = "#activate-user";
                 }
 
-                echo "<td>" . $row["user_info_id"] . "</td><td>" . $row["name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["username"] . "</td><td>" . $row["password"] . "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
+                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["name"] ."</td><td>". $row["gender"]. "</td><td>" . $username . "</td><td>" . $password . "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
                 
                 echo "<td>";
-                echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='" . $row["user_info_id"] . "' style='margin-right:10px';><span class='glyphicon glyphicon-edit'></span></a>";
+                echo "<a href='#' class='edit' data-toggle='modal' data-target='".$modalTarget."' data-id='" . $row["user_info_id"] . "' style='margin-right:10px';><span class='glyphicon glyphicon-edit'></span></a>";
                 
                 echo " <a href='#' class='action ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='" . $row["user_info_id"] . "'> ".$actionIcon ."</a>";
                 echo "</td>";
@@ -84,9 +94,21 @@ class DisplayAllTableClass extends Connection{
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
+                $fullName = $row['name'];
+
+                // Use the explode function to split the full name into an array
+                $nameParts = explode(' ', $fullName);
+
+                // Assign the first and last names to separate variables
+                $firstname = $nameParts[0];
+                $lastname = $nameParts[1];
                 echo '<div class="form-group">
-                        <label for="name">Enter Name:</label>
-                        <input type="text"  name="name" class="form-control" id="exampleInputEmail1" placeholder="Name" value="'.$row['name'].'">
+                        <label for="first_name">First Name:</label>
+                        <input type="text"  name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name" value="'.$firstname.'">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text"  name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name" value="'.$lastname .'">
                     </div>
                     <div class="form-group">
                         <label for="gender">Select Gender:</label>
@@ -104,7 +126,16 @@ class DisplayAllTableClass extends Connection{
                     <div class="form-group">
                         <label for="date">Select Birthday:</label>
                         <input type="date"  name="date" class="form-control" id="exampleInputPassword1" placeholder="Birthdate" value="'.$row['birthdate'].'">
-                    </div>';
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text"  name="username" class="form-control" id="exampleInputEmail1" placeholder="Username" value="'.$row['username'].'">
+                    </div>
+                    <div class="form-group">
+                    <label for="password">Password: </label>
+                    <input type="text"  name="password" class="form-control" id="exampleInputEmail1" placeholder="Passoword" value="'.$row['password'].'">
+                </div>
+                    ';
             }
         }
         

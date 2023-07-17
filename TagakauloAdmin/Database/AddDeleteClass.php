@@ -65,7 +65,7 @@ class AddDeleteClass extends Connection{
     }
 
     function addLesson($sql){
-        $result = $this->conn->query($sql);
+        $result = $this->conn->multi_query($sql);
         if($result=== TRUE){
             $this->message = "Data updated successfully.";
             $this->class = "success";
@@ -76,6 +76,17 @@ class AddDeleteClass extends Connection{
         }
         header("Location: ../../pages/lesson.php");
         exit();
+    }
+    function updateCreds($sql){
+        $result = $this->conn->query($sql);
+        if($result === TRUE){
+            $this->message = "Edited Successfully!";
+            $this->class = "success";
+        }
+        else{
+            $this->message = "Error updating data ".$this->conn->error;
+            $this->class = "error";
+        }
     }
 
     function updateAdmin($sql){

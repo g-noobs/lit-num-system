@@ -1,7 +1,9 @@
 <?php 
 $values = array(
     'user_info_id'=>'',
-    'name' => $_POST['name'],
+    'personal_id' =>$_POST['personal_id'],
+    'first_name' => $_POST['first_name'],
+    'last_name' =>$_POST['last_name'],
     'gender' => $_POST['gender'],
     'email' => $_POST['email'],
     'birthdate' => $_POST['date'],
@@ -23,13 +25,13 @@ $columnCountClass = new ColumnCountClass();
 
 
 $values['user_info_id'] = "USR".(100001 + $columnCountClass->userCount("user_info_Id","tbl_user_info"));
-$values['added_byID']=$values['user_info_id'];
+$values['added_byID']="Admin: :"; #+ $_SESSION['name'];
 
 include_once("../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
 
 $credentials_id = "CRED".(100001 + (int)$columnCountClass->userCount("credentials_id","tbl_credentials"));
-$username = $values['email'];
+$username = $values['personal_id'];
 $password = $phpClass->generatePassword(10);
 $user_info_id = $values['user_info_id'];
 
@@ -37,7 +39,7 @@ $user_info_id = $values['user_info_id'];
 
 $table = "tbl_user_info";
 // Assuming $table variable holds the table name
-$sql = "INSERT INTO $table (user_info_id , name, gender, email, birthdate, status_id, user_level_id,added_byID) VALUES ('" .
+$sql = "INSERT INTO $table (user_info_id , personal_id, first_name, last_name, gender, email, birthdate, status_id, user_level_id,added_byID) VALUES ('" .
     implode("','", array_values($values)) .
     "');";
 $table = "tbl_credentials";

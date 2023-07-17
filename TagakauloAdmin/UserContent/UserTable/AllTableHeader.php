@@ -1,5 +1,6 @@
 <th></th>
 <th>ID</th>
+<th>Personal ID</th>
 <th>Name</th>
 <th>Gender</th>
 <th>Username</th>
