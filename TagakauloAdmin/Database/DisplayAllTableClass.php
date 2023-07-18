@@ -94,21 +94,16 @@ class DisplayAllTableClass extends Connection{
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                $fullName = $row['name'];
 
-                // Use the explode function to split the full name into an array
-                $nameParts = explode(' ', $fullName);
 
-                // Assign the first and last names to separate variables
-                $firstname = $nameParts[0];
-                $lastname = $nameParts[1];
+
                 echo '<div class="form-group">
                         <label for="first_name">First Name:</label>
-                        <input type="text"  name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name" value="'.$firstname.'">
+                        <input type="text"  name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name" value="'.$row['first_name'].'">
                     </div>
                     <div class="form-group">
                         <label for="last_name">Last Name:</label>
-                        <input type="text"  name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name" value="'.$lastname .'">
+                        <input type="text"  name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name" value="'.$row['last_name'] .'">
                     </div>
                     <div class="form-group">
                         <label for="gender">Select Gender:</label>
