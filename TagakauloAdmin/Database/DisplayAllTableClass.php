@@ -15,11 +15,13 @@ class DisplayAllTableClass extends Connection{
                     $username = $row['email'];
                     $password = "******";
                     $modalTarget = "";
+                    $editColor = "gray";
                 }
                 else{
                     $username = $row["personal_id"];
                     $password = $row["password"];
                     $modalTarget = "#edit-user";
+                    $editColor = "blue";
                 }
                 echo "<tr>";
 
@@ -38,10 +40,10 @@ class DisplayAllTableClass extends Connection{
                     $data_target = "#activate-user";
                 }
 
-                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["name"] ."</td><td>". $row["gender"]. "</td><td>" . $username . "</td><td>" . $password . "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
+                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $username . "</td><td>" . $password . "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
                 
                 echo "<td>";
-                echo "<a href='#' class='edit' data-toggle='modal' data-target='".$modalTarget."' data-id='" . $row["user_info_id"] . "' style='margin-right:10px';><span class='glyphicon glyphicon-edit'></span></a>";
+                echo "<a href='#' class='edit' data-toggle='modal' data-target='".$modalTarget."' data-id='" . $row["user_info_id"] . "' style='margin-right:10px; color:".$editColor.";'><span class='glyphicon glyphicon-edit' ></span></a>";
                 
                 echo " <a href='#' class='action ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='" . $row["user_info_id"] . "'> ".$actionIcon ."</a>";
                 echo "</td>";
@@ -108,7 +110,6 @@ class DisplayAllTableClass extends Connection{
                     <div class="form-group">
                         <label for="gender">Select Gender:</label>
                         <select class="form-control" name="gender" value="'.$row['gender'].' placeholder="'.$row['gender'].'">
-                            <option value="'.$row['gender'].'" selected disabled hidden>'.$row['gender'].'</option>
                             <option>MALE</option>
                             <option>FEMALE</option>
                             <option>None</option>

@@ -59,23 +59,19 @@ $(document).ready(function() {
     $('.edit').click(function() {
         // Get the row data
         var userId = $(this).closest('tr').find('td:eq(1)').text(); // Assuming the user_info_Id is in the second column (index 1)
-        var persID = (this).closest('tr').find('td:eq(2)').text();
-        
-        var name = $(this).closest('tr').find('td:eq(3)').text();
-        var nameParts = name.split(' ');
-        var first_name = nameParts[0];
-        var last_name = nameParts[1];
-
-        var gender = $(this).closest('tr').find('td:eq(4)').text();
-        var email = $(this).closest('tr').find('td:eq(5)').text();
-        var date = $(this).closest('tr').find('td:eq(6)').text();
-        var user = $(this).closest('tr').find('td:eq(7)').text();
+        var personalId = $(this).closest('tr').find('td:eq(2)').text();
+        var firstName = $(this).closest('tr').find('td:eq(3)').text();
+        var lastName = $(this).closest('tr').find('td:eq(4)').text();
+        var gender = $(this).closest('tr').find('td:eq(5)').text();
+        var email = $(this).closest('tr').find('td:eq(6)').text();
+        var date = $(this).closest('tr').find('td:eq(7)').text();
+        var user = $(this).closest('tr').find('td:eq(8)').text();
 
         // Populate the modal fields with the data
         $('#edit-user').find('[name="userId"]').val(userId);
-        $('#edit-user').find('[name="personal_id"]').val(persID);
-        $('#edit-user').find('[name="first_name"]').val(first_name);
-        $('#edit-user').find('[name="last_name"]').val(last_name);
+        $('#edit-user').find('[name="personal_id"]').val(personalId);
+        $('#edit-user').find('[name="first_name"]').val(firstName);
+        $('#edit-user').find('[name="last_name"]').val(lastName);
         $('#edit-user').find('[name="gender"]').val(gender);
         $('#edit-user').find('[name="email"]').val(email);
         $('#edit-user').find('[name="date"]').val(date);
@@ -86,6 +82,7 @@ $(document).ready(function() {
     });
 });
 </script>
+
 
 <!-- Activate and Archive button -->
 <script>
@@ -124,15 +121,20 @@ $(document).ready(function() {
         }
     }
 
-    // Call the function on document ready
+    // Call the togglePersonalIdForm function initially to set the visibility based on the initial value
     togglePersonalIdForm();
 
-    // Bind the function to the change event of the "user" select element
-    $('#user').on('change', function() {
+    // Bind the togglePersonalIdForm function to the "change" event of the "user" dropdown field
+    $('#user').change(function() {
         togglePersonalIdForm();
     });
+
+    // Trigger the "change" event on the "user" dropdown when the page loads or the form is reset
+    $('#user').trigger('change');
 });
 </script>
+
+
 
 
 

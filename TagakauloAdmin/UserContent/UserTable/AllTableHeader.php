@@ -1,7 +1,8 @@
 <th></th>
 <th>ID</th>
 <th>Personal ID</th>
-<th>Name</th>
+<th>First Name</th>
+<th>Last Name</th>
 <th>Gender</th>
 <th>Username</th>
 <th>Password</th>

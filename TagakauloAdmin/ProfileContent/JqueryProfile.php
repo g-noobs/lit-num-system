@@ -1,22 +1,40 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
+    var editMode = false; // Flag to track the edit mode status
+
     // Hide the update button initially
     $('#update-btn').hide();
     $('input, select').prop('readonly', true).prop('disabled', true);
 
-    // Enable input when edit icon is clicked
+    // Function to toggle the edit mode
+    function toggleEditMode() {
+        if (editMode) {
+            // If edit mode is active, hide the update button and disable the inputs
+            $('#update-btn').hide();
+            $('input, select').prop('readonly', true).prop('disabled', true);
+        } else {
+            // If edit mode is inactive, show the update button and enable the inputs
+            $('#update-btn').show();
+            $('input, select').prop('readonly', false).prop('disabled', false);
+        }
+        editMode = !editMode; // Toggle the edit mode flag
+    }
+
+    // Enable input and show the update button when edit icon is clicked
     $('#edit-icon').click(function() {
-        $('#update-btn').show();
-        $('input, select').prop('readonly', false).prop('disabled', false);
+        toggleEditMode();
     });
 
-    // Disable input and hide the update button when the update button is clicked
+    // Hide the update button when the update button is clicked
     $('#update-btn').click(function() {
         $(this).hide();
     });
 });
 </script>
+
+
+
 
 <script>
 $(document).ready(function() {
