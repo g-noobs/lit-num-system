@@ -104,15 +104,11 @@ class ModalClass{
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender:</label>
-                                <select class="form-control" name="gender" placeholder="Gender">
+                                <select class="form-control" name="gender">
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>None</option>
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <label for="date">Birthdate:</label>

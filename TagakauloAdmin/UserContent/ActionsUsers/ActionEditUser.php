@@ -7,7 +7,6 @@ $values = array(
     'first_name' => $_POST['first_name'],
     'last_name' =>$_POST['last_name'],
     'gender' => $_POST['gender'],
-    'email' => $_POST['email'],
     'birthdate' => $_POST['date'],
     'status_id' => '1',
     'user_level_id' => ''

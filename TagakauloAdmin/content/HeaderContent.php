@@ -26,14 +26,26 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="#" class="user-image" alt="User Image">
-                    <span class="hidden-s"> <?php echo $_SESSION['name']?></span>
+                    <span class="hidden-s"> 
+                        <?php
+                            include_once("../Database/DisplayInfoClass.php");
+                            $name = new DisplayInfoClass();
+                            $sql = "SELECT * FROM user_info_view WHERE user_info_id = '{$_SESSION['id']}'";
+                            $name->displayUserName($sql);
+                        ?>
+                    </span>
                 </a>
                 <ul class="dropdown-menu">
 
                     <li class="user-header">
                         <img src="#" class="img-circle" alt="User Image">
                         <p>
-                            Name: <?php echo $_SESSION['name']?>
+                            Name: 
+                            <?php $name = new DisplayInfoClass();
+                                $sql = "SELECT * FROM user_info_view WHERE user_info_id = '{$_SESSION['id']}'";
+                                $name->displayUserName($sql);
+                            ?>
+                            <br>
                             Admin Information
                             <small>Small Admin information</small>
                         </p>
@@ -42,13 +54,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <li class="user-body">
                         <div class="row">
                             <div class="col-xs-4 text-center">
-                               <!-- <a href="#">Followers</a> -->
+                                <!-- <a href="#">Followers</a> -->
                             </div>
                             <div class="col-xs-4 text-center">
-                                
+
                             </div>
                             <div class="col-xs-4 text-center">
-                                
+
                             </div>
                         </div>
 

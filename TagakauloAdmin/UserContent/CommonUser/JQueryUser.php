@@ -63,8 +63,6 @@ $(document).ready(function() {
         var firstName = $(this).closest('tr').find('td:eq(3)').text();
         var lastName = $(this).closest('tr').find('td:eq(4)').text();
         var gender = $(this).closest('tr').find('td:eq(5)').text();
-        var email = $(this).closest('tr').find('td:eq(6)').text();
-        var date = $(this).closest('tr').find('td:eq(7)').text();
         var user = $(this).closest('tr').find('td:eq(8)').text();
 
         // Populate the modal fields with the data
@@ -73,8 +71,7 @@ $(document).ready(function() {
         $('#edit-user').find('[name="first_name"]').val(firstName);
         $('#edit-user').find('[name="last_name"]').val(lastName);
         $('#edit-user').find('[name="gender"]').val(gender);
-        $('#edit-user').find('[name="email"]').val(email);
-        $('#edit-user').find('[name="date"]').val(date);
+
         $('#edit-user').find('[name="user"]').val(user);
 
         // Show the modal
@@ -94,9 +91,8 @@ $(document).ready(function() {
     .text(); // Assuming the user_info_Id is in the second column (index 1)
         var name = $(this).closest('tr').find('td:eq(2)').text();
         var gender = $(this).closest('tr').find('td:eq(3)').text();
-        var email = $(this).closest('tr').find('td:eq(4)').text();
-        var date = $(this).closest('tr').find('td:eq(5)').text();
-        var user = $(this).closest('tr').find('td:eq(6)').text();
+        var date = $(this).closest('tr').find('td:eq(4)').text();
+        var user = $(this).closest('tr').find('td:eq(5)').text();
 
         // Populate the modal fields with the data
         $('#activate-user').find('[name="userId"]').val(userId);
@@ -108,14 +104,16 @@ $(document).ready(function() {
 });
 </script>
 
-<!--Hide the option to Enter Personal ID if Admin is selected from the option-->
+<!--Hide the option to Enter Personal ID if Admin is selected from the option
 <script>
 $(document).ready(function() {
+    $('#personal-id').show();
     // Function to toggle visibility of the "personal-id" form-group
     function togglePersonalIdForm() {
         var selectedOption = $('#user').val();
         if (selectedOption === 'Admin') {
             $('#personal-id').hide();
+            $('#email').show();
         } else {
             $('#personal-id').show();
         }
@@ -133,7 +131,7 @@ $(document).ready(function() {
     $('#user').trigger('change');
 });
 </script>
-
+-->
 
 
 
