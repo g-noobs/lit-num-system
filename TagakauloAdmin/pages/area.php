@@ -83,6 +83,7 @@
         </div>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php")?>
+        <?php include_once "../AreaFolder/AreaCommon/JQueryArea.php"; ?>
 </body>
 
 </html>

@@ -21,6 +21,19 @@ class AddDeleteClass extends Connection{
             header("Location: ../../pages/user.php");
             exit();
     }
+    function addArea($sql){
+        $result = $this->conn->query($sql);
+        if($result=== TRUE){
+            $this->message = "Data updated successfully.";
+            $this->class = "success";
+        }
+        else{
+            $this->message = "Error inserting data ".$this->conn->error;
+            $this->class = "error";
+        }
+        header("Location: ../../pages/area.php");
+        exit();
+    }
 
     function addData($sql){
         $result = $this->conn->query($sql);

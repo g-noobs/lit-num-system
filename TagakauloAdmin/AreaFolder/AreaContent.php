@@ -35,4 +35,3 @@
 
     </div>
 </div>
-<?php include_once "../AreaFolder/AreaCommon/JQueryArea.php"; ?>
