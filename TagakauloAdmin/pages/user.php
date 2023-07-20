@@ -31,7 +31,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <b>Manage Users</b>
+                    <b style="color:#3D3848;">Manage Users</b>
                 </h1>
             </section>
 
@@ -116,6 +116,7 @@
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
         <?php include_once("../UserContent/CommonUser/JQueryUser.php");?>
+    </div>
 </body>
 
 </html>

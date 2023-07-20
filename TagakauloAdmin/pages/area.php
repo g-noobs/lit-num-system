@@ -8,7 +8,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once "../bootstrap/css.php"?>
-    
+
     <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
 </head>
 
@@ -36,7 +36,7 @@
             <br>
 
             <section>
-            <div class="container-fluid">
+                <div class="container-fluid">
                     <row class="align-items-start">
                         <div class="col-xs-1">
                             <h4><b>Filter By: </b></h4>
@@ -77,7 +77,7 @@
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <?php include_once("../AreaFolder/AreaContent.php");?>
-     
+
             </section>
             <!-- /.content-wrapper -->
         </div>

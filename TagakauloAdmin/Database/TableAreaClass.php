@@ -26,7 +26,7 @@ class TableAreaClass extends Connection{
                 echo "<td>". $status ."</td>";
 
                 echo "<td>";
-                echo "<a href='#' class='edit' data-toggle='modal' data-target='#archive-area' style='margin-right:10px; color:#f0ad4e'><span class='glyphicon glyphicon-edit' ></span></a>";
+                echo "<a href='#' class='edit' data-toggle='modal' data-target='#archive-area' style='margin-right:10px; color:#f0ad4e'><span class='glyphicon glyphicon-edit' ></span> Edit Area</a>";
                 
                 echo "</td>";
                 
