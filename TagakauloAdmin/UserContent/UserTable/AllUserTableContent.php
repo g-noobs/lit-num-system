@@ -33,8 +33,7 @@
                     <tbody>
                         <?php 
                         include_once("../Database/DisplayAllTableClass.php");
-                        $query = "
-                        SELECT * FROM user_info_view";
+                        $query = "SELECT * FROM user_info_view";
 
                         $userT = new DisplayAllTableClass();
                         $userT->userTable($query);
