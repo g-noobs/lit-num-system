@@ -8,6 +8,18 @@ class AddDeleteClass extends Connection{
         parent :: __construct();
     }
 
+    function addData($sql, $header){
+        $result = $this->conn->multi_query($sql);
+        if($result=== TRUE){
+            this->message = "Data updated successfully.";
+        }
+        else{
+            $this->message = "Error inserting data ".$this->conn->error;
+        }
+        header($header);
+        exit();
+    }
+    
     function addMany($sql){
         $result = $this->conn->multi_query($sql);
             if($result=== TRUE){
