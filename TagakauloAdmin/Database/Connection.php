@@ -19,5 +19,9 @@ class Connection{
             die("Connection failed: " . mysqli_connect_error());
         }
     }
+    public function getConnection(){
+        return $this->conn;
+    }
+    
 }
 ?>
