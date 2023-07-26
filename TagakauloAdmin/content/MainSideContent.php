@@ -43,6 +43,11 @@
             </a>
         </li>
         <li>
+            <a href="class.php">
+                <i class="#"></i> <span>Manage Class</span>
+            </a>
+        </li>
+        <li>
             <a href="area.php">
                 <i class="fa fa-map-marker"></i> <span>Manage Area</span>
             </a>

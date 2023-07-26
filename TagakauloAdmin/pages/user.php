@@ -38,7 +38,7 @@
             <br>
             <section>
                 <div class="container-fluid">
-                    <row class="align-items-start">
+                    <div class="align-items-start">
                         <div class="col-xs-1">
                             <h4><b>Filter By: </b></h4>
                         </div>
@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="col-xs-6"></div>
-                    </row>
+                    </div>
                 </div>
             </section>
             <!--
