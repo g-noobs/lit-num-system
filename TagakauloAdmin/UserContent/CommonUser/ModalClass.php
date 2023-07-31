@@ -250,7 +250,7 @@ class ModalClass{
                     </div>
                     <!-- /.modal-dialog -->
                 </div>
-                <!-- /.modal for Activate User-->';
+                <!-- /.modal for Acrchive User-->';
     }
 
 }

@@ -30,6 +30,7 @@ $columnCountClass = new ColumnCountClass();
 $values['user_info_id'] = "USR".(100001 + $columnCountClass->userCount("user_info_Id","tbl_user_info"));
 $values['added_byID']="Admin: :"; #+ $_SESSION['name'];
 
+//Password generation
 include_once("../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
 

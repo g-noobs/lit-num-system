@@ -29,7 +29,7 @@ foreach ($values as $column => $value) {
 }
 
 $sql = rtrim($sql, ", "); // Remove the trailing comma and space
-$sql .= " WHERE user_info_Id = '{$values['user_info_Id']}'";
+$sql .= " WHERE user_info_Id = '{$values['user_info_Id']}';";
 
 //still follow the usual tracing of php class
 include_once("../../Database/AddDeleteClass.php");
