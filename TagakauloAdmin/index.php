@@ -73,6 +73,10 @@
     </div>
     <!-- /.login-box -->
 
+    <?php 
+    include_once("ErrorValidationModal.php");
+    ?>
+
     <!-- jQuery 3 -->
     <script src="design/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
