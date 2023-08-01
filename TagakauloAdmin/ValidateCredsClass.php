@@ -2,7 +2,7 @@
 include_once("Database/Connection.php");
 
 class ValidateCredsClass extends Connection{
-    public $message = "";
+   $errors = [];
 
 
     function checkCreds($username,$password){
@@ -19,7 +19,8 @@ class ValidateCredsClass extends Connection{
             }
         }
         else{
-            echo '<script>alert("Invalid username or password");</script>';
+            $errors[] = "Invalid username or password";
+            $_SESSION['errors'] = $errors;
             header("Location: index.php");
             exit();
         }
