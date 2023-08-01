@@ -6,17 +6,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // Perform your validation logic here
-    $errors = array();
+    $errors = [];
+
 
     // Validate username
     if (empty($username)) {
         $errors[] = "Username is required";
         header("Location: index.php");
         exit();
-        echo '<script>alert("Username is required");</script>';
 
     }
-
     // Validate password
     if (empty($password)) {
         $errors[] = "Password is required";
@@ -25,6 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<script>alert("Password is required");</script>';
 
     }
+
+    // save errors to session 
+    $_SESSION['errors'] = $errors;
     
     // If there are no errors, compare the username and password with the database
     if (empty($errors)) {
