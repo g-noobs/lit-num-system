@@ -18,7 +18,7 @@ class AddDeleteClass extends Connection{
                 $this->message = "Error inserting data ".$this->conn->error;
                 $this->class = "error";
             }
-            header("$header");
+            header("Location: ". $header);
             exit();
     }
 

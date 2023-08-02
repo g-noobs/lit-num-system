@@ -7,10 +7,10 @@ $values= array(
 
 
 $table = "tbl_class";
-$sql = "UPDATE class_name FROM $table WHERE class_id = '{$values['class_id']}';";
+$sql = "UPDATE $table SET class_name = '{$values['class_name']}' WHERE class_id = '{$values['class_id']}';";
 
 //still follow the usual tracing of php class
 include_once("../../Database/AddDeleteClass.php");
 $addData = new AddDeleteClass();
-$addData->updateData($sql);
+$addData->addManyData($sql, "../../pages/class.php");
 ?>

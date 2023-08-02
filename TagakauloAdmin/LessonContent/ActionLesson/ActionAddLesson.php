@@ -1,16 +1,18 @@
 <?php 
+session_start();
 
-
-
+include_once
 $table = "tbl_lesson";
 
 $values = array(
     'lesson_name' => $_POST['lesson_name'],
     'objective_id' => $_POST['objective_id'],
     'topic_id' => $_POST['topic_id'],
-    'date_added' => $_POST['date_added'],
+    'date_added' => '',
     'addedby_ID' => '1',
 );
+
+$values['added_byID']= $_SESSION['id'];
 
 // Assuming $table variable holds the table name
 $sql = "INSERT INTO $table (lesson_name, objective_id, topic_id,date_added, addedby_ID) VALUES ('" .

@@ -43,5 +43,9 @@ class PHPClass{
         
         </section>';
     }
+    function getFormattedCurrentDate() {
+        $formattedDate = date("Y-m-d H:i:s"); // Get the current date and time in the format: YYYY-MM-DD HH:MM:SS
+        return $formattedDate;
+    }
 }
 ?>
