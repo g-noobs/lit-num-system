@@ -63,8 +63,6 @@ class DisplayAllTableClass extends Connection{
                 echo "<td>".$row["lesson_name"]. "</td>";
                 echo "<td>".$row["objective_id"]. "</td>";
                 echo "<td>".$row["topic_id"]. "</td>";
-                echo "<td>".$row["addedby_ID"]. "</td>";
-                echo "<td>".$row["date_added"]. "</td>";
                 echo "</tr>";
             }
         }

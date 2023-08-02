@@ -1,26 +1,35 @@
 <?php 
 session_start();
 
-include_once
 $table = "tbl_lesson";
 
 $values = array(
+    'lesson_id' => '',
     'lesson_name' => $_POST['lesson_name'],
-    'objective_id' => $_POST['objective_id'],
-    'topic_id' => $_POST['topic_id'],
-    'date_added' => '',
-    'addedby_ID' => '1',
+    'objective_id'=>'',
+    'topic_id' => '',
+    'addedby_ID' => '',
 );
 
-$values['added_byID']= $_SESSION['id'];
+//added
+$values['addedby_ID']= $_SESSION['id'];
+
+//automated lesson ID
+include_once("../../Database/ColumnCountClass.php");
+$columnCountClass = new ColumnCountClass();
+$values['lesson_id'] = "LSN".(100001 + (int)$columnCountClass->userCount("lesson_id",$table));
+
+
 
 // Assuming $table variable holds the table name
-$sql = "INSERT INTO $table (lesson_name, objective_id, topic_id,date_added, addedby_ID) VALUES ('" .
+$sql = "INSERT INTO $table (lesson_id, lesson_name, objective_id, topic_id,  added_byID) VALUES ('" .
     implode("','", array_values($values)) .
     "')";
 
+
+
 include_once("../../Database/AddDeleteClass.php");
 $addData = new AddDeleteClass();
-$addData->addLesson($sql);
+$addData->addManyData($sql, "../../pages/lesson.php");
 
 ?>

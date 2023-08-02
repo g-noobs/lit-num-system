@@ -19,30 +19,6 @@
                                 <option>Letters</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="user">Object Type:</label>
-                            <select class="form-control" name="objective_id">
-                                <option value="" selected disabled hidden>Object Id</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="user">Topic:</label>
-                            <select class="form-control" name="topic_id">
-                                <option value="" selected disabled hidden>Topic Id</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                             <label for="user">Pick a Date:</label>
-                            <input type="date" name="date_added" class="form-control" id="exampleInputPassword1"
-                                placeholder="Date Added">
-                        </div>
                     </div>
                     <!-- /.box-body -->
                 </div>
