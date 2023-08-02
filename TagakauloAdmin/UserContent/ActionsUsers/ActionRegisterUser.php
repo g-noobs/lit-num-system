@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $values = array(
     'user_info_id'=>'',
     'personal_id' =>$_POST['personal_id'],
@@ -26,9 +27,11 @@ if ($_POST['user']=== "Admin") {
 include_once("../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
-
+// modify user id plus the column count
 $values['user_info_id'] = "USR".(100001 + $columnCountClass->userCount("user_info_Id","tbl_user_info"));
-$values['added_byID']="Admin: :"; #+ $_SESSION['name'];
+
+//place value for id
+$values['added_byID']= $_SESSION['id'];
 
 include_once("../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
