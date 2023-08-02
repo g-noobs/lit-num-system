@@ -8,11 +8,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once "../bootstrap/css.php"?>
-    <style>
-    body {
-        overflow: hidden;
-    }
-    </style>
+
 </head>
 
 <body class="sidebar-mini skin-yellow" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
@@ -38,27 +34,19 @@
                 </h1>
             </section>
             <br>
-            <br>
-            <section>
-                <div class="container-fluid">
-                    <div class="align-items-start">
-
-                        <button style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">Add
-
-                    </div>
-                </div>
-            </section>
 
             <!-- Main content -->
-            <section class="content">
-
+            <section class="content" id="classContent">
+                <?php include_once("../ClassContent/ClassTableContent.php"); ?>
 
             </section>
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
 
-        <?php include_once("../bootstrap/js.php")?>
+        <?php include_once("../bootstrap/js.php");
+            include_once("../ClassContent/ClassEssentials/ClassJquery.php");
+        ?>
 </body>
 
 </html>

@@ -33,6 +33,7 @@ $values['user_info_id'] = "USR".(100001 + $columnCountClass->userCount("user_inf
 //place value for id
 $values['added_byID']= $_SESSION['id'];
 
+//Password generation
 include_once("../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
 
