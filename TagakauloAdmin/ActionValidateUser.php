@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Username is required";
         header("Location: index.php");
         exit();
-        echo '<script>alert("Username is required");</script>';
 
     }
 
@@ -22,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Password is required";
         header("Location: index.php");
         exit();
-        echo '<script>alert("Password is required");</script>';
 
     }
     

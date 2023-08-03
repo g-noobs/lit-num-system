@@ -44,9 +44,17 @@
 
             <!-- Main content -->
             <section class="content" id="lesson-table">
-                <?php include_once "../LessonContent/LessonTable.php"
+                <?php include_once "../LessonContent/TableFolder/LessonTable.php"
                 
                 ?>
+            </section>
+
+            <section class="content" id="lesson-info">
+
+            </section>
+
+            <section class="content" id="lesson-info">
+
             </section>
         </div>
         <!-- ./wrapper -->
