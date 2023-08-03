@@ -11,7 +11,6 @@
                 </button>
             </div>
             <br>
-            <?php include_once("../LessonContent/CommonLesson/ModalLesson.php");?>
             <!-- /.modal ADD User-->
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">

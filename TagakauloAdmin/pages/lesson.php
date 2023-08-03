@@ -45,35 +45,36 @@
             <!-- Main content -->
             <section class="content" id="lesson-table">
                 <?php include_once "../LessonContent/TableFolder/LessonTable.php"
-                
                 ?>
+                <button>Next</button>
             </section>
 
             <section class="content" id="lesson-info">
-
+                add lesson info
+                <button>Next</button>
             </section>
 
-            <section class="content" id="lesson-info">
+            <section class="content" id="lesson-resource">
+                lesson resource
+                <button>Next</button>
+            </section>
 
+            <section class="content" id="learning-obj">
+                lessong objective
+                <button>Next</button>
+            </section>
+
+            <section class="content" id="lesson-permission">
+                lesson permssion
+                <button>Next</button>
             </section>
         </div>
         <!-- ./wrapper -->
 
         <?php include_once("../bootstrap/js.php"); ?>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-        $(document).ready(function() {
-            $("#userInput").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("tbody tr").filter(function() {
-                    var rowText = $(this).text().toLowerCase();
-                    var pText = $(this).find("p").text().toLowerCase();
-                    $(this).toggle(rowText.indexOf(value) > -1 || pText.indexOf(value) > -1);
-                });
-            });
-        });
-        </script>
+        <?php include_once("../LessonContent/CommonLesson/JqueryLesson.php");?>
+
 </body>
 
 </html>
