@@ -20,7 +20,7 @@
                     <tbody>
                         <?php 
                         include_once("../Database/DisplayAllTableClass.php");
-                        $table = "tbl_lesson";
+                        $table = "lesson_view";
                         $sql = "SELECT * FROM ".$table;
                         $userT = new DisplayAllTableClass();
                         $userT->lessonTable($sql);

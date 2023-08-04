@@ -3,6 +3,5 @@
 <th>Lesson</th>
 <th>Objective</th>
 <th>Topic</th>
-<th>Added by</th>
-<th>Date Added</th>
+<th>Assigned to:</th>
 <th>Actions</th>

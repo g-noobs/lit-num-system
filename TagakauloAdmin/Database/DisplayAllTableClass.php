@@ -61,8 +61,9 @@ class DisplayAllTableClass extends Connection{
                 echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
                 echo "<td>".$row["lesson_id"]. "</td>";
                 echo "<td>".$row["lesson_name"]. "</td>";
-                echo "<td>".$row["objective_id"]. "</td>";
+                echo "<td>".$row["objective"]. "</td>";
                 echo "<td>".$row["topic_id"]. "</td>";
+                echo "<td>".$row["first_name"]." ".$row["last_name"]. "</td>";
                 echo "</tr>";
             }
         }

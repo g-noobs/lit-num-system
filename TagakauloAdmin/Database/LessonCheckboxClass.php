@@ -12,13 +12,11 @@ class LessonCheckboxClass extends Connection{
                 $id = $row['user_info_id'];
                 $name = $row['first_name'] ." ". $row['last_name'];
                 
-                echo '<div class="checkbox">
-                <label>';
+                echo '<div class="checkbox">';
                 // Display checkbox
                 echo '<input type="checkbox" name="categories[]" value="' . $id . '"> ' . $name . '<br>';
 
-                echo '</label>
-                </div>';
+                echo '</div>';
                 }
         }
     }
