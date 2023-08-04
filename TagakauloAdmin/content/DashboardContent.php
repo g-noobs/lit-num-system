@@ -8,7 +8,7 @@
           <?php 
                 include_once "../Database/ColumnCountClass.php";
                 $columnCountClass = new ColumnCountClass();
-                echo $columnCountClass->userCount("user_info_Id","tbl_user_info");
+                echo $columnCountClass->columnCount("user_info_Id","tbl_user_info");
         ?>
         </h3>
         <p>Total # of Users</p>

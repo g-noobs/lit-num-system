@@ -61,3 +61,12 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<!-- will clear the form if lesson button is clicked-->
+<script>
+    $(document).ready(function() {
+        $('#lesson-btn').click(function() {
+    $('#form-add').find('input[type="text"], input[type="number"], textarea').val(''); 
+    });
+    });
+</script>

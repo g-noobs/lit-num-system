@@ -10,7 +10,7 @@ $table = 'tbl_area';
 include_once("../../Database/ColumnCountClass.php");
 
 $columnCount = new ColumnCountClass();
-$newCount = "AREA".(101 + $columnCount ->userCount("area_id", $table));
+$newCount = "AREA".(101 + $columnCount ->columnCount("area_id", $table));
 $values['area_id'] = $newCount;
 
 

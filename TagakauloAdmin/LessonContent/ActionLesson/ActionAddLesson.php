@@ -17,7 +17,7 @@ $values['addedby_ID']= $_SESSION['id'];
 //automated lesson ID
 include_once("../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
-$values['lesson_id'] = "LSN".(100001 + (int)$columnCountClass->userCount("lesson_id",$table));
+$values['lesson_id'] = "LSN".(100001 + (int)$columnCountClass->columnCount("lesson_id",$table));
 
 
 

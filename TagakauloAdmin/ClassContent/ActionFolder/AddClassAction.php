@@ -7,7 +7,7 @@ $values= array(
 
 include_once("../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
-$count = $columnCountClass->userCount("class_id","tbl_class");
+$count = $columnCountClass->columnCount("class_id","tbl_class");
 
 
 $values['class_id'] = "CLS".(100001 + $count);

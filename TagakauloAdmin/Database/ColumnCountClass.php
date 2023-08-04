@@ -5,7 +5,7 @@ class ColumnCountClass extends Connection{
         parent :: __construct();
     }
 
-    function userCount($col,$table){
+    function columnCount($col,$table){
         $sql = "SELECT COUNT($col) as count FROM $table";  // Replace with your table name
         $result = $this->conn->query($sql);
     

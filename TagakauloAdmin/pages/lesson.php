@@ -36,7 +36,7 @@
             <br>
             <div class="container well">
 
-                <button type="button" class="btn btn-default">Lesson</button>
+                <a href="lesson.php" type="button" class="btn btn-default" id="lesson-btn">Lesson</a>
                 <button type="button" class="btn btn-default">Quiz</button>
                 <button type="button" class="btn btn-default">Assignment</button>
 
@@ -49,7 +49,7 @@
                     ?>
             </section>
             
-            <form role="form" action="" id="form-add" class="container well">
+            <form role="form" action="../LessonContent/ActionLesson/ActionRegisterLesson.php" method="post" id="form-add" class="container well">
                 <section class="content" id="lesson-info">
                     
                     <?php include_once("../LessonContent/AddingLessonPanel/addLessonInfo.php");?>
