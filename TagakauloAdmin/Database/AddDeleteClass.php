@@ -91,6 +91,20 @@ class AddDeleteClass extends Connection{
         exit();
     }
 
+    function updateClass($sql,$header){
+        $result = $this->conn->query($sql);
+        if($result === TRUE){
+            $this->message = "Edited Successfully!";
+            $this->class = "success";
+        }
+        else{
+            $this->message = "Error updating data ".$this->conn->error;
+            $this->class = "error";
+        }
+        header("Location:" . $header);
+        exit();
+    }
+
     function addLesson($sql){
         $result = $this->conn->multi_query($sql);
         if($result=== TRUE){

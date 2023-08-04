@@ -1,7 +1,6 @@
 <?php 
 include_once("Connection.php");
 class TableDisplayClass extends Connection{
-    public $conn; 
     function __construct(){
         parent :: __construct();
     }

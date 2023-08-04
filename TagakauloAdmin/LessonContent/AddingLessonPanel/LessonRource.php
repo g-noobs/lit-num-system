@@ -1,5 +1,5 @@
 <div class="form-group">
-    <h4><strong>Add lesson Resource</strong></h4>
+    <h4><strong>Add Lesson Resource</strong></h4>
 </div>
 
 <div class="form-group">
@@ -24,3 +24,4 @@
     <button type="button" class="btn btn-warning btn-sm back">Previous</button>
     <button type="button" class="btn btn-warning btn-sm next">Next</button>
 </div>
+

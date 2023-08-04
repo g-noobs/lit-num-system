@@ -78,9 +78,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                <form role="form" action="../UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
+                <form role="form" action="../ClassContent/ActionFolder/ArchiveClassAction.php" method="post">
                     <div class="form-group">
-                        <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
+                        <input type="text" readonly name="class_id" class="form-control">
                         <button type="submit" class="btn btn-danger pull-left">Archive</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>

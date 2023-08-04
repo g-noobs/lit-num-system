@@ -61,15 +61,11 @@
                 </section>
 
                 <section class="content" id="learning-obj">
-                    lessong objective
-                    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
-                    <button type="button" class="btn btn-warning btn-sm next">Next</button>
+                <?php include_once("../LessonContent/AddingLessonPanel/ObjectiveLesson.php");?>
                 </section>
 
                 <section class="content" id="lesson-permission">
-                    lesson permssion
-                    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
-                    <button type="submit" class="btn btn-warning btn-sm next">Save All</button>
+                    <?php include_once("../LessonContent/AddingLessonPanel/PermissionManager.php");?>
                 </section>
             </form>
 
