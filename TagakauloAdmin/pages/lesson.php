@@ -34,7 +34,7 @@
                 </h1>
             </section>
             <br>
-            <div class="container-fluid well">
+            <div class="container well">
 
                 <button type="button" class="btn btn-default">Lesson</button>
                 <button type="button" class="btn btn-default">Quiz</button>
@@ -43,31 +43,37 @@
             </div>
 
             <!-- Main content -->
-            <section class="content" id="lesson-table">
+
+            <section class="container well" id="lesson-table">
                 <?php include_once "../LessonContent/TableFolder/LessonTable.php"
-                ?>
-                <button>Next</button>
+                    ?>
             </section>
+            
+            <form role="form" action="" id="form-add" class="container well">
+                <section class="content" id="lesson-info">
+                    
+                    <?php include_once("../LessonContent/AddingLessonPanel/addLessonInfo.php");?>
+                </section>
 
-            <section class="content" id="lesson-info">
-                add lesson info
-                <button>Next</button>
-            </section>
+                <section class="content" id="lesson-resource">
+                    lesson resource
+                    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
+                    <button type="button" class="btn btn-warning btn-sm next">Next</button>
+                </section>
 
-            <section class="content" id="lesson-resource">
-                lesson resource
-                <button>Next</button>
-            </section>
+                <section class="content" id="learning-obj">
+                    lessong objective
+                    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
+                    <button type="button" class="btn btn-warning btn-sm next">Next</button>
+                </section>
 
-            <section class="content" id="learning-obj">
-                lessong objective
-                <button>Next</button>
-            </section>
+                <section class="content" id="lesson-permission">
+                    lesson permssion
+                    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
+                    <button type="submit" class="btn btn-warning btn-sm next">Save All</button>
+                </section>
+            </form>
 
-            <section class="content" id="lesson-permission">
-                lesson permssion
-                <button>Next</button>
-            </section>
         </div>
         <!-- ./wrapper -->
 

@@ -2,17 +2,14 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">All Lesson Information</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="container-fluid">
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-lesson">
+                <h3 class="box-title">Lessong List</h3>
+                <br>
+                <br>
+                <button type="button" class="btn btn-warning btn-xs" id="add-lesson">
                     <i class="fa fa-plus"></i> <span> Add Lesson</span>
                 </button>
             </div>
-            <br>
-            <!-- /.modal ADD User-->
-
+            <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>

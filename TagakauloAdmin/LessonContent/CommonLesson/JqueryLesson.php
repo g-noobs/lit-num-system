@@ -11,17 +11,17 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<!-- lesson panel or fragment manipulation-->
 <script>
 $(document).ready(function() {
+    $('section.content').hide();
 
-    $('section.content').not(':first').hide();
-
-    $('button').click(function() {
+    $('button.next').click(function() {
         var currentSection = $(this).closest('section');
         var nextSection = currentSection.next('section');
 
         if (nextSection.length == 0) {
-            // If there is no next section, loop back to first
             nextSection = $('section.content:first');
         }
 
@@ -29,5 +29,35 @@ $(document).ready(function() {
         nextSection.show();
     });
 
+    $('button.back').click(function() {
+        var currentSection = $(this).closest('section');
+        var prevSection = currentSection.prev('section');
+
+        if (prevSection.length == 0) {
+            prevSection = $('section.content:last');
+        }
+
+        currentSection.hide();
+        prevSection.show();
+    });
+
+});
+</script>
+
+<!-- manipulation still but outside the form-->
+<script>
+$(document).ready(function() {
+    $('#form-add').hide();
+
+    $('#add-lesson').click(function() {
+        $('#lesson-table').hide();
+        $('#lesson-info').show();
+        $('#form-add').show();
+    });
+    $('#to-table').click(function() {
+        $('#lesson-table').show();
+        $('section.content').hide();
+        $('#form-add').hide();
+    });
 });
 </script>
