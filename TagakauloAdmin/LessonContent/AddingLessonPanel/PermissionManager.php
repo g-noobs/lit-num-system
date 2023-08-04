@@ -1,15 +1,10 @@
-
-
 <div class="form-group">
     <label for="checkbox">Assign to Teacher</label>
     
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Option 1</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Option 2</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Option 3</label>
-    </div>
+    <?php 
+    include_once("../Database/LessonCheckboxClass.php");
+    $sql = "SELECT user_info_id, first_name, last_name FROM tbl_user_info";
+    $checkbox = new LessonCheckboxClass();
+    $checkbox->teacherChecbox($sql);
+    ?>
 </div>
