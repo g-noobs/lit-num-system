@@ -13,11 +13,10 @@ $count = $columnCountClass->userCount("class_id","tbl_class");
 $values['class_id'] = "CLS".(100001 + $count);
 
 $table = "tbl_class";
-$sql = "INSERT INTO $table (class_id , class_name, class_status) VALUES ('" .
-    implode("','", array_values($values)) .
-    "');";
+$query = "INSERT INTO $table (class_id , class_name, class_status) VALUES (?,?,?);";
+$params = array_values($values);
 
-include_once("../../Database/AddDeleteClass.php");
-$addData = new AddDeleteClass();
-$addData->addManyData($sql, "Location: ../../pages/class.php");
+include_once("../../Database/Connection.php");
+$addData = new Connection();
+$addData->executePreparedStatement($query, $params, "../../pages/class.php")
 ?>

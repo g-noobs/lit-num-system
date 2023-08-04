@@ -19,5 +19,50 @@ class Connection{
             die("Connection failed: " . mysqli_connect_error());
         }
     }
+    //This will close the Connection
+    public function close(){
+        if($this->conn){
+            $this->conn->close();
+        }
+    }
+    //This will be used to get connection once $conn is set to protected
+    public function getConnection(){
+        return $this->conn;
+    }
+
+    //This will be used to execute parameter 
+    public function executePreparedStatement($query, $params, $header){
+        $stmt = $this->conn->prepare($query);
+
+        if(!$stmt){
+            die("Error in prepared statement: ". $this->conn->error);
+        }
+
+        //Generate the data type string for bind_param dynamically
+        $dataTypes = '';
+        foreach ($params as $param) {
+            if (is_int($param)) {
+                $dataTypes .= 'i'; // integer
+            } elseif (is_float($param)) {
+                $dataTypes .= 'd'; // double
+            } else {
+                $dataTypes .= 's'; // string
+            }
+        }
+        // Bind parameters dynamically
+        $stmt->bind_param($dataTypes, ...$params);
+
+        // Execute the statement
+        $stmt->execute();
+
+        // Check for errors during execution
+        if ($stmt->error) {
+            die("Error during execution of prepared statement: " . $stmt->error);
+        }
+         $stmt->close();
+
+        header("Location: ". $header);
+        exit();
+    }
 }
 ?>
