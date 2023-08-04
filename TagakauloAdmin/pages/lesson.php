@@ -56,9 +56,8 @@
                 </section>
 
                 <section class="content" id="lesson-resource">
-                    lesson resource
-                    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
-                    <button type="button" class="btn btn-warning btn-sm next">Next</button>
+                    <?php include_once("../LessonContent/AddingLessonPanel/LessonRource.php");?>
+
                 </section>
 
                 <section class="content" id="learning-obj">

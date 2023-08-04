@@ -1,8 +1,26 @@
 <div class="form-group">
-    <label for="lesson_name">Lesson Name:</label>
-    <input type="text" name="lesson_name" class="form-control">
-
+    <h4><strong>Add lesson Resource</strong></h4>
 </div>
 
-<button type="button" class="btn btn-warning btn-sm back" id="to-table">Previous</button>
-<button type="button" class="btn btn-warning btn-sm next">Next</button>
+<div class="form-group">
+    <label for="exampleInputFile">Add Image Resource:</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block"></p>
+</div>
+
+<div class="form-group">
+    <label for="exampleInputFile">Add Audio Resource:</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block"></p>
+</div>
+
+<div class="form-group">
+    <label for="exampleInputFile">Add Video Resource:</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block"></p>
+</div>
+
+<div class="form-group">
+    <button type="button" class="btn btn-warning btn-sm back">Previous</button>
+    <button type="button" class="btn btn-warning btn-sm next">Next</button>
+</div>
