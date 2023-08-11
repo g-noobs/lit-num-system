@@ -59,11 +59,20 @@ class DisplayAllTableClass extends Connection{
             while($row = $result->fetch_assoc()){
                 echo "<tr>";
                 echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
-                echo "<td>".$row["lesson_id"]. "</td>";
-                echo "<td>".$row["lesson_name"]. "</td>";
-                echo "<td>".$row["objective"]. "</td>";
-                echo "<td>".$row["topic_id"]. "</td>";
-                echo "<td>".$row["teacher_names"]. "</td>";
+                
+                $teacher_names = str_replace("\n", "<br>", $row["teacher_names"]);
+                $class_names = str_replace("\n", "<br>", $row["class_names"]);
+              
+                
+                echo "<td>" . $row["lesson_id"] . "</td>";
+                echo "<td>" . $row["lesson_name"] . "</td>";
+                echo "<td>" . $row["objective"] . "</td>";
+                echo "<td>" . $row["topic_id"] . "</td>";
+                
+                // Output with <br> tags
+                echo "<td>" . $teacher_names . "</td>"; 
+                echo "<td>" . $class_names . "</td>";
+              
                 echo "</tr>";
             }
         }

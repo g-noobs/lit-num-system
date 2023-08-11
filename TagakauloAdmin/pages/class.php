@@ -37,10 +37,27 @@
 
             <!-- Main content -->
             <section class="content" id="classContent">
-                <?php include_once("../ClassContent/ClassTableContent.php"); ?>
+                <?php include_once("../ClassContent/TableClass/ClassTableContent.php"); ?>
 
             </section>
-            <!-- /.content-wrapper -->
+
+            <!-- 
+            <form role="form" action="../LessonContent/ActionLesson/ActionRegisterLesson.php" method="post" id="form-add" class="container well">
+                <section class="content" id="lesson-info">
+                </section>
+
+                <section class="content" id="lesson-resource">
+
+                </section>
+
+                <section class="content" id="learning-obj">
+                </section>
+
+                <section class="content" id="lesson-permission">
+                </section>
+            </form>
+
+            -->
         </div>
         <!-- ./wrapper -->
 
