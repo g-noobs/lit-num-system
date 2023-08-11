@@ -24,13 +24,20 @@
   <!-- small box -->
   <div class="small-box bg-yellow">
     <div class="inner">
-      <h3>30</h3>
-      <p>Quiz</p>
+      <h3>
+        <?php 
+                include_once "../Database/ColumnCountClass.php";
+                $columnCountClass = new ColumnCountClass();
+                $sql = "SELECT COUNT(lesson_id) as count FROM tbl_lesson;";
+                echo $columnCountClass->columnCountNum($sql);
+        ?>
+      </h3>
+      <p>Lesson</p>
     </div>
     <div class="icon">
       <i class="ion ion-stats-bars"></i>
     </div>
-    <a href="../pages/quiz.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    <a href="../pages/lesson.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->
@@ -38,14 +45,21 @@
   <!-- small box -->
   <div class="small-box bg-yellow">
     <div class="inner">
-      <h3>44</h3>
+      <h3>
+        <?php 
+                include_once "../Database/ColumnCountClass.php";
+                $columnCountClass = new ColumnCountClass();
+                $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
+                echo $columnCountClass->columnCountNum($sql);
+        ?>
+      </h3>
 
       <p>Teachers</p>
     </div>
     <div class="icon">
       <i class="ion ion-person-add"></i>
     </div>
-    <a href="../pages/teacher.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    <a href="#" id="teacher-count" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->
@@ -66,3 +80,4 @@
 <!-- ./col -->
 </div>
 <!-- /.row -->
+

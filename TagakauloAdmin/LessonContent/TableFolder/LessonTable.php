@@ -5,7 +5,7 @@
                 <h3 class="box-title">Lessong List</h3>
                 <br>
                 <br>
-                <button type="button" class="btn btn-warning btn-xs" id="add-lesson">
+                <button type="button" class="btn btn-warning btn-sm" id="add-lesson">
                     <i class="fa fa-plus"></i> <span> Add Lesson</span>
                 </button>
             </div>

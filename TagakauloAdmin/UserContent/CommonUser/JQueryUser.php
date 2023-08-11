@@ -18,9 +18,9 @@ $(document).ready(function() {
             contentPath = '../UserContent/UserTable/StudentTableContent.php';
         } else if (userType === 'admin') {
             contentPath = '../UserContent/UserTable/AdminTableContent.php';
-        }else if (userType === 'arch-all') {
+        } else if (userType === 'arch-all') {
             contentPath = '../UserContent/UserTable/AllArchUsersTable.php';
-        }else if (userType === 'arch-admin') {
+        } else if (userType === 'arch-admin') {
             contentPath = '../UserContent/UserTable/ArchiveAdminTable.php';
         } else if (userType === 'arch-teacher') {
             contentPath = '../UserContent/UserTable/ArchivedTeacherTable.php';
@@ -58,7 +58,8 @@ $(document).ready(function() {
     // Click event for the edit icon
     $('.edit').click(function() {
         // Get the row data
-        var userId = $(this).closest('tr').find('td:eq(1)').text(); // Assuming the user_info_Id is in the second column (index 1)
+        var userId = $(this).closest('tr').find('td:eq(1)')
+            .text(); // Assuming the user_info_Id is in the second column (index 1)
         var personalId = $(this).closest('tr').find('td:eq(2)').text();
         var firstName = $(this).closest('tr').find('td:eq(3)').text();
         var lastName = $(this).closest('tr').find('td:eq(4)').text();
@@ -88,7 +89,7 @@ $(document).ready(function() {
     $('.action').click(function() {
         // Get the row data
         var userId = $(this).closest('tr').find('td:eq(1)')
-    .text(); // Assuming the user_info_Id is in the second column (index 1)
+            .text(); // Assuming the user_info_Id is in the second column (index 1)
         var name = $(this).closest('tr').find('td:eq(2)').text();
         var gender = $(this).closest('tr').find('td:eq(3)').text();
         var date = $(this).closest('tr').find('td:eq(4)').text();
@@ -103,6 +104,26 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<script>
+$('#teacher-count').click(function(e) {
+
+    e.preventDefault();
+
+    window.location.href = 'user.php';
+
+    $('.custom-dropdown button').text('Teacher');
+
+    $('.custom-dropdown li a[data-user-type="teacher"]').trigger('click');
+
+});
+</script>
+
+
+<!-- Hiding password -->
+sdafsadf
+
+
 
 <!--Hide the option to Enter Personal ID if Admin is selected from the option
 <script>
@@ -132,7 +153,3 @@ $(document).ready(function() {
 });
 </script>
 -->
-
-
-
-

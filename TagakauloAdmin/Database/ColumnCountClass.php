@@ -19,5 +19,18 @@ class ColumnCountClass extends Connection{
             return 0;
         }
     }
+    function columnCountNum($sql){
+        $result = $this->conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            // Fetch the count value
+            $row = $result->fetch_assoc();
+            $count = $row["count"];
+            
+            return $count;
+        } else {
+            return 0;
+        }
+    }
 }
 ?>

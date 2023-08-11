@@ -31,8 +31,11 @@ foreach ($values as $column => $value) {
 $sql = rtrim($sql, ", "); // Remove the trailing comma and space
 $sql .= " WHERE user_info_Id = '{$values['user_info_Id']}';";
 
+$table = "tbl_credentials";
+$sql .= "UPDATE $table SET uname = '{$values['personal_id']}' WHERE user_info_Id = '{$values['user_info_Id']}';";
+
 //still follow the usual tracing of php class
 include_once("../../Database/AddDeleteClass.php");
 $addData = new AddDeleteClass();
-$addData->updateData($sql);
+$addData->updateData($sql, "../../pages/user.php");
 ?>

@@ -3,5 +3,5 @@
 <th>Lesson</th>
 <th>Objective</th>
 <th>Topic</th>
-<th>Assigned to:</th>
-<th>Actions</th>
+<th>Teacher Assigned</th>
+<th>Class Assigned</th>

@@ -13,7 +13,7 @@ class DisplayAllTableClass extends Connection{
             while($row = $result->fetch_assoc()){
                 if($row["user_level_description"] === "Admin"){
                     $username = $row['email'];
-                    $password = "******";
+                    $password = str_repeat("*", strlen($row["password"]));
                     $modalTarget = "";
                     $editColor = "gray";
                 }
@@ -63,7 +63,7 @@ class DisplayAllTableClass extends Connection{
                 echo "<td>".$row["lesson_name"]. "</td>";
                 echo "<td>".$row["objective"]. "</td>";
                 echo "<td>".$row["topic_id"]. "</td>";
-                echo "<td>".$row["first_name"]." ".$row["last_name"]. "</td>";
+                echo "<td>".$row["teacher_names"]. "</td>";
                 echo "</tr>";
             }
         }

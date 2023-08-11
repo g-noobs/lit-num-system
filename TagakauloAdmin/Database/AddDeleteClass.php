@@ -77,8 +77,8 @@ class AddDeleteClass extends Connection{
         exit();
     }
 
-    function updateData($sql){
-        $result = $this->conn->query($sql);
+    function updateData($sql, $header){
+        $result = $this->conn->multi_query($sql);
         if($result === TRUE){
             $this->message = "Edited Successfully!";
             $this->class = "success";
@@ -87,7 +87,7 @@ class AddDeleteClass extends Connection{
             $this->message = "Error updating data ".$this->conn->error;
             $this->class = "error";
         }
-        header("Location: ../../pages/user.php");
+        header("Location: ". $header);
         exit();
     }
 
