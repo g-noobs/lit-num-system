@@ -17,7 +17,7 @@
             <?php include_once "../../UserContent/CommonUser/ModalClass.php";
                 $btnName = "Update";
                 $editActive = new ModalClass();
-                $editActive->editModal($btnName,'');
+                $editActive->editModal($btnName);
 
                 $addNewUser = new ModalClass();
                 $addNewUser->addAnyModal();
