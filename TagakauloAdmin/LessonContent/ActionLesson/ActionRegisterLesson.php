@@ -77,9 +77,15 @@ $teacher_lesson_id = "TCH-L-ID:";
 $count = 100001 + $columnCountClass->columnCount("teacher_lesson_id ","tbl_teacher_lesson");
    // Loop through checked checkboxes
     foreach($_POST['categories'] as $category_id) {
-        $sql .= "INSERT INTO $table (teacher_lesson_id, lesson_id, user_info_id) VALUES ('$teacher_lesson_id$count','$lesson_id','$category_id');";
+        $sql .= "INSERT INTO $table (teacher_lesson_id, lesson_id, user_info_id) VALUES ('$teacher_lesson_id
+        $count','$lesson_id','$category_id');";
         $count++;
     }
+
+foreach($_POST['class_check'] as $class_id){
+    $sql .= "UPDATE tbl_class SET lesson_id = '$lesson_id' WHERE class_id = $class_id";
+
+}
 
 
 include_once("../../Database/AddDeleteClass.php");
