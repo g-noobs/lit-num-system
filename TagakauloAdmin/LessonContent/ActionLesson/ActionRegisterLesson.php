@@ -30,7 +30,7 @@ $objective = array(
 
 $topic = array(
     'topic_id'=>$topic_id,
-    'topic_title'=>'test',
+    'topic_title'=>$_POST['topic_title'],
     'topic_content'=>'test',
     'image_id'=>'test',
     'audio_id'=>'test',

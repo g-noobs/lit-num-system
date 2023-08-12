@@ -2,6 +2,13 @@
     <h4><strong>Add Lesson Resource</strong></h4>
 </div>
 
+<div class="form-group row">
+    <div class="col-xs-3">
+        <label for="topic_title">Topic Title:</label>
+        <input type="text" name="topic_title" class="form-control">
+    </div>
+</div>
+
 <div class="form-group">
     <label for="exampleInputFile">Add Image Resource:</label>
     <input type="file" id="exampleInputFile">
@@ -24,4 +31,3 @@
     <button type="button" class="btn btn-warning btn-sm back">Previous</button>
     <button type="button" class="btn btn-warning btn-sm next">Next</button>
 </div>
-
