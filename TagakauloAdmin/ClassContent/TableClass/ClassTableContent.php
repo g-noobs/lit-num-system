@@ -3,6 +3,14 @@
 .btn-li {
     margin-top: 10.5px;
     /* Center items vertically */
+    
+}
+table {
+  overflow-y: scroll; 
+}
+table {
+  height: 150px;
+  overflow-y: scroll;
 }
 </style>
 
@@ -16,7 +24,7 @@
                 <nav class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li class="btn-li">
-                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-class">
+                            <button type="button" class="btn btn-warning" id="add-class-btn">
                                 <i class="fa fa-plus"></i> <span> Add Class</span>
                             </button>
                         </li>

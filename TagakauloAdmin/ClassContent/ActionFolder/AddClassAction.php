@@ -1,9 +1,12 @@
 <?php 
+session_start();
 $values= array(
     'class_id'=>'',
     'class_name'=>$_POST['class_name'],
     'class_status'=>'1'
 );
+
+$added_byID = $_SESSION['id'];
 
 include_once("../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
@@ -18,5 +21,31 @@ $params = array_values($values);
 
 include_once("../../Database/Connection.php");
 $addData = new Connection();
-$addData->executePreparedStatement($query, $params, "../../pages/class.php")
+$addData->executrePreState($query, $params);
+
+
+
+$teacher_classlearner = array(
+    'teacher_id' => $_POST['teacher'],
+    'learner_id' => 'none',
+    'class_id' => $values['class_id'],
+    'area_id'=> $_POST['area'],
+    'addedby_ID' => $added_byID,
+    'date_createad' => ''
+);
+
+include_once("../../CommonPHPClass/PHPClass.php");
+$date = new PHPClass();
+$currentDate = $date->getFormattedCurrentDate();
+
+$teacher_classlearner['date_createad'] = $currentDate;
+
+$table = "tbl_teacher_classlearner";
+$query = "INSERT INTO $table (teacher_id, learner_id, class_id, area_id, addedby_ID, date_created) VALUES (?,?,?,?,?,?);";
+$params = array_values($teacher_classlearner);
+
+include_once("../../Database/Connection.php");
+$addNewData = new Connection();
+$addNewData->executePreparedStatement($query, $params, "../../../pages/class.php")
+
 ?>

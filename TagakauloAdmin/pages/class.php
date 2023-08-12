@@ -12,7 +12,7 @@
 </head>
 
 <body class="sidebar-mini skin-yellow" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
-    style="height: 100%; min-height: 100%;">
+    style="height: auto; min-height: 100%;">
 
     <div class="wrapper">
 
@@ -36,29 +36,20 @@
             <br>
 
             <!-- Main content -->
-            <section class="content" id="classContent">
+            <section class="content" id="classTable">
                 <?php include_once("../ClassContent/TableClass/ClassTableContent.php"); ?>
+            </section>
+
+            <section class="content" id="add-class-info">
+                <form role="form" action="../ClassContent//ActionFolder/AddClassAction.php" method="post"
+                    id="form-add-class" class="container well">
+
+                    <?php include_once("../ClassContent/AddClassFolder/AddClassInfo.php")?>
+                </form>
 
             </section>
 
-            
-            <form role="form" action="#" method="post" id="form-add-class" class="container well">
-                <section class="content" id="class-info">
-                    <?php include_once("../ClassContent/AddClassFolder/AddClassInfo.php")?>
-                </section>
 
-                <section class="content" id="lesson-resource">
-
-                </section>
-
-                <section class="content" id="learning-obj">
-                </section>
-
-                <section class="content" id="lesson-permission">
-                </section>
-            </form>
-
-          
         </div>
         <!-- ./wrapper -->
 
