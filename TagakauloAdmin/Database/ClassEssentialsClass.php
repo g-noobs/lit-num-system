@@ -1,6 +1,6 @@
 <?php 
 include_once("Connection.php");
-class TableDisplayClass extends Connection{
+class ClassEssentialsClass extends Connection{
     function __construct(){
         parent :: __construct();
     }
@@ -33,6 +33,31 @@ class TableDisplayClass extends Connection{
                 echo "</tr>";
             }
         }
+    }
+
+    function teacherSelect(){
+        $sql = "SELECT user_info_id, first_name, last_name FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
+        $result = $this->conn->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<option value='{$row['user_info_id']}'>";
+                echo $row['first_name']." ". $row['last_name'];
+                echo "</option>";
+            }
+        }
+    }
+
+    function areaSelect(){
+        $sql = "SELECT area_id, area_name FROM tbl_area WHERE status_id = 1";
+        $result = $this->conn->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<option value='{$row['area_id']}'>";
+                echo $row['area_name'];
+                echo "</option>";
+            }
+        }
+
     }
 }
 ?>

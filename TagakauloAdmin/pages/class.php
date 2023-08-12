@@ -41,9 +41,10 @@
 
             </section>
 
-            <!-- 
-            <form role="form" action="../LessonContent/ActionLesson/ActionRegisterLesson.php" method="post" id="form-add" class="container well">
-                <section class="content" id="lesson-info">
+            
+            <form role="form" action="#" method="post" id="form-add-class" class="container well">
+                <section class="content" id="class-info">
+                    <?php include_once("../ClassContent/AddClassFolder/AddClassInfo.php")?>
                 </section>
 
                 <section class="content" id="lesson-resource">
@@ -57,7 +58,7 @@
                 </section>
             </form>
 
-            -->
+          
         </div>
         <!-- ./wrapper -->
 

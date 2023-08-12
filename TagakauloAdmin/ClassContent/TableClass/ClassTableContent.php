@@ -58,8 +58,8 @@
                                 </thead>
                                 <tbody>
                                     <?php 
-                                        include_once("../Database/TableDisplayClass.php");
-                                        $classTable = new TableDisplayClass();
+                                        include_once("../Database/ClassEssentialsClass.php");
+                                        $classTable = new ClassEssentialsClass();
                                         $sql = "SELECT * FROM tbl_class;";
                                         $classTable->classTable($sql);
                                     ?>
