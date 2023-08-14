@@ -38,6 +38,11 @@
             </a>
         </li>
         <li>
+            <a href="category.php">
+                <i class="glyphicon glyphicon-level-up"></i> <span>Manage Category</span>
+            </a>
+        </li>
+        <li>
             <a href="batch.php">
                 <i class="fa fa-group"></i> <span>Manage Batch</span>
             </a>
