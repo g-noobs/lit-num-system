@@ -23,3 +23,4 @@ $addData = new AddDeleteClass();
 $addData->addArea($sql);
 
 ?>
+

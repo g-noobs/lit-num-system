@@ -49,7 +49,7 @@
         </li>
         <li>
             <a href="class.php">
-                <i class="#"></i> <span>Manage Class</span>
+                <i class="fa fa-sticky-note-o"></i> <span>Manage Class</span>
             </a>
         </li>
         <li>

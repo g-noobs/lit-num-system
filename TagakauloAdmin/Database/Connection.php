@@ -45,7 +45,11 @@ class Connection{
                 $dataTypes .= 'i'; // integer
             } elseif (is_float($param)) {
                 $dataTypes .= 'd'; // double
-            } else {
+            }
+            elseif (is_string($param) && strtotime($param)) { 
+                $dataTypes .= 's'; // Bind dates as strings
+            }  
+            else {
                 $dataTypes .= 's'; // string
             }
         }

@@ -43,9 +43,6 @@ $(document).ready(function() {
 
         // Populate the modal fields with the data
         $('#archive-class').find('[name="class_id"]').val(class_id);
-
-
-
         // Show the modal
         $('#edit-class').modal('show');
     });
