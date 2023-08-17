@@ -5,13 +5,13 @@
                 <h3 class="box-title">Lessong List</h3>
                 <br>
                 <br>
-                <button type="button" class="btn btn-warning btn-sm" id="add-lesson">
+                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#add_lesson">
                     <i class="fa fa-plus"></i> <span> Add Lesson</span>
                 </button>
             </div>
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="example2" class="table table-bordered table-hover text-center">
                     <thead>
                         <tr>
                             <?php include_once "LessonTableHeader.php";?>
@@ -19,10 +19,10 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../Database/DisplayAllTableClass.php");
+                        include_once("../Database/LessonDisplayClass.php");
                         $table = "lesson_view";
                         $sql = "SELECT * FROM ".$table;
-                        $userT = new DisplayAllTableClass();
+                        $userT = new LessonDisplayClass();
                         $userT->lessonTable($sql);
                         ?>
                     </tbody>

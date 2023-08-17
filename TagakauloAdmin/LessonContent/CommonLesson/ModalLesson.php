@@ -1,4 +1,4 @@
-<div class="modal fade" id="add-lesson">
+<div class="modal fade" id="add_lesson">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -11,21 +11,24 @@
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="user">Lesson Type:</label>
-                            <select class="form-control" name="lesson_name">
-                                <option value="" selected disabled hidden>Lesson</option>
-                                <option>Folklore</option>
-                                <option>Numbers</option>
-                                <option>Letters</option>
+                            <label for="lesson_name">Lesson Name</label>
+                            <input type="text" name="lesson_name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="level_learning">Select a level of Category</label>
+                            <select class="form-control" name="level_learning">
+                                <?php include_once("../Database/LessonDisplayClass.php");
+                                    $categoryList = new LessonDisplayClass();
+                                    $categoryList->displayCategoryList();
+                                ?>
+                                
                             </select>
                         </div>
                     </div>
-                    <!-- /.box-body -->
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary pull-left">Add Lesson</button>
-                    <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning pull-left">Add Lesson</button>
+                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    </div>
 
             </form>
         </div>

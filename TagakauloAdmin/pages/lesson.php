@@ -52,7 +52,7 @@
 
         </div>
         <!-- ./wrapper -->
-
+        <?php include_once("../LessonContent/CommonLesson/ModalLesson.php");?>
         <?php include_once("../bootstrap/js.php"); ?>
 
         <?php include_once("../LessonContent/CommonLesson/JqueryLesson.php");?>

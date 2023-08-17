@@ -25,7 +25,7 @@ class ModalCategory{
                         <!-- /.box-body -->
                     </div> <!-- Missing closing div tag for modal-body -->
                     <div class='modal-footer'>
-                        <button type='submit' class='btn btn-primary pull-left'>Register</button>
+                        <button type='submit' class='btn btn-primary pull-left'>Add New Category</button>
                         <button type='reset' class='btn btn-default pull-left' data-dismiss='modal'>Cancel</button>
                     </div>
                 </form>

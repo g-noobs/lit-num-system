@@ -6,7 +6,7 @@ $table = "tbl_lesson";
 $values = array(
     'lesson_id' => '',
     'lesson_name' => $_POST['lesson_name'],
-    'objective_id'=>'',
+    'category_id'=>$_POST['level_learning'],
     'topic_id' => '',
     'addedby_ID' => '',
 );
@@ -22,7 +22,7 @@ $values['lesson_id'] = "LSN".(100001 + (int)$columnCountClass->columnCount("less
 
 
 // Assuming $table variable holds the table name
-$sql = "INSERT INTO $table (lesson_id, lesson_name, objective_id, topic_id,  added_byID) VALUES ('" .
+$sql = "INSERT INTO $table (lesson_id, lesson_name, category_id, topic_id,  added_byID) VALUES ('" .
     implode("','", array_values($values)) .
     "')";
 
