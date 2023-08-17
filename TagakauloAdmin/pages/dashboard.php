@@ -18,7 +18,7 @@
     </style>
 </head>
 
-<body class="sidebar-mini skin-yellow" style="height: 100%; min-height: 100%;">
+<body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
     <div class="wrapper" style="height: auto; min-height: 100%;">
 

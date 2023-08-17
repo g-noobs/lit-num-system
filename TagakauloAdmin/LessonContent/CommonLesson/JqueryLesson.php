@@ -45,7 +45,7 @@ $(document).ready(function() {
 </script>
 
 <!-- manipulation still but outside the form-->
-<script>
+<!-- <script>
 $(document).ready(function() {
     $('#form-add').hide();
 
@@ -60,13 +60,13 @@ $(document).ready(function() {
         $('#form-add').hide();
     });
 });
-</script>
+</script> -->
 
 <!-- will clear the form if lesson button is clicked-->
-<script>
+<!-- <script>
     $(document).ready(function() {
         $('#lesson-btn').click(function() {
     $('#form-add').find('input[type="text"], input[type="number"], textarea').val(''); 
     });
     });
-</script>
+</script> -->

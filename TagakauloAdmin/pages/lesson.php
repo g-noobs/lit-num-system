@@ -12,7 +12,8 @@
     <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
 </head>
 
-<body class="sidebar-mini skin-yellow" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
+<body class="sidebar-mini skin-yellow fixed fixed
+" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
@@ -48,26 +49,6 @@
                 <?php include_once "../LessonContent/TableFolder/LessonTable.php"
                     ?>
             </section>
-            
-            <form role="form" action="../LessonContent/ActionLesson/ActionRegisterLesson.php" method="post" id="form-add" class="container well">
-                <section class="content" id="lesson-info">
-                    
-                    <?php include_once("../LessonContent/AddingLessonPanel/addLessonInfo.php");?>
-                </section>
-
-                <section class="content" id="lesson-resource">
-                    <?php include_once("../LessonContent/AddingLessonPanel/LessonRource.php");?>
-
-                </section>
-
-                <section class="content" id="learning-obj">
-                <?php include_once("../LessonContent/AddingLessonPanel/ObjectiveLesson.php");?>
-                </section>
-
-                <section class="content" id="lesson-permission">
-                    <?php include_once("../LessonContent/AddingLessonPanel/PermissionManager.php");?>
-                </section>
-            </form>
 
         </div>
         <!-- ./wrapper -->

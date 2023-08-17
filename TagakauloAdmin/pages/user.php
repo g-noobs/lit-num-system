@@ -13,7 +13,7 @@
 <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
 
 
-<body class="sidebar-mini skin-yellow" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
+<body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: auto; min-height: 100%;">
 
     <div class="wrapper">
