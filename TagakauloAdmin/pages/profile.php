@@ -31,21 +31,47 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                <b style="color:#3D3848;">Admin Profile</b>
+                    <b style="color:#3D3848;">Admin Profile</b>
 
                 </h1>
             </section>
 
             <!-- Main content -->
             <section class="content">
-            <?php include_once("../PagesContent/ProfileContent/ProfileMain.php");?>
+                <?php include_once("../PagesContent/ProfileContent/ProfileMain.php");?>
 
             </section>
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
 
+
+        <!-- Modal HTML -->
+        <div id="messageModal" class="modal fade">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <p><?= urldecode($_GET['msg']) ?></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <?php include_once("../bootstrap/js.php")?>
+        <script>
+        // Check for message
+        var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
+        if (msg) {
+            $('#messageModal').modal('show');
+        }
+        </script>
         <?php include_once("../PagesContent/ProfileContent/JqueryProfile.php");?>
 </body>
 

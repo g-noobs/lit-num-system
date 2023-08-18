@@ -23,14 +23,18 @@ $update=new SanitizeCrudClass();
 $update->executePreState($query, $params);
 
 
-$id = $_SESSION['id'];
-$uname = $_POST['username'];
-$pass = $_POST['password'];
 
 $query2 = "UPDATE tbl_credentials SET uname = ?, pass = ? WHERE user_info_id = ?";
-// Parameters array
+
+$uname = $_POST['username'];
+$pass = $_POST['password'];
+$id = $_SESSION['id']; 
+
 $params = [$uname, $pass, $id];
-$update->executePreparedStatement($query, $params, '../../pages/profile.php');
 
+$update->executePreState($query2, $params);
 
+$message = 'Profile updated!'; 
+// Pass message as GET parameter
+header('Location: ../../pages/profile.php?msg=' . urlencode($message));
 ?>
