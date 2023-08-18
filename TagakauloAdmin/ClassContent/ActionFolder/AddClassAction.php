@@ -21,7 +21,7 @@ $params = array_values($values);
 
 include_once("../../Database/Connection.php");
 $addData = new Connection();
-$addData->executrePreState($query, $params);
+$addData->executePreState($query, $params);
 
 
 

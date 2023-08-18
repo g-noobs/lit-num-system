@@ -13,7 +13,8 @@
     <div class="row" style="margin-left:20px;"><a href='#' id="edit-icon"><span
                 class='glyphicon glyphicon-edit'></span></a></div>
 
-    <form role="form" action="../ProfileContent/ActionProfile.php" onsubmit="return validateForm()" method="post">
+    <form role="form" action="../PagesContent/ProfileContent/ActionProfile.php" onsubmit="return validateForm()" method="post">           
+
         <?php
             $formCont = new DisplayInfoClass();
             $query = "SELECT * FROM user_info_view WHERE user_info_id = '{$_SESSION['id']}'";

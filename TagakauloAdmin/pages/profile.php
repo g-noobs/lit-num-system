@@ -38,7 +38,7 @@
 
             <!-- Main content -->
             <section class="content">
-                <?php include_once("../ProfileContent/ProfileMain.php");?>
+            <?php include_once("../PagesContent/ProfileContent/ProfileMain.php");?>
 
             </section>
             <!-- /.content-wrapper -->
@@ -46,7 +46,7 @@
         <!-- ./wrapper -->
 
         <?php include_once("../bootstrap/js.php")?>
-        <?php include_once("../ProfileContent/JqueryProfile.php");?>
+        <?php include_once("../PagesContent/ProfileContent/JqueryProfile.php");?>
 </body>
 
 </html>
