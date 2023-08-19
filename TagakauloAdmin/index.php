@@ -72,6 +72,23 @@
         <!-- /.login-box-body -->
     </div>
     <!-- /.login-box -->
+    <!-- Modal HTML -->
+    <div id="errorModal" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><b><?= urldecode($_GET['msg']) ?></b></h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Please try again!</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery 3 -->
     <script src="design/bower_components/jquery/dist/jquery.min.js"></script>
@@ -79,6 +96,13 @@
     <script src="design/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- iCheck -->
     <script src="design/plugins/iCheck/icheck.min.js"></script>
+    <script>
+    // Check for message
+    var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
+    if (msg) {
+        $('#errorModal').modal('show');
+    }
+    </script>
     <script>
     $(function() {
         $('input').iCheck({
@@ -88,6 +112,7 @@
         });
     });
     </script>
+
 </body>
 
 </html>

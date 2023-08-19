@@ -33,9 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: pages/dashboard.php");
         exit();
     }
-    else{
-        header("Location: index.php");
-    }
+    $message = 'Error'; 
+        // Pass message as GET parameter
+        header('Location: index.php?msg=' . urlencode($message));
 }
 
 ?>
