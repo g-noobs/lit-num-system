@@ -22,11 +22,11 @@
     <div class="wrapper">
 
         <header class="main-header">
-            <?php include_once("../content/HeaderContent.php"); ?>
+            <?php include_once("../CommonContent/HeaderContent.php"); ?>
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
-            <?php include_once "../content/MainSideContent.php"?>
+            <?php include_once "../CommonContent/MainSideContent.php"?>
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
@@ -75,7 +75,7 @@
             </section>
 
             <section class="content" id="quizContent">
-                <?php include_once("../QuizContent/TableQuiz/AllQuiz.php");?>
+                <?php include_once("../PagesContent/QuizContent/TableQuiz/AllQuiz.php");?>
 
             </section>
             <!-- Main content -->

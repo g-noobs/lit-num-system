@@ -23,11 +23,11 @@
     <div class="wrapper" style="height: auto; min-height: 100%;">
 
         <header class="main-header">
-            <?php include_once("../content/HeaderContent.php"); ?>
+            <?php include_once("../CommonContent/HeaderContent.php"); ?>
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
-            <?php include_once "../content/MainSideContent.php"?>
+            <?php include_once "../CommonContent/MainSideContent.php"?>
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
@@ -41,7 +41,7 @@
 
             <!-- Main content -->
             <section class="content">
-                <?php include_once("../content/DashboardContent.php"); ?>
+                <?php include_once("../CommonContent/DashboardContent.php"); ?>
             </section>
             <!-- /.content-wrapper -->
             <!-- Control Sidebar -->

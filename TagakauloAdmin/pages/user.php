@@ -19,11 +19,11 @@
     <div class="wrapper">
 
         <header class="main-header">
-            <?php include_once("../content/HeaderContent.php"); ?>
+            <?php include_once("../CommonContent/HeaderContent.php"); ?>
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
-            <?php include_once "../content/MainSideContent.php"?>
+            <?php include_once "../CommonContent/MainSideContent.php"?>
         </aside>
 
         <!-- Content Wrapper. Contains page content -->

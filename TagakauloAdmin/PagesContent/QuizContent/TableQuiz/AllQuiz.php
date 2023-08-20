@@ -7,7 +7,7 @@
             <!-- /.box-header -->
 
             <div class="container-fluid">
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-quiz">
                     <i class="fa fa-plus"></i> <span> New Quiz</span>
                 </button>
             </div>
