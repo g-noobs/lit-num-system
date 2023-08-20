@@ -14,7 +14,7 @@ table {
 }
 </style>
 
-<?php include_once "../ClassContent/ClassEssentials/ModalClass.php";?>
+<?php include_once "../PagesContent/ClassContent/ClassEssentials/ModalClass.php";?>
 
 <div class="row">
     <div class="col-xs-12">

@@ -8,7 +8,7 @@ $values= array(
 
 $added_byID = $_SESSION['id'];
 
-include_once("../../Database/ColumnCountClass.php");
+include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 $count = $columnCountClass->columnCount("class_id","tbl_class");
 
@@ -19,7 +19,7 @@ $table = "tbl_class";
 $query = "INSERT INTO $table (class_id , class_name, class_status) VALUES (?,?,?);";
 $params = array_values($values);
 
-include_once("../../Database/SanitizeCrudClass.php");
+include_once("../../../Database/SanitizeCrudClass.php");
 $addData = new SanitizeCrudClass();
 $addData->executePreState($query, $params);
 
@@ -34,7 +34,7 @@ $teacher_classlearner = array(
     'date_createad' => ''
 );
 
-include_once("../../CommonPHPClass/PHPClass.php");
+include_once("../../../CommonPHPClass/PHPClass.php");
 $date = new PHPClass();
 $currentDate = $date->getFormattedCurrentDate();
 
@@ -44,7 +44,7 @@ $table = "tbl_teacher_classlearner";
 $query = "INSERT INTO $table (teacher_id, learner_id, class_id, area_id, addedby_ID, date_created) VALUES (?,?,?,?,?,?);";
 $params = array_values($teacher_classlearner);
 
-include_once("../../Database/SanitizeCrudClass.php");
+include_once("../../../Database/SanitizeCrudClass.php");
 $addNewData = new SanitizeCrudClass();
 $addNewData->executePreparedStatement($query, $params, "../../../pages/class.php")
 

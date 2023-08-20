@@ -6,7 +6,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role="form" action="../ClassContent/ActionFolder/AddClassAction.php" onsubmit="return validateForm()"
+            <form role="form" action="../PagesContent/ClassContent/ActionFolder/AddClassAction.php" onsubmit="return validateForm()"
                 method="post">
                 <div class="modal-body">
                     <div class="box-body">
@@ -41,7 +41,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role="form" action="../ClassContent/ActionFolder/EditClassAction.php" onsubmit="return validateForm()"
+            <form role="form" action="../PagesContent/ClassContent/ActionFolder/EditClassAction.php" onsubmit="return validateForm()"
                 method="post">
                 <div class="modal-body">
                     <div class="box-body">
@@ -78,7 +78,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                <form role="form" action="../ClassContent/ActionFolder/ArchiveClassAction.php" method="post">
+                <form role="form" action="../PagesContent/ClassContent/ActionFolder/ArchiveClassAction.php" method="post">
                     <div class="form-group">
                         <input type="text" readonly name="class_id" class="form-control">
                         <button type="submit" class="btn btn-danger pull-left">Archive</button>

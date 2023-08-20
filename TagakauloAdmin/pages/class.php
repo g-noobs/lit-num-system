@@ -37,14 +37,14 @@
 
             <!-- Main content -->
             <section class="content" id="classTable">
-                <?php include_once("../ClassContent/TableClass/ClassTableContent.php"); ?>
+                <?php include_once("../PagesContent/ClassContent/TableClass/ClassTableContent.php"); ?>
             </section>
 
             <section class="content" id="add-class-info">
-                <form role="form" action="../ClassContent//ActionFolder/AddClassAction.php" method="post"
+                <form role="form" action="../PagesContent/ClassContent/ActionFolder/AddClassAction.php" method="post"
                     id="form-add-class" class="container well">
 
-                    <?php include_once("../ClassContent/AddClassFolder/AddClassInfo.php")?>
+                    <?php include_once("../PagesContent/ClassContent/AddClassFolder/AddClassInfo.php")?>
                 </form>
 
             </section>
@@ -54,7 +54,7 @@
         <!-- ./wrapper -->
 
         <?php include_once("../bootstrap/js.php");
-            include_once("../ClassContent/ClassEssentials/ClassJquery.php");
+            include_once("../PagesContent/ClassContent/ClassEssentials/ClassJquery.php");
         ?>
 </body>
 
