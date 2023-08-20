@@ -32,7 +32,7 @@ $currentDate = $date->getFormattedCurrentDate();
 $query = "INSERT INTO $table (category_id, category_name, category_info, addedby_ID, date_added, category_status) VALUES (?, ?, ?, ?, ?, ?);";
 $params =array_values($values);
 
-include_once("../../Database/Connection.php");
-$addNewData = new Connection();
+include_once("../../Database/SanitizeCrudClass.php");
+$addNewData = new SanitizeCrudClass();
 $addNewData->executePreparedStatement($query, $params, "../../pages/category.php")
 ?>

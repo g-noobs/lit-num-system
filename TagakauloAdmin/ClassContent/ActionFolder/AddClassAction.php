@@ -19,8 +19,8 @@ $table = "tbl_class";
 $query = "INSERT INTO $table (class_id , class_name, class_status) VALUES (?,?,?);";
 $params = array_values($values);
 
-include_once("../../Database/Connection.php");
-$addData = new Connection();
+include_once("../../Database/SanitizeCrudClass.php");
+$addData = new SanitizeCrudClass();
 $addData->executePreState($query, $params);
 
 
