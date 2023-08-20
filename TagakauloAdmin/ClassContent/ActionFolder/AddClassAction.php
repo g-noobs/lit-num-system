@@ -44,8 +44,8 @@ $table = "tbl_teacher_classlearner";
 $query = "INSERT INTO $table (teacher_id, learner_id, class_id, area_id, addedby_ID, date_created) VALUES (?,?,?,?,?,?);";
 $params = array_values($teacher_classlearner);
 
-include_once("../../Database/Connection.php");
-$addNewData = new Connection();
+include_once("../../Database/SanitizeCrudClass.php");
+$addNewData = new SanitizeCrudClass();
 $addNewData->executePreparedStatement($query, $params, "../../../pages/class.php")
 
 ?>

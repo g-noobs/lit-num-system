@@ -70,13 +70,14 @@
                 </div>
             </section>
 
-            <?php include_once("../AreaFolder/AreaCommon/ModalArea.php");
+            <?php include_once("../PagesContent/AreaFolder/AreaCommon/ModalArea.php");
                 $modal = new ModalArea();
                 $modal->addNewArea();
+                $modal->archiveArea();
             ?>
             <!-- Main content -->
             <section class="content" id="mainContent">
-                <?php include_once("../AreaFolder/AreaContent.php");?>
+                <?php include_once("../PagesContent/AreaFolder/AreaContent.php");?>
 
             </section>
             <!-- /.content-wrapper -->

@@ -13,7 +13,7 @@ $(document).ready(function() {
 </script>
 
 <!-- lesson panel or fragment manipulation-->
-<script>
+<!-- <script>
 $(document).ready(function() {
     $('section.content').hide();
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
     });
 
 });
-</script>
+</script> -->
 
 <!-- manipulation still but outside the form-->
 <!-- <script>

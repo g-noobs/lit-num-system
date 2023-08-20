@@ -10,7 +10,7 @@ class ModalArea{
                     </button>
                     <h4 class='modal-title'>Enter Area's Information</h4>
                 </div>
-                <form role='form' action='../AreaFolder/ActionArea/ActionRegisterArea.php' onsubmit='return validateForm()' method='post'>
+                <form role='form' action='../PagesContent/AreaFolder/ActionArea/ActionRegisterArea.php' onsubmit='return validateForm()' method='post'>
                     <div class='modal-body'>
                         <div class='box-body'>
                             <div class='form-group' id='area_name'>
@@ -38,16 +38,16 @@ class ModalArea{
     ";}
 
     function archiveArea(){
-        echo '<div class="modal fade" id="archive-area">
+        echo '<div class="modal fade" id="edit-area">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                    <form role="form" action="../AreaFolder/ActionArea/ArchiveArea.php" onsubmit="return validateForm()" method="post">
+                    <form role="form" action="../PagesContent/AreaFolder/ActionArea/ArchiveArea.php" onsubmit="return validateForm()" method="post">
                         <div class="form-group">
-                            <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
+                            <input type="text" readonly name="area_name_input" class="form-control input sm">
                             <button type="submit" class="btn btn-danger pull-left">Archive</button>
                             <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                         </div>
