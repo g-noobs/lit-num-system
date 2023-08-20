@@ -10,7 +10,7 @@ class ModalCategory{
                     </button>
                     <h4 class='modal-title'>Enter Area's Information</h4>
                 </div>
-                <form role='form' action='../CategoryFolder/ActionCategory/ActionRegisterCategory.php' onsubmit='return validateForm()' method='post'>
+                <form role='form' action='../PagesContent/CategoryFolder/ActionCategory/ActionRegisterCategory.php' onsubmit='return validateForm()' method='post'>
                     <div class='modal-body'>
                         <div class='box-body'>
                             <div class='form-group' id='ctgy_name'>
@@ -47,7 +47,7 @@ class ModalCategory{
                     <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
                     <form role="form" action="../AreaFolder/ActionArea/ArchiveCategory.php" onsubmit="return validateForm()" method="post">
                         <div class="form-group">
-                            <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
+                            <input type="text" readonly name="category_input" class="form-control" id="exampleInputEmail1">
                             <button type="submit" class="btn btn-danger pull-left">Archive</button>
                             <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                         </div>

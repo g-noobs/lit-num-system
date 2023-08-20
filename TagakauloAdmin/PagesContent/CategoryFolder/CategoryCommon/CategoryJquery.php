@@ -8,7 +8,7 @@
             const dataId = $(this).data('id');
 
             // Set the data-id value as the input value
-            $('#area_name_input').val(dataId);
+            $('#category_input').val(dataId);
         });
     });
 </script>

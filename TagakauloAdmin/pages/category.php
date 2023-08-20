@@ -61,14 +61,14 @@
                 </div>
             </section>
 
-            <?php include_once("../CategoryFolder/CategoryCommon/ModalCategory.php");
+            <?php include_once("../PagesContent/CategoryFolder/CategoryCommon/ModalCategory.php");
                 $modal = new ModalCategory();
                 $modal->addNewCategory();
                 $modal->archiveCategory();
             ?>
             <!-- Main content -->
             <section class="content" id="categoryMainCont">
-                <?php include_once("../CategoryFolder/CategoryTable.php");?>
+                <?php include_once("../PagesContent/CategoryFolder/CategoryTable.php");?>
 
             </section>
             <!-- /.content-wrapper -->

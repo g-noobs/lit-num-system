@@ -47,7 +47,7 @@ class ModalArea{
                     <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
                     <form role="form" action="../PagesContent/AreaFolder/ActionArea/ArchiveArea.php" onsubmit="return validateForm()" method="post">
                         <div class="form-group">
-                            <input type="text" readonly name="area_name_input" class="form-control input sm">
+                            <input type="text" readonly name="area_id" class="form-control input sm">
                             <button type="submit" class="btn btn-danger pull-left">Archive</button>
                             <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                         </div>
