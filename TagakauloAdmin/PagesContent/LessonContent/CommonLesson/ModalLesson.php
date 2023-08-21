@@ -6,7 +6,7 @@
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Enter Lesson Information</h4>
             </div>
-            <form role="form" action="../LessonContent/ActionLesson/ActionAddLesson.php"
+            <form role="form" action="../PagesContent/LessonContent/ActionLesson/ActionAddLesson.php"
                 onsubmit="return validateForm()" method="post">
                 <div class="modal-body">
                     <div class="box-body">

@@ -46,16 +46,16 @@
             <!-- Main content -->
 
             <section class="container well" id="lesson-table">
-                <?php include_once "../LessonContent/TableFolder/LessonTable.php"
+                <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"
                     ?>
             </section>
 
         </div>
         <!-- ./wrapper -->
-        <?php include_once("../LessonContent/CommonLesson/ModalLesson.php");?>
+        <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
         <?php include_once("../bootstrap/js.php"); ?>
 
-        <?php include_once("../LessonContent/CommonLesson/JqueryLesson.php");?>
+        <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
 
 </body>
 
