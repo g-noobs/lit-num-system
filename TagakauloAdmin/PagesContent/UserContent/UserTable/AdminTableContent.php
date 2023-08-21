@@ -20,7 +20,7 @@
 
      
             <!-- /.modal ADD User-->
-            <?php include_once "../../UserContent/CommonUser/ModalClass.php"; 
+            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
                 $btnName = "Update";
                 $editActive = new ModalClass();
                 $editActive->editModal($btnName);
@@ -41,7 +41,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../Database/DisplayAllTableClass.php");
+                        include_once("../../../Database/DisplayAllTableClass.php");
 
                         $table = "user_info_view";
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Admin' AND status = 'Active'";

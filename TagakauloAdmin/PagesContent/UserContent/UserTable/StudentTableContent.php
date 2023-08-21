@@ -2,16 +2,26 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Archived Teacher's List</h3>
+                <h3 class="box-title">Student</h3>
             </div>
             <!-- /.box-header -->
 
-            <?php include_once "../../UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Activate Teacher";
+            <div class="container-fluid">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                    <i class="fa fa-plus"></i> <span> Add Learner</span>
+                </button>
+            </div>
+
+            
+            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
+                $btnName = "Update";
                 $editActive = new ModalClass();
                 $editActive->editModal($btnName);
+
+                $addAdmin= new ModalClass();
+                $addAdmin->addUserModal("Add Learner", "Learner");
+
             ?>
-            <!-- /.modal edit User-->
 
 
             <div class="box-body">
@@ -23,9 +33,9 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../Database/DisplayAllTableClass.php");
+                        include_once("../../../Database/DisplayAllTableClass.php");
                         $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher' AND status = 'Inactive'";
+                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Active';";
                         $userT = new DisplayAllTableClass();
                         $userT->userTable($sql);
                         ?>

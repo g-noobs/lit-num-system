@@ -101,7 +101,7 @@
                 </div>
             </div> 
             -->
-            <?php include_once("../UserContent/CommonUser/ModalClass.php");
+            <?php include_once("../PagesContent/UserContent/CommonUser/ModalClass.php");
                 $userActivate = new ModalClass();
                 $userActivate->activateUserModal();
                 $userArchive = new ModalClass();
@@ -110,12 +110,12 @@
             <!-- Main content -->;
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
-                <?php include_once("../UserContent/UserTable/AllUserTableContent.php");?>
+                <?php include_once("../PagesContent/UserContent/UserTable/AllUserTableContent.php");?>
             </section>
         </div>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
-        <?php include_once("../UserContent/CommonUser/JQueryUser.php");?>
+        <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
     </div>
 </body>
 

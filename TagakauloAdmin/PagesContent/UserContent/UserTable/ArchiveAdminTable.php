@@ -2,25 +2,14 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Student</h3>
+                <h3 class="box-title">Archived Admin List</h3>
             </div>
             <!-- /.box-header -->
 
-            <div class="container-fluid">
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
-                    <i class="fa fa-plus"></i> <span> Add Learner</span>
-                </button>
-            </div>
-
-            
-            <?php include_once "../../UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Update";
+            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
+                $btnName = "Activate";
                 $editActive = new ModalClass();
                 $editActive->editModal($btnName);
-
-                $addAdmin= new ModalClass();
-                $addAdmin->addUserModal("Add Learner", "Learner");
-
             ?>
 
 
@@ -33,9 +22,9 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../Database/DisplayAllTableClass.php");
+                        include_once("../../../Database/DisplayAllTableClass.php");
                         $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Active';";
+                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Admin' AND status = 'Inactive'";
                         $userT = new DisplayAllTableClass();
                         $userT->userTable($sql);
                         ?>

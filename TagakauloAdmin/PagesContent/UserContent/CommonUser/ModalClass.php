@@ -11,7 +11,7 @@ class ModalClass{
                     </button>
                     <h4 class="modal-title">Enter Learners Information</h4>
                 </div>
-                <form role="form" action="../UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
+                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
                     method="post">
                     <div class="modal-body">
                         <div class="box-body">
@@ -75,7 +75,7 @@ class ModalClass{
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">Enter the Preferred Information</h4>
-                    <form role="form" action="../UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
+                    <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
                         <div class="form-group">
                             <input type="text" name="userId" class="form-control" style="display: none;">
                             <button type="submit" class="btn btn-danger pull-left btn-sm">
@@ -84,7 +84,7 @@ class ModalClass{
                         </div>
                     </form>
                 </div>
-                <form role="form" action="../UserContent/ActionsUsers/ActionEditUser.php" onsubmit="return validateForm()" method="post">
+                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionEditUser.php" onsubmit="return validateForm()" method="post">
                     <div class="modal-body">
                         <div class="box-body">
                             <div class="form-group">
@@ -148,7 +148,7 @@ class ModalClass{
                                 <span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">User Information</h4>
                         </div>
-                        <form role="form" action="../UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
+                        <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
                             method="post">
                             <div class="modal-body">
                                 <div class="form-group" id="personal-id">
@@ -214,7 +214,7 @@ class ModalClass{
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title">Are you sure you wanted to activate this user?</h4>
-                                <form role="form" action="../UserContent/ActionsUsers/ActionActivateUser.php" method="post">
+                                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionActivateUser.php" method="post">
                                     <div class="form-group">
                                         <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
                                         <button type="submit" class="btn btn-success pull-left">Activate</button>
@@ -237,7 +237,7 @@ class ModalClass{
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                                <form role="form" action="../UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
+                                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
                                     <div class="form-group">
                                         <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
                                         <button type="submit" class="btn btn-danger pull-left">Archive</button>

@@ -11,21 +11,21 @@ $(document).ready(function() {
         var contentPath = '';
 
         if (userType === 'all-active') {
-            contentPath = '../UserContent/UserTable/AllActiveUserTable.php';
+            contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
         } else if (userType === 'teacher') {
-            contentPath = '../UserContent/UserTable/TeacherTableContent.php';
+            contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
         } else if (userType === 'learner') {
-            contentPath = '../UserContent/UserTable/StudentTableContent.php';
+            contentPath = '../PagesContent/UserContent/UserTable/StudentTableContent.php';
         } else if (userType === 'admin') {
-            contentPath = '../UserContent/UserTable/AdminTableContent.php';
+            contentPath = '../PagesContent/UserContent/UserTable/AdminTableContent.php';
         } else if (userType === 'arch-all') {
-            contentPath = '../UserContent/UserTable/AllArchUsersTable.php';
+            contentPath = '../PagesContent/UserContent/UserTable/AllArchUsersTable.php';
         } else if (userType === 'arch-admin') {
-            contentPath = '../UserContent/UserTable/ArchiveAdminTable.php';
+            contentPath = '../PagesContent/UserContent/UserTable/ArchiveAdminTable.php';
         } else if (userType === 'arch-teacher') {
-            contentPath = '../UserContent/UserTable/ArchivedTeacherTable.php';
+            contentPath = '../PagesContent/UserContent/UserTable/ArchivedTeacherTable.php';
         } else if (userType === 'arch-learner') {
-            contentPath = '../UserContent/UserTable/ArchivedStudentTable.php';
+            contentPath = '../PagesContent/UserContent/UserTable/ArchivedStudentTable.php';
         }
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {

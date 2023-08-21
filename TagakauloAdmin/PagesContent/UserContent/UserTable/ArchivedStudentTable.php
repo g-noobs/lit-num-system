@@ -6,7 +6,7 @@
             </div>
             <!-- /.box-header -->
 
-            <?php include_once "../../UserContent/CommonUser/ModalClass.php"; 
+            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
                 $btnName = "Activate Student";
                 $editActive = new ModalClass();
                 $editActive->editModal($btnName);
@@ -23,7 +23,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../Database/DisplayAllTableClass.php");
+                        include_once("../../../Database/DisplayAllTableClass.php");
                         $table = "user_info_view";
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Inactive'";
                         $userT = new DisplayAllTableClass();

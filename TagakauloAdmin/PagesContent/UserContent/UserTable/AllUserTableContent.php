@@ -12,18 +12,16 @@
                 </button>
             </div>
             <br>
-            <!-- /.modal ADD User-->
-
-            <?php include_once "../../UserContent/CommonUser/ModalClass.php";
+            <?php include_once "../PagesContent/UserContent/CommonUser/ModalClass.php";
                 $btnName = "Update";
                 $editActive = new ModalClass();
-                $editActive->editModal($btnName);
+                $editActive->editModal($btnName,'');
 
                 $addNewUser = new ModalClass();
                 $addNewUser->addAnyModal();
 
             ?>
-             <!-- /.modal EditActive User-->
+            
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <table id="example2" class="table table-bordered table-hover">
@@ -34,11 +32,11 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../Database/DisplayAllTableClass.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE status = 'Active'";
+                        include_once("../Database/DisplayAllTableClass.php");
+                        $query = "SELECT * FROM user_info_view";
+
                         $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
+                        $userT->userTable($query);
                         ?>
                     </tbody>
                 </table>
@@ -50,4 +48,3 @@
     </div>
     <!-- /.col -->
 </div>
-<?php include_once "../CommonUser/JQueryUser.php"; ?>
