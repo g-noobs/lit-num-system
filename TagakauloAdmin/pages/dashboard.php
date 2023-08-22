@@ -51,17 +51,23 @@
     <?php include_once("../bootstrap/js.php")?>
 
     <script>
-    $('#teacher-count').click(function(e) {
+    // Wait for document ready
+    $(document).ready(function() {
 
-        e.preventDefault();
+    // Click handler for teacher count button
+    $('#teacher-count').click(function() {
 
+        // Save selection
+        localStorage.setItem('userType', 'teacher');
+
+        // Redirect
         window.location.href = 'user.php';
 
-        $('.custom-dropdown-toggle').text('Teacher');
-
-        $('ul li a[data-user-type="teacher"]').trigger('click');
+    });
 
     });
+
+
     </script>
 </body>
 

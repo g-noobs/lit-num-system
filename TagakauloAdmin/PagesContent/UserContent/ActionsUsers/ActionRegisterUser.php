@@ -24,7 +24,7 @@ if ($_POST['user']=== "Admin") {
     $username = $values['personal_id'];
 }
 
-include_once("../../Database/ColumnCountClass.php");
+include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
 // modify user id plus the column count
@@ -34,7 +34,7 @@ $values['user_info_id'] = "USR".(100001 + $columnCountClass->columnCount("user_i
 $values['added_byID']= $_SESSION['id'];
 
 //Password generation
-include_once("../../CommonPHPClass/PHPClass.php");
+include_once("../../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
 
 $credentials_id = "CRED".(100001 + (int)$columnCountClass->columnCount("credentials_id","tbl_credentials"));
@@ -54,8 +54,8 @@ $sql .= "INSERT INTO $table(credentials_id,uname,pass,user_info_id )VALUES ('".$
 
 
 //still follow the usual tracing of php class
-include_once("../../Database/AddDeleteClass.php");
+include_once("../../../Database/AddDeleteClass.php");
 $addData = new AddDeleteClass();
-$addData->addMany($sql);
+$addData->updateData($sql, "../../../pages/user.php");
 ?>
 

@@ -4,8 +4,6 @@ $table = "tbl_user_info";
 $id = $_POST['userId'];
 $status = 1;
 
-$sql = "UPDATE $table SET status_id = 1 WHERE user_info_id = '$id'";
-
 $query = "UPDATE $table SET status_id = ? WHERE user_info_id = ?";
 $params = [$status, $id];
 
