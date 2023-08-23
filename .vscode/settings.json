@@ -1,10 +1,10 @@
 {
     "folder-path-color.folders": [
-        {"path": "TagakauloAdmin/PagesContent", "symbol": "CO"},
         {"path": "TagakauloAdmin/pages","symbol": "P"},
-        {"path": "TagakauloAdmin/design", "symbol": "DS"},
         {"path": "TagakauloAdmin/Database", "symbol": "DB"},
-        {"path": "TagakauloAdmin/bootstrap", "symbol": "BB"}
+        {"path": "TagakauloAdmin/design", "symbol": "DS"},
+        {"path": "TagakauloAdmin/bootstrap", "symbol": "BB"},
+        {"path": "TagakauloAdmin/CommonPHPClass", "symbol": "CP"}
 
     ],
     "workbench.colorCustomizations": {
