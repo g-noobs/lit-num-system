@@ -1,4 +1,12 @@
 {
+    "folder-path-color.folders": [
+        {"path": "TagakauloAdmin/PagesContent", "symbol": "CO"},
+        {"path": "TagakauloAdmin/pages","symbol": "P"},
+        {"path": "TagakauloAdmin/design", "symbol": "DS"},
+        {"path": "TagakauloAdmin/Database", "symbol": "DB"},
+        {"path": "TagakauloAdmin/bootstrap", "symbol": "BB"}
+
+    ],
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#28693c",
         "activityBar.background": "#28693c",
