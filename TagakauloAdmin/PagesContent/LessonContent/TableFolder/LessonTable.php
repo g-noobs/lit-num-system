@@ -5,7 +5,7 @@
                 <h3 class="box-title">Lessong List</h3>
                 <br>
                 <br>
-                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#add_lesson">
+                <button type="button" class="btn btn-warning btn-sm" data-toggle='modal' data-toggle='tooltip' title='Add New Lesson'  data-target="#add_lesson">
                     <i class="fa fa-plus"></i> <span> Add Lesson</span>
                 </button>
             </div>

@@ -22,22 +22,20 @@ class LessonDisplayClass extends Connection{
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
+                $counter = 1;
                 echo "<tr>";
-                echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
+                echo "<td><a href='#' class='edit' data-toggle='modal' data-toggle='tooltip' title='Edit Lesson' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
                 
    
                 echo "<td>" . $row["lesson_id"] . "</td>";
                 echo "<td>" . $row["lesson_name"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";
                 
-                echo "<td><a href='#' type='button' class='add' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'>View</a></td>";
-                echo "<td><a href='#' type='button' class='view' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'></a>Add</td>";
-                echo "<td><a href='#' type='button' class='archive' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'></a>Archive</td>";
+                echo "<td><a href='#' type='button' class='addBtn' data-id='" . $row["lesson_id"] . "'>View</a></td>";
+                echo "<td><a href='#' type='button' class='view' data-id='" . $row["lesson_id"] . "'>Add</a></td>";
+                echo "<td><a href='#' type='button' class='archive'  data-id='" . $row["lesson_id"] . "'>Archive</a></td>";
+                
                 echo "</tr>";
-
-    
-                
-                
             }
         }
         

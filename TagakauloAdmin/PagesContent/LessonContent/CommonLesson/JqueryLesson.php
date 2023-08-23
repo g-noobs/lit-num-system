@@ -12,6 +12,22 @@ $(document).ready(function() {
 });
 </script>
 
+<script>
+$(".addBtn").click(function() {
+    var buttonId = $(this).data("id");
+    $.ajax({
+        url: "dashboard.php",
+        method: "POST",
+        data: {
+            id: buttonId
+        },
+        success: function(response) {
+            window.open("dashboard.php", "topicPopup", "width=1000,height=1000");
+        }
+    });
+});
+</script>
+
 <!-- lesson panel or fragment manipulation-->
 <!-- <script>
 $(document).ready(function() {
