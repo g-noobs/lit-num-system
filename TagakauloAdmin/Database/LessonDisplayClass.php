@@ -31,8 +31,8 @@ class LessonDisplayClass extends Connection{
                 echo "<td>" . $row["lesson_name"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";
                 
-                echo "<td><a href='#' type='button' class='addBtn' data-id='" . $row["lesson_id"] . "'>View</a></td>";
-                echo "<td><a href='#' type='button' class='view' data-id='" . $row["lesson_id"] . "'>Add</a></td>";
+                echo "<td><a href='#' type='button' class='viewBtn' data-id='" . $row["lesson_id"] . "'>View</a></td>";
+                echo "<td><a href='#' type='button' class='addBtn' data-id='" . $row["lesson_id"] . "'>Add</a></td>";
                 echo "<td><a href='#' type='button' class='archive'  data-id='" . $row["lesson_id"] . "'>Archive</a></td>";
                 
                 echo "</tr>";

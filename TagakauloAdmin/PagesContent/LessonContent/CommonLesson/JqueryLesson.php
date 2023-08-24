@@ -13,7 +13,7 @@ $(document).ready(function() {
 </script>
 
 <script>
-$(".addBtn").click(function() {
+$(".viewBtn").click(function() {
     var buttonId = $(this).data("id");
     $.ajax({
         url: "dashboard.php",
@@ -25,6 +25,40 @@ $(".addBtn").click(function() {
             window.open("dashboard.php", "topicPopup", "width=1000,height=1000");
         }
     });
+});
+</script>
+
+<script>
+$(".addBtn").on("click", function() {
+    $("#add-topic-panel").show();
+    var btnId = $(this).data("id");
+    $.ajax({
+        url: "lesson.php",
+        method: "POST",
+        data: {
+            id: btnId
+        },
+        success: function(response) {
+            $("#lesson-table").hide();
+        }
+    });
+});
+</script>
+<script>
+//HIDE topic pane BY default
+$("#add-topic-panel").hide();
+$("#back-table").click(function() {
+    $("#add-topic-panel").hide();
+    $("#lesson-table").show();
+
+    // Clear all input fields in the form
+    $('form input[type="text"], form input[type="number"], form textarea').val('');
+
+    // Clear select boxes
+    $('form select').prop('selectedIndex', 0);
+
+    // Uncheck checkboxes and radios
+    $('form input[type="checkbox"], form input[type="radio"]').prop('checked', false);
 });
 </script>
 

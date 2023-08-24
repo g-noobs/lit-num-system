@@ -45,10 +45,16 @@
 
             <!-- Main content -->
 
-            <section class="container well" id="lesson-table">
+            <section class="container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"
                     ?>
             </section>
+
+            
+            <section class="container well" id="add-topic-panel">
+            <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
+            </section>
+            
 
         </div>
         <!-- ./wrapper -->
