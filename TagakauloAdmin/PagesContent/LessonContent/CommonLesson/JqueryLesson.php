@@ -30,20 +30,30 @@ $(".viewBtn").click(function() {
 
 <script>
 $(".addBtn").on("click", function() {
+    $("#lesson-table").hide();
     $("#add-topic-panel").show();
+
     var btnId = $(this).data("id");
+
     $.ajax({
-        url: "lesson.php",
-        method: "POST",
+        type: 'POST',
+        url: 'LessonTopic.php', // Send the request to the same page
         data: {
+            name: 'John',
             id: btnId
         },
         success: function(response) {
-            $("#lesson-table").hide();
+            console.log(response);
+            // Handle the response data here if needed
+        },
+        error: function(xhr, status, error) {
+            console.error('Error sending data:', error);
         }
     });
 });
 </script>
+
+
 <script>
 //HIDE topic pane BY default
 $("#add-topic-panel").hide();

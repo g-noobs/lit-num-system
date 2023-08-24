@@ -106,18 +106,38 @@ $(document).ready(function() {
 </script>
 
 <script>
-$('#teacher-count').click(function(e) {
+        // Check for saved user type
+        var userType = localStorage.getItem('userType');
 
-    e.preventDefault();
+        if (userType) {
 
-    window.location.href = 'user.php';
+            // Update dropdown 
+            $('.custom-dropdown-toggle').text('Teacher');
 
-    $('.custom-dropdown button').text('Teacher');
+            // Load content
+            loadContent(userType);
 
-    $('.custom-dropdown li a[data-user-type="teacher"]').trigger('click');
+            // Clear saved selection from dashboard.php
+            localStorage.removeItem('userType');
 
-});
-</script>
+        }
+
+        function loadContent(userType) {
+
+            var contentPath;
+
+            if (userType === 'teacher') {
+                contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
+            }
+
+            // ... other user types
+
+            if (contentPath) {
+                $("#mainContent").load(contentPath);
+            }
+
+        }
+        </script>
 
 
 <!-- Hiding password -->

@@ -13,8 +13,7 @@
 </head>
 
 <body class="sidebar-mini skin-yellow fixed fixed
-" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
-    style="height: 100%; min-height: 100%;">
+" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
 
@@ -40,7 +39,26 @@
                 <a href="lesson.php" type="button" class="btn btn-default" id="lesson-btn">Lesson</a>
                 <button type="button" class="btn btn-default">Quiz</button>
                 <button type="button" class="btn btn-default">Assignment</button>
+                <h2>
+                    <?php 
+                    
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $name = $_POST['name'];
+                    $ids = $_POST['ids'];
+                    
+                    // Do something with the received data
+                    
+                    // Send a response back to the JavaScript code
+                    echo "Data received successfully!";
+                }
+                else{
+                    echo "NO DATA RECEIVED";
+    
+                }
+                ?>
 
+
+                </h2>
             </div>
 
             <!-- Main content -->
@@ -50,17 +68,19 @@
                     ?>
             </section>
 
-            
+
             <section class="container well" id="add-topic-panel">
-            <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
+                <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
-            
+
 
         </div>
         <!-- ./wrapper -->
         <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
         <?php include_once("../bootstrap/js.php"); ?>
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
         <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
 
 </body>

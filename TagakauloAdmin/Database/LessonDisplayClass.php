@@ -40,5 +40,14 @@ class LessonDisplayClass extends Connection{
         }
         
     }
+    function lessonName($id){
+        $query = "SELECT lesson_name FROM tbl_lesson WHERE lesson_id = $id;";
+        $result = $this->getConnection()->query($query);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo $row["lesson_name"];
+            }
+        } 
+    }
 }
 ?>
