@@ -58,6 +58,11 @@
             </a>
         </li>
         <li>
+            <a href="schoolyr.php">
+                <i class="fa fa-calendar-check-o"></i> <span> Manage School Year</span>
+            </a>
+        </li>
+        <li>
             <a href="designation.php">
                 <i class="fa fa-user-plus"></i> <span>Manage Designation</span>
             </a>

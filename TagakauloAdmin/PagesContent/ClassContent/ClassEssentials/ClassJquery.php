@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('.edit').click(function() {
         // Get the row data
         var class_id = $(this).closest('tr').find('td:eq(1)')
-    .text(); // Assuming the user_info_Id is in the second column (index 1)
+            .text(); // Assuming the user_info_Id is in the second column (index 1)
         var class_name = $(this).closest('tr').find('td:eq(2)').text();
 
         // Populate the modal fields with the data
@@ -39,7 +39,7 @@ $(document).ready(function() {
     $('.archive').click(function() {
         // Get the row data
         var class_id = $(this).closest('tr').find('td:eq(1)')
-    .text(); // Assuming the user_info_Id is in the second column (index 1)
+            .text(); // Assuming the user_info_Id is in the second column (index 1)
 
         // Populate the modal fields with the data
         $('#archive-class').find('[name="class_id"]').val(class_id);
@@ -67,3 +67,4 @@ $(document).ready(function() {
 
 });
 </script>
+

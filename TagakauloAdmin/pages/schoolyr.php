@@ -30,7 +30,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <b style="color:#3D3848;">Manage Batch & Area</b>
+                    <b style="color:#3D3848;">Manage School Year</b>
                 </h1>
             </section>
             <br>
@@ -70,21 +70,25 @@
                 </div>
             </section>
 
-            <?php include_once("../PagesContent/AreaFolder/AreaCommon/ModalArea.php");
-                $modal = new ModalArea();
-                $modal->addNewArea();
-                $modal->archiveArea();
-            ?>
+
+
+
             <!-- Main content -->
             <section class="content" id="mainContent">
-                <?php include_once("../PagesContent/AreaFolder/AreaContent.php");?>
+                <?php include_once("../PagesContent/SchoolYearFolder/SyContentFolder/SyMainContent.php");?>
 
             </section>
             <!-- /.content-wrapper -->
+
         </div>
-        <!-- ./wrapper -->
+        <!-- Modals -->
+        <?php include_once("../PagesContent/SchoolYearFolder/SyEssentialsFolder/CrudModalForm.php");?>
+        <?php include_once("../PagesContent/SchoolYearFolder/SyEssentialsFolder/ModalsSy.php");?>
+        
+
         <?php include_once("../bootstrap/js.php")?>
-        <?php include_once "../PagesContent/AreaFolder/AreaCommon/JQueryArea.php"; ?>
-</body>
+        <?php include_once "../PagesContent/SchoolYearFolder/SyEssentialsFolder/JquerySy.php"; ?>
+        
+    </body>
 
 </html>

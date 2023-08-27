@@ -8,19 +8,21 @@ $values = array(
     'lesson_name' => $_POST['lesson_name'],
     'category_id'=>$_POST['level_learning'],
     'topic_id' => '',
-    'addedby_ID' => '',
+    'added_byID' => '',
 );
 
 //added
-$values['addedby_ID']= $_SESSION['id'];
+$values['added_byID']= $_SESSION['id'];
 
 //automated lesson ID
 include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 $values['lesson_id'] = "LSN".(100001 + (int)$columnCountClass->columnCount("lesson_id",$table));
 
-$query="INSERT INTO $table (lesson_id, lesson_name, category_id, topic_id,  added_byID)
-VALUES (?,?,?,?,?);";
+$columns = implode(', ', array_keys($values));
+
+$query = "INSERT INTO $table ($columns)
+          VALUES (?,?,?,?,?);";
 
 $params = array_values($values);
 
