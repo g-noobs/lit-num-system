@@ -7,7 +7,7 @@
             <!-- /.box-header -->
 
             <div class="container-fluid">
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#addBtn">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#addModal">
                     <i class="fa fa-plus"></i> <span> Add New S.Y.</span>
                 </button>
             </div>

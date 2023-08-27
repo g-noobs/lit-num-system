@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
-    $('#addBtn').submit(function(e) {
+    $('#addModal').submit(function(e) {
 
         var syDate = $('input[name="sy_name"]').val();
 
@@ -23,6 +23,24 @@ $(document).ready(function() {
         } else {
             $('#validationError').modal('show');
             $('#addBtn').modal('hide');
+            return false;
+        }
+
+        return true;
+
+    });
+    $('#editModal').submit(function(e) {
+
+        var syDate = $('input[name="sy_name"]').val();
+
+        // Update regex to match example
+        var regex = /^\d{4}-\d{4}$/;
+
+        if (regex.test(syDate)) {
+
+        } else {
+            $('#validationError').modal('show');
+            $('#editModal').modal('hide');
             return false;
         }
 
@@ -45,7 +63,7 @@ $(document).ready(function() {
         // Populate the modal fields with the data
         $('#editModal').find('[name="sy_id"]').val(id);
         $('#editModal').find('[name="sy_name"]').val(name);
-        
+
     });
     $('[id^="archiveBtn-"]').click(function() {
         // Get the id from data attribute
@@ -54,7 +72,7 @@ $(document).ready(function() {
         // Populate the modal fields with the data
         $('#archiveModal').find('[name="sy_id"]').val(id);
         $('#archiveModal').find('[name="sy_name"]').val(name);
-        
+
     });
 });
 </script>
