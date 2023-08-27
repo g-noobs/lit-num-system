@@ -78,13 +78,13 @@
                         <div class="form-group">
                             <input type="text" name="sy_id" readonly class="form-control">
                             <label for="sy_name">School Year Date:</label>
-                            <input type="text" name="sy_name" readonly class="form-control">
+                            <input type="text" readonly name="sy_name" class="form-control">
                         </div>
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-warning pull-left" id='btnSubmit'>Add School Year</button>
+                    <button type="submit" class="btn btn-danger pull-left" id='btnSubmit'>Archive</button>
                     <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                 </div>
 

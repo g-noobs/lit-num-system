@@ -11,9 +11,7 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
-
-
-    $('form').submit(function(e) {
+    $('#addBtn').submit(function(e) {
 
         var syDate = $('input[name="sy_name"]').val();
 
