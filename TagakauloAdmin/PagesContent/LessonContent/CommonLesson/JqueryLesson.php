@@ -37,14 +37,14 @@ $(".addBtn").on("click", function() {
 
     $.ajax({
         type: 'POST',
-        url: 'LessonTopic.php', // Send the request to the same page
+        url: 'lesson.php', // Send the request to the same page
         data: {
             name: 'John',
             id: btnId
         },
         success: function(response) {
-            console.log(response);
-            // Handle the response data here if needed
+            c// Update the <h2> element with the response
+            $("#response-message").text(response);
         },
         error: function(xhr, status, error) {
             console.error('Error sending data:', error);

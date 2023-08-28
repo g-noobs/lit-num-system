@@ -39,7 +39,7 @@
                 <a href="lesson.php" type="button" class="btn btn-default" id="lesson-btn">Lesson</a>
                 <button type="button" class="btn btn-default">Quiz</button>
                 <button type="button" class="btn btn-default">Assignment</button>
-                <h2>
+                <h2 id="response-message">
                     <?php 
                     
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -76,12 +76,12 @@
 
         </div>
         <!-- ./wrapper -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
         <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
         <?php include_once("../bootstrap/js.php"); ?>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
 
 </body>
 
