@@ -2,7 +2,6 @@
 $table = "tbl_schoolyear";
 
 $values = array(
-    'sy_status' => 1,
     'sy_name' => trim($_POST['sy_name']),
     'sy_id' => $_POST['sy_id']
 );
@@ -11,7 +10,7 @@ $values = array(
 //Class used for checkin duplicate
 include_once("../../../Database/SchoolYearClass.php");
 $isValid = new SchoolYearClass();
-$data = $values['sy_name'];
+$data = trim($_POST['sy_name']);
 $column = 'sy_name';
 $isValid -> validateColumn($table, $column, $data);
 
@@ -20,7 +19,7 @@ $updateSchoolYear = new SanitizeCrudClass();
 
 if($isValid){
     $query = "UPDATE $table 
-          SET sy_status = ?, sy_name =? WHERE sy_id = ?";
+          SET sy_name =? WHERE sy_id = ?";
     $params = array_values($values);
     try{
         $message = "Edited";
