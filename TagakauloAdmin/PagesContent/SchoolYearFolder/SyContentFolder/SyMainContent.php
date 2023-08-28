@@ -13,9 +13,13 @@
             </div>
             <br>
             <div class="container-fluid" >
-                <a href="#" type="button">
+                <a href="#" type="button" data-toggle="tooltip" title="Set School Yr!" style="color:burlywood">
                     <i class="glyphicon glyphicon-pencil"></i>
                 </a>
+                <br>
+                <button type="button" class="btn btn-xs btn-success">
+                    </i> <span> Update Active S.Y.</span>
+                </button>
             </div>
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">

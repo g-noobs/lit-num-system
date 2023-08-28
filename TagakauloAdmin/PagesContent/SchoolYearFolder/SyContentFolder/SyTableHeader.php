@@ -1,3 +1,4 @@
+<th></th>
 <th>School Year ID</th>
 <th>School Year</th>
 <th>Status</th>
