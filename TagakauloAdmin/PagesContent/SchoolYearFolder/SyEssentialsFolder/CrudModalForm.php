@@ -44,15 +44,15 @@
                     <div class="box-body">
                         <div class="form-group">
                             <input type="text" name="sy_id" readonly class="form-control">
-                            <label for="sy_name">School Year Date:</label>
-                            <input type="text" name="sy_name" class="form-control">
+                            <label for="sy_name_edit">School Year Date:</label>
+                            <input type="text" name="sy_name_edit" class="form-control">
                             <span class="help-block">Format: YYYY-YYY</span>
                         </div>
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-warning pull-left" id='btnSubmit'>Add School Year</button>
+                    <button type="submit" class="btn btn-warning pull-left" id='btnSubmit'>Update</button>
                     <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                 </div>
 

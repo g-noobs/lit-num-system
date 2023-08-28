@@ -8,4 +8,4 @@
 <th>Password</th>
 <th>User Type</th>
 <th>Account Status</th>
-<th>Actions</th>
+<th colspan="2">Actions</th>

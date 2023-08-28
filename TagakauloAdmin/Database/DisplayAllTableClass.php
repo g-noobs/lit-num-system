@@ -44,7 +44,9 @@ class DisplayAllTableClass extends Connection{
                 
                 echo "<td>";
                 echo "<a href='#' class='edit' data-toggle='modal' data-target='".$modalTarget."' data-id='" . $row["user_info_id"] . "' style='margin-right:10px; color:".$editColor.";'><span class='glyphicon glyphicon-edit' ></span></a>";
-                
+                echo "</td>";
+
+                echo "<td>";
                 echo " <a href='#' class='action ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='" . $row["user_info_id"] . "'> ".$actionIcon ."</a>";
                 echo "</td>";
 

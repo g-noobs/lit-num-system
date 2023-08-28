@@ -2,7 +2,7 @@
 $table = "tbl_schoolyear";
 
 $values = array(
-    'sy_name' => trim($_POST['sy_name']),
+    'sy_name' => trim($_POST['sy_name_edit']),
     'sy_id' => $_POST['sy_id']
 );
 
@@ -10,7 +10,7 @@ $values = array(
 //Class used for checkin duplicate
 include_once("../../../Database/SchoolYearClass.php");
 $isValid = new SchoolYearClass();
-$data = trim($_POST['sy_name']);
+$data = trim($_POST['sy_name_edit']);
 $column = 'sy_name';
 $isValid -> validateColumn($table, $column, $data);
 

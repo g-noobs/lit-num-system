@@ -19,37 +19,32 @@ $(document).ready(function() {
         var regex = /^\d{4}-\d{4}$/;
 
         if (regex.test(syDate)) {
-
+            return true;
         } else {
             $('#validationError').modal('show');
             $('#addBtn').modal('hide');
             return false;
         }
 
-        return true;
-
     });
     $('#editModal').submit(function(e) {
-
-        var syDate = $('input[name="sy_name"]').val();
+        var syDate = $('input[name="sy_name_edit"]').val();
 
         // Update regex to match example
         var regex = /^\d{4}-\d{4}$/;
 
         if (regex.test(syDate)) {
-
+            return true;
         } else {
             $('#validationError').modal('show');
             $('#editModal').modal('hide');
             return false;
         }
-
-        return true;
-
     });
-
 });
 </script>
+
+
 
 </script>
 
@@ -62,7 +57,7 @@ $(document).ready(function() {
         let name = $(this).closest('tr').find('td:eq(1)').text();
         // Populate the modal fields with the data
         $('#editModal').find('[name="sy_id"]').val(id);
-        $('#editModal').find('[name="sy_name"]').val(name);
+        $('#editModal').find('[name="sy_name_edit"]').val(name);
 
     });
     $('[id^="archiveBtn-"]').click(function() {

@@ -12,10 +12,15 @@
                 </button>
             </div>
             <br>
+            <div class="container-fluid" >
+                <a href="#" type="button">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </a>
+            </div>
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-                <table id="example2" class="table table-bordered table-hover text-center">
-                    <thead>
+                <table id="example2" class="table table-bordered table-hover text-center table-condensed">
+                    <thead class="bg-warning">
                         <tr>
                             <?php include_once("SyTableheader.php");?>
                         </tr>
