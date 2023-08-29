@@ -1,7 +1,7 @@
 <?php 
 $table = "tbl_schoolyear";
 
-$sy_name = $_POST['sy_name'];
+$sy_name = $_POST['sy_name_edit'];
 $parts = explode('-', $sy_name);
 if(count($parts) === 2) {
     $start_year = trim($parts[0]); // Trim any leading/trailing whitespace

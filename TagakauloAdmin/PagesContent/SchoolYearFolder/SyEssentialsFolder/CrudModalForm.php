@@ -44,8 +44,8 @@
                     <div class="box-body">
                         <div class="form-group">
                             <input type="text" name="sy_id" readonly class="form-control">
-                            <label for="sy_name">School Year Date:</label>
-                            <input type="text" name="sy_name" class="form-control">
+                            <label for="sy_name_edit">School Year Date:</label>
+                            <input type="text" name="sy_name_edit" class="form-control">
                             <span class="help-block">Format: YYYY-YYY</span>
                         </div>
 
