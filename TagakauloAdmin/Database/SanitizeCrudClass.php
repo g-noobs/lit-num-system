@@ -1,6 +1,7 @@
 <?php 
 include_once("Connection.php");
 class SanitizeCrudClass extends Connection{
+    private $lastError;
     function __construct(){
         parent :: __construct();
     }
@@ -45,6 +46,7 @@ class SanitizeCrudClass extends Connection{
         $stmt = $this->getConnection()->prepare($query);
 
         if(!$stmt){
+            $this->lastError = $this->getConnection()->error;
             die("Error in prepared statement: ". $this->getConnection()->error);
         }
 
@@ -68,8 +70,13 @@ class SanitizeCrudClass extends Connection{
         // Check for errors during execution
         if ($stmt->error) {
             die("Error during execution of prepared statement: " . $stmt->error);
+            
         }
+        
          $stmt->close();
+    }
+    public function getLastError() {
+        return $this->lastError;
     }
 }
 

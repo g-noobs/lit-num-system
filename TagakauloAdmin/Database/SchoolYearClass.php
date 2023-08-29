@@ -21,6 +21,7 @@ class SchoolYearClass extends Connection{
                     $statusColor = "text-danger";
                 }
                 echo "<tr>";
+                echo "<td><input type='radio' name='radioGroup' value='".$row["sy_id"]."'></td>";
 
                 echo "<td>".$row["sy_id"]. "</td>";
                 echo "<td>".$row["sy_start"]."-".$row["sy_end"]."</td>";

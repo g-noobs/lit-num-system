@@ -53,6 +53,7 @@ $(document).ready(function() {
 
 </script>
 
+<!-- Jquery for Edit -->
 <script>
 $(document).ready(function() {
     // Attach click handler to edit buttons
@@ -73,6 +74,47 @@ $(document).ready(function() {
         $('#archiveModal').find('[name="sy_id"]').val(id);
         $('#archiveModal').find('[name="sy_name"]').val(name);
 
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#update-sy').hide();
+    $('input[name="radioGroup"]').hide();
+    $("#set-sy").click(function(){
+        $("#update-sy").fadeToggle("slow");
+        $('input[name="radioGroup"]').fadeToggle("slow");
+    });
+    
+
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#update-sy').on('click', function() {
+        // Find the selected radio button
+        var selectedRadio = $('input[name="radioGroup"]:checked');
+
+        if (selectedRadio.length > 0) {
+            var selectedId = selectedRadio.val(); // Get the selected radio button's value
+
+            // Send selectedId to a PHP file using AJAX
+            $.ajax({
+                type: 'POST',
+                url: '../PagesContent/SchoolYearFolder/ActionFolder/RadioBtnProcess.php', // Update this with the actual PHP file's URL
+                data: { sy_id: selectedId }, // Sending the selectedId to the PHP file
+                success: function(response) {
+                    // Handle the response from the PHP file
+                    console.log(response);
+                    location.reload();
+                    // You can display or process the response as needed
+                }
+            });
+        } else {
+            alert('Please select a radio button.');
+        }
     });
 });
 </script>
