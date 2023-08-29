@@ -23,7 +23,7 @@ class SchoolYearClass extends Connection{
                 echo "<tr>";
 
                 echo "<td>".$row["sy_id"]. "</td>";
-                echo "<td>".$row["sy_name"]. "</td>";
+                echo "<td>".$row["sy_start"]."-".$row["sy_end"]."</td>";
                 echo "<td class='".$statusColor."'><b>" .$status. "</b></td>";
 
                 echo "<td><a href='#' type='button' id='editBtn-".$row['sy_id']."' data-toggle='modal' data-target='#editModal' style='margin-right:10px; color: blue;'><span class='glyphicon glyphicon-edit' ></span></a></td>";
