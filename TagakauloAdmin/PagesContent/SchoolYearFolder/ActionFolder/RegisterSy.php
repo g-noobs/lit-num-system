@@ -22,11 +22,13 @@ include_once("../../../Database/ColumnCountClass.php");
 $cCount = new ColumnCountClass();
 $values['sy_id'] = "SY".(1001 + (int)$cCount->columnCount("sy_id", $table));
 
-include_once("../../../Database/SchoolYearClass.php");
-$isValid = new SchoolYearClass();
+include_once("../../../Database/CommonValidationClass.php");
+$isValid = new CommonValidationClass();
 $data = $values['sy_start'];
 $column = 'sy_start';
-$isValid -> validateColumn($table, $column, $data);
+$isValid -> validateColumns($table, $column, $data);
+
+
 
 if($isValid) {
     $columns = implode(', ', array_keys($values));
@@ -57,4 +59,6 @@ if($isValid) {
     }
 }
 
+
+unset($_POST['sy_name']);
 ?>

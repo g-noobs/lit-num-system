@@ -40,7 +40,7 @@ $(document).ready(function() {
 
         } else {
             $('#validationError').modal('show');
-            $('#editModal').modal('hide');
+            $(this).modal('toggle');
             return false;
         }
 
