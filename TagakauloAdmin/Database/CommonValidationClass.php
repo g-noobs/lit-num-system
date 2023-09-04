@@ -15,6 +15,7 @@ class CommonValidationClass extends Connection{
         }
     
         if (count($columns) !== count($values)) {
+            echo "<script>console.log('Columns and values must have the same count.')</script>";
             throw new Exception("Columns and values must have the same count.");
         }
     

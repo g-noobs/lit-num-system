@@ -36,21 +36,5 @@ class SchoolYearClass extends Connection{
             }
         }
     }
-    function validateColumn($table, $column, $value) {        
-        // Check if record with same name already exists
-        $sql = "SELECT COUNT(*) FROM $table WHERE UPPER($column) = UPPER(?)";
-        $stmt = $this->getConnection()->prepare($sql);
-        $stmt->bind_param("s", $value);  
-        $stmt->execute();
-        $count = $stmt->get_result()->fetch_row()[0];
-
-        if($count > 0) {
-        // Record already exists 
-        return false;
-        } else {
-        // OK to insert
-        return true; 
-        }
-      }
-    
 }
+?>

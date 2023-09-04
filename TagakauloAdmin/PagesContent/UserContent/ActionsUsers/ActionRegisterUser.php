@@ -3,8 +3,8 @@ session_start();
 $values = array(
     'user_info_id'=>'',
     'personal_id' =>$_POST['personal_id'],
-    'first_name' => $_POST['first_name'],
-    'last_name' =>$_POST['last_name'],
+    'first_name' => trim($_POST['first_name']),
+    'last_name' =>trim($_POST['last_name']),
     'gender' => $_POST['gender'],
     'email' => $_POST['email'],
     'birthdate' => $_POST['date'],
@@ -23,12 +23,12 @@ if ($_POST['user']=== "Admin") {
     $values['user_level_id'] = '2';
     $username = $values['personal_id'];
 }
-
+$table = "tbl_user_info";
 include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
 // modify user id plus the column count
-$values['user_info_id'] = "USR".(100001 + $columnCountClass->columnCount("user_info_Id","tbl_user_info"));
+$values['user_info_id'] = "USR".(100001 + $columnCountClass->columnCount("user_info_Id",$table));
 
 //place value for id
 $values['added_byID']= $_SESSION['id'];
@@ -42,20 +42,45 @@ $credentials_id = "CRED".(100001 + (int)$columnCountClass->columnCount("credenti
 $password = $phpClass->generatePassword(10);
 $user_info_id = $values['user_info_id'];
 
+//insert validation
+include_once "../../../Database/CommonValidationClass.php";
+$isValid = new CommonValidationClass();
+$data = array($values['first_name'], $values['last_name']);
+$column = array('first_name', 'last_name');
+$isValid -> validateColumns($table, $column, $data);
 
+if($isValid) {
+    $columns = implode(', ', array_keys($values));
+    $sql = "INSERT INTO $table ($columns)
+            VALUES(?,?,?,?,?,?,?,?,?,?);";
+    $params = array_values($values);
 
-$table = "tbl_user_info";
-// Assuming $table variable holds the table name
-$sql = "INSERT INTO $table (user_info_id , personal_id, first_name, last_name, gender, email, birthdate, status_id, user_level_id,added_byID) VALUES ('" .
-    implode("','", array_values($values)) .
-    "');";
-$table = "tbl_credentials";
-$sql .= "INSERT INTO $table(credentials_id,uname,pass,user_info_id )VALUES ('".$credentials_id."', '".$username."','".$password."','".$user_info_id ."');";
-
-
-//still follow the usual tracing of php class
-include_once("../../../Database/AddDeleteClass.php");
-$addData = new AddDeleteClass();
-$addData->updateData($sql, "../../../pages/user.php");
+    include_once "../../../Database/SanitizeCrudClass.php";
+    $addNewUser = new SanitizeCrudClass();
+    
+    try{
+        $addNewUser->executePreState($sql, $params);
+        if($addNewUser->getLastError() === null){
+            $table = "tbl_credentials";
+            $credsColumns = 
+            $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) 
+            VALUES(?,?,?,?)";
+            $params = array($credentials_id, $username, $password, $user_info_id);
+            include_once "../../../Database/SanitizeCrudClass.php";
+            $addNewCreds = new SanitizeCrudClass();
+            $addNewCreds->executePreparedStatement($query, $params, "../../../pages/user.php");
+        }
+    }
+    catch(mysqli_sql_exception $e){
+        if ($e->getCode() == 1062){
+          $message = $data." Already exists. Please try again";  
+          header('Location: ../../../pages/user.php?msg='.urlencode($message));
+          exit();
+        }
+        else{
+            throw $e;
+        }
+    }
+}
 ?>
 

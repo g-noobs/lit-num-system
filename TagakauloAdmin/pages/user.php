@@ -115,8 +115,9 @@
         </div>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
-
+        <?php include_once("../PagesContent/UserContent/CommonUser/ErrorModal.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
+        <?php include_once("../PagesContent/UserContent/CommonUser/ErrrorJquery.php");?>
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
@@ -147,7 +148,6 @@
             if (contentPath) {
                 $("#mainContent").load(contentPath);
             }
-
         }
         </script>
     </div>

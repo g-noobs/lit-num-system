@@ -16,11 +16,11 @@ $values = array(
 
 
 //Class used for checkin duplicate
-include_once("../../../Database/SchoolYearClass.php");
-$isValid = new SchoolYearClass();
+include_once("../../../Database/CommonValidationClass.php");
+$isValid = new CommonValidationClass();
 $data = trim($_POST['sy_start']);
 $column = 'sy_start';
-$isValid -> validateColumn($table, $column, $data);
+$isValid -> validateColumns($table, $column, $data);
 
 include_once("../../../Database/SanitizeCrudClass.php");
 $updateSchoolYear = new SanitizeCrudClass();
