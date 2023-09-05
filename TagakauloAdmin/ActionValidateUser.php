@@ -13,7 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Username is required";
         header("Location: index.php");
         exit();
-
+    }
+    else{
+        $message = 'Empy Username'; 
+        // Pass message as GET parameter
+        header('Location: index.php?msg=' . urlencode($message));
     }
 
     // Validate password
@@ -22,6 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.php");
         exit();
 
+    }
+    else{
+        $message = 'Empy Password'; 
+        // Pass message as GET parameter
+        header('Location: index.php?msg=' . urlencode($message));
     }
     
     // If there are no errors, compare the username and password with the database
@@ -35,7 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $message = 'Error'; 
         // Pass message as GET parameter
-        header('Location: index.php?msg=' . urlencode($message));
+    header('Location: index.php?msg=' . urlencode($message));
+}
+else{
+    $message = 'POST ISSUE'; 
+        // Pass message as GET parameter
+    header('Location: index.php?msg=' . urlencode($message));
 }
 
 ?>
