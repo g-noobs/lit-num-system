@@ -17,20 +17,20 @@ class ModalClass{
                         <div class="box-body">
                             <div class="form-group" id="personal-id">
                                 <label for="personal_id">Enter ID:</label>
-                                <input type="text" name="personal_id" class="form-control" placeholder="ID">
+                                <input type="text" name="personal_id" class="form-control" placeholder="ID" required>
                             </div>
                             <div class="form-group">
                                 <label for="first_name">Enter First Name:</label>
-                                <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name">
+                                <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Enter Last Name:</label>
-                                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
+                                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="gender">Select Gender:</label>
-                                <select class="form-control" name="gender" placeholder="Gender">
-                                    <option value="" selected disabled hidden>Gender</option>
+                                <select class="form-control" name="gender" placeholder="Gender" required>
+   
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>None</option>
@@ -38,11 +38,11 @@ class ModalClass{
                             </div>
                             <div class="form-group">
                                 <label for="email">Enter Email Address:</label>
-                                <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email" required>
                             </div>
                             <div class="form-group">
                                 <label for="date">Select Birthday:</label>
-                                <input type="date" name="date" class="form-control" id="exampleInputPassword1" placeholder="Birthdate">
+                                <input type="date" name="date" class="form-control" id="exampleInputPassword1" placeholder="Birthdate" required>
                             </div>
                             <div class="form-group">
                                 <label for="user">Select Type of User:</label>
@@ -92,19 +92,19 @@ class ModalClass{
                             </div>
                             <div class="form-group" id="personal-id">
                                 <label for="personal_id">Enter ID:</label>
-                                <input type="text" name="personal_id" class="form-control" id="exampleInputEmail1" placeholder="ID">
+                                <input type="text" name="personal_id" class="form-control" id="exampleInputEmail1" placeholder="ID" required>
                             </div>
                             <div class="form-group">
                                 <label for="first_name">Enter First Name:</label>
-                                <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name">
+                                <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" placeholder="First Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Enter Last Name:</label>
-                                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
+                                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" placeholder="Last Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender:</label>
-                                <select class="form-control" name="gender">
+                                <select class="form-control" name="gender" required>
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>None</option>
@@ -116,7 +116,7 @@ class ModalClass{
                             </div>
                             <div class="form-group">
                                 <label for="user">User:</label>
-                                <select class="form-control" name="user" id="user">
+                                <select class="form-control" name="user" id="user" required>
                                     <option>Admin</option>
                                     <option>Teacher</option>
                                     <option>Learner</option>
@@ -153,22 +153,22 @@ class ModalClass{
                             <div class="modal-body">
                                 <div class="form-group" id="personal-id">
                                     <label for="personal_id">Enter ID:</label>
-                                    <input type="text" name="personal_id" class="form-control" placeholder="ID">
+                                    <input type="text" name="personal_id" class="form-control" placeholder="ID" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="first_name">Enter First Name:</label>
                                     <input type="text" name="first_name" class="form-control" id="exampleInputEmail1"
-                                        placeholder="First Name">
+                                        placeholder="First Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
                                     <input type="text" name="last_name" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Last Name">
+                                        placeholder="Last Name" required>
                                 </div>                
                                 <div class="form-group">
                                     <label for="gender">Gender:</label>
-                                    <select class="form-control" name="gender" placeholder="Gender">
-                                        <option value = "" selected disabled hidden>Gender</option>
+                                    <select class="form-control" name="gender" placeholder="Gender" required>
+                                        <option value = "None" selected disabled hidden>Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>None</option>
@@ -177,16 +177,16 @@ class ModalClass{
                                 <div class="form-group">
                                     <label for="email">Email:</label>
                                     <input type="email" name="email" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Email">
+                                        placeholder="Email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="date">Birthdate:</label>
                                     <input type="date" name="date" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Birthdate">
+                                        placeholder="Birthdate" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="user">User Type:</label>
-                                    <select class="form-control" name="user" id="user">
+                                    <select class="form-control" name="user" id="user" required>
                                         <option>Admin</option>
                                         <option>Teacher</option>
                                         <option>Learner</option>
