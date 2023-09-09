@@ -13,8 +13,7 @@
 </head>
 
 <body class="sidebar-mini skin-yellow fixed fixed
-" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
-    style="height: 100%; min-height: 100%;">
+" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
 
@@ -50,18 +49,24 @@
                     ?>
             </section>
 
-            
+
             <section class="container well" id="add-topic-panel">
-            <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
+                <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
-            
+
 
         </div>
-        <!-- ./wrapper -->
         <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
-        <?php include_once("../bootstrap/js.php"); ?>
+        <?php include_once "../CommonContent/ErrorModal.php"?>
+    </div>
 
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+    <!-- ./wrapper -->
+
+    <?php include_once("../bootstrap/js.php"); ?>
+
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+
+    <?php include_once "../CommonContent/CommonAllScript.php"?>
 
 </body>
 

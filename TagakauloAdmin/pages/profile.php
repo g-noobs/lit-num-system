@@ -73,6 +73,8 @@
         }
         </script>
         <?php include_once("../PagesContent/ProfileContent/JqueryProfile.php");?>
+
+        <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>
 
 </html>

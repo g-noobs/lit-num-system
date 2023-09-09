@@ -49,25 +49,25 @@
         <!-- ./wrapper -->
     </div>
     <?php include_once("../bootstrap/js.php")?>
+    <?php include_once "../CommonContent/ErrorModal.php"?>
+    <?php include_once "../CommonContent/CommonAllScript.php"?>
 
     <script>
     // Wait for document ready
     $(document).ready(function() {
 
-    // Click handler for teacher count button
-    $('#teacher-count').click(function() {
+        // Click handler for teacher count button
+        $('#teacher-count').click(function() {
 
-        // Save selection
-        localStorage.setItem('userType', 'teacher');
+            // Save selection
+            localStorage.setItem('userType', 'teacher');
 
-        // Redirect
-        window.location.href = 'user.php';
+            // Redirect
+            window.location.href = 'user.php';
+
+        });
 
     });
-
-    });
-
-
     </script>
 </body>
 

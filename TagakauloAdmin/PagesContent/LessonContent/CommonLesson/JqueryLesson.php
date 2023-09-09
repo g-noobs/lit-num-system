@@ -1,4 +1,5 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
 $(document).ready(function() {
     $("#userInput").on("keyup", function() {
@@ -62,61 +63,27 @@ $("#back-table").click(function() {
 });
 </script>
 
-<!-- lesson panel or fragment manipulation-->
-<!-- <script>
-$(document).ready(function() {
-    $('section.content').hide();
+<script>
+$(function() {
+    //by default it will hide the panels and only show the pdf panel
+    $('.panel').hide();
+    $('#panel-pdf').show();
 
-    $('button.next').click(function() {
-        var currentSection = $(this).closest('section');
-        var nextSection = currentSection.next('section');
 
-        if (nextSection.length == 0) {
-            nextSection = $('section.content:first');
-        }
+    $('ul li').on('click', function() {
+        //remove the active class from the button
+        $('ul li.active').removeClass('active');
 
-        currentSection.hide();
-        nextSection.show();
-    });
+        //add the active class to the selected button
+        $(this).addClass('active');
 
-    $('button.back').click(function() {
-        var currentSection = $(this).closest('section');
-        var prevSection = currentSection.prev('section');
+        //store the attributes of the stored button
+        var panelToShow = $(this).attr('data-panelid');
+        //hidee all panels
+        $('.container-fluid .panel').hide('fast');
+        $('#' + panelToShow).show('fast');
 
-        if (prevSection.length == 0) {
-            prevSection = $('section.content:last');
-        }
 
-        currentSection.hide();
-        prevSection.show();
-    });
-
-});
-</script> -->
-
-<!-- manipulation still but outside the form-->
-<!-- <script>
-$(document).ready(function() {
-    $('#form-add').hide();
-
-    $('#add-lesson').click(function() {
-        $('#lesson-table').hide();
-        $('#lesson-info').show();
-        $('#form-add').show();
-    });
-    $('#to-table').click(function() {
-        $('#lesson-table').show();
-        $('section.content').hide();
-        $('#form-add').hide();
     });
 });
-</script> -->
-
-<!-- will clear the form if lesson button is clicked-->
-<!-- <script>
-    $(document).ready(function() {
-        $('#lesson-btn').click(function() {
-    $('#form-add').find('input[type="text"], input[type="number"], textarea').val(''); 
-    });
-    });
-</script> -->
+</script>

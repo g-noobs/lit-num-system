@@ -7,7 +7,7 @@
     <!-- /.search form -->
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu tree" data-widget="tree">
-        <li>
+        <li class="active">
             <a href="dashboard.php">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>

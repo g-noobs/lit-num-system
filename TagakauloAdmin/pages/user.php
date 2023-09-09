@@ -118,6 +118,8 @@
         <?php include_once("../PagesContent/UserContent/CommonUser/ErrorModal.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/ErrrorJquery.php");?>
+        <?php include_once "../CommonContent/ErrorModal.php"?>
+        <?php include_once "../CommonContent/CommonAllScript.php"?>
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');

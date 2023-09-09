@@ -49,6 +49,8 @@
 
 
             <?php include_once("../bootstrap/js.php");?>
+            <?php include_once "../CommonContent/ErrorModal.php"?>
+            <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>
 
 </html>

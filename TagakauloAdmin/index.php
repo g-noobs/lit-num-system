@@ -81,7 +81,7 @@
     <!-- iCheck -->
     <script src="design/plugins/iCheck/icheck.min.js"></script>
    
-    <?php include_once "CommonContent/ErrorScript.php";?>
+    <?php include_once "CommonContent/CommonAllScript.php";?>
     <script>
     $(function() {
         $('input').iCheck({

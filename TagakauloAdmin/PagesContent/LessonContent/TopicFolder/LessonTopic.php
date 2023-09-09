@@ -15,26 +15,26 @@ a {
 <div class="container-fluid">
 
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#">PDF</a></li>
-        <li><a href="#">Image</a></li>
-        <li><a href="#">Audio</a></li>
-        <li><a href="#">Video</a></li>
+        <li class="panel-btn active" data-panelid="panel-pdf"><a href="#">PDF</a></li>
+        <li class="panel-btn" data-panelid="panel-image"><a href="#">Image</a></li>
+        <li class="panel-btn" data-panelid="panel-audio"><a href="#">Audio</a></li>
+        <li class="panel-btn" data-panelid="panel-video"><a href="#">Video</a></li>
     </ul>
 
-    <div class="panel panel-default">
-        <div class="panel-body">PDF CONTENT
+    <div id="panel-pdf" class="panel panel-default">
+        <div class="panel-body">Upload PDF
         </div>
     </div>
-    <div class="panel panel-default">
-        <div class="panel-body">IMAGE
+    <div id="panel-image" class="panel panel-default">
+        <div class="panel-body">Upload Image
         </div>
     </div>
-    <div class="panel panel-default">
-        <div class="panel-body">AUDIO
+    <div id="panel-audio" class="panel panel-default">
+        <div class="panel-body">Upload Audio
         </div>
     </div>
-    <div class="panel panel-default">
-        <div class="panel-body">VIDEO
+    <div id="panel-video" class="panel panel-default">
+        <div class="panel-body">Upload Video
         </div>
     </div>
 </div>
