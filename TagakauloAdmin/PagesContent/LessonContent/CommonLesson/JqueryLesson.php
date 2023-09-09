@@ -22,7 +22,7 @@ $(".viewBtn").click(function() {
             id: buttonId
         },
         success: function(response) {
-            window.open("dashboard.php", "topicPopup", "width=1000,height=1000");
+            window.open("LessonFile.php", "topicPopup", "width=1000,height=1000");
         }
     });
 });
