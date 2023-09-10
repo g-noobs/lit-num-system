@@ -26,7 +26,12 @@ a {
         </div>
     </div>
     <div id="panel-image" class="panel panel-default">
-        <div class="panel-body">Upload Image
+        <div class="panel-body">
+            <h3><strong>Upload Image</strong></h3>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <label for="fileToUpload"></label>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload File" name="submit">
         </div>
     </div>
     <div id="panel-audio" class="panel panel-default">
