@@ -60,7 +60,7 @@ $(document).ready(function() {
     $('[id^="editBtn-"]').click(function() {
         // Get the id from data attribute
         let id = this.id.split("-")[1];
-        let name = $(this).closest('tr').find('td:eq(1)').text();
+        let name = $(this).closest('tr').find('td:eq(2)').text();
         // Populate the modal fields with the data
         $('#editModal').find('[name="sy_id"]').val(id);
         $('#editModal').find('[name="sy_name_edit"]').val(name);

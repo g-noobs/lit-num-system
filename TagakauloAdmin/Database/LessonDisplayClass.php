@@ -24,16 +24,16 @@ class LessonDisplayClass extends Connection{
             while($row = $result->fetch_assoc()){
                 $counter = 1;
                 echo "<tr>";
-                echo "<td><a href='#' class='edit' data-toggle='modal' data-toggle='tooltip' title='Edit Lesson' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
+                echo "<td><a href='#' class='edit' data-toggle='modal' data-toggle='tooltip' title='Edit Lesson'  data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
                 
    
                 echo "<td>" . $row["lesson_id"] . "</td>";
                 echo "<td>" . $row["lesson_name"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";
                 
-                echo "<td><a href='#' type='button' class='viewBtn' data-id='" . $row["lesson_id"] . "'>View</a></td>";
-                echo "<td><a href='#' type='button' class='addBtn' data-id='" . $row["lesson_id"] . "'>Add</a></td>";
-                echo "<td><a href='#' type='button' class='archive'  data-id='" . $row["lesson_id"] . "'>Archive</a></td>";
+                echo "<td><a href='#' type='button' data-toggle='tooltip' title='View Lesson' class='viewBtn' data-id='" . $row["lesson_id"] . "'> <i class='fa fa-eye'></i> </a></td>";
+                echo "<td><a href='#' type='button' data-toggle='tooltip' title='Add Lesson' class='addBtn' data-id='" . $row["lesson_id"] . "'><i class='fa fa-plus'></i></a></td>";
+                echo "<td><a href='#' type='button' data-toggle='tooltip' title='Archive Lesson' class='archive'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-trash-o'></i></a></td>";
                 
                 echo "</tr>";
             }

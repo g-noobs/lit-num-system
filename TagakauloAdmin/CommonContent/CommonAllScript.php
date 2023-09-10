@@ -5,7 +5,7 @@ if (msg) {
     $('#errorModal').modal('show');
 
 }
-
+msg = "";
 </script>
 <script>
 $(document).ready(function() {
@@ -22,6 +22,21 @@ $(document).ready(function() {
             // Add the 'active' class to the parent <li> element
             $(this).closest("li").addClass("active");
         }
+    });
+});
+
+</script>
+
+<!-- Jquery for Search -->
+<script>
+$(document).ready(function() {
+    $("#userInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("tbody tr").filter(function() {
+            var rowText = $(this).text().toLowerCase();
+            var pText = $(this).find("p").text().toLowerCase();
+            $(this).toggle(rowText.indexOf(value) > -1 || pText.indexOf(value) > -1);
+        });
     });
 });
 </script>
