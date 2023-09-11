@@ -32,17 +32,11 @@ $(".viewBtn").click(function() {
 <script>
 $(".addBtn").on("click", function() {
     $("#add-topic-panel").show();
+    var lessonName = $(this).closest('tr').find('td:eq(2)').text();
     var btnId = $(this).data("id");
-    $.ajax({
-        url: "lesson.php",
-        method: "POST",
-        data: {
-            id: btnId
-        },
-        success: function(response) {
-            $("#lesson-table").hide();
-        }
-    });
+
+    $("#lesson-table").hide();
+    $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
 });
 </script>
 <script>

@@ -1,5 +1,6 @@
 <?php 
-include_once("Connection.php");
+
+include_once "Connection.php";
 class LessonDisplayClass extends Connection{
     function __construct(){
         parent :: __construct();
@@ -22,7 +23,6 @@ class LessonDisplayClass extends Connection{
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                $counter = 1;
                 echo "<tr>";
                 echo "<td><a href='#' class='edit' data-toggle='modal' data-toggle='tooltip' title='Edit Lesson'  data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
                 
@@ -32,8 +32,8 @@ class LessonDisplayClass extends Connection{
                 echo "<td>" . $row["category_name"] . "</td>";
                 
                 echo "<td><a href='#' type='button' data-toggle='tooltip' title='View Lesson' class='viewBtn' data-id='" . $row["lesson_id"] . "'> <i class='fa fa-eye'></i> </a></td>";
-                echo "<td><a href='#' type='button' data-toggle='tooltip' title='Add Lesson' class='addBtn' data-id='" . $row["lesson_id"] . "'><i class='fa fa-plus'></i></a></td>";
-                echo "<td><a href='#' type='button' data-toggle='tooltip' title='Archive Lesson' class='archive'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-trash-o'></i></a></td>";
+                echo "<td><a href='#' type='button' data-toggle='tooltip' title='Add Lesson' class='addBtn text-primary' data-id='" . $row["lesson_id"] . "'><i class='fa fa-plus'></i></a></td>";
+                echo "<td><a href='#' class='text-danger' type='button' data-toggle='tooltip' title='Archive Lesson' class='archive'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-trash-o'></i></a></td>";
                 
                 echo "</tr>";
             }

@@ -36,13 +36,13 @@
                 </h1>
             </section>
             <br>
-            <div class="container well">
+            <!-- <div class="container well">
 
                 <a href="lesson.php" type="button" class="btn btn-default" id="lesson-btn">Lesson</a>
                 <button type="button" class="btn btn-default">Quiz</button>
                 <button type="button" class="btn btn-default">Assignment</button>
 
-            </div>
+            </div> -->
 
             <!-- Main content -->
 
