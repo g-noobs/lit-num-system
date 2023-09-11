@@ -25,7 +25,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="../Img/temp_profpic.png" class="user-image" alt="User Image">
+                    <!-- use absoulte directory DIR using path: C:\Users\admin\OneDrive\Documents\GitHub\lit-num-system\TagakauloAdmin\Media\Image\UserAvatar\temp_profpic.png-->
+                    <img src="../Media/Image/UserAvatar/temp_profpic.png" class="user-image" alt="User Image">
+            
+             
+                   
+                    
                     <span class="hidden-s"> 
                         <?php
                             include_once("../Database/DisplayInfoClass.php");
@@ -38,7 +43,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <ul class="dropdown-menu">
 
                     <li class="user-header">
-                        <img src="../Img/temp_profpic.png" class="img-circle" alt="User Image">
+                        <img src="../Media/Image/UserAvatar/temp_profpic.png" class="img-circle" alt="User Image">
                         <p>
                             Name: 
                             <?php $name = new DisplayInfoClass();

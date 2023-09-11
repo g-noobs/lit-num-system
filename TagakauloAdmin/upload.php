@@ -26,13 +26,13 @@ $base = $pathinfo["filename"];
 // replaces all non-alphanumeric characters with an underscore
 $base = preg_replace("/[^a-zA-Z0-9]/", "_", $base);
 $filename = $base . "." . $pathinfo["extension"];
-$destination = __DIR__ . "/Img/" . $filename;
+$destination = __DIR__ . "/Media/Image/" . $filename;
 
 $i = 1;
 
 while(file_exists($destination)){
     $filename = $base . "($i)." . $pathinfo["extension"];
-    $destination = __DIR__ . "/Img/" . $filename;
+    $destination = __DIR__ . "/Media/Image/" . $filename;
     $i++;
 }
 
