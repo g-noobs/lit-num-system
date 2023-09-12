@@ -31,8 +31,8 @@ class LessonDisplayClass extends Connection{
                 echo "<td>" . $row["lesson_name"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";
                 
-                echo "<td><a href='#' type='button' data-toggle='tooltip' title='View Lesson' class='viewBtn' data-id='" . $row["lesson_id"] . "'> <i class='fa fa-eye'></i> </a></td>";
-                echo "<td><a href='#' type='button' data-toggle='tooltip' title='Add Lesson' class='addBtn text-primary' data-id='" . $row["lesson_id"] . "'><i class='fa fa-plus'></i></a></td>";
+                echo "<td><a href='#' class='viewBtn' type='button' data-toggle='tooltip' title='View Lesson' data-id='" . $row["lesson_id"] . "'> <i class='fa fa-eye'></i> </a></td>";
+                echo "<td><a href='#' class='addBtn text-success' type='button' data-toggle='tooltip' title='Add Lesson'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-plus'></i></a></td>";
                 echo "<td><a href='#' class='text-danger' type='button' data-toggle='tooltip' title='Archive Lesson' class='archive'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-trash-o'></i></a></td>";
                 
                 echo "</tr>";
