@@ -7,7 +7,6 @@ $values = array(
     'lesson_id' => '',
     'lesson_name' => $_POST['lesson_name'],
     'category_id'=>$_POST['level_learning'],
-    'topic_id' => '',
     'added_byID' => '',
 );
 
@@ -22,7 +21,7 @@ $values['lesson_id'] = "LSN".(100001 + (int)$columnCountClass->columnCount("less
 $columns = implode(', ', array_keys($values));
 
 $query = "INSERT INTO $table ($columns)
-          VALUES (?,?,?,?,?);";
+          VALUES (?,?,?,?);";
 
 $params = array_values($values);
 

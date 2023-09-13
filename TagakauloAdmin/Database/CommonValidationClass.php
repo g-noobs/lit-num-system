@@ -6,14 +6,16 @@ class CommonValidationClass extends Connection{
         parent :: __construct();
     }
     function validateColumns($table, $columns, $values) {
+
+        //this will convert the columns into array
         if (!is_array($columns)) {
             $columns = [$columns];
         }
-        
+        //this will convr
         if (!is_array($values)) {
             $values = [$values];
         }
-    
+        // below will check if the columns and values are equal
         if (count($columns) !== count($values)) {
             echo "<script>console.log('Columns and values must have the same count.')</script>";
             throw new Exception("Columns and values must have the same count.");
@@ -21,7 +23,8 @@ class CommonValidationClass extends Connection{
     
         $conditions = [];
         $params = [];
-    
+        
+        //this will loop the columns and values
         foreach ($columns as $column) {
             $conditions[] = "$column = ?";
             $params[] = "s";

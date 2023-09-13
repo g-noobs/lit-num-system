@@ -1,3 +1,33 @@
+<!-- script that will manage the form submit-->
+<!-- will be using jquery and ajax-->
+
+<script>
+$(function(){
+    $("#addTopic").on("submit", function(e){
+        e.preventDefault();
+        var btnId = $(this).data("id");
+        //Create a FormData object
+        var formData = new FormData(this);
+        // Append the btnId to the formData
+        formData.append("btnId", btnId);
+        $.ajax({
+            url: "../PagesContent/LessonContent/ActionLesson/AddTopic.php",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(data){
+                alert(data);
+                $("#addTopic")[0].reset();
+                $("#add-topic-panel").hide();
+                $("#lesson-table").show();
+                window.location.href = "lesson.php";
+            }
+        });
+    });
+});
+</script>
+
 
 <!-- script for getting id and name from the lesson table and transfer to script-->
 <script>

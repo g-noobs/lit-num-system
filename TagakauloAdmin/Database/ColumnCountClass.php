@@ -32,5 +32,23 @@ class ColumnCountClass extends Connection{
             return 0;
         }
     }
+
+    function columnCountWhere($col,$tableName){
+        $query = "SELECT COUNT($col) as count FROM $tableName";// Replace with your table name
+        $result = $this->conn->query($query);
+    
+        if ($result->num_rows > 0) {
+            // Fetch the count value
+            $row = $result->fetch_assoc();
+            $count = $row["count"];
+            
+            // Generate the value with 6 leading zeros and the column count
+            $value = str_pad($count + 1, 6, '0', STR_PAD_LEFT);
+            return $value;
+        } else {
+            $value = str_pad(0 + 1, 6, '0', STR_PAD_LEFT);
+            return $value;
+        }
+    }
 }
 ?>
