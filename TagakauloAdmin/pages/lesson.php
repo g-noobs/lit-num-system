@@ -67,6 +67,7 @@
     <?php include_once("../bootstrap/js.php"); ?>
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
     <?php include_once "../CommonContent/CommonAllScript.php"?>
 

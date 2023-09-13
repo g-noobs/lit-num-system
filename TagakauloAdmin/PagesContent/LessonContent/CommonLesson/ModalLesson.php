@@ -12,7 +12,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="lesson_name">Lesson Name</label>
-                            <input type="text" name="lesson_name" class="form-control">
+                            <input type="text" name="lesson_name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="level_learning">Select a level of Category</label>

@@ -25,8 +25,10 @@
             <?php include_once "../CommonContent/MainSideContent.php"?>
         </aside>
 
+        
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
+        <?php include_once "../PagesContent/SchoolYearFolder/SyEssentialsFolder/AlertSy.php"; ?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
@@ -34,6 +36,7 @@
                 </h1>
             </section>
             <br>
+
 
             <section>
                 <div class="container-fluid">
