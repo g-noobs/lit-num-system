@@ -70,6 +70,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 // get current or today's date
                 $updloadDate = date("Y-m-d");
 
+                ////// Will continue tomorrow
+
                 $addFileInfo = new SanitizeCrudClass();
                 $query = "INSERT INTO tbl_image(image_id, image_name, image_path, upload_date, image_status, topic_id) VALUES (?,?,?,?,?,?)";
                 
