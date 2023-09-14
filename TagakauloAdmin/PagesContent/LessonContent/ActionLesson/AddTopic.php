@@ -44,53 +44,71 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     throw $e;
                 }
             }
-            
         }
         else{
             echo $data." is already exists. Please try again";
         }
-        // // if add Topic is successfull proceed with the file upload
-        // if($addTopic->getLastError() === null){
-        //     //Handle multiple file uploads
-        //     $fileCount = count($_FILES['file']['name']);
-        //     //directory to same with this C:\Users\admin\OneDrive\Documents\GitHub\lit-num-system\TagakauloAdmin\Media\Image
-        //     $uploadDir = __DIR__ . "/Media/Image/";
+        // if add Topic is successfull proceed with the file upload
+        if($addTopic->getLastError() === null){
+            //Handle multiple file uploads
+            $fileCount = count($_FILES['file']['name']);
 
-        //     //Check if directory exists, if not create it
-        //     if(!file_exists($uploadDir)){
-        //         mkdir($uploadDir, 0755, true);
-        //     }
+            $uploadDir = "../../../Media/Image/";
+            //Check if directory exists, if not create it
+            if(!file_exists($uploadDir)){
+                mkdir($uploadDir, 0755, true);
+            }
 
-        //     $uploadFiles = array();
+            $uploadFiles = array();
 
-        //     //place the file name, tempname and traget path in an array, using for loop
-        //     for($i=0; $i < $fileCount; $i++){
-        //         $fileName = $_FILES["file"]["name"][$i];
-        //         $tempName = $_FILES["file"]["tmp_name"][$i];
-        //         $targetPath = $uploadDir . $fileName;
+            //place the file name, tempname and traget path in an array, using for loop
+            for($i=0; $i < $fileCount; $i++){
+                $fileName = $_FILES["file"]["name"][$i];
+                $tempName = $_FILES["file"]["tmp_name"][$i];
 
-        //         $columnCount = new ColumnCountClass();
-        //         $image_id = "IMG". $columnCount->columnCountWhere("image_id","tbl_image");
+                //set allowed file extensions
+                $pathinfo = pathinfo($fileName);
+                $base = $pathinfo["filename"];
 
-        //         // get current or today's date
-        //         $updloadDate = date("Y-m-d");
-
-        //         ////// Will continue tomorrow
-
-        //         $addFileInfo = new SanitizeCrudClass();
-        //         $query = "INSERT INTO tbl_image(image_id, image_name, image_path, upload_date, image_status, topic_id) VALUES (?,?,?,?,?,?)";
+                //replace all non-alphanumeric characters with an underscore
+                $base = preg_replace("/[^a-zA-Z0-9]/", "_", $base);
+                $fileName = $base . "." . $pathinfo["extension"];
+                $destination = $uploadDir . $fileName;
                 
-        //         $params = array($image_id, $fileName, $targetPath, date("Y-m-d"), 1, $topic_id);
+                $j = 1;
+
+                while(file_exists($destination)){
+                    $fileName = $base . "($j)." . $pathinfo["extension"];
+                    $destination = $uploadDir . $fileName;
+                    $j++;
+                }
+
+
+                $columnCount = new ColumnCountClass();
+                $image_id = "IMG". $columnCount->columnCountWhere("image_id","tbl_image");
+
+                // get current or today's date
+                $updloadDate = date("Y-m-d");
+
                 
-        //         // Move the uploaded file to the directory
-        //         if(move_uploaded_file($tempName, $targetPath)){
-        //             $uploadFiles[] = $targetPath;
-        //         }
-        //     }
-        //     // call the adding to database function
+                //insert the file info to tbl_image
+                $addFileInfo = new SanitizeCrudClass();
+                $query = "INSERT INTO tbl_image(image_id, image_name, image_path, upload_date, image_status, topic_id) VALUES (?,?,?,?,?,?)";
+                $params = array($image_id, $fileName, $destination, $updloadDate , 1, $topic_id);
+                $addFileInfo->executePreState($query,$params);
+                $validate = new CommonValidationClass();
+                
+                
+                // Move the uploaded file to the directory
+                if(move_uploaded_file($tempName, $destination)){
+                    $uploadFiles[] = $destination;
+                }
+            }
+            //Adding Successfully
+            echo "Successfully Added";
             
-        //     $addTopic = new SanitizeCrudClass();
-        // }
+            
+        }
 
         
 
