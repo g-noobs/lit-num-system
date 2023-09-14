@@ -44,10 +44,11 @@ $user_info_id = $values['user_info_id'];
 
 //insert validation
 include_once "../../../Database/CommonValidationClass.php";
-$isValid = new CommonValidationClass();
+$validate = new CommonValidationClass();
 $data = array($values['first_name'], $values['last_name']);
 $column = array('first_name', 'last_name');
-$isValid -> validateColumns($table, $column, $data);
+$isValid = $validate -> validateColumns($table, $column, $data);
+
 
 if($isValid) {
     $columns = implode(', ', array_keys($values));
@@ -73,6 +74,7 @@ if($isValid) {
     }
     catch(mysqli_sql_exception $e){
         if ($e->getCode() == 1062){
+          //show both data content without using loop
           $message = $data." Already exists. Please try again";  
           header('Location: ../../../pages/user.php?msg='.urlencode($message));
           exit();
@@ -81,6 +83,11 @@ if($isValid) {
             throw $e;
         }
     }
+}
+else{
+    $message = $data." Already exists. Please try again";  
+    header('Location: ../../../pages/user.php?msg='.urlencode($message));
+    exit();
 }
 ?>
 

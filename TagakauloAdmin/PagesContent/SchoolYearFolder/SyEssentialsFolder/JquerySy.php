@@ -1,17 +1,5 @@
 <!-- pop modal for error adding -->
-<script>
-    $(document).ready(function () {
-        
-        $("#btn").on("click", function(){
-        // Show the alert
-        $("#myAlert").show(); // Show the .alert element
-       
-        setTimeout(function () {
-                    $("#myAlert").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 3000); // 3000 milliseconds (3 seconds)
-            });
-    });
-</script>
+
 
 <script>
 $(document).ready(function() {
@@ -27,6 +15,7 @@ $(document).ready(function() {
 <!-- Jquery for Add and editing school year-->
 <script>
 $(document).ready(function() {
+    $('#errorBanner').hide();
     
     $('#addModal').submit(function(e) {
 
@@ -38,9 +27,9 @@ $(document).ready(function() {
         if (regex.test(syDate)) {
 
         } else {
-            $("#myAlert").show(); // Show the .alert element
+            $("#errorBanner").show(); // Show the .alert element
             setTimeout(function () {
-                    $("#myAlert").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
                 }, 2500); // 3000 milliseconds (3 seconds)
 
             $('#addModal').modal('hide');

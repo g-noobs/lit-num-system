@@ -28,6 +28,9 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
+
+        <!-- Banner Alert -->
+        <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
@@ -118,7 +121,7 @@
         <?php include_once("../PagesContent/UserContent/CommonUser/ErrorModal.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/ErrrorJquery.php");?>
-        <?php include_once "../CommonContent/ErrorModal.php"?>
+        
         <?php include_once "../CommonContent/CommonAllScript.php"?>
         <script>
         // Check for saved user type

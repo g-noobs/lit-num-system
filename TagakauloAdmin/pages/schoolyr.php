@@ -28,7 +28,7 @@
         
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
-        <?php include_once "../PagesContent/SchoolYearFolder/SyEssentialsFolder/AlertSy.php"; ?>
+        <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>

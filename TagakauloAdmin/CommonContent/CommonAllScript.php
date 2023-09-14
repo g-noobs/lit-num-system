@@ -1,11 +1,20 @@
 <script>
-// Check for message
-var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-if (msg) {
-    $('#errorModal').modal('show');
+$(function() {
+    $('#errorBanner').hide();
+    // Check for message
+    var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
+    if (msg) {
+        //show errroBanner
+        $('#errorBanner').show();
+        //add  the message to ther id errorAlert
+        $('#errorAlert').text(msg);
+        setTimeout(function () {
+                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                }, 2500);
+    }
+    msg = "";
 
-}
-msg = "";
+});
 </script>
 <script>
 $(document).ready(function() {
@@ -14,8 +23,8 @@ $(document).ready(function() {
     // Loop through each anchor tag in the sidebar menu
     $(".sidebar-menu li a").each(function() {
         var menuUrl = $(this).attr("href");
-        
-        
+
+
         // Check if the current URL matches the menu URL
         if (currentPage === menuUrl) {
             $("sidebar-menu li.active").removeClass("active");
@@ -24,7 +33,6 @@ $(document).ready(function() {
         }
     });
 });
-
 </script>
 
 <!-- Jquery for Search -->
@@ -40,4 +48,3 @@ $(document).ready(function() {
     });
 });
 </script>
-

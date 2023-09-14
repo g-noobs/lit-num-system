@@ -34,7 +34,7 @@ a {
                             <div class="col-sm-9" id="input-group-container">
                                
                                 <div class="input-group">
-                                    <input type="file" class="form-control" id="file" name="file[]" multiple required>
+                                    <input type="file" class="form-control" id="file" name="file[]" multiple>
                                     <span class="input-group-btn">
                                         <a href="#" class="btn text-danger cancelFile" data-toggle="tooltip" title="Cancel"><i
                                                 class="fa fa-remove"></i></a></a>

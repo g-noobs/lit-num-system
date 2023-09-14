@@ -1,11 +1,24 @@
 <!-- script that will manage the form submit-->
 <!-- will be using jquery and ajax-->
 
+
+<!-- script for getting id and name from the lesson table and transfer to script-->
 <script>
 $(function() {
+    var btnId;
+    $(".addBtn").on("click", function() {
+        $("#add-topic-panel").show();
+        var lessonName = $(this).closest('tr').find('td:eq(2)').text();
+        btnId = $(this).data("id");
+
+        $("#lesson-table").hide();
+        $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
+    //will add a callback
+    });
+
     $("#addTopic").on("submit", function(e) {
-        e.preventDefault();
-        var btnId = $(this).data("id");
+        $("errorBanner").hide();
+        e.preventDefault(); 
         //Create a FormData object
         var formData = new FormData(this);
         // Append the btnId to the formData
@@ -19,26 +32,16 @@ $(function() {
             success: function(data) {
                 alert(data);
                 $("#addTopic")[0].reset();
-                $("#add-topic-panel").hide();
-                $("#lesson-table").show();
-                window.location.href = "lesson.php";
+                $("#add-topic-panel").show();
+                $("#lesson-table").hide();
+
+                $("errorBanner").show();
+                $("errorAlert").text(data);
+                setTimeout(function () {
+                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                }, 2500);
             }
         });
-    });
-});
-</script>
-
-
-<!-- script for getting id and name from the lesson table and transfer to script-->
-<script>
-$(function() {
-    $(".addBtn").on("click", function() {
-        $("#add-topic-panel").show();
-        var lessonName = $(this).closest('tr').find('td:eq(2)').text();
-        var btnId = $(this).data("id");
-
-        $("#lesson-table").hide();
-        $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
     });
 });
 </script>
