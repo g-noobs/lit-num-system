@@ -9,7 +9,7 @@ include_once "../../../Database/ColumnCountClass.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //check if the form fields is empty including file input
-    if(isset($_POST['topic_name']) && isset($_POST['topic_desc']) && isset($_FILES['file']) && isset($_POST['btnId'])){
+    if(isset($_POST['topic_name']) && isset($_POST['topic_desc']) && isset($_POST['btnId'])){
         $topic_name = $_POST['topic_name'];
         $topic_desc = $_POST['topic_desc'];
         $lesson_id = $_POST['btnId'];

@@ -2,8 +2,8 @@
 <!-- will be using jquery and ajax-->
 
 <script>
-$(function(){
-    $("#addTopic").on("submit", function(e){
+$(function() {
+    $("#addTopic").on("submit", function(e) {
         e.preventDefault();
         var btnId = $(this).data("id");
         //Create a FormData object
@@ -16,7 +16,7 @@ $(function(){
             data: formData,
             contentType: false,
             processData: false,
-            success: function(data){
+            success: function(data) {
                 alert(data);
                 $("#addTopic")[0].reset();
                 $("#add-topic-panel").hide();
@@ -31,18 +31,16 @@ $(function(){
 
 <!-- script for getting id and name from the lesson table and transfer to script-->
 <script>
-$(function(){
+$(function() {
     $(".addBtn").on("click", function() {
-    $("#add-topic-panel").show();
-    var lessonName = $(this).closest('tr').find('td:eq(2)').text();
-    var btnId = $(this).data("id");
+        $("#add-topic-panel").show();
+        var lessonName = $(this).closest('tr').find('td:eq(2)').text();
+        var btnId = $(this).data("id");
 
-    $("#lesson-table").hide();
-    $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
+        $("#lesson-table").hide();
+        $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
+    });
 });
-});
-
-
 </script>
 
 <script>
@@ -63,50 +61,37 @@ $("#reset-cancel").on("click", function() {
 });
 </script>
 
-<!-- <script>
-$(function() {
-    //by default it will hide the panels and only show the pdf panel
-    $('.panel').hide();
-    $('#panel-pdf').show();
-
-
-    $('ul li').on('click', function() {
-        //remove the active class from the button
-        $('ul li.active').removeClass('active');
-
-        //add the active class to the selected button
-        $(this).addClass('active');
-
-        //store the attributes of the stored button
-        var panelToShow = $(this).attr('data-panelid');
-        //hidee all panels
-        $('.container-fluid .panel').hide('fast');
-        $('#' + panelToShow).show('fast');
-
-
-    });
-});
-</script> -->
-<!-- Adding topic Script-->
 <script>
 $(document).ready(function() {
     // Function to add another input group when #addMedia is clicked
-    $("#addMedia").click(function () {
+    $("#addMedia").click(function() {
         var newInputGroup = '<div class="input-group">' +
-                            '<input type="file" class="form-control" name="file[]" multiple required>' +
-                            '<span class="input-group-btn">' +
-                            '<a href="#" class="btn text-danger cancelFile"><i class="fa fa-remove"></i></a>' +
-                            '</span>' +
-                            '<br></div>';
-        
+            '<input type="file" class="form-control" name="file[]" multiple required>' +
+            '<span class="input-group-btn">' +
+            '<a href="#" class="btn text-danger cancelFile"><i class="fa fa-remove"></i></a>' +
+            '</span>' +
+            '<br></div>';
+
         // Append the new input group to the container
         $("#input-group-container").append(newInputGroup);
     });
 
     // Function to remove an input group when its "href" link is clicked
-    $(document).on("click", ".cancelFile", function () {
-        $(this).closest('.input-group').remove();
+    $(document).on("click", ".cancelFile", function() {
+        // Count the number of input groups inside the container
+        var inputGroupCount = $("#input-group-container .input-group").length;
+
+        // Check if there's only one input group
+        if (inputGroupCount === 1) {
+            // If there's only one input group, hide or disable the cancelFile class as per your requirement
+            $(this).closest('.input-group').find('.cancelFile').addClass('disable')
+           
+        } else {
+            // If there are more than one input groups, remove the current input group
+            $(this).closest('.input-group').remove();
+        }
     });
-    
+
+
 });
 </script>

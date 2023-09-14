@@ -36,21 +36,16 @@ a {
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="file" name="file[]" multiple required>
                                     <span class="input-group-btn">
-                                        <a href="#" class="btn text-danger cancelFile"><i
+                                        <a href="#" class="btn text-danger cancelFile" data-toggle="tooltip" title="Cancel"><i
                                                 class="fa fa-remove"></i></a></a>
                                     </span>
                                     <br>
                                 </div>
-
-                                
                             </div>
                         </div>
-                        
                     </div>
-                    
                     <a href="#" id="addMedia" type="button" data-toggle="tooltip" title="Add More Media"
                                 class="text-success"><i class="fa fa-plus"></i></a>
-
                 </div>
 
 
