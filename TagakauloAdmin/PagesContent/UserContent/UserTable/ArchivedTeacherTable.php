@@ -1,8 +1,19 @@
 <div class="row">
     <div class="col-xs-12">
-        <div class="box">
+        <div class="box container">
             <div class="box-header">
-                <h3 class="box-title">Archived Teacher's List</h3>
+                <h3>Archived Teacher's List</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="search-box">
+                            <i class="fa fa-search"></i>
+                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.box-header -->
 

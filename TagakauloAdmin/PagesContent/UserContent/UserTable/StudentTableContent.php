@@ -1,18 +1,26 @@
 <div class="row">
     <div class="col-xs-12">
-        <div class="box">
+        <div class="box container">
             <div class="box-header">
-                <h3 class="box-title">Student</h3>
+                <h3>Student</h3>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                            <i class="fa fa-plus"></i> <span> Add Learner</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="search-box">
+                            <i class="fa fa-search"></i>
+                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.box-header -->
 
-            <div class="container-fluid">
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
-                    <i class="fa fa-plus"></i> <span> Add Learner</span>
-                </button>
-            </div>
 
-            
             <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
                 $btnName = "Update";
                 $editActive = new ModalClass();

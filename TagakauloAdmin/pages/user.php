@@ -8,7 +8,34 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once("../bootstrap/css.php");?>
+
 </head>
+<style>
+.search-box {
+    position: relative;
+    float: right;
+}
+
+.search-box input {
+    height: 34px;
+    border-radius: 20px;
+    padding-left: 35px;
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+.search-box input:focus {
+    border-color: #3FBAE4;
+}
+
+.search-box i {
+    color: #a0a5b1;
+    position: absolute;
+    font-size: 16px;
+    top: 8px;
+    left: 14px;
+}
+</style>
 
 <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
 
@@ -71,13 +98,7 @@
                         </div>
 
                         <div class="col-xs-3">
-                            <form>
-                                <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
-                                    <span class="input-group-addon" style="background-color: white;"><i
-                                            class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
-                                    <input type="text" class="form-control" id="userInput" placeholder="Search">
-                                </div>
-                            </form>
+
                         </div>
 
                         <div class="col-xs-6"></div>
@@ -121,7 +142,7 @@
         <?php include_once("../PagesContent/UserContent/CommonUser/ErrorModal.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/ErrrorJquery.php");?>
-        
+
         <?php include_once "../CommonContent/CommonAllScript.php"?>
         <script>
         // Check for saved user type

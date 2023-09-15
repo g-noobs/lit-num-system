@@ -1,16 +1,24 @@
 <div class="row">
     <div class="col-xs-12">
-        <div class="box">
+        <div class="box container">
             <div class="box-header">
-                <h3 class="box-title">All user List</h3>
+                <h3>All user List</h3>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                            <i class="fa fa-plus"></i> <span> Add User</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="search-box">
+                            <i class="fa fa-search"></i>
+                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.box-header -->
-
-            <div class="container-fluid">
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
-                    <i class="fa fa-plus"></i> <span> Add User</span>
-                </button>
-            </div>
             <br>
             <div class="modal fade" id="add-user">
                 <div class="modal-dialog">
@@ -20,8 +28,8 @@
                                 <span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">Enter the User Information</h4>
                         </div>
-                        <form role="form" action="../UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
-                            method="post">
+                        <form role="form" action="../UserContent/ActionsUsers/ActionRegisterUser.php"
+                            onsubmit="return validateForm()" method="post">
                             <div class="modal-body">
                                 <div class="box-body">
                                     <div class="form-group">
