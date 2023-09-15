@@ -1,6 +1,6 @@
 <style>
 /* Style for the alert */
-#errorBanner {
+#errorBanner, #successBanner{
     display: none;
     opacity: 0.75;
     position: fixed;
@@ -17,6 +17,11 @@
 </style>
 
 <div class="alert alert-danger alert-dismissible fade in" id="errorBanner">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <b>Error! </b> <span id="errorAlert"></span>
+</div>
+
+<div class="alert alert-success alert-dismissible fade in" id="successBanner">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <b>Error! </b> <span id="errorAlert"></span>
 </div>
