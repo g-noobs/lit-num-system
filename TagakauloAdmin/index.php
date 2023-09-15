@@ -118,6 +118,7 @@
 </head>
 
 <body>
+    <?php include_once "CommonContent/ErrorModal.php"?>
     <div class="login-form">
         <form action="ActionValidateUser.php" method="post">
             <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
@@ -139,7 +140,7 @@
 
     <!-- /.login-box -->
     <!-- Modal HTML -->
-    <?php include_once "CommonContent/ErrorModal.php"?>
+
     <!-- jQuery 3 -->
     <script src="design/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
@@ -147,7 +148,21 @@
     <!-- iCheck -->
     <script src="design/plugins/iCheck/icheck.min.js"></script>
 
-    <?php include_once "CommonContent/CommonAllScript.php";?>
+    <!-- handle Error modal Script -->
+    <script>
+    $(function() {
+        // Check for message
+        // Check for message
+        var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
+        if (msg) {
+            $('#errorModal').modal('show');
+            $('#errorMessage').text(msg);
+        }
+        msg = "";
+
+
+    });
+    </script>
     <script>
     $(function() {
         $('input').iCheck({

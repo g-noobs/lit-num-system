@@ -91,7 +91,7 @@
 			</div>
 			<div class="modal-body text-center">
 				<h4>Ooops!</h4>	
-				<p><?= urldecode($_GET['msg']) ?>.</p>
+				<p id="errorMessage"></p>
 				<button class="btn btn-success" data-dismiss="modal">Try Again</button>
 			</div>
 		</div>
