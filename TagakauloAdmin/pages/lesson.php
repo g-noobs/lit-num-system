@@ -7,11 +7,11 @@
     <title>Admin | Lesson</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    
+
     <?php include_once("../bootstrap/css.php");?>
 
     <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
-    
+
 </head>
 
 <body class="sidebar-mini skin-yellow fixed fixed
@@ -30,7 +30,7 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
             <!-- Banner Alert -->
-        <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
+            <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
@@ -54,7 +54,7 @@
             </section>
 
 
-            <section class="container well" id="add-topic-panel">
+            <section class="container" id="add-topic-panel">
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
 
@@ -65,6 +65,7 @@
     </div>
 
     <!-- ./wrapper -->
+   
 
     <?php include_once("../bootstrap/js.php"); ?>
 
@@ -72,6 +73,8 @@
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
     <?php include_once "../CommonContent/CommonAllScript.php"?>
+    
+    <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
 
 </body>
 

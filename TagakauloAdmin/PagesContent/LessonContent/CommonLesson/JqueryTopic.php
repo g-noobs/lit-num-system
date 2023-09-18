@@ -15,7 +15,7 @@ $(function() {
         $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
     //will add a callback
     });
-
+    //Alert banner if error occurs
     $("#addTopic").on("submit", function(e) {
         $("errorBanner").hide();
         e.preventDefault(); 
@@ -43,6 +43,8 @@ $(function() {
             }
         });
     });
+    
+
 });
 </script>
 
@@ -67,31 +69,26 @@ $("#reset-cancel").on("click", function() {
 <script>
 $(document).ready(function() {
     // Function to add another input group when #addMedia is clicked
-    $("#addMedia").click(function() {
-        var newInputGroup = '<div class="input-group">' +
-            '<input type="file" class="form-control" name="file[]" multiple required>' +
-            '<span class="input-group-btn">' +
-            '<a href="#" class="btn text-danger cancelFile"><i class="fa fa-remove"></i></a>' +
-            '</span>' +
-            '<br></div>';
-
+    var $addFileContainer = $("#addFileContainer");
+    var $firstFormGroup = $($addFileContainer ).find(".form-group:first");
+    $("#addMedia").click(function() { 
         // Append the new input group to the container
-        $("#input-group-container").append(newInputGroup);
+        $($addFileContainer).append($firstFormGroup.clone());
     });
 
     // Function to remove an input group when its "href" link is clicked
     $(document).on("click", ".cancelFile", function() {
-        // Count the number of input groups inside the container
-        var inputGroupCount = $("#input-group-container .input-group").length;
+        // Count the number of form-groups in addFileContainer
+        var formGroupCount = $(".col-sm-6 .row .form-group").length;
 
         // Check if there's only one input group
-        if (inputGroupCount === 1) {
+        if (formGroupCount === 1) {
             // If there's only one input group, hide or disable the cancelFile class as per your requirement
-            $(this).closest('.input-group').find('.cancelFile').addClass('disable')
+            $(this).closest('.form-group').find('.cancelFile').addClass('disable')
            
         } else {
             // If there are more than one input groups, remove the current input group
-            $(this).closest('.input-group').remove();
+            $(this).closest('.form-group').remove();
         }
     });
 

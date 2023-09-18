@@ -1,7 +1,7 @@
 <?php 
 
 include_once "Connection.php";
-class LessonDisplayClass extends Connection{
+class LessonDisplayClass extends Connectio{
     function __construct(){
         parent :: __construct();
     }
@@ -36,6 +36,33 @@ class LessonDisplayClass extends Connection{
                 echo "<td><a href='#' class='text-danger' type='button' data-toggle='tooltip' title='Archive Lesson' class='archive'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-trash-o'></i></a></td>";
                 
                 echo "</tr>";
+            }
+        }   
+    }
+    function topicTable($lessonId){
+        $sql = "SELECT * FROM tbl_topic WHERE lesson_id = '".$lessonId."';";
+        $result = $this->getConnection()->query($sql);
+        
+        if($result-> num_rows >0){
+            while($row = $result->fetch_assoc()){
+                
+                if($row['topic_status'] == 1){
+                    $status = "<b class=text-success>Active</b>";
+
+                }
+                else{
+                    $status = "<b class=text-success>Inactive</b>";
+                }
+                echo '<tr>';
+                echo "<td><a href='#' class='viewBtn' type='button' data-toggle='tooltip' title='View Topic' data-id='" . $row["topic_id"] . "'> <i class='fa fa-eye'></i> </a></td>";
+                echo '<td>'. $row['topic_id'] .'</td>';
+                echo '<td>'. $row['topic_name'] .'</td>';
+                echo '<td>'. $status .'</td>';
+
+                echo "<td><a href='#' type='button' id='editBtn-".$row['sy_id']."' data-toggle='modal' data-target='#editModal' style='margin-right:10px; color: blue;'><span class='glyphicon glyphicon-edit' ></span></a></td>";
+                
+                echo "<td><a href='#' type='button' id='archiveBtn-".$row['sy_id']."' data-toggle='modal' data-target='#archiveModal' style='color:red';> <span class='glyphicon glyphicon-trash'></span></a></td>";
+                echo '</tr>';
             }
         }
         
