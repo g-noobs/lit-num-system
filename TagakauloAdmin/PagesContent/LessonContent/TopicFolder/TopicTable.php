@@ -4,16 +4,11 @@
     <div class="col-xs-12">
         <div class="box-container">
             <div class="box-header">
-                <div class="row">
-                        <div class="col-sm-6">
-                            <h3>Topic List</h3>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="search-box">
-                                <i class="fa fa-search"></i>
-                                <input type="text" id="userInput" class="form-control" placeholder="Search..">
-                            </div>
-                        </div>
+                <h3 class="box-title">Topic List</h3>
+                <div class="box-tools pull-right">
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" id="userInput" class="form-control" placeholder="Search..">
                     </div>
                 </div>
             </div>
