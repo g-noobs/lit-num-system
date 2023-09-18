@@ -6,23 +6,14 @@ a {
     /* This removes the underline */
 }
 </style>
-<section id="topic-table">
-    <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicTable.php"?>
-</section>
+<div id="Recent Topic"></div>
 
 
 <form id="addTopic" enctype="multipart/form-data">
-    <section class="box box-default">
+    <section class="container">
         <a href="#" type="button" id="back-table"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <!--! This is the box header -->
-        <div class="box-header"></div>
-            <h4 class="box-title" id="topic-name"> Add a new topic for lesson:</h4>
-            <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-            </div>
-        <!-- !This is the box body  -->
-        <div class="box-body">
+        <h4 id="topic-name"> Add a new topic for lesson:</h4>
+        <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
