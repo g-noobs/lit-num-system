@@ -14,6 +14,16 @@ $(function() {
         $("#lesson-table").hide();
         $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
     //will add a callback
+        $.ajax({
+            url: "../PagesContent/LessonContent/TopicFolder/TopicTable.php",
+            type: "POST",
+            data: {id: btnId},
+            success: function(response){
+                $("#table-topic tbody").prepend(response);
+            }
+        }
+
+        );
     });
 
     $("#addTopic").on("submit", function(e) {
@@ -43,6 +53,10 @@ $(function() {
             }
         });
     });
+
+    //assign button id
+    
+
 });
 </script>
 

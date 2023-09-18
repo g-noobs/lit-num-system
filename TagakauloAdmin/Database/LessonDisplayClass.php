@@ -9,7 +9,7 @@ class LessonDisplayClass extends Connection{
 
     function displayCategoryList(){
         $sql = "SELECT 	category_id , category_name  FROM tbl_category WHERE category_status = 1";
-        $result = $this->conn->query($sql);
+        $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
                 echo "<option value='{$row['category_id']}'>";
@@ -20,7 +20,7 @@ class LessonDisplayClass extends Connection{
     }
 
     function lessonTable($sql){
-        $result = $this->conn->query($sql);
+        $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
                 echo "<tr>";
@@ -37,8 +37,21 @@ class LessonDisplayClass extends Connection{
                 
                 echo "</tr>";
             }
-        }
+        }   
+    }
+    function topicTable($lessonId){
+        $sql = "SELECT * FROM tbl_topic WHERE lesson_id = $lessonId;";
+        $result = $this->getConnection()->query($sql);
         
+        if($result-> num_rows >0){
+            while($row = $result->fetch_assoc()){
+                echo '<tr>';
+                echo '<td>'. $row['topic_id'] .'</td>';
+                echo '<td>'. $row['topic_name'] .'</td>';
+                echo '<td>'. $row['topic_status'] .'</td>';
+                echo '</tr>';
+            }
+        }
     }
 }
 ?>

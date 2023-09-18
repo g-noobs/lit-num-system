@@ -6,7 +6,9 @@ a {
     /* This removes the underline */
 }
 </style>
-<div id="Recent Topic"></div>
+<section id="topic-table">
+    <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicTable.php"?>
+</section>
 
 
 <form id="addTopic" enctype="multipart/form-data">
