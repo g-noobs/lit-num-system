@@ -1,7 +1,7 @@
 <?php 
 
 include_once "Connection.php";
-class LessonDisplayClass extends Connectio{
+class LessonDisplayClass extends Connection{
     function __construct(){
         parent :: __construct();
     }
