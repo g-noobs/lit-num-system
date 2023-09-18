@@ -15,11 +15,11 @@ $(function() {
         $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
     //will add a callback
         $.ajax({
-            url: "../PagesContent/LessonContent/TopicFolder/TopicTable.php",
+            url: "../PagesContent/LessonContent/TopicFolder/PopulateTableData.php",
             type: "POST",
             data: {id: btnId},
             success: function(response){
-                $("#table-topic tbody").prepend(response);
+                $("#table-topic tbody").append(response);
             }
         }
 
