@@ -44,6 +44,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     throw $e;
                 }
             }
+            //add a catch for foreign key constraits fails
+            catch(Exception $e){
+                echo $e->getMessage();
+            }
+           
         }
         else{
             echo $data." is already exists. Please try again";
@@ -52,8 +57,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($addTopic->getLastError() === null){
             //Handle multiple file uploads
             $fileCount = count($_FILES['file']['name']);
+            
+            //upload directory to Folder Media
+            $uploadDir = "../../../Media/";
 
-            $uploadDir = "../../../Media/Image/";
             //Check if directory exists, if not create it
             if(!file_exists($uploadDir)){
                 mkdir($uploadDir, 0755, true);
@@ -69,14 +76,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 //set allowed file extensions
                 $pathinfo = pathinfo($fileName);
                 $base = $pathinfo["filename"];
+                $fileExtension = $pathinfo["extension"];
 
                 //replace all non-alphanumeric characters with an underscore
                 $base = preg_replace("/[^a-zA-Z0-9]/", "_", $base);
-                $fileName = $base . "." . $pathinfo["extension"];
-                $destination = $uploadDir . $fileName;
+                $fileName = $base . "." . $fileExtension;
+
+                //set the target path with a new file name
+                include_once "../../../CommonPHPClass/DirModClass.php";
+                $dirMod = new DirModClass();
+                $subDirectory = $dirMod->modSubDirecPath($fileExtension);
+
+                $destination = $uploadDir .$subDirectory ."/". $fileName;
                 
                 $j = 1;
-
                 while(file_exists($destination)){
                     $fileName = $base . "($j)." . $pathinfo["extension"];
                     $destination = $uploadDir . $fileName;
@@ -90,16 +103,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 // get current or today's date
                 $updloadDate = date("Y-m-d");
 
+                //!for the meantime directory modifaction on database insert variable = $distanation_mod
+                $distanation_mod = "/TagakauloAdmin/Media/".$subDirectory ."/". $fileName;
                 
-                //insert the file info to tbl_image
+                // //insert the file info to tbl_image
                 $addFileInfo = new SanitizeCrudClass();
                 $query = "INSERT INTO tbl_image(image_id, image_name, image_path, upload_date, image_status, topic_id) VALUES (?,?,?,?,?,?)";
-                $params = array($image_id, $fileName, $destination, $updloadDate , 1, $topic_id);
+                $params = array($image_id, $fileName, $distanation_mod, $updloadDate , 1, $topic_id);
                 $addFileInfo->executePreState($query,$params);
                 $validate = new CommonValidationClass();
                 
+  
                 
-                // Move the uploaded file to the directory
+                //? Move the uploaded file to the directory
                 if(move_uploaded_file($tempName, $destination)){
                     $uploadFiles[] = $destination;
                 }
