@@ -54,7 +54,7 @@
             </section>
 
 
-            <section class="container well" id="add-topic-panel">
+            <section id="add-topic-panel">
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
 
