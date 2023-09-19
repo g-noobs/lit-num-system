@@ -4,6 +4,7 @@
 
 <!-- script for getting id and name from the lesson table and transfer to script-->
 <script>
+//? Event for addbtn to topic panels
 $(function() {
     var btnId;
     $(".addBtn").on("click", function() {
@@ -13,9 +14,19 @@ $(function() {
 
         $("#lesson-table").hide();
         $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
-    //will add a callback
+        
+        $.ajax({
+            url: "../PagesContent/LessonContent/TopicFolder/PopulateTableData.php",
+            type: "POST",
+            data: {id: btnId},
+            success: function(response){
+                $("#table-topic tbody").append(response);
+            }
+        }
+        );
     });
-    //Alert banner if error occurs
+    
+    //Event handler for the form submit -- addTopic
     $("#addTopic").on("submit", function(e) {
         $("errorBanner").hide();
         e.preventDefault(); 
@@ -72,8 +83,17 @@ $(document).ready(function() {
     var $addFileContainer = $("#addFileContainer");
     var $firstFormGroup = $($addFileContainer ).find(".form-group:first");
     $("#addMedia").click(function() { 
-        // Append the new input group to the container
-        $($addFileContainer).append($firstFormGroup.clone());
+        
+        // if formGroupCount is 5, disable the addMedia button
+        var formGroupCount = $(".col-sm-6 .row .form-group").length;
+        if(formGroupCount == 5){
+            $(this).prop('disabled', true);
+        }else{
+            // Append the new input group to the container
+            $($addFileContainer).append($firstFormGroup.clone());
+        }
+        
+
     });
 
     // Function to remove an input group when its "href" link is clicked
@@ -81,7 +101,7 @@ $(document).ready(function() {
         // Count the number of form-groups in addFileContainer
         var formGroupCount = $(".col-sm-6 .row .form-group").length;
 
-        // Check if there's only one input group
+        // Check if there's only one input group -> do not allow to remove form group
         if (formGroupCount === 1) {
             // If there's only one input group, hide or disable the cancelFile class as per your requirement
             $(this).closest('.form-group').find('.cancelFile').addClass('disable')
@@ -90,8 +110,7 @@ $(document).ready(function() {
             // If there are more than one input groups, remove the current input group
             $(this).closest('.form-group').remove();
         }
+        
     });
-
-
 });
 </script>

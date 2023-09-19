@@ -18,17 +18,24 @@ $(document).ready(function() {
 $(".viewBtn").click(function() {
     var buttonId = $(this).data("id");
     $.ajax({
-        url: "dashboard.php",
+        url: "../PagesContent/LessonContent/ActionLesson/ActionLessonView.php",
         method: "POST",
         data: {
             id: buttonId
         },
         success: function(response) {
-            window.open("LessonFile.php", "topicPopup", "width=1000,height=1000");
+
+            //open LessonView.php in a new window
+            window.open("../PagesContent/LessonContent/ViewLessonFolder/LessonView.php", "topicPopup","width=1000,height=1000");
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
         }
     });
 });
 </script>
+
 
 
 
