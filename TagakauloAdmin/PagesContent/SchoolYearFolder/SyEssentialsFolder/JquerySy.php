@@ -117,14 +117,23 @@ $(document).ready(function() {
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/RadioBtnProcess.php', // Update this with the actual PHP file's URL
                 data: { sy_id: selectedId }, // Sending the selectedId to the PHP file
                 success: function(response) {
-                    // Handle the response from the PHP file
-                    console.log(response);
-                    location.reload();
-                    // You can display or process the response as needed
-                }
+                
+                    $('successAlert').text('Successfully set the school year!');
+                    $('#successBanner').show();
+                    setTimeout(function () {
+                            $("#successBanner").fadeOut("slow");
+                            location.reload();
+                        }, 1500); // Hide the .alert element after 2 seconds
+
+                    }
             });
         } else {
-            alert('Please select a radio button.');
+            //show alert banner id = errorBanner
+            $('#errorAlert').text('Please select a school year!');
+            $('#errorBanner').show();
+            setTimeout(function () {
+                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                }, 2000); 
         }
     });
 });

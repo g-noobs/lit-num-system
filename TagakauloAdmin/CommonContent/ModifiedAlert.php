@@ -23,5 +23,5 @@
 
 <div class="alert alert-success alert-dismissible fade in" id="successBanner">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <b>Error! </b> <span id="errorAlert"></span>
+    <b>Error! </b> <span id="successAlert"></span>
 </div>
