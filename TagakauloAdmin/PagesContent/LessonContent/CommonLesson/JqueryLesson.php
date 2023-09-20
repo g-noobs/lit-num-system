@@ -17,22 +17,27 @@ $(document).ready(function() {
 <script>
 $(".viewBtn").click(function() {
     var buttonId = $(this).data("id");
-    $.ajax({
-        url: "../PagesContent/LessonContent/ActionLesson/ActionLessonView.php",
-        method: "POST",
-        data: {
-            id: buttonId
-        },
-        success: function(response) {
+    var lessonName = $(this).closest('tr').find('td:eq(2)').text();
+    var url = "../PagesContent/LessonContent/ViewLessonFolder/LessonView.php" + "?id=" + buttonId + "&name=" + lessonName;
+    window.open(url, "topicPopup","width=1000,height=1000");
+    
+    //@ $.ajax({
+    //     url: "../PagesContent/LessonContent/ActionLesson/ActionLessonView.php",
+    //     method: "POST",
+    //     data: {
+    //         id: buttonId,
+    //         name: lessonName
+    //     },
+    //     success: function(response) {
 
-            //open LessonView.php in a new window
-            window.open("../PagesContent/LessonContent/ViewLessonFolder/LessonView.php", "topicPopup","width=1000,height=1000");
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
-        }
-    });
+    //         //open LessonView.php in a new window
+    //         window.open(url, "topicPopup","width=1000,height=1000");
+    //     },
+    //     error: function(xhr, ajaxOptions, thrownError) {
+    //         alert(xhr.status);
+    //         alert(thrownError);
+    //     }
+    // });
 });
 </script>
 

@@ -6,4 +6,8 @@
     $topicDisplay = new LessonDisplayClass();
     $topicDisplay->topicTable($lessonId);
     }
+    else{
+        $response = array("error"=> "POST ERROR");
+        echo json_encode($response);
+    }
 ?>

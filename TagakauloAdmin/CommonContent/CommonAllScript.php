@@ -16,7 +16,9 @@ $(function() {
 
 });
 </script>
+
 <script>
+    // * Add Class active to a sidebar when clicked
 $(document).ready(function() {
     var currentUrl = window.location.pathname;
     var currentPage = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
