@@ -30,14 +30,14 @@ if($isValid){
           SET sy_start =?, sy_end=? WHERE sy_id = ?";
     $params = array_values($values);
     try{
-        $message = "Edited";
-        $updateSchoolYear->executePreparedStatement($query, $params, '../../../pages/schoolyr.php');
+        $message = "Success";
+        $updateSchoolYear->executePreparedStatement($query, $params, '../../../pages/schoolyr.php?msg=' . urlencode($message));
     }
     catch(mysqli_sql_exception $e){
         if ($e->getCode() == 1062) {
     
             // Duplicate entry
-            $message = $data." already exists. Please try again";  
+            $message = "Error";  
             header('Location: ../../../pages/schoolyr.php?msg='.urlencode($message));
             exit();
       

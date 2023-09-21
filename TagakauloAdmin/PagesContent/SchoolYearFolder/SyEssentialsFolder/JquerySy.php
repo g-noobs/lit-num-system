@@ -2,12 +2,29 @@
 
 
 <script>
-$(document).ready(function() {
+$(function() {
+    $('#errorBanner').hide();
     // Check for message
     var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-    if (msg) {
-        $('#errorModal').modal('show');
+    if (msg == 'Success') {
+        //show errroBanner
+        $('#successBanner').show();
+        //add  the message to ther id errorAlert
+        $('#successAlert').text(msg);
+        setTimeout(function () {
+                    $("#successBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                }, 2500);
     }
+    else if(msg == 'Error'){
+        $('#errorBanner').show();
+        //add  the message to ther id errorAlert
+        $('#errorAlert').text(msg);
+        setTimeout(function () {
+                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                }, 2500);
+    }
+    msg = "";
+
 });
 </script>
 

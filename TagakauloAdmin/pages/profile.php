@@ -70,8 +70,15 @@
         <script>
         // Check for message
         var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-        if (msg) {
-            $('#messageModal').modal('show');
+        if (msg == 'Profile updated!') {
+            $('errorAlert').hide();
+            $('#successAlert').text(msg);
+            $('#successBanner').show();
+            setTimeout(function(){
+                $('#successBanner').fadeOut();
+            }, 2500);
+
+            
         }
         </script>
         <?php include_once("../PagesContent/ProfileContent/JqueryProfile.php");?>

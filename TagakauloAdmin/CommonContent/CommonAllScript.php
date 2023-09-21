@@ -1,21 +1,3 @@
-<script>
-$(function() {
-    $('#errorBanner').hide();
-    // Check for message
-    var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-    if (msg) {
-        //show errroBanner
-        $('#errorBanner').show();
-        //add  the message to ther id errorAlert
-        $('#errorAlert').text(msg);
-        setTimeout(function () {
-                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 2500);
-    }
-    msg = "";
-
-});
-</script>
 
 <script>
     // * Add Class active to a sidebar when clicked
