@@ -23,8 +23,8 @@
         // Function to load data from the backend using AJAX
         function loadData() {
             $.ajax({
-                url: 'backend.php', // Replace with the actual backend URL
-                method: 'GET',
+                url: '../ActionLesson/ActionLessonView.php', // Replace with the actual backend URL
+                method: 'POST',
                 dataType: 'json',
                 success: function(data) {
                     // Assume the backend returns data as an array of arrays
@@ -41,8 +41,24 @@
         function loadPage(index) {
             var currentArray = arrays[currentArrayIndex];
             if (index >= 0 && index < currentArray.length) {
-                var content = '<div class="media"><img src="' + currentArray[index] + '" alt="Image"></div>';
-                $('#gallery').html(content);
+                var filePath = currentArray[index];
+                var fileExtension = filePath.split('.').pop().toLowerCase();
+                var content = '';
+
+                if (fileExtension === 'jpg' || fileExtension === 'jpeg' || fileExtension === 'png' || fileExtension === 'gif') {
+                    content = '<div class="media"><img src="' + filePath + '" alt="Image"></div>';
+                } else if (fileExtension === 'mp4' || fileExtension === 'webm' || fileExtension === 'ogg') {
+                    content = '<div class="media"><video controls><source src="' + filePath + '" type="video/' + fileExtension + '">Your browser does not support the video tag.</video></div>';
+                } else if (fileExtension === 'mp3' || fileExtension === 'wav' || fileExtension === 'ogg') {
+                    content = '<div class="media"><audio controls><source src="' + filePath + '" type="audio/' + fileExtension + '">Your browser does not support the audio tag.</audio></div>';
+                } else if (fileExtension === 'pdf') {
+                    content = '<div class="media"><iframe src="' + filePath + '" width="100%" height="500px"></iframe></div>';
+                } else {
+                    // Handle other file types or provide a default message for unknown types
+                    content = '<div class="media"><p>Unsupported file type: ' + fileExtension + '</p></div>';
+                }
+
+            $('#gallery').html(content);
             }
         }
         // Initial load
