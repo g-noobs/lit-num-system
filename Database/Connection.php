@@ -7,10 +7,10 @@ class Connection{
     public $conn;
 
     public function __construct(){
-        $this->host = "localhost:3306";  // Replace with your server name
+        $this->host = "srv1040.hstgr.io";  // Replace with your server name
         $this->username = "admin";  // Replace with your MySQL username
-        $this->password = "admin";  // Replace with your MySQL password
-        $this->database = "db_tagakaulo";  // Replace with your database name
+        $this->password = "Capstone1!";  // Replace with your MySQL password
+        $this->database = "u170333284_db_tagakaulo";  // Replace with your database name
         $this->connect();
     }
     public function connect(){
