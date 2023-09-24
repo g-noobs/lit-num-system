@@ -7,17 +7,17 @@ class Connection{
     public $conn;
 
     public function __construct(){
-        $this->host = "srv1040.hstgr.io";  // Replace with your server name
-        $this->username = "admin";  // Replace with your MySQL username
-        $this->password = "u170333284_admin";  // Replace with your MySQL password
-        $this->database = "u170333284_db_tagakaulo";  // Replace with your database name
-        $this->connect();
-
-        // $this->host = "localhost";  // Replace with your server name
-        // $this->username = "admin";  // Replace with your MySQL username
-        // $this->password = "admin";  // Replace with your MySQL password
-        // $this->database = "db_tagakaulo";  // Replace with your database name
+        // $this->host = "srv1040.hstgr.io";  // Replace with your server name
+        // $this->username = "u170333284_admin";  // Replace with your MySQL username
+        // $this->password = "Capstone1!";  // Replace with your MySQL password
+        // $this->database = "u170333284_db_tagakaulo";  // Replace with your database name
         // $this->connect();
+
+        $this->host = "localhost";  // Replace with your server name
+        $this->username = "admin";  // Replace with your MySQL username
+        $this->password = "admin";  // Replace with your MySQL password
+        $this->database = "db_tagakaulo";  // Replace with your database name
+        $this->connect();
     }
     public function connect(){
         $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database);
