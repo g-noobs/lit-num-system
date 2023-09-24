@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: pages/dashboard.php");
         exit();
     }
-    $message = 'Error'; 
+    $message = 'Unable to Validate'; 
         // Pass message as GET parameter
     header('Location: index.php?msg=' . urlencode($message));
 }
