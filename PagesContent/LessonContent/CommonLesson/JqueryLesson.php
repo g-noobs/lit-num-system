@@ -18,26 +18,9 @@ $(document).ready(function() {
 $(".viewBtn").click(function() {
     var buttonId = $(this).data("id");
     var lessonName = $(this).closest('tr').find('td:eq(2)').text();
-    var url = "../PagesContent/LessonContent/ViewLessonFolder/LessonView.php" + "?id=" + buttonId + "&name=" + lessonName;
-    window.open(url, "topicPopup","width=1000,height=1000");
-    
-    //@ $.ajax({
-    //     url: "../PagesContent/LessonContent/ActionLesson/ActionLessonView.php",
-    //     method: "POST",
-    //     data: {
-    //         id: buttonId,
-    //         name: lessonName
-    //     },
-    //     success: function(response) {
-
-    //         //open LessonView.php in a new window
-    //         window.open(url, "topicPopup","width=1000,height=1000");
-    //     },
-    //     error: function(xhr, ajaxOptions, thrownError) {
-    //         alert(xhr.status);
-    //         alert(thrownError);
-    //     }
-    // });
+    var url = "../PagesContent/LessonContent/ViewLessonFolder/LessonView.php?id=" + buttonId + "&name=" + lessonName;
+    //open lessonview.php in a new window with size
+    window.open(url, "_blank", "width=1000,height=700");
 });
 </script>
 

@@ -8,10 +8,11 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <?php include_once "../ViewLessonFolder/lessonStyle.php";?>
+    
 </head>
 
-<body class="sidebar-mini wysihtml5-supported skin-yellow-light sidebar-collapse fixed" style="height: auto; min-height: 100%;"
-    data-new-gr-c-s-check-loaded="14.1125.0" data-gr-ext-installed="">
+<body class="sidebar-mini wysihtml5-supported skin-yellow-light sidebar-collapse fixed"
+    style="height: auto; min-height: 100%;" data-new-gr-c-s-check-loaded="14.1125.0" data-gr-ext-installed="">
 
     <header class="main-header">
         <a href="#" class="logo">
@@ -50,7 +51,8 @@
     <div class="content-wrapper" style="min-height: 707px;">
         <div class="container">
             <section class="content-header">
-                <h3>Lesson: <strong id="lesson-name"></strong></h3>
+                <div id="test"></div>
+                <h3>Lesson: <strong id="lesson_name"></strong></h3>
 
             </section>
             <section class="content">
@@ -73,14 +75,16 @@
     <?php include_once "../ViewLessonFolder/lessonQuery.php"?>
     <?php include_once "../ViewLessonFolder/ModifiedViewScript.php"?>
     <script>
-    //handle the passed data from JqueryLesson.php (lesson.php)
-    $(function() {
-        var msg = <?= json_encode($_GET['name'] ?? '') ?>;
-        if (name) {
-            // place the data to #lesson-name
-            $("#lesson-name").text(name);
-        }
-    });
+        $(function(){
+            //get the lesson name from the url
+            var lessonid = window.location.href.split("=")[1].split("&")[0];
+            var lessonName = window.location.href.split("=")[2];
+            //replace the %20 with one space
+            var lessonName = lessonName.replace(/%20/g, " ");
+
+            $("#test").text(lessonid);
+            $("#lesson_name").text(lessonName);
+        });
     </script>
 </body>
 
