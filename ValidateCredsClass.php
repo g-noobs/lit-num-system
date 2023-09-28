@@ -16,12 +16,10 @@ class ValidateCredsClass extends Connection{
                 $_SESSION['id'] = $row['user_info_id'];
                 
             }
+            return true;
         }
         else{
-            $message = 'Username or Password Error'; 
-             // Pass message as GET parameter
-            header('Location: index.php?msg=' . urlencode($message));
-            exit();
+            return false;
         }
     }
 }

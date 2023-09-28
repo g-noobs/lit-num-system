@@ -38,13 +38,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include_once("ValidateCredsClass.php");
         $_SESSION['loggedin'] = true;
         $validate = new ValidateCredsClass();
-        $validate ->checkCreds($username, $password);
-        header("Location: pages/dashboard.php");
-        exit();
+        $isCorrect = $validate ->checkCreds($username, $password);
+        
+        if($isCorrect){
+            header("Location: pages/dashboard.php");
+            exit();
+        }
+        else{
+            $message = 'Invalid Credentials'; 
+            // Pass message as GET parameter
+            header('Location: index.php?msg=' . urlencode($message));
+        }
     }
-    $message = 'Unable to Validate'; 
-        // Pass message as GET parameter
-    header('Location: index.php?msg=' . urlencode($message));
+    
 }
 else{
     $message = 'POST ISSUE'; 
