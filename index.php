@@ -120,7 +120,7 @@
 <body>
     <?php include_once "CommonContent/ErrorModal.php"?>
     <div class="login-form">
-        <form action="ActionValidateUser.php" method="post">
+        <form id="validate-user" method="post">
             <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
             <h4 class="modal-title">Login to Your Account</h4>
             <div class="form-group">
@@ -148,39 +148,42 @@
     <!-- iCheck -->
     <script src="design/plugins/iCheck/icheck.min.js"></script>
 
-    <!-- handle Error modal Script -->
+    <!-- Handles the Form -->
     <script>
-    $(function() {
-        // Check for message
-        // Check for message
-        var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-        if (msg) {
-            $('#errorModal').modal('show');
-            $('#errorMessage').text(msg);
-        }
-        msg = "";
+        $(function(){
+            //Submit Form
+            $('#validate-user').submit(function(e){
+                //Create a FormData object to send the data 
+                var formData = new FormData(this);
 
+                $.ajax({
+                    url: 'ActionValidateUser.php',
+                    type: 'POST',
+                    data: formData,
+                    processData: false, //Don't process the data (required for FormData)
+                    contenType: false,  // Don't set content type (required for FormData)
+                    success: function(response){
+                        //Prase the JSON response
+                        var responseData = JSON.parse(response);
 
-    });
-    </script>
-    <script>
-    $(function() {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-yellow',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '25%' /* optional */
+                        // Check if the from submission was successfull
+                        if(responseData.hasOwnProperty('message')){
+                            //redirect to dahsboard
+                            window.location.href = "pages/dashboard.php";
+                        }
+                        else if(responseData.hasOwnProperty('error')){
+                            var msg = responseData.error;
+                            $('#errorMessage').text(msg);
+                            $('#errorModal').modal('show');
+                            setTimeout(function () {
+                                $("#errorModal").fadeOut("slow"); // Hide the .alert element after 3.5 seconds
+                            }, 3500);
+                        }
+                    }
+                });
+            });
         });
-    });
-    
-    // This will control the reload
-    // Add an event listener to the beforeunload event
-    $(window).on('beforeunload', function() {
-        // Modify the URL to only include 'index.php'
-        history.replaceState(null, null, 'index.php');
-    });
     </script>
-
-    
 
 </body>
 

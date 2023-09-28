@@ -5,32 +5,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    // Perform your validation logic here
-    $errors = array();
-
-    // Validate username
+    // Make sure username is not empty
     if (empty($username)) {
-        $errors[] = "Username is required";
-        header("Location: index.php");
-        exit();
+        $response = array("error" => "Username is required!");
+        echo json_encode($response);
     }
-    else{
-        $message = 'Empy Username'; 
-        // Pass message as GET parameter
-        header('Location: index.php?msg=' . urlencode($message));
-    }
-
-    // Validate password
+    // Make sure that password is not empty
     if (empty($password)) {
-        $errors[] = "Password is required";
-        header("Location: index.php");
-        exit();
-
-    }
-    else{
-        $message = 'Empy Password'; 
-        // Pass message as GET parameter
-        header('Location: index.php?msg=' . urlencode($message));
+        $response = array("error" => "Password is required!");
+        echo json_encode($response);
     }
     
     // If there are no errors, compare the username and password with the database
@@ -38,18 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include_once("ValidateCredsClass.php");
         $_SESSION['loggedin'] = true;
         $validate = new ValidateCredsClass();
-        $validate ->checkCreds($username, $password);
-        header("Location: pages/dashboard.php");
-        exit();
+        
+        try{
+            $validate ->checkCreds($username, $password);
+            $response = array("message" => "Auth Success");
+            echo json_encode($response);
+        }
+        catch(Exception $e){
+            $response = array("error" => "Exception Error: ".$e);
+            echo json_encode($response);
+        }
     }
-    $message = 'Unable to Validate'; 
-        // Pass message as GET parameter
-    header('Location: index.php?msg=' . urlencode($message));
-}
-else{
-    $message = 'POST ISSUE'; 
-        // Pass message as GET parameter
-    header('Location: index.php?msg=' . urlencode($message));
 }
 
+else{
+    $response = array("error" => "Invalid request Method");
+    echo json_encode($response);
+}
 ?>
