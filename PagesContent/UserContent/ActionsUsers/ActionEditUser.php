@@ -19,8 +19,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $values['user_level_id'] = '2';
     }
 
+    //validate data
     $table = "tbl_user_info";
+    include_once "../../../Database/CommonValidationClass.php";
+    $isValid = new CommonValidationClass();
+    $data = array($values['first_name'],$values['last_name']);
+    $column = array('first_name','last_name');
+    $isDuplicate = $isValid -> validateColumns($table, $column, $data);
+    
+    if($isDuplicate){
 
+    }
     $columns = implode(", ", array_keys($values));
     $placeholders = "'" . implode("', '", array_values($values)) . "'";
 

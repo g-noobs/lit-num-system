@@ -29,7 +29,6 @@ $column = 'sy_start';
 $isValid -> validateColumns($table, $column, $data);
 
 
-
 if($isValid) {
     $columns = implode(', ', array_keys($values));
 
