@@ -28,7 +28,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <!-- use absoulte directory DIR using path: C:\Users\admin\OneDrive\Documents\GitHub\lit-num-system\TagakauloAdmin\Media\Image\UserAvatar\temp_profpic.png-->
                     <img src="../Media/Images/UserAvatar/temp_profpic.png" class="user-image" alt="User Image">
-
+            
+             
+                   
+                    
                     <span class="hidden-s"> 
                         <?php
                             include_once("../Database/DisplayInfoClass.php");

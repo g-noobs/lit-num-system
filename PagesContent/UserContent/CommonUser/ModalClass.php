@@ -11,7 +11,7 @@ class ModalClass{
                     </button>
                     <h4 class="modal-title">Enter Learners Information</h4>
                 </div>
-                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php"
+                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
                     method="post">
                     <div class="modal-body">
                         <div class="box-body">
@@ -84,7 +84,7 @@ class ModalClass{
                         </div>
                     </form>
                 </div>
-                <form role="form" id="edit_user">
+                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionEditUser.php" onsubmit="return validateForm()" method="post">
                     <div class="modal-body">
                         <div class="box-body">
                             <div class="form-group">
