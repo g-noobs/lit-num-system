@@ -77,6 +77,53 @@ $(document).ready(function() {
 
         // Show the modal
         $('#edit-user').modal('show');
+        
+        //Edit Form within the modal
+        $('#edit_user').on('submit', function(e){
+            e.preventDefault();
+
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '../PagesContent/UserContent/ActionUsers/ActionEditUser.php',
+                type: 'POST',
+                data: formData,
+                processData: false, // Don't process the data (required for FormData)
+                contentType: false, // Don't set content type (required for FormData)
+                success: function(response){
+                    //Parse the JSON response
+                    var reponseData = JSON.parse(response);
+
+                    // Check if the form submission was successful
+                    if (responseData.hasOwnProperty('message')) {
+                        var msg = responseData.message;
+                        //reload page
+                        window.location.reload();
+                        //show and assign message to the banner
+                        $('#successAlert').text(msg);
+                        $('#successBanner').show();
+                        setTimeout(function () {
+                            $("#successBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                        }, 2500);
+
+                        // You can redirect to a different page or perform other actions here
+                    } else if (responseData.hasOwnProperty('error')) {
+                        var msg = responseData.error;
+                        // hide modal
+                        $('#edit-user').modal('hide');
+
+                        //assign text to banner and show
+                        $('#errorAlert').text(msg);
+                        $('#errorBanner').show();
+                        setTimeout(function () {
+                            $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                        }, 2500);
+                        
+                    }
+                }
+            });
+        });
+        
     });
 });
 </script>
@@ -106,6 +153,7 @@ $(document).ready(function() {
 </script>
 
 <script>
+    // Teacher count script that will redirect to user page teacher
 $('#teacher-count').click(function(e) {
 
     e.preventDefault();
@@ -115,41 +163,8 @@ $('#teacher-count').click(function(e) {
     $('.custom-dropdown button').text('Teacher');
 
     $('.custom-dropdown li a[data-user-type="teacher"]').trigger('click');
-
 });
 </script>
 
 
-<!-- Hiding password -->
 
-
-
-
-<!--Hide the option to Enter Personal ID if Admin is selected from the option
-<script>
-$(document).ready(function() {
-    $('#personal-id').show();
-    // Function to toggle visibility of the "personal-id" form-group
-    function togglePersonalIdForm() {
-        var selectedOption = $('#user').val();
-        if (selectedOption === 'Admin') {
-            $('#personal-id').hide();
-            $('#email').show();
-        } else {
-            $('#personal-id').show();
-        }
-    }
-
-    // Call the togglePersonalIdForm function initially to set the visibility based on the initial value
-    togglePersonalIdForm();
-
-    // Bind the togglePersonalIdForm function to the "change" event of the "user" dropdown field
-    $('#user').change(function() {
-        togglePersonalIdForm();
-    });
-
-    // Trigger the "change" event on the "user" dropdown when the page loads or the form is reset
-    $('#user').trigger('change');
-});
-</script>
--->
