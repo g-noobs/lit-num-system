@@ -6,8 +6,7 @@
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">School Year</h4>
             </div>
-            <form role="form" action="../PagesContent/SchoolYearFolder/ActionFolder/RegisterSy.php"
-                onsubmit="return validateForm()" method="post">
+            <form role="form" id="form_addsy">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">

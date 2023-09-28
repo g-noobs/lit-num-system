@@ -40,20 +40,22 @@ if($isValid) {
     $newSchoolYear = new SanitizeCrudClass();
     
     try{
-        $newSchoolYear->executePreparedStatement($query, $params, "../../../pages/schoolyr.php");
+        $newSchoolYear->executePreState($query, $params);
+        $response = array("success" => "Successfully added new school year!");
+        echo json_encode($response);
     } catch (mysqli_sql_exception $e) {
 
         if ($e->getCode() == 1062) {
-    
           // Duplicate entry
-          $message = $data." already exists. Please try again";  
-          header('Location: ../../../pages/schoolyr.php?msg='.urlencode($message));
-          exit();
+          $response = array("error" => $data." already exists. Please try again");
+          echo json_encode($response);
     
         } else {
     
           // Some other error
           throw $e;
+          $response = array("error" => $e);
+          echo json_encode($response);
         }
     }
 }
