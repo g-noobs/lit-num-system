@@ -171,7 +171,16 @@
             increaseArea: '25%' /* optional */
         });
     });
+    
+    // This will control the reload
+    // Add an event listener to the beforeunload event
+    $(window).on('beforeunload', function() {
+        // Modify the URL to only include 'index.php'
+        history.replaceState(null, null, 'index.php');
+    });
     </script>
+
+    
 
 </body>
 
