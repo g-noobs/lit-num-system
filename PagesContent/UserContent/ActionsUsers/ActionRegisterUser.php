@@ -49,8 +49,10 @@ $data = array($values['first_name'], $values['last_name']);
 $column = array('first_name', 'last_name');
 $isValid = $validate -> validateColumns($table, $column, $data);
 
+$isIdvalid = $validate -> validateOneColumn($table, 'personal_id', $values['personal_id']);
 
-if($isValid) {
+
+if($isValid AND $isIdvalid) {
     $columns = implode(', ', array_keys($values));
     $sql = "INSERT INTO $table ($columns)
             VALUES(?,?,?,?,?,?,?,?,?,?);";
@@ -63,31 +65,32 @@ if($isValid) {
         $addNewUser->executePreState($sql, $params);
         if($addNewUser->getLastError() === null){
             $table = "tbl_credentials";
-            $credsColumns = 
             $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) 
-            VALUES(?,?,?,?)";
+            VALUES(?,?,?,?);";
             $params = array($credentials_id, $username, $password, $user_info_id);
             include_once "../../../Database/SanitizeCrudClass.php";
             $addNewCreds = new SanitizeCrudClass();
-            $addNewCreds->executePreparedStatement($query, $params, "../../../pages/user.php");
+            $addNewCreds->executePreState($query, $params);
+
+            $response = array('success' => 'Successfully added new user!');
+            echo json_encode($response);
         }
     }
     catch(mysqli_sql_exception $e){
         if ($e->getCode() == 1062){
-          //show both data content without using loop
-          $message = $data." Already exists. Please try again";  
-          header('Location: ../../../pages/user.php?msg='.urlencode($message));
-          exit();
+          //Duplicate entry
+          $response = array('error' => $data." already exists. Please try again");
+          echo json_encode($response);
         }
         else{
             throw $e;
+            $response = array('error' => $e);
         }
     }
 }
 else{
-    $message = $data." Already exists. Please try again";  
-    header('Location: ../../../pages/user.php?msg='.urlencode($message));
-    exit();
+    $response = array('error' => 'User already exists.');
+    echo json_encode($response);  
 }
 ?>
 

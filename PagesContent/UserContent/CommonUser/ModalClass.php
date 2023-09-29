@@ -11,8 +11,7 @@ class ModalClass{
                     </button>
                     <h4 class="modal-title">Enter Learners Information</h4>
                 </div>
-                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php"
-                    method="post">
+                <form id="addUserForm">
                     <div class="modal-body">
                         <div class="box-body">
                             <div class="form-group" id="personal-id">
@@ -53,7 +52,7 @@ class ModalClass{
                     </div>
                     <!-- /.box-body -->
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary pull-left">'.$btnName.'</button>
+                        <button id="addUsrBtn" class="btn btn-primary pull-left">'.$btnName.'</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
                 </form>
@@ -75,7 +74,7 @@ class ModalClass{
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">Enter the Preferred Information</h4>
-                    <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
+                    <form id="editUserForm">
                         <div class="form-group">
                             <input type="text" name="userId" class="form-control" style="display: none;">
                             <button type="submit" class="btn btn-danger pull-left btn-sm">
@@ -126,7 +125,7 @@ class ModalClass{
                     </div>
                     <!-- /.box-body -->
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary pull-left">'.$btnName.'</button>
+                        <button id="editUserBtn" class="btn btn-primary pull-left">'.$btnName.'</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
                 </form>
@@ -148,7 +147,7 @@ class ModalClass{
                                 <span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">User Information</h4>
                         </div>
-                        <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php" onsubmit="return validateForm()"
+                        <form id="addAnyUserForm">
                             method="post">
                             <div class="modal-body">
                                 <div class="form-group" id="personal-id">
@@ -195,7 +194,7 @@ class ModalClass{
                                 <!-- /.box-body -->
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary pull-left">Add User</button>
+                                <button id="addAnyUserBtn" class="btn btn-primary pull-left">Add User</button>
                                 <button type="reset" class="btn btn-default pull-left"
                                     data-dismiss="modal">Cancel</button>
                             </div>
@@ -214,10 +213,10 @@ class ModalClass{
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title">Are you sure you wanted to activate this user?</h4>
-                                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionActivateUser.php" method="post">
+                                <form id="activateUser">
                                     <div class="form-group">
                                         <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
-                                        <button type="submit" class="btn btn-success pull-left">Activate</button>
+                                        <button id="activateUserBtn" class="btn btn-success pull-left">Activate</button>
                                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </form>
@@ -237,10 +236,10 @@ class ModalClass{
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                                <form role="form" action="../PagesContent/UserContent/ActionsUsers/ActionArchiveUser.php" method="post">
+                                <form id="archUserForm">
                                     <div class="form-group">
                                         <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
-                                        <button type="submit" class="btn btn-danger pull-left">Archive</button>
+                                        <button id="archUserBtn" class="btn btn-danger pull-left">Archive</button>
                                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </form>
