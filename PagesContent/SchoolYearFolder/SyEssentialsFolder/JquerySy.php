@@ -46,7 +46,7 @@ $(document).ready(function() {
 
         if (regex.test(syDate)) {
             $.ajax({
-                url: '../PagesContent/SchoolYearFolder/ActionFolder/RegisterSy.php',
+                url: '../PagesContent/SchoolYearFolder/ActionFolder/'+'RegisterSy.php',
                 type: 'POST',
                 data: formData,
                 processData: false, // Don't process the data (required for FormData)
