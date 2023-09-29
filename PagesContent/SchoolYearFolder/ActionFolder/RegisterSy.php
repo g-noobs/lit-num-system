@@ -59,6 +59,10 @@ if($isValid) {
         }
     }
 }
+else{
+  $response = array("error" => $data." already exists. Please try again");
+  echo json_encode($response);
+}
 
 
 unset($_POST['sy_name']);
