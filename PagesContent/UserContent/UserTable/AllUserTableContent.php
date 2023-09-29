@@ -22,15 +22,6 @@
 
 
             <br>
-            <?php include_once "../PagesContent/UserContent/CommonUser/ModalClass.php";
-                $btnName = "Update";
-                $editActive = new ModalClass();
-                $editActive->editModal($btnName,'');
-
-                $addNewUser = new ModalClass();
-                $addNewUser->addAnyModal();
-
-            ?>
 
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">

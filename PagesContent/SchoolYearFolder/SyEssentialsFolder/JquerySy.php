@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
     // End of edit modal
 
-    
+
 
     // Regex plus Ajax function --> This will check the format that will make sure that the input is YYYY-YYYY
     // Ajax will manage php action and alert banner
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
         $('#ArchBtnSubmit').click(function(e) {
             e.preventDefault();
-            console.log("Archive button clicked"); 
+            console.log("Archive button clicked");
             $.ajax({
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
                 type: 'POST',
@@ -134,17 +134,18 @@ $(document).ready(function() {
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
-                            location.reload(); // Hide the .alert element after 3 seconds
+                            location
+                        .reload(); // Hide the .alert element after 3 seconds
                         }, 1500);
-                    }
-                    else{
+                    } else {
                         $('#archiveModal').modal('hide');
                         //show alert banner id = errorBanner
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
-                            location.reload(); // Hide the .alert element after 3 seconds
+                            location
+                        .reload(); // Hide the .alert element after 3 seconds
                         }, 1500);
                     }
                 },
@@ -152,13 +153,15 @@ $(document).ready(function() {
                     console.log("Error occurred during AJAX request.");
                     $('#archiveModal').modal('hide');
                     //show alert banner id = errorBanner
-                    $('#errorAlert').text('An error occurred during the AJAX request.');
+                    $('#errorAlert').text(
+                        'An error occurred during the AJAX request.');
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        location.reload(); // Hide the .alert element after 3 seconds
+                        location
+                    .reload(); // Hide the .alert element after 3 seconds
                     }, 1500);
-                }    
+                }
             });
         });
     });

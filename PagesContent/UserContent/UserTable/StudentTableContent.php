@@ -20,18 +20,6 @@
             </div>
             <!-- /.box-header -->
 
-
-            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Update";
-                $editActive = new ModalClass();
-                $editActive->editModal($btnName);
-
-                $addAdmin= new ModalClass();
-                $addAdmin->addUserModal("Add Learner", "Learner");
-
-            ?>
-
-
             <div class="box-body">
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>

@@ -17,11 +17,6 @@
             </div>
             <!-- /.box-header -->
 
-            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Activate Student";
-                $editActive = new ModalClass();
-                $editActive->editModal($btnName);
-            ?>
 
 
 

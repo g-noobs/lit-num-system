@@ -17,14 +17,6 @@
             </div>
             <!-- /.box-header -->
 
-            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Activate Teacher";
-                $editActive = new ModalClass();
-                $editActive->editModal($btnName);
-            ?>
-            <!-- /.modal edit User-->
-
-
             <div class="box-body">
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>

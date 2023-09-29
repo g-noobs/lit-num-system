@@ -15,9 +15,6 @@
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 
 
-
-
-
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: auto; min-height: 100%;">
 
@@ -103,12 +100,6 @@
                 </div>
             </div> 
             -->
-            <?php include_once("../PagesContent/UserContent/CommonUser/ModalClass.php");
-                $userActivate = new ModalClass();
-                $userActivate->activateUserModal();
-                $userArchive = new ModalClass();
-                $userArchive->archiveUserModal();
-            ?>
             <!-- Main content -->;
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
@@ -117,9 +108,9 @@
         </div>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
-        <?php include_once("../PagesContent/UserContent/CommonUser/ErrorModal.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
-        <?php include_once("../PagesContent/UserContent/CommonUser/ErrrorJquery.php");?>
+        <?php include_once("../PagesContent/UserContent/CommonUser/ManageUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
 
         <?php include_once "../CommonContent/CommonAllScript.php"?>
         <script>

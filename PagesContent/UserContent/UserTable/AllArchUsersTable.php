@@ -75,14 +75,6 @@
             </div>
             <!-- /.modal ADD User-->
 
-            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php";
-                $btnName = "Activate User";
-                $editActive = new ModalClass();
-                $editActive->editModal($btnName);
-
-            ?>
-
-
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>

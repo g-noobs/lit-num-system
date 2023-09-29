@@ -19,17 +19,6 @@
             </div>
             <!-- /.box-header -->
 
-
-            <!-- /.modal ADD User-->
-            <?php include_once "../../../PagesContent/UserContent/CommonUser/ModalClass.php"; 
-                $btnName = "Update";
-                $editActive = new ModalClass();
-                $editActive->editModal($btnName);
-
-                $addAdmin= new ModalClass();
-                $addAdmin->addUserModal("Add User", "Admin");
-
-            ?>
             <!-- /.modal for Edit User-->
 
             <div class="box-body">
