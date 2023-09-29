@@ -38,11 +38,11 @@ $(document).ready(function() {
         let id = this.id.split("-")[1];
         let name = $(this).closest('tr').find('td:eq(1)').text();
         // Populate the modal fields with the data
-        $('#archiveModal').find('[name="sy_id"]').val(id);
         $('#school_year').text(name);
 
         $('#ArchBtnSubmit').click(function(e) {
             e.preventDefault();
+            console.log("Archive button clicked"); 
             $.ajax({
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
                 type: 'POST',
@@ -50,6 +50,7 @@ $(document).ready(function() {
                     sy_id: id
                 },
                 success: function(response) {
+                    console.log("Success response:", response);
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
@@ -63,6 +64,7 @@ $(document).ready(function() {
                     }
                 },
                 error: function() {
+                    console.log("Error occurred during AJAX request.");
                     $('#archiveModal').modal('hide');
                     //show alert banner id = errorBanner
                     $('#errorAlert').text('An error occurred during the AJAX request.');
