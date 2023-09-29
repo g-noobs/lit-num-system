@@ -9,7 +9,6 @@ $(document).ready(function() {
 
         // Create a FormData object to send the form data including files
         var formData = new FormData(this);
-
         var format = $('input[name="sy_name"]').val();
         // Update regex to match example
         var regex = /^\d{4}-\d{4}$/;
@@ -27,6 +26,7 @@ $(document).ready(function() {
         var regex = /^\d{4}-\d{4}$/;
         var actionPage = 'UpdateSy.php';
         var modalId = '#editModal';
+        var formData = new FormData(this);
 
         regexAjax(actionPage, modalId, format,regex);
     });
@@ -35,7 +35,7 @@ $(document).ready(function() {
     // Regex plus Ajax function --> This will check the format that will make sure that the input is YYYY-YYYY
     // Ajax will manage php action and alert banner
     function regexAjax(actionPage, modalId, format,regex){
-        var formData = new FormData(this);
+        
         if (regex.test(format)) {
             $.ajax({
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/'+ actionPage,
