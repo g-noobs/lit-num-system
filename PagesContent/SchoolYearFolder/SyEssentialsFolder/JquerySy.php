@@ -8,14 +8,15 @@ $(document).ready(function() {
         e.preventDefault();
 
         // Create a FormData object to send the form data including files
-        var formData = new FormData(this);
+        
         var format = $('input[name="sy_name"]').val();
         // Update regex to match example
         var regex = /^\d{4}-\d{4}$/;
         var actionPage = 'RegisterSy.php';
         var modalId = '#addModal';
-
-        regexAjax(actionPage, modalId, format,regex);
+        var formData = new FormData(this);
+        
+        regexAjax(actionPage, modalId, format,regex,formData);
     });
     // End of add modal
 
@@ -28,13 +29,13 @@ $(document).ready(function() {
         var modalId = '#editModal';
         var formData = new FormData(this);
 
-        regexAjax(actionPage, modalId, format,regex);
+        regexAjax(actionPage, modalId, format,regex,formData);
     });
     // End of edit modal
 
     // Regex plus Ajax function --> This will check the format that will make sure that the input is YYYY-YYYY
     // Ajax will manage php action and alert banner
-    function regexAjax(actionPage, modalId, format,regex){
+    function regexAjax(actionPage, modalId, format,regex, formData){
         
         if (regex.test(format)) {
             $.ajax({
