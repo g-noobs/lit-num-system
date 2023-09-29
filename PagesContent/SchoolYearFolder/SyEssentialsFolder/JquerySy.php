@@ -32,50 +32,7 @@ $(document).ready(function() {
     });
     // End of edit modal
 
-    //Archive individually school year item
-    $('[id^="archiveBtn-"]').click(function() {
-        // Get the id from data attribute
-        let id = this.id.split("-")[1];
-        let name = $(this).closest('tr').find('td:eq(1)').text();
-        // Populate the modal fields with the data
-        $('#school_year').text(name);
-
-        $('#ArchBtnSubmit').click(function(e) {
-            e.preventDefault();
-            console.log("Archive button clicked"); 
-            $.ajax({
-                url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
-                type: 'POST',
-                data: {
-                    sy_id: id
-                },
-                success: function(response) {
-                    console.log("Success response:", response);
-                    var responseData = JSON.parse(response);
-                    // Check if the form submission was successful
-                    if (responseData.hasOwnProperty('success')) {
-                        $('#archiveModal').modal('hide');
-                        $('#successAlert').text(responseData.success);
-                        $('#successBanner').show();
-                        setTimeout(function() {
-                            $("#successBanner").fadeOut("slow");
-                            location.reload(); // Hide the .alert element after 3 seconds
-                        }, 1500);
-                    }
-                },
-                error: function() {
-                    console.log("Error occurred during AJAX request.");
-                    $('#archiveModal').modal('hide');
-                    //show alert banner id = errorBanner
-                    $('#errorAlert').text('An error occurred during the AJAX request.');
-                    $('#errorBanner').show();
-                    setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
-                        location.reload(); // Hide the .alert element after 3 seconds
-                    }, 1500);
-                }    
-        });
-    });
+    
 
     // Regex plus Ajax function --> This will check the format that will make sure that the input is YYYY-YYYY
     // Ajax will manage php action and alert banner
@@ -149,9 +106,62 @@ $(document).ready(function() {
         // Populate the modal fields with the data
         $('#editModal').find('[name="sy_id"]').val(id);
         $('#editModal').find('[name="sy_name_edit"]').val(name);
-
     });
-    
+    //Archive individually school year item
+    $('[id^="archiveBtn-"]').click(function() {
+        // Get the id from data attribute
+        let id = this.id.split("-")[1];
+        let name = $(this).closest('tr').find('td:eq(1)').text();
+        // Populate the modal fields with the data
+        $('#school_year').text(name);
+
+        $('#ArchBtnSubmit').click(function(e) {
+            e.preventDefault();
+            console.log("Archive button clicked"); 
+            $.ajax({
+                url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
+                type: 'POST',
+                data: {
+                    sy_id: id
+                },
+                success: function(response) {
+                    console.log("Success response:", response);
+                    var responseData = JSON.parse(response);
+                    // Check if the form submission was successful
+                    if (responseData.hasOwnProperty('success')) {
+                        $('#archiveModal').modal('hide');
+                        $('#successAlert').text(responseData.success);
+                        $('#successBanner').show();
+                        setTimeout(function() {
+                            $("#successBanner").fadeOut("slow");
+                            location.reload(); // Hide the .alert element after 3 seconds
+                        }, 1500);
+                    }
+                    else{
+                        $('#archiveModal').modal('hide');
+                        //show alert banner id = errorBanner
+                        $('#errorAlert').text(responseData.error);
+                        $('#errorBanner').show();
+                        setTimeout(function() {
+                            $("#errorBanner").fadeOut("slow");
+                            location.reload(); // Hide the .alert element after 3 seconds
+                        }, 1500);
+                    }
+                },
+                error: function() {
+                    console.log("Error occurred during AJAX request.");
+                    $('#archiveModal').modal('hide');
+                    //show alert banner id = errorBanner
+                    $('#errorAlert').text('An error occurred during the AJAX request.');
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+                        location.reload(); // Hide the .alert element after 3 seconds
+                    }, 1500);
+                }    
+            });
+        });
+    });
 });
 </script>
 
