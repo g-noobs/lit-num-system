@@ -14,6 +14,14 @@ $params = array_values($values);
 include_once("../../../Database/SanitizeCrudClass.php");
 
 $update=new SanitizeCrudClass();
-$update->executePreparedStatement($query, $params, "../../../pages/schoolyr.php");
 
+try{
+    $update->executePreState($query, $params);
+    $response = array("success" => "Successfully archived school year!");
+    echo json_encode($response);
+}
+catch(Exception $e){
+    $response = array("error" => $e);
+    echo json_encode($response);
+}
 ?>

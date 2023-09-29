@@ -69,8 +69,7 @@
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title text-danger"><b>Do you wish to continue on Archiving this data?</b></h4>
             </div>
-            <form role="form" action="../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php"
-                onsubmit="return validateForm()" method="post">
+            <form id="archiveForm">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">

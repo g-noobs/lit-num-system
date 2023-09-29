@@ -22,6 +22,4 @@ if(isset($_POST['sy_id'])) {
         $updateCurrentSy->executePreState($query,$params);
     }
 }
-
-
 ?>

@@ -1,14 +1,12 @@
-
 <!-- Jquery for Add and editing school year-->
 <script>
 $(document).ready(function() {
     $('#errorBanner').hide();
-    
+
     $('#form_addsy').submit(function(e) {
         e.preventDefault();
 
         // Create a FormData object to send the form data including files
-        
         var format = $('input[name="sy_name"]').val();
         // Update regex to match example
         var regex = /^\d{4}-\d{4}$/;
@@ -16,7 +14,7 @@ $(document).ready(function() {
         var modalId = '#addModal';
         var formData = new FormData(this);
 
-        regexAjax(actionPage, modalId, format,regex,formData);
+        regexAjax(actionPage, modalId, format, regex, formData);
     });
     // End of add modal
 
@@ -30,64 +28,111 @@ $(document).ready(function() {
         var modalId = '#editModal';
         var formData = new FormData(this);
 
-       regexAjax(actionPage, modalId, format, regex, formData);
+        regexAjax(actionPage, modalId, format, regex, formData);
     });
     // End of edit modal
 
+    //Archive individually school year item
+    $('[id^="archiveBtn-"]').click(function() {
+        // Get the id from data attribute
+        let id = this.id.split("-")[1];
+        let name = $(this).closest('tr').find('td:eq(1)').text();
+        // Populate the modal fields with the data
+        $('#archiveModal').find('[name="sy_id"]').val(id);
+        $('#archiveModal').find('[name="sy_name"]').val(name);
+
+        $('#archiveForm').submit(function(e) {
+            $.ajax({
+                url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
+                type: 'POST',
+                data: {
+                    sy_id: id
+                },
+                success: function(response) {
+                    var responseData = JSON.parse(response);
+                    // Check if the form submission was successful
+                    if (responseData.hasOwnProperty('success')) {
+                        $('#successAlert').text(responseData.success);
+                        $('#successBanner').show();
+                        setTimeout(function() {
+                            $("#successBanner").fadeOut("slow");
+                            location.reload(); // Hide the .alert element after 3 seconds
+                        }, 1500);
+                    } else if (responseData.hasOwnProperty('error')) {
+                        //show alert banner id = errorBanner
+                        $('#errorAlert').text(responseData.error);
+                        $('#errorBanner').show();
+                        setTimeout(function() {
+                            $("#errorBanner").fadeOut("slow");
+                            location.reload(); // Hide the .alert element after 3 seconds
+                        }, 1500);
+                    }
+                },error: function() {
+                    //show alert banner id = errorBanner
+                    $('#errorAlert').text('An error occurred during the AJAX request.');
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+                        location.reload(); // Hide the .alert element after 3 seconds
+                    }, 1500);
+                }
+            });
+        });
+    });
+
     // Regex plus Ajax function --> This will check the format that will make sure that the input is YYYY-YYYY
     // Ajax will manage php action and alert banner
-    function regexAjax(actionPage, modalId, format,regex, formData){
-        
+    function regexAjax(actionPage, modalId, format, regex, formData) {
+
         if (regex.test(format)) {
             $.ajax({
-                url: '../PagesContent/SchoolYearFolder/ActionFolder/'+ actionPage,
+                url: '../PagesContent/SchoolYearFolder/ActionFolder/' + actionPage,
                 type: 'POST',
                 data: formData,
                 processData: false, // Don't process the data (required for FormData)
-                contentType: false, 
-                success:function(response){
+                contentType: false,
+                success: function(response) {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
                         $(modalId).modal('hide');
                         $('#successAlert').text(responseData.success);
                         $('#successBanner').show();
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
                             location.reload(); // Hide the .alert element after 3 seconds
-                        }, 1500); 
-                        
-                        
+                        }, 1500);
+
+
                         // You can redirect to a different page or perform other actions here
                     } else if (responseData.hasOwnProperty('error')) {
                         $(modalId).modal('hide');
                         //show alert banner id = errorBanner
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
                             location.reload(); // Hide the .alert element after 3 seconds
-                        }, 1500); 
+                        }, 1500);
                     }
                 },
-                error: function () {
+                error: function() {
                     $(modalId).modal('hide');
                     //show alert banner id = errorBanner
                     $('#errorAlert').text('An error occurred during the AJAX request.');
                     $('#errorBanner').show();
-                    setTimeout(function () {
+                    setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
                         location.reload(); // Hide the .alert element after 3 seconds
-                    }, 1500); 
+                    }, 1500);
                 }
             });
-        } 
-        else {
+        } else {
             $(modalId).modal('hide');
             $("#errorBanner").show(); // Show the .alert element
-            setTimeout(function () {
-            $('#errorAlert').text('Incorrect input format!');
-            $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+            setTimeout(function() {
+                $('#errorAlert').text('Incorrect input format!');
+                $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
             }, 2500); // 3000 milliseconds (3 seconds
         }
     }
@@ -109,15 +154,7 @@ $(document).ready(function() {
         $('#editModal').find('[name="sy_name_edit"]').val(name);
 
     });
-    $('[id^="archiveBtn-"]').click(function() {
-        // Get the id from data attribute
-        let id = this.id.split("-")[1];
-        let name = $(this).closest('tr').find('td:eq(1)').text();
-        // Populate the modal fields with the data
-        $('#archiveModal').find('[name="sy_id"]').val(id);
-        $('#archiveModal').find('[name="sy_name"]').val(name);
-
-    });
+    
 });
 </script>
 
@@ -126,7 +163,7 @@ $(document).ready(function() {
     // show and hide update button for sy status
     $('#update-sy').hide();
     $('input[name="radioGroup"]').hide();
-    $("#set-sy").click(function(){
+    $("#set-sy").click(function() {
         $("#update-sy").fadeToggle("slow");
         $('input[name="radioGroup"]').fadeToggle("slow");
     });
@@ -147,25 +184,27 @@ $(document).ready(function() {
             $.ajax({
                 type: 'POST',
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/RadioBtnProcess.php', // Update this with the actual PHP file's URL
-                data: { sy_id: selectedId }, // Sending the selectedId to the PHP file
+                data: {
+                    sy_id: selectedId
+                }, // Sending the selectedId to the PHP file
                 success: function(response) {
-                
+
                     $('successAlert').text('Successfully set the school year!');
                     $('#successBanner').show();
-                    setTimeout(function () {
-                            $("#successBanner").fadeOut("slow");
-                            location.reload();
-                        }, 1500); // Hide the .alert element after 2 seconds
+                    setTimeout(function() {
+                        $("#successBanner").fadeOut("slow");
+                        location.reload();
+                    }, 1500); // Hide the .alert element after 2 seconds
 
-                    }
+                }
             });
         } else {
             //show alert banner id = errorBanner
             $('#errorAlert').text('Please select a school year!');
             $('#errorBanner').show();
-            setTimeout(function () {
-                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 2000); 
+            setTimeout(function() {
+                $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+            }, 2000);
         }
     });
 });
