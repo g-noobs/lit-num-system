@@ -1,5 +1,5 @@
 <?php 
-$table = "tbl_schoolyear";
+
 
 $sy_name = $_POST['sy_name_edit'];
 $parts = explode('-', $sy_name);
@@ -14,7 +14,7 @@ $values = array(
     'sy_id' => $_POST['sy_id']
 );
 
-
+$table = "tbl_schoolyear";
 //Class used for checkin duplicate
 include_once("../../../Database/CommonValidationClass.php");
 $isValid = new CommonValidationClass();

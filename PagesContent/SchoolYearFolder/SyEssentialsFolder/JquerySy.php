@@ -15,12 +15,13 @@ $(document).ready(function() {
         var actionPage = 'RegisterSy.php';
         var modalId = '#addModal';
         var formData = new FormData(this);
-        
+
         regexAjax(actionPage, modalId, format,regex,formData);
     });
     // End of add modal
 
     $('#form_editsy').submit(function(e) {
+        e.preventDefault();
         var format = $('input[name="sy_name_edit"]').val();
 
         // Update regex to match example
