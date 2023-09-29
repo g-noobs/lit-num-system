@@ -20,32 +20,36 @@ include_once("../../../Database/CommonValidationClass.php");
 $isValid = new CommonValidationClass();
 $data = trim($_POST['sy_start']);
 $column = 'sy_start';
-$isValid -> validateColumns($table, $column, $data);
+$isValid = $validCol -> validateColumns($table, $column, $data);
 
 include_once("../../../Database/SanitizeCrudClass.php");
 $updateSchoolYear = new SanitizeCrudClass();
+$query = "UPDATE $table 
+          SET sy_start =?, sy_end=? WHERE sy_id = ?";     
+$params = array_values($values);
 
 if($isValid){
-    $query = "UPDATE $table 
-          SET sy_start =?, sy_end=? WHERE sy_id = ?";
-    $params = array_values($values);
     try{
-        $message = "Success";
         $updateSchoolYear->executePreparedStatement($query, $params, '../../../pages/schoolyr.php?msg=' . urlencode($message));
-    }
+        $response = array("success" => "Successfully updated school year!");
+        echo json_encode($response);
+      }
     catch(mysqli_sql_exception $e){
         if ($e->getCode() == 1062) {
-    
             // Duplicate entry
-            $message = "Error";  
-            header('Location: ../../../pages/schoolyr.php?msg='.urlencode($message));
-            exit();
+          $response = array("error" => $data." already exists. Please try again");
+          echo json_encode($response);
       
           } else {
-      
             // Some other error
             throw $e;
+            $response = array("error" => $e);
+            echo json_encode($response);
           }
     }
+}
+else{
+  $response = array("error" => $data." already exists. Please try again");
+  echo json_encode($response);
 }
 ?>
