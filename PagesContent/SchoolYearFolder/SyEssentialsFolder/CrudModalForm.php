@@ -37,8 +37,7 @@
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">School Year</h4>
             </div>
-            <form role="form" action="../PagesContent/SchoolYearFolder/ActionFolder/UpdateSy.php"
-                onsubmit="return validateForm()" method="post">
+            <form role="form" id="form_editsy">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">

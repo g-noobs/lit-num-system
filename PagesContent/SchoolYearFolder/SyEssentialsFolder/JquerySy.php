@@ -1,33 +1,3 @@
-<!-- pop modal for error adding -->
-
-
-<!-- <script>
-$(function() {
-    $('#errorBanner').hide();
-    // Check for message
-    var msg = ;
-    if (msg == 'Success') {
-        //show errroBanner
-        $('#successBanner').show();
-        //add  the message to ther id errorAlert
-        $('#successAlert').text(msg);
-        setTimeout(function () {
-                    $("#successBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 2500);
-    }
-    else if(msg == 'Error'){
-        $('#errorBanner').show();
-        //add  the message to ther id errorAlert
-        $('#errorAlert').text(msg);
-        setTimeout(function () {
-                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 2500);
-    }
-    msg = "";
-
-}); 
-</script> -->
-
 
 <!-- Jquery for Add and editing school year-->
 <script>
@@ -36,17 +6,39 @@ $(document).ready(function() {
     
     $('#form_addsy').submit(function(e) {
         e.preventDefault();
-            
+
         // Create a FormData object to send the form data including files
         var formData = new FormData(this);
 
-        var syDate = $('input[name="sy_name"]').val();
+        var format = $('input[name="sy_name"]').val();
         // Update regex to match example
         var regex = /^\d{4}-\d{4}$/;
+        var actionPage = 'RegisterSy.php';
+        var modalId = '#addModal';
 
-        if (regex.test(syDate)) {
+        regexAjax(actionPage, modalId, format,regex);
+    });
+    // End of add modal
+
+    $('#form_editsy').submit(function(e) {
+        var format = $('input[name="sy_name_edit"]').val();
+
+        // Update regex to match example
+        var regex = /^\d{4}-\d{4}$/;
+        var actionPage = 'UpdateSy.php';
+        var modalId = '#editModal';
+
+        regexAjax(actionPage, modalId, format,regex);
+    });
+    // End of edit modal
+
+    // Regex plus Ajax function --> This will check the format that will make sure that the input is YYYY-YYYY
+    // Ajax will manage php action and alert banner
+    function regexAjax(actionPage, modalId, format,regex){
+        var formData = new FormData(this);
+        if (regex.test(format)) {
             $.ajax({
-                url: '../PagesContent/SchoolYearFolder/ActionFolder/'+'RegisterSy.php',
+                url: '../PagesContent/SchoolYearFolder/ActionFolder/'+ actionPage,
                 type: 'POST',
                 data: formData,
                 processData: false, // Don't process the data (required for FormData)
@@ -55,70 +47,54 @@ $(document).ready(function() {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
-                        $('#addModal').modal('hide');
+                        $(modalId).modal('hide');
                         $('#successAlert').text(responseData.success);
                         $('#successBanner').show();
                         setTimeout(function () {
-                                $("#successBanner").fadeOut("slow");
-                                location.reload(); // Hide the .alert element after 3 seconds
-                            }, 1500); 
+                            $("#successBanner").fadeOut("slow");
+                            location.reload(); // Hide the .alert element after 3 seconds
+                        }, 1500); 
                         
                         
                         // You can redirect to a different page or perform other actions here
                     } else if (responseData.hasOwnProperty('error')) {
-                        $('#addModal').modal('hide');
+                        $(modalId).modal('hide');
                         //show alert banner id = errorBanner
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
                         setTimeout(function () {
-                                $("#errorBanner").fadeOut("slow");
-                                location.reload(); // Hide the .alert element after 3 seconds
-                            }, 1500); 
+                            $("#errorBanner").fadeOut("slow");
+                            location.reload(); // Hide the .alert element after 3 seconds
+                        }, 1500); 
                     }
                 },
                 error: function () {
-                    alert('An error occurred during the AJAX request.');
+                    $(modalId).modal('hide');
+                    //show alert banner id = errorBanner
+                    $('#errorAlert').text('An error occurred during the AJAX request.');
+                    $('#errorBanner').show();
+                    setTimeout(function () {
+                        $("#errorBanner").fadeOut("slow");
+                        location.reload(); // Hide the .alert element after 3 seconds
+                    }, 1500); 
                 }
             });
-
-        } else {
-            $('#addModal').modal('hide');
+        } 
+        else {
+            $(modalId).modal('hide');
             $("#errorBanner").show(); // Show the .alert element
             setTimeout(function () {
-                    $('#errorAlert').text('Incorrect input format!');
-                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 2500); // 3000 milliseconds (3 seconds
+            $('#errorAlert').text('Incorrect input format!');
+            $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+            }, 2500); // 3000 milliseconds (3 seconds
         }
-
-        
-
-    });
-
-    $('#editModal').submit(function(e) {
-
-        var syDate = $('input[name="sy_name_edit"]').val();
-
-        // Update regex to match example
-        var regex = /^\d{4}-\d{4}$/;
-
-        if (regex.test(syDate)) {
-
-        } else {
-            $('#validationError').modal('show');
-            $(this).modal('toggle');
-            return false;
-        }
-
-        return true;
-
-    });
-
+    }
 });
 </script>
 
-</script>
 
-<!-- Jquery for Edit -->
+
+<!-- Jquery for Edit archive button that will automatically populate data -->
 <script>
 $(document).ready(function() {
     // Attach click handler to edit buttons
@@ -145,18 +121,18 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
+    // show and hide update button for sy status
     $('#update-sy').hide();
     $('input[name="radioGroup"]').hide();
     $("#set-sy").click(function(){
         $("#update-sy").fadeToggle("slow");
         $('input[name="radioGroup"]').fadeToggle("slow");
     });
-    
-
 });
 </script>
 
 <script>
+// Radio button update status
 $(document).ready(function() {
     $('#update-sy').on('click', function() {
         // Find the selected radio button
