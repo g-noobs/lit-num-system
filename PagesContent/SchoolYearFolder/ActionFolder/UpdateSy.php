@@ -1,6 +1,4 @@
 <?php 
-
-
 $sy_name = $_POST['sy_name_edit'];
 $parts = explode('-', $sy_name);
 if(count($parts) === 2) {
@@ -17,7 +15,7 @@ $values = array(
 $table = "tbl_schoolyear";
 //Class used for checkin duplicate
 include_once("../../../Database/CommonValidationClass.php");
-$isValid = new CommonValidationClass();
+$validCol = new CommonValidationClass();
 $data = trim($_POST['sy_start']);
 $column = 'sy_start';
 $isValid = $validCol -> validateColumns($table, $column, $data);

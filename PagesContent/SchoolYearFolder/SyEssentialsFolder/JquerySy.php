@@ -30,7 +30,7 @@ $(document).ready(function() {
         var modalId = '#editModal';
         var formData = new FormData(this);
 
-        regexAjax(actionPage, modalId, format,regex,formData);
+       regexAjax(actionPage, modalId, format, regex, formData);
     });
     // End of edit modal
 
