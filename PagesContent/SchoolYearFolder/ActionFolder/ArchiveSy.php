@@ -13,10 +13,10 @@ $params = array_values($values);
 
 include_once("../../../Database/SanitizeCrudClass.php");
 
-$update=new SanitizeCrudClass();
+$archive=new SanitizeCrudClass();
 
 try{
-    $update->executePreState($query, $params);
+    $archive->executePreState($query, $params);
     $response = array("success" => "Successfully archived school year!");
     echo json_encode($response);
 }

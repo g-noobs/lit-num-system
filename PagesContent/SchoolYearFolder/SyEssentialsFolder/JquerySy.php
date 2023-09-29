@@ -42,12 +42,13 @@ $(document).ready(function() {
         $('#archiveModal').find('[name="sy_name"]').val(name);
 
         $('#archiveForm').submit(function(e) {
+            var formData = new FormData(this);
             $.ajax({
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
                 type: 'POST',
-                data: {
-                    sy_id: id
-                },
+                data: formData,
+                processData: false, // Don't process the data (required for FormData)
+                contentType: false,
                 success: function(response) {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
