@@ -23,10 +23,10 @@ $cCount = new ColumnCountClass();
 $values['sy_id'] = "SY".(1001 + (int)$cCount->columnCount("sy_id", $table));
 
 include_once("../../../Database/CommonValidationClass.php");
-$isValid = new CommonValidationClass();
+$commonVal = new CommonValidationClass();
 $data = $values['sy_start'];
 $column = 'sy_start';
-$isValid -> validateColumns($table, $column, $data);
+$isValid = $commonVal -> validateColumns($table, $column, $data);
 
 
 if($isValid) {
