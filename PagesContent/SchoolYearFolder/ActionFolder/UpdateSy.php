@@ -28,7 +28,7 @@ $params = array_values($values);
 
 if($isValid){
     try{
-        $updateSchoolYear->executePreparedStatement($query, $params, '../../../pages/schoolyr.php?msg=' . urlencode($message));
+        $updateSchoolYear->executePreState($query, $params);
         $response = array("success" => "Successfully updated school year!");
         echo json_encode($response);
       }
