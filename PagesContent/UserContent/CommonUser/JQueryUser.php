@@ -12,13 +12,22 @@ $(document).ready(function() {
 
         if (userType === 'all-active') {
             contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
-            
+            $('#modal-title').text('Enter User Information');
+            $("button[type='submit']").text('Create a User');
+
         } else if (userType === 'teacher') {
             contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
+            updatModalForm('Teacher');
+
         } else if (userType === 'learner') {
             contentPath = '../PagesContent/UserContent/UserTable/StudentTableContent.php';
+            updatModalForm('Learner');
+
         } else if (userType === 'admin') {
             contentPath = '../PagesContent/UserContent/UserTable/AdminTableContent.php';
+            updatModalForm('Admin');
+
+
         } else if (userType === 'arch-all') {
             contentPath = '../PagesContent/UserContent/UserTable/AllArchUsersTable.php';
         } else if (userType === 'arch-admin') {
@@ -37,6 +46,15 @@ $(document).ready(function() {
             });
         }
     });
+
+    function updatModalForm(usertype) {
+        // Modal title
+        $('#modal-title').text('Enter ' + usertype + ' Information');
+        $("#user").val(usertype);
+        // Disable the select element
+        $("#user").prop("disabled", true);
+        $("button[type='submit']").text('Create a User for ' + usertype);
+    }
 });
 </script>
 
@@ -54,3 +72,21 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- Update modal depending on user type. hide personal id option is admin -->
+<script>
+$(document).ready(function() {
+    // Detect changes in the user select dropdown
+    $('#user').on('change', function() {
+        var selectedUser = $(this).val();
+
+        if (selectedUser === 'Admin') {
+            // Set personal_id as readonly and set its value to a default
+            $('#personal_id').find('input[name="personal_id"]').prop('readonly', true).val(
+                'default_value');
+        } else {
+            // If another option is selected, remove readonly and clear the value
+            $('#personal_id').find('input[name="personal_id"]').prop('readonly', false).val('');
+        }
+    });
+});
+</script>

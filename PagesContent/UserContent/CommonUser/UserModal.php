@@ -5,7 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">Enter Information</h4>
+                <h4 class="modal-title" id="modal-title">Enter user Information</h4>
             </div>
             <form id="addUserForm">
                 <div class="modal-body">
@@ -50,15 +50,13 @@
                                 <option>Teacher</option>
                                 <option>Learner</option>
                             </select>
-                            
                         </div>
+                        <button type="submit" class="btn btn-primary pull-left">Add User</button>
+                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
                 <!-- /.box-body -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary pull-left"></button>
-                    <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-                </div>
+                
             </form>
         </div>
         <!-- /.modal-content -->
