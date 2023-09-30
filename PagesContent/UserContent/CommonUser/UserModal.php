@@ -10,9 +10,10 @@
             <form id="addUserForm">
                 <div class="modal-body">
                     <div class="box-body">
-                        <div class="form-group" id="personal-id">
+                        <div class="form-group">
                             <label for="personal_id">Enter ID:</label>
-                            <input type="text" name="personal_id" class="form-control" placeholder="ID" required>
+                            <input type="text" id="personal-id" name="personal_id" class="form-control" placeholder="ID"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="first_name">Enter First Name:</label>
@@ -46,17 +47,20 @@
                         <div class="form-group">
                             <label for="user">Select Type of User:</label>
                             <select class="form-control" name="user" id="user" required>
-                                <option>Admin</option>
-                                <option>Teacher</option>
                                 <option>Learner</option>
+                                <option>Teacher</option>
+                                <option>Admin</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary pull-left">Add User</button>
-                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
                 <!-- /.box-body -->
-                
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success pull-left">Add User</button>
+                        <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
             </form>
         </div>
         <!-- /.modal-content -->
@@ -127,8 +131,10 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary pull-left"></button>
-                    <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary pull-left"></button>
+                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    </div>
                 </div>
             </form>
         </div>
