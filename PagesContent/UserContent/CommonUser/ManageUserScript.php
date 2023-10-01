@@ -1,7 +1,7 @@
 <!-- Manage addinng user -->
 <script>
 $(function() {
-    $("#addUserForm, #addAnyUserForm").on("submit", function(e) {
+    $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
         var formData = new FormData(this);
         var $hideModal = $(this).closest('.modal');
@@ -16,7 +16,7 @@ $(function() {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
-                    $hideModal
+                    $hideModal.hide();
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
@@ -28,7 +28,7 @@ $(function() {
 
                     // You can redirect to a different page or perform other actions here
                 } else if (responseData.hasOwnProperty('error')) {
-                    $hideModal;
+                    $hideModal.hide();
                     //show alert banner id = errorBanner
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
@@ -39,7 +39,7 @@ $(function() {
                 }
             },
             error: function() {
-                $(modalId).modal('hide');
+                $hideModal.modal('hide');
                 //show alert banner id = errorBanner
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
@@ -63,8 +63,7 @@ $(document).ready(function() {
     // Click event for the edit icon
     $('.edit').click(function() {
         // Get the row data
-        var userId = $(this).closest('tr').find('td:eq(1)')
-            .text(); // Assuming the user_info_Id is in the second column (index 1)
+        var userId = $(this).closest('tr').find('td:eq(1)').text(); // Assuming the user_info_Id is in the second column (index 1)
         var personalId = $(this).closest('tr').find('td:eq(2)').text();
         var firstName = $(this).closest('tr').find('td:eq(3)').text();
         var lastName = $(this).closest('tr').find('td:eq(4)').text();
@@ -80,9 +79,16 @@ $(document).ready(function() {
 
         $('#edit-user').find('[name="user"]').val(user);
 
-        // Show the modal
-        $('#edit-user').modal('show');
+        //if user is eqausl to admin do not show allow to open the #edit-user modal
+        if(user == 'Admin'){
+            $('#edit-user').modal.hide();
+        }
+        else{
+            // Show the modal
+            $('#edit-user').modal('show');
+        }
 
+    
         //Edit Form within the modal
         $('#edit_user').on('submit', function(e) {
             e.preventDefault();
@@ -160,3 +166,4 @@ $(document).ready(function() {
     });
 });
 </script>
+

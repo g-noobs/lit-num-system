@@ -41,7 +41,7 @@ if ($_SESSION['loggedin'] !== true) {
                 <ul class="dropdown-menu">
 
                     <li class="user-header">
-                        <img src="../Media/Image/UserAvatar/temp_profpic.png" class="img-circle" alt="User Image">
+                        <img src="../Media/Images/UserAvatar/temp_profpic.png" class="img-circle" alt="User Image">
                         <p>
                             Name: 
                             <?php $name = new DisplayInfoClass();
@@ -74,9 +74,9 @@ if ($_SESSION['loggedin'] !== true) {
                             <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
-                            <a href="../index.php" class="btn btn-default btn-flat">
+                            <a href="#" class="btn btn-default btn-flat" id="logoutBtn">
                                 <i class="fa fa-sign-out"></i> <span>Sign Out</span>
-                                <?php $SESSION['loggedin'] = false; ?>
+                                
                             </a>
                         </div>
                     </li>
@@ -89,4 +89,4 @@ if ($_SESSION['loggedin'] !== true) {
         </ul>
     </div>
 
-</nav>
+</nav><!-- Onclick for logout -->

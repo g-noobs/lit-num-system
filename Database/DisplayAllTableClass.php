@@ -14,7 +14,7 @@ class DisplayAllTableClass extends Connection{
                 if($row["user_level_description"] === "Admin"){
                     $username = $row['email'];
                     $password = str_repeat("*", strlen($row["password"]));
-                    $modalTarget = "";
+                    $modalTarget = "null";
                     $editColor = "gray";
                 }
                 else{

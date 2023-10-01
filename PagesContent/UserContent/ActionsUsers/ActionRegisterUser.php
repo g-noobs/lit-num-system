@@ -13,7 +13,17 @@ $values = array(
     'added_byID'=>''
 );
 
+
+$table = "tbl_user_info";
+include_once("../../../Database/ColumnCountClass.php");
+$columnCountClass = new ColumnCountClass();
+
+// modify user id plus the column count
+$values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("user_info_id",$table);
+
 if ($_POST['user']=== "Admin") {
+    // Set personal-id same with user_info_id
+    $values['personal_id']= $values['user_info_id'];
     $values['user_level_id'] = '0';
     $username = $values['email'];
 } else if ($_POST['user'] === "Teacher") {
@@ -23,12 +33,6 @@ if ($_POST['user']=== "Admin") {
     $values['user_level_id'] = '2';
     $username = $values['personal_id'];
 }
-$table = "tbl_user_info";
-include_once("../../../Database/ColumnCountClass.php");
-$columnCountClass = new ColumnCountClass();
-
-// modify user id plus the column count
-$values['user_info_id'] = "USR".(100001 + $columnCountClass->columnCount("user_info_Id",$table));
 
 //place value for id
 $values['added_byID']= $_SESSION['id'];
