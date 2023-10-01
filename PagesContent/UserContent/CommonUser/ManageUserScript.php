@@ -4,7 +4,7 @@ $(function() {
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
         var formData = new FormData(this);
-        var $hideModal = $(this).closest('.modal');
+        var $hideModal = $('#add-user');
         $.ajax({
 
             url: '../PagesContent/UserContent/ActionUsers/ActionRegisterUser.php',
@@ -21,8 +21,7 @@ $(function() {
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
-                        location
-                    .reload(); // Hide the .alert element after 3 seconds
+                        location.reload(); // Hide the .alert element after 3 seconds
                     }, 1500);
 
 
@@ -45,7 +44,7 @@ $(function() {
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-                    location.reload(); // Hide the .alert element after 3 seconds
+                    
                 }, 1500);
             }
 

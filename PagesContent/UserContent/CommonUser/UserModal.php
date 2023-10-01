@@ -12,18 +12,15 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="personal_id">Enter ID:</label>
-                            <input type="text" id="personal-id" name="personal_id" class="form-control" placeholder="ID"
-                                required>
+                            <input type="text" id="personal-id" name="personal_id" class="form-control" placeholder="ID" required>
                         </div>
                         <div class="form-group">
                             <label for="first_name">Enter First Name:</label>
-                            <input type="text" name="first_name" class="form-control" id="exampleInputEmail1"
-                                placeholder="First Name" required>
+                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
                         </div>
                         <div class="form-group">
                             <label for="last_name">Enter Last Name:</label>
-                            <input type="text" name="last_name" class="form-control" id="exampleInputEmail1"
-                                placeholder="Last Name" required>
+                            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
                         </div>
                         <div class="form-group">
                             <label for="gender">Select Gender:</label>
@@ -36,8 +33,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Enter Email Address:</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputPassword1"
-                                placeholder="Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <label for="date">Select Birthday:</label>
@@ -90,38 +86,37 @@
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
+                            <input type="text" readonly name="userId" class="form-control">
                         </div>
                         <div class="form-group" id="personal-id">
-                            <label for="personal_id">Enter ID:</label>
-                            <input type="text" name="personal_id" class="form-control" id="exampleInputEmail1"
-                                placeholder="ID" required>
+                            <label for="edit_personal_id">Enter ID:</label>
+                            <input type="text" name="edit_personal_id" class="form-control" placeholder="ID" required>
                         </div>
                         <div class="form-group">
-                            <label for="first_name">Enter First Name:</label>
-                            <input type="text" name="first_name" class="form-control" id="exampleInputEmail1"
-                                placeholder="First Name" required>
+                            <label for="edit_first_name">Enter First Name:</label>
+                            <input type="text" name="edit_first_name" class="form-control" placeholder="First Name"
+                                required>
                         </div>
                         <div class="form-group">
-                            <label for="last_name">Enter Last Name:</label>
-                            <input type="text" name="last_name" class="form-control" id="exampleInputEmail1"
-                                placeholder="Last Name" required>
+                            <label for="edit_last_name">Enter Last Name:</label>
+                            <input type="text" name="edit_last_name" class="form-control" placeholder="Last Name"
+                                required>
                         </div>
                         <div class="form-group">
-                            <label for="gender">Gender:</label>
-                            <select class="form-control" name="gender" required>
+                            <label for="edit_gender">Gender:</label>
+                            <select class="form-control" name="edit_gender" required>
                                 <option>Male</option>
                                 <option>Female</option>
                                 <option>None</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="date">Birthdate:</label>
-                            <input type="date" name="date" class="form-control" id="exampleInputPassword1">
+                            <label for="edit_date">Birthdate:</label>
+                            <input type="date" name="edit_date" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="user">User:</label>
-                            <select class="form-control" name="user" id="user" required>
+                            <label for="edit_user">User:</label>
+                            <select class="form-control" name="edit_user" id="edit_user" required>
                                 <option>Admin</option>
                                 <option>Teacher</option>
                                 <option>Learner</option>
@@ -154,7 +149,7 @@
                 <h4 class="modal-title">Are you sure you wanted to activate this user?</h4>
                 <form id="activateUser">
                     <div class="form-group">
-                        <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
+                        <input type="text" readonly name="act_user_id" class="form-control" id="exampleInputEmail1">
                         <button id="activateUserBtn" class="btn btn-success pull-left">Activate</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
@@ -175,7 +170,8 @@
                 <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
                 <form id="archUserForm">
                     <div class="form-group">
-                        <input type="text" readonly name="userId" class="form-control" id="exampleInputEmail1">
+                        <input type="text" readonly name="arch_act_user_id" class="form-control"
+                            id="exampleInputEmail1">
                         <button id="archUserBtn" class="btn btn-danger pull-left">Archive</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
