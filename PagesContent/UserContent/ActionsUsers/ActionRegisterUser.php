@@ -2,7 +2,7 @@
 session_start();
 $values = array(
     'user_info_id'=>'',
-    'personal_id' =>trim($_POST['personal_id']),
+    'personal_id' =>$_POST['personal_id'],
     'first_name' => trim($_POST['first_name']),
     'last_name' =>trim($_POST['last_name']),
     'gender' => $_POST['gender'],
@@ -19,7 +19,7 @@ include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
 // modify user id plus the column count
-$values['user_info_id'] = "USR". (100001 + (int)$columnCountClass->columnCount("credentials_id","tbl_credentials"));
+$values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("credentials_id","tbl_credentials");
 
 if ($_POST['user']=== "Admin") {
     // Set personal-id same with user_info_id

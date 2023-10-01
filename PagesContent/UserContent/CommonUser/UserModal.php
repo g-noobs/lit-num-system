@@ -16,7 +16,7 @@
                         </div>
                         <div class="form-group">
                             <label for="first_name">Enter First Name:</label>
-                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required autocomplete="given-name"/>
                         </div>
                         <div class="form-group">
                             <label for="last_name">Enter Last Name:</label>
@@ -33,12 +33,11 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Enter Email Address:</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email" required autocomplete="off" />
                         </div>
                         <div class="form-group">
                             <label for="date">Select Birthday:</label>
-                            <input type="date" name="date" class="form-control" id="exampleInputPassword1"
-                                placeholder="Birthdate" required>
+                            <input type="date" name="date" class="form-control" placeholder="Birthdate" required>
                         </div>
                         <div class="form-group">
                             <label for="user">Select Type of User:</label>

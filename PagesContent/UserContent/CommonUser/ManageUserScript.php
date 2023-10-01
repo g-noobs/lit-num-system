@@ -5,8 +5,8 @@ $(function() {
         e.preventDefault();
         var formData = new FormData(this);
         var $hideModal = $('#add-user');
+        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
         $.ajax({
-
             url: '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php',
             type: "POST",
             data: formData,
@@ -16,7 +16,7 @@ $(function() {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
-                    $hideModal.hide();
+                    $hideModal.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
@@ -27,7 +27,7 @@ $(function() {
 
                     // You can redirect to a different page or perform other actions here
                 } else if (responseData.hasOwnProperty('error')) {
-                    $('#add-user').hide();
+                    $('#add-user').modal('hide');
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
