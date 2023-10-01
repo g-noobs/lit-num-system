@@ -56,7 +56,7 @@ $isValid = $validate -> validateColumns($table, $column, $data);
 $isIdvalid = $validate -> validateOneColumn($table, 'personal_id', $values['personal_id']);
 
 
-if($isValid) {
+if($isValid AND $isIdvalid) {
     $columns = implode(', ', array_keys($values));
     $sql = "INSERT INTO $table ($columns)
             VALUES(?,?,?,?,?,?,?,?,?,?);";

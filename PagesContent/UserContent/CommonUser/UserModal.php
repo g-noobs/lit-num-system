@@ -76,9 +76,9 @@
                 <form id="editUserForm">
                     <div class="form-group">
                         <input type="text" name="userId" class="form-control" style="display: none;">
-                        <button type="submit" class="btn btn-danger pull-left btn-sm">
+                        <!-- <button type="submit" class="btn btn-danger pull-left btn-sm">
                             <span class="glyphicon glyphicon-trash"></span>
-                        </button>
+                        </button> -->
                     </div>
                 </form>
             </div>

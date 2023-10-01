@@ -106,11 +106,12 @@
                 <?php include_once("../PagesContent/UserContent/UserTable/AllUserTableContent.php");?>
             </section>
         </div>
+        <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/ManageUserScript.php");?>
-        <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+        
 
         <?php include_once "../CommonContent/CommonAllScript.php"?>
         <script>
