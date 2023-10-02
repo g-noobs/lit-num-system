@@ -185,10 +185,10 @@
                         // setTimeout(function() {
                         //     $("#errorModal").fadeOut("slow"); // Hide the .alert element after 3 seconds
                         // }, 2500);
-
                     }
-
-                    
+                },
+                error: function(response){
+                    console.log(response);
                 }
             });
         });
