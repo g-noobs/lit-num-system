@@ -21,25 +21,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // If there are no errors, compare the username and password with the database
-    if (empty($errors)) {
-        include_once("ValidateCredsClass.php");
-        $validate = new ValidateCredsClass();
-        $isCorrect = $validate ->checkCreds($username, $password);
-        
-        if($isCorrect){
-            $_SESSION['loggedin'] = true;
-            $response = array('success' => "Success!");
-            echo  json_encode($response);
-        }
-        else{
-            $response = array('error' => "Invalid Credentials!");
-            echo  json_encode($response);
-        }
+    include_once("ValidateCredsClass.php");
+    $validate = new ValidateCredsClass();
+    $isCorrect = $validate ->checkCreds($username, $password);
+    
+    if($isCorrect){
+        $_SESSION['loggedin'] = true;
+        $response = array('success' => "Success!");
+        echo  json_encode($response);
     }
+    else{
+        $response = array('error' => "Invalid Credentials!");
+        echo  json_encode($response);
+    }
+    
     
 }
 else{
-    $response = array('error' => "Invalid Credentials!");
+    $response = array('error' => "POST ISSUE");
     echo  json_encode($response);
 }
 

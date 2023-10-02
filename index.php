@@ -182,11 +182,9 @@
                         //assign text to modal and show
                         $('#errorMessage').text(msg);
                         $('#errorModal').show();
-                        setTimeout(function() {
-                            $("#errorModal").fadeOut(
-                                "slow"
-                            ); // Hide the .alert element after 3 seconds
-                        }, 2500);
+                        // setTimeout(function() {
+                        //     $("#errorModal").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                        // }, 2500);
 
                     }
 
