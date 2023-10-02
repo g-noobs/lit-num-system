@@ -25,7 +25,6 @@ $(document).ready(function() {
         var contentPath = '';
 
         if (userType === 'all') {
-  
             contentPath = '../PagesContent/UserContent/UserTable/AllUserTableContent.php';
             $('#modal-title').text('Enter User Information');
             $("button[type='submit']").text('Create a User');
