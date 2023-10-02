@@ -24,7 +24,14 @@ $(document).ready(function() {
         var userType = $(this).data('user-type');
         var contentPath = '';
 
-        if (userType === 'all-active') {
+        if (userType === 'all') {
+  
+            contentPath = '../PagesContent/UserContent/UserTable/AllUserTableContent.php';
+            $('#modal-title').text('Enter User Information');
+            $("button[type='submit']").text('Create a User');
+            $("#user").prop("disabled", false);
+        
+        } else if (userType === 'all-active') {
 
             contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
             $('#modal-title').text('Enter User Information');

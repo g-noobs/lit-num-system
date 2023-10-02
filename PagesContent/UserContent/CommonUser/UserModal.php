@@ -160,6 +160,8 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal for Activate User-->
+
+
 <div class="modal fade" id="archive-user">
     <div class="modal-dialog">
         <div class="modal-content">
