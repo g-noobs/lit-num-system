@@ -8,7 +8,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once("../bootstrap/css.php");?>
-    
+
 </head>
 <!-- !!Modfied style-->
 
@@ -52,10 +52,9 @@
 
                                 <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
                                     style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                    <!-- All User
-                                    
-                                    <span class="caret"></span>-->
-                                </button> 
+                                    <b>All Users</b> <!-- Updated the button text -->
+                                    <span class="caret"></span>
+                                </button>
                                 <ul class="dropdown-menu custom-dropdown-menu">
                                     <li><a href="#" data-user-type="all"><b>All Users</b></a></li>
                                     <li><a href="#" data-user-type="all-active"><b>All Active Users</b></a></li>
@@ -114,7 +113,7 @@
         <?php include_once("../bootstrap/js.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
         <?php include_once("../PagesContent/UserContent/CommonUser/ManageUserScript.php");?>
-        
+
 
         <?php include_once "../CommonContent/CommonAllScript.php"?>
         <script>
