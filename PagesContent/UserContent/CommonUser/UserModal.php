@@ -12,11 +12,13 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="personal_id">Enter ID:</label>
-                            <input type="text" id="personal-id" name="personal_id" class="form-control" placeholder="ID" required>
+                            <input type="text" id="personal-id" name="personal_id" class="form-control" placeholder="ID"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="first_name">Enter First Name:</label>
-                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required autocomplete="given-name"/>
+                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required
+                                autocomplete="given-name" />
                         </div>
                         <div class="form-group">
                             <label for="last_name">Enter Last Name:</label>
@@ -33,7 +35,8 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Enter Email Address:</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email" required autocomplete="off" />
+                            <input type="email" name="email" class="form-control" placeholder="Email" required
+                                autocomplete="off" />
                         </div>
                         <div class="form-group">
                             <label for="date">Select Birthday:</label>
@@ -116,9 +119,9 @@
                         <div class="form-group">
                             <label for="edit_user">User:</label>
                             <select class="form-control" name="edit_user" id="edit_user" required>
-                                <option>Admin</option>
-                                <option>Teacher</option>
                                 <option>Learner</option>
+                                <option>Teacher</option>
+                                <option>Admin</option>
                             </select>
                         </div>
                     </div>

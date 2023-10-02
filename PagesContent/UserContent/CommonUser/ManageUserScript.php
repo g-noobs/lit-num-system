@@ -21,7 +21,8 @@ $(function() {
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
-                        location.reload(); // Hide the .alert element after 3 seconds
+                        location
+                            .reload(); // Hide the .alert element after 3 seconds
                     }, 1500);
 
 
@@ -32,7 +33,8 @@ $(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        location.reload(); // Hide the .alert element after 3 seconds
+                        location
+                            .reload(); // Hide the .alert element after 3 seconds
                     }, 1500);
                 }
             },
@@ -43,7 +45,7 @@ $(function() {
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-                    
+
                 }, 1500);
             }
 
@@ -61,7 +63,8 @@ $(document).ready(function() {
     // Click event for the edit icon
     $('.edit').click(function() {
         // Get the row data
-        var userId = $(this).closest('tr').find('td:eq(1)').text(); // Assuming the user_info_Id is in the second column (index 1)
+        var userId = $(this).closest('tr').find('td:eq(1)')
+            .text(); // Assuming the user_info_Id is in the second column (index 1)
         var personalId = $(this).closest('tr').find('td:eq(2)').text();
         var firstName = $(this).closest('tr').find('td:eq(3)').text();
         var lastName = $(this).closest('tr').find('td:eq(4)').text();
@@ -77,19 +80,10 @@ $(document).ready(function() {
 
         $('#edit-user').find('[name="user"]').val(user);
 
-        //if user is eqausl to admin do not show allow to open the #edit-user modal
-        if(user == 'Admin'){
-            $('#edit-user').modal.hide();
-        }
-        else{
-            // Show the modal
-            $('#edit-user').modal('show');
-        }
-
-    
         //Edit Form within the modal
         $('#edit_user').on('submit', function(e) {
             e.preventDefault();
+
 
             var formData = new FormData(this);
 
@@ -137,6 +131,8 @@ $(document).ready(function() {
             });
         });
 
+
+
     });
 });
 </script>
@@ -160,8 +156,6 @@ $(document).ready(function() {
         $('#archive-user').find('[name="userId"]').val(userId);
 
         // Show the modal
-        $('#activate-user').modal('show');
     });
 });
 </script>
-
