@@ -175,11 +175,12 @@
                     if (responseData.hasOwnProperty('success')) {
                         console.log(responseData.success);
                         window.location.href = "pages/dashboard.php";
-                    } else if (responseData.hasOwnProperty('error')) {
+                    } 
+                    else if (responseData.hasOwnProperty('error')) {
                         var msg = responseData.error;
                         //assign text to modal and show
                         $('#errorMessage').text(msg);
-                        $('#errorModal').show();
+                        $('#errorModal').modal('show');
                         setTimeout(function() {
                             $("#errorModal").fadeOut(
                             "slow"); // Hide the .alert element after 3 seconds
@@ -191,7 +192,7 @@
                     console.log(response);
                     var msg = "Possible Ajax issue!"
                     $('#errorMessage').text(msg);
-                    $('#errorModal').show();
+                    $('#errorModal').modal('show');
 
                     setTimeout(function() {
                         $("#errorModal").fadeOut(
