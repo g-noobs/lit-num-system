@@ -12,20 +12,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $response = array('error' => "Username is required");
         echo  json_encode($response);
     }
-    else{
-        $response = array('error' => "Empy Username");
-        echo  json_encode($response);
-    }
 
     // Validate password
     if (empty($password)) {
         $response = array('error' => "Password is required");
         echo  json_encode($response);
 
-    }
-    else{
-        $response = array('error' => "Empy Password");
-        echo  json_encode($response);
     }
     
     // If there are no errors, compare the username and password with the database
