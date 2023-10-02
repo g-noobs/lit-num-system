@@ -173,7 +173,6 @@
                     var responseData = JSON.parse(response);
 
                     if (responseData.hasOwnProperty('success')) {
-                        <?php session_start(); $_SESSION['loggedin'] = true; ?>
                         console.log(responseData.success);
                         window.location.href = "pages/dashboard.php";
                     }
