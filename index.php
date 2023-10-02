@@ -173,14 +173,14 @@
                     var responseData = JSON.parse(response);
 
                     if (responseData.hasOwnProperty('success')) {
+                        <?php session_start(); $_SESSION['loggedin'] = true; ?>
                         console.log(responseData.success);
-                        <?php $_SESSION['loggedin'] = true; ?>
                         window.location.href - "pages/dashboard.php";
                     }
                     else if (responseData.hasOwnProperty('error')) {
                         var msg = responseData.error;
 
-                        //assign text to banner and show
+                        //assign text to modal and show
                         $('#errorMessage').text(msg);
                         $('#errorModal').show();
                         setTimeout(function() {
