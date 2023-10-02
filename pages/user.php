@@ -56,7 +56,6 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-user-type="all"><b>All Users</b></a></li>
                                     <li><a href="#" data-user-type="all-active"><b>All Active Users</b></a></li>
                                     <li><a href="#" data-user-type="admin">Admin</a></li>
                                     <li><a href="#" data-user-type="teacher">Teacher</a></li>

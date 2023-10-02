@@ -19,18 +19,14 @@ $(document).ready(function() {
     });
 
     // $This manage the dropdown menu
-    $('.custom-dropdown-menu a').on('click',function(e) {
+    $('.custom-dropdown-menu a').on('click', function(e) {
         e.preventDefault();
         var userType = $(this).data('user-type');
         var contentPath = '';
 
-        if (userType === 'all') {
-            contentPath = '../PagesContent/UserContent/UserTable/AllUserTableContent.php';
-            $('#modal-title').text('Enter User Information');
-            $("button[type='submit']").text('Create a User');
-            $("#user").prop("disabled", false);
-        
-        } else if (userType === 'all-active') {
+
+
+        if (userType === 'all-active') {
 
             contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
             $('#modal-title').text('Enter User Information');
@@ -70,16 +66,15 @@ $(document).ready(function() {
                     $(this).fadeIn(400);
                 });
             });
+        } else {
+            contentPath = '../PagesContent/UserContent/UserTable/AllUserTableContent.php';
+            $(this).empty().load(contentPath, function() {
+                $(this).fadeIn(400);
+            });
         }
     });
 
-    function updatModalForm(usertype) {
-        // Modal title
-        $('#modal-title').text('Enter ' + usertype + ' Information');
-        $("#user").val(usertype);
-        // Disable the select element
-        $("#user").prop("disabled", true);
-    }
+
 });
 </script>
 
