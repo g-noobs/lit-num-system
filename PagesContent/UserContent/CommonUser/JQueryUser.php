@@ -19,13 +19,13 @@ $(document).ready(function() {
     });
 
     // $This manage the dropdown menu
-    $('.custom-dropdown-menu a').on('click', function(e) {
+    $('.custom-dropdown-menu a').on('click',function(e) {
         e.preventDefault();
         var userType = $(this).data('user-type');
         var contentPath = '';
 
-
-
+        
+        
         if (userType === 'all-active') {
 
             contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
@@ -67,15 +67,15 @@ $(document).ready(function() {
                 });
             });
         }
-        else{
-            $("#mainContent").load(contentPath, function() {
-                    $(this).fadeIn(400);
-                });
-            
-        }
     });
 
-
+    function updatModalForm(usertype) {
+        // Modal title
+        $('#modal-title').text('Enter ' + usertype + ' Information');
+        $("#user").val(usertype);
+        // Disable the select element
+        $("#user").prop("disabled", true);
+    }
 });
 </script>
 
