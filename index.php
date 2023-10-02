@@ -120,7 +120,8 @@
 <body>
     <?php include_once "CommonContent/ErrorModal.php"?>
     <div class="login-form">
-        <form action="ActionValidateUser.php" method="post">
+        <!-- <form action="ActionValidateUser.php" method="post"> -->
+        <form id="validate_user">
             <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
             <h4 class="modal-title">Login to Your Account</h4>
             <div class="form-group">
@@ -153,12 +154,46 @@
     $(function() {
         // Check for message
         // Check for message
-        var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-        if (msg) {
-            $('#errorModal').modal('show');
-            $('#errorMessage').text(msg);
-        }
-        msg = "";
+        // var msg =;
+        // if (msg) {
+        //     $('#errorModal').modal('show');
+        //     $('#errorMessage').text(msg);
+        // }
+        // msg = "";
+        $("#validate_user").on("submit",function(e){
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                url: "ActionValidateUser.php",
+                method: "post",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response){
+                    var responseData = JSON.parse(response);
+
+                    if (responseData.hasOwnProperty('success')) {
+                        console.log(responseData.success);
+                        window.location.href - "pages/dashboard.php";
+                    }
+                    else if (responseData.hasOwnProperty('error')) {
+                        var msg = responseData.error;
+
+                        //assign text to banner and show
+                        $('#errorMessage').text(msg);
+                        $('#errorModal').show();
+                        setTimeout(function() {
+                            $("#errorModal").fadeOut(
+                                "slow"
+                            ); // Hide the .alert element after 3 seconds
+                        }, 2500);
+
+                    }
+
+                    
+                }
+            });
+        });
 
 
     });

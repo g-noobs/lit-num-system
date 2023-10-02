@@ -6,56 +6,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // Perform your validation logic here
-    $errors = array();
 
     // Validate username
     if (empty($username)) {
-        $errors[] = "Username is required";
-        header("Location: index.php");
-        exit();
+        $response = array('error' => "Username is required");
+        echo  json_encode($response);
     }
     else{
-        $message = 'Empy Username'; 
-        // Pass message as GET parameter
-        header('Location: index.php?msg=' . urlencode($message));
+        $response = array('error' => "Empy Username");
+        echo  json_encode($response);
     }
 
     // Validate password
     if (empty($password)) {
-        $errors[] = "Password is required";
-        header("Location: index.php");
-        exit();
+        $response = array('error' => "Password is required");
+        echo  json_encode($response);
 
     }
     else{
-        $message = 'Empy Password'; 
-        // Pass message as GET parameter
-        header('Location: index.php?msg=' . urlencode($message));
+        $response = array('error' => "Empy Password");
+        echo  json_encode($response);
     }
     
     // If there are no errors, compare the username and password with the database
     if (empty($errors)) {
         include_once("ValidateCredsClass.php");
-        $_SESSION['loggedin'] = true;
         $validate = new ValidateCredsClass();
         $isCorrect = $validate ->checkCreds($username, $password);
         
         if($isCorrect){
-            header("Location: pages/dashboard.php");
-            exit();
+            $_SESSION['loggedin'] = true;
+            $response = array('success' => "Success!");
+            echo  json_encode($response);
         }
         else{
-            $message = 'Invalid Credentials'; 
-            // Pass message as GET parameter
-            header('Location: index.php?msg=' . urlencode($message));
+            $response = array('error' => "Invalid Credentials!");
+            echo  json_encode($response);
         }
     }
     
 }
 else{
-    $message = 'POST ISSUE'; 
-        // Pass message as GET parameter
-    header('Location: index.php?msg=' . urlencode($message));
+    $response = array('error' => "Invalid Credentials!");
+    echo  json_encode($response);
 }
 
 ?>
