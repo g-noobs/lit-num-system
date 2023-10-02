@@ -175,7 +175,7 @@
                     if (responseData.hasOwnProperty('success')) {
                         <?php session_start(); $_SESSION['loggedin'] = true; ?>
                         console.log(responseData.success);
-                        window.location.href - "pages/dashboard.php";
+                        window.location.href = "pages/dashboard.php";
                     }
                     else if (responseData.hasOwnProperty('error')) {
                         var msg = responseData.error;
