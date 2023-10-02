@@ -66,11 +66,12 @@ $(document).ready(function() {
                     $(this).fadeIn(400);
                 });
             });
-        } else {
-            contentPath = '../PagesContent/UserContent/UserTable/AllUserTableContent.php';
-            $(this).empty().load(contentPath, function() {
-                $(this).fadeIn(400);
-            });
+        }
+        else{
+            $("#mainContent").load(contentPath, function() {
+                    $(this).fadeIn(400);
+                });
+            
         }
     });
 
