@@ -43,14 +43,17 @@ $(document).ready(function() {
                     if (responseData.hasOwnProperty('message')) {
                         var msg = responseData.message;
                         //reload page
-                        window.location.reload();
+                        
                         //show and assign message to the banner
                         $('#successAlert').text(msg);
                         $('#successBanner').show();
+
+                        //hide modal
+                        $('#edit-user').modal('hide');
+
                         setTimeout(function() {
-                            $("#successBanner").fadeOut(
-                                "slow"
-                            ); // Hide the .alert element after 3 seconds
+                            $("#successBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                            window.location.reload();
                         }, 2500);
 
                         // You can redirect to a different page or perform other actions here
@@ -63,12 +66,17 @@ $(document).ready(function() {
                         $('#errorAlert').text(msg);
                         $('#errorBanner').show();
                         setTimeout(function() {
-                            $("#errorBanner").fadeOut(
-                                "slow"
-                            ); // Hide the .alert element after 3 seconds
+                            $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                            window.location.reload();
                         }, 2500);
 
                     }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    // Handle errors here
+                    $('#edit-user').modal('hide');
+                    console.log('ERRORS: ' + textStatus);
+                    // STOP LOADING SPINNER
                 }
             });
         });
