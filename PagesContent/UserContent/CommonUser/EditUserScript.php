@@ -40,7 +40,7 @@ $(document).ready(function() {
                     var responseData = JSON.parse(response);
 
                     // Check if the form submission was successful
-                    if (responseData.hasOwnProperty('message')) {
+                    if (responseData.hasOwnProperty('success')) {
                         var msg = responseData.message;
                         //reload page
                         
