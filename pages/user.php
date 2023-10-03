@@ -105,6 +105,7 @@
                 <!-- Small boxes (Stat box) -->
                 <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
             </section>
+
         </div>
         <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
         <!-- ./wrapper -->
