@@ -44,4 +44,3 @@
     </div>
     <!-- /.col -->
 </div>
-<?php include_once "../CommonUser/JQueryUser.php"; ?>
