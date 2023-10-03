@@ -42,14 +42,12 @@ $(document).ready(function() {
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
                         var msg = responseData.message;
-                        //reload page
+                        //hide modal
+                        $('#edit-user').modal('hide');
                         
                         //show and assign message to the banner
                         $('#successAlert').text(msg);
                         $('#successBanner').show();
-
-                        //hide modal
-                        $('#edit-user').modal('hide');
 
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
