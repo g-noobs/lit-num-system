@@ -29,7 +29,8 @@ $(document).ready(function() {
             var formData = new FormData(this);
 
             $.ajax({
-                url: '../PagesContent/UserContent/ActionUsers/ActionEditUser.php',
+                
+                url: '../PagesContent/UserContent/ActionsUsers/ActionEditUser.php',
                 type: 'POST',
                 data: formData,
                 processData: false, // Don't process the data (required for FormData)
