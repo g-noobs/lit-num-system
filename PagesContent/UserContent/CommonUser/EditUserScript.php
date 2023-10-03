@@ -6,20 +6,20 @@ $(document).ready(function() {
         // Get the row data
         var userId = $(this).closest('tr').find('td:eq(1)')
             .text(); // Assuming the user_info_Id is in the second column (index 1)
-        var personalId = $(this).closest('tr').find('td:eq(2)').text();
-        var firstName = $(this).closest('tr').find('td:eq(3)').text();
-        var lastName = $(this).closest('tr').find('td:eq(4)').text();
-        var gender = $(this).closest('tr').find('td:eq(5)').text();
-        var user = $(this).closest('tr').find('td:eq(8)').text();
+        var edit_personal_id = $(this).closest('tr').find('td:eq(2)').text();
+        var edit_first_name = $(this).closest('tr').find('td:eq(3)').text();
+        var edit_last_name = $(this).closest('tr').find('td:eq(4)').text();
+        var edit_gender = $(this).closest('tr').find('td:eq(5)').text();
+        var edit_user = $(this).closest('tr').find('td:eq(8)').text();
 
         // Populate the modal fields with the data
         $('#edit-user').find('[name="userId"]').val(userId);
-        $('#edit-user').find('[name="personal_id"]').val(edit_personal_id);
-        $('#edit-user').find('[name="first_name"]').val(edit_first_name);
-        $('#edit-user').find('[name="last_name"]').val(edit_last_name);
-        $('#edit-user').find('[name="gender"]').val(edit_gender);
+        $('#edit-user').find('[name="edit_personal_id"]').val(edit_personal_id);
+        $('#edit-user').find('[name="edit_first_name"]').val(edit_first_name);
+        $('#edit-user').find('[name="edit_last_name"]').val(edit_last_name);
+        $('#edit-user').find('[name="edit_gender"]').val(edit_gender);
 
-        $('#edit-user').find('[name="user"]').val(edit_user);
+        $('#edit-user').find('[name="edit_user"]').val(edit_user);
     });
 
     //Edit Form within the modal
