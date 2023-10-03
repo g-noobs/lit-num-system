@@ -3,19 +3,20 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $values = array(
         'user_info_Id' => $_POST['userId'],
-        'personal_id' =>$_POST['personal_id'],
-        'first_name' => $_POST['first_name'],
-        'last_name' =>$_POST['last_name'],
-        'gender' => $_POST['gender'],
-        'birthdate' => $_POST['date'],
+        'personal_id' =>$_POST['edit_personal_id'],
+        'first_name' => $_POST['edit_first_name'],
+        'last_name' =>$_POST['edit_last_name'],
+        'gender' => $_POST['edit_gender'],
+        'birthdate' => $_POST['edit_date'],
         'status_id' => '1',
         'user_level_id' => ''
     );
-    if ($_POST['user']=== "Admin") {
+    if ($_POST['edit_user']=== "Admin") {
         $values['user_level_id'] = '0';
-    } else if ($_POST['user'] === "Teacher") {
+        $values['personal_id']= $values['user_info_Id'];
+    } else if ($_POST['edit_user'] === "Teacher") {
         $values['user_level_id'] = '1';
-    } else if ($_POST['user']=== "Learner") {
+    } else if ($_POST['edit_user']=== "Learner") {
         $values['user_level_id'] = '2';
     }
 
@@ -25,28 +26,57 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $isValid = new CommonValidationClass();
     $data = array($values['first_name'],$values['last_name']);
     $column = array('first_name','last_name');
+
     $isDuplicate = $isValid -> validateColumns($table, $column, $data);
+    $isIdDuplicate = $isValid -> validateOneColumn($table, 'personal_id', $values['personal_id']);
     
-    if($isDuplicate){
+    if($isDuplicate AND $isIdDuplicate){
 
+        // Build the SET part of the UPDATE query
+        $setClause = implode(", ", array_map(function ($column, $value) {
+            return "$column = ?";
+        }, array_keys($values), $values));
+
+        // Build the WHERE condition
+        $whereCondition = "user_info_Id = ?";
+
+        // Combine the SET and WHERE clauses to create the UPDATE query
+        $sql = "UPDATE $table SET $setClause WHERE $whereCondition";
+
+        // Prepare the parameters for binding
+        $params = array_merge(array_values($values), [$values['user_info_Id']]);
+
+        try{
+            $updateUser = new SanitizeCrudClass();
+            $updateUser->executePreState($sql, $params);
+            
+            // Send the response back to the front-end if no error on $updateUser
+            if ($updateUser) {
+                $response = array("success" => "Successfully updated user!");
+                echo json_encode($response);
+            }
+            else{
+                $response = array("error" => "Error updating user!");
+                echo json_encode($response);
+            }
+        }
+        catch(mysqli_sql_exception $e){
+            if ($e->getCode() == 1062) {
+                // Duplicate entry
+              $response = array("error" => $data." already exists. Please try again");
+              echo json_encode($response);
+          
+              } else {
+                // Some other error
+                throw $e;
+                $response = array("error" => $e);
+                echo json_encode($response);
+              }
+        }
     }
-    $columns = implode(", ", array_keys($values));
-    $placeholders = "'" . implode("', '", array_values($values)) . "'";
-
-    $sql = "UPDATE $table SET ";
-
-    foreach ($values as $column => $value) {
-        $sql .= "$column = '$value', ";
+    else{
+        $response = array("error" => $data." already exists. Please try again");
+        echo json_encode($response);
     }
-
-    $sql = rtrim($sql, ", "); // Remove the trailing comma and space
-    $sql .= " WHERE user_info_Id = '{$values['user_info_Id']}';";
-
-    $table = "tbl_credentials";
-    $sql .= "UPDATE $table SET uname = '{$values['personal_id']}' WHERE user_info_Id = '{$values['user_info_Id']}';";
-
-    //still follow the usual tracing of php class
-    include_once("../../../Database/AddDeleteClass.php");
-    $addData = new AddDeleteClass();
-}
+} 
 ?>
