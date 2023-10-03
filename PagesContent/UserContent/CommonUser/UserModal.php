@@ -129,7 +129,7 @@
                 <!-- /.box-body -->
                 <div class="modal-footer">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary pull-left"></button>
+                        <button type="submit" class="btn btn-warning pull-left">Update</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                 <h4 class="modal-title">Are you sure you wanted to activate this user?</h4>
                 <form id="activateUser">
                     <div class="form-group">
-                        <input type="text" readonly name="act_user_id" class="form-control" id="exampleInputEmail1">
+                        <input type="text" readonly name="act_user_id" class="form-control">
                         <button id="activateUserBtn" class="btn btn-success pull-left">Activate</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
@@ -172,14 +172,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                <form id="archUserForm">
-                    <div class="form-group">
-                        <input type="text" readonly name="arch_act_user_id" class="form-control"
-                            id="exampleInputEmail1">
-                        <button id="archUserBtn" class="btn btn-danger pull-left">Archive</button>
-                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
+                <h3 id="arch_usr_id"></h3>
             </div>
         </div>
         <!-- /.modal-content -->

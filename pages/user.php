@@ -110,11 +110,19 @@
         <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
+
+        <!-- Script contain the Dropdown and Search -->
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
-        <?php include_once("../PagesContent/UserContent/CommonUser/ManageUserScript.php");?>
 
+        <!-- Script for Adding a new user -->
+        <?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
 
+        <!-- Script for Editing a user -->
+        <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
+        
+        <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
+
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
