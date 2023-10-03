@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo json_encode($response);
             }
         }
-        catch(mysqli_sql_exception $e){
+        catch(Exception $e){
             if ($e->getCode() == 1062) {
                 // Duplicate entry
               $response = array("error" => $data." already exists. Please try again");
