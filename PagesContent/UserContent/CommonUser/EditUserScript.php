@@ -41,10 +41,10 @@ $(document).ready(function() {
 
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
-                        var msg = responseData.message;
+                        var msg = responseData.success;
                         //hide modal
                         $('#edit-user').modal('hide');
-                        
+
                         //show and assign message to the banner
                         $('#successAlert').text(msg);
                         $('#successBanner').show();
