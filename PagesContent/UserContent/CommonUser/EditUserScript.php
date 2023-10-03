@@ -37,7 +37,7 @@ $(document).ready(function() {
                 contentType: false, // Don't set content type (required for FormData)
                 success: function(response) {
                     //Parse the JSON response
-                    var reponseData = JSON.parse(response);
+                    var responseData = JSON.parse(response);
 
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('message')) {
