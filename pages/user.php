@@ -40,7 +40,6 @@
                 </h1>
             </section>
 
-            <br>
             <section>
                 <div class="container-fluid">
                     <div class="align-items-start">
@@ -101,7 +100,7 @@
                 </div>
             </div> 
             -->
-            <!-- Main content -->;
+            <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
                 <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
