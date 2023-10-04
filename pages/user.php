@@ -15,10 +15,10 @@
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 
 
-<body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
-    style="height: auto; min-height: 100%;">
+<body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
-    <div class="wrapper">
+
+    <div class="wrapper" style="height: auto; min-height: 100%;">
 
         <header class="main-header">
             <?php include_once("../CommonContent/HeaderContent.php"); ?>
@@ -106,8 +106,9 @@
                 <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
             </section>
 
+            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
         </div>
-        <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
 
@@ -122,7 +123,7 @@
 
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
-        
+
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 

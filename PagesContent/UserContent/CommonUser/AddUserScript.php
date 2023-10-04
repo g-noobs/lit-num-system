@@ -57,9 +57,6 @@ $(function() {
 
 
 
-
-
-
 <!-- Activate and Archive button -->
 <script>
 $(document).ready(function() {
