@@ -14,7 +14,12 @@
 
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 
-
+<style>
+    body {
+        overflow: hidden;
+    }
+    </style>
+</style>
 <body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
 
@@ -39,7 +44,7 @@
                     <b style="color:#3D3848;">Manage Users</b>
                 </h1>
             </section>
-
+            <br>
             <section>
                 <div class="container-fluid">
                     <div class="align-items-start">
@@ -100,13 +105,16 @@
                 </div>
             </div> 
             -->
+            <!-- All Modal for user -->
+            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+            
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
                 <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
             </section>
 
-            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+            
         </div>
 
         <!-- ./wrapper -->

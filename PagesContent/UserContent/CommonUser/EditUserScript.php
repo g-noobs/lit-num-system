@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     //Edit Form within the modal
-    $('#edit_user').on('submit', function(e) {
+    $('#edit_user_form').on('submit', function(e) {
             e.preventDefault();
 
             var formData = new FormData(this);
@@ -70,12 +70,12 @@ $(document).ready(function() {
 
                     }
                 },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    // Handle errors here
-                    $('#edit-user').modal('hide');
-                    console.log('ERRORS: ' + textStatus);
-                    // STOP LOADING SPINNER
-                }
+                // error: function(jqXHR, textStatus, errorThrown) {
+                //     // Handle errors here
+                //     $('#edit-user').modal('hide');
+                //     console.log('ERRORS: ' + textStatus);
+                //     // STOP LOADING SPINNER
+                // }
             });
         });
 });
