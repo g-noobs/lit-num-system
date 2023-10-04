@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     );
     if ($_POST['edit_user_option']=== "Admin") {
         $values['user_level_id'] = '0';
-        $values['edit_personal_id']= $values['user_info_Id'];
+        $values['personal_id']= $values['user_info_Id'];
 
     } else if ($_POST['edit_user_option'] === "Teacher") {
         $values['user_level_id'] = '1';
