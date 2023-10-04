@@ -92,7 +92,7 @@
                         </div>
                         <div class="form-group" id="edit_personal_id_form">
                             <label for="edit_personal_id">Enter ID:</label>
-                            <input type="text" name="edit_personal_id" class="form-control" placeholder="ID" required>
+                            <input type="text" name="edit_personal_id" id="edit_personal_id" class="form-control" placeholder="ID" required>
                         </div>
                         <div class="form-group">
                             <label for="edit_first_name">Enter First Name:</label>
