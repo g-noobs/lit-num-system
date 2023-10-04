@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     // ** This will disable the persona id input field if selected user is admin in edit modal
-    $('#edit_user').on('change', function(){
+    $('#edit_user_option').on('change', function(){
         var selectedUser = $(this).val();
 
         if (selectedUser === 'Admin') {

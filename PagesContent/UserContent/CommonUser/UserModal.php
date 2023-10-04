@@ -84,7 +84,7 @@
                     </div>
                 </form>
             </div>
-            <form role="form" id="edit_user">
+            <form role="form" id="edit_user_modal">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
@@ -118,7 +118,7 @@
                         </div>
                         <div class="form-group">
                             <label for="edit_user">User:</label>
-                            <select class="form-control" name="edit_user" id="edit_user" required>
+                            <select class="form-control" name="edit_user" id="edit_user_option" required>
                                 <option>Learner</option>
                                 <option>Teacher</option>
                                 <option>Admin</option>
