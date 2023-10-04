@@ -6,39 +6,25 @@
 <script>
 $(document).ready(function() {
     // *This will disable the personal id input field if selected user is admin
-    $('#user').on('change', function() {
+    $('#user, #edit_user_option').on('change', function() {
         var selectedUser = $(this).val();
+
+        var $personalIdinput = $('#personal-id, #edit_personal_i');
+        var $personalIdFrmGrp = $("#personal_id_form, #edit_personal_id_form");
 
         if (selectedUser === 'Admin') {
             // Set personal_id as readonly and set its value to a default
-            $('#personal-id').prop("disabled", true);
-            $("#personal_id_form").hide();
+            $personalIdinput.prop("disabled", true);
+            $personalIdFrmGrp.fadeOut();
 
 
         } else {
             // If another option is selected, remove readonly and clear the value
-            $('#personal-id').prop("disabled", false);
-            $("#personal_id_form").fadeIn();
+            $personalIdinput.prop("disabled", false);
+            $personalIdFrmGrp.fadeIn();
         }
     });
 
-    // ** This will disable the persona id input field if selected user is admin in edit modal
-    $('#edit_user_option').on('change', function(){
-        var selectedUser = $(this).val();
-
-        if (selectedUser === 'Admin') {
-            // Set personal_id as readonly and set its value to a default
-            $('#edit_personal_id').prop("disabled", true);
-            $("#edit_personal_id_form").hide();
-
-
-        } else {
-            // If another option is selected, remove readonly and clear the value
-            $('#edit_personal_id').prop("disabled", false);
-            $("#edit_personal_id_form").fadeIn();
-        }
-
-    });
 
     // $This manage the dropdown menu
     $('.custom-dropdown-menu a').on('click',function(e) {
