@@ -14,7 +14,7 @@ $(document).ready(function() {
         if (selectedUser === 'Admin') {
             // Set personal_id as readonly and set its value to a default
             $personalID.prop("disabled", true);
-            $personalForms.fadeOut();
+            $personalForms.hide();
 
 
         } else {
