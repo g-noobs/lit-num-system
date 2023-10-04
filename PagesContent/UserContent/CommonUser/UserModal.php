@@ -10,7 +10,7 @@
             <form id="addUserForm">
                 <div class="modal-body">
                     <div class="box-body">
-                        <div class="form-group">
+                        <div class="form-group" id="personal_id_form">
                             <label for="personal_id">Enter ID:</label>
                             <input type="text" id="personal-id" name="personal_id" class="form-control" placeholder="ID"
                                 required>
@@ -90,7 +90,7 @@
                         <div class="form-group">
                             <input type="text" readonly name="userId" class="form-control">
                         </div>
-                        <div class="form-group" id="personal-id">
+                        <div class="form-group" id="edit_personal_id_form">
                             <label for="edit_personal_id">Enter ID:</label>
                             <input type="text" name="edit_personal_id" class="form-control" placeholder="ID" required>
                         </div>

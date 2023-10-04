@@ -8,13 +8,19 @@ $(document).ready(function() {
     // *This will disable the personal id input field if selected user is admin
     $('#user').on('change', function() {
         var selectedUser = $(this).val();
+        var $personalID = $('#personal-id, #edit_personal_id');
+        var $personalForms = $("#personal_id_form, #edit_personal_id_form");
 
         if (selectedUser === 'Admin') {
             // Set personal_id as readonly and set its value to a default
-            $('#personal-id').prop("disabled", true);
+            $personalID.prop("disabled", true);
+            $personalForms.fadeOut();
+
+
         } else {
             // If another option is selected, remove readonly and clear the value
-            $('#personal-id').prop("disabled", false);
+            $personalID.prop("disabled", false);
+            $personalForms.fadeOut();
         }
     });
 
