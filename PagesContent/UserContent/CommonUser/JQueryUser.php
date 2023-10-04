@@ -6,7 +6,7 @@
 <script>
 $(document).ready(function() {
     // *This will disable the personal id input field if selected user is admin
-    $('#user').on('change', function() {
+    $('#user, #edit_user').on('change', function() {
         var selectedUser = $(this).val();
         var $personalID = $('#personal-id, #edit_personal_id');
         var $personalForms = $("#personal_id_form, #edit_personal_id_form");
