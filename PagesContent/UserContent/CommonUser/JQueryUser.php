@@ -20,7 +20,7 @@ $(document).ready(function() {
         } else {
             // If another option is selected, remove readonly and clear the value
             $personalID.prop("disabled", false);
-            $personalForms.fadeOut();
+            $personalForms.fadeIn();
         }
     });
 
