@@ -3,7 +3,7 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $values = array(
         'user_info_Id' => $_POST['userId'],
-        'personal_id' =>$_POST['edit_personal_id'],
+        'personal_id' => '',
         'first_name' => $_POST['edit_first_name'],
         'last_name' =>$_POST['edit_last_name'],
         'gender' => $_POST['edit_gender'],
@@ -17,8 +17,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     } else if ($_POST['edit_user_option'] === "Teacher") {
         $values['user_level_id'] = '1';
+        $values['personal_id']= $_POST['edit_personal_id'];
     } else if ($_POST['edit_user_option']=== "Learner") {
         $values['user_level_id'] = '2';
+        $values['personal_id']= $_POST['edit_personal_id'];
     }
 
     //validate data
