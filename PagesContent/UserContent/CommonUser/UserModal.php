@@ -118,7 +118,7 @@
                         </div>
                         <div class="form-group">
                             <label for="edit_user">User:</label>
-                            <select class="form-control" name="edit_user" id="edit_user_option" required>
+                            <select class="form-control" name="edit_user_option" id="edit_user_option" required>
                                 <option>Learner</option>
                                 <option>Teacher</option>
                                 <option>Admin</option>

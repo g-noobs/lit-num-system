@@ -11,12 +11,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         'status_id' => '1',
         'user_level_id' => ''
     );
-    if ($_POST['edit_user']=== "Admin") {
+    if ($_POST['edit_user_option']=== "Admin") {
         $values['user_level_id'] = '0';
         $values['personal_id']= $values['user_info_Id'];
-    } else if ($_POST['edit_user'] === "Teacher") {
+
+    } else if ($_POST['edit_user_option'] === "Teacher") {
         $values['user_level_id'] = '1';
-    } else if ($_POST['edit_user']=== "Learner") {
+    } else if ($_POST['edit_user_option']=== "Learner") {
         $values['user_level_id'] = '2';
     }
 
