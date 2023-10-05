@@ -2,7 +2,7 @@
 <script>
 $(document).ready(function() {
     // Click event for the edit icon
-    $('#archIconBtn').click(function(e) {
+    $('.archIconBtn').click(function(e) {
         e.preventDefault();
         // Get the row data
         var userId = $(this).data('id');
@@ -25,7 +25,7 @@ $(document).ready(function() {
         });
     });
 
-    $('#actvIconBtn').on('click', function(e){
+    $('.actvIconBtn').on('click', function(e){
         e.preventDefault();
 
         var userId = $(this).data('id');
