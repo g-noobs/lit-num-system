@@ -12,8 +12,8 @@ $(document).ready(function() {
         var userId = $(this).data('id');
 
         // assign the data to the id within the modal
-        $('#arch_usr_id, act_usr_id').text(userId);
-        $('#arch_usr_name, act_usr_name').text(fName + ' ' + lName);
+        $('#arch_usr_id, #act_usr_id').text(userId);
+        $('#arch_usr_name, #act_usr_name').text(fName + ' ' + lName);
 
         // On Click on Ajax archive user
         $('#archUserBtn').on('click', function(e){
