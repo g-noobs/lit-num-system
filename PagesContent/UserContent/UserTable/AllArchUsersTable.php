@@ -5,12 +5,12 @@
                 <h3>All user List</h3>
                 <br>
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-xs-6">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
                             <i class="fa fa-plus"></i> <span> Add User</span>
                         </button>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-xs-6">
                         <div class="search-box">
                             <i class="fa fa-search"></i>
                             <input type="text" id="userInput" class="form-control" placeholder="Search..">
