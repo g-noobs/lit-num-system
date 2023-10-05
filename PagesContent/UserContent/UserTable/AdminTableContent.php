@@ -3,7 +3,7 @@
         <div class="box container">
             <div class="box-header">
                 <h3>Admin</h3>
-                <div class="container-fluid">
+                
                     <div class="row">
                         <div class="col-xs-6">
                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
@@ -17,7 +17,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
             <!-- /.box-header -->
 
