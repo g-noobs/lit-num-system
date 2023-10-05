@@ -142,7 +142,7 @@
 
 <!-- /.modal for Edit User -->
 
-<div class="modal fade" id="activate-user">
+<div class="modal fade" id="activateUserModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -168,7 +168,7 @@
 <!-- /.modal for Activate User-->
 
 
-<div class="modal fade" id="archive-user">
+<div class="modal fade" id="archiveUserModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

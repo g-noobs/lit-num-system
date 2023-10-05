@@ -32,13 +32,13 @@ class DisplayAllTableClass extends Connection{
                     $statusColor = "text-success";
                     $iconColor = "text-danger";
                     $actionIcon = "<span class='glyphicon glyphicon-trash'></span>";
-                    $data_target = "#archive-user";
+                    $data_target = "#archiveUserModal";
                     $icnBtnClass = "actvIconBtn";
                 } else {
                     $statusColor = "text-danger";
                     $iconColor = "text-success";
                     $actionIcon = "<span class='glyphicon glyphicon-ok'></span>";
-                    $data_target = "#activate-user";
+                    $data_target = "#activateUserModal";
                     $icnBtnClass = "archIconBtn";
                 }   
 
@@ -47,7 +47,7 @@ class DisplayAllTableClass extends Connection{
                 echo "<td>";
                 echo "<a href='#' class='edit' data-toggle='modal' data-target='".$modalTarget."' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:".$editColor.";'><span class='glyphicon glyphicon-edit' ></span></a>";
                 
-                echo " <a href='#' class='".$icnBtnClass." ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='" . $row["user_info_id"] . "'> ".$actionIcon ."</a>";
+                echo " <a href='#' class='".$icnBtnClass." ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='".$row["user_info_id"]."'> ".$actionIcon ."</a>";
                 echo "</td>";
 
                 echo "</tr>";
