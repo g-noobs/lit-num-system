@@ -1,7 +1,7 @@
 <?php
 $table = "tbl_user_info";
 $status = $_POST['status'];
-$id = intval($_POST['id']);
+$id = $_POST['id'];
 
 $query = "UPDATE $table SET status_id = ? WHERE user_info_id = ?;";
 $params = [$status, $id];
@@ -13,9 +13,9 @@ $update->executePreState($query, $params);
 //Check and return true if the user is successfully archived
 if($update){
     if ($status == 0) {
-        $response = array('success' => 'User archived');
+        $response = array('success' => 'archived');
     } else {
-        $response = array('success' => 'User activated');
+        $response = array('success' => 'activated');
     }
 
     echo json_encode($response);

@@ -157,7 +157,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="actvUsrBtn" class="btn btn-success pull-left">Activate</button>
+                <button id="actvUsrBtn" class="btn btn-success pull-left" data-id="1">Activate</button>
                 <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
             </div>
         </div>
@@ -183,7 +183,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="archUserBtn" class="btn btn-danger pull-left">Archive</button>
+                <button id="archUserBtn" class="btn btn-danger pull-left" data-id="0">Archive</button>
                 <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
             </div>
         </div>

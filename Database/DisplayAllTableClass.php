@@ -33,13 +33,13 @@ class DisplayAllTableClass extends Connection{
                     $iconColor = "text-danger";
                     $actionIcon = "<span class='glyphicon glyphicon-trash'></span>";
                     $data_target = "#archiveUserModal";
-                    $icnBtnClass = "actvIconBtn";
+                    $icnBtnClass = "archIconBtn";
                 } else {
                     $statusColor = "text-danger";
                     $iconColor = "text-success";
                     $actionIcon = "<span class='glyphicon glyphicon-ok'></span>";
                     $data_target = "#activateUserModal";
-                    $icnBtnClass = "archIconBtn";
+                    $icnBtnClass = "actvIconBtn";
                 }   
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $username . "</td><td>" . $password . "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
