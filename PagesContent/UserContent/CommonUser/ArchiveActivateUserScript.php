@@ -20,7 +20,7 @@ $(document).ready(function() {
             e.preventDefault();
             var hideModal = $('#archive-user');
             var arch_user_id = $('#arch_usr_id').text();
-            var usr_status = 0;
+            var usr_status = '0';
             ajaxProcess(arch_user_id, hideModal, usr_status);
         });
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
             e.preventDefault();
             var hideModal = $('#activate-user');
             var act_usr_id = $('#act_usr_id').text();
-            var usr_status = 1;
+            var usr_status = '1';
             ajaxProcess(act_usr_id, hideModal, usr_status);
         });
 
