@@ -34,13 +34,13 @@ $(document).ready(function() {
 
         
         // assign the data to the id within the modal
-        $('#arch_usr_id').text(userId);
-        $('#arch_usr_name').text(fName + ' ' + lName);
+        $('#act_usr_id').text(userId);
+        $('#act_usr_name').text(fName + ' ' + lName);
 
         // On Click on Ajax activate user
         $('#actvUsrBtn').on('click', function(e){
             e.preventDefault();
-
+            
             var act_usr_id = userId;
             var usr_status = '1';
             ajaxProcess(act_usr_id, usr_status);
@@ -48,6 +48,7 @@ $(document).ready(function() {
     });
 
     function ajaxProcess(usr_id,usr_status){
+            var hideModal = $('#activateUserModal, #archiveUserModal');
             $.ajax({
                 url: '../PagesContent/UserContent/ActionsUsers/UpdateUserStatus.php',    
                 type: 'POST',
@@ -58,11 +59,12 @@ $(document).ready(function() {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
-                        
+                        hideModal.modal("hide");
                         $('#successAlert').text(responseData.success);
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
+                            
                             // location
                             //     .reload(); // Hide the .alert element after 3 seconds
                         }, 1500);
@@ -70,7 +72,7 @@ $(document).ready(function() {
 
                         // You can redirect to a different page or perform other actions here
                     } else if (responseData.hasOwnProperty('error')) {
-                        
+                        hideModal.modal("hide");
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
