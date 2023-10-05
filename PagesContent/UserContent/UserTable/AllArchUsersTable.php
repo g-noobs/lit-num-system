@@ -2,14 +2,13 @@
     <div class="col-xs-12">
         <div class="box container">
             <div class="box-header">
-                
+                <h3>All user List</h3>
                 <br>
                 <div class="row">
                     <div class="col-xs-6">
-                        <h3>All Archived user List</h3>
-                        <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
                             <i class="fa fa-plus"></i> <span> Add User</span>
-                        </button> -->
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">

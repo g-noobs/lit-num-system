@@ -3,7 +3,6 @@
         <div class="box container">
             <div class="box-header">
                 <h3>All Active User</h3>
-                <br>
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">

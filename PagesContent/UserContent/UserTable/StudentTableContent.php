@@ -3,7 +3,7 @@
         <div class="box container">
             <div class="box-header">
                 <h3>Student</h3>
-                <br>
+                
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
