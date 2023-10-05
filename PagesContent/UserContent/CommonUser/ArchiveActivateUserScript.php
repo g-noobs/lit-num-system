@@ -1,8 +1,9 @@
-<!-- Activate and Archive button -->
+<!-- Archive button -->
 <script>
 $(document).ready(function() {
     // Click event for the edit icon
-    $('.action').click(function() {
+    $('#archIconBtn').click(function(e) {
+        e.preventDefault();
         // Get the row data
         var userId = $(this).data('id');
         var fName = $(this).closest('tr').find('td:eq(3)').text();
@@ -10,10 +11,9 @@ $(document).ready(function() {
 
         // get data-id from class action
         
-
         // assign the data to the id within the modal
-        $('#arch_usr_id, #act_usr_id').text(userId);
-        $('#arch_usr_name, #act_usr_name').text(fName + ' ' + lName);
+        $('#arch_usr_id').text(userId);
+        $('#arch_usr_name').text(fName + ' ' + lName);
 
         // On Click on Ajax archive user
         $('#archUserBtn').on('click', function(e){
@@ -23,6 +23,19 @@ $(document).ready(function() {
             var usr_status = '0';
             ajaxProcess(arch_user_id, usr_status);
         });
+    });
+
+    $('#actvIconBtn').on('click', function(e){
+        e.preventDefault();
+        
+        var userId = $(this).data('id');
+        var fName = $(this).closest('tr').find('td:eq(3)').text();
+        var lName = $(this).closest('tr').find('td:eq(4)').text();
+
+        
+        // assign the data to the id within the modal
+        $('#arch_usr_id').text(userId);
+        $('#arch_usr_name').text(fName + ' ' + lName);
 
         // On Click on Ajax activate user
         $('#actvUsrBtn').on('click', function(e){
@@ -32,8 +45,9 @@ $(document).ready(function() {
             var usr_status = '1';
             ajaxProcess(act_usr_id, usr_status);
         });
+    });
 
-        function ajaxProcess(usr_id,usr_status){
+    function ajaxProcess(usr_id,usr_status){
             $.ajax({
                 url: '../PagesContent/UserContent/ActionsUsers/UpdateUserStatus.php',    
                 type: 'POST',
@@ -67,6 +81,7 @@ $(document).ready(function() {
                 }
             });
         }
-    });
 });
-</script>
+
+
+// Activate Button
