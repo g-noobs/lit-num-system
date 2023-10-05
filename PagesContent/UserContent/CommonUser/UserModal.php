@@ -157,7 +157,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="actvUsrBtn" class="btn btn-success pull-left">Archive</button>
+                <button id="actvUsrBtn" class="btn btn-success pull-left">Activate</button>
                 <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
             </div>
         </div>
