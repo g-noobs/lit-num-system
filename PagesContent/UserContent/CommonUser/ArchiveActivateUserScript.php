@@ -21,7 +21,7 @@ $(document).ready(function() {
 
             var arch_user_id = userId;
             var usr_status = '0';
-            ajaxProcess(arch_user_id, hideModal, usr_status);
+            ajaxProcess(arch_user_id, usr_status);
         });
 
         // On Click on Ajax activate user
