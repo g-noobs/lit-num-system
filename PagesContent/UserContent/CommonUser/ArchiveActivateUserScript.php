@@ -25,13 +25,13 @@ $(document).ready(function() {
         });
 
         // On Click on Ajax activate user
-        $('#actvUsrBtn').on('click', function(e){
-            e.preventDefault();
-            var hideModal = $('#activate-user');
-            var act_usr_id = $('#act_usr_id').text();
-            var usr_status = 1;
-            ajaxProcess(act_usr_id, hideModal, usr_status);
-        });
+        // $('#actvUsrBtn').on('click', function(e){
+        //     e.preventDefault();
+        //     var hideModal = $('#activate-user');
+        //     var act_usr_id = $('#act_usr_id').text();
+        //     var usr_status = 1;
+        //     ajaxProcess(act_usr_id, hideModal, usr_status);
+        // });
 
         function ajaxProcess(usr_id, hideModal,usr_status){
             $.ajax({
@@ -49,8 +49,8 @@ $(document).ready(function() {
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
-                            location
-                                .reload(); // Hide the .alert element after 3 seconds
+                            // location
+                            //     .reload(); // Hide the .alert element after 3 seconds
                         }, 1500);
 
 
