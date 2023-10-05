@@ -1,7 +1,6 @@
 <!-- Activate and Archive button -->
 <script>
 $(document).ready(function() {
-
     // Click event for the edit icon
     $('.action').click(function() {
         // Get the row data
@@ -19,8 +18,8 @@ $(document).ready(function() {
         // On Click on Ajax archive user
         $('#archUserBtn').on('click', function(e){
             e.preventDefault();
-            var hideModal = $('#archive-user');
-            var arch_user_id = $('#arch_usr_id').text();
+
+            var arch_user_id = userId;
             var usr_status = '0';
             ajaxProcess(arch_user_id, hideModal, usr_status);
         });
@@ -28,13 +27,13 @@ $(document).ready(function() {
         // On Click on Ajax activate user
         $('#actvUsrBtn').on('click', function(e){
             e.preventDefault();
-            var hideModal = $('#activate-user');
-            var act_usr_id = $('#act_usr_id').text();
+
+            var act_usr_id = userId;
             var usr_status = '1';
-            ajaxProcess(act_usr_id, hideModal, usr_status);
+            ajaxProcess(act_usr_id, usr_status);
         });
 
-        function ajaxProcess(usr_id, hideModal,usr_status){
+        function ajaxProcess(usr_id,usr_status){
             $.ajax({
                 url: '../PagesContent/UserContent/ActionsUsers/UpdateUserStatus.php',    
                 type: 'POST',
@@ -45,7 +44,7 @@ $(document).ready(function() {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
-                        hideModal.modal('hide');
+                        
                         $('#successAlert').text(responseData.success);
                         $('#successBanner').show();
                         setTimeout(function() {
@@ -57,7 +56,7 @@ $(document).ready(function() {
 
                         // You can redirect to a different page or perform other actions here
                     } else if (responseData.hasOwnProperty('error')) {
-                        hideModal.modal('hide');
+                        
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
                         setTimeout(function() {

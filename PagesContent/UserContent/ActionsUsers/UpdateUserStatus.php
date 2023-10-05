@@ -3,7 +3,7 @@ $table = "tbl_user_info";
 $status = $_POST['status'];
 $id = intval($_POST['id']);
 
-$query = "UPDATE $table SET status_id = ? WHERE user_info_id = ?";
+$query = "UPDATE $table SET status_id = ? WHERE user_info_id = ?;";
 $params = [$status, $id];
 
 include_once("../../../Database/SanitizeCrudClass.php");
