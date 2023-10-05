@@ -60,9 +60,7 @@ $(document).ready(function() {
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
-                            $("#errorBanner").fadeOut("slow");
-                            location
-                                .reload(); // Hide the .alert element after 3 seconds
+                            $("#errorBanner").fadeOut("slow");// Hide the .alert element after 3 seconds
                         }, 1500);
                     }
                     

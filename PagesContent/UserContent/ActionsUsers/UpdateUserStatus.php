@@ -1,6 +1,5 @@
 <?php
-//Check if there is POST
-if(!isset($_POST['id'])){
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['status']) && !empty($_POST['id'])) {
     $table = "tbl_user_info";
     $status = $_POST['status'];
     $id = $_POST['id'];
@@ -26,9 +25,9 @@ if(!isset($_POST['id'])){
         $response = array('error' => 'Error in updating status');
         echo json_encode($response);
     }
-
-}
-else{
-    $response = array('error' => 'No POST detected');
+} else {
+    $response = array('error' => 'Invalid POST request');
     echo json_encode($response);
 }
+//Check if request method is post and POST variables are not empty
+?>
