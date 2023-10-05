@@ -149,13 +149,16 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Are you sure you wanted to activate this user?</h4>
-                <form id="activateUser">
-                    <div class="form-group">
-                        <input type="text" readonly name="act_user_id" class="form-control">
-                        <button id="activateUserBtn" class="btn btn-success pull-left">Activate</button>
-                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
+            </div>
+            <div class="modal-body">
+                <div class="box-body">
+                    <div id="act_usr_id"></div>
+                    <div id="act_usr_name"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="actvUsrBtn" class="btn btn-danger pull-left">Archive</button>
+                <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -177,11 +180,10 @@
                 <div class="box-body">
                     <div id="arch_usr_id"></div>
                     <div id="arch_usr_name"></div>
-
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="archiveBtn" class="btn btn-danger pull-left">Archive</button>
+                <button id="archUserBtn" class="btn btn-danger pull-left">Archive</button>
                 <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
             </div>
         </div>
