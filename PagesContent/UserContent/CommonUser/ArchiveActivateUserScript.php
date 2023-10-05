@@ -27,7 +27,7 @@ $(document).ready(function() {
 
     $('#actvIconBtn').on('click', function(e){
         e.preventDefault();
-        
+
         var userId = $(this).data('id');
         var fName = $(this).closest('tr').find('td:eq(3)').text();
         var lName = $(this).closest('tr').find('td:eq(4)').text();
@@ -82,6 +82,6 @@ $(document).ready(function() {
             });
         }
 });
-
+</script>
 
 // Activate Button
