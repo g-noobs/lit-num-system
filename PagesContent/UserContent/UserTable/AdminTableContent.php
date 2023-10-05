@@ -3,16 +3,18 @@
         <div class="box container">
             <div class="box-header">
                 <h3>Admin</h3>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
-                            <i class="fa fa-plus"></i> <span>Add Admin</span>
-                        </button>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="search-box">
-                            <i class="fa fa-search"></i>
-                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                                <i class="fa fa-plus"></i> <span>Add Admin</span>
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="search-box">
+                                <i class="fa fa-search"></i>
+                                <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                            </div>
                         </div>
                     </div>
                 </div>
