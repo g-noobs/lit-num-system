@@ -1,9 +1,9 @@
 <?php
 //Check if there is POST
-if(!isset($_POST['userId'])){
+if(!isset($_POST['id'])){
     $table = "tbl_user_info";
     $status = $_POST['status'];
-    $id = $_POST['userId'];
+    $id = $_POST['id'];
 
     $query = "UPDATE $table SET status_id = ? WHERE user_info_id = ?";
     $params = [$status, $id];
