@@ -1,13 +1,6 @@
 <?php
-// if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['status']) && !empty($_POST['id'])) {
-    
-// } else {
-//     $response = array('error' => 'Invalid POST request');
-//     echo json_encode($response);
-// }
-// //Check if request method is post and POST variables are not empty
-
-$table = "tbl_user_info";
+if (!empty($_POST['status']) && !empty($_POST['id'])) {
+    $table = "tbl_user_info";
     $status = $_POST['status'];
     $id = intval($_POST['id']);
 
@@ -32,4 +25,12 @@ $table = "tbl_user_info";
         $response = array('error' => 'Error in updating status');
         echo json_encode($response);
     }
+    
+} else {
+    $response = array('error' => 'One or more POST fields are empty');
+    echo json_encode($response);
+}
+
+
+    
 ?>
