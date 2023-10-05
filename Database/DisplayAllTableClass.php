@@ -33,13 +33,13 @@ class DisplayAllTableClass extends Connection{
                     $iconColor = "text-danger";
                     $actionIcon = "<span class='glyphicon glyphicon-trash'></span>";
                     $data_target = "#archive-user";
-                    $icnBtnId = "actvIconBtn";
+                    $icnBtnClass = "actvIconBtn";
                 } else {
                     $statusColor = "text-danger";
                     $iconColor = "text-success";
                     $actionIcon = "<span class='glyphicon glyphicon-ok'></span>";
                     $data_target = "#activate-user";
-                    $icnBtnId = "archIconBtn";
+                    $icnBtnClass = "archIconBtn";
                 }   
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $username . "</td><td>" . $password . "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
@@ -47,7 +47,7 @@ class DisplayAllTableClass extends Connection{
                 echo "<td>";
                 echo "<a href='#' class='edit' data-toggle='modal' data-target='".$modalTarget."' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:".$editColor.";'><span class='glyphicon glyphicon-edit' ></span></a>";
                 
-                echo " <a href='#' id ='".$icnBtnId."' class='".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='" . $row["user_info_id"] . "'> ".$actionIcon ."</a>";
+                echo " <a href='#' class='".$icnBtnClass." ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='" . $row["user_info_id"] . "'> ".$actionIcon ."</a>";
                 echo "</td>";
 
                 echo "</tr>";
