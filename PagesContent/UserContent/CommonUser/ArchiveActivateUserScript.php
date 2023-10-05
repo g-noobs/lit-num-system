@@ -25,13 +25,13 @@ $(document).ready(function() {
         });
 
         // On Click on Ajax activate user
-        // $('#actvUsrBtn').on('click', function(e){
-        //     e.preventDefault();
-        //     var hideModal = $('#activate-user');
-        //     var act_usr_id = $('#act_usr_id').text();
-        //     var usr_status = 1;
-        //     ajaxProcess(act_usr_id, hideModal, usr_status);
-        // });
+        $('#actvUsrBtn').on('click', function(e){
+            e.preventDefault();
+            var hideModal = $('#activate-user');
+            var act_usr_id = $('#act_usr_id').text();
+            var usr_status = 1;
+            ajaxProcess(act_usr_id, hideModal, usr_status);
+        });
 
         function ajaxProcess(usr_id, hideModal,usr_status){
             $.ajax({

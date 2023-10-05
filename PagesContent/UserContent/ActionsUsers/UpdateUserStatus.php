@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['status']) && !empty($_POST['id'])) {
     $table = "tbl_user_info";
     $status = $_POST['status'];
-    $id = $_POST['id'];
+    $id = intval($_POST['id']);
 
     $query = "UPDATE $table SET status_id = ? WHERE user_info_id = ?";
     $params = [$status, $id];
