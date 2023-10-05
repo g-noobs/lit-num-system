@@ -2,10 +2,10 @@
     <div class="col-xs-12">
         <div class="box container">
             <div class="box-header">
-                <h3 >Archived Admin List</h3>
+                
                 <div class="row">
                     <div class="col-xs-6">
-                        
+                        <h3 >Archived Admin List</h3>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
