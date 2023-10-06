@@ -10,6 +10,7 @@
     <?php include_once "../bootstrap/css.php"?>
 
     <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
+
 </head>
 
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
@@ -59,13 +60,13 @@
                         </div>
 
                         <div class="col-xs-3">
-                            <form>
+                            <!-- <form>
                                 <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
                                     <span class="input-group-addon" style="background-color: white;"><i
                                             class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
                                     <input type="text" class="form-control" id="userInput" placeholder="Search">
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
 
                         <div class="col-xs-6"></div>

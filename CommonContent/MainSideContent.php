@@ -42,31 +42,31 @@
                 <i class="glyphicon glyphicon-level-up"></i> <span>Manage Category</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="batch.php">
                 <i class="fa fa-group"></i> <span>Manage Batch</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="class.php">
                 <i class="fa fa-sticky-note-o"></i> <span>Manage Class</span>
             </a>
         </li>
-        <li>
+        <!-- <li>k
             <a href="area.php">
                 <i class="fa fa-map-marker"></i> <span>Manage Area</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="schoolyr.php">
                 <i class="fa fa-calendar-check-o"></i> <span> Manage School Year</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="designation.php">
                 <i class="fa fa-user-plus"></i> <span>Manage Designation</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="reports.php">
                 <i class="fa fa-bar-chart"></i> <span>Reports</span>

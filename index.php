@@ -152,14 +152,6 @@
     <!-- handle Error modal Script -->
     <script>
     $(function() {
-        // Check for message
-        // Check for message
-        // var msg =;
-        // if (msg) {
-        //     $('#errorModal').modal('show');
-        //     $('#errorMessage').text(msg);
-        // }
-        // msg = "";
         $("#validate_user").on("submit", function(e) {
             e.preventDefault();
             var formData = new FormData(this);

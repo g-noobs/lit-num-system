@@ -3,33 +3,47 @@
 .btn-li {
     margin-top: 10.5px;
     /* Center items vertically */
-    
+
 }
+
 table {
-  overflow-y: scroll; 
+    overflow-y: scroll;
 }
+
 table {
-  height: 150px;
-  overflow-y: scroll;
+    height: 150px;
+    overflow-y: scroll;
 }
 </style>
 
-<?php include_once ("../PagesContent/ClassContent/ClassEssentials/ModalClass.php");
-    include_once ("../CommonPHPClass/ModifiedSearchStyle.php");
-?>
+<?php include_once ("../PagesContent/ClassContent/ClassEssentials/ModalClass.php");?>
+<?php include_once ("../CommonPHPClass/ModifiedSearchStyle.php");?>
 
 
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                
-                <div class="container-fluid">
-                    
-                </div>
-                
-
+                <h2 class="box-title">All Class List</h2>
             </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-class">
+                            <i class="fa fa-plus"></i> <span> New Class</span>
+                        </button>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="search-box">
+                            <i class="fa fa-search"></i>
+                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
             <!-- /.box-header -->
             <div class="box-body">
                 <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
