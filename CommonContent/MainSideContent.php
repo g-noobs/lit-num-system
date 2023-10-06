@@ -17,64 +17,75 @@
                 <i class="fa fa-users"></i> <span>Manage User</span>
             </a>
         </li>
+        <li class="treeview" style="height: auto;">
+            <a href="#">
+                <i class="fa fa-share"></i> <span>Manage Lesson</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+                <li>
+                    <a href="subject.php">
+                        <i class="fa fa-list-alt"></i> <span>Subject</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="lesson.php">
+                        <i class="fa fa-copy"></i> <span>Lesson</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quiz.php">
+                        <i class="fa fa-lightbulb-o"></i> <span>Quiz</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="category.php">
+                        <i class="glyphicon glyphicon-level-up"></i><span>Category</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="class.php">
+                        <i class="fa fa-sticky-note-o"></i> <span>Class</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schoolyr.php">
+                        <i class="fa fa-calendar-check-o"></i> <span> School Year</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.php">
+                        <i class="fa fa-bar-chart"></i> <span>Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
         <!-- <li>
             <a href="learning.php">
                 <i class="fa fa-book"></i> <span>Manage Level of Learning</span>
             </a>
         </li> -->
-        <li>
-            <a href="subject.php">
-                <i class="fa fa-list-alt"></i> <span>Manage Subject</span>
-            </a>
-        </li>
-        <li>
-            <a href="lesson.php">
-                <i class="fa fa-copy"></i> <span>Manage Lesson</span>
-            </a>
-        </li>
-        <li>
-            <a href="quiz.php">
-                <i class="fa fa-lightbulb-o"></i> <span>Manage Quiz</span>
-            </a>
-        </li>
-        <li>
-            <a href="category.php">
-                <i class="glyphicon glyphicon-level-up"></i> <span>Manage Category</span>
-            </a>
-        </li>
+
         <!-- <li>
             <a href="batch.php">
                 <i class="fa fa-group"></i> <span>Manage Batch</span>
             </a>
         </li> -->
-        <li>
-            <a href="class.php">
-                <i class="fa fa-sticky-note-o"></i> <span>Manage Class</span>
-            </a>
-        </li>
+
         <!-- <li>k
             <a href="area.php">
                 <i class="fa fa-map-marker"></i> <span>Manage Area</span>
             </a>
         </li> -->
-        <li>
-            <a href="schoolyr.php">
-                <i class="fa fa-calendar-check-o"></i> <span> Manage School Year</span>
-            </a>
-        </li>
+
         <!-- <li>
             <a href="designation.php">
                 <i class="fa fa-user-plus"></i> <span>Manage Designation</span>
             </a>
         </li> -->
-        <li>
-            <a href="reports.php">
-                <i class="fa fa-bar-chart"></i> <span>Reports</span>
-            </a>
-        </li>
+
     </ul>
 </section>
 <!-- /.sidebar -->
-
-
-

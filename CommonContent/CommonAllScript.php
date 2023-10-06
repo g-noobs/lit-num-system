@@ -18,6 +18,29 @@ $(document).ready(function() {
 });
 </script>
 
+<script>
+$(document).ready(function() {
+    // Get the current page URL
+    var currentPageUrl = window.location.href;
+
+    // Iterate through each tree view item
+    $('.treeview').each(function() {
+        // Check if any of the child links match the current page URL
+        $(this).find('a').each(function() {
+            var linkUrl = $(this).attr('href');
+            if (currentPageUrl.indexOf(linkUrl) !== -1) {
+                // Add 'active' class to the parent tree view item
+                $(this).closest('.treeview').addClass('active');
+                // Show the child tree view menu
+                $(this).closest('.treeview').find('.treeview-menu').css('display', 'block');
+            }
+        });
+    });
+});
+</script>
+
+
+
 <!-- Jquery for Search -->
 <script>
 $(document).ready(function() {
@@ -30,7 +53,7 @@ $(document).ready(function() {
         });
     });
 });
-</script>+
+</script>
 
 
 <!-- For Logout button for Search -->
