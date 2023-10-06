@@ -17,11 +17,11 @@
                 <i class="fa fa-users"></i> <span>Manage User</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="learning.php">
                 <i class="fa fa-book"></i> <span>Manage Level of Learning</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="subject.php">
                 <i class="fa fa-list-alt"></i> <span>Manage Subject</span>

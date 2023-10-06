@@ -9,8 +9,13 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once "../bootstrap/css.php"?>
 
-    <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
+
 </head>
+<style>
+body {
+    overflow: hidden;
+}
+</style>
 
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: 100%; min-height: 100%;">
@@ -41,18 +46,12 @@
                 <div class="container-fluid">
                     <row class="align-items-start">
                         <div class="col-xs-1">
-                            <h4><b>Filter By: </b></h4>
+                            <!-- <h4><b>Filter By: </b></h4> -->
                         </div>
 
 
                         <div class="col-xs-3">
-                            <form>
-                                <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
-                                    <span class="input-group-addon" style="background-color: white;"><i
-                                            class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
-                                    <input type="text" class="form-control" id="userInput" placeholder="Search">
-                                </div>
-                            </form>
+                            
                         </div>
                         <div class="col-xs-2">
 
@@ -77,7 +76,7 @@
         </div>
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php")?>
-        <?php include_once "../AreaFolder/AreaCommon/JQueryArea.php"; ?>
+        <?php include_once "../PagesContent/CategoryFolder/CategoryCommon/CategoryJquery.php"; ?>
         <?php include_once "../CommonContent/ErrorModal.php"?>
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>

@@ -14,35 +14,20 @@ table {
 }
 </style>
 
-<?php include_once "../PagesContent/ClassContent/ClassEssentials/ModalClass.php";?>
+<?php include_once ("../PagesContent/ClassContent/ClassEssentials/ModalClass.php");
+    include_once ("../CommonPHPClass/ModifiedSearchStyle.php");
+?>
+
 
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-
-                <nav class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <li class="btn-li">
-                            <button type="button" class="btn btn-warning" id="add-class-btn">
-                                <i class="fa fa-plus"></i> <span> Add Class</span>
-                            </button>
-                        </li>
-                        <li>
-                            <form class="navbar-form">
-                                <div class="form-group form-group-custom">
-                                    <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
-                                        <span class="input-group-addon" style="background-color: white;"><i
-                                                class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
-                                        <input type="text" class="form-control" id="userInput" placeholder="Search"
-                                            style="outline: none; border:none; box-shadow: none;">
-                                    </div>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
-                </nav>
-
+                
+                <div class="container-fluid">
+                    
+                </div>
+                
 
             </div>
             <!-- /.box-header -->

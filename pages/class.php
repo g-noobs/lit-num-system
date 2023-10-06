@@ -10,6 +10,11 @@
     <?php include_once "../bootstrap/css.php"?>
 
 </head>
+<style>
+body {
+    overflow: hidden;
+}
+</style>
 
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: auto; min-height: 100%;">
@@ -26,7 +31,7 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
-             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
+            <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
 
             <!-- Content Header (Page header) -->
             <section class="content-header">

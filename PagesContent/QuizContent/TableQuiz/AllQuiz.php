@@ -1,3 +1,4 @@
+<?php include_once ("../CommonPHPClass/ModifiedSearchStyle.php");?>
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
@@ -14,13 +15,10 @@
                         </button>
                     </div>
                     <div class="col-xs-6">
-                        <form>
-                            <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
-                                <span class="input-group-addon" style="background-color: white;"><i
-                                        class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
-                                <input type="text" class="form-control" id="userInput" placeholder="Search">
-                            </div>
-                        </form>
+                        <div class="search-box">
+                            <i class="fa fa-search"></i>
+                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
+                        </div>
                     </div>
                 </div>
             </div>

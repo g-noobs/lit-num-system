@@ -60,7 +60,7 @@ $(document).ready(function() {
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
                         hideModal.modal("hide");
-                        $('#successAlert').text(usr_id + 'has been' + responseData.success);
+                        $('#successAlert').text(usr_id + ' has been ' + responseData.success);
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");// Hide the .alert element after 1.5 seconds
