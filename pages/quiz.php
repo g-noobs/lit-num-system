@@ -50,25 +50,26 @@
                             <div class="custom-dropdown">
 
                                 <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
-                                    style="height:auto; width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
+                                    style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
                                     Quiz Type
-                                    <span class="caret"></span></button>
+                                    <span class="caret"></span>
+                                </button>
                                 <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-user-type="admin">Culture & Arts</a></li>
-                                    <li><a href="#" data-user-type="teacher">Numbers</a></li>
-                                    <li><a href="#" data-user-type="learner">Letters</a></li>
+                                    <li><a href="#" data-user-type="culture">Culture & Arts</a></li>
+                                    <li><a href="#" data-user-type="teachers">Numbers</a></li>
+                                    <li><a href="#" data-user-type="letters">Letters</a></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="col-xs-3">
-                            <form>
+                            <!-- <form>
                                 <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
                                     <span class="input-group-addon" style="background-color: white;"><i
                                             class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
                                     <input type="text" class="form-control" id="userInput" placeholder="Search">
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
 
                         <div class="col-xs-6"></div>

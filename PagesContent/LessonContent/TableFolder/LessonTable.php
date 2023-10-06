@@ -30,13 +30,13 @@
             <h2>Lesson <b>List</b></h2>
             <br>
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-xs-6">
                     <button type="button" class="btn btn-warning btn-sm" data-toggle='modal' data-toggle='tooltip'
                         title='Add New Lesson' data-target="#add_lesson">
                         <i class="fa fa-plus"></i> <span> Add Lesson</span>
                     </button>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-xs-6">
                     <div class="search-box">
                         <i class="fa fa-search"></i> 
                         <input type="text" id="userInput" class="form-control" placeholder="Search..">
