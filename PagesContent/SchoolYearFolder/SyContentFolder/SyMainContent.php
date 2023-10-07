@@ -42,7 +42,7 @@
                 <table id="example2" class="table table-bordered table-hover text-center">
                     <thead>
                         <tr>
-                            <?php include_once("SyTableheader.php");?>
+                            <?php include_once("SyTableHeader.php");?>
                         </tr>
                     </thead>
                     <tbody>
