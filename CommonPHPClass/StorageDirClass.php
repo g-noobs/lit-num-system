@@ -3,7 +3,7 @@ class StorageDirClass{
     private $strDirect = " ";
 
     function getStoreDir(){
-        return $this->$strDirect;
+        return $this->strDirect;
     }
 }
 ?>
