@@ -34,7 +34,7 @@ if ($_POST['user']=== "Admin") {
     $username = $values['personal_id'];
 }
 
-//place value for id
+//place id for added_byID
 $values['added_byID']= $_SESSION['id'];
 
 //Password generation

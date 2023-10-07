@@ -38,23 +38,23 @@
                     <b style="color:#3D3848;">Manage Subjects</b>
                 </h1>
             </section>
-
+            <?php include_once "../PagesContent/SubjectFolder/EssentialsSubj/ModalSubj.php"?>
             <!-- Main content -->
             <section class="content">
-                <!-- Small boxes (Stat box) -->
-                <?php include_once("../CommonPHPClass/PHPClass.php");
-                    $display=new PHPClass();
-                    $display->displayError();
-                ?>
-                
+               <?php include_once "../PagesContent/SubjectFolder/SubjectMain/SubjectMainContent.php"?> 
             </section>
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
-
+       
+        
         <?php include_once("../bootstrap/js.php")?>
-        <?php include_once "../CommonContent/ErrorModal.php"?>
+
+        <!-- Script for search bar and other common Script use accross the page -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
+
+         <!-- Adding Subject Script -->
+        <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/AddSubjScript.php"?>
 </body>
 
 </html>
