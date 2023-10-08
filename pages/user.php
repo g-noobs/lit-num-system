@@ -15,9 +15,9 @@
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 
 <style>
-body {
+/* body {
     overflow: hidden;
-}
+} */
 </style>
 
 <body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
@@ -40,82 +40,99 @@ body {
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1>
+                <h2>
                     <b style="color:#3D3848;">Manage Users</b>
-                </h1>
+                </h2>
             </section>
+
+            <section>
+                <div class="align-items-start">
+                    <div class="col-xs-1">
+                        <h4><b>Filter By: </b></h4>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="custom-dropdown">
+
+                            <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
+                                style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
+                                <b>All Users</b> <!-- Updated the button text -->
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a href="#" data-user-type="all-active"><b>All Active Users</b></a></li>
+                                <li><a href="#" data-user-type="admin">Admin</a></li>
+                                <li><a href="#" data-user-type="teacher">Teacher</a></li>
+                                <li><a href="#" data-user-type="learner">Learner</a></li>
+
+
+                                <li><a href="#" data-user-type="arch-all"><b>All Archive Users</b></a></li>
+                                <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a>
+                                </li>
+                                <li><a href="#" data-user-type="arch-teacher"><small>Archived
+                                            Teacher</small></a>
+                                </li>
+                                <li><a href="#" data-user-type="arch-learner"><small>Archived
+                                            Learner</small></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                    </div>
+
+                    <div class="col-xs-6"></div>
+                </div>
+            </section>
+            <br>
             <br>
             <section>
                 <div class="container-fluid">
-                    <div class="align-items-start">
-                        <div class="col-xs-1">
-                            <h4><b>Filter By: </b></h4>
-                        </div>
-                        <div class="col-xs-2">
-                            <div class="custom-dropdown">
-
-                                <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
-                                    style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                    <b>All Users</b> <!-- Updated the button text -->
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-user-type="all-active"><b>All Active Users</b></a></li>
-                                    <li><a href="#" data-user-type="admin">Admin</a></li>
-                                    <li><a href="#" data-user-type="teacher">Teacher</a></li>
-                                    <li><a href="#" data-user-type="learner">Learner</a></li>
-
-
-                                    <li><a href="#" data-user-type="arch-all"><b>All Archive Users</b></a></li>
-                                    <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a></li>
-                                    <li><a href="#" data-user-type="arch-teacher"><small>Archived Teacher</small></a>
-                                    </li>
-                                    <li><a href="#" data-user-type="arch-learner"><small>Archived Learner</small></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-3">
-
-                        </div>
-
-                        <div class="col-xs-6"></div>
-                    </div>
+                    <button href="#" id="csvUploadIcon" data-toggle="tooltip" title="Upload Multiple User"
+                        style="color:green">
+                        <i class="fa fa-file-excel-o"></i>
+                    </button>
                 </div>
+                <!-- <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
+                    title="Download Template">
+                    <i class="fa fa-file-excel-o"></i>
+                </a>
+            </label> -->
             </section>
-            <!--
-            <div class="container">
-                <div class="row">
-                    <form class="form-horizontal" action="../import-excel/action.php" method="post" name="frmExcelImport" id="frmExcelImport"
-                        enctype="multipart/form-data" onsubmit="return validateFile()">
-                        <div Class="input-row">
-                            <label>Choose your file. <a href="Template/import-template.xlsx" download>Download excel
-                                    template</a></label>
-                            <div>
-                                <input type="file" name="file" id="file" class="file" accept=".xls,.xlsx">
-                            </div>
-                            <div class="import">
-                                <button type="submit" id="submit" name="import" class="btn-submit">Import
-                                    Excel and Save Data</button>
-                            </div>
-                        </div>
-                    </form>
+
+            <section id="frmCsvGroup" class="container-fluid">
+                <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="user_file">Upload User</label>
+                        <input type="file" name="user_file" id="user_file"/>
+                    </div>
+                    <div id="response"></div>
+                    <div class="form-group">
+                        <input type="submit" name="upload" id="upload" value="Upload" class="btn btn-info" />
+                    </div>
+                </form>
+            </section>
+
+
+            <!-- <div class="form-group">
+                    <input type="file" name="file" id="file" class="file">
                 </div>
-            </div> 
-            -->
-            <!-- All Modal for user -->
-            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+                <div class></div>
+                <div class="import">
+                    <button type="submit" id="submit" name="import" class="btn btn-success">Import
+                        CSV and Save Data</button>
+                </div> -->
+
 
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
                 <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
             </section>
-
-
         </div>
+        <!-- All Modal for user-->
+        <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
 
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>

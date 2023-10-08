@@ -85,3 +85,12 @@ $(document).ready(function() {
     }
 });
 </script>
+
+<script>
+$(function(){
+    $('#frmCsvGroup').hide();
+    $('#csvUploadIcon').click(function(){
+        $('#frmCsvGroup').fadeToggle("slow");
+    });
+});
+</script>
