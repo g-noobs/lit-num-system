@@ -1,0 +1,6 @@
+{
+    "name": "your-vendor-name/your-project-name",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.0"
+    }
+}
