@@ -24,59 +24,64 @@ $(document).ready(function() {
 
     //Edit Form within the modal
     $('#edit_user_form').on('submit', function(e) {
-            e.preventDefault();
+        e.preventDefault();
 
-            var formData = new FormData(this);
+        var formData = new FormData(this);
 
-            $.ajax({
-                
-                url: '../PagesContent/UserContent/ActionsUsers/ActionEditUser.php',
-                type: 'POST',
-                data: formData,
-                processData: false, // Don't process the data (required for FormData)
-                contentType: false, // Don't set content type (required for FormData)
-                success: function(response) {
-                    //Parse the JSON response
-                    var responseData = JSON.parse(response);
+        $.ajax({
 
-                    // Check if the form submission was successful
-                    if (responseData.hasOwnProperty('success')) {
-                        var msg = responseData.success;
-                        //hide modal
-                        $('#edit-user').modal('hide');
+            url: '../PagesContent/UserContent/ActionsUsers/ActionEditUser.php',
+            type: 'POST',
+            data: formData,
+            processData: false, // Don't process the data (required for FormData)
+            contentType: false, // Don't set content type (required for FormData)
+            success: function(response) {
+                //Parse the JSON response
+                var responseData = JSON.parse(response);
 
-                        //show and assign message to the banner
-                        $('#successAlert').text(msg);
-                        $('#successBanner').show();
+                // Check if the form submission was successful
+                if (responseData.hasOwnProperty('success')) {
+                    var msg = responseData.success;
+                    
+                    // reload div where the table is #mainContent
+                    $("#mainContent").load(" #mainContent > *");
+                    //hide modal
+                    $('#edit-user').modal('hide');
 
-                        setTimeout(function() {
-                            $("#successBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                            window.location.reload();
-                        }, 2500);
+                    //show and assign message to the banner
+                    $('#successAlert').text(msg);
+                    $('#successBanner').show();
 
-                        // You can redirect to a different page or perform other actions here
-                    } else if (responseData.hasOwnProperty('error')) {
-                        var msg = responseData.error;
-                        // hide modal
-                        $('#edit-user').modal('hide');
+                    setTimeout(function() {
+                        $("#successBanner").fadeOut(
+                        "slow"); // Hide the .alert element after 3 seconds
+                        window.location.reload();
+                    }, 2500);
 
-                        //assign text to banner and show
-                        $('#errorAlert').text(msg);
-                        $('#errorBanner').show();
-                        setTimeout(function() {
-                            $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                            window.location.reload();
-                        }, 2500);
+                    // You can redirect to a different page or perform other actions here
+                } else if (responseData.hasOwnProperty('error')) {
+                    var msg = responseData.error;
+                    // hide modal
+                    $('#edit-user').modal('hide');
 
-                    }
-                },
-                // error: function(jqXHR, textStatus, errorThrown) {
-                //     // Handle errors here
-                //     $('#edit-user').modal('hide');
-                //     console.log('ERRORS: ' + textStatus);
-                //     // STOP LOADING SPINNER
-                // }
-            });
+                    //assign text to banner and show
+                    $('#errorAlert').text(msg);
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut(
+                        "slow"); // Hide the .alert element after 3 seconds
+                        window.location.reload();
+                    }, 2500);
+
+                }
+            },
+            // error: function(jqXHR, textStatus, errorThrown) {
+            //     // Handle errors here
+            //     $('#edit-user').modal('hide');
+            //     console.log('ERRORS: ' + textStatus);
+            //     // STOP LOADING SPINNER
+            // }
         });
+    });
 });
 </script>
