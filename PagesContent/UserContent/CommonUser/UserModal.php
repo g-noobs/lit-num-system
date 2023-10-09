@@ -130,7 +130,7 @@
                 <div class="modal-footer">
                     <div class="form-group">
                         <button type="submit" class="btn btn-warning pull-left">Update</button>
-                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </form>
