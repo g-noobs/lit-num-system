@@ -16,7 +16,7 @@ $(function() {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
-                    $("#mainContent").load(" #mainContent > *");
+                    $("#mainContent").load(location.href + " #mainContent");
                     $hideModal.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
