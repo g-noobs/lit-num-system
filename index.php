@@ -198,16 +198,6 @@
 
     });
     </script>
-    <script>
-    $(function() {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-yellow',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '25%' /* optional */
-        });
-    });
-    </script>
-
 </body>
 
 </html>

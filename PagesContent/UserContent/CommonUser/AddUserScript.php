@@ -16,12 +16,12 @@ $(function() {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
+                    $("#mainContent").load(" #mainContent > *");
                     $hideModal.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
-                        location.reload(); // Hide the .alert element after 3 seconds
                     }, 1500);
 
 
@@ -32,7 +32,7 @@ $(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        location.reload(); // Hide the .alert element after 3 seconds
+
                     }, 1500);
                 }
             },
@@ -43,7 +43,6 @@ $(function() {
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-                    location.reload(); 
                 }, 1500);
             }
 
