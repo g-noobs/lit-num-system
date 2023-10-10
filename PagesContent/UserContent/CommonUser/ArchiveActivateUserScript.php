@@ -84,14 +84,13 @@ $(document).ready(function() {
                         "slow"); // Hide the .alert element after 1.5 seconds
                         location.reload();
                     }, 1500);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
                 // Handle errors here
                 $('#edit-user').modal('hide');
                 console.log('ERRORS: ' + textStatus);
                 // STOP LOADING SPINNER
-            }
-
             }
         });
     }
