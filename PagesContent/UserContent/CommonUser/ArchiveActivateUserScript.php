@@ -1,6 +1,9 @@
 <!-- Archive button -->
 <script>
 $(document).ready(function() {
+    var userId = '';
+    var fName = '';
+    var lName = '';
     // Click event for the edit icon
     $('.archIconBtn').click(function(e) {
         e.preventDefault();
