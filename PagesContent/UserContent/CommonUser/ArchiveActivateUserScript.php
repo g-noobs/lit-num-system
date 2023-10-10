@@ -97,5 +97,17 @@ $(document).ready(function() {
             }
         });
     }
+
+    // Clear variables and modal when it is dismissed
+    $('#activateUserModal, #archiveUserModal').on('hidden.bs.modal', function() {
+        userId = '';
+        fName = '';
+        lName = '';
+        $('#act_usr_id').text('');
+        $('#act_usr_name').text('');
+        $('#arch_usr_id').text('');
+        $('#arch_usr_name').text('');
+    });
+
 });
 </script>
