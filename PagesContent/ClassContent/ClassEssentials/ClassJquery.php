@@ -1,5 +1,5 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Jquery for INput Search-->
+<!-- Jquery for INput Search
 <script>
 $(document).ready(function() {
     $("#userInput").on("keyup", function() {
@@ -11,7 +11,7 @@ $(document).ready(function() {
         });
     });
 });
-</script>
+</script> -->
 
 <script>
 $(document).ready(function() {
