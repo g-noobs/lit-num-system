@@ -36,8 +36,6 @@ $(document).ready(function() {
         if (userType === 'all-active') {
 
             contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
-            $('#modal-title').text('Enter User Information');
-            $("button[type='submit']").text('Create a User');
             $("#user").prop("disabled", false);
 
 
@@ -86,6 +84,7 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- CSV for hiding and showing upload batch form -->
 <script>
 $(function(){
     $('#frmCsvGroup').hide();
