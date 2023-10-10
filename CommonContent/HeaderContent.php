@@ -26,7 +26,6 @@ if ($_SESSION['admin'] !== true || $_SESSION['teacher'] !== false) {
 
             <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <!-- use absoulte directory DIR using path: C:\Users\admin\OneDrive\Documents\GitHub\lit-num-system\TagakauloAdmin\Media\Image\UserAvatar\temp_profpic.png-->
                     <img src="../Media/Images/UserAvatar/temp_profpic.png" class="user-image" alt="User Image">
 
                     <span class="hidden-s"> 
