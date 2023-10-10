@@ -85,7 +85,12 @@ $(document).ready(function() {
                         location.reload();
                     }, 1500);
                 },
-                
+                error: function(jqXHR, textStatus, errorThrown) {
+                // Handle errors here
+                $('#edit-user').modal('hide');
+                console.log('ERRORS: ' + textStatus);
+                // STOP LOADING SPINNER
+            }
 
             }
         });
