@@ -67,8 +67,7 @@ $(document).ready(function() {
                     $('#successAlert').text(usr_id + ' has been ' + responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
-                        $("#successBanner").fadeOut(
-                            "slow"); // Hide the .alert element after 1.5 seconds
+                        $("#successBanner").fadeOut("slow"); // Hide the .alert element after 1.5 seconds
 
                         location.reload();
                     }, 1500);
@@ -80,8 +79,7 @@ $(document).ready(function() {
                     $('#errorAlert').text(responseData.error + 'for ' + usr_id);
                     $('#errorBanner').show();
                     setTimeout(function() {
-                        $("#errorBanner").fadeOut(
-                            "slow"); // Hide the .alert element after 1.5 seconds
+                        $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 1.5 seconds
                         location.reload();
                     }, 1500);
                 },
