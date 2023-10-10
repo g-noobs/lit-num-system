@@ -123,8 +123,7 @@
         <!-- <form action="ActionValidateUser.php" method="post"> -->
         <form id="validate_user">
             <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
-            <h4 class="modal-title">Welcome Teacher!</h4>
-            <h5>Please Login using your Credentials</h5>
+            <h4 class="modal-title">Login to Your Account</h4>
             <div class="form-group">
                 <input type="text" name="username" class="form-control" placeholder="Username" required="required">
             </div>
@@ -157,8 +156,7 @@
             e.preventDefault();
             var formData = new FormData(this);
             $.ajax({
-                // Use this will redirect to Teacher Folder
-                url: "Teacher/ActionValidateUser.php",
+                url: "ActionValidateUser.php",
                 method: "post",
                 data: formData,
                 processData: false,
@@ -168,7 +166,7 @@
 
                     if (responseData.hasOwnProperty('success')) {
                         console.log(responseData.success);
-                        window.location.href = "Teacher/pages/main.php";
+                        window.location.href = "pages/dashboard.php";
                     } 
                     else if (responseData.hasOwnProperty('error')) {
                         var msg = responseData.error;
@@ -196,6 +194,8 @@
                 }
             });
         });
+
+
     });
     </script>
 </body>

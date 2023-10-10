@@ -66,7 +66,7 @@ $(function() {
 
             success: function(response) {
                 console.log(response);
-                window.location.href = "../index.php";
+                window.location.href = "../admin.php";
             },
             error: arguments => {
                 console.log(arguments);

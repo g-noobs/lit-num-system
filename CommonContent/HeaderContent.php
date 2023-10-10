@@ -3,7 +3,7 @@ session_start();
 
 if ($_SESSION['loggedin'] !== true) {
     // Redirect the user to the login page
-    header('Location: ../index.php');
+    header('Location: ../admin.php');
     exit;
 } 
 ?>
