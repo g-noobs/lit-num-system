@@ -56,7 +56,7 @@ $(function() {
 
 
 <!-- Activate and Archive button -->
-<script>
+<!-- <script>
 $(document).ready(function() {
     // Click event for the edit icon
     $('.action').click(function() {
@@ -75,4 +75,4 @@ $(document).ready(function() {
         // Show the modal
     });
 });
-</script>
+</script> -->

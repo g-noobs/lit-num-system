@@ -18,6 +18,7 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- For level one sidebar menu -->
 <script>
 $(document).ready(function() {
     // Get the current page URL
