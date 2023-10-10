@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if ($_SESSION['loggedin'] !== true) {
+if ($_SESSION['admin'] !== true && $_SESSION['teacher'] !== false) {
     // Redirect the user to the login page
     header('Location: ../admin.php');
     exit;

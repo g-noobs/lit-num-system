@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<?php session_start(); $_SESSION['loggedin'] = false; ?>
+<?php session_start(); 
+$_SESSION['admin'] = false;
+$_SESSION['teacher'] = false;
+?>
 
 <head>
     <meta charset="utf-8">

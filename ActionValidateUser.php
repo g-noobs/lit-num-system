@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $isCorrect = $validate ->checkCreds($username, $password);
     
     if($isCorrect){
-        $_SESSION['loggedin'] = true;
+        $_SESSION['admin'] = true;
+        $_SESSION['teacher'] = false;
         $response = array('success' => "Success!");
         echo  json_encode($response);
     }
