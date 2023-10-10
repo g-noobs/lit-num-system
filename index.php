@@ -126,10 +126,10 @@
             <h4 class="modal-title">Welcome Teacher!</h4>
             <h5>Please Login using your Credentials</h5>
             <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Username" required="required">
+                <input type="text" name="username_teacher" class="form-control" placeholder="Username" required="required">
             </div>
             <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+                <input type="password" name="password_teacher" class="form-control" placeholder="Password" required="required">
             </div>
             <!-- <div class="form-group small clearfix">
                 <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
