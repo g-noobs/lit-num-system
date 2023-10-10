@@ -2,7 +2,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
- Jquery Dropdown Menu-->
+Jquery Dropdown Menu-->
 <script>
 $(document).ready(function() {
     // *This will disable the personal id input field if selected user is admin

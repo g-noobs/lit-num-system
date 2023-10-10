@@ -59,7 +59,7 @@ $(document).ready(function() {
             success: function(response) {
                 // reload div where the table is #mainContent
                 $("#mainContent").load(" #mainContent > *");
-                
+
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
@@ -68,7 +68,7 @@ $(document).ready(function() {
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut(
-                        "slow"); // Hide the .alert element after 1.5 seconds
+                            "slow"); // Hide the .alert element after 1.5 seconds
 
                         location.reload();
                     }, 1500);
@@ -81,9 +81,14 @@ $(document).ready(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut(
-                        "slow"); // Hide the .alert element after 1.5 seconds
+                            "slow"); // Hide the .alert element after 1.5 seconds
                         location.reload();
                     }, 1500);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    // Handle errors here
+                    $('#edit-user').modal('hide');
+                    console.log('ERRORS: ' + textStatus);
                 }
 
             }
