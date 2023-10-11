@@ -28,7 +28,7 @@
             <ul class="treeview-menu" style="display: none;">
                 <li>
                     <a href="user_all.php">
-                        <span>Admin</span>
+                        <span>All User</span>
                     </a>
                 </li>
                 <li>
