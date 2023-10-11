@@ -5,7 +5,7 @@
 // *This will disable the personal id input field if selected user is admin-->
 <script>
 $(document).ready(function() {
-    
+
     $('#user, #edit_user_option').on('change', function() {
         var selectedUser = $(this).val();
 
@@ -28,14 +28,14 @@ $(document).ready(function() {
 </script>
 
 <script>
-$(function(){
+$(function() {
     // $This manage the dropdown menu
-    $('.custom-dropdown-menu a').on('click',function(e) {
+    $('.custom-dropdown-menu a').on('click', function(e) {
         e.preventDefault();
         var userType = $(this).data('user-type');
         var contentPath = '';
 
-        
+
         if (userType === 'all-active') {
 
             contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
@@ -70,9 +70,7 @@ $(function(){
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
             $("#mainContent").fadeOut(400, function() {
-                $(this).empty().load(contentPath, function() {
-                    $(this).fadeIn(400);
-                });
+                $(this).empty().html(contentPath).fadeIn(400);
             });
         }
     });
@@ -89,9 +87,9 @@ $(function(){
 
 <!-- CSV for hiding and showing upload batch form -->
 <script>
-$(function(){
+$(function() {
     $('#frmCsvGroup').hide();
-    $('#csvUploadIcon').click(function(){
+    $('#csvUploadIcon').click(function() {
         $('#frmCsvGroup').fadeToggle("slow");
     });
 });
