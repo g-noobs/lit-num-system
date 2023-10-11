@@ -7,7 +7,7 @@ $(function() {
         var $hideModal = $('#add-user');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
         $.ajax({
-            url: '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php',
+            url: actionUrl,
             type: "POST",
             data: formData,
             processData: false,
@@ -35,7 +35,7 @@ $(function() {
 
                     // You can redirect to a different page or perform other actions here
                 } else if (responseData.hasOwnProperty('error')) {
-                    $('#add-user').modal('hide');
+                    $hideModal.modal('hide');
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
