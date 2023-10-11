@@ -51,14 +51,78 @@
     <!-- /.col -->
 </div>
 
-<!-- Script contain the Dropdown and Search -->
-<?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
+<!-- Jquery-- on user.php DOM> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Script for Adding a new user -->
-<?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
 
-<!-- Script for Editing a user -->
-<?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
+<!--// *This will disable the personal id input field if selected user is admin-->
+<script>
+$(document).ready(function() {
 
-<!-- Script for Archive and Activate a user -->
-<?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
+    $('#user, #edit_user_option').on('change', function() {
+        var selectedUser = $(this).val();
+
+        var $personalIdinput = $('#personal-id, #edit_personal_i');
+        var $personalIdFrmGrp = $("#personal_id_form, #edit_personal_id_form");
+
+        if (selectedUser === 'Admin') {
+            // Set personal_id as readonly and set its value to a default
+            $personalIdinput.prop("disabled", true);
+            $personalIdFrmGrp.fadeOut();
+
+
+        } else {
+            // If another option is selected, remove readonly and clear the value
+            $personalIdinput.prop("disabled", false);
+            $personalIdFrmGrp.fadeIn();
+        }
+    });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('.custom-dropdown-menu a').click(function(e) {
+        e.preventDefault();
+        var userType = $(this).data('user-type');
+        var contentPath = '';
+
+        if (userType === 'all-active') {
+            contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
+        } else if (userType === 'teacher') {
+            contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
+        } else if (userType === 'learner') {
+            contentPath = '../PagesContent/UserContent/UserTable/StudentTableContent.php';
+        } else if (userType === 'admin') {
+            contentPath = '../PagesContent/UserContent/UserTable/AdminTableContent.php';
+        } else if (userType === 'arch-all') {
+            contentPath = '../PagesContent/UserContent/UserTable/AllArchUsersTable.php';
+        } else if (userType === 'arch-admin') {
+            contentPath = '../PagesContent/UserContent/UserTable/ArchiveAdminTable.php';
+        } else if (userType === 'arch-teacher') {
+            contentPath = '../PagesContent/UserContent/UserTable/ArchivedTeacherTable.php';
+        } else if (userType === 'arch-learner') {
+            contentPath = '../PagesContent/UserContent/UserTable/ArchivedStudentTable.php';
+        }
+        $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+        if (contentPath !== '') {
+            $("#mainContent").fadeOut(400, function() {
+                $(this).load(contentPath, function() {
+                    $(this).fadeIn(400);
+                });
+            });
+        }
+    });
+});
+</script>
+
+<!-- CSV for hiding and showing upload batch form -->
+<script>
+$(function() {
+    $('#frmCsvGroup').hide();
+    $('#csvUploadIcon').click(function() {
+        $('#frmCsvGroup').fadeToggle("slow");
+    });
+});
+</script>
