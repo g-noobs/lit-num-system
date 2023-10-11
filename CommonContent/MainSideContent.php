@@ -12,11 +12,39 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="user.php">
                 <i class="fa fa-users"></i> <span>Manage User</span>
             </a>
+        </li> -->
+        <!-- // Tree view for user -->
+        <li class="treeview" style="height: auto;">
+            <a href="user.php">
+                <i class="fa fa-users"></i> <span>Manage User</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+                <li>
+                    <a href="user_admin.php">
+                        <span>Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user_teacher.php">
+                        <span>Teacher</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user_learner.php">
+                        <span>Learner</span>
+                    </a>
+                </li>
+            </ul>
         </li>
+
+        <!-- //Tree view for Lesson -->
         <li class="treeview" style="height: auto;">
             <a href="#">
                 <i class="fa fa-book"></i> <span>Manage Lesson</span>
