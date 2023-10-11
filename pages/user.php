@@ -45,7 +45,7 @@
                 </h2>
             </section>
 
-            <section>
+            <section class="container-fluid">
                 <div class="align-items-start">
                     <div class="col-xs-2">
                         <h4><b>Filter By: </b></h4>
@@ -154,7 +154,7 @@
         
         <!-- Script contain the Dropdown and Search -->
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
-        
+
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
