@@ -139,21 +139,22 @@
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
 
-        <!-- Script contain the Dropdown and Search -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
-
+        
         <!-- Script for Adding a new user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
-
+        
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
-
+        
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
-
+        
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
-
+        
+        <!-- Script contain the Dropdown and Search -->
+        <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
+        
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
