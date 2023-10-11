@@ -124,7 +124,8 @@
                     <button type="submit" id="submit" name="import" class="btn btn-success">Import
                         CSV and Save Data</button>
                 </div> -->
-
+            <!-- All Modal for user-->
+            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
 
             <!-- Main content -->
             <section class="content" id="mainContent">
@@ -132,8 +133,8 @@
                 <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
             </section>
         </div>
-        <!-- All Modal for user-->
-        <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+
+        
 
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
