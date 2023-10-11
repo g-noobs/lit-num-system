@@ -33,7 +33,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../../Database/DisplayAllTableClass.php");
+                        include_once("../Database/DisplayAllTableClass.php");
 
                         $table = "user_info_view";
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Admin' AND status = 'Active'";
@@ -54,7 +54,3 @@
 <!-- Jquery-- on user.php DOM> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-<?php include_once "../CommonUser/ArchiveActivateUserScript.php";?>
-<?php include_once "../CommonUser/ArchiveActivateUserScript.php";?>
-<?php include_once "../CommonUser/JQueryUser.php";?>

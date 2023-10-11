@@ -29,7 +29,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../../../Database/DisplayAllTableClass.php");
+                        include_once("../Database/DisplayAllTableClass.php");
                         $table = "user_info_view";
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Active';";
                         $userT = new DisplayAllTableClass();
@@ -45,3 +45,4 @@
     </div>
     <!-- /.col -->
 </div>
+

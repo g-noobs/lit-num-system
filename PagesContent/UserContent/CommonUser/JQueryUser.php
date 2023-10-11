@@ -13,13 +13,13 @@ $(document).ready(function() {
         var contentPath = '';
 
         if (userType === 'all-active') {
-            contentPath = '../PagesContent/UserContent/UserTable/AllActiveUserTable.php';
+            location.reload();
         } else if (userType === 'teacher') {
-            contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
+            location.reload();
         } else if (userType === 'learner') {
-            contentPath = '../PagesContent/UserContent/UserTable/StudentTableContent.php';
+            location.reload();
         } else if (userType === 'admin') {
-            contentPath = '../PagesContent/UserContent/UserTable/AdminTableContent.php';
+            location.reload();
         } else if (userType === 'arch-all') {
             contentPath = '../PagesContent/UserContent/UserTable/AllArchUsersTable.php';
         } else if (userType === 'arch-admin') {

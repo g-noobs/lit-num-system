@@ -55,26 +55,14 @@
 
                             <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
                                 style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                <b>All Users</b> <!-- Updated the button text -->
+                                <b>Teacher</b> <!-- Updated the button text -->
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
-                                <li><a href="#" data-user-type="all-active"><b>All Active Users</b></a></li>
-                                <li><a href="#" data-user-type="admin">Admin</a></li>
                                 <li><a href="#" data-user-type="teacher">Teacher</a></li>
-                                <li><a href="#" data-user-type="learner">Learner</a></li>
 
-
-                                <li><a href="#" data-user-type="arch-all"><b>All Archive Users</b></a></li>
-                                <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a>
+                                <li><a href="#" data-user-type="arch-teacher"><small>Archived Teacher</small></a>
                                 </li>
-                                <li><a href="#" data-user-type="arch-teacher"><small>Archived
-                                            Teacher</small></a>
-                                </li>
-                                <li><a href="#" data-user-type="arch-learner"><small>Archived
-                                            Learner</small></a>
-                                </li>
-
                             </ul>
                         </div>
                     </div>
@@ -130,7 +118,7 @@
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
-                <?php include_once "../PagesContent/UserContent/UserTable/AllUserTableContent.php";?>
+                <?php include_once "../PagesContent/UserContent/UserTable/TeacherTableContent.php";?>
             </section>
         </div>
 
