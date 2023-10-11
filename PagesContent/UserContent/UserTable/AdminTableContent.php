@@ -3,21 +3,21 @@
         <div class="box container">
             <div class="box-header">
                 <h3>Admin</h3>
-                
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
-                                <i class="fa fa-plus"></i> <span>Add Admin</span>
-                            </button>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="search-box">
-                                <i class="fa fa-search"></i>
-                                <input type="text" id="userInput" class="form-control" placeholder="Search..">
-                            </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                            <i class="fa fa-plus"></i> <span>Add Admin</span>
+                        </button>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="search-box">
+                            <i class="fa fa-search"></i>
+                            <input type="text" id="userInput" class="form-control" placeholder="Search..">
                         </div>
                     </div>
-                
+                </div>
+
             </div>
             <!-- /.box-header -->
 
@@ -50,3 +50,15 @@
     </div>
     <!-- /.col -->
 </div>
+
+<!-- Script contain the Dropdown and Search -->
+<?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
+
+<!-- Script for Adding a new user -->
+<?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
+
+<!-- Script for Editing a user -->
+<?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
+
+<!-- Script for Archive and Activate a user -->
+<?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
