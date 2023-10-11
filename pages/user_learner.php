@@ -47,15 +47,15 @@
 
             <section>
                 <div class="align-items-start">
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <h4><b>Filter By: </b></h4>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <div class="custom-dropdown">
 
                             <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
                                 style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                <b>All Users</b> <!-- Updated the button text -->
+                                <b>Learner</b> <!-- Updated the button text -->
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
@@ -68,10 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-2">
-                    </div>
-
-                    <div class="col-sm-6"></div>
+                    <div class="col-sm-10"></div>
                 </div>
             </section>
             <br>
