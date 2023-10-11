@@ -47,7 +47,7 @@
 
             <section>
                 <div class="align-items-start">
-                    <div class="col-xs-1">
+                    <div class="col-xs-2">
                         <h4><b>Filter By: </b></h4>
                     </div>
                     <div class="col-xs-2">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-3">
+                    <div class="col-xs-2">
                     </div>
 
                     <div class="col-xs-6"></div>
