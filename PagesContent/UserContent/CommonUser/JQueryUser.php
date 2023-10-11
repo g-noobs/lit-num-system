@@ -70,7 +70,10 @@ $(function() {
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
             $("#mainContent").fadeOut(400, function() {
-                $(this).empty().html(contentPath).fadeIn(400);
+                $(this).empty().load(contentPath, function() {
+                    $(this).html($(contentPath).html()); // Set the HTML content
+                    $(this).fadeIn(400);
+                });
             });
         }
     });
