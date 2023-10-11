@@ -12,6 +12,7 @@ $(document).ready(function() {
         fName = $(this).closest('tr').find('td:eq(3)').text();
         lName = $(this).closest('tr').find('td:eq(4)').text();
 
+        $('#act_usr_id').text(arch_usr_id);
         $('#arch_usr_name').text(fName + ' ' + lName);
     });
 
@@ -22,6 +23,7 @@ $(document).ready(function() {
         fName = $(this).closest('tr').find('td:eq(3)').text();
         lName = $(this).closest('tr').find('td:eq(4)').text();
 
+        $('#act_usr_id').text(userId);
         $('#act_usr_name').text(fName + ' ' + lName);
     });
 
