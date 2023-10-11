@@ -24,8 +24,11 @@ $(document).ready(function() {
             $personalIdFrmGrp.fadeIn();
         }
     });
+});
+</script>
 
-
+<script>
+$(function(){
     // $This manage the dropdown menu
     $('.custom-dropdown-menu a').on('click',function(e) {
         e.preventDefault();
