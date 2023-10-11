@@ -3,29 +3,6 @@
 
 
 // *This will disable the personal id input field if selected user is admin-->
-<script>
-$(document).ready(function() {
-
-    $('#user, #edit_user_option').on('change', function() {
-        var selectedUser = $(this).val();
-
-        var $personalIdinput = $('#personal-id, #edit_personal_i');
-        var $personalIdFrmGrp = $("#personal_id_form, #edit_personal_id_form");
-
-        if (selectedUser === 'Admin') {
-            // Set personal_id as readonly and set its value to a default
-            $personalIdinput.prop("disabled", true);
-            $personalIdFrmGrp.fadeOut();
-
-
-        } else {
-            // If another option is selected, remove readonly and clear the value
-            $personalIdinput.prop("disabled", false);
-            $personalIdFrmGrp.fadeIn();
-        }
-    });
-});
-</script>
 
 
 <script>
@@ -147,7 +124,7 @@ $(document).ready(function() {
             success: function(response) {
                 // reload div where the table is #mainContent
                 $("#mainContent").load(" #mainContent > *");
-                
+
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
@@ -156,7 +133,7 @@ $(document).ready(function() {
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut(
-                        "slow"); // Hide the .alert element after 1.5 seconds
+                            "slow"); // Hide the .alert element after 1.5 seconds
 
                         location.reload();
                     }, 1500);
@@ -168,7 +145,7 @@ $(document).ready(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut(
-                        "slow"); // Hide the .alert element after 1.5 seconds
+                            "slow"); // Hide the .alert element after 1.5 seconds
                         location.reload();
                     }, 1500);
                 }
@@ -185,3 +162,26 @@ $(document).ready(function() {
 </script>
 
 
+
+<script>
+$(document).ready(function() {
+    $('#user, #edit_user_option').on('change', function() {
+        var selectedUser = $(this).val();
+
+        var $personalIdinput = $('#personal-id, #edit_personal_i');
+        var $personalIdFrmGrp = $("#personal_id_form, #edit_personal_id_form");
+
+        if (selectedUser === 'Admin') {
+            // Set personal_id as readonly and set its value to a default
+            $personalIdinput.prop("disabled", true);
+            $personalIdFrmGrp.fadeOut();
+
+
+        } else {
+            // If another option is selected, remove readonly and clear the value
+            $personalIdinput.prop("disabled", false);
+            $personalIdFrmGrp.fadeIn();
+        }
+    });
+});
+</script>
