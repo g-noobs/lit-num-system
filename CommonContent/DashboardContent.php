@@ -16,7 +16,7 @@
       <div class="icon">
         <i class="ion ion-ios-people"></i>
       </div>
-      <a href="../pages/user_teacher.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+      <a href="../pages/user_all.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->
@@ -59,7 +59,7 @@
     <div class="icon">
       <i class="ion ion-person-add"></i>
     </div>
-    <a href="#" id="teacher-count" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    <a href="../pages/user_teacher.php" id="teacher-count" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->
