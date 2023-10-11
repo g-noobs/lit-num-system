@@ -44,7 +44,7 @@
                         </div>
                         <div class="form-group">
                             <label for="user">Select Type of User:</label>
-                            <select class="form-control" name="user" id="user_type" required>
+                            <select class="form-control" name="user" id="user" required>
                                 <option>Learner</option>
                                 <option>Teacher</option>
                                 <option>Admin</option>
