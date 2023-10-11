@@ -47,10 +47,10 @@
 
             <section class="container-fluid">
                 <div class="align-items-start">
-                    <div class="col-xs-2">
+                    <div class="col-sm-2">
                         <h4><b>Filter By: </b></h4>
                     </div>
-                    <div class="col-xs-2">
+                    <div class="col-sm-2">
                         <div class="custom-dropdown">
 
                             <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
@@ -79,10 +79,10 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-2">
+                    <div class="col-sm-2">
                     </div>
 
-                    <div class="col-xs-6"></div>
+                    <div class="col-sm-6"></div>
                 </div>
             </section>
             <br>
