@@ -28,7 +28,7 @@ $(document).ready(function() {
 </script>
 
 <script>
-$(function(){
+
     // $This manage the dropdown menu
     $('.custom-dropdown-menu a').on('click',function(e) {
         e.preventDefault();
@@ -84,7 +84,7 @@ $(function(){
         // Disable the select element
         $("#user_type").prop("disabled", true);
     }
-});
+
 </script>
 
 <!-- CSV for hiding and showing upload batch form -->
