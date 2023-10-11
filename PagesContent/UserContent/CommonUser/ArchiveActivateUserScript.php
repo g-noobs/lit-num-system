@@ -14,6 +14,7 @@ $(document).ready(function() {
 
         $('#arch_usr_id').text(userId);
         $('#arch_usr_name').text(fName + ' ' + lName);
+        $('#activateUserModal').modal('show');
     });
 
     $('.actvIconBtn').on('click', function(e) {
@@ -25,6 +26,7 @@ $(document).ready(function() {
 
         $('#act_usr_id').text(userId);
         $('#act_usr_name').text(fName + ' ' + lName);
+        $('#archiveUserModal').modal('show');
     });
 
     // Update user data when clicking the "Update" button
