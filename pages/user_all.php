@@ -41,16 +41,16 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h2>
-                    <b style="color:#3D3848;">Manage Users</b>
+                    <b style="color:#3D3848;">All Users</b>
                 </h2>
             </section>
 
             <section>
                 <div class="align-items-start">
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <h4><b>Filter By: </b></h4>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <div class="custom-dropdown">
 
                             <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
@@ -60,29 +60,13 @@
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
                                 <li><a href="#" data-user-type="all-active"><b>All Active Users</b></a></li>
-                                <li><a href="#" data-user-type="admin">Admin</a></li>
-                                <li><a href="#" data-user-type="teacher">Teacher</a></li>
-                                <li><a href="#" data-user-type="learner">Learner</a></li>
-
-
                                 <li><a href="#" data-user-type="arch-all"><b>All Archive Users</b></a></li>
-                                <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a>
-                                </li>
-                                <li><a href="#" data-user-type="arch-teacher"><small>Archived
-                                            Teacher</small></a>
-                                </li>
-                                <li><a href="#" data-user-type="arch-learner"><small>Archived
-                                            Learner</small></a>
-                                </li>
-
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-sm-2">
+                    <div class="col-sm-10">
                     </div>
-
-                    <div class="col-sm-6"></div>
                 </div>
             </section>
             <br>

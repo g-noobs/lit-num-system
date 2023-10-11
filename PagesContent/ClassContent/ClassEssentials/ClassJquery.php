@@ -49,7 +49,7 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
+<!-- <script>
 $(document).ready(function() {
 
     $("#add-class-info").hide();
@@ -66,5 +66,5 @@ $(document).ready(function() {
     });
 
 });
-</script>
+</script> -->
 
