@@ -55,7 +55,9 @@ $(document).ready(function() {
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
             $("#mainContent").fadeOut(400, function() {
-                $(this).load(contentPath, function() {
+                $(this).empty(); // Empty the div
+                $.get(contentPath, function(data) {
+                    $("#mainContent").html(data); // Replace with new content
                     $(this).fadeIn(400);
                 });
             });
