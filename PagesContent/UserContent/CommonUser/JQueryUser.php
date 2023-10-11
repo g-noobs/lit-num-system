@@ -80,9 +80,9 @@ $(function(){
     function updatModalForm(usertype) {
         // Modal title
         $('#modal-title').text('Enter ' + usertype + ' Information');
-        $("#user_type").val(usertype);
+        $("#user").val(usertype);
         // Disable the select element
-        $("#user_type").prop("disabled", true);
+        $("#user").prop("disabled", true);
     }
 });
 </script>
