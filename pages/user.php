@@ -45,7 +45,7 @@
                 </h2>
             </section>
 
-            <section class="container-fluid">
+            <section>
                 <div class="align-items-start">
                     <div class="col-sm-2">
                         <h4><b>Filter By: </b></h4>
