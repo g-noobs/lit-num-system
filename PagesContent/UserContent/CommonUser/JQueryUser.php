@@ -50,7 +50,7 @@ $(function() {
 });
 </script>
 
-
+<!-- Hide personal id tab if user is admin -->
 <script>
 $(document).ready(function() {
     $('#user, #edit_user_option').on('change', function() {
@@ -73,3 +73,5 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<!-- script for thead to stick at the top -->

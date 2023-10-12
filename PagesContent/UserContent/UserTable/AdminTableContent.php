@@ -1,3 +1,11 @@
+<style>
+    .table thead {
+        position: sticky;
+        top: 0;
+        background-color: #fff; /* Set your preferred background color */
+    }
+</style>
+
 <div class="row">
     <div class="col-xs-12">
         <div class="box container">
