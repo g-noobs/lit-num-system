@@ -9,11 +9,10 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <?php include_once("../bootstrap/css.php");?>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head>
 
-<body class="sidebar-mini skin-yellow fixed fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed style="height: 100%; min-height: 100%;">
+<body class="sidebar-mini skin-yellow fixed fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
+    style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
 
@@ -44,21 +43,21 @@
 
             </div> -->
             <!-- Modal for lesson -->
-            
-            
+
+
             <!-- Main content -->
             <section class="container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"
                     ?>
             </section>
-            
+
             <!-- Section for topic -->
             <section class="container" id="add-topic-panel">
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
-            
-            
-            
+
+
+
         </div>
         <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
     </div>
@@ -66,16 +65,16 @@
     <!-- ./wrapper -->
 
     <?php include_once("../bootstrap/js.php");?>
-    
+
     <!-- Script for adding lesson -->
-   <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
     <?php include_once "../CommonContent/CommonAllScript.php"?>
-    
+
     <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
 
 </body>

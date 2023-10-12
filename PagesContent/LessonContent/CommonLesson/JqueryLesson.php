@@ -1,5 +1,3 @@
-
-
 <!--Script below will be used for search -->
 <script>
 $(document).ready(function() {
@@ -15,15 +13,14 @@ $(document).ready(function() {
 </script>
 
 <script>
-$(".viewBtn").click(function() {
-    var buttonId = $(this).data("id");
-    var lessonName = $(this).closest('tr').find('td:eq(2)').text();
-    var url = "../PagesContent/LessonContent/ViewLessonFolder/LessonView.php?id=" + buttonId + "&name=" + lessonName;
-    //open lessonview.php in a new window with size
-    window.open(url, "_blank", "width=1000,height=700");
+$(function() {
+    $(".viewBtn").click(function() {
+        var buttonId = $(this).data("id");
+        var lessonName = $(this).closest('tr').find('td:eq(2)').text();
+        var url = "../PagesContent/LessonContent/ViewLessonFolder/LessonView.php?id=" + buttonId +
+            "&name=" + lessonName;
+        //open lessonview.php in a new window with size
+        window.open(url, "_blank", "width=1000,height=700");
+    });
 });
 </script>
-
-
-
-
