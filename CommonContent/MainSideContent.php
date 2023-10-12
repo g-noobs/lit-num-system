@@ -34,8 +34,7 @@
                                 <?php 
                                     include_once "../Database/ColumnCountClass.php";
                                     $columnCountClass = new ColumnCountClass();
-                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
-                                    echo $columnCountClass->columnCountNum($sql);
+                                    echo $columnCountClass->columnCount("user_info_Id","tbl_user_info");
                                 ?>
                             </small>
                         </span>
@@ -44,16 +43,46 @@
                 <li>
                     <a href="user_admin.php">
                         <span>Admin</span>
+                        <span class="pull-right-container">
+                            <small class="label pull-right bg-yelow">
+                                <?php 
+                                    include_once "../Database/ColumnCountClass.php";
+                                    $columnCountClass = new ColumnCountClass();
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 0;";
+                                    echo $columnCountClass->columnCountNum($sql);
+                                ?>
+                            </small>
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="user_teacher.php">
                         <span>Teacher</span>
+                        <span class="pull-right-container">
+                            <small class="label pull-right bg-yelow">
+                                <?php 
+                                    include_once "../Database/ColumnCountClass.php";
+                                    $columnCountClass = new ColumnCountClass();
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
+                                    echo $columnCountClass->columnCountNum($sql);
+                                ?>
+                            </small>
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="user_learner.php">
                         <span>Learner</span>
+                        <span class="pull-right-container">
+                            <small class="label pull-right bg-yelow">
+                                <?php 
+                                    include_once "../Database/ColumnCountClass.php";
+                                    $columnCountClass = new ColumnCountClass();
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 2;";
+                                    echo $columnCountClass->columnCountNum($sql);
+                                ?>
+                            </small>
+                        </span>
                     </a>
                 </li>
             </ul>
