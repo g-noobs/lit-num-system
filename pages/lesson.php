@@ -66,9 +66,11 @@
     </div>
 
     <!-- ./wrapper -->
-   
 
     <?php include_once("../bootstrap/js.php"); ?>
+    
+    <!-- Script for adding lesson -->
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/LessonScript.php");?>
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>

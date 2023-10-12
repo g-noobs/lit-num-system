@@ -6,7 +6,7 @@ class LessonDisplayClass extends Connection{
         parent :: __construct();
     }
 
-
+    // finction for showing category name options
     function displayCategoryList(){
         $sql = "SELECT 	category_id , category_name  FROM tbl_category WHERE category_status = 1";
         $result = $this->conn->query($sql);
@@ -14,6 +14,18 @@ class LessonDisplayClass extends Connection{
             while($row = $result->fetch_assoc()){
                 echo "<option value='{$row['category_id']}'>";
                 echo $row['category_name'];
+                echo "</option>";
+            }
+        }
+    }
+    // Function for showing subject name options
+    function displaySubjectlist(){
+        $sql = "SELECT 	subj_id , subj_name  FROM tbl_category WHERE subj_status = 1";
+        $result = $this->conn->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<option value='{$row['subj_id']}'>";
+                echo $row['subj_name'];
                 echo "</option>";
             }
         }
@@ -26,7 +38,7 @@ class LessonDisplayClass extends Connection{
                 echo "<tr>";
                 echo "<td><a href='#' class='edit' data-toggle='modal' data-toggle='tooltip' title='Edit Lesson'  data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
                 
-   
+
                 echo "<td>" . $row["lesson_id"] . "</td>";
                 echo "<td>" . $row["lesson_name"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";

@@ -16,11 +16,11 @@ $date = new PHPClass();
 $currentDate = $date->getFormattedCurrentDate();
 
 $lesson = array(
- 'lesson_id'=>$lesson_id,
- 'lesson_name'=>$_POST['lesson_name'],
- 'objective_id'=>$objective_id,
- 'topic_id'=>$topic_id,
- 'added_byID'=>$added_byID
+    'lesson_id'=>$lesson_id,
+    'lesson_name'=>$_POST['lesson_name'],
+    'objective_id'=>$objective_id,
+    'topic_id'=>$topic_id,
+    'added_byID'=>$added_byID
 );
 
 $objective = array(
@@ -86,8 +86,6 @@ foreach($_POST['class_check'] as $class_id){
     $sql .= "UPDATE tbl_class SET lesson_id = '$lesson_id' WHERE class_id = $class_id";
 
 }
-
-
 include_once("../../Database/AddDeleteClass.php");
 $addData = new AddDeleteClass();
 $addData->addManyData($sql, "../../pages/lesson.php");

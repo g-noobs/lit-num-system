@@ -1,4 +1,4 @@
-<div class="modal fade" id="add_lesson">
+<div class="modal fade" id="addLessonModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -6,8 +6,7 @@
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Enter Lesson Information</h4>
             </div>
-            <form role="form" action="../PagesContent/LessonContent/ActionLesson/ActionAddLesson.php"
-                onsubmit="return validateForm()" method="post">
+            <form id="addLessonForm" method="post">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
@@ -21,9 +20,18 @@
                                     $categoryList = new LessonDisplayClass();
                                     $categoryList->displayCategoryList();
                                 ?>
-                                
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="subj_list">Select a level of Category</label>
+                            <select class="form-control" name="subj_list">
+                                <?php include_once("../Database/LessonDisplayClass.php");
+                                    $subjList = new LessonDisplayClass();
+                                    $subjList->displaySubjectlist();
+                                ?>
+                            </select>
+                        </div>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-warning pull-left">Add Lesson</button>
