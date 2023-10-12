@@ -2,8 +2,9 @@
     .table thead {
         position: sticky;
         top: 0;
-        background-color: gray;
-        bordered: 1px solid #ccc;
+        color: white; /* Set the text color to white */
+        background-color: black;
+        border: 1px solid #ccc;
         /* background-color: #fff; Set your preferred background color */
     }
 </style>
