@@ -69,7 +69,7 @@
         <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
     </div>
 
-    <!-- !! STILL AN ISSUE with hiding the modal  -->
+    <!-- !! STILL AN ISSUE with hiding the modal fro adding lesson  -->
     <!-- ./wrapper -->
 </body>
 
