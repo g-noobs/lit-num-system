@@ -70,9 +70,10 @@
     <?php include_once("../bootstrap/js.php"); ?>
     
     <!-- Script for adding lesson -->
-    <?php include_once("../PagesContent/LessonContent/CommonLesson/LessonScript.php");?>
+   <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
     <?php include_once "../CommonContent/CommonAllScript.php"?>

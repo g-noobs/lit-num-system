@@ -4,7 +4,7 @@ $(function(){
         e.preventDefault();
         var formData = new FormData(this);
         var $hideModal = $('#addLessonModal');
-        var actionUrl = '../PagesContent/LessonContent/ActionLesson/ActionAddLesson.php'';
+        var actionUrl = '../PagesContent/LessonContent/ActionLesson/ActionAddLesson.php';
         $.ajax({
             url: actionUrl,
             type: "POST",

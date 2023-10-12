@@ -56,10 +56,8 @@
                 <tbody>
                     <?php 
                         include_once("../Database/LessonDisplayClass.php");
-                        $table = "lesson_view";
-                        $sql = "SELECT * FROM ".$table;
                         $userT = new LessonDisplayClass();
-                        $userT->lessonTable($sql);
+                        $userT->lessonTable();
                         ?>
                 </tbody>
             </table>

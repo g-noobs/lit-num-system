@@ -44,9 +44,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     echo json_encode($response);
                 } else {
                     // Some other error
-                    throw $e;
-                    $response = array('error' => "Something went wrong". $e);
+                    $response = array('error' => 'Something went wrong' . $e);
                     echo json_encode($response);
+                    throw $e;
+                    
                 }
             }
             //add a catch for foreign key constraits fails

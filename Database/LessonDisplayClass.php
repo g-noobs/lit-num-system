@@ -20,7 +20,7 @@ class LessonDisplayClass extends Connection{
     }
     // Function for showing subject name options
     function displaySubjectlist(){
-        $sql = "SELECT 	subj_id , subj_name  FROM tbl_category WHERE subj_status = 1";
+        $sql = "SELECT 	subj_id , subj_name  FROM tbl_subject WHERE subj_status = 1";
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -31,7 +31,9 @@ class LessonDisplayClass extends Connection{
         }
     }
 
-    function lessonTable($sql){
+    function lessonTable(){
+        $table = "lesson_view";
+        $sql = "SELECT * FROM ".$table;
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -42,6 +44,7 @@ class LessonDisplayClass extends Connection{
                 echo "<td>" . $row["lesson_id"] . "</td>";
                 echo "<td>" . $row["lesson_name"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";
+                echo "<td>" . $row["subj_name"] . "</td>";
                 
                 echo "<td><a href='#' class='viewBtn' type='button' data-toggle='tooltip' title='View Lesson' data-id='" . $row["lesson_id"] . "'> <i class='fa fa-eye'></i> </a></td>";
                 echo "<td><a href='#' class='addBtn text-success' type='button' data-toggle='tooltip' title='Add Lesson'  data-id='" . $row["lesson_id"] . "'><i class='fa fa-plus'></i></a></td>";
