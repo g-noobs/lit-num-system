@@ -14,8 +14,8 @@
                             <input type="text" name="lesson_name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="level_learning">Select a level of Category</label>
-                            <select class="form-control" name="level_learning">
+                            <label for="category_level">Select a level of Category</label>
+                            <select class="form-control" name="category_level">
                                 <?php include_once("../Database/LessonDisplayClass.php");
                                     $categoryList = new LessonDisplayClass();
                                     $categoryList->displayCategoryList();

@@ -83,8 +83,8 @@ if($isValid AND $isIdvalid) {
     catch(mysqli_sql_exception $e){
         if ($e->getCode() == 1062){
           //Duplicate entry
-          $response = array('error' => $data." already exists. Please try again");
-          echo json_encode($response);
+            $response = array('error' => $data." already exists. Please try again");
+            echo json_encode($response);
         }
         else{
             throw $e;
