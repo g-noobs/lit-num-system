@@ -2,6 +2,8 @@
     .table thead {
         position: sticky;
         top: 0;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
         /* background-color: #fff; Set your preferred background color */
     }
 </style>
