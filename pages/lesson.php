@@ -9,6 +9,12 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <?php include_once("../bootstrap/css.php");?>
+    <style>
+    body {
+        overflow: hidden;
+    }
+    </style>
+
 </head>
 
 <body class="sidebar-mini skin-yellow fixed fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
@@ -34,32 +40,21 @@
                     <b style="color:#3D3848;">Manage Lesson</b>
                 </h1>
             </section>
-            <br>
-            <!-- <div class="container well">
-
-                <a href="lesson.php" type="button" class="btn btn-default" id="lesson-btn">Lesson</a>
-                <button type="button" class="btn btn-default">Quiz</button>
-                <button type="button" class="btn btn-default">Assignment</button>
-
-            </div> -->
-            <!-- Modal for lesson -->
-
             
+
             <!-- Main content -->
             <section class="container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"
                     ?>
+                    <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
             </section>
 
             <!-- Section for topic -->
             <section class="container" id="add-topic-panel">
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
-
-
-
         </div>
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
+        
         <?php include_once("../bootstrap/js.php");?>
 
         <!-- Script for adding lesson -->
@@ -74,10 +69,8 @@
         <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
     </div>
 
+    <!-- !! STILL AN ISSUE with hiding the modal  -->
     <!-- ./wrapper -->
-
-
-
 </body>
 
 </html>
