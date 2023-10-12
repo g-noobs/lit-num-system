@@ -1,13 +1,3 @@
-<style>
-    .table thead {
-        position: sticky;
-        top: 0;
-        color: white; /* Set the text color to white */
-        background-color: black;
-        border: 1px solid #ccc;
-        /* background-color: #fff; Set your preferred background color */
-    }
-</style>
 
 <div class="row">
     <div class="col-xs-12">
