@@ -9,6 +9,9 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <?php include_once("../bootstrap/css.php");?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="path/to/bootstrap.min.js"></script>
+
 </head>
 
 <body class="sidebar-mini skin-yellow fixed fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
