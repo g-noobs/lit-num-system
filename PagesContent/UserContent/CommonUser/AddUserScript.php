@@ -17,12 +17,7 @@ $(function() {
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
                     // reload div where the table is #mainContent
-                    $("#mainContent").load(" #mainContent > *");
-                    // $("#mainContent").fadeOut(400, function() {
-                    //     $(this).empty().load("#mainContent > *", function() {
-                    //         $(this).fadeIn(400);
-                    //     });
-                    // });
+                    $("#mainContent").load(location.href+" #mainContent>*","");
 
 
                     $hideModal.modal('hide');
