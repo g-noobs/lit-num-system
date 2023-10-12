@@ -87,9 +87,9 @@ if($isValid AND $isIdvalid) {
             echo json_encode($response);
         }
         else{
-            throw $e;
             $response = array('error' => $e);
             echo json_encode($response);
+            throw $e;
         }
     }
 }

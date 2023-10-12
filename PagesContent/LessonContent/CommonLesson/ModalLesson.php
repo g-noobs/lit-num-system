@@ -6,7 +6,7 @@
                     <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Enter Lesson Information</h4>
             </div>
-            <form id="addLessonForm" method="post">
+            <form id="addLessonForm">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
@@ -37,7 +37,6 @@
                         <button type="submit" class="btn btn-warning pull-left">Add Lesson</button>
                         <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                     </div>
-
             </form>
         </div>
         <!-- /.modal-content -->

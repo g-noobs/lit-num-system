@@ -6,15 +6,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'lesson_id'=>'',
             'lesson_name' => trim($_POST['lesson_name']),
             'category_id' => $_POST['category_level'],
-            'added_byID ' => '',
+            'added_byID' => '',
             'subj_id' => $_POST['subj_list'],
             'lesson_status' => '1'
         );
         
         //get the lesson id with zeros
+        include_once "../../../Database/ColumnCountClass.php";
         $lesson_count = new ColumnCountClass();
         $values['lesson_id'] = "LSN". $lesson_count->columnCountWhere("lesson_id","tbl_lesson");
         
+        //place id for added_byID
+        $values['added_byID']= $_SESSION['id'];
+
+        include_once "../../../Database/SanitizeCrudClass.php";
         $table = "tbl_lesson";
         $addLesson = new SanitizeCrudClass();
         $columns = implode(', ', array_keys($values));
@@ -24,17 +29,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //Check if there is duplicate of lesson name  in tbl_lesson
         include_once "../../../Database/CommonValidationClass.php";
         $check = new CommonValidationClass();
-        $data = $lesson_name;
+        $data = $values['lesson_name'];
         $column = 'lesson_name';
         $isDuplicate = $check -> validateOneColumn($table, $column, $data);
         
         if($isDuplicate){
             try{
                 $addLesson->executePreState($query,$params);
-                if($addLesson){
-                    $response = array('success' => $data." has been added");
-                    echo json_encode($response);
-                }
+                $response = array('success' => $data." has been added");
+                echo json_encode($response);
 
                 
             } catch (mysqli_sql_exception $e) {

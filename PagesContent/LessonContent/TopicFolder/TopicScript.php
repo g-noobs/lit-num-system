@@ -13,7 +13,7 @@
     </script>
 
 <!-- Script for pulling and viewing content-->
-<script>
+<!-- <script>
     $(function(){
         var arrays = []; // Array to store arrays received from the backend
         var currentArrayIndex = 0; // Index of the currently displayed array
@@ -91,4 +91,4 @@
         });
 
     });
-</script>
+</script> -->

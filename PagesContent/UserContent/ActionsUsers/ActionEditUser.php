@@ -67,19 +67,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         catch(Exception $e){
             if ($e->getCode() == 1062) {
                 // Duplicate entry
-              $response = array("error" => $data." already exists. Please try again");
+              $response = array("error" => "Data already exists. Please try again");
               echo json_encode($response);
           
               } else {
                 // Some other error
-                throw $e;
                 $response = array("error" => $e);
                 echo json_encode($response);
+                throw $e;
+                
               }
         }
     }
     else{
-        $response = array("error" => $data." already exists. Please try again");
+        $response = array("error" => " Data already exists. Please try again");
         echo json_encode($response);
     }
 } 

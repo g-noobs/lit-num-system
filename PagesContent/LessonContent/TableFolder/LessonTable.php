@@ -31,8 +31,7 @@
             <br>
             <div class="row">
                 <div class="col-xs-6">
-                    <button type="button" class="btn btn-warning btn-sm" data-toggle='modal' data-toggle='tooltip'
-                        title='Add New Lesson' data-target="#addLessonModal">
+                    <button type="button" class="btn btn-warning btn-sm" data-toggle='modal' data-target="#addLessonModal">
                         <i class="fa fa-plus"></i> <span> Add Lesson</span>
                     </button>
                 </div>

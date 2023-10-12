@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -11,12 +10,9 @@
 
     <?php include_once("../bootstrap/css.php");?>
 
-    <?php include_once("../CommonPHPClass/ModifiedDropdown.php");?>
-
 </head>
 
-<body class="sidebar-mini skin-yellow fixed fixed
-" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed style="height: 100%; min-height: 100%;">
+<body class="sidebar-mini skin-yellow fixed fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
 
@@ -46,28 +42,29 @@
                 <button type="button" class="btn btn-default">Assignment</button>
 
             </div> -->
-
+            <!-- Modal for lesson -->
+            
+            
             <!-- Main content -->
-
             <section class="container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"
                     ?>
             </section>
-
-
+            
+            <!-- Section for topic -->
             <section class="container" id="add-topic-panel">
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
-
-
+            
+            
+            
         </div>
         <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
-        <?php include_once "../CommonContent/ErrorModal.php"?>
     </div>
 
     <!-- ./wrapper -->
 
-    <?php include_once("../bootstrap/js.php"); ?>
+    <?php include_once("../bootstrap/js.php");?>
     
     <!-- Script for adding lesson -->
    <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>

@@ -1,9 +1,11 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
-$(function(){
+$(document).ready(function() {
     $("#addLessonForm").on("submit", function(e) {
         e.preventDefault();
         var formData = new FormData(this);
-        var $hideModal = $('#addLessonModal');
+        
         var actionUrl = '../PagesContent/LessonContent/ActionLesson/ActionAddLesson.php';
         $.ajax({
             url: actionUrl,
@@ -15,22 +17,36 @@ $(function(){
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
-                    $hideModal.modal('hide');
-                    $('#successAlert').text(responseData.success);
+                    var msg = responseData.success;
+                    $('#addLessonModal').hide();
+                    $('#successAlert').text(msg);
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
                         location.reload();
                     }, 1500);
                 }else if (responseData.hasOwnProperty('error')) {
-                    $hideModal.modal('hide');
-                    $('#errorAlert').text(responseData.error);
+                    var msg = responseData.error;
+                    $('#addLessonModal').hide();
+                    $('#errorAlert').text(msg);
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
                         location.reload();
                     }, 1500);
                 }
+            },
+            error: function(response) {
+                console.log(response);
+                var msg = "Possible Ajax issue!"
+                $('#errorMessage').text(msg);
+                $('#errorModal').modal('show');
+
+                setTimeout(function() {
+                    $("#errorModal").fadeOut(
+                    "slow"); // Hide the .alert element after 3 seconds
+                    location.reload();
+                }, 1500);
             }
         });
     });

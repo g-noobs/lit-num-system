@@ -14,11 +14,11 @@
 
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 
-<style>
+<!-- <style>
 /* body {
     overflow: hidden;
 } */
-</style>
+</style> -->
 
 <body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
