@@ -29,6 +29,16 @@
                 <li>
                     <a href="user_all.php">
                         <span>All User</span>
+                        <span class="pull-right-container">
+                            <small class="label pull-right bg-yelow">
+                                <?php 
+                                    include_once "../Database/ColumnCountClass.php";
+                                    $columnCountClass = new ColumnCountClass();
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
+                                    echo $columnCountClass->columnCountNum($sql);
+                                ?>
+                            </small>
+                        </span>
                     </a>
                 </li>
                 <li>
