@@ -16,15 +16,12 @@ $(function() {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
-                    // reload div where the table is #mainContent
-                    $("#mainContent").load(location.href+" #mainContent>*","");
-
-
                     $hideModal.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
+                        location.reload();
                     }, 1500);
 
 
@@ -35,7 +32,7 @@ $(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-
+                        location.reload();
                     }, 1500);
                 }
             },
@@ -46,6 +43,7 @@ $(function() {
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
+                    location.reload();
                 }, 1500);
             }
 
