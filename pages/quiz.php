@@ -80,13 +80,19 @@ body {
             </section>
 
             <section class="content" id="quizContent">
-                <?php include_once("../PagesContent/QuizContent/TableQuiz/AllQuiz.php");?>
+                <?php include_once("../PagesContent/QuizFolder/TableQuiz/QuizMainTable.php");?>
+            </section>
+
+            <section class="content" id="addQquizSection">
 
             </section>
-            <!-- Main content -->
-            <?php include_once("../bootstrap/js.php");?>
-            <?php include_once "../CommonContent/ErrorModal.php"?>
-            <?php include_once "../CommonContent/CommonAllScript.php"?>
+            <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
+           
+        </div>
+        <!-- Main content -->
+        <?php include_once("../bootstrap/js.php");?>
+        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizScript.php"?>
+        <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>
 
 </html>

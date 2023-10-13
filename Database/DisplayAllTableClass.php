@@ -77,28 +77,6 @@ class DisplayAllTableClass extends Connection{
                 echo "</tr>";
             }
         }
-        
-    }
-
-    function quizTable($sql){
-        $result = $this->conn->query($sql);
-        if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()){
-                echo "<tr>";
-                echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id=''><span class='glyphicon glyphicon-edit'></span></a></td>";
-                echo "<td>".$row["quiz_id"]. "</td>";
-                echo "<td>".$row["quiz_question"]. "</td>";
-                echo "<td>".$row["quiz_selectionA"]. "</td>";
-                echo "<td>".$row["quiz_selectionB"]. "</td>";
-                echo "<td>".$row["quiz_selectionC"]. "</td>";
-                echo "<td>".$row["quiz_selectionD"]. "</td>";
-                echo "<td>".$row["story_id"]. "</td>";
-                echo "<td>".$row["writer_id"]. "</td>";
-                echo "<td>".$row["score"]. "</td>";
-                echo "<td>".$row["date_created"]. "</td>";
-                echo "</tr>";
-            }
-        }
     }
 }
 ?>
