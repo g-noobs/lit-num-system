@@ -17,6 +17,7 @@
         overflow: hidden;
     }
     </style>
+<?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 <body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
@@ -40,7 +41,7 @@
                 </h1>
             </section>
             <br>
-            <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
+            
             <!-- Main content -->
             <section class="container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"?>
@@ -53,7 +54,7 @@
         </div>
     </div>
     <?php include_once("../bootstrap/js.php");?>
-
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
     <!-- Script for adding lesson -->
     <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
 
@@ -61,9 +62,8 @@
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
-    <?php include_once "../CommonContent/CommonAllScript.php"?>
-
     <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
+    <?php include_once "../CommonContent/CommonAllScript.php"?>
     <!-- !! STILL AN ISSUE with hiding the modal fro adding lesson  -->
     <!-- ./wrapper -->
 </body>
