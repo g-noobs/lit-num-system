@@ -16,7 +16,7 @@ $(document).ready(function() {
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
                     var msg = responseData.success;
-                    $('#addLessonModal').hide();
+                    $('#addLessonModal').modal('hide');
                     $('#successAlert').text(msg);
                     $('#successBanner').show();
                     setTimeout(function() {
@@ -25,7 +25,7 @@ $(document).ready(function() {
                     }, 1500);
                 }else if (responseData.hasOwnProperty('error')) {
                     var msg = responseData.error;
-                    $('#addLessonModal').hide();
+                    $('#addLessonModal').modal('hide');
                     $('#errorAlert').text(msg);
                     $('#errorBanner').show();
                     setTimeout(function() {
