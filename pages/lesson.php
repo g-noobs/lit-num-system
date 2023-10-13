@@ -41,7 +41,7 @@
                 </h1>
             </section>
             <br>
-
+            <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
             <!-- Main content -->
             <section class="container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"?>
@@ -52,22 +52,19 @@
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
         </div>
-        
-        <?php include_once("../bootstrap/js.php");?>
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
-        
-        <!-- Script for adding lesson -->
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
-
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
-
-        <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
-
-        <?php include_once "../CommonContent/CommonAllScript.php"?>
-
-        <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
     </div>
+    <?php include_once("../bootstrap/js.php");?>
 
+    <!-- Script for adding lesson -->
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
+
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
+
+    <?php include_once "../CommonContent/CommonAllScript.php"?>
+
+    <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
     <!-- !! STILL AN ISSUE with hiding the modal fro adding lesson  -->
     <!-- ./wrapper -->
 </body>

@@ -27,7 +27,6 @@
                         <div class="form-group">
                             <label for="gender">Select Gender:</label>
                             <select class="form-control" name="gender" placeholder="Gender" required>
-
                                 <option>Male</option>
                                 <option>Female</option>
                                 <option>None</option>
