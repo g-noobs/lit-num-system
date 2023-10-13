@@ -9,15 +9,15 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <?php include_once("../bootstrap/css.php");?>
+
+
+</head>
     <style>
     body {
         overflow: hidden;
     }
     </style>
-
-</head>
-<body class="sidebar-mini skin-yellow fixed fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
-    style="height: 100%; min-height: 100%;">
+<body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
 
