@@ -40,13 +40,11 @@
                     <b style="color:#3D3848;">Manage Lesson</b>
                 </h1>
             </section>
-            
+            <br>
 
             <!-- Main content -->
             <section class="container" id="lesson-table">
-                <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"
-                    ?>
-                    <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
+                <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"?>
             </section>
 
             <!-- Section for topic -->
@@ -56,7 +54,8 @@
         </div>
         
         <?php include_once("../bootstrap/js.php");?>
-
+        <?php include_once("../PagesContent/LessonContent/CommonLesson/ModalLesson.php");?>
+        
         <!-- Script for adding lesson -->
         <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
 

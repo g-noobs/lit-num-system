@@ -17,6 +17,11 @@ class LessonDisplayClass extends Connection{
                 echo "</option>";
             }
         }
+        else{
+            echo"<option>";
+            echo "No category Level Available";
+            echo "</option>";
+        }
     }
     // Function for showing subject name options
     function displaySubjectlist(){
@@ -28,6 +33,11 @@ class LessonDisplayClass extends Connection{
                 echo $row['subj_name'];
                 echo "</option>";
             }
+        }
+        else{
+            echo"<option>";
+            echo "No Subject Available";
+            echo "</option>";
         }
     }
 
