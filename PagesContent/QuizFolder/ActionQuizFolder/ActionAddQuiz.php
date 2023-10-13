@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'quiz_id' => '',
             'quiz_name' => $_POST['quiz_name'],
             'quiz_instruction' => $_POST['quiz_instruction'],
-            'quiz_creation_date	' => '',
+            'quiz_creation_date' => '',
             'quiz_added_by' => '',
             'topic_id' => $_POST['topic_id'],
             'quiz_status' => '1'
@@ -22,8 +22,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $currentDate = new DateTime();
         $values['quiz_creation_date'] = $currentDate->format('Y-m-d H:i:s');
         
-        include_once "../../../Database/SanitizeCrudClass.php";
-        $table = "tbl_quiz";
         
         include_once "../../../Database/SanitizeCrudClass.php";
         $table = "tbl_quiz";
