@@ -46,7 +46,8 @@ class ColumnCountClass extends Connection{
             $value = str_pad($count + 1, 6, '0', STR_PAD_LEFT);
             return $value;
         } else {
-            $value = str_pad(0 + 1, 6, '0', STR_PAD_LEFT);
+            $count = 0;
+            $value = str_pad($count + 1, 6, '0', STR_PAD_LEFT);
             return $value;
         }
     }
