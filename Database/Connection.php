@@ -8,17 +8,17 @@ class Connection{
 
     public function __construct(){
         //! This bellow will be used for online deployment
-        // $this->host = "156.67.222.1";  // Replace with your server name
-        // $this->username = "u170333284_admin";  // Replace with your MySQL username
-        // $this->password = "Capstone1!";  // Replace with your MySQL password
-        // $this->database = "u170333284_db_tagakaulo";  // Replace with your database name
-        // $this->connect();
-
-        $this->host = "localhost:3306";  // Replace with your server name
-        $this->username = "admin";  // Replace with your MySQL username
-        $this->password = "admin";  // Replace with your MySQL password
+        $this->host = "156.67.222.1";  // Replace with your server name
+        $this->username = "u170333284_admin";  // Replace with your MySQL username
+        $this->password = "Capstone1!";  // Replace with your MySQL password
         $this->database = "u170333284_db_tagakaulo";  // Replace with your database name
         $this->connect();
+
+        // $this->host = "localhost:3306";  // Replace with your server name
+        // $this->username = "admin";  // Replace with your MySQL username
+        // $this->password = "admin";  // Replace with your MySQL password
+        // $this->database = "u170333284_db_tagakaulo";  // Replace with your database name
+        // $this->connect();
     }
     public function connect(){
         $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database);
