@@ -11,11 +11,11 @@
 </head>
 
 
-<style>
+<!-- <style>
 body {
     overflow: hidden;
 }
-</style>
+</style> -->
 
 
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
@@ -84,6 +84,10 @@ body {
             </section>
 
             <section class="content" id="addQquizSection">
+                <?php include_once "../Database/QuizDisplayClass.php";
+                    $quizList = new QuizDisplayClass();
+                    $quizList->displayQuestionAnswers();
+                ?>
 
             </section>
             <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
