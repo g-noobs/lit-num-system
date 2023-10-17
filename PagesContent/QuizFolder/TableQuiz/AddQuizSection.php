@@ -8,9 +8,9 @@
                     </button>
                 </div>
             </div>
-            <form id="addQuizForm" action="post">
-                <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
+            <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
 
+                <form id="addQuizForm" action="post">
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="form-group">
@@ -55,12 +55,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <button id="submit" class="btn btn-warning">Submit</button>
-                            <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
                         </div>
                     </div>
-                </div>
-            </form>
+                    <div class=row>
+                        <button id="submit" class="btn btn-warning">Submit</button>
+                        <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
+                    </div>
+                </form>
+                <!-- /..End of Form -->
+            </div>
+            <!-- /.. End of box body -->
         </div>
     </div>
 </div>
