@@ -84,9 +84,6 @@ body {
             <section class="content" id="quizContent">
                 <?php include_once("../PagesContent/QuizFolder/TableQuiz/QuizMainTable.php");?>
             </section>
-
-            
-        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
         </div>
         <!-- Main content -->
         <?php include_once("../bootstrap/js.php");?>
