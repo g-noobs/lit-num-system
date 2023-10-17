@@ -122,7 +122,7 @@ $(function() {
         var trueFalse = "";
         var multipleChoice = "";
 
-        if (selectedoption === 0) {
+        if (selectedoption === "0") {
             
 
         } else if (selectedoption === "1") {
