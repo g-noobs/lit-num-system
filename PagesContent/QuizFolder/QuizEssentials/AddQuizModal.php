@@ -19,7 +19,7 @@
                             <input type="text" name="quiz_instruction" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="topic_id_label">Select a level of Category</label>
+                            <label for="topic_id_label">Select Topic</label>
                             <select class="form-control" name="topic_id">
                                 <?php include_once("../Database/QuizDisplayClass.php");
                                     $topicList = new QuizDisplayClass();
