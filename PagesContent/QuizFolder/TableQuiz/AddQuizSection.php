@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group">
-                                <label for="quiz_answer">Correct</label>
+                                <label for="quiz_answer">Correct Answer</label>
                                 <input type="text" name="quiz_answer" id="quiz_answer" class="form-control" required>
                             </div>
                             <div class="row">
@@ -55,15 +55,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <button id="submit" class="btn btn-warning">Submit</button>
+                            <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
                         </div>
                     </div>
                 </div>
+            </form>
         </div>
-        <div class="box-footer">
-            <button id="submit" class="btn btn-warning">Submit</button>
-            <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
-        </div>
-        </form>
     </div>
 </div>
 
