@@ -74,7 +74,7 @@
     <div class="icon">
       <i class="ion ion-ios-paper"></i>
     </div>
-    <a href="../pages/reports.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+    <a href="../pages/quiz.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->
