@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 </style> -->
-
+<?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: 100%; min-height: 100%;">
 

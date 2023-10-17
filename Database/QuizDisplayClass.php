@@ -73,7 +73,9 @@ class QuizDisplayClass extends Connection{
             }
         }
     }
-    // function displayQuestionAnswers(){
+}
+?>
+    <!-- // function displayQuestionAnswers(){
     //     // quiz_id will still depends on the quiz that is selected
     //     $sql = "SELECT * FROM tbl_quiz;";
     //     $result = $this->conn->query($sql);
@@ -98,6 +100,4 @@ class QuizDisplayClass extends Connection{
     //     } else {
     //         echo "No Data";
     //     }
-    // }
-}
-?>
+    // } -->
