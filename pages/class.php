@@ -47,16 +47,6 @@ body {
                 <?php include_once("../PagesContent/ClassContent/TableClass/ClassTableContent.php"); ?>
             </section>
 
-            <section class="content" id="add-class-info" style="display: block;">
-                <form role="form" action="../PagesContent/ClassContent/ActionFolder/AddClassAction.php" method="post"
-                    id="form-add-class" class="container well">
-
-                    <?php include_once("../PagesContent/ClassContent/AddClassFolder/AddClassInfo.php")?>
-                </form>
-
-            </section>
-
-
         </div>
         <!-- ./wrapper -->
 
