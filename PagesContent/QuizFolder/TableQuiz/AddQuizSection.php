@@ -36,8 +36,9 @@
                                     <option></option>
                                     <option></option>
                                 </select>
-                                <small>*Choose the correct answer based on the option provided</small>
                             </div>
+                            <small>*Choose the correct answer based on the option provided</small>
+                            
                             <div class="row">
                                 <div class="col-xs-6">
                                     <div class="form-group">
