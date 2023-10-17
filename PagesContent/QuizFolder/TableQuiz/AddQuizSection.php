@@ -68,7 +68,7 @@
         <!-- /.. End of box body -->
     </div>
 </div>
-</div>
+<!-- /.. End of row for AddQuizSection-->
 
 
 
