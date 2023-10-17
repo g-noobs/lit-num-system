@@ -16,8 +16,8 @@
                             <div class="form-group">
                                 <label for="quiz_type_option">Type of Quiz</label>
                                 <select name="quiz_type_option" id="quiz_type_option" class="form-control" requried>
-                                    <option value="0">True or False</option>
-                                    <option value="1">Multiple Choice</option>
+                                    <option value="0">Multiple Choice</option>
+                                    <option value="1">True or False</option>
                                     <option value="2">Essay</option>
                                 </select>
                             </div>
@@ -27,7 +27,7 @@
                                     class="form-control" style="resize: vertical;" required></textarea>
                             </div>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-6" id = "set_answer_col">
                             <div class="form-group">
                                 <label for="quiz_answer">Set the Correct Answer</label>
                                 <select name="quiz_answer" id="quiz_answer">
