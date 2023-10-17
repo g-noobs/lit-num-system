@@ -11,18 +11,25 @@
             <br>
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <form id="addQuizForm" action="post">
-                    <div class="form-group">
-                        <label for="quiz_type">Type of Quiz</label>
-                        <select name="quiz_type" id="quiz_type_id">
-                            <option value="0">Multiple Choice</option>
-                            <option value="1">True or False</option>
-                            <option value="2">Essay</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question" class="control-label">Description:</label>
-                        <textarea name="question" id="question" cols="60" rows="5" class="form-control"
-                            style="resize: vertical;" required></textarea>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="quiz_type">Type of Quiz</label>
+                                <select name="quiz_type" id="quiz_type_id" class="form-control" requried>
+                                    <option value="0">Multiple Choice</option>
+                                    <option value="1">True or False</option>
+                                    <option value="2">Essay</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="question" class="control-label">Description:</label>
+                                <textarea name="question" id="question" cols="60" rows="5" class="form-control"
+                                    style="resize: vertical;" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-6" id="options">
+
+                        </div>
                     </div>
                 </form>
             </div>
