@@ -10,7 +10,7 @@
             </div>
             <br>
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-               <form id="addQuizForm" action="post">
+                <form id="addQuizForm" action="post">
                     <div class="form-group">
                         <label for="quiz_type">Type of Quiz</label>
                         <select name="quiz_type" id="quiz_type_id">
@@ -20,10 +20,11 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="question">Question</label>
-                        <input type="text" name="question">
+                        <label for="question" class="control-label">Description:</label>
+                        <textarea name="question" id="question" cols="60" rows="5" class="form-control"
+                            style="resize: vertical;" required></textarea>
                     </div>
-               </form>
+                </form>
             </div>
         </div>
     </div>
