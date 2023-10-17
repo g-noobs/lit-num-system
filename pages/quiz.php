@@ -82,13 +82,10 @@ body {
             </section>
 
             <section class="content" id="addQquizSection">
-                <?php include_once "../Database/QuizDisplayClass.php";
-                    $quizList = new QuizDisplayClass();
-                    $quizList->displayQuestionAnswers();
-                ?>
+                
             </section>
             
-            <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
+        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
         </div>
         <!-- Main content -->
         <?php include_once("../bootstrap/js.php");?>
