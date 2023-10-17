@@ -82,7 +82,7 @@ body {
             </section>
 
             <section class="content" id="addQquizSection">
-                
+                <?php include_once"../PagesContent/QuizFolder/TableQuiz/AddQuizSection.php";?>
             </section>
             
         <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
