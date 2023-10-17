@@ -76,7 +76,8 @@ body {
                     </row>
                 </div>
             </section>
-            <section class="content" id="addQquizSection" style="display: none;">
+
+            <section class="content" id="addQquizSection">
                 <?php include_once "../PagesContent/QuizFolder/TableQuiz/AddQuizSection.php";?>
             </section>
             
