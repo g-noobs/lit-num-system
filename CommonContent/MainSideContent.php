@@ -19,7 +19,7 @@
         </li> -->
         <!-- // Tree view for user -->
         <li class="treeview" style="height: auto;">
-            <a href="user.php">
+            <a href="user_all.php">
                 <i class="fa fa-users"></i> <span>Manage User</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
