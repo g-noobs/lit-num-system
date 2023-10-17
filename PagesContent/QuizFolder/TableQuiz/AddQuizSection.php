@@ -66,7 +66,7 @@
         </form>
     </div>
 </div>
-</div>
+
 
 
 <!-- <form id="addQuizForm">
