@@ -1,11 +1,6 @@
 <th></th>
 <th>Quiz ID</th>
-<th>Quiz Name</th>
-<th>Quiz Instruction</th>
-<th>Question ID</th>
-<th>Question Text</th>
-<th>Answer ID</th>
-<th>Answer Text</th>
-<th>Right Answer</th>
+<th>Question</th>
+<th>Date Created</th>
 <th>Topic ID</th>
-<th>Topic Name</th>
+<th colspan=2>Action</th>

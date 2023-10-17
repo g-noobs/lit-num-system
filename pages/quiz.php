@@ -10,13 +10,11 @@
     <?php include_once("../bootstrap/css.php"); ?>
 </head>
 
-
 <!-- <style>
 body {
     overflow: hidden;
 }
 </style> -->
-
 
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: 100%; min-height: 100%;">
@@ -88,7 +86,6 @@ body {
                     $quizList = new QuizDisplayClass();
                     $quizList->displayQuestionAnswers();
                 ?>
-
             </section>
             
             <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
