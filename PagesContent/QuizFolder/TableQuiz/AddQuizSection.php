@@ -27,10 +27,7 @@
             <div class="form-group">
                 <label for="topic_id_label">Select Topic</label>
                 <select class="form-control" name="topic_id">
-                    <?php include_once("../Database/QuizDisplayClass.php");
-                                    $topicList = new QuizDisplayClass();
-                                    $topicList->displayTopicOption();
-                                ?>
+                    // database options
                 </select>
             </div>
             <div class="form-group">
