@@ -23,8 +23,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="quiz_question" class="control-label">Description:</label>
-                                <textarea name="quiz_question" id="quiz_question" cols="60" rows="5" class="form-control"
-                                    style="resize: vertical;" required></textarea>
+                                <textarea name="quiz_question" id="quiz_question" cols="60" rows="5"
+                                    class="form-control" style="resize: vertical;" required></textarea>
                             </div>
                         </div>
                         <div class="col-xs-6">
@@ -32,29 +32,37 @@
                                 <label for="quiz_answer">Correct</label>
                                 <input type="text" name="quiz_answer" id="quiz_answer" class="form-control" required>
                             </div>
-                            <div class="form-group" id="answer_options">
-                                <label for="option1">Option 1</label>
-                                <input type="text" name="option1">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="option1">Option 1</label>
+                                    <input type="text" name="option1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="option2">Option 2</label>
+                                    <input type="text" name="option2">
+                                </div>
 
-                                <label for="option2">Option 2</label>
-                                <input type="text" name="option2">
+                                <div class="form-group">
+                                    <label for="option3">Option 3</label>
+                                    <input type="text" name="option3">
+                                </div>
 
-                                <label for="option3">Option 3</label>
-                                <input type="text" name="option3">
-
-                                <label for="option4">Option 4</label>
-                                <input type="text" name="option4">
+                                <div class="form-group">
+                                    <label for="option4">Option 4</label>
+                                    <input type="text" name="option4">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="box-footer">
-                    <button id="submit" class="btn btn-warning">Submit</button>
-                    <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
-                </div>
-            </form>
         </div>
+        <div class="box-footer">
+            <button id="submit" class="btn btn-warning">Submit</button>
+            <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
+        </div>
+        </form>
     </div>
+</div>
 </div>
 
 
