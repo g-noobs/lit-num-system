@@ -81,8 +81,8 @@ body {
                 <?php include_once("../PagesContent/QuizFolder/TableQuiz/QuizMainTable.php");?>
             </section>
 
-            <section class="content" id="addQquizSection">
-                <?php include_once"../PagesContent/QuizFolder/TableQuiz/AddQuizSection.php";?>
+            <section class="content" id="addQquizSection" style="display: none;">
+                <?php include_once "../PagesContent/QuizFolder/TableQuiz/AddQuizSection.php";?>
             </section>
             
         <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
@@ -90,7 +90,7 @@ body {
         <!-- Main content -->
         <?php include_once("../bootstrap/js.php");?>
         <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizScript.php"?>
-        <?php include_once "../CommonContent/CommonAllScript.php"?>
+        <?php include_once "../CommonContent/CommonAllScript.php" ?>
 </body>
 
 </html>

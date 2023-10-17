@@ -13,8 +13,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning btn-sm" data-toggle='modal'
-                            data-target="#add_quiz_modal">
+                        <button type="button" class="btn btn-warning btn-sm" id="addQuizBtn">
                             <i class="fa fa-plus"></i> <span> Add Quiz</span>
                         </button>
                     </div>

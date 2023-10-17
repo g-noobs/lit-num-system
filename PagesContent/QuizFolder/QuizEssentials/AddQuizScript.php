@@ -1,6 +1,6 @@
 <script>
-$(function(){
-    $('#addQuizForm').on('submit',function(e){
+$(function() {
+    $('#addQuizForm').on('submit', function(e) {
         e.preventDefault();
 
         var formData = new FormData(this);
@@ -23,7 +23,7 @@ $(function(){
                         $("#successBanner").fadeOut("slow");
                         // location.reload();
                     }, 1500);
-                }else if (responseData.hasOwnProperty('error')) {
+                } else if (responseData.hasOwnProperty('error')) {
                     var msg = responseData.error;
                     $('#add_quiz_modal').modal('hide');
                     $('#errorAlert').text(msg);
@@ -36,6 +36,14 @@ $(function(){
             }
         });
 
+    });
+});
+</script>
+
+<script>
+$(function() {
+    $("#addQuizBtn").on("click", function() {
+        $("#addQquizSection").show();
     });
 });
 </script>
