@@ -8,31 +8,45 @@
                     </button>
                 </div>
             </div>
-            <br>
             <form id="addQuizForm" action="post">
                 <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
 
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="form-group">
-                                <label for="quiz_type">Type of Quiz</label>
-                                <select name="quiz_type" id="quiz_type_id" class="form-control" requried>
-                                    <option value="0">Multiple Choice</option>
-                                    <option value="1">True or False</option>
+                                <label for="quiz_type_option">Type of Quiz</label>
+                                <select name="quiz_type_option" id="quiz_type_option" class="form-control" requried>
+                                    <option value="0">True or False</option>
+                                    <option value="1">Multiple Choice</option>
                                     <option value="2">Essay</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question" class="control-label">Description:</label>
-                                <textarea name="question" id="question" cols="60" rows="5" class="form-control"
+                                <label for="quiz_question" class="control-label">Description:</label>
+                                <textarea name="quiz_question" id="quiz_question" cols="60" rows="5" class="form-control"
                                     style="resize: vertical;" required></textarea>
                             </div>
                         </div>
-                        <div class="col-xs-6" id="options">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="quiz_answer">Correct</label>
+                                <input type="text" name="quiz_answer" id="quiz_answer" class="form-control" required>
+                            </div>
+                            <div class="form-group" id="answer_options">
+                                <label for="option1">Option 1</label>
+                                <input type="text" name="option1">
 
+                                <label for="option2">Option 2</label>
+                                <input type="text" name="option2">
+
+                                <label for="option3">Option 3</label>
+                                <input type="text" name="option3">
+
+                                <label for="option4">Option 4</label>
+                                <input type="text" name="option4">
+                            </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="box-footer">
                     <button id="submit" class="btn btn-warning">Submit</button>
