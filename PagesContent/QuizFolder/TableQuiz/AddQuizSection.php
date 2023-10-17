@@ -29,8 +29,14 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group">
-                                <label for="quiz_answer">Correct Answer</label>
-                                <input type="text" name="quiz_answer" id="quiz_answer" class="form-control" required>
+                                <label for="quiz_answer">Set Correct Answer</label>
+                                <small>*Choose the correct answer based on the option provided</small>
+                                <select name="quiz_answer" id="quiz_answer">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
+                                </select>
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
