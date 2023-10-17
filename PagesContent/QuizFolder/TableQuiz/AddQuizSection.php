@@ -32,10 +32,10 @@
                                 <label for="quiz_answer">Set Correct Answer</label>
                                 <small>*Choose the correct answer based on the option provided</small>
                                 <select name="quiz_answer" id="quiz_answer">
-                                    <option value="1"></option>
-                                    <option value="2"></option>
-                                    <option value="3"></option>
-                                    <option value="4"></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
                                 </select>
                             </div>
                             <div class="row">
