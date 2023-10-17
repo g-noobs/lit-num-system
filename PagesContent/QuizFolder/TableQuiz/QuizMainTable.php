@@ -13,9 +13,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning btn-sm" id="addQuizBtn">
+                        <!-- <button type="button" class="btn btn-warning btn-sm" id="addQuizBtn">
                             <i class="fa fa-plus"></i> <span> Add Quiz</span>
-                        </button>
+                        </button> -->
                     </div>
                     <div class="col-xs-6">
                         <div class="box-tools pull-right">
