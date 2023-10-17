@@ -40,6 +40,20 @@ $(function() {
 });
 </script>
 
+
+<!-- hide box isntead of remove -->
+<script>
+$(document).ready(function() {
+    // Wait for the document to be fully loaded
+
+    // Attach an event handler to the button that triggers the hide action
+    $(".btn-box-tool[data-widget='collapse']").click(function() {
+        // Find the parent box element and hide it
+        $(this).closest(".box").find(".box-body").slideToggle();
+    });
+});
+</script>
+
 <script>
 $(function() {
     $("#addQuizBtn").on("click", function() {
