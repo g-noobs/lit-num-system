@@ -90,8 +90,8 @@ body {
                 ?>
 
             </section>
+            
             <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizModal.php"?>
-           
         </div>
         <!-- Main content -->
         <?php include_once("../bootstrap/js.php");?>
