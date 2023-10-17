@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group">
-                                <label for="quiz_answer">Set Correct Answer</label>
+                                <label for="quiz_answer">Set the Correct Answer</label>
                                 <select name="quiz_answer" id="quiz_answer">
                                     <option></option>
                                     <option></option>
