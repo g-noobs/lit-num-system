@@ -9,8 +9,9 @@
                 </div>
             </div>
             <br>
-            <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-                <form id="addQuizForm" action="post">
+            <form id="addQuizForm" action="post">
+                <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
+
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="form-group">
@@ -31,8 +32,13 @@
 
                         </div>
                     </div>
-                </form>
-            </div>
+
+                </div>
+                <div class="box-footer">
+                    <button id="submit" class="btn btn-warning">Submit</button>
+                    <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
