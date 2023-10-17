@@ -55,8 +55,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <button id="submit" class="btn btn-warning">Submit</button>
-                            <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
                         </div>
                     </div>
                     <div class=row>
