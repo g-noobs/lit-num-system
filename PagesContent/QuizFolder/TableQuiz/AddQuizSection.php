@@ -10,7 +10,16 @@
             </div>
             <br>
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-               
+               <form id="addQuizForm" action="post">
+                    <div class="form-group">
+                        <label for="quiz_type_label">Type of Quiz</label>
+                        <select name="quiz_type" id="quiz_type_id">
+                            <option value="0">Multiple Choice</option>
+                            <option value="1">True or False</option>
+                            <option value="2">Essay</option>
+                        </select>
+                    </div>
+               </form>
             </div>
         </div>
     </div>

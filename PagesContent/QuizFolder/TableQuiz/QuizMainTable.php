@@ -1,32 +1,19 @@
-
 <div class="row">
     <div class="col-xs-12">
         <div class="box box-warning container">
             <div class="box-header with-border">
                 <h3 class="box-title">All Quiz List</h3>
+
                 <div class="box-tools pull-right">
+                    <div class="search-box" style="margin-right: 35px;">
+                        <i class="fa fa-search"></i>
+                        <input type="text" id="userInputTopic" class="form-control" placeholder="Search..">
+                    </div>
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                     </button>
                 </div>
             </div>
             <br>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <!-- <button type="button" class="btn btn-warning btn-sm" id="addQuizBtn">
-                            <i class="fa fa-plus"></i> <span> Add Quiz</span>
-                        </button> -->
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="box-tools pull-right">
-                            <div class="search-box" style="margin-right: 35px;">
-                                <i class="fa fa-search"></i>
-                                <input type="text" id="userInputTopic" class="form-control" placeholder="Search..">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <table id="example2" class="table table-bordered table-hover">
