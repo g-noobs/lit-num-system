@@ -27,7 +27,7 @@
                                     class="form-control" style="resize: vertical;" required></textarea>
                             </div>
                         </div>
-                        <div class="col-xs-6" id = "set_answer_col">
+                        <div class="col-xs-6" id="set_answer_col">
                             <div class="form-group">
                                 <label for="quiz_answer">Set the Correct Answer</label>
                                 <select name="quiz_answer" id="quiz_answer">
@@ -111,6 +111,28 @@ $(document).ready(function() {
     $option2.on("input", updateQuizAnswerOptions);
     $option3.on("input", updateQuizAnswerOptions);
     $option4.on("input", updateQuizAnswerOptions);
+});
+</script>
+
+<script>
+$(function() {
+    $('#quiz_type').on('change', function() {
+        var selectedoption = $(this).val();
+
+        var trueFalse = "";
+        var multipleChoice = "";
+
+        if (selectedoption == 0) {
+            $("#set_answer_col").empty();
+            $('#answer_options').append();
+        } else if (selectedoption == 1) {
+            $("#answer_options").empty();
+            $('#answer_options').append();
+        } else if (selectedoption == 2) {
+            $("#answer_options").empty();
+            $('#answer_options').append();
+        }
+    });
 });
 </script>
 
