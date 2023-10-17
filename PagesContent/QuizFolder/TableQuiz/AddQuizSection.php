@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class=row>
+                    <div class=container>
                         <button id="submit" class="btn btn-warning">Submit</button>
                         <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
                     </div>
