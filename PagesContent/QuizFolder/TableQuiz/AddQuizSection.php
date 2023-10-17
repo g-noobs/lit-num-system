@@ -30,13 +30,13 @@
                         <div class="col-xs-6">
                             <div class="form-group">
                                 <label for="quiz_answer">Set Correct Answer</label>
-                                <small>*Choose the correct answer based on the option provided</small>
                                 <select name="quiz_answer" id="quiz_answer">
                                     <option></option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
                                 </select>
+                                <small>*Choose the correct answer based on the option provided</small>
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
