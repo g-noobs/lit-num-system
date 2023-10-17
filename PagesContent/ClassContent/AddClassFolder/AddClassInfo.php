@@ -14,7 +14,7 @@
 </div>
 
 <div class="form-group">
-<label for="assgn_teach">Select Area: </label>
+    <label for="assgn_teach">Select Area: </label>
     <select class="form-control" name="area" id="assgn_area">
         <?php include_once("../Database/ClassEssentialsClass");
         $option = new ClassEssentialsClass();
