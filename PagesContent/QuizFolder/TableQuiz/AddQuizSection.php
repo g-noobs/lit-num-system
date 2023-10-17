@@ -125,9 +125,9 @@ $(function() {
         if (selectedoption === 0) {
             
 
-        } else if (selectedoption === 1) {
+        } else if (selectedoption === "1") {
             $("#set_answer_col").empty();
-        } else if (selectedoption === 2) {
+        } else if (selectedoption === "2") {
             $("#answer_options").empty();
 
         }
