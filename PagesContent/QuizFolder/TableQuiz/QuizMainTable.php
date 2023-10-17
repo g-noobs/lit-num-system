@@ -40,7 +40,7 @@
                         <?php 
                         include_once("../Database/QuizDisplayClass.php");
                         $quiztable = new QuizDisplayClass();
-                        $quiztable->quizTable();
+                        $quiztable->displayQuestions();
                         ?>
                     </tbody>
                 </table>
