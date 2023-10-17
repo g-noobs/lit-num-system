@@ -35,7 +35,7 @@
       <p>Lesson</p>
     </div>
     <div class="icon">
-      <i class="ion ion-stats-bars"></i>
+      <i class="ion ion-ios-book"></i>
     </div>
     <a href="../pages/lesson.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
   </div>
