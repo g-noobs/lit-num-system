@@ -42,7 +42,7 @@ $(function() {
 
         if (selectedoption == 0) {
             $("#set_answer_col").empty();
-            $('#answer_options').append();
+            $('#answer_col_right').append();
         } else if (selectedoption == 1) {
             $("#answer_options").empty();
             $('#answer_options').append(multipleChoice);
