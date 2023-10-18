@@ -59,7 +59,7 @@
                                         <label for="option4">Option 4</label>
                                         <input type="text" name="option4">
                                     </div>
-                                </div </div>
+                                </div>
                             </div>
                             <div class=row>
                                 <button id="submit" class="btn btn-warning">Submit</button>
