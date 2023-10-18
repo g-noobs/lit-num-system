@@ -44,7 +44,10 @@ $(function() {
             "<option value='false'>False</option>" +
             "</select>" +
             "</div>";
-
+        var essayAnswer = "<div class='form-group'>" +
+            "<label for='essay_answer'>Provide the Essay Key Answers</label>" +
+            "<textarea name='essay_answer' id='essay_answer' class='form-control' cols='60' rows='5'></textarea>" +
+            "</div>";
 
         if (selectedoption === '0') {
             $("#answer_col_right").empty();
@@ -54,6 +57,7 @@ $(function() {
             $('#answer_col_right').append(trueFalse);
         } else if (selectedoption === '2') {
             $("#answer_col_right").empty();
+            ('#answer_col_right').append(essayAnswer);
 
         }
     });

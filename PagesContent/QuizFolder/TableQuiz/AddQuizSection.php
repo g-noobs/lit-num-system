@@ -28,10 +28,7 @@
                             </div>
                         </div>
                         <div class="col-xs-6" id="answer_col_right">
-                            <div class="form-group">
-                                <label for="essay_answer">Provide the Essay Key Answers</label>
-                                <textarea name="essay_answer" id="essay_answer" class="form-control" cols="60" rows="5"></textarea>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class=row>
