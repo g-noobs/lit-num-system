@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin| Dashboard</title>
+    <title>Quiz| Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once("../bootstrap/css.php"); ?>
@@ -40,42 +40,6 @@ body {
                 </h1>
             </section>
             <br>
-            <section>
-                <div class="container-fluid">
-                    <row class="align-items-start">
-                        <div class="col-xs-1">
-                            <h4><b>Filter By: </b></h4>
-                        </div>
-                        <div class="col-xs-2">
-                            <div class="custom-dropdown">
-
-                                <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
-                                    style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                    Quiz Type
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-user-type="culture">Culture & Arts</a></li>
-                                    <li><a href="#" data-user-type="teachers">Numbers</a></li>
-                                    <li><a href="#" data-user-type="letters">Letters</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-3">
-                            <!-- <form>
-                                <div class="input-group" style="border: 3px solid #E58A00; border-radius: 10px;">
-                                    <span class="input-group-addon" style="background-color: white;"><i
-                                            class="glyphicon glyphicon-search" style="color: #E58A00;"></i></span>
-                                    <input type="text" class="form-control" id="userInput" placeholder="Search">
-                                </div>
-                            </form> -->
-                        </div>
-
-                        <div class="col-xs-6"></div>
-                    </row>
-                </div>
-            </section>
 
             <section class="content" id="addQquizSection">
                 <?php include_once "../PagesContent/QuizFolder/TableQuiz/AddQuizSection.php";?>
