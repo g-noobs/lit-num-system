@@ -42,10 +42,10 @@ $(function() {
         // Now 'multipleChoice' contains your HTML code as a single string, ready to be appended or manipulated.
 
         // by default place 
-        $('#answer_col_right').append();
+        $('#answer_col_right').append(multipleChoice);
         if (selectedoption == 0) {
             $("#answer_col_right").empty();
-            $('#answer_col_right').append();
+            $('#answer_col_right').append(multipleChoice);
         } else if (selectedoption == 1) {
             $("#answer_col_right").empty();
             
