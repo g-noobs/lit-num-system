@@ -57,8 +57,7 @@ $(function() {
             $('#answer_col_right').append(trueFalse);
         } else if (selectedoption === '2') {
             $("#answer_col_right").empty();
-            ('#answer_col_right').append(essayAnswer);
-
+            $('#answer_col_right').append(essayAnswer);
         }
     });
 });
