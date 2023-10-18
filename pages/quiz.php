@@ -53,13 +53,13 @@ body {
         <?php include_once("../bootstrap/js.php");?>
 
         <!-- For Adding quiz including Jquery -->
-        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizScript.php"?>
-
-        <!-- For modification of quiz type -->
-        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/QuizOptionScript.php"?>
+        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/AddQuizScript.php"?>  
 
         <!-- For chooosing correct answer from the provided multiplce choice -->
         <?php include_once "../PagesContent/QuizFolder/QuizEssentials/MultipleChoiceScript.php"?>
+
+        <!-- For modification of quiz type -->
+        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/QuizOptionScript.php"?>
 
         <!-- Script used for the the entire page includes: Search, logout, sidebar active class -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
