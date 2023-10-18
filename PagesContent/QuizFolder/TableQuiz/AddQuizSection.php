@@ -31,8 +31,8 @@
                             <div class="foorm-group">
                                 <label for="true_false_answer">Set the Correct Answer</label>
                                 <select name="true_false_answer" id="true_false_answer" class="form-control">
-                                    <option value="0">True</option>
-                                    <option value="1">False</option>
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
                                 </select>
                             </div>
                         </div>
