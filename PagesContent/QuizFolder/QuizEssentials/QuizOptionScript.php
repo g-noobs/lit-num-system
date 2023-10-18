@@ -47,11 +47,11 @@ $(function() {
             $("#answer_col_right").empty();
             $('#answer_col_right').append();
         } else if (selectedoption == 1) {
-            $("#answer_options").empty();
-            $('#answer_options').append();
+            $("#answer_col_right").empty();
+            
         } else if (selectedoption == 2) {
-            $("#answer_options").empty();
-            $('#answer_options').append();
+            $("#answer_col_right").empty();
+            
         }
     });
 });
