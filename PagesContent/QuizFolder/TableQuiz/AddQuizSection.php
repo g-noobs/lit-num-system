@@ -27,40 +27,8 @@
                                     class="form-control" style="resize: vertical;" required></textarea>
                             </div>
                         </div>
-                        <div class="col-xs-6" id="set_answer_col">
-                            <div class="form-group">
-                                <label for="quiz_answer">Set the Correct Answer</label>
-                                <select name="quiz_answer" id="quiz_answer">
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                </select>
-                                <small>*Choose the correct answer based on the option provided</small>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label for="option1">Option 1</label>
-                                        <input type="text" name="option1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="option2">Option 2</label>
-                                        <input type="text" name="option2">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label for="option3">Option 3</label>
-                                        <input type="text" name="option3">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="option4">Option 4</label>
-                                        <input type="text" name="option4">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-xs-6" id="answer_col_right">
+                            
                         </div>
                     </div>
                     <div class=row>
