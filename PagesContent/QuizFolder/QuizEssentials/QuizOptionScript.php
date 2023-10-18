@@ -1,8 +1,10 @@
 <script>
 $(function() {
-    $('#quiz_type').on('change', function() {
-        var selectedoption = $(this).val();
+    $('#quiz_type_option').on('change', function() {
 
+        
+        var selectedoption = $(this).val();
+        
         var trueFalse = "";
         var multipleChoice = "<div class='form-group'>" +
             "<label for='quiz_answer'>Set the Correct Answer</label>" +
@@ -39,13 +41,14 @@ $(function() {
 
         // Now 'multipleChoice' contains your HTML code as a single string, ready to be appended or manipulated.
 
-
+        // by default place 
+        $('#answer_col_right').append();
         if (selectedoption == 0) {
-            $("#set_answer_col").empty();
+            $("#answer_col_right").empty();
             $('#answer_col_right').append();
         } else if (selectedoption == 1) {
             $("#answer_options").empty();
-            $('#answer_options').append(multipleChoice);
+            $('#answer_options').append();
         } else if (selectedoption == 2) {
             $("#answer_options").empty();
             $('#answer_options').append();
