@@ -46,7 +46,7 @@ $(function() {
             "</div>";
         var essayAnswer = "<div class='form-group'>" +
             "<label for='essay_answer'>Provide the Essay Key Answers</label>" +
-            "<textarea name='essay_answer' id='essay_answer' class='form-control' cols='60' rows='5'></textarea>" +
+            "<textarea name='essay_answer' id='essay_answer' class='form-control' cols='60' rows='5' style='resize: vertical;' required></textarea>" +
             "</div>";
 
         if (selectedoption === '0') {
