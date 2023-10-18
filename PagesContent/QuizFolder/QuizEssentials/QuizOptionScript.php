@@ -2,8 +2,7 @@
 $(function() {
     $('#quiz_type_option').on('change', function() {
         var selectedoption = $(this).val();
-
-
+        
         var multipleChoice = "<div class='form-group'>" +
             "<label for='quiz_answer'>Set the Correct Answer</label>" +
             "<select name='quiz_answer' id='quiz_answer'>" +
