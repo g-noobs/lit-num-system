@@ -2,8 +2,8 @@
 $(function() {
     $('#quiz_type_option').on('change', function() {
         var selectedoption = $(this).val();
-        
-        
+
+
         var multipleChoice = "<div class='form-group'>" +
             "<label for='quiz_answer'>Set the Correct Answer</label>" +
             "<select name='quiz_answer' id='quiz_answer'>" +
@@ -36,8 +36,14 @@ $(function() {
             "</div>" +
             "</div>" +
             "</div>";
-        
-        var trueOrFalse = "";
+
+        var trueFalse = "<div class='form-group'>" +
+            "<label for='true_false_answer'>Set the Correct Answer</label>" +
+            "<select name='true_false_answer' id='true_false_answer' class='form-control'>" +
+            "<option value='true'>True</option>" +
+            "<option value='false'>False</option>" +
+            "</select>" +
+            "</div>";
 
 
         if (selectedoption === '0') {
@@ -45,10 +51,10 @@ $(function() {
             $('#answer_col_right').append(multipleChoice);
         } else if (selectedoption === '1') {
             $("#answer_col_right").empty();
-            
+            $('#answer_col_right').append(trueFalse);
         } else if (selectedoption === '2') {
             $("#answer_col_right").empty();
-            
+
         }
     });
 });
