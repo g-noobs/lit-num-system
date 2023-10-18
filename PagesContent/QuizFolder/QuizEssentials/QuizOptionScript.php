@@ -43,13 +43,13 @@ $(function() {
 
         // by default place 
         $('#answer_col_right').append(multipleChoice);
-        if (selectedoption == 0) {
+        if (selectedoption === '0') {
             $("#answer_col_right").empty();
             $('#answer_col_right').append(multipleChoice);
-        } else if (selectedoption == 1) {
+        } else if (selectedoption === '1') {
             $("#answer_col_right").empty();
             
-        } else if (selectedoption == 2) {
+        } else if (selectedoption === '2') {
             $("#answer_col_right").empty();
             
         }
