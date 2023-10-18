@@ -29,15 +29,42 @@
                         </div>
                         <div class="col-xs-6" id="answer_col_right">
                             <div class="form-group">
-                                <label for="essay_answer">Provide the Essay Key Answers</label>
-                                <textarea name="essay_answer" id="essay_answer" class="form-control" cols="60" rows="5" style="resize: vertical;" required></textarea>
+                                <label for="quiz_answer">Set the Correct Answer</label>
+                                <select name="quiz_answer" id="quiz_answer">
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                                <small>*Choose the correct answer based on the option provided</small>
                             </div>
-                        </div>
-                    </div>
-                    <div class=row>
-                        <button id="submit" class="btn btn-warning">Submit</button>
-                        <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
-                    </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="option1">Option 1</label>
+                                        <input type="text" name="option1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="option2">Option 2</label>
+                                        <input type="text" name="option2">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="option3">Option 3</label>
+                                        <input type="text" name="option3">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="option4">Option 4</label>
+                                        <input type="text" name="option4">
+                                    </div>
+                                </div </div>
+                            </div>
+                            <div class=row>
+                                <button id="submit" class="btn btn-warning">Submit</button>
+                                <button id="reset-cancel" type="reset" class="btn btn-default">Cancel</button>
+                            </div>
                 </form>
                 <!-- /..End of Form -->
             </div>
