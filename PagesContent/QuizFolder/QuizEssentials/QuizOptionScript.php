@@ -18,21 +18,21 @@ $(function() {
             "<div class='col-xs-6'>" +
             "<div class='form-group'>" +
             "<label for='option1'>Option 1</label>" +
-            "<input type='text' name='option1'class='form-control' required>" +
+            "<input type='text' name='option1' class='form-control' required>" +
             "</div>" +
             "<div class='form-group'>" +
             "<label for='option2'>Option 2</label>" +
-            "<input type='text' name='option2'class='form-control' required>" +
+            "<input type='text' name='option2' class='form-control' required>" +
             "</div>" +
             "</div>" +
             "<div class='col-xs-6'>" +
             "<div class='form-group'>" +
             "<label for='option3'>Option 3</label>" +
-            "<input type='text' name='option3'class='form-control' required>" +
+            "<input type='text' name='option3' class='form-control' required>" +
             "</div>" +
             "<div class='form-group'>" +
             "<label for='option4'>Option 4</label>" +
-            "<input type='text' name='option4'class='form-control' required>" +
+            "<input type='text' name='option4' class='form-control' required>" +
             "</div>" +
             "</div>" +
             "</div>";
@@ -48,7 +48,7 @@ $(function() {
             "<label for='essay_answer'>Provide the Essay Key Answers</label>" +
             "<textarea name='essay_answer' id='essay_answer' class='form-control' cols='60' rows='5' style='resize: vertical;' required></textarea>" +
             "</div>";
-        $('#answer_col_right').append(multipleChoice);
+
         if (selectedoption === '0') {
             $("#answer_col_right").empty();
             $('#answer_col_right').append(multipleChoice);
