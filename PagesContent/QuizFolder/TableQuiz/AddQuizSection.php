@@ -15,7 +15,7 @@
                         <div class="col-xs-6">
                             <div class="form-group">
                                 <label for="topic_id">Topic Source</label>
-                                <select name="topic_id" id="topic_id_option">
+                                <select name="topic_id" id="topic_id_option" class="form-control">
                                     <?php include_once "../Database/QuizDisplayClass.php";
                                         $optionTopic = new QuizDisplayClass();
                                         $optionTopic->displayTopicOption();
