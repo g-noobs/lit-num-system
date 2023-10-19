@@ -31,7 +31,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="quiz_question" class="control-label">Description:</label>
+                                <label for="quiz_question" class="control-label">Question:</label>
                                 <textarea name="quiz_question" id="quiz_question" cols="60" rows="5"
                                     class="form-control" style="resize: vertical;" required></textarea>
                             </div>
