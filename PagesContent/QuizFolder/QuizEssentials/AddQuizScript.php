@@ -5,7 +5,7 @@ $(function() {
 
         var formData = new FormData(this);
         var actionUrl = '../PagesContent/QuizFolder/ActionQuizFolder/ActionAddQuiz.php';
-        
+
         $.ajax({
             url: actionUrl,
             type: "POST",
@@ -21,7 +21,7 @@ $(function() {
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
-                        // location.reload();
+                        location.reload();
                     }, 1500);
                 } else if (responseData.hasOwnProperty('error')) {
                     var msg = responseData.error;
@@ -29,7 +29,7 @@ $(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        // location.reload();
+                        location.reload();
                     }, 1500);
                 }
             }
