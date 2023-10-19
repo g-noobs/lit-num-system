@@ -14,6 +14,15 @@
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="form-group">
+                                <label for="topic_id">Topic Source</label>
+                                <select name="topic_id" id="topic_id_option">
+                                    <?php include_once "../Database/QuizDisplayClass.php";
+                                        $optionTopic = new QuizDisplayClass();
+                                        $optionTopic->displayTopicOption();
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="quiz_type_option">Type of Quiz</label>
                                 <select name="quiz_type_option" id="quiz_type_option" class="form-control" requried>
                                     <option value="0">Multiple Choice</option>
