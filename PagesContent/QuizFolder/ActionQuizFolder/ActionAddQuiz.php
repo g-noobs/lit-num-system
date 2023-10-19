@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $quizType = $_POST['quiz_type_option'];
         
         // set the following if quiz type is multiple choice
-        if($quizType === 0){
+        if($quizType === '0'){
             // Check if $correctAnswer matches any of the options and place it in quiz_selectionA
             if ($correctAnswer == $_POST['option1']) {
                 $values['quiz_selectionB'] = $_POST['option2'];
