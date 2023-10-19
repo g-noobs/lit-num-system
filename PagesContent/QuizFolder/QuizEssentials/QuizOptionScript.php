@@ -37,15 +37,15 @@ $(function() {
             "</div>";
 
         var trueFalse = "<div class='form-group'>" +
-            "<label for='true_false_answer'>Set the Correct Answer</label>" +
-            "<select name='true_false_answer' id='true_false_answer' class='form-control'>" +
+            "<label for='quiz_answer'>Set the Correct Answer</label>" +
+            "<select name='quiz_answer' id='quiz_answer' class='form-control'>" +
             "<option value='true'>True</option>" +
             "<option value='false'>False</option>" +
             "</select>" +
             "</div>";
         var essayAnswer = "<div class='form-group'>" +
-            "<label for='essay_answer'>Provide the Essay Key Answers</label>" +
-            "<textarea name='essay_answer' id='essay_answer' class='form-control' cols='60' rows='5' style='resize: vertical;' required></textarea>" +
+            "<label for='quiz_answer'>Provide the Essay Key Answers</label>" +
+            "<textarea name='quiz_answer' id='quiz_answer' class='form-control' cols='60' rows='5' style='resize: vertical;' required></textarea>" +
             "</div>";
 
         if (selectedoption === '0') {
