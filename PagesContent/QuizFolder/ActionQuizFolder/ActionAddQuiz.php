@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         include_once("../../../Database/ColumnCountClass.php");
         $table = "tbl_quiz";
         $columnCountClass = new ColumnCountClass();
-        $values['quiz_id'] = "QUIZ". $columnCountClass->columnCount("quiz_id",$table);
+        $values['quiz_id'] = "QZ". $columnCountClass->columnCount("quiz_id","tbl_quiz");
         
         // Set the date values
         $currentDate = new DateTime();
