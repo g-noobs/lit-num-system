@@ -4,3 +4,5 @@ Capstone Project
 Testing additional user - done
 
 --testing fork
+
+** Testing if it can commit
