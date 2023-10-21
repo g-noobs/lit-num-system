@@ -7,12 +7,12 @@
     <title>Admin | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    
+
     <!-- Template CSS -->
     <?php include_once("../bootstrap/css.php");?>
     <!-- Modified Style for Search -->
     <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
-   
+
 
     <!-- jQuery 3 -->
     <script src="../design/bower_components/jquery/dist/jquery.min.js"></script>
@@ -20,9 +20,8 @@
     <script src="../design/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
 </head>
- <!-- Modified Style for dropdown -->
- <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
- 
+
+
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: 100%; min-height: 100%;">
 
@@ -47,6 +46,8 @@
                 </h1>
             </section>
 
+            <!-- Modified Style for dropdown -->
+            <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
             <section>
                 <div class="align-items-start">
                     <div class="col-sm-2">
