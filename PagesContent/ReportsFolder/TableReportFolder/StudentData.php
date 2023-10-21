@@ -14,10 +14,14 @@
                     </button>
                 </div>
             </div>
-            <button class="btn btn-success">EXPORT DATA TO XML</button>
+
             <br>
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
+                <!-- export button -->
+                <button class="btn btn-success">EXPORT DATA TO XML</button>
+
+                <!-- Table Data -->
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
                         <tr>
