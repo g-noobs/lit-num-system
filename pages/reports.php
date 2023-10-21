@@ -12,7 +12,7 @@
     <?php include_once("../bootstrap/css.php");?>
     <!-- Modified Style for Search -->
     <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
-
+   
 
     <!-- jQuery 3 -->
     <script src="../design/bower_components/jquery/dist/jquery.min.js"></script>
@@ -20,7 +20,9 @@
     <script src="../design/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
 </head>
-
+ <!-- Modified Style for dropdown -->
+ <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
+ 
 <body class="sidebar-mini skin-yellow fixed" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed
     style="height: 100%; min-height: 100%;">
 
