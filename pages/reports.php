@@ -12,8 +12,7 @@
     <?php include_once("../bootstrap/css.php");?>
     <!-- Modified Style for Search -->
     <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
-    <!-- Modified Style for dropdown -->
-    <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
+
 
     <!-- jQuery 3 -->
     <script src="../design/bower_components/jquery/dist/jquery.min.js"></script>
@@ -28,7 +27,7 @@
     <div class="wrapper" style="height: auto; min-height: 100%;">
 
         <header class="main-header">
-            <?php include_once("../CommonContent/HeaderContent.php"); ?>
+            <?php include_once("../CommonContent/HeaderContent.php");?>
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
@@ -48,10 +47,7 @@
 
             <section>
                 <div class="align-items-start">
-                    <div class="col-sm-1">
-                        <h4><b>Filter By: </b></h4>
-                    </div>
-                    <div class="col-sm-1">
+                    <div class="col-sm-2">
                         <div class="custom-dropdown">
 
                             <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
@@ -73,7 +69,7 @@
 
             <!-- Main content -->
             <section class="content">
-                <?php include_once "../PagesContent/ReportsFolder/StudentData.php"?>
+                <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
             </section>
         </div>
     </div>
