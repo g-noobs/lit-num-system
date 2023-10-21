@@ -14,6 +14,7 @@
                     </button>
                 </div>
             </div>
+            <button class="btn btn-success">EXPORT DATA TO XML</button>
             <br>
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
