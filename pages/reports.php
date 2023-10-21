@@ -48,7 +48,7 @@
 
             <!-- Modified Style for dropdown -->
             <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
-            <section>
+            <section class="container">
                 <div class="align-items-start">
                     <div class="col-sm-2">
                         <div class="custom-dropdown">
@@ -60,7 +60,9 @@
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
                                 <li><a href="#" data-report="all-active"><b>Students Data</b></a></li>
-                                <li><a href="#" data-report="arch-all"><b></b>Teachers Data</a></li>
+                                <li><a href="#" data-report="arch-all"><b>Teachers Data</b></a></li>
+                                <li><a href="#" data-report="arch-all"><b>Lesson Data</b></a></li>
+                                <li><a href="#" data-report="arch-all"><b>Quiz Data</b></a></li>
                             </ul>
                         </div>
                     </div>
