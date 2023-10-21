@@ -50,7 +50,7 @@
                 <!-- Modified Style for dropdown -->
                 <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
                 <br>
-                <br>
+                <!-- Dropdown Section -->
                 <section>
                     <div class="align-items-start">
                         <div class="col-sm-2">
@@ -74,6 +74,7 @@
                         </div>
                     </div>
                 </section>
+                <br>
                 <br>
                 <!-- Main content -->
                 <section class="content">
