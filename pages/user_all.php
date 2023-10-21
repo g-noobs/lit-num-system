@@ -35,7 +35,6 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
-
             <!-- Banner Alert -->
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
             <!-- Content Header (Page header) -->
