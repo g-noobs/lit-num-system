@@ -14,8 +14,6 @@
                     </button>
                 </div>
             </div>
-
-            <br>
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <!-- export button -->
