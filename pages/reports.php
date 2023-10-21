@@ -49,6 +49,7 @@
 
                 <!-- Modified Style for dropdown -->
                 <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
+                <br>
                 <section>
                     <div class="align-items-start">
                         <div class="col-sm-2">
@@ -72,7 +73,7 @@
                         </div>
                     </div>
                 </section>
-
+                <br>
                 <!-- Main content -->
                 <section class="content">
                     <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
