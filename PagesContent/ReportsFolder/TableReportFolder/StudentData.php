@@ -19,6 +19,7 @@
                 <!-- export button -->
                 <button class="btn btn-success">EXPORT DATA TO XML</button>
                 <br>
+                <br>
                 <!-- Table Data -->
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
