@@ -94,7 +94,7 @@
     <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/ExportScript.php"?>
 
     <!-- Dropdown Script and Navigation-->
-    <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/DropdowScript.php"?>
+    <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/DropdownScript.php"?>
 </body>
 
 </html>
