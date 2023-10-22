@@ -34,12 +34,12 @@
                     </thead>
                     <tbody>
                     <?php 
-                        include_once("../Database/ReportsDisplay.php");
-                        $tanle = 'user_info_view';
-                        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Learner'";
-                        $stduentData = new ReportsDisplay();
-                        $stduentData->displayData($sql);
-                    ?>
+                        include_once("../Database/DisplayAllTableClass.php");
+                        $table = "user_info_view";
+                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Active';";
+                        $userT = new DisplayAllTableClass();
+                        $userT->userTable($sql);
+                        ?>
                     </tbody>
                 </table>
             </div>
