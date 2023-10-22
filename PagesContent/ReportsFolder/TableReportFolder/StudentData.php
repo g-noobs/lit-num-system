@@ -36,7 +36,7 @@
                         <?php 
                         include_once("../Database/ReportsDisplay.php");
                         $stduentData = new ReportsDisplay();
-
+                        $stduentData->studentTable();
                         ?>
                     </tbody>
                 </table>
@@ -50,5 +50,5 @@
 
 
 <!-- Common Script with other pages -->
-
+<?php include_once "../../../CommonContent/CommonAllScript.php"?>
 <?php include_once "../ScriptReportFolder/ExportScript.php"?>
