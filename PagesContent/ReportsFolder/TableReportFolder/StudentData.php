@@ -47,5 +47,3 @@
 <!-- Common Script with other pages -->
 <?php include_once "../../../CommonContent/CommonAllScript.php"?>
 
-<!-- !! Add Export SCIPT -->
-<?php include_once "../ScriptReportFolder/ExportScript.php"?>
