@@ -17,11 +17,11 @@
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <!-- export button -->
-                <button class="btn btn-success">EXPORT DATA TO XML</button>
+                <button class="btn btn-success" id='exportButton'>EXPORT DATA TO XML</button>
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="dataTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <?php include_once "QuizTableHeader.php";?>
@@ -48,3 +48,4 @@
 <?php include_once "../../../CommonContent/CommonAllScript.php"?>
 
 <!-- !! Add Export SCIPT -->
+<?php include_once "../ScriptReportFolder/ExportScript.php"?>
