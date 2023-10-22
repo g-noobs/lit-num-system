@@ -33,10 +33,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php 
+                    <?php 
                         include_once("../Database/ReportsDisplay.php");
                         $stduentData = new ReportsDisplay();
-                        $stduentData->studentTable();
+                        $sql = "SELECT * FROM tbl_user_info WHERE user_level_id = 2";
+                        $stduentData->displayData($sql);
                         ?>
                     </tbody>
                 </table>

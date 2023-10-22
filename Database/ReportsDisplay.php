@@ -5,8 +5,7 @@ class ReportsDisplay extends Connection{
     function __construct(){
         parent :: __construct();
     }
-    function studentTable(){
-        $sql = "SELECT * FROM tbl_user_info WHERE user_level_id = 2";
+    function displayData($sql){
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){

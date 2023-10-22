@@ -78,7 +78,7 @@
                 <br>
                 <!-- Main content -->
                 <section class="content">
-                    <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
+                    <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/TeacherData.php"?>
                 </section>
             </div>
         </div>
