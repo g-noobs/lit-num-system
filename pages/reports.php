@@ -80,7 +80,7 @@
                 <br>
                 <br>
                 <!-- Main content -->
-                <section class="mainContent">
+                <section class="content" id="mainContent">
                     <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
                 </section>
             </div>
