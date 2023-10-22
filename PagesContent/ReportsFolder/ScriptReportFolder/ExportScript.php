@@ -6,11 +6,11 @@
     $(document).ready(function () {
         $("#exportButton").click(function () {
             let table = document.getElementsByTagName("table");
-            var fileName = $(this).data("fileName");
+            var fileName = $(this).data("name");
             console.log(table);
             debugger;
             TableToExcel.convert(table[0], {
-                name: fileName + '.xlsx',
+                name: fileName + `.xlsx`,
                 sheet: {
                     name: fileName
                 }
