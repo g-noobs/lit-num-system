@@ -19,6 +19,7 @@ $(document).ready(function() {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/QuizData.php';
         } 
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+        
         if (contentPath !== '') {
             $("#mainContent").fadeOut(400, function() {
                 $(this).load(contentPath, function() {
