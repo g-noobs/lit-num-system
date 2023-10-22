@@ -17,7 +17,7 @@
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <!-- export button -->
-                <button class="btn btn-success" id='exportButton'>EXPORT DATA TO XML</button>
+                <button class="btn btn-success" id='exportButton' data-fileName="StudentData">EXPORT DATA TO XML</button>
                 <br>
                 <br>
                 <!-- Table Data -->

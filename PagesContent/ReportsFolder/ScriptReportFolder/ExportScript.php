@@ -6,12 +6,13 @@
     $(document).ready(function () {
         $("#exportButton").click(function () {
             let table = document.getElementsByTagName("table");
+            var fileName = $(this).data("fileName");
             console.log(table);
             debugger;
             TableToExcel.convert(table[0], {
-                name: `StudentData.xlsx`,
+                name: fileName + '.xlsx',
                 sheet: {
-                    name: 'StudentData'
+                    name: fileName
                 }
             });
         });
