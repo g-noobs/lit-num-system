@@ -88,6 +88,8 @@
     <!-- Modified Script for Search -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
 
+    <!-- Exporting Data script -->
+    <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/ExportScript.php"?>
 </body>
 
 </html>
