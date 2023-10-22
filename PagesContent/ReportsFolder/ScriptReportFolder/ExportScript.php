@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('#dataTable').DataTable();
 
     $('#exportButton').on('click', function() {
-        var tableData = $('#dataTable').text();
+        var tableData = $('#dataTable').html();
         var fileName = "table_data.xls";
         
         $.ajax({
