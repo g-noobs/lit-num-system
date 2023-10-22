@@ -62,12 +62,12 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-report="student-data"><b>Students Data</b></a></li>
-                                    <li><a href="#" data-report="teacher-data"><b>Teachers Data</b></a></li>
-                                    <li><a href="#" data-report="subject-data"><b>Subject Data</b></a></li>
-                                    <li><a href="#" data-report="lesson-data"><b>Lesson Data</b></a></li>
-                                    <li><a href="#" data-report="topic-data"><b>Topic Data</b></a></li>
-                                    <li><a href="#" data-report="quiz-data"><b>Quiz Data</b></a></li>
+                                    <li><a href="#" data-report-type="student-data"><b>Students Data</b></a></li>
+                                    <li><a href="#" data-report-type="teacher-data"><b>Teachers Data</b></a></li>
+                                    <li><a href="#" data-report-type="subject-data"><b>Subject Data</b></a></li>
+                                    <li><a href="#" data-report-type="lesson-data"><b>Lesson Data</b></a></li>
+                                    <li><a href="#" data-report-type="topic-data"><b>Topic Data</b></a></li>
+                                    <li><a href="#" data-report-type="quiz-data"><b>Quiz Data</b></a></li>
                                 </ul>
                             </div>
                         </div>

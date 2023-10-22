@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $('.custom-dropdown-menu a').click(function(e) {
         e.preventDefault();
-        var dataType = $(this).data('report');
+        var dataType = $(this).data('report-type');
         var contentPath = '';
 
         if (dataType === 'student-data') {
