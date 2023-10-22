@@ -33,13 +33,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php 
-                        include_once("../Database/DisplayAllTableClass.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Active';";
-                        $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
-                        ?>
+                    <tr><td>asd</td><td>asd</td></tr>
+                    <tr><td>asdfdsg</td><td>asddfg</td></tr>
                     </tbody>
                 </table>
             </div>
