@@ -47,8 +47,6 @@
                     </h1>
                 </section>
 
-                <!-- Modified Style for dropdown -->
-                <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
                 <br>
                 <!-- Dropdown Section -->
                 <section>
