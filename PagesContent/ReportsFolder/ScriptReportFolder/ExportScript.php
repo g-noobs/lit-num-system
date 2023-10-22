@@ -17,7 +17,7 @@ $(document).ready(function() {
         // Send the table data to the server using AJAX
         $.ajax({
             method: 'POST',
-            url: '../PagesContent/ReportsFolder/ActionReportFolder/ExportScript.php', // Create an export.php script to handle XML export
+            url: '../PagesContent/ReportsFolder/ActionReportFolder/ExportDataAction.php', // Create an export.php script to handle XML export
             data: { tableData: tableData,
                     fileName: fileName },
             dataType: 'json',
