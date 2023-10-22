@@ -33,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                  
+                   
                     </tbody>
                 </table>
             </div>
@@ -44,3 +44,7 @@
     <!-- /.col -->
 </div>
 
+
+<!-- Common Script with other pages -->
+<?php include_once "../../../CommonContent/CommonAllScript.php"?>
+<?php include_once "../ScriptReportFolder/ExportScript.php"?>
