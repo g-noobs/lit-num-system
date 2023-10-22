@@ -4,11 +4,7 @@
 <script>
 $(document).ready(function() {
     $('#dataTable').DataTable();
-});
-</script>
 
-<script>
-$(document).ready(function() {
     $('#exportButton').on('click', function() {
         var tableData = $('#dataTable').html();
         var fileName = "table_data.xls";
