@@ -49,6 +49,3 @@
     <!-- /.col -->
 </div>
 
-
-<!-- Common Script with other pages -->
-<?php include_once "../../../CommonContent/CommonAllScript.php"?>
