@@ -75,29 +75,3 @@ class QuizDisplayClass extends Connection{
     }
 }
 ?>
-    <!-- // function displayQuestionAnswers(){
-    //     // quiz_id will still depends on the quiz that is selected
-    //     $sql = "SELECT * FROM tbl_quiz;";
-    //     $result = $this->conn->query($sql);
-    //     if ($result->num_rows > 0) {
-    //         // $currentQuestion = "";
-    //         while ($row = $result->fetch_assoc()) {
-    //             $questionText = $row['question_text'];
-    //             $answerText = $row['answer_text'];
-    //             $answer_id = $row['answer_id'];
-    //             $quiz_id = $row['quiz_id'];
-
-    //             // Check if a new question is encountered
-    //             if ($questionText != $currentQuestion) {
-    //                 echo $questionText . "<br>";
-    //                 $currentQuestion = $questionText;
-    //             }
-
-    //             echo '<input type="radio" name="question" value="' . $answer_id . '">';
-    //             echo '<label for="' . $answerText . '">' . $answerText . '</label><br>';
-    //         }
-    //         $result->close();
-    //     } else {
-    //         echo "No Data";
-    //     }
-    // } -->
