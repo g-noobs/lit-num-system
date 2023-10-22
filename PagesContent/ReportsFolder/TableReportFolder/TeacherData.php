@@ -2,7 +2,7 @@
     <div class="col-xs-12">
         <div class="box box-warning container">
             <div class="box-header with-border">
-                <h3 class="box-title">Stduent Data</h3>
+                <h3 class="box-title">Teacher Data</h3>
                 <div class="box-tools pull-right">
                     <div class="search-box" style="margin-right: 35px;">
                         <i class="fa fa-search"></i>
