@@ -33,7 +33,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                   
+                    <?php 
+                        include_once("../Database/ReportsDisplay.php");
+                        $stduentData = new ReportsDisplay();
+                        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Learner'";
+                        $stduentData->displayData($sql);
+                    ?>
                     </tbody>
                 </table>
             </div>

@@ -36,7 +36,7 @@
                     <?php 
                         include_once("../Database/ReportsDisplay.php");
                         $stduentData = new ReportsDisplay();
-                        $sql = "SELECT * FROM tbl_user_info WHERE user_level_id = 2";
+                        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Learner'";
                         $stduentData->displayData($sql);
                     ?>
                     </tbody>
@@ -48,3 +48,8 @@
     </div>
     <!-- /.col -->
 </div>
+
+
+<!-- Common Script with other pages -->
+<?php include_once "../../../CommonContent/CommonAllScript.php"?>
+<?php include_once "../ScriptReportFolder/ExportScript.php"?>
