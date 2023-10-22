@@ -62,10 +62,12 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-report="all-active"><b>Students Data</b></a></li>
-                                    <li><a href="#" data-report="arch-all"><b>Teachers Data</b></a></li>
-                                    <li><a href="#" data-report="arch-all"><b>Lesson Data</b></a></li>
-                                    <li><a href="#" data-report="arch-all"><b>Quiz Data</b></a></li>
+                                    <li><a href="#" data-report="student-data"><b>Students Data</b></a></li>
+                                    <li><a href="#" data-report="teacher-data"><b>Teachers Data</b></a></li>
+                                    <li><a href="#" data-report="subject-data"><b>Subject Data</b></a></li>
+                                    <li><a href="#" data-report="lesson-data"><b>Lesson Data</b></a></li>
+                                    <li><a href="#" data-report="topic-data"><b>Topic Data</b></a></li>
+                                    <li><a href="#" data-report="quiz-data"><b>Quiz Data</b></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -78,7 +80,7 @@
                 <br>
                 <!-- Main content -->
                 <section class="content">
-                    <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/TeacherData.php"?>
+                    <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
                 </section>
             </div>
         </div>
@@ -90,6 +92,9 @@
 
     <!-- Exporting Data script And Search input bar script-->
     <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/ExportScript.php"?>
+
+    <!-- Dropdown Script and Navigation-->
+    <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/DropdowScript.php"?>
 </body>
 
 </html>

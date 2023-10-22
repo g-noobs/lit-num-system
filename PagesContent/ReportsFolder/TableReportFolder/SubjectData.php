@@ -2,7 +2,7 @@
     <div class="col-xs-12">
         <div class="box box-warning container">
             <div class="box-header with-border">
-                <h3 class="box-title">Student Data</h3>
+                <h3 class="box-title">Subject Data</h3>
                 <div class="box-tools pull-right">
                     <div class="search-box" style="margin-right: 35px;">
                         <i class="fa fa-search"></i>
@@ -17,7 +17,7 @@
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <!-- export button -->
-                <button class="btn btn-success" id='exportButton' data-name="StudentData">EXPORT DATA TO XML</button>
+                <button class="btn btn-success" id='exportButton' data-name="SubjectData">EXPORT DATA TO XML</button>
                 <br>
                 <br>
                 <!-- Table Data -->
