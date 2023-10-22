@@ -11,7 +11,7 @@ $(document).ready(function() {
         
         $.ajax({
             method: 'POST',
-            url: 'export.php',
+            url: '../PagesContent/ReportsFolder/ActionReportFolder/ExportDataAction.php',
             data: { tableData: tableData },
             dataType: 'json',
             success: function(response) {
