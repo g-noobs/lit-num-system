@@ -9,9 +9,9 @@
             console.log(table);
             debugger;
             TableToExcel.convert(table[0], {
-                name: `UserManagement.xlsx`,
+                name: `StudentData.xlsx`,
                 sheet: {
-                    name: 'Usermanagement'
+                    name: 'StudentData'
                 }
             });
         });
