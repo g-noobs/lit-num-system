@@ -24,19 +24,21 @@
                 <table id="dataTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Quiz ID</th>
-                            <th>Question</th>
-                            <th>Date Created</th>
-                            <th>Topic ID</th>
-                            <th colspan=2>Action</th>
+                            <th>Student ID</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>Gender</th>
+                            <th>Birthdate</th>
+                            <th>Date Added</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../Database/QuizDisplayClass.php");
-                        $quiztable = new QuizDisplayClass();
-                        $quiztable->displayQuestions();
+                        include_once("../Database/ReportsDisplay.php");
+                        $stduentData = new ReportsDisplay();
+                        $stduentData->studentTable();
+                        
+
                         ?>
                     </tbody>
                 </table>
