@@ -10,11 +10,13 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#exportButton').on('click', function() {
         var tableData = $('#dataTable').html();
+        var fileName = "table_data.xls";
         
         $.ajax({
             method: 'POST',
             url: '../PagesContent/ReportsFolder/ActionReportFolder/ExportDataAction.php',
-            data: { tableData: tableData },
+            data: { tableData: tableData,
+                    fileName: fileName },
             dataType: 'json',
             success: function(response) {
                 // Check if the export was successful

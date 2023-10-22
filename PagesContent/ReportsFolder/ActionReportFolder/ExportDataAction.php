@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST["tableData"])) {
     $tableData = $_POST["tableData"];
-    $filename = "table_data.xls";
+    $filename = $_POST["fileName"];
     
     // Set the appropriate headers for Excel download
     header("Content-Type: application/vnd.ms-excel");
@@ -13,7 +13,7 @@ if (isset($_POST["tableData"])) {
     // Return a JSON response with the file URL and name
     $response = array(
         'success' => true,
-        'fileUrl' => "export.php",
+        'fileUrl' => "../PagesContent/ReportsFolder/ActionReportFolder/ExportDataAction.php",
         'fileName' => $filename
     );
 
