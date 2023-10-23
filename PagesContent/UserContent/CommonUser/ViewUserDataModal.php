@@ -14,14 +14,14 @@
                             <div class="box-footer no-padding">
                                 <ul class="nav nav-stacked">
                                     <li id="personal_id_data">Personal ID: </li>
-                                    <li id="full_name_data"></li>
-                                    <li id="gender_data"></li>
-                                    <li id="email_data"></li>
-                                    <li id="birthdate_data"></li>
-                                    <li id="user_type_data"></li>
-                                    <li id="user_status_data"></li>
-                                    <li id="username_data"></li>
-                                    <li id="password_data"></li>
+                                    <li id="full_name_data">Full Name: </li>
+                                    <li id="gender_data">Gender: </li>
+                                    <li id="email_data">Email: </li>
+                                    <li id="birthdate_data">Birthday: </li>
+                                    <li id="user_type_data">User Type: </li>
+                                    <li id="user_status_data">User Status: </li>
+                                    <li id="username_data">Username: </li>
+                                    <li id="password_data">Password: </li>
                                 </ul>
                             </div>
                         </div>
