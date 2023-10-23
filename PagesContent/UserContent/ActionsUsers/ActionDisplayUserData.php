@@ -25,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'password_data' => $row['password']
                 );
             }
+            echo json_encode($response);
+            $conn->close();
         }
     }
 }
