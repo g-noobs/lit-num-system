@@ -24,20 +24,18 @@
                 <table id="dataTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>Student ID</th>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>Gender</th>
-                            <th>Birthdate</th>
+                            <th>Subject ID</th>
+                            <th>Subject Name</th>
+                            <th>Subject Description</th>
+                            <th>Subject Status</th>
                             <th>Date Added</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php 
-                        include_once("../Database/ReportsDisplay.php");
-                        $stduentData = new ReportsDisplay();
-                        $sql = "SELECT * FROM tbl_user_info WHERE user_level_id = 2";
-                        $stduentData->displayData($sql);
+                        include_once("../../../Database/ReportsDisplay.php");
+                        $subjectData = new ReportsDisplay();
+                        $subjectData->displaySubject();
                         ?>
                     </tbody>
                 </table>

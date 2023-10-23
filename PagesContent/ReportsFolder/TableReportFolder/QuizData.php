@@ -25,16 +25,21 @@
                     <thead>
                         <tr>
                             <th>Quiz ID</th>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>Gender</th>
-                            <th>Birthdate</th>
-                            <th>Date Added</th>
+                            <th>Question</th>
+                            <th>Correct Answer</th>
+                            <th>Option 1</th>
+                            <th>Option 2</th>
+                            <th>Option 3</th>
+                            <th>Option 4</th>
+                            <th>Topic ID</th>
+                            <th>Date Create</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <tr><td>asd</td><td>asd</td></tr>
-                    <tr><td>asdfdsg</td><td>asddfg</td></tr>
+                    <?php include_once("../../../Database/ReportsDisplay.php");
+                        $quizData = new ReportsDisplay();
+                        $quizData->displayQuizData();
+                    ?>
                     </tbody>
                 </table>
             </div>
