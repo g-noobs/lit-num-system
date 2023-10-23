@@ -10,7 +10,8 @@ $values = array(
     'birthdate' => $_POST['date'],
     'status_id' => '1',
     'user_level_id' => '',
-    'added_byID'=>''
+    'added_byID'=>'',
+    'date_added' => ''
 );
 
 
@@ -37,12 +38,15 @@ if ($_POST['user']=== "Admin") {
 //place id for added_byID
 $values['added_byID']= $_SESSION['id'];
 
+//add date added
+$currentDate = new DateTime();
+$values['date_added'] = $currentDate->format('Y-m-d H:i:s');
+
+
 //Password generation
 include_once("../../../CommonPHPClass/PHPClass.php");
 $phpClass = new PHPClass();
-
 $credentials_id = "CRED".(100001 + (int)$columnCountClass->columnCount("credentials_id","tbl_credentials"));
-
 $password = $phpClass->generatePassword(10);
 $user_info_id = $values['user_info_id'];
 
@@ -59,7 +63,7 @@ $isIdvalid = $validate -> validateOneColumn($table, 'personal_id', $values['pers
 if($isValid AND $isIdvalid) {
     $columns = implode(', ', array_keys($values));
     $sql = "INSERT INTO $table ($columns)
-            VALUES(?,?,?,?,?,?,?,?,?,?);";
+            VALUES(?,?,?,?,?,?,?,?,?,?,?);";
     $params = array_values($values);
 
     include_once "../../../Database/SanitizeCrudClass.php";
