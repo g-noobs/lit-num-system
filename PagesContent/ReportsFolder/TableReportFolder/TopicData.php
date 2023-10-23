@@ -36,7 +36,7 @@
                     <?php 
                         include_once("../../../Database/ReportsDisplay.php");
                         $topicData = new ReportsDisplay();
-                        $topicData->displatTopic();
+                        $topicData->displayTopic();
                         ?>
                     </tbody>
                 </table>

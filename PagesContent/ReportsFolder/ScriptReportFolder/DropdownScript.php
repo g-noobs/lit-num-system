@@ -21,9 +21,9 @@ $(document).ready(function() {
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
 
         if (contentPath !== '') {
-            $("#mainContent").fadeOut(100, function() {
+            $("#mainContent").fadeOut(400, function() {
                 $(this).empty().load(contentPath, function() {
-                    $(this).fadeIn(100);
+                    $(this).fadeIn(400);
                 });
             });
         }

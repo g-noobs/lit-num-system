@@ -38,7 +38,7 @@
                     <tbody>
                     <?php include_once("../../../Database/ReportsDisplay.php");
                         $quizData = new ReportsDisplay();
-                        $quizData->displayQuizData();
+                        $quizData->displayQuiz();
                     ?>
                     </tbody>
                 </table>

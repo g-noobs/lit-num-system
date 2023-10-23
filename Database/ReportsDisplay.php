@@ -33,7 +33,7 @@ class ReportsDisplay extends Connection{
                     $status = "Inactive";
                 }
                 echo "<tr>";
-                echo "<td>".$row['subj_id ']."</td>";
+                echo "<td>".$row['subj_id']."</td>";
                 echo "<td>".$row['subj_name']. "</td>";
                 echo "<td>".$row['subj_description']."</td>";
                 echo "<td>".$status."</td>";
@@ -49,7 +49,7 @@ class ReportsDisplay extends Connection{
             while($row = $result->fetch_assoc()){
                 
                 echo "<tr>";
-                echo "<td>".$row['lesson_id ']."</td>";
+                echo "<td>".$row['lesson_id']."</td>";
                 echo "<td>".$row['lesson_name']. "</td>";
                 echo "<td>".$row['category_name']."</td>";
                 echo "<td>".$row['subj_name']."</td>";
@@ -70,7 +70,7 @@ class ReportsDisplay extends Connection{
                     $status = "Inactive";
                 }
                 echo "<tr>";
-                echo "<td>".$row['topic_id ']."</td>";
+                echo "<td>".$row['topic_id']."</td>";
                 echo "<td>".$row['topic_name']. "</td>";
                 echo "<td>".$row['topic_description']."</td>";
                 echo "<td>".$status."</td>";
@@ -88,7 +88,7 @@ class ReportsDisplay extends Connection{
                 $correctAnswer = $row['quiz_selectionA'];
 
                 echo "<tr>";
-                echo "<td>".$row['quiz_id ']."</td>";
+                echo "<td>".$row['quiz_id']."</td>";
                 echo "<td>".$row['quiz_question']. "</td>";
                 echo "<td>".$correctAnswer. "</td>";
                 echo "<td>".$row['quiz_selectionA']."</td>";
