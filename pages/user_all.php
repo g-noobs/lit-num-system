@@ -110,6 +110,9 @@
             <!-- All Modal for user-->
             <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
 
+            <!-- Modal to view User data -->
+            <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
+
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
@@ -136,6 +139,9 @@
     
         <!-- Script contain the Dropdown and Search -->
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
+
+        <!-- Script to see all user data -->
+        <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
     </div>
 </body>
 
