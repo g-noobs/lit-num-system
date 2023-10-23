@@ -74,4 +74,15 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- script for thead to stick at the top -->
+<!-- Script that will disable the option if for usertype if either learner - teach is selected-->
+<script>
+$(function(){
+    $("#btnAddTeacher, #btnAddAdmin, #btnAddLearner").on("click", function(){
+        var userType = $(this).data(user-type);
+        // set the value #user and text then disable the option
+        $("#user").val(user-type);
+        $("#user").text(user-type);
+        $("#user").prop("disabled", true);
+    });
+});
+</script>
