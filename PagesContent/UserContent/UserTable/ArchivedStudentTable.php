@@ -61,3 +61,6 @@
 
 <!-- Common Script with other pages -->
 <?php include_once "../../../CommonContent/CommonAllScript.php"?>
+
+<!-- Script to see all user data -->
+<?php include_once "../CommonUser/ScriptViewUserData.php";?>

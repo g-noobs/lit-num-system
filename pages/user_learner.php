@@ -141,6 +141,8 @@
         <!-- Script contain the Dropdown and Search -->
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
 
+        <!-- Script to see all user data -->
+        <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
@@ -174,6 +176,7 @@
         }
         </script>
     </div>
+    
 </body>
 
 </html>
