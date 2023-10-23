@@ -11,22 +11,23 @@ $(document).ready(function() {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/TeacherData.php';
         } else if (dataType === 'subject-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/SubjectData.php';
-        }else if (dataType === 'lesson-data') {
+        } else if (dataType === 'lesson-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/LessonData.php';
         } else if (dataType === 'topic-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/TopicData.php';
-        }else if (dataType === 'quiz-data') {
+        } else if (dataType === 'quiz-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/QuizData.php';
-        } 
+        }
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
 
         if (contentPath !== '') {
             $("#mainContent").fadeOut(100, function() {
-                $(this).load(contentPath, function() {
+                $(this).empty().load(contentPath, function() {
                     $(this).fadeIn();
                 });
             });
         }
+
     });
 });
 </script>

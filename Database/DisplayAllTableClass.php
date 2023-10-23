@@ -63,7 +63,6 @@ class DisplayAllTableClass extends Connection{
                 echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='" . $row["lesson_id"] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
                 
                 $teacher_names = str_replace("\n", "<br>", $row["teacher_names"]);
-              
                 
                 echo "<td>" . $row["lesson_id"] . "</td>";
                 echo "<td>" . $row["lesson_name"] . "</td>";
@@ -73,7 +72,6 @@ class DisplayAllTableClass extends Connection{
                 // Output with <br> tags
                 echo "<td>" . $teacher_names . "</td>"; 
 
-              
                 echo "</tr>";
             }
         }

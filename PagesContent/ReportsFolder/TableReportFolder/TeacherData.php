@@ -38,7 +38,7 @@
                         $table = "user_info_view";
                         $stduentData = new ReportsDisplay();
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher';";
-                        $stduentData->displayData($sql);
+                        $stduentData->displayUserData($sql);
                         ?>
                     </tbody>
                 </table>
