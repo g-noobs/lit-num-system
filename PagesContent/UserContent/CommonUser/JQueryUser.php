@@ -56,7 +56,7 @@ $(document).ready(function() {
     $('#user, #edit_user_option').on('change', function() {
         var selectedUser = $(this).val();
 
-        var $personalIdinput = $('#personal-id, #edit_personal_i');
+        var $personalIdinput = $('#personal-id, #edit_personal_id');
         var $personalIdFrmGrp = $("#personal_id_form, #edit_personal_id_form");
 
         if (selectedUser === 'Admin') {
