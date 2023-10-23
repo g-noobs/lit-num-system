@@ -35,8 +35,9 @@
                     <tbody>
                         <?php 
                         include_once("../Database/ReportsDisplay.php");
+                        $table = "user_info_view";
                         $stduentData = new ReportsDisplay();
-                        $sql = "SELECT * FROM tbl_user_info WHERE user_level_id = 2";
+                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher';";
                         $stduentData->displayData($sql);
                         ?>
                     </tbody>
@@ -51,5 +52,5 @@
 
 
 <!-- Common Script with other pages -->
-<?php include_once "../../../CommonContent/CommonAllScript.php"?>
-<?php include_once "../ScriptReportFolder/ExportScript.php"?>
+<?php include_once("../../../CommonContent/CommonAllScript.php");?>
+<?php include_once("../ScriptReportFolder/ExportScript.php")?>

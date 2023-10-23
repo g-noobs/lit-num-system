@@ -35,8 +35,9 @@
                     <tbody>
                     <?php 
                         include_once("../Database/ReportsDisplay.php");
+                        $table = "user_info_view";
                         $stduentData = new ReportsDisplay();
-                        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Learner'";
+                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner'";
                         $stduentData->displayData($sql);
                     ?>
                     </tbody>
