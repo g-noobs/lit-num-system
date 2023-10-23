@@ -80,8 +80,8 @@ $(function(){
     $("#btnAddTeacher, #btnAddAdmin, #btnAddLearner").on("click", function(){
         var userType = $(this).data(user-type);
         // set the value #user and text then disable the option
-        $("#user").val(user-type);
-        $("#user").text(user-type);
+        $("#user").val(userType);
+        $("#user").text(userType);
         $("#user").prop("disabled", true);
     });
 });
