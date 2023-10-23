@@ -5,25 +5,26 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="user_id_data"">Enter user Information</h4>
+                <h4 class="modal-title" id="user_id_data"></h4>
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
                     <div class="box-body">
-
                         <div class="box box-widget widget-user-2">
                             <div class="box-footer no-padding">
                                 <ul class="nav nav-stacked">
-                                    <li><a href="#">Projects <span class="pull-right badge bg-blue">31</span></a></li>
-                                    <li><a href="#">Tasks <span class="pull-right badge bg-aqua">5</span></a></li>
-                                    <li><a href="#">Completed Projects <span
-                                                class="pull-right badge bg-green">12</span></a></li>
-                                    <li><a href="#">Followers <span class="pull-right badge bg-red">842</span></a></li>
+                                    <li id="personal_id_data">Personal ID: </li>
+                                    <li id="full_name_data"></li>
+                                    <li id="gender_data"></li>
+                                    <li id="email_data"></li>
+                                    <li id="birthdate_data"></li>
+                                    <li id="user_type_data"></li>
+                                    <li id="user_status_data"></li>
+                                    <li id="username_data"></li>
+                                    <li id="password_data"></li>
                                 </ul>
                             </div>
                         </div>
-
-
                     </div>
                     <!-- /.box-body -->
             </div>
