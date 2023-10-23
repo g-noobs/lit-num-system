@@ -5,7 +5,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="user_id_data"></h4>
+                <h4 class="modal-title">Data for User: 
+                    <span id="user_id_data"></span>
+                </h4>
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
