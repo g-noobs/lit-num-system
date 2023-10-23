@@ -1,8 +1,8 @@
 <?php 
 include_once "../../../Database/Connection.php";
 
-$conn = new Connection();
-$conn->getConnection();
+$connection = new Connection();
+$conn = $connection->getConnection();
 $table = "user_info_view";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -26,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 );
             }
             echo json_encode($response);
-            $conn->close();
         }
     }
 }
