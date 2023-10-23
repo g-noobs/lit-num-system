@@ -51,28 +51,3 @@ $(function() {
     });
 });
 </script>
-
-
-
-
-<!-- Activate and Archive button -->
-<!-- <script>
-$(document).ready(function() {
-    // Click event for the edit icon
-    $('.action').click(function() {
-        // Get the row data
-        var userId = $(this).closest('tr').find('td:eq(1)')
-            .text(); // Assuming the user_info_Id is in the second column (index 1)
-        var name = $(this).closest('tr').find('td:eq(2)').text();
-        var gender = $(this).closest('tr').find('td:eq(3)').text();
-        var date = $(this).closest('tr').find('td:eq(4)').text();
-        var user = $(this).closest('tr').find('td:eq(5)').text();
-
-        // Populate the modal fields with the data
-        $('#activate-user').find('[name="userId"]').val(userId);
-        $('#archive-user').find('[name="userId"]').val(userId);
-
-        // Show the modal
-    });
-});
-</script> -->

@@ -25,7 +25,7 @@ class DisplayAllTableClass extends Connection{
                 }
                 echo "<tr>";
 
-                echo "<td><a href='#' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
+                echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
                 echo "</td>";
 
                 if ($row["status"] === "Active") {
