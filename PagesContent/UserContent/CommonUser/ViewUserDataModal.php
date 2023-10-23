@@ -9,24 +9,24 @@
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
-                    <div class="box-body">
-                        <div class="box box-widget widget-user-2">
-                            <div class="box-footer no-padding">
-                                <ul class="nav nav-stacked">
-                                    <li id="personal_id_data">Personal ID: </li>
-                                    <li id="full_name_data">Full Name: </li>
-                                    <li id="gender_data">Gender: </li>
-                                    <li id="email_data">Email: </li>
-                                    <li id="birthdate_data">Birthday: </li>
-                                    <li id="user_type_data">User Type: </li>
-                                    <li id="user_status_data">User Status: </li>
-                                    <li id="username_data">Username: </li>
-                                    <li id="password_data">Password: </li>
-                                </ul>
-                            </div>
-                        </div>
+
+                <div class="box box-widget widget-user-2">
+                    <div class="box-footer no-padding">
+                        <ul class="nav nav-stacked">
+                            <li id="personal_id_data">Personal ID: </li>
+                            <li id="full_name_data">Full Name: </li>
+                            <li id="gender_data">Gender: </li>
+                            <li id="email_data">Email: </li>
+                            <li id="birthdate_data">Birthday: </li>
+                            <li id="user_type_data">User Type: </li>
+                            <li id="user_status_data">User Status: </li>
+                            <li id="username_data">Username: </li>
+                            <li id="password_data">Password: </li>
+                        </ul>
                     </div>
-                    <!-- /.box-body -->
+                </div>
+
+                <!-- /.box-body -->
             </div>
             <!-- /.modal-body -->
             <div class="modal-footer">
