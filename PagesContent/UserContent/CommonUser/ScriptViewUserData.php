@@ -3,7 +3,7 @@ $(function(){
     $('.data_info_btn').on('click', function(){
         var btn_id = $(this).data('id');
 
-        $('#user_id_data').text(id);
+        $('#user_id_data').text(btn_id);
         $.ajax({
             type: "POST",
             url: "../PagesContent/UserContent/ActionsUsers/ActionDisplayUserData.php",
