@@ -6,7 +6,7 @@ $(document).ready(function() {
         var contentPath = '';
 
         if (dataType === 'student-data') {
-            contentPath = '../PagesContent/ReportsFolder/TableReportFolder/StudentData.php';
+            location.reload()
         } else if (dataType === 'teacher-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/TeacherData.php';
         } else if (dataType === 'subject-data') {

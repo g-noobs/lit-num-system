@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                        include_once("../Database/ReportsDisplay.php");
+                        include_once("../../../Database/ReportsDisplay.php");
                         $table = "user_info_view";
                         $stduentData = new ReportsDisplay();
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher';";
