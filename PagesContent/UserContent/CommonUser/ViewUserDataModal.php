@@ -9,23 +9,21 @@
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
-
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <ul class="nav nav-stacked">
-                            <li id="personal_id_data">Personal ID: </li>
-                            <li id="full_name_data">Full Name: </li>
-                            <li id="gender_data">Gender: </li>
-                            <li id="email_data">Email: </li>
-                            <li id="birthdate_data">Birthday: </li>
-                            <li id="user_type_data">User Type: </li>
-                            <li id="user_status_data">User Status: </li>
-                            <li id="username_data">Username: </li>
-                            <li id="password_data">Password: </li>
+                            <li id="personal_id_data"><strong>Personal ID: </strong> </li>
+                            <li id="full_name_data"><strong>Full Name: </strong> </li>
+                            <li id="gender_data"><strong>Gender: </strong></li>
+                            <li id="email_data"><strong>Email: </strong></li>
+                            <li id="birthdate_data"><strong>Birthday: </strong></li>
+                            <li id="user_type_data"><strong>User Type: </strong></li>
+                            <li id="user_status_data"><strong>User Status: </strong></li>
+                            <li id="username_data"><strong>Username: </strong></li>
+                            <li id="password_data"><strong>Password: </strong></li>
                         </ul>
                     </div>
                 </div>
-
                 <!-- /.box-body -->
             </div>
             <!-- /.modal-body -->
