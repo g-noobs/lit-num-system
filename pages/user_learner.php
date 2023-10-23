@@ -112,7 +112,8 @@
                 </div> -->
             <!-- All Modal for user-->
             <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
-
+            <!-- Modal to view User data -->
+            <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
