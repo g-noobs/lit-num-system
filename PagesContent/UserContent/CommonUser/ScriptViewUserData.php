@@ -20,7 +20,7 @@ $(function(){
                 $('#user_status_data').append(responseData.user_status_data);
                 $('#username_data').append(responseData.username_data);
                 $('#password_data').append(responseData.password_data);
-            }
+            },
             error:function(){
                 console.log('error');
             }
