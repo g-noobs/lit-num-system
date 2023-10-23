@@ -12,15 +12,15 @@
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <ul class="nav nav-stacked">
-                            <li id="personal_id_data"><strong>Personal ID: </strong> </li>
-                            <li id="full_name_data"><strong>Full Name: </strong> </li>
-                            <li id="gender_data"><strong>Gender: </strong></li>
-                            <li id="email_data"><strong>Email: </strong></li>
-                            <li id="birthdate_data"><strong>Birthday: </strong></li>
-                            <li id="user_type_data"><strong>User Type: </strong></li>
-                            <li id="user_status_data"><strong>User Status: </strong></li>
-                            <li id="username_data"><strong>Username: </strong></li>
-                            <li id="password_data"><strong>Password: </strong></li>
+                            <li><strong>Personal ID: <p id="personal_id_data"></p></strong> </li>
+                            <li><strong>Full Name: <p id="full_name_data"></p></strong> </li>
+                            <li><strong>Gender: <p id="gender_data"></p></strong></li>
+                            <li><strong>Email: <p id="email_data"></p></strong></li>
+                            <li><strong>Birthday: <p id="birthdate_data"></p></strong></li>
+                            <li><strong>User Type: <p id="user_type_data"></p></strong></li>
+                            <li><strong>User Status: <p id="user_status_data"></p></strong></li>
+                            <li><strong>Username: <p id="username_data"></p></strong></li>
+                            <li><strong>Password: <p id="password_data"></p></strong></li>
                         </ul>
                     </div>
                 </div>
