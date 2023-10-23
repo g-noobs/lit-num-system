@@ -23,7 +23,7 @@ $(document).ready(function() {
         if (contentPath !== '') {
             $("#mainContent").fadeOut(100, function() {
                 $(this).empty().load(contentPath, function() {
-                    $(this).fadeIn();
+                    $(this).fadeIn(100);
                 });
             });
         }
