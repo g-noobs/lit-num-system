@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             catch(Exception $e){
                 echo $e->getMessage();
             }
-           
+
         }
         else{
             echo $data." is already exists. Please try again";
@@ -113,7 +113,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $addFileInfo->executePreState($query,$params);
                 $validate = new CommonValidationClass();
                 
-  
+
                 
                 //? Move the uploaded file to the directory
                 if(move_uploaded_file($tempName, $destination)){
@@ -125,11 +125,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
             
         }
-
         
-
-
     }
-        
 }
 ?>

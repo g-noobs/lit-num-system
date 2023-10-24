@@ -79,3 +79,58 @@ a {
 <div id="topic-table">
     <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicTable.php"?>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#sel1').change(function() {
+        // Get the selected option value
+        var selectedOption = $(this).val();
+        
+        // Clear any previous error messages
+        $('.error-message').remove();
+        
+        // If the selected option is "Video" and the file type is not video
+        if (selectedOption === 'Video' && !isFileTypeValid('video', $('#file')[0].files)) {
+            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Video</div>');
+            $('#file').val(''); // Clear the file input
+        } else if (selectedOption === 'Audio' && !isFileTypeValid('audio', $('#file')[0].files)) {
+            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Audio</div>');
+            $('#file').val(''); // Clear the file input
+        } else if (selectedOption === 'Image' && !isFileTypeValid('image', $('#file')[0].files)) {
+            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Image</div>');
+            $('#file').val(''); // Clear the file input
+        } else if (selectedOption === 'Pdf' && !isFileTypeValid('pdf', $('#file')[0].files)) {
+            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Pdf</div>');
+            $('#file').val(''); // Clear the file input
+        }
+    });
+    
+    // Function to check if the selected files have the correct extension for the given media type
+    function isFileTypeValid(mediaType, files) {
+        var allowedExtensions = [];
+        
+        // Define the allowed file extensions for each media type
+        if (mediaType === 'video') {
+            allowedExtensions = ['mp4', 'mov', 'avi'];
+        } else if (mediaType === 'audio') {
+            allowedExtensions = ['mp3', 'wav', 'ogg'];
+        } else if (mediaType === 'image') {
+            allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+        } else if (mediaType === 'pdf') {
+            allowedExtensions = ['pdf'];
+        }
+        
+        for (var i = 0; i < files.length; i++) {
+            var fileExtension = files[i].name.split('.').pop().toLowerCase();
+            if (allowedExtensions.indexOf(fileExtension) === -1) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+});
+</script>

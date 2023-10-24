@@ -66,7 +66,6 @@
                     <div class="box-body">
                         The great content goes here
                     </div>
-
                 </div>
             </section>
         </div>
