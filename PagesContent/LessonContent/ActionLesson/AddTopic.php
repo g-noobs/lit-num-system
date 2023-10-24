@@ -5,7 +5,7 @@
 
 include_once "../../../Database/SanitizeCrudClass.php";
 include_once "../../../Database/ColumnCountClass.php";
-
+include_once "../../../Database/CommonValidationClass.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //check if the form fields is empty including file input
@@ -23,8 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $query = "INSERT INTO $table(topic_id, topic_name, topic_description, topic_status, lesson_id) VALUES (?,?,?,?,?)";
         $params = array($topic_id, $topic_name, $topic_desc, 1, $lesson_id);
         
-        //Check if there is duplicate in tbl_topic
-        include_once "../../../Database/CommonValidationClass.php";
+        //Check if there is duplicate in tbl_topic  
         $check = new CommonValidationClass();
         $data = $topic_name;
         $column = 'topic_name';
@@ -37,16 +36,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             } catch (mysqli_sql_exception $e) {
                 if ($e->getCode() == 1062) {
                     // Duplicate entry
-                    echo $data." already exists. Please try again";  
+                    $response = array("error" => $data." already exists. Please try again");
+                    echo json_encode($response);  
                     exit();
                 } else {
                     // Some other error
+                    $response = array("error"=> $e->getMessage());
+                    echo json_encode($response);
                     throw $e;
                 }
             }
             //add a catch for foreign key constraits fails
             catch(Exception $e){
-                echo $e->getMessage();
+                $response = array("error"=> $e->getMessage());
+                echo json_encode($response);
             }
 
         }
@@ -58,14 +61,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             //Handle multiple file uploads
             $fileCount = count($_FILES['file']['name']);
             
-            //upload directory to Folder Media
-            $uploadDir = "../../../Media/";
-
-            //Check if directory exists, if not create it
-            if(!file_exists($uploadDir)){
-                mkdir($uploadDir, 0755, true);
-            }
-
             $uploadFiles = array();
 
             //place the file name, tempname and traget path in an array, using for loop
@@ -82,49 +77,83 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $base = preg_replace("/[^a-zA-Z0-9]/", "_", $base);
                 $fileName = $base . "." . $fileExtension;
 
-                //set the target path with a new file name
+                //set the target path or Folder depends on file extension
                 include_once "../../../CommonPHPClass/DirModClass.php";
                 $dirMod = new DirModClass();
-                $subDirectory = $dirMod->modSubDirecPath($fileExtension);
+                $subDirectoryFolder = $dirMod->modSubDirecPath($fileExtension);
+
+
+                //upload directory to Folder Media plus the subdirectoryFolder
+                $uploadDir = "../../../Media/".$subDirectoryFolder;
+
+                //Check if directory exists, if not create it
+                if(!file_exists($uploadDir)){
+                    mkdir($uploadDir, 0755, true);
+                }
                 
                 //Destination Where to Save the file
-                $destination = $uploadDir .$subDirectory ."/". $fileName;
+                $destination = $uploadDir."/". $fileName;
                 
+                // add numbers to duplicate file names
                 $j = 1;
                 while(file_exists($destination)){
-                    $fileName = $base . "($j)." . $pathinfo["extension"];
+                    $fileName = $base . "($j)." . $fileExtension;
                     $destination = $uploadDir . $fileName;
                     $j++;
                 }
-
+                // Depends on the $subDirectoryFolder return value. Convert to lowercase then remove letter 's'
+                $file_type = str_replace('s', '', strtolower($subDirectoryFolder));
+                // Get the first 3 characters and convert them to uppercase
+                $category = strtoupper(substr($category, 0, 3));
+                
+                $table = "tbl_".$file_type;
+                $file_id_column = $file_type."_id";
+                $file_name_column = $file_type."_name";
+                $file_path_column = $file_type."_path";
+                
 
                 $columnCount = new ColumnCountClass();
-                $image_id = "IMG". $columnCount->columnCountWhere("image_id","tbl_image");
+                $file_id = "IMG". $columnCount->columnCountWhere($file_id_column,$table);
 
                 // get current or today's date
-                $updloadDate = date("Y-m-d");
-               
                 // !This will be the saved directory path to the database where file can be access
-                $distanation_mod = "/TagakauloAdmin/Media/".$subDirectory ."/". $fileName;
-                
-                // //insert the file info to tbl_image
-                $addFileInfo = new SanitizeCrudClass();
-                $query = "INSERT INTO tbl_image(image_id, image_name, image_path, upload_date, image_status, topic_id) VALUES (?,?,?,?,?,?)";
-                $params = array($image_id, $fileName, $distanation_mod, $updloadDate , 1, $topic_id);
-                $addFileInfo->executePreState($query,$params);
-                $validate = new CommonValidationClass();
-                
+                $destination_mod = "/TagakauloAdmin/Media/".$subDirectoryFolder ."/". $fileName;
 
+                $updloadDate = date("Y-m-d");
                 
-                //? Move the uploaded file to the directory
-                if(move_uploaded_file($tempName, $destination)){
-                    $uploadFiles[] = $destination;
+                // $This will be the saved directory path to the database where file can be access
+                $addFileInfo = new SanitizeCrudClass();
+                $query = "INSERT INTO $table(image_id, image_name, image_path, upload_date, topic_id) VALUES (?,?,?,?,?)";
+                $params = array($file_id, $fileName, $destination_mod, $updloadDate , 1, $topic_id);
+                $addFileInfo->executePreState($query,$params);
+                
+                // proceed on uploading files if there is no error on adding the file path to the databse
+                if($addFileInfo->getLastError() === null){
+                    //? Move the uploaded file to the directory
+                    if(move_uploaded_file($tempName, $destination)){
+                        $uploadFiles[] = $destination;
+                    }
+                }
+                else{
+                    $response = array(
+                        "error" => "Error on adding file path to the database"
+                    );
+                    echo json_encode($response);
                 }
             }
             //Adding Successfully
-            echo "Successfully Added";
-        }
-        
+            $response = array("success" => "Successfully Added");
+            echo json_encode($response);
+        }else{
+            $response = array("error" => "Error on adding topic");
+            echo json_encode($response);
+        } 
+    }else{
+        $response = array("error" => "Please fill up all the fields");
+        echo json_encode($response);
     }
+}else{
+    $response = array("error" => "POSSIBLE POST ISSUE");
+    echo json_encode($response);
 }
 ?>

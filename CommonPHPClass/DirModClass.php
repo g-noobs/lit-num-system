@@ -17,6 +17,8 @@ class DirModClass{
             case 'png':
                 return 'Images';
             case 'pdf':
+            case 'doc':
+            case 'docx':
                 return 'Documents';
             default:
                 return 'Others';

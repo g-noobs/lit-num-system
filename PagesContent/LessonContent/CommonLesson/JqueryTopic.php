@@ -14,22 +14,23 @@ $(function() {
 
         $("#lesson-table").hide();
         $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
-        
+
         $.ajax({
             url: "../PagesContent/LessonContent/TopicFolder/PopulateTableData.php",
             type: "POST",
-            data: {id: btnId},
-            success: function(response){
+            data: {
+                id: btnId
+            },
+            success: function(response) {
                 $("#table-topic tbody").append(response);
             }
-        }
-        );
+        });
     });
-    
+
     //Event handler for the form submit -- addTopic
     $("#addTopic").on("submit", function(e) {
         $("errorBanner").hide();
-        e.preventDefault(); 
+        e.preventDefault();
         //Create a FormData object
         var formData = new FormData(this);
         // Append the btnId to the formData
@@ -40,21 +41,32 @@ $(function() {
             data: formData,
             contentType: false,
             processData: false,
-            success: function(data) {
-                alert(data);
-                $("#addTopic")[0].reset();
-                $("#add-topic-panel").show();
-                $("#lesson-table").hide();
+            success: function(response) {
+                var responseData = JSON.parse(response);
+                if (responseData.hasOwnProperty('success')) {
+                    $hideModal.modal('hide');
+                    $('#successAlert').text(responseData.success);
+                    $('#successBanner').show();
+                    setTimeout(function() {
+                        $("#successBanner").fadeOut("slow");
+                        location.reload();
+                    }, 1500);
 
-                $("errorBanner").show();
-                $("errorAlert").text(data);
-                setTimeout(function () {
-                    $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                }, 2500);
+
+                    // You can redirect to a different page or perform other actions here
+                } else if (responseData.hasOwnProperty('error')) {
+                    $hideModal.modal('hide');
+                    $('#errorAlert').text(responseData.error);
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+                        location.reload();
+                    }, 1500);
+            }
             }
         });
     });
-    
+
 
 });
 </script>
@@ -81,18 +93,18 @@ $("#reset-cancel").on("click", function() {
 $(document).ready(function() {
     // Function to add another input group when #addMedia is clicked
     var $addFileContainer = $("#addFileContainer");
-    var $firstFormGroup = $($addFileContainer ).find(".form-group:first");
-    $("#addMedia").click(function() { 
-        
+    var $firstFormGroup = $($addFileContainer).find(".form-group:first");
+    $("#addMedia").click(function() {
+
         // if formGroupCount is 5, disable the addMedia button
         var formGroupCount = $(".col-sm-6 .row .form-group").length;
-        if(formGroupCount == 5){
+        if (formGroupCount == 5) {
             $(this).prop('disabled', true);
-        }else{
+        } else {
             // Append the new input group to the container
             $($addFileContainer).append($firstFormGroup.clone());
         }
-        
+
 
     });
 
@@ -105,12 +117,12 @@ $(document).ready(function() {
         if (formGroupCount === 1) {
             // If there's only one input group, hide or disable the cancelFile class as per your requirement
             $(this).closest('.form-group').find('.cancelFile').addClass('disable')
-           
+
         } else {
             // If there are more than one input groups, remove the current input group
             $(this).closest('.form-group').remove();
         }
-        
+
     });
 });
 </script>
