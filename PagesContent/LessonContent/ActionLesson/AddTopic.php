@@ -18,10 +18,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $topic_count = new ColumnCountClass();
         $topic_id = "TPC". $topic_count->columnCountWhere("topic_id","tbl_topic");
 
+        $currentDate = new DateTime();
+        $date_added = $currentDate->format('Y-m-d H:i:s');
+
         $table = "tbl_topic";
         $addTopic = new SanitizeCrudClass();
-        $query = "INSERT INTO $table(topic_id, topic_name, topic_description, topic_status, lesson_id) VALUES (?,?,?,?,?)";
-        $params = array($topic_id, $topic_name, $topic_desc, 1, $lesson_id);
+        $query = "INSERT INTO $table(topic_id, topic_name, topic_description, topic_status, lesson_id,date_added) VALUES (?,?,?,?,?,?)";
+        $params = array($topic_id, $topic_name, $topic_desc, 1, $lesson_id, $date_added);
         
         //Check if there is duplicate in tbl_topic  
         $check = new CommonValidationClass();
