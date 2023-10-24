@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <?php include_once "../ViewLessonFolder/lessonStyle.php";?>
-    
+
 </head>
 
 <body class="sidebar-mini wysihtml5-supported skin-yellow-light sidebar-collapse fixed"
@@ -55,13 +55,18 @@
                 <h3>Lesson: <strong id="lesson_name"></strong></h3>
 
             </section>
+
+            <section class="content">
+                <ul class="pager">
+                    <li class="previous"><a href="#">Previous</a></li>
+                    <li class="next"><a href="#">Next</a></li>
+                </ul>
+            </section>
+
             <section class="content">
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <ul class="pager">
-                            <li class="previous"><a href="#">Previous</a></li>
-                            <li class="next"><a href="#">Next</a></li>
-                        </ul>
+                        <div id="lesson_description"></div>
                     </div>
                     <div class="box-body">
                         The great content goes here
@@ -74,16 +79,16 @@
     <?php include_once "../ViewLessonFolder/lessonQuery.php"?>
     <?php include_once "../ViewLessonFolder/ModifiedViewScript.php"?>
     <script>
-        $(function(){
-            //get the lesson name from the url
-            var lessonid = window.location.href.split("=")[1].split("&")[0];
-            var lessonName = window.location.href.split("=")[2];
-            //replace the %20 with one space
-            var lessonName = lessonName.replace(/%20/g, " ");
+    $(function() {
+        //get the lesson name from the url
+        var lessonid = window.location.href.split("=")[1].split("&")[0];
+        var lessonName = window.location.href.split("=")[2];
+        //replace the %20 with one space
+        var lessonName = lessonName.replace(/%20/g, " ");
 
-            $("#test").text(lessonid);
-            $("#lesson_name").text(lessonName);
-        });
+        $("#test").text(lessonid);
+        $("#lesson_name").text(lessonName);
+    });
     </script>
 </body>
 
