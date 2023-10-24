@@ -43,7 +43,7 @@ a {
                                 <div class="col-sm-6">
                                     <div class="input-group">
                                         <label for="sel1" class="input-group-addon">Select Media:</label>
-                                        <select class="form-control" id="sel1">
+                                        <select class="form-control" id="select_file_type">
                                             <option>Image</option>
                                             <option>Video</option>
                                             <option>Audio</option>
@@ -81,11 +81,11 @@ a {
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <script>
 $(document).ready(function() {
-    $('#sel1').change(function() {
+    $('#select_file_type').change(function() {
         // Get the selected option value
         var selectedOption = $(this).val();
         
