@@ -54,14 +54,13 @@
                 <div id="test"></div>
                 <h3>Lesson: <strong id="lesson_name"></strong></h3>
 
-            </section>
-
-            <section class="container">
+                <br>
                 <ul class="pager">
                     <li class="previous"><a href="#">Previous</a></li>
                     <li class="next"><a href="#">Next</a></li>
                 </ul>
             </section>
+
 
             <section class="content">
                 <div class="box box-default">
