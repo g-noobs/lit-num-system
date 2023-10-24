@@ -12,12 +12,9 @@
 
 
 </head>
-    <style>
-    body {
-        overflow: hidden;
-    }
-    </style>
+
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
+
 <body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
     <div class="wrapper">
