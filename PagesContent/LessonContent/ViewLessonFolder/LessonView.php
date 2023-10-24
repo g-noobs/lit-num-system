@@ -56,12 +56,12 @@
 
             </section>
 
-            <section="container">
+            <section class="container">
                 <ul class="pager">
                     <li class="previous"><a href="#">Previous</a></li>
                     <li class="next"><a href="#">Next</a></li>
                 </ul>
-            </section=>
+            </section>
 
             <section class="content">
                 <div class="box box-default">
