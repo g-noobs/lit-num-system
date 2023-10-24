@@ -108,8 +108,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 //this could be video, audio, image, document, others
                 $file_type = str_replace('s', '', strtolower($subDirectoryFolder));
                 
-
-
                 //set table
                 $table = "tbl_".$file_type;
 
@@ -120,7 +118,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 // get current or today's date
                 // !This will be the saved directory path to the database where file can be access
-                $file_path = "Media/".$subDirectoryFolder ."/". $fileName;
+                $file_access_path = "https://tagakauloedu.com/Media/".$subDirectoryFolder ."/". $fileName;
 
                 $currentDate = new DateTime();
                 $updloadDate  = $currentDate->format('Y-m-d H:i:s');
@@ -128,7 +126,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $values = array(
                     $file_type."_id" => $file_id,
                     $file_type."_name" => $fileName,
-                    $file_type."_path" => $file_path,
+                    $file_type."_path" => $file_access_path,
                     "upload_date" => $updloadDate,
                     "topic_id" => $topic_id
                 );
