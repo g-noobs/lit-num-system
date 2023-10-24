@@ -56,7 +56,7 @@
 
             </section>
 
-            <section class="content">
+            <section>
                 <ul class="pager">
                     <li class="previous"><a href="#">Previous</a></li>
                     <li class="next"><a href="#">Next</a></li>
