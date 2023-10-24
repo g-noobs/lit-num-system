@@ -82,6 +82,7 @@ a {
 
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
 $(document).ready(function() {
@@ -94,16 +95,16 @@ $(document).ready(function() {
         
         // If the selected option is "Video" and the file type is not video
         if (selectedOption === 'Video' && !isFileTypeValid('video', $('#file')[0].files)) {
-            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Video</div>');
+            $('#addFileContainer').after('<div class="error-message text-danger">Invalid file type for Video</div>');
             $('#file').val(''); // Clear the file input
         } else if (selectedOption === 'Audio' && !isFileTypeValid('audio', $('#file')[0].files)) {
-            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Audio</div>');
+            $('#addFileContainer').after('<div class="error-message text-danger">Invalid file type for Audio</div>');
             $('#file').val(''); // Clear the file input
         } else if (selectedOption === 'Image' && !isFileTypeValid('image', $('#file')[0].files)) {
-            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Image</div>');
+            $('#addFileContainer').after('<div class="error-message text-danger">Invalid file type for Image</div>');
             $('#file').val(''); // Clear the file input
         } else if (selectedOption === 'Pdf' && !isFileTypeValid('pdf', $('#file')[0].files)) {
-            $('#sel1').after('<div class="error-message text-danger">Invalid file type for Pdf</div>');
+            $('#addFileContainer').after('<div class="error-message text-danger">Invalid file type for Pdf</div>');
             $('#file').val(''); // Clear the file input
         }
     });
