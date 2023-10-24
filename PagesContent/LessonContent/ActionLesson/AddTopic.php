@@ -117,7 +117,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 // get current or today's date
                 // !This will be the saved directory path to the database where file can be access
-                $destination_mod = "/TagakauloAdmin/Media/".$subDirectoryFolder ."/". $fileName;
+                $file_path = "Media/".$subDirectoryFolder ."/". $fileName;
 
                 $currentDate = new DateTime();
                 $updloadDate  = $currentDate->format('Y-m-d H:i:s');
@@ -125,7 +125,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $values = array(
                     $file_type."_id" => $file_id,
                     $file_type."_name" => $fileName,
-                    $file_type."_path" => $destination,
+                    $file_type."_path" => $file_path,
                     "upload_date" => $updloadDate,
                     "topic_id" => $topic_id
                 );

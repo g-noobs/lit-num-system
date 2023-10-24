@@ -47,7 +47,7 @@ a {
                                             <option>Image</option>
                                             <option>Video</option>
                                             <option>Audio</option>
-                                            <option>Pdf</option>
+                                            <option>Document</option>
                                         </select>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@ $(document).ready(function() {
         } else if (selectedOption === 'Image' && !isFileTypeValid('image', $('#file')[0].files)) {
             $('#addFileContainer').after('<div class="error-message text-danger">Invalid file type for Image</div>');
             $('#file').val(''); // Clear the file input
-        } else if (selectedOption === 'Pdf' && !isFileTypeValid('pdf', $('#file')[0].files)) {
+        } else if (selectedOption === 'Document' && !isFileTypeValid('document', $('#file')[0].files)) {
             $('#addFileContainer').after('<div class="error-message text-danger">Invalid file type for Pdf</div>');
             $('#file').val(''); // Clear the file input
         }
@@ -120,8 +120,8 @@ $(document).ready(function() {
             allowedExtensions = ['mp3', 'wav', 'ogg'];
         } else if (mediaType === 'image') {
             allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-        } else if (mediaType === 'pdf') {
-            allowedExtensions = ['pdf'];
+        } else if (mediaType === 'document') {
+            allowedExtensions = ['pdf', 'doc', 'docx'];
         }
         
         for (var i = 0; i < files.length; i++) {
