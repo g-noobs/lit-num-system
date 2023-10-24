@@ -102,30 +102,48 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $j++;
                 }
                 // Depends on the $subDirectoryFolder return value. Convert to lowercase then remove letter 's'
+                //this could be video, audio, image, document, others
                 $file_type = str_replace('s', '', strtolower($subDirectoryFolder));
-                // Get the first 3 characters and convert them to uppercase
-                $category = strtoupper(substr($category, 0, 3));
-                
-                $table = "tbl_".$file_type;
-                $file_id_column = $file_type."_id";
-                $file_name_column = $file_type."_name";
-                $file_path_column = $file_type."_path";
                 
 
+
+                //set table
+                $table = "tbl_".$file_type;
+
                 $columnCount = new ColumnCountClass();
-                $file_id = "IMG". $columnCount->columnCountWhere($file_id_column,$table);
+                // Get the first 3 characters and convert them to uppercase
+                $id_initial = strtoupper(substr($subDirectoryFolder, 0, 3));
+                $file_id = $id_initial. $columnCount->columnCountWhere($file_type."_id",$table);
 
                 // get current or today's date
                 // !This will be the saved directory path to the database where file can be access
                 $destination_mod = "/TagakauloAdmin/Media/".$subDirectoryFolder ."/". $fileName;
 
-                $updloadDate = date("Y-m-d");
+                $currentDate = new DateTime();
+                $updloadDate  = $currentDate->format('Y-m-d H:i:s');
+
+                $values = array(
+                    $file_type."_id" => $file_id,
+                    $file_type."_name" => $fileName,
+                    $file_type."_path" => $destination,
+                    "upload_date" => $updloadDate,
+                    "topic_id" => $topic_id
+                );
                 
-                // $This will be the saved directory path to the database where file can be access
+                //automatically store implode array keys from array $values
+                $columns = implode(', ', array_keys($values));
+
+                //automatically store corresponding number of placeholders from array $values
+                $placeholders = implode(', ', array_fill(0, count($values), '?'));
+
+                // place all array values to the parameter
+                $params = array_values($values);
+
+                $query = "INSERT INTO $table($columns) VALUES ($placeholders)";
+
                 $addFileInfo = new SanitizeCrudClass();
-                $query = "INSERT INTO $table(image_id, image_name, image_path, upload_date, topic_id) VALUES (?,?,?,?,?)";
-                $params = array($file_id, $fileName, $destination_mod, $updloadDate , 1, $topic_id);
                 $addFileInfo->executePreState($query,$params);
+                // $This will be the saved directory path to the database where file can be access
                 
                 // proceed on uploading files if there is no error on adding the file path to the databse
                 if($addFileInfo->getLastError() === null){
