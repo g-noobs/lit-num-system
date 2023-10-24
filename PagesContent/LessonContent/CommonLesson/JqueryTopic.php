@@ -44,7 +44,6 @@ $(function() {
             success: function(response) {
                 var responseData = JSON.parse(response);
                 if (responseData.hasOwnProperty('success')) {
-                    $hideModal.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
@@ -55,7 +54,6 @@ $(function() {
 
                     // You can redirect to a different page or perform other actions here
                 } else if (responseData.hasOwnProperty('error')) {
-                    $hideModal.modal('hide');
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
