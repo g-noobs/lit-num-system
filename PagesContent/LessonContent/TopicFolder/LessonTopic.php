@@ -88,7 +88,7 @@ a {
 $(document).ready(function() {
     $('#file').change(function() {
         // Get the selected option value
-        var selectedOption = $('#sel1').val();
+        var selectedOption = $('#select_file_type').val();
         
         // Clear any previous error messages
         $('.error-message').remove();
