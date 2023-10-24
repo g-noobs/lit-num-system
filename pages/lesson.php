@@ -61,8 +61,7 @@
 
     <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
     <?php include_once "../CommonContent/CommonAllScript.php"?>
-    <!-- !! STILL AN ISSUE with hiding the modal fro adding lesson  -->
-    <!-- ./wrapper -->
+
 </body>
 
 </html>
