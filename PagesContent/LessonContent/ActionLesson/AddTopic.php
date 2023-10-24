@@ -86,7 +86,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 include_once "../../../CommonPHPClass/DirModClass.php";
                 $dirMod = new DirModClass();
                 $subDirectory = $dirMod->modSubDirecPath($fileExtension);
-
+                
+                //Destination Where to Save the file
                 $destination = $uploadDir .$subDirectory ."/". $fileName;
                 
                 $j = 1;
@@ -122,8 +123,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
             //Adding Successfully
             echo "Successfully Added";
-            
-            
         }
         
     }
