@@ -103,8 +103,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 // get current or today's date
                 $updloadDate = date("Y-m-d");
-
-                //!for the meantime directory modifaction on database insert variable = $distanation_mod
+               
+                // !This will be the saved directory path to the database where file can be access
                 $distanation_mod = "/TagakauloAdmin/Media/".$subDirectory ."/". $fileName;
                 
                 // //insert the file info to tbl_image
