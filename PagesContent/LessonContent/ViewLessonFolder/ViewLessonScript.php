@@ -18,13 +18,15 @@ $(function() {
         $.ajax({
             url: '../ActionLesson/ActionLessonView.php', // Replace with the actual backend PHP script
             method: 'POST', // Change to POST if needed
-            data: { id: lessonid }, // Pass any required data to your PHP script
+            data: {
+                id: lessonid
+            }, // Pass any required data to your PHP script
             dataType: 'json',
-            success: function(data) {
-                responseData = data;
-                topics = Object.keys(data);
+            success: function(response) {
+                responseData = response;
+                topics = Object.keys(response);
                 loadTopic(currentTopicIndex);
-                loadSidebarMenu(topics);
+                loadSidebar(topics);
             },
             error: function() {
                 console.error('Failed to load data.');
@@ -65,13 +67,14 @@ $(function() {
         }
     }
 
-    // Function to load the sidebar menu dynamically
-    function loadSidebarMenu(topics) {
+    // Function to load sidebar menu with topic links
+    function loadSidebar(topics) {
         var sidebarContent = '';
 
         topics.forEach(function(topic, index) {
             // Add the label for the topic within the <a> element
-            sidebarContent += '<li><a href="#" class="topic-link" data-index="' + index + '"><i class="fa fa-file-o></i><span>' + topic + '</span></a></li>';
+            sidebarContent += '<li><a href="#" class="topic-link" data-index="' + index +
+                '"><i class="fa fa-book"></i><span>' + topic + '</span></a></li>';
         });
 
         $('#side-menu').html(sidebarContent);
@@ -102,3 +105,5 @@ $(function() {
     });
 });
 </script>
+
+
