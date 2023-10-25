@@ -21,9 +21,16 @@ $(function() {
             method: 'POST', // Change to POST if needed
             data: { id: lessonid }, // Pass any required data to your PHP script
             dataType: 'json',
-            success: function(data) {
-                responseData = data; // Assuming the backend returns data as an object
+            success: function(response) {
+                responseData = response; // Assuming the backend returns data as an object
                 loadPage(currentIndex);
+                var responseDataJson = JSON.parse(response);
+                if(responseDataJson.hasOwnProperty('error')){
+                    var msg = responseDataJson.error;
+                    $('#errorAlert').text(msg);
+                    $('#errorBanner').show();
+                }
+
             },
             error: function() {
                 console.error('Failed to load data.');

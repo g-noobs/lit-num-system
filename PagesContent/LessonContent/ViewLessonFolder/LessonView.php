@@ -69,7 +69,7 @@
                     <div class="box-header with-border">
                         <div id="lesson_description"></div>
                     </div>
-                    <div class="box-body">
+                    <div class="box-body">  
                         <div id="gallery"></div>
                     </div>
                 </div>
