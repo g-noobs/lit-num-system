@@ -19,7 +19,7 @@ $(function() {
         $.ajax({
             url: '../ActionLesson/ActionLessonView.php', // Replace with the actual backend PHP script
             method: 'POST', // Change to POST if needed
-            data: { id: 'your_lesson_id' }, // Pass any required data to your PHP script
+            data: { id: lessonid }, // Pass any required data to your PHP script
             dataType: 'json',
             success: function(data) {
                 responseData = data; // Assuming the backend returns data as an object
