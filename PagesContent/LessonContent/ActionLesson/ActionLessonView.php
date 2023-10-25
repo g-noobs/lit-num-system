@@ -23,10 +23,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
                 $mediaData[$topic_id][] = $media_path;
+                
             }
-
+            $response = $mediaData;
             // Return the grouped media data as JSON
-            echo json_encode($mediaData);
+            echo json_encode($response);
         }else{
             $response = array("error"=> "Empty!! No Data Found");
             echo json_encode($response);
