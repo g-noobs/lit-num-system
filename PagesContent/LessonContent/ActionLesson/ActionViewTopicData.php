@@ -2,9 +2,9 @@
 include "../../../Database/Connection.php";
 $connection = new Connection;
 $conn = $connection->getConnection();
-$table = "media_view"
+$table = "media_view";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['id'])) {
         $id = $_POST['id'];
         $sql = "SELECT * FROM $table WHERE topic_id = '$id'";

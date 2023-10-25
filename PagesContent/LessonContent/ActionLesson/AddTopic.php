@@ -96,14 +96,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 
                 //Destination Where to Save the file
                 $destination = $uploadDir."/". $fileName;
-                
+
                 // add numbers to duplicate file names
                 $j = 1;
                 while(file_exists($destination)){
                     $fileName = $base . "($j)." . $fileExtension;
-                    $destination = $uploadDir . $fileName;
+                    $destination = $uploadDir."/". $fileName;
                     $j++;
                 }
+                
+
                 // Depends on the $subDirectoryFolder return value. Convert to lowercase then remove letter 's'
                 //this could be video, audio, image, document, others
                 $file_type = str_replace('s', '', strtolower($subDirectoryFolder));
