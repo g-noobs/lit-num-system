@@ -42,14 +42,18 @@ $(function() {
             mediaPaths.forEach(function(mediaPath) {
                 var fileType = mediaPath.split('.').pop().toLowerCase();
 
-                if (fileType === 'jpg' || fileType === 'jpeg' || fileType === 'png' || fileType === 'gif') {
+                if (fileType === 'jpg' || fileType === 'jpeg' || fileType === 'png' || fileType ===
+                    'gif') {
                     content += '<div class="media"><img src="' + mediaPath + '" alt="Image"></div>';
                 } else if (fileType === 'mp3' || fileType === 'ogg' || fileType === 'wav') {
-                    content += '<audio controls><source src="' + mediaPath + '" type="audio/' + fileType + '">Your browser does not support the audio element.</audio>';
+                    content += '<audio controls><source src="' + mediaPath + '" type="audio/' +
+                        fileType + '">Your browser does not support the audio element.</audio>';
                 } else if (fileType === 'mp4' || fileType === 'webm' || fileType === 'ogg') {
-                    content += '<video controls><source src="' + mediaPath + '" type="video/' + fileType + '">Your browser does not support the video element.</video>';
+                    content += '<video controls><source src="' + mediaPath + '" type="video/' +
+                        fileType + '">Your browser does not support the video element.</video>';
                 } else if (fileType === 'pdf') {
-                    content += '<embed src="' + mediaPath + '" type="application/pdf" width="100%" height="500px" />';
+                    content += '<embed src="' + mediaPath +
+                        '" type="application/pdf" width="100%" height="500px" />';
                 } else {
                     // Handle other file types or provide a default
                     content += '<p>Unsupported file type</p>';

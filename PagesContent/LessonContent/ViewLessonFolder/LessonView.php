@@ -58,8 +58,9 @@
 
                 <br>
                 <ul class="pager">
-                    <li class="previous"><a href="#">Previous</a></li>
-                    <li class="next"><a href="#">Next</a></li>
+                    <li id="prev"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo; Previous</span></a>
+                    </li>
+                    <li id="next"><a href="#" aria-label="Next"><span aria-hidden="true">Next &raquo;</span></a></li>
                 </ul>
             </section>
 
@@ -69,7 +70,7 @@
                     <div class="box-header with-border">
                         <div id="lesson_description"></div>
                     </div>
-                    <div class="box-body">  
+                    <div class="box-body">
                         <div id="gallery"></div>
                     </div>
                 </div>
