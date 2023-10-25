@@ -24,6 +24,7 @@ $(function() {
                 responseData = response;
                 topics = Object.keys(response);
                 loadTopic(currentTopicIndex);
+                loadSidebarMenu();
             },
             error: function() {
                 console.error('Failed to load data.');
@@ -64,22 +65,23 @@ $(function() {
         }
     }
 
+    // Function to load the sidebar menu dynamically
+    function loadSidebarMenu() {
+        var topicMenu = $('#topic-menu');
+
+        topics.forEach(function(topic, index) {
+            var listItem = $('<li>').text(topic);
+
+            listItem.on('click', function() {
+                currentTopicIndex = index;
+                loadTopic(currentTopicIndex);
+            });
+
+            topicMenu.append(listItem);
+        });
+    }
+
     // Initial load
     loadData();
-
-    // Handle next and previous topic clicks
-    $('#next').on('click', function() {
-        if (currentTopicIndex < topics.length - 1) {
-            currentTopicIndex++;
-            loadTopic(currentTopicIndex);
-        }
-    });
-
-    $('#prev').on('click', function() {
-        if (currentTopicIndex > 0) {
-            currentTopicIndex--;
-            loadTopic(currentTopicIndex);
-        }
-    });
 });
 </script>
