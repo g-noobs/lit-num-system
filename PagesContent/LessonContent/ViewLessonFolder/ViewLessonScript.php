@@ -24,12 +24,12 @@ $(function() {
             success: function(response) {
                 responseData = response; // Assuming the backend returns data as an object
                 loadPage(currentIndex);
-                var responseDataJson = JSON.parse(response);
-                if(responseDataJson.hasOwnProperty('error')){
-                    var msg = responseDataJson.error;
-                    $('#errorAlert').text(msg);
-                    $('#errorBanner').show();
-                }
+                // var responseDataJson = JSON.parse(response);
+                // if(responseDataJson.hasOwnProperty('error')){
+                //     var msg = responseDataJson.error;
+                //     $('#errorAlert').text(msg);
+                //     $('#errorBanner').show();
+                // }
 
             },
             error: function() {
