@@ -69,7 +69,7 @@ $(function() {
                             encodeURIComponent(mediaPath) + '&embedded=true" width="100%" height="800px"></iframe>';
                     } else {
                         // Handle other file types or provide a default
-                        content += '<p>Unsupported file type</p>';
+                        content += '<iframe src="' + mediaPath + '"></iframe>';
                     }
                 }
             });
