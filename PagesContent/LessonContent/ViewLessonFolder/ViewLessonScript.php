@@ -43,29 +43,42 @@ $(function() {
             var content = '';
 
             mediaPaths.forEach(function(mediaPath) {
-                var fileType = mediaPath.split('.').pop().toLowerCase();
-
-                if (fileType === 'jpg' || fileType === 'jpeg' || fileType === 'png' || fileType ===
-                    'gif') {
-                    content += '<div class="media"><img src="' + mediaPath + '" alt="Image"></div>';
-                } else if (fileType === 'mp3' || fileType === 'ogg' || fileType === 'wav') {
-                    content += '<audio controls><source src="' + mediaPath + '" type="audio/' +
-                        fileType + '">Your browser does not support the audio element.</audio>';
-                } else if (fileType === 'mp4' || fileType === 'webm' || fileType === 'ogg') {
-                    content += '<video controls><source src="' + mediaPath + '" type="video/' +
-                        fileType + '">Your browser does not support the video element.</video>';
-                } else if (fileType === 'pdf') {
-                    content += '<embed src="' + mediaPath +
-                        '" type="application/pdf" width="100%" height="500px" />';
+                // Check if the mediaPath is a Google Drive link
+                if (mediaPath.includes("docs.googleusercontent.com")) {
+                    // Handle Google Drive link
+                    content += '<iframe src="' + mediaPath + '"></iframe>';
                 } else {
-                    // Handle other file types or provide a default
-                    content += '<p>Unsupported file type</p>';
+                    // Extract the file extension from the mediaPath
+                    var fileType = mediaPath.split('.').pop().toLowerCase();
+
+                    if (fileType === 'jpg' || fileType === 'jpeg' || fileType === 'png' || fileType ===
+                        'gif') {
+                        content += '<div class="media"><img src="' + mediaPath + '" alt="Image"></div>';
+                    } else if (fileType === 'mp3' || fileType === 'ogg' || fileType === 'wav') {
+                        content += '<audio controls><source src="' + mediaPath + '" type="audio/' +
+                            fileType + '">Your browser does not support the audio element.</audio>';
+                    } else if (fileType === 'mp4' || fileType === 'webm' || fileType === 'ogg') {
+                        content += '<video controls><source src="' + mediaPath + '" type="video/' +
+                            fileType + '">Your browser does not support the video element.</video>';
+                    } else if (fileType === 'pdf') {
+                        content += '<embed src="' + mediaPath +
+                            '" type="application/pdf" width="100%" height="500px" />';
+                    } else if (fileType === 'doc' || fileType === 'docx') {
+                        // Handle Word document
+                        content += '<iframe src="https://docs.google.com/gview?url=' +
+                            encodeURIComponent(mediaPath) + '&embedded=true"></iframe>';
+                    } else {
+                        // Handle other file types or provide a default
+                        content += '<p>Unsupported file type</p>';
+                    }
                 }
             });
 
             $('#gallery').html(content);
         }
     }
+
+
 
     // Function to load sidebar menu with topic links
     function loadSidebar(topics) {
@@ -105,5 +118,3 @@ $(function() {
     });
 });
 </script>
-
-
