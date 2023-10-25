@@ -66,7 +66,7 @@ $(function() {
     }
 
     // Function to load the sidebar menu dynamically
-    function loadSidebar(topics) {
+    function loadSidebarMenu(topics) {
         var sidebarContent = '';
 
         topics.forEach(function(topic, index) {
