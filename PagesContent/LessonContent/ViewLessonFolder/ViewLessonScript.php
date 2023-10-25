@@ -66,7 +66,7 @@ $(function() {
                     } else if (fileType === 'doc' || fileType === 'docx') {
                         // Handle Word document
                         content += '<iframe src="https://docs.google.com/gview?url=' +
-                            encodeURIComponent(mediaPath) + '&embedded=true"></iframe>';
+                            encodeURIComponent(mediaPath) + '&embedded=true" width="100%" height="800px"></iframe>';
                     } else {
                         // Handle other file types or provide a default
                         content += '<p>Unsupported file type</p>';
