@@ -50,6 +50,8 @@
 
     <div class="content-wrapper" style="min-height: 707px;">
         <div class="container">
+
+            <?php include_once "../../../CommonContent/ModifiedAlert.php"?>
             <section class="content-header">
                 <div id="test"></div>
                 <h3>Lesson: <strong id="lesson_name"></strong></h3>
@@ -68,27 +70,16 @@
                         <div id="lesson_description"></div>
                     </div>
                     <div class="box-body">
-                        The great content goes here
+                        <div di="gallery"></div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
 
-    <?php include_once "../ViewLessonFolder/lessonQuery.php"?>
+    <?php include_once "../ViewLessonFolder/lessonScript.php"?>
     <?php include_once "../ViewLessonFolder/ModifiedViewScript.php"?>
-    <script>
-    $(function() {
-        //get the lesson name from the url
-        var lessonid = window.location.href.split("=")[1].split("&")[0];
-        var lessonName = window.location.href.split("=")[2];
-        //replace the %20 with one space
-        var lessonName = lessonName.replace(/%20/g, " ");
-
-        $("#test").text(lessonid);
-        $("#lesson_name").text(lessonName);
-    });
-    </script>
+    <?php include_once "../ViewLessonFolder/ViewLessonScript.php"?>
 </body>
 
 </html>
