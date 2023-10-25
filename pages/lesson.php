@@ -55,11 +55,18 @@
     <!-- Script for adding lesson -->
     <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
 
+    <!-- Script when button is click to view topic in lesson -->
     <?php include_once("../PagesContent/LessonContent/CommonLesson/ViewLessonScript.php");?>
 
+    <!-- modified jquery for lesson - will modify if view button is click from the lesson-->
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+
+    <!-- All Jquery for topic -->
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
     <?php include_once "../PagesContent/LessonContent/TopicFolder/TopicScript.php";?>
+
+    <!-- Script use accross the page and other pages -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
 
 </body>
