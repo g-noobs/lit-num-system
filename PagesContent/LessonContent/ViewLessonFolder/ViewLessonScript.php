@@ -24,7 +24,7 @@ $(function() {
                 responseData = data;
                 topics = Object.keys(data);
                 loadTopic(currentTopicIndex);
-                loadSidebarMenu();
+                loadSidebarMenu(topics);
             },
             error: function() {
                 console.error('Failed to load data.');
@@ -66,18 +66,20 @@ $(function() {
     }
 
     // Function to load the sidebar menu dynamically
-    function loadSidebarMenu() {
-        var topicMenu = $('#side-menu');
+    function loadSidebar(topics) {
+        var sidebarContent = '';
 
         topics.forEach(function(topic, index) {
-            var listItem = $('<li>').text(topic);
+            // Add the label for the topic within the <a> element
+            sidebarContent += '<li><a href="#" class="topic-link" data-index="' + index + '"><i class="fa fa-file-o></i><span>' + topic + '</span></a></li>';
+        });
 
-            listItem.on('click', function() {
-                currentTopicIndex = index;
-                loadTopic(currentTopicIndex);
-            });
+        $('#side-menu').html(sidebarContent);
 
-            topicMenu.append(listItem);
+        // Attach click event to topic links
+        $('.topic-link').on('click', function() {
+            var index = $(this).data('index');
+            loadTopic(index);
         });
     }
 
