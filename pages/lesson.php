@@ -55,7 +55,7 @@
     <!-- Script for adding lesson -->
     <?php include_once("../PagesContent/LessonContent/CommonLesson/AddLessonScript.php");?>
 
-    <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryLesson.php");?>
+    <?php include_once("../PagesContent/LessonContent/CommonLesson/ViewLessonScript.php");?>
 
     <?php include_once("../PagesContent/LessonContent/CommonLesson/JqueryTopic.php");?>
 
