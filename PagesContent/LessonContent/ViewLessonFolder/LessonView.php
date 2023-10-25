@@ -70,7 +70,7 @@
                         <div id="lesson_description"></div>
                     </div>
                     <div class="box-body">
-                        <div di="gallery"></div>
+                        <div id="gallery"></div>
                     </div>
                 </div>
             </section>
