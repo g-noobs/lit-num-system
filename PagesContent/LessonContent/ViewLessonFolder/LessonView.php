@@ -34,16 +34,7 @@
                 <!-- Avatar Here -->
             </div>
             <ul class="sidebar-menu tree" data-widget="tree" id="side-menu">
-                <li class="active">
-                    <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-users"></i> <span>Manage User</span>
-                    </a>
-                </li>
+                
             </ul>
 
     </aside>
