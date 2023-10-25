@@ -20,9 +20,9 @@ $(function() {
             method: 'POST', // Change to POST if needed
             data: { id: lessonid }, // Pass any required data to your PHP script
             dataType: 'json',
-            success: function(response) {
-                responseData = response;
-                topics = Object.keys(response);
+            success: function(data) {
+                responseData = data;
+                topics = Object.keys(data);
                 loadTopic(currentTopicIndex);
                 loadSidebarMenu();
             },
@@ -67,7 +67,7 @@ $(function() {
 
     // Function to load the sidebar menu dynamically
     function loadSidebarMenu() {
-        var topicMenu = $('#topic-menu');
+        var topicMenu = $('#side-menu');
 
         topics.forEach(function(topic, index) {
             var listItem = $('<li>').text(topic);
@@ -83,5 +83,20 @@ $(function() {
 
     // Initial load
     loadData();
+
+    // Handle next and previous topic clicks
+    $('#next').on('click', function() {
+        if (currentTopicIndex < topics.length - 1) {
+            currentTopicIndex++;
+            loadTopic(currentTopicIndex);
+        }
+    });
+
+    $('#prev').on('click', function() {
+        if (currentTopicIndex > 0) {
+            currentTopicIndex--;
+            loadTopic(currentTopicIndex);
+        }
+    });
 });
 </script>
