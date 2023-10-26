@@ -125,7 +125,7 @@ $_SESSION['teacher'] = false;
 
         <?php include_once "CommonContent/ErrorModal.php"?>
         <section>
-            <a href=" https://www.tagakauloedu.com/Mobile/Download.php"></a>
+            <a href=" https://www.tagakauloedu.com/Mobile/Download.php">Download Mobile App<i class="glyphicon glyphicon-cloud-download"></i></a>
         </section>
         <section>
             <div class="login-form">
