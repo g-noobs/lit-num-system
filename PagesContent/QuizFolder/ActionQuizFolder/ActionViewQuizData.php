@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                if($row['quiz_selectionB'] === null){
+                if($row['quiz_selectionB'] == null){
                     $option1 = 'false';
                 }else{
                     $option1 = $row['quiz_selectionB'];
                 }
-                if($row['quiz_status'] === 1){
+                if($row['quiz_status'] == 1){
                     $status = 'Active';
                 }else{
                     $status = 'Inactive';
