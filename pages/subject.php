@@ -60,6 +60,7 @@
                 </div>
             </section>
             <br>
+            <br>
             <?php include_once "../PagesContent/SubjectFolder/EssentialsSubj/ModalSubj.php"?>
             <!-- Main content -->
             <section class="content">
