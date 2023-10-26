@@ -24,7 +24,7 @@
                 <table id="dataTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>Quiz ID</th>
+                            <th>Question ID</th>
                             <th>Question</th>
                             <th>Correct Answer</th>
                             <th>Option 1</th>
