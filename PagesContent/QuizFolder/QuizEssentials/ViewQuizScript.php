@@ -7,7 +7,7 @@ $(function(){
         $('#quiz_id_data').text(btn_id);
         $.ajax({
             type: "POST",
-            url: "",
+            url: "../PagesContent/QuizFolder/ActionQuizFolder/ActionViewQuizData.php",
             data: {id: btn_id},
             success: function(response){
                 var responseData = JSON.parse(response);
