@@ -59,13 +59,14 @@
                 </div>
             </section>
             <br>
+            <br>
             <!-- Main content -->
-            <section class="container" id="lesson-table">
+            <section class="content container" id="lesson-table">
                 <?php include_once "../PagesContent/LessonContent/TableFolder/LessonTable.php"?>
             </section>
 
             <!-- Section for topic -->
-            <section class="container" id="add-topic-panel">
+            <section class="content container" id="add-topic-panel">
                 <?php include_once("../PagesContent/LessonContent/TopicFolder/LessonTopic.php");?>
             </section>
         </div>
