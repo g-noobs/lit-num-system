@@ -38,7 +38,7 @@
                 </h1>
             </section>
             <br>
-            <section>
+            <section class="container">
                 <div class="align-items-start">
                     <div class="col-sm-2">
                         <div class="custom-dropdown">
