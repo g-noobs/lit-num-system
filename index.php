@@ -121,28 +121,37 @@ $_SESSION['teacher'] = false;
 </head>
 
 <body>
-    <?php include_once "CommonContent/ErrorModal.php"?>
-    <div class="login-form">
-        <!-- <form action="ActionValidateUser.php" method="post"> -->
-        <form id="validate_user">
-            <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
-            <h4 class="modal-title">Welcome Teacher!</h4>
-            <h5>Please Login using your Credentials</h5>
-            <div class="form-group">
-                <input type="text" name="username_teacher" class="form-control" placeholder="Username" required="required">
-            </div>
-            <div class="form-group">
-                <input type="password" name="password_teacher" class="form-control" placeholder="Password" required="required">
-            </div>
-            <!-- <div class="form-group small clearfix">
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+
+        <?php include_once "CommonContent/ErrorModal.php"?>
+        <section>
+            <a href=" https://www.tagakauloedu.com/Mobile/Download.php"></a>
+        </section>
+        <section>
+            <div class="login-form">
+                <!-- <form action="ActionValidateUser.php" method="post"> -->
+                <form id="validate_user">
+                    <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+                    <h4 class="modal-title">Welcome Teacher!</h4>
+                    <h5>Please Login using your Credentials</h5>
+                    <div class="form-group">
+                        <input type="text" name="username_teacher" class="form-control" placeholder="Username"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password_teacher" class="form-control" placeholder="Password"
+                            required="required">
+                    </div>
+                    <!-- <div class="form-group small clearfix">
                 <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
                 <a href="#" class="forgot-link">Forgot Password?</a>
             </div> -->
-            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
-        </form>
-        <!-- <div class="text-center small">Don't have an account? <a href="#">Sign up</a></div> -->
+                    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                </form>
+                <!-- <div class="text-center small">Don't have an account? <a href="#">Sign up</a></div> -->
+            </div>
+        </section>
     </div>
-
     <!-- /.login-box -->
     <!-- Modal HTML -->
 
@@ -172,15 +181,14 @@ $_SESSION['teacher'] = false;
                     if (responseData.hasOwnProperty('success')) {
                         console.log(responseData.success);
                         window.location.href = "Teacher/pages/main.php";
-                    } 
-                    else if (responseData.hasOwnProperty('error')) {
+                    } else if (responseData.hasOwnProperty('error')) {
                         var msg = responseData.error;
                         //assign text to modal and show
                         $('#errorMessage').text(msg);
                         $('#errorModal').modal('show');
                         setTimeout(function() {
                             $("#errorModal").fadeOut(
-                            "slow"); // Hide the .alert element after 3 seconds
+                                "slow"); // Hide the .alert element after 3 seconds
                             location.reload();
                         }, 1500);
                     }
@@ -193,7 +201,7 @@ $_SESSION['teacher'] = false;
 
                     setTimeout(function() {
                         $("#errorModal").fadeOut(
-                        "slow"); // Hide the .alert element after 3 seconds
+                            "slow"); // Hide the .alert element after 3 seconds
                         location.reload();
                     }, 1500);
                 }
