@@ -69,7 +69,8 @@ body {
                     </div>
                 </div>
             </section>
-            
+            <br>
+            <br>
             <section class="content" id="quizContent">
                 <?php include_once("../PagesContent/QuizFolder/TableQuiz/QuizMainTable.php");?>
             </section>
