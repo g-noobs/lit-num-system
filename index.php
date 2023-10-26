@@ -20,6 +20,7 @@ $_SESSION['teacher'] = false;
         color: #999;
         background: #f5f5f5;
         font-family: 'Varela Round', sans-serif;
+        overflow: hidden;
     }
 
     .form-control {
@@ -124,8 +125,9 @@ $_SESSION['teacher'] = false;
     <div class="wrapper" style="height: auto; min-height: 100%;">
 
         <?php include_once "CommonContent/ErrorModal.php"?>
-        <section>
-            <a href=" https://www.tagakauloedu.com/Mobile/Download.php">Download Mobile App<i class="glyphicon glyphicon-cloud-download"></i></a>
+        <section class="container">
+            <div class="icon"><i class="ion ion-android-download"></i></div>
+            <a href=" https://www.tagakauloedu.com/Mobile/Download.php">Download the Application</a>
         </section>
         <section>
             <div class="login-form">
