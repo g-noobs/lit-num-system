@@ -13,6 +13,7 @@ $(function() {
         btnId = $(this).data("id");
 
         $("#lesson-table").hide();
+        $('#lesson_status_dropdown').hide();
         $("#topic-name").html("Add a new topic for lesson: <strong>" + lessonName + "</strong>");
 
         $.ajax({
