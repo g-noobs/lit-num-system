@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin | Dashboard</title>
+    <title>Admin | Class</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once "../bootstrap/css.php"?>
@@ -62,7 +62,7 @@ body {
                 </div>
             </section>
             <br>
-
+            <br>
             <!-- Main content -->
             <section class="content" id="classTable">
                 <?php include_once("../PagesContent/ClassContent/TableClass/ClassTableContent.php"); ?>
