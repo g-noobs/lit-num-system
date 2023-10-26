@@ -5,7 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">Data for User: 
+                <h4 class="modal-title">Quiz Data: 
                     <span id="quiz_id_data"></span>
                 </h4>
             </div>
@@ -14,7 +14,6 @@
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <ul class="nav nav-stacked">
-                            <li><strong>Quiz ID:</strong><span id="quiz_id_data"></span> </li>
                             <li><strong>Question:</strong><span id="quiz_question_data"></span></li>
                             <li><strong>Correct Answer:</strong><span id="correct_answer_data"></span></li>
                             <li><strong>Selection 1:</strong><span id="option1_data"></span></li>
@@ -22,6 +21,7 @@
                             <li><strong>Selection 3:</strong><span id="option3_data"></span></li>
                             <li><strong>From Topic:</strong><span id="topic_source_data"></span></li>
                             <li><strong>Date Created:</strong><span id="date_created_data"></span></li>
+                            <li><strong>Quiz Status:</strong><span id="quiz_status_data"></span></li>
                         </ul>
                     </div>
                 </div>

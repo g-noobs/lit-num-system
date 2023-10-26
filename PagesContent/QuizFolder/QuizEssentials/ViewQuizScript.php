@@ -12,7 +12,15 @@ $(function(){
             success: function(response){
                 var responseData = JSON.parse(response);
 
-                //modals id
+                $('#quiz_question_data').text(responseData.quiz_question);
+                $('#correct_answer_data').text(responseData.correct_answer);
+                $('#option1_data').text(responseData.option1);
+                $('#option2_data').text(responseData.option2);
+                $('#option3_data').text(responseData.option3);
+                $('#topic_source_data').text(responseData.topic_source);
+                $('#date_created_data').text(responseData.date_created);
+                $('#quiz_status_data').text(responseData.quiz_status);
+                
 
 
             },
