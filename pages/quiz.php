@@ -33,6 +33,9 @@ body {
         <div class="content-wrapper" style="min-height: 1744.3px;">
             <!-- Banner Alert -->
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
+
+            <!-- View quiz Data Modal -->
+            <?php include_once "../PagesContent/QuizFolder/QuizEssentials/ModalViewQuiz.php";?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1 class="container">
@@ -62,7 +65,8 @@ body {
         <?php include_once "../PagesContent/QuizFolder/QuizEssentials/QuizOptionScript.php"?>
 
         <!-- This script assist on viewing the quiz data -->
-        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/ViewQuizScript.php";?>
+        <?php include_once "../PagesContent/QuizFolder/QuizEssentials/ViewQuizScript.php"?>
+
 
         <!-- Script used for the the entire page includes: Search, logout, sidebar active class -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
