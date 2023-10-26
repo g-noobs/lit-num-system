@@ -41,6 +41,27 @@ body {
                 </h1>
             </section>
             <br>
+            <section>
+                <div class="align-items-start">
+                    <div class="col-sm-2">
+                        <div class="custom-dropdown">
+
+                            <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
+                                style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
+                                <b>Active Class</b> <!-- Updated the button text -->
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a href="#" data-class-type="active-class"><b>Active Class</b></a></li>
+                                <li><a href="#" data-class-type="arch-class"><b>Archived Class</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                    </div>
+                </div>
+            </section>
+            <br>
 
             <!-- Main content -->
             <section class="content" id="classTable">
