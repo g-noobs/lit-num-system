@@ -115,9 +115,9 @@
             </ul>
         </li>
         <li>
-            <a href="category.php">
+            <!-- <a href="category.php">
                 <i class="glyphicon glyphicon-level-up"></i><span>Category</span>
-            </a>
+            </a> -->
         </li>
         <li>
             <a href="class.php">
