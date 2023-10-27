@@ -8,6 +8,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+    <!--  BootStrap Template -->
     <?php include_once "../bootstrap/css.php"?>
 
     <style>
@@ -22,16 +23,19 @@
 
     <div class="wrapper" style="height: auto; min-height: 100%;">
 
+        <!-- Main Header -->
         <header class="main-header">
             <?php include_once("../CommonContent/HeaderContent.php"); ?>
         </header>
-        <!-- Left side column. contains the logo and sidebar -->
+        <!-- Left side bar-->
         <aside class="main-sidebar">
             <?php include_once "../CommonContent/MainSideContent.php"?>
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 902.55px;">
+
+            <!-- Modified Alert Popup Alerts-->
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
 
             <!-- Content Header (Page header) -->
@@ -46,14 +50,14 @@
                 <?php include_once("../CommonContent/DashboardContent.php"); ?>
             </section>
             <!-- /.content-wrapper -->
-            <!-- Control Sidebar -->
         </div>
         <!-- ./wrapper -->
     </div>
+    <!-- Bootstrap 3 template Scripts -->
     <?php include_once("../bootstrap/js.php")?>
-    <?php include_once "../CommonContent/ErrorModal.php"?>
+    
+    <!-- Common jquery script used on all pages. Consists of logout script, search input/bar for tables, add active class to sidebar menu, and add active class to treeview menu. -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
-
 </body>
 
 </html>
