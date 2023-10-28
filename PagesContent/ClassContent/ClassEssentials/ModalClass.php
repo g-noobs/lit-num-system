@@ -15,6 +15,12 @@
                             <input type="text" name="class_name" class="form-control" placeholder="Class Name">
                         </div>
 
+                        <div class="form-group">
+                            <label for="class_name">Schoole Year</label>
+                            <select name="school_yr_class" id="school_yr_class">
+                                
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <!-- /.box-body -->

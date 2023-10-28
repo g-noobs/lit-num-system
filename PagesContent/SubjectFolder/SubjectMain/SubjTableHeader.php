@@ -1,5 +1,5 @@
-<th>Subect ID</th>
-<th>Subect</th>
-<th>Subject Description</th>
-<th>Subject Status</th>
+<th>Module ID</th>
+<th>Module</th>
+<th>Module Description</th>
+<th>Module Status</th>
 <th colspan="2">Action</th>

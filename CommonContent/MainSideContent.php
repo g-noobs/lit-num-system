@@ -98,8 +98,9 @@
             </a>
             <ul class="treeview-menu" style="display: none;">
                 <li>
+                    <!-- subject will now be named as module -->
                     <a href="subject.php">
-                        <i class="fa fa-list-alt"></i> <span>Subject</span>
+                        <i class="fa fa-list-alt"></i> <span>Module</span>
                     </a>
                 </li>
                 <li>

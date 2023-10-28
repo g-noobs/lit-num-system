@@ -59,6 +59,7 @@ table {
                                         <th style='white-space: nowrap;'></th>
                                         <th>Class ID</th>
                                         <th>Class Name</th>
+                                        <th>Schoole Year</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
