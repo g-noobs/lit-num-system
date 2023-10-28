@@ -19,14 +19,16 @@ class ClassEssentialsClass extends Connection{
                 }
                 echo "<tr>";
                 
-                echo "<td style='white-space: nowrap;'>";
-                echo "<a href='#' class='edit text-primary' data-toggle='modal' data-target='#edit-class'><span class='glyphicon glyphicon-edit'></span></a>";
-                echo "</td>";
+                echo "<td></td>";
                 
                 echo "<td>".$row['class_id']."</td>";
                 echo "<td>".$row['class_name']."</td>";
                 echo "<td>".$row['schoolyear']."</td>";
                 echo "<td><b>".$status."</b></td>";
+
+                echo "<td style='white-space: nowrap;'>";
+                echo "<a href='#' class='edit text-primary' data-toggle='modal' data-target='#edit-class'><span class='glyphicon glyphicon-edit'></span></a>";
+                echo "</td>";
 
                 echo "<td>";
                 echo " <a href='#' class='archive text-danger' data-toggle='modal' data-target='#archive-class'> <span class='glyphicon glyphicon-trash'></span></a>";

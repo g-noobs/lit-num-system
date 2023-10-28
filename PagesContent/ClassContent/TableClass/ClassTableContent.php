@@ -61,7 +61,7 @@ table {
                                         <th>Class Name</th>
                                         <th>School Year</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th colspan="2">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
