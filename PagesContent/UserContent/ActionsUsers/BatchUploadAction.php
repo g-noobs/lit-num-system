@@ -1,149 +1,116 @@
 <?php
 session_start();
-require 'vendor/autoload.php'; // Include PhpSpreadsheet library
-use PhpOffice\PhpSpreadsheet\IOFactory;
 
-// Function to insert data into the database
-function insertDataIntoDatabase($values) {
-    $table = "tbl_user_info";
-    include_once("../../../Database/ColumnCountClass.php");
-    $columnCountClass = new ColumnCountClass();
+// Include necessary libraries and set up the database configuration
+include_once("../../../Database/ColumnCountClass.php");
+include_once("../../../Database/CommonValidationClass.php");
+include_once("../../../Database/SanitizeCrudClass.php");
+include_once("../../../CommonPHPClass/PHPClass.php");
 
-    // modify user id plus the column count
-    $values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("credentials_id","tbl_credentials");
+require_once '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
+use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
-    if ($_POST['user'] === "Admin") {
-        // Set personal-id same with user_info_id
-        $values['personal_id'] = $values['user_info_id'];
-        $values['user_level_id'] = '0';
-        $username = $values['email'];
-    } else if ($_POST['user'] === "Teacher") {
-        $values['user_level_id'] = '1';
-        $username = $values['personal_id'];
-    } else if ($_POST['user'] === "Learner") {
-        $values['user_level_id'] = '2';
-        $username = $values['personal_id'];
-    }
+if (isset($_POST['upload'])) {
+    // Allowed mime types for Excel files
+    $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
-    // Place id for added_byID
-    $values['added_byID'] = $_SESSION['id'];
+    // Validate whether a selected file is an Excel file
+    if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelMimes)) {
+        // If the file is uploaded
+        if (is_uploaded_file($_FILES['file']['tmp_name'])) {
+            $reader = new Xlsx();
+            $spreadsheet = $reader->load($_FILES['file']['tmp_name']);
+            $worksheet = $spreadsheet->getActiveSheet();
+            $worksheet_arr = $worksheet->toArray();
 
-    // Password generation
-    include_once("../../../CommonPHPClass/PHPClass.php");
-    $phpClass = new PHPClass();
+            // Remove header row
+            unset($worksheet_arr[0]);
 
-    $credentials_id = "CRED" . (100001 + (int)$columnCountClass->columnCount("credentials_id", "tbl_credentials"));
+            // Loop through each row in the spreadsheet
+            foreach ($worksheet_arr as $row) {
+                $values = array(
+                    'user_info_id' => '',
+                    'personal_id' => trim($row[0]), // Set this value appropriately
+                    'first_name' => trim($row[1]),
+                    'last_name' => trim($row[2]),
+                    'gender' => trim($row[3]), // Set this value appropriately
+                    'email' => $row[4],
+                    'birthdate' => $row[5], // Assuming 'date' corresponds to birthdate
+                    'status_id' => 1,
+                    'user_level_id' => 2, // Set this value appropriately
+                    'added_byID' => '',
+                    'date_added' => ''
+                );
+                // Database table for user information
+                $table = "tbl_user_info";   
+                // Set user_info_id
+                $values['user_info_id'] = "USR" . $columnCountClass->columnCountWhere("user_info_id", $table);
 
-    $password = $phpClass->generatePassword(10);
-    $user_info_id = $values['user_info_id'];
+                // Set added_byID from the session
+                $values['added_byID'] = $_SESSION['id'];
 
-    // Insert validation
-    include_once "../../../Database/CommonValidationClass.php";
-    $validate = new CommonValidationClass();
-    $data = array($values['first_name'], $values['last_name']);
-    $column = array('first_name', 'last_name');
-    $isValid = $validate->validateColumns($table, $column, $data);
+                // Set the current date
+                $currentDate = new DateTime();
+                $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 
-    $isIdvalid = $validate->validateOneColumn($table, 'personal_id', $values['personal_id']);
+                // Insert validation
+                $data = array($values['first_name'], $values['last_name']);
+                $column = array('first_name', 'last_name');
+                $isValid = $validate->validateColumns($table, $column, $data);
 
-    if ($isValid && $isIdvalid) {
-        $columns = implode(', ', array_keys($values));
-        $sql = "INSERT INTO $table ($columns) VALUES(?,?,?,?,?,?,?,?,?,?);";
-        $params = array_values($values);
+                $isIdvalid = $validate->validateOneColumn($table, 'personal_id', $values['personal_id']);
 
-        include_once "../../../Database/SanitizeCrudClass.php";
-        $addNewUser = new SanitizeCrudClass();
+                if ($isValid && $isIdvalid) {
+                    $columns = implode(', ', array_keys($values));
+                    $questionMarkString = implode(',', array_fill(0, count($values), '?'));
+                    $sql = "INSERT INTO $table ($columns) VALUES($questionMarkString);";
+                    $params = array_values($values);
 
-        try {
-            $addNewUser->executePreState($sql, $params);
-            if ($addNewUser->getLastError() === null) {
-                $table = "tbl_credentials";
-                $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) VALUES(?,?,?,?);";
-                $params = array($credentials_id, $username, $password, $user_info_id);
-                include_once "../../../Database/SanitizeCrudClass.php";
-                $addNewCreds = new SanitizeCrudClass();
-                $addNewCreds->executePreState($query, $params);
+                    try {
+                        $addNewUser->executePreState($sql, $params);
 
-                $response = array('success' => 'Successfully added new user!');
-                echo json_encode($response);
+                        if ($addNewUser->getLastError() === null) {
+                            // if no eror create a credentials
+                            // Modify user_info_id based on your logic
+                            $credentials_id = "CRED" . $columnCountClass->columnCountWhere("credentials_id", "tbl_credentials");
+                            $username = $values['personal_id'];
+
+                            $phpClass = new PHPClass();
+                            $password = $phpClass->generatePassword(10);
+                            $table = "tbl_credentials";
+                            $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) VALUES(?,?,?,?);";
+                            $params = array($credentials_id, $username, $password, $values['user_info_id']);
+                            $addNewCreds = new SanitizeCrudClass();
+                            
+                            try {
+                                $addNewCreds->executePreState($query, $params);
+                                
+                            } catch (mysqli_sql_exception $e) {
+                                // Handle any errors during insertion
+                                $response = array('error'=> $e->getMessage());
+                                echo json_encode($response);
+                            }
+
+                        }
+                    } catch (mysqli_sql_exception $e) {
+                        // Handle any errors during insertion
+                        $response = array('error'=> $e->getMessage());
+                        echo json_encode($response);
+                    }
+                }
             }
-        } catch (mysqli_sql_exception $e) {
-            if ($e->getCode() == 1062) {
-                // Duplicate entry
-                $response = array('error' => $data . " already exists. Please try again");
-                echo json_encode($response);
-            } else {
-                throw $e;
-                $response = array('error' => $e);
-                echo json_encode($response);
-            }
+
+            $response = array('success' => 'Successfully added new user!');
+            echo json_encode($response);
+        } else {
+            $response = array('error' => 'Error uploading file!');
+            echo json_encode($response);
         }
     } else {
-        $response = array('error' => 'User already exists.');
-        echo json_encode($response);
+        $response = array('error' => 'Please upload a valid Excel file!');
     }
-}
-
-// Check if a file was uploaded
-if (isset($_FILES['excel_file']['tmp_name'])) {
-    // Load the Excel file
-    $inputFileName = $_FILES['excel_file']['tmp_name'];
-    $spreadsheet = IOFactory::load($inputFileName);
-
-    // Get the first worksheet
-    $worksheet = $spreadsheet->getActiveSheet();
-
-    // Iterate through rows and insert data into the database
-    foreach ($worksheet->getRowIterator() as $row) {
-        $cellIterator = $row->getCellIterator();
-        $cellIterator->setIterateOnlyExistingCells(FALSE);
-
-        $values = array(
-            'user_info_id' => '',
-            'personal_id' => '',
-            'first_name' => '',
-            'last_name' => '',
-            'gender' => '',
-            'email' => '',
-            'birthdate' => '',
-            'status_id' => '1',
-            'user_level_id' => '',
-            'added_byID' => ''
-        );
-
-        $columnIndex = 0;
-        foreach ($cellIterator as $cell) {
-            // Assign cell values to corresponding keys in the $values array
-            switch ($columnIndex) {
-                case 0:
-                    $values['personal_id'] = $cell->getValue();
-                    break;
-                case 1:
-                    $values['first_name'] = $cell->getValue();
-                    break;
-                case 2:
-                    $values['last_name'] = $cell->getValue();
-                    break;
-                case 3:
-                    $values['gender'] = $cell->getValue();
-                    break;
-                case 4:
-                    $values['email'] = $cell->getValue();
-                    break;
-                case 5:
-                    $values['birthdate'] = $cell->getValue();
-                    break;
-                // Add more cases for additional columns as needed
-            }
-            $columnIndex++;
-        }
-
-        // Insert data into the database for each row
-        insertDataIntoDatabase($values);
-    }
-} else {
-    // Handle the case where no file was uploaded
-    $response = array('error' => 'No Excel file uploaded.');
+}else{
+    $response = array('error' => 'Possible POST ISSUE');
     echo json_encode($response);
 }
 ?>
