@@ -93,7 +93,7 @@
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
-                        <input type="submit" name="upload_excel" id="upload_excel" value="upload_excel" class="btn btn-info" />
+                        <input type="submit" class="btn btn-info" name="upload_excel" id="upload_excel" value="Import" >
                         <button type="reset" class="btn btn-default pull-left">Clear</button>
                     </div>
                 </form>
