@@ -30,8 +30,8 @@ $(document).ready(function() {
                         location.reload();
                     }, 1500);
                 }
-            },
-            // error: function() {
+            }
+            // ,error: function() {
             //     $hideModal.modal('hide');
             //     //show alert banner id = errorBanner
             //     $('#errorAlert').text('An error occurred during the AJAX request.');
