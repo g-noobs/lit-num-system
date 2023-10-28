@@ -2,7 +2,7 @@
 session_start();
 
 
-require_once '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
+require '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
 // if (isset($_POST['upload_excel'])) {
