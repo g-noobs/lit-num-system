@@ -6,6 +6,7 @@ class ClassEssentialsClass extends Connection{
     }
 
     function classTable($sql){
+        
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -24,6 +25,7 @@ class ClassEssentialsClass extends Connection{
                 
                 echo "<td>".$row['class_id']."</td>";
                 echo "<td>".$row['class_name']."</td>";
+                echo "<td>".$row['schoolyear']."</td>";
                 echo "<td><b>".$status."</b></td>";
 
                 echo "<td>";

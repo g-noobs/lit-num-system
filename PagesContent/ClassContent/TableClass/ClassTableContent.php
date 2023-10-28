@@ -68,7 +68,7 @@ table {
                                     <?php 
                                         include_once("../Database/ClassEssentialsClass.php");
                                         $classTable = new ClassEssentialsClass();
-                                        $sql = "SELECT * FROM tbl_class;";
+                                        $sql = "SELECT * FROM class_view;";
                                         $classTable->classTable($sql);
                                     ?>
                                 </tbody>
