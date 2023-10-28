@@ -28,7 +28,7 @@ class ValidateCredsClass extends Connection{
         // $sql = "SELECT * FROM $table  WHERE uname = '$username' AND pass = '$password' AND user_level_id = 1 AND status_id = 1;";
         //will use this while view_userinfo_creds is not available
         $table = "user_info_view";
-        $sql = "SELECT * FROM $table  WHERE username = '$username' AND password = '$password' AND user_level_description = 'Admin' AND user_level_description = 'Admin';";
+        $sql = "SELECT * FROM $table  WHERE username = '$username' AND password = '$password' AND user_level_description = 'Admin' AND status = 'Active';";
 
         $result = $this->getConnection()->query($sql);
         if ($result && mysqli_num_rows($result) > 0){
