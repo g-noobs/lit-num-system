@@ -89,7 +89,7 @@
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
-                        <input type="file" name="user_file" id="user_file"/>
+                        <input type="file" name="file" id="user_file"/>
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
