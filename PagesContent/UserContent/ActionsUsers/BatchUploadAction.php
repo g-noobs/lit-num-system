@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-// Include necessary libraries and set up the database configuration
-include_once("../../../Database/ColumnCountClass.php");
-include_once("../../../Database/CommonValidationClass.php");
-include_once("../../../Database/SanitizeCrudClass.php");
-include_once("../../../CommonPHPClass/PHPClass.php");
 
 require_once '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
@@ -42,6 +37,12 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'date_added' => ''
                 );
                 // Database table for user information
+                // Include necessary libraries and set up the database configuration
+                include_once("../../../Database/ColumnCountClass.php");
+                include_once("../../../Database/CommonValidationClass.php");
+                include_once("../../../Database/SanitizeCrudClass.php");
+                include_once("../../../CommonPHPClass/PHPClass.php");
+
                 $table = "tbl_user_info";   
                 // Set user_info_id
                 $values['user_info_id'] = "USR" . $columnCountClass->columnCountWhere("user_info_id", $table);
