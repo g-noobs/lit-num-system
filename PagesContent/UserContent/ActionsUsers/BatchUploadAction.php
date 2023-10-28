@@ -10,7 +10,7 @@ include_once("../../../CommonPHPClass/PHPClass.php");
 require_once '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
-if (isset($_POST['upload'])) {
+if (isset($_POST['upload_excel'])) {
     // Allowed mime types for Excel files
     $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
