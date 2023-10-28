@@ -33,10 +33,10 @@ $(document).ready(function() {
                     }
                 }
                 catch (e) {
-                    console.error('Error parsing JSON:', e);
+                    console.log('Error parsing JSON:', e);
                 }
             },error: function(xhr, status, error) {
-                console.error('AJAX error:', status, error);
+                console.log('AJAX error:', status, error);
             //     $hideModal.modal('hide');
             //     //show alert banner id = errorBanner
             //     $('#errorAlert').text('An error occurred during the AJAX request.');
