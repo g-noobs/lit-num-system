@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'lesson_name' => trim($_POST['lesson_name']),
             'category_id' => $_POST['category_level'],
             'added_byID' => '',
-            'subj_id' => $_POST['subj_list'],
+            'module_id' => $_POST['subj_list'],
             'lesson_status' => '1'
         );
         

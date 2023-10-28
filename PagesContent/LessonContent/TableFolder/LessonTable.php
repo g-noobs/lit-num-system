@@ -30,7 +30,7 @@
                 <tbody>
                     <?php 
                         include_once("../Database/LessonDisplayClass.php");
-                        $userT = new LessonDisplayClass();
+                        $userT = new pLessonDisplayClass();
                         $userT->lessonTable();
                         ?>
                 </tbody>
