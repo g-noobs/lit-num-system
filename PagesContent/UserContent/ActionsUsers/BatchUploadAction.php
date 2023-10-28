@@ -15,7 +15,7 @@ if (isset($_POST['upload_excel'])) {
     $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
     // Validate whether a selected file is an Excel file
-    if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelMimes)) {
+    if (!empty($_FILES['user_file']['name']) && in_array($_FILES['user_file']['type'], $excelMimes)) {
         // If the file is uploaded
         if (is_uploaded_file($_FILES['file']['tmp_name'])) {
             $reader = new Xlsx();
