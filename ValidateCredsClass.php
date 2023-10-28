@@ -22,10 +22,13 @@ class ValidateCredsClass extends Connection{
             return false;
         }
     }
-
+    
     function checkTeacherCreds($username,$password){
-        $table = "view_userinfo_creds";
-        $sql = "SELECT * FROM $table  WHERE uname = '$username' AND pass = '$password' AND user_level_id = 1 AND status_id = 1;";
+        // $table = "view_userinfo_creds";
+        // $sql = "SELECT * FROM $table  WHERE uname = '$username' AND pass = '$password' AND user_level_id = 1 AND status_id = 1;";
+        //will use this while view_userinfo_creds is not available
+        $table = "user_info_view";
+        $sql = "SELECT * FROM $table  WHERE username = '$username' AND password = '$password' AND user_level_description = 'Admin' AND user_level_description = 'Admin';";
 
         $result = $this->getConnection()->query($sql);
         if ($result && mysqli_num_rows($result) > 0){
