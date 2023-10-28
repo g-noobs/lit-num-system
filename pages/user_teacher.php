@@ -144,6 +144,9 @@
 
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
+
+        <!-- Batch Upload Script -->
+        <?php include_once "../PagesContent/UserContent/CommonUser/UploadExcelScript.php";?>
         
         <script>
         // Check for saved user type
