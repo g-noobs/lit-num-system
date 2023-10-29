@@ -28,7 +28,6 @@ $(document).ready(function() {
             selectElement.val(matchingOption.val());
         }
 
-        $('#edit-user').find('[name="edit_user"]').val(edit_user);
 
         //for select option of user_type
         var selectElementUserType = $('#edit-user').find('[name="edit_user_option"]');
