@@ -80,6 +80,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
     else{
+        if (!$notDuplicate) {
+            $response = array("error" => "Duplicate in columns detected");
+            echo json_encode($response);    
+        }
+        if (!$notIdDuplicate) {
+            $response = array("error" => "Duplicate in personal_id detected");
+            echo json_encode($response);
+        }
         $response = array("error" => " Data already exists. Please try again");
         echo json_encode($response);
     }
