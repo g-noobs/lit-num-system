@@ -55,7 +55,6 @@ include_once "../../../Database/CommonValidationClass.php";
 $validate = new CommonValidationClass();
 $data = array($values['first_name'], $values['last_name']);
 $column = array('first_name', 'last_name');
-$isValid = $validate -> validateColumns($table, $column, $data);
 
 $isIdvalid = $validate -> validateOneColumn($table, 'personal_id', $values['personal_id']);
 
