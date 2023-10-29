@@ -95,6 +95,9 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                 echo json_encode($response);
                             }
 
+
+                            $response = array('success' => 'Successfully added new user!');
+                            echo json_encode($response);
                         }
                     } catch (mysqli_sql_exception $e) {
                         // Handle any errors during insertion
@@ -102,10 +105,11 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                         echo json_encode($response);
                     }
                 }
+                else{
+                    $response = array('error' => 'Error uploading file! Possible Duplicate');
+                    echo json_encode($response);
+                }
             }
-
-            $response = array('success' => 'Successfully added new user!');
-            echo json_encode($response);
         } else {
             $response = array('error' => 'Error uploading file!');
             echo json_encode($response);
