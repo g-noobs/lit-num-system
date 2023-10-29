@@ -111,10 +111,10 @@
                                 <option>None</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="edit_date">Birthdate:</label>
                             <input type="date" name="edit_date" class="form-control" required>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="edit_user_option">User:</label>
                             <select class="form-control" name="edit_user_option" id="edit_user_option" required>

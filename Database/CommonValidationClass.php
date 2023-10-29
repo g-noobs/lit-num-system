@@ -84,13 +84,11 @@ class CommonValidationClass extends Connection{
     
         // Loop through columns and values to build the WHERE clause
         for ($i = 0; $i < count($column); $i++) {
-            if ($column[$i] === 'user_info_id') {
-                // Skip checking for the ID column
-                continue;
-            }
+
             $conditions[] = "$column[$i] = '" . addslashes($value[$i]) . "'";
         }
         $conditions[] = "user_info_id != '$id'"; // Exclude the current record
+
         $conditionString = implode(" AND ", $conditions);
         $sql = "SELECT COUNT(*) FROM $table WHERE $conditionString";
     
@@ -104,12 +102,12 @@ class CommonValidationClass extends Connection{
     
         $count = $result->fetch_row();
         // Return true if duplicate exists, false otherwise
-        if($count > 1){
+        if($count === 0){
             return true;
         }
         else{
             return false;
-            
+
         }
     }
 
@@ -119,7 +117,7 @@ class CommonValidationClass extends Connection{
         if($result->num_rows >0){
             $row = $result->fetch_assoc();
             $count = $row["count"];
-            if($count > 1){
+            if($count === 0){
                 return true;
             }
             else{

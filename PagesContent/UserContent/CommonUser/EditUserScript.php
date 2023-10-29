@@ -17,7 +17,16 @@ $(document).ready(function() {
         $('#edit-user').find('[name="edit_personal_id"]').val(edit_personal_id);
         $('#edit-user').find('[name="edit_first_name"]').val(edit_first_name);
         $('#edit-user').find('[name="edit_last_name"]').val(edit_last_name);
-        $('#edit-user').find('[name="edit_gender"]').val(edit_gender);
+
+        // for select option of Gender
+        var selectElement = $('#edit-user').find('[name="edit_gender"]');
+
+        // Find the option with the value matching the text from the table cell
+        var matchingOption = selectElement.find('option:contains("' + edit_gender + '")');
+
+        if (matchingOption.length) {
+            selectElement.val(matchingOption.val());
+        }
 
         $('#edit-user').find('[name="edit_user"]').val(edit_user);
     });
@@ -42,7 +51,7 @@ $(document).ready(function() {
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
                     var msg = responseData.success;
-                    
+
                     // reload div where the table is #mainContent
                     $("#mainContent").load(" #mainContent > *");
                     //hide modal
@@ -54,7 +63,7 @@ $(document).ready(function() {
 
                     setTimeout(function() {
                         $("#successBanner").fadeOut(
-                        "slow"); // Hide the .alert element after 3 seconds
+                            "slow"); // Hide the .alert element after 3 seconds
                         // window.location.reload();
                     }, 2500);
 
@@ -68,7 +77,8 @@ $(document).ready(function() {
                     $('#errorAlert').text(msg);
                     $('#errorBanner').show();
                     setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
+                        $("#errorBanner").fadeOut(
+                        "slow"); // Hide the .alert element after 3 seconds
                         // window.location.reload();
                     }, 2500);
 
