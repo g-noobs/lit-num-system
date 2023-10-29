@@ -32,7 +32,7 @@ $(document).ready(function() {
         //for select option of user_type
         var selectElementUserType = $('#edit-user').find('[name="edit_user_option"]');
         // Find the option with the value matching the text from the table cell
-        var matchingOptionUserType = selectElement.find('option:contains("' + edit_user_type + '")');
+        var matchingOptionUserType = selectElementUserType.find('option:contains("' + edit_user_type + '")');
 
         if(matchingOptionUserType.length){
             selectElement.val(matchingOptionUserType.val());
