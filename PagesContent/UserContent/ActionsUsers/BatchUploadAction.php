@@ -104,8 +104,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                 }
             }
 
-            $response = array('success' => 'Successfully added new user!');
-            echo json_encode($response);
+            
         } else {
             $response = array('error' => 'Error uploading file!');
             echo json_encode($response);
