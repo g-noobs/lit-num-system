@@ -32,7 +32,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'email' => $row[4],
                     'birthdate' => $row[5], // Assuming 'date' corresponds to birthdate
                     'status_id' => 1,
-                    'user_level_id' => 2, // Set this value appropriately
+                    'user_level_id' => 1, // Set this value appropriately
                     'added_byID' => '',
                     'date_added' => ''
                 );
@@ -45,6 +45,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
                 $table = "tbl_user_info";   
                 // Set user_info_id
+                $columnCountClass = new ColumnCountClass();
                 $values['user_info_id'] = "USR" . $columnCountClass->columnCountWhere("user_info_id", $table);
 
                 // Set added_byID from the session
@@ -57,6 +58,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                 // Insert validation
                 $data = array($values['first_name'], $values['last_name']);
                 $column = array('first_name', 'last_name');
+                $validate = new CommonValidationClass();
                 $isValid = $validate->validateColumns($table, $column, $data);
 
                 $isIdvalid = $validate->validateOneColumn($table, 'personal_id', $values['personal_id']);
@@ -66,6 +68,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     $questionMarkString = implode(',', array_fill(0, count($values), '?'));
                     $sql = "INSERT INTO $table ($columns) VALUES($questionMarkString);";
                     $params = array_values($values);
+                    $addNewUser = new SanitizeCrudClass();
 
                     try {
                         $addNewUser->executePreState($sql, $params);
