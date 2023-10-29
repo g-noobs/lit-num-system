@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $notDuplicate = $isValid -> updateValidateColumns($table, $column, $data);
     $notIdDuplicate = $isValid -> updateValidateOneColumn($table, 'personal_id', $values['personal_id']);
     
-    if($notDuplicate AND $notIdDuplicate){
+    if($notDuplicate && $notIdDuplicate){
 
         // Build the SET part of the UPDATE query
         $setClause = implode(", ", array_map(function ($column, $value) {
