@@ -55,7 +55,7 @@ $(document).ready(function() {
                     setTimeout(function() {
                         $("#successBanner").fadeOut(
                         "slow"); // Hide the .alert element after 3 seconds
-                        window.location.reload();
+                        // window.location.reload();
                     }, 2500);
 
                     // You can redirect to a different page or perform other actions here
@@ -69,18 +69,17 @@ $(document).ready(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow"); // Hide the .alert element after 3 seconds
-                        window.location.reload();
+                        // window.location.reload();
                     }, 2500);
 
                 }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                // Handle errors here
+                $('#edit-user').modal('hide');
+                console.log('ERRORS: ' + textStatus);
+                // STOP LOADING SPINNER
             }
-            // ,
-            // error: function(jqXHR, textStatus, errorThrown) {
-            //     // Handle errors here
-            //     $('#edit-user').modal('hide');
-            //     console.log('ERRORS: ' + textStatus);
-            //     // STOP LOADING SPINNER
-            // }
         });
     });
 });
