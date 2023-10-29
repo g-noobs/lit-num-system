@@ -104,7 +104,7 @@ class CommonValidationClass extends Connection{
     
         $count = $result->fetch_row();
         // Return true if duplicate exists, false otherwise
-        if($count === 0){
+        if($count > 1){
             return true;
         }
         else{
@@ -118,7 +118,7 @@ class CommonValidationClass extends Connection{
         if($result->num_rows >0){
             $row = $result->fetch_assoc();
             $count = $row["count"];
-            if($count === 0){
+            if($count > 1){
                 return true;
             }
             else{
