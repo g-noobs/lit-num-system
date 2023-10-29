@@ -73,13 +73,14 @@ $(document).ready(function() {
                     }, 2500);
 
                 }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                // Handle errors here
-                $('#edit-user').modal('hide');
-                console.log('ERRORS: ' + textStatus);
-                // STOP LOADING SPINNER
             }
+            // ,
+            // error: function(jqXHR, textStatus, errorThrown) {
+            //     // Handle errors here
+            //     $('#edit-user').modal('hide');
+            //     console.log('ERRORS: ' + textStatus);
+            //     // STOP LOADING SPINNER
+            // }
         });
     });
 });
