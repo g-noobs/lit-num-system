@@ -10,7 +10,7 @@ $(document).ready(function() {
         var edit_first_name = $(this).closest('tr').find('td:eq(3)').text();
         var edit_last_name = $(this).closest('tr').find('td:eq(4)').text();
         var edit_gender = $(this).closest('tr').find('td:eq(5)').text();
-        var edit_user = $(this).closest('tr').find('td:eq(8)').text();
+        var edit_user_type = $(this).closest('tr').find('td:eq(6)').text();
 
         // Populate the modal fields with the data
         $('#edit-user').find('[name="userId"]').val(userId);
@@ -29,6 +29,15 @@ $(document).ready(function() {
         }
 
         $('#edit-user').find('[name="edit_user"]').val(edit_user);
+
+        //for select option of user_type
+        var selectElementUserType = $('#edit-user').find('[name="edit_user_option"]');
+        // Find the option with the value matching the text from the table cell
+        var matchingOptionUserType = selectElement.find('option:contains("' + edit_user_option + '")');
+
+        if(matchingOptionUserType.length){
+            selectElement.val(matchingOptionUserType.val());
+        }
     });
 
     //Edit Form within the modal
