@@ -35,7 +35,7 @@ $(document).ready(function() {
         var matchingOptionUserType = selectElementUserType.find('option:contains("' + edit_user_type + '")');
 
         if(matchingOptionUserType.length){
-            selectElement.val(matchingOptionUserType.val());
+            selectElementUserType.val(matchingOptionUserType.val());
         }
     });
 
