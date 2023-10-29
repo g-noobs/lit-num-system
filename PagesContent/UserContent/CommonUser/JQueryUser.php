@@ -4,7 +4,6 @@
 
 // *This will disable the personal id input field if selected user is admin-->
 
-
 <script>
 $(document).ready(function() {
     $('.custom-dropdown-menu a').click(function(e) {
