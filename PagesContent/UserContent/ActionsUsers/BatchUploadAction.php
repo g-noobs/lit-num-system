@@ -5,7 +5,7 @@ session_start();
 require '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
-if (isset($_POST['upload_excel'])) {
+// if (isset($_POST['upload_excel'])) {
     // Allowed mime types for Excel files
     $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
@@ -113,8 +113,8 @@ if (isset($_POST['upload_excel'])) {
     } else {
         $response = array('error' => 'Please upload a valid Excel file!');
     }
-}else{
-    $response = array('error' => 'Possible POST ISSUE');
-    echo json_encode($response);
-}
+// }else{
+//     $response = array('error' => 'Possible POST ISSUE');
+//     echo json_encode($response);
+// }
 ?>
