@@ -62,8 +62,9 @@ $isIdvalid = $validate -> validateOneColumn($table, 'personal_id', $values['pers
 
 if($isValid AND $isIdvalid) {
     $columns = implode(', ', array_keys($values));
+    $questionMarkString = implode(',', array_fill(0, count($values), '?'));
     $sql = "INSERT INTO $table ($columns)
-            VALUES(?,?,?,?,?,?,?,?,?,?,?);";
+            VALUES($questionMarkString);";
     $params = array_values($values);
 
     include_once "../../../Database/SanitizeCrudClass.php";
@@ -73,6 +74,7 @@ if($isValid AND $isIdvalid) {
         $addNewUser->executePreState($sql, $params);
         if($addNewUser->getLastError() === null){
             $table = "tbl_credentials";
+            
             $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) 
             VALUES(?,?,?,?);";
             $params = array($credentials_id, $username, $password, $user_info_id);
