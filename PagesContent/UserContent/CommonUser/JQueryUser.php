@@ -78,9 +78,9 @@ $(document).ready(function() {
 $(function(){
     $("#btnAddTeacher, #btnAddAdmin, #btnAddLearner").on("click", function(){
         var userType = $(this).data('user-level');
-        // set the value #user and text then disable the option
+        // set the value and text, then disable the option
         $("#user").val(userType);
-        $("#user").text(userType);
+        $("#user option:selected").text(userType);
         $("#user").prop("disabled", true);
     });
 });
