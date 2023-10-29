@@ -78,10 +78,14 @@ $(document).ready(function() {
 $(function(){
     $("#btnAddTeacher, #btnAddAdmin, #btnAddLearner").on("click", function(){
         var userType = $(this).data('user-level');
-        // set the value and text, then disable the option
+        
+        // Enable the corresponding option and disable the rest
+        $("#user option").prop("disabled", true); // Disable all options
+        $("#user option[value='" + userType + "']").prop("disabled", false); // Enable the selected option
+
+        // Set the value and text to the selected userType
         $("#user").val(userType);
         $("#user option:selected").text(userType);
-        $("#user").prop("disabled", true);
     });
 });
 </script>
