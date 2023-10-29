@@ -2,7 +2,7 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $values = array(
-        'user_info_Id' => $_POST['userId'],
+        'user_info_id' => $_POST['userId'],
         'personal_id' => '',
         'first_name' => $_POST['edit_first_name'],
         'last_name' =>$_POST['edit_last_name'],
@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     );
     if ($_POST['edit_user_option']=== "Admin") {
         $values['user_level_id'] = '0';
-        $values['personal_id']= $values['user_info_Id'];
+        $values['personal_id']= $values['user_info_id'];
 
     } else if ($_POST['edit_user_option'] === "Teacher") {
         $values['user_level_id'] = '1';
@@ -30,8 +30,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $data = array($values['first_name'],$values['last_name']);
     $column = array('first_name','last_name');
 
-    $notDuplicate = $isValid -> updateValidateColumns($table, $column, $data);
-    $notIdDuplicate = $isValid -> updateValidateOneColumn($table, 'personal_id', $values['personal_id']);
+    $notDuplicate = $isValid -> updateValidateColumns($table, $column, $data, $values['user_info_id']);
+    $notIdDuplicate = $isValid -> updateValidateOneColumn($table, 'personal_id', $values['personal_id'], $values['user_info_id']);
     
     if($notDuplicate && $notIdDuplicate){
 
@@ -41,13 +41,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }, array_keys($values), $values));
 
         // Build the WHERE condition
-        $whereCondition = "user_info_Id = ?";
+        $whereCondition = "user_info_id= ?";
 
         // Combine the SET and WHERE clauses to create the UPDATE query
         $sql = "UPDATE $table SET $setClause WHERE $whereCondition";
 
         // Prepare the parameters for binding
-        $params = array_merge(array_values($values), [$values['user_info_Id']]);
+        $params = array_merge(array_values($values), [$values['user_info_id']]);
 
         try{
             include_once("../../../Database/SanitizeCrudClass.php");

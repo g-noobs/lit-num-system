@@ -64,7 +64,7 @@ class CommonValidationClass extends Connection{
         }
     }
 
-    function updateValidateColumns($table, $column, $value) {
+    function updateValidateColumns($table, $column, $value, $id) {
         // Convert column and value to arrays if they are not already
         if (!is_array($column)) {
             $column = [$column];
@@ -84,9 +84,13 @@ class CommonValidationClass extends Connection{
     
         // Loop through columns and values to build the WHERE clause
         for ($i = 0; $i < count($column); $i++) {
+            if ($column[$i] === 'user_info_id') {
+                // Skip checking for the ID column
+                continue;
+            }
             $conditions[] = "$column[$i] = '" . addslashes($value[$i]) . "'";
         }
-    
+        $conditions[] = "user_info_id != '$id'"; // Exclude the current record
         $conditionString = implode(" AND ", $conditions);
         $sql = "SELECT COUNT(*) FROM $table WHERE $conditionString";
     
@@ -100,25 +104,25 @@ class CommonValidationClass extends Connection{
     
         $count = $result->fetch_row();
         // Return true if duplicate exists, false otherwise
-        if($count > 1){
-            return false;
+        if($count === 0){
+            return true;
         }
         else{
-            return true;
+            return false;
         }
     }
 
-    function updateValidateOneColumn($table, $column, $data){
-        $sql = "SELECT COUNT($column) as count FROM $table WHERE $column = '$data'";
+    function updateValidateOneColumn($table, $column, $data, $id){
+        $sql = "SELECT COUNT($column) as count FROM $table WHERE $column = '$data' AND user_info_id != '$id';";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows >0){
             $row = $result->fetch_assoc();
             $count = $row["count"];
-            if($count > 1){
-                return false;
+            if($count === 0){
+                return true;
             }
             else{
-                return true;
+                return false;
             }
         }
     }
