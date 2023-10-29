@@ -30,10 +30,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $data = array($values['first_name'],$values['last_name']);
     $column = array('first_name','last_name');
 
-    $isDuplicate = $isValid -> validateColumns($table, $column, $data);
-    $isIdDuplicate = $isValid -> validateOneColumn($table, 'personal_id', $values['personal_id']);
+    $notDuplicate = $isValid -> updateValidateColumns($table, $column, $data);
+    $notIdDuplicate = $isValid -> updateValidateOneColumn($table, 'personal_id', $values['personal_id']);
     
-    if($isDuplicate AND $isIdDuplicate){
+    if($notDuplicate AND $notIdDuplicate){
 
         // Build the SET part of the UPDATE query
         $setClause = implode(", ", array_map(function ($column, $value) {
