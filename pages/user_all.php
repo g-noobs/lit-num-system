@@ -70,19 +70,6 @@
             </section>
             <br>
             <br>
-            <section>
-                <div class="container-fluid">
-                    <button href="#" id="csvUploadIcon" data-toggle="tooltip" title="Upload Multiple User"
-                        style="color:green">
-                        <i class="fa fa-file-excel-o"></i>
-                    </button>
-                </div>
-                <!-- <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
-                    title="Download Template">
-                    <i class="fa fa-file-excel-o"></i>
-                </a>
-            </label> -->
-            </section>
 
             <!-- <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
@@ -97,8 +84,6 @@
                     </div>
                 </form>
             </section> -->
-
-            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddAllUserModal.php");?>
 
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
