@@ -63,7 +63,7 @@
     <!-- Common jquery script used on all pages. Consists of logout script, search input/bar for tables, add active class to sidebar menu, and add active class to treeview menu. -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
 
-    <?php include_once "../PagesContent/DashboardContent/DasboardScripts.php";?>
+    <?php include_once "../PagesContent/DashboardFolder/DasboardScripts.php";?>
 </body>
 
 </html>
