@@ -9,6 +9,8 @@ $(function() {
     type: "GET",
     url: "../PagesContent/DashboardFolder/ActionUserCount.php",
     success: function (response) {
+        "use strict";
+        
         var responseData = JSON.parse(response);
         admin_count = responseData.admin;
         teacher_count = responseData.teacher;
