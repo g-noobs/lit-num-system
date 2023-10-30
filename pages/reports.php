@@ -88,15 +88,15 @@
     </div>
     <!-- Script From the template -->
     <?php include_once("../bootstrap/js.php");?>
-     <!-- Dropdown Script and Navigation-->
-     <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/DropdownScript.php"?>
+<!-- Dropdown Script and Navigation-->
+    <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/DropdownScript.php"?>
     <!-- Modified Script for Search -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
 
     <!-- Exporting Data script And Search input bar script-->
     <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/ExportScript.php"?>
 
-   
+
 </body>
 
 </html>
