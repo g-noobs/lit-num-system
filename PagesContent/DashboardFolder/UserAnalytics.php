@@ -19,11 +19,11 @@
                             <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.3.0
                             </desc>
                             <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
-                            <path fill="none" stroke="#3c8dbc"
+                            <path fill="none" stroke="#000080"
                                 d="M137.1125,234.74166666666667A84.74166666666667,84.74166666666667,0,0,0,217.28133096048992,177.4610380698334"
                                 stroke-width="2" opacity="0"
                                 style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path>
-                            <path fill="#3c8dbc" stroke="#ffffff"
+                            <path fill="#000080" stroke="#ffffff"
                                 d="M137.1125,237.74166666666667A87.74166666666667,87.74166666666667,0,0,0,220.11944475199118,178.43320580561272L252.6355567882328,189.57127754511785A122.11250000000001,122.11250000000001,0,0,1,137.1125,272.1125Z"
                                 stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
                             <path fill="none" stroke="#f56954"
@@ -33,11 +33,11 @@
                             <path fill="#f56954" stroke="#ffffff"
                                 d="M220.11944475199118,178.43320580561272A87.74166666666667,87.74166666666667,0,0,0,58.41957908489002,111.19247151269886L23.109036311270756,93.7790259491834A127.11250000000001,127.11250000000001,0,0,1,257.3657464407349,191.19155710475007Z"
                                 stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
-                            <path fill="none" stroke="#00a65a"
+                            <path fill="none" stroke="#F39C12"
                                 d="M61.1101908741805,112.51935063278893A84.74166666666667,84.74166666666667,0,0,0,137.08587762069266,234.74166248483309"
                                 stroke-width="2" opacity="0"
                                 style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path>
-                            <path fill="#00a65a" stroke="#ffffff"
+                            <path fill="#F39C12" stroke="#ffffff"
                                 d="M58.41957908489002,111.19247151269886A87.74166666666667,87.74166666666667,0,0,0,137.0849351429121,237.74166233678903L137.07413722733992,272.11249397398973A122.11250000000001,122.11250000000001,0,0,1,27.59338929342158,95.99049114933354Z"
                                 stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text
                                 x="137.1125" y="140" text-anchor="middle" font-family="&quot;Arial&quot;"
