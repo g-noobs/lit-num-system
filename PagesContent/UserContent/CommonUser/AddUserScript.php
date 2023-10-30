@@ -51,3 +51,26 @@ $(function() {
     });
 });
 </script>
+
+<!-- Script that will disable the option if for usertype if either learner - teach is selected-->
+<script>
+$(function(){
+    $("#btnAddTeacher, #btnAddAdmin, #btnAddLearner").on("click", function(){
+        var userType = $(this).data('user-level');
+        
+        // Enable the corresponding option and disable the rest
+        $("#user option").prop("disabled", true); // Disable all options
+        $("#user option[value='" + userType + "']").prop("disabled", false); // Enable the selected option
+
+        // Set the value and text to the selected userType
+        $("#user").val(userType);
+        $("#user option:selected").text(userType);
+
+        if(userType === 'Admin'){
+            // Set personal_id as readonly and set its value to a default
+        $("#personal-id").prop("disabled", true);
+            $("#personal-id").fadeOut();
+        }
+    });
+});
+</script>
