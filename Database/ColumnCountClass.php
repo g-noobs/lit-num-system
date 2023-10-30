@@ -20,7 +20,7 @@ class ColumnCountClass extends Connection{
         }
     }
     function columnCountNum($sql){
-        $result = $this->conn->query($sql);
+        $result = $this->getConnection()->query($sql);
     
         if ($result->num_rows > 0) {
             // Fetch the count value
