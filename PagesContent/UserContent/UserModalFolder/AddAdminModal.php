@@ -36,39 +36,38 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group">
-                                <label for="gender">Select Gender:</label>
-                                <select class="form-control" name="gender" placeholder="Gender" required>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>None</option>
-                                </select>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="gender">Select Gender:</label>
+                                    <select class="form-control" name="gender" placeholder="Gender" required>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>None</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Phone:</label>
                                     <input type="text" class="form-control"
                                         data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']"
                                         data-mask="">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Enter Email Address:</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Email"
-                                            required autocomplete="off" />
-                                    </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="email">Enter Email Address:</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required
+                                        autocomplete="off" />
                                 </div>
                             </div>
                         </div>
-                        <!-- /.box-body -->
-                        <div class="modal-footer">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success pull-left">Add User</button>
-                                <button type="reset" class="btn btn-default pull-right"
-                                    data-dismiss="modal">Cancel</button>
-                            </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success pull-left">Add User</button>
+                            <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>
