@@ -65,7 +65,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- /.box-body -->
                     <div class="modal-footer">
@@ -74,6 +73,7 @@
                             <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
+                </div>
             </form>
         </div>
         <!-- /.modal-content -->

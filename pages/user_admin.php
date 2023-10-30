@@ -63,8 +63,6 @@
     
                                 <li><a href="#" data-user-type="arch-admin"><small>Archived Admin</small></a>
                                 </li>
-   
-
                             </ul>
                         </div>
                     </div>
