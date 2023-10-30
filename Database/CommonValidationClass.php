@@ -39,8 +39,8 @@ class CommonValidationClass extends Connection{
             throw new Exception("Error executing query: " . $this->getConnection()->error);
         }
     
-        $count = $result->fetch_row();
-        // Return true if duplicate exists, false otherwise
+        $count = $result->fetch_row()[0];
+      
         if($count > 0){
             return false;
         }
@@ -100,7 +100,7 @@ class CommonValidationClass extends Connection{
             throw new Exception("Error executing query: " . $this->getConnection()->error);
         }
     
-        $count = $result->fetch_row();
+        $count = $result->fetch_row()[0];
         // Return true if duplicate exists, false otherwise
         if($count === 0){
             return true;
