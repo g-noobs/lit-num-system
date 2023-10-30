@@ -2,7 +2,7 @@
 include_once "../../Database/ColumnCountClass.php";
 $count = new ColummCountClass();
 
-$table = "user_info_view";
+$table = "tbl_user_info";
 $col = "user_info_id";
 $adminCountQuery = "SELECT COUNT($col) as count FROM $table WHERE user_level_id = '0'";
 $teacherCountQuery = "SELECT COUNT($col) as count FROM $table WHERE user_level_id = '1'";
