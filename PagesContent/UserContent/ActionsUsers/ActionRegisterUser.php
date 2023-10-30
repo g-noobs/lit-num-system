@@ -20,7 +20,7 @@ include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
 // modify user id plus the column count
-$values['user_info_id'] = "USR". (100001 + (int)$columnCountClass->columnCountWhere("user_info_id",$table));
+$values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("user_info_id",$table);
 
 if ($_POST['user']=== "Admin") {
     // Set personal-id same with user_info_id

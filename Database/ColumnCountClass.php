@@ -37,18 +37,18 @@ class ColumnCountClass extends Connection{
         $query = "SELECT COUNT($col) as count FROM $tableName";// Replace with your table name
         $result = $this->conn->query($query);
     
-        if ($result->num_rows > 0) {
-            // Fetch the count value
-            $row = $result->fetch_assoc();
-            $count = $row["count"];
-            
-            // Generate the value with 6 leading zeros and the column count
-            $value = str_pad($count + 1, 6, '0', STR_PAD_LEFT);
+        if ($result) {
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $count = $row["count"];
+            } else {
+                $count = 0;
+            }
+            $value = str_pad(10000 + $count, 6, '0', STR_PAD_LEFT);
             return $value;
         } else {
-            $count = 0;
-            $value = str_pad($count + 1, 6, '0', STR_PAD_LEFT);
-            return $value;
+            // Handle the query execution error here.
+            return "Error";
         }
     }
 }
