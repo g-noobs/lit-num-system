@@ -46,9 +46,9 @@
             </section>
 
             <!-- Main content -->
-            <section class="content">
-                <?php include_once("../CommonContent/DashboardContent.php"); ?>
-            </section>
+            <!-- <section class="content">
+              //include_once("../CommonContent/DashboardContent.php"); ?>
+            </section> -->
 
             <section class="content">
                 <?php include_once("../PagesContent/DashboardFolder/UserAnalytics.php")?>
