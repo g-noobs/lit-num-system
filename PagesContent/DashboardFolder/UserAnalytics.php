@@ -86,7 +86,7 @@
 
 <!-- Morris Donut Chart -->
 <script>
-$(function() {
+$(function(){
     var admin_count = "";
     var teacher_count = "";
     var student_count = "";
