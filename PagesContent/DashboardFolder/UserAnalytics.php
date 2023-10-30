@@ -84,35 +84,6 @@
     </div>
 </section>
 
-<!-- Morris Donut Chart -->
-<script>
-$(function(){
-    var admin_count = "";
-    var teacher_count = "";
-    var student_count = "";
-    
-    //DONUT CHART
-    var donut = new Morris.Donut({
-        element: 'user-chart',
-        resize: true,
-        colors: ["#3c8dbc", "#f56954", "#00a65a"],
-        data: [{
-                label: "Admin",
-                value: 12
-            },
-            {
-                label: "Teacher",
-                value: 30
-            },
-            {
-                label: "Learner",
-                value: 20
-            }
-        ],
-        hideHover: 'auto'
-    });
-});
-</script>
 
 
 <!-- <script>
