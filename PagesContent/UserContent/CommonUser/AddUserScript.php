@@ -59,7 +59,7 @@ $(function(){
         var userType = $(this).data('user-level');
         
         // Enable the corresponding option and disable the rest
-        $("#user option").prop("disabled", true); // Disable all options
+        $("#user").prop("disabled", true); // Disable all options
         $("#user option[value='" + userType + "']").prop("disabled", false); // Enable the selected option
 
         // Set the value and text to the selected userType
