@@ -63,37 +63,7 @@
     <!-- Common jquery script used on all pages. Consists of logout script, search input/bar for tables, add active class to sidebar menu, and add active class to treeview menu. -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
 
-
-    <!-- Morris Donut Chart -->
-    <script>
-    $(function() {
-        var admin_count = "";
-        var teacher_count = "";
-        var student_count = "";
-
-        //DONUT CHART
-        var donut = new Morris.Donut({
-            element: 'user-chart',
-            resize: true,
-            colors: ["#3c8dbc", "#f56954", "#00a65a"],
-            data: [{
-                    label: "Admin",
-                    value: 12
-                },
-                {
-                    label: "Teacher",
-                    value: 30
-                },
-                {
-                    label: "Learner",
-                    value: 20
-                }
-            ],
-            hideHover: 'auto'
-        });
-    });
-    </script>
-
+    <?php include_once "../PagesContent/DashboardContent/DasboardScripts.php";?>
 </body>
 
 </html>
