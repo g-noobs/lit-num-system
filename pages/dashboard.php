@@ -49,9 +49,13 @@
             <section class="content">
                 <?php include_once("../CommonContent/DashboardContent.php"); ?>
             </section>
-            <!-- /.content-wrapper -->
+
+            <section class="content">
+                <?php include_once("../PagesContent/DashboardFolder/UserAnalytics.php") ?>
+            </section>
+            
         </div>
-        <!-- ./wrapper -->
+        <!-- /.content-wrapper -->
     </div>
     <!-- Bootstrap 3 template Scripts -->
     <?php include_once("../bootstrap/js.php")?>
