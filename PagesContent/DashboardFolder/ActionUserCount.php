@@ -1,6 +1,6 @@
 <?php 
 include_once "../../Database/ColumnCountClass.php";
-$count = new ColummCountClass();
+$count = new ColumnCountClass();
 
 $table = "tbl_user_info";
 
