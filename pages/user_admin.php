@@ -112,7 +112,7 @@
                         CSV and Save Data</button>
                 </div> -->
             <!-- All Modal for user-->
-            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddAdminModal.php");?>
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
             
