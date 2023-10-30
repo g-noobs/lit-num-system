@@ -84,7 +84,7 @@
             </label> -->
             </section>
 
-            <section id="frmCsvGroup" class="container-fluid">
+            <!-- <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
@@ -96,19 +96,9 @@
                         <button type="reset" class="btn btn-default pull-left">Clear</button>
                     </div>
                 </form>
-            </section>
+            </section> -->
 
-
-            <!-- <div class="form-group">
-                    <input type="file" name="file" id="file" class="file">
-                </div>
-                <div class></div>
-                <div class="import">
-                    <button type="submit" id="submit" name="import" class="btn btn-success">Import
-                        CSV and Save Data</button>
-                </div> -->
-            <!-- All Modal for user-->
-            <?php include_once("../PagesContent/UserContent/CommonUser/UserModal.php");?>
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddAllUserModal.php");?>
 
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
