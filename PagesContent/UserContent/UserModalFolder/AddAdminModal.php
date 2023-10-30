@@ -13,16 +13,16 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="first_name">Enter First Name:</label>
-                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"
-                                        required/>
+                                    <label for="last_name">Enter Last Name:</label>
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="last_name">Enter Last Name:</label>
-                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name"
-                                        required>
+                                    <label for="first_name">Enter First Name:</label>
+                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"
+                                        required autocomplete="given-name" />
                                 </div>
                             </div>
                             <div class="col-sm-4">
