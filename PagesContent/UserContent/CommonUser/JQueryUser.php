@@ -86,6 +86,12 @@ $(function(){
         // Set the value and text to the selected userType
         $("#user").val(userType);
         $("#user option:selected").text(userType);
+
+        if(userType === 'Admin'){
+            // Set personal_id as readonly and set its value to a default
+        $("#personal-id").prop("disabled", true);
+            $("#personal-id").fadeOut();
+        }
     });
 });
 </script>
