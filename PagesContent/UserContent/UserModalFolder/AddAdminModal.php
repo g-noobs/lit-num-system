@@ -9,7 +9,7 @@
             </div>
             <form id="addUserForm">
                 <div class="modal-body">
-                    <div class="box-body box-warning">
+                    <div class="box-body">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
