@@ -10,6 +10,7 @@
 
     <!--  BootStrap Template -->
     <?php include_once "../bootstrap/css.php"?>
+    <?php include_once "../CommonContent/CommonAllScript.php"?>
 
     <style>
     body {
