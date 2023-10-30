@@ -22,7 +22,7 @@ $(function() {
             var donut = new Morris.Donut({
                 element: 'user-chart',
                 resize: true,
-                colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                colors: ["#000080", "#FF0000", "#F39C12"],
                 data: [{
                         label: "Admin",
                         value: admin_count
