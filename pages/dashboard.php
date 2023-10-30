@@ -51,7 +51,7 @@
             </section>
 
             <section class="content">
-                <?php include_once("../PagesContent/DashboardFolder/UserAnalytics.php") ?>
+                <?php include_once("../PagesContent/DashboardFolder/UserAnalytics.php")?>
             </section>
 
         </div>
