@@ -46,7 +46,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                 $table = "tbl_user_info";   
                 // Set user_info_id
                 $columnCountClass = new ColumnCountClass();
-                $values['user_info_id'] = "USR" . $columnCountClass->columnCountWhere("user_info_id", $table);
+                $values['user_info_id'] = "USR" . (10001 + $columnCountClass->columnCountWhere("user_info_id", $table));
 
                 // Set added_byID from the session
                 $values['added_byID'] = $_SESSION['id'];
