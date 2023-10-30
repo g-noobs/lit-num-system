@@ -20,7 +20,7 @@ include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
 // modify user id plus the column count
-$values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("credentials_id","tbl_credentials");
+$values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("user_info_id",$table);
 
 if ($_POST['user']=== "Admin") {
     // Set personal-id same with user_info_id
@@ -59,7 +59,7 @@ $column = array('first_name', 'last_name');
 $isIdvalid = $validate -> validateOneColumn($table, 'personal_id', $values['personal_id']);
 
 
-if($isValid AND $isIdvalid) {
+if($isIdvalid) {
     $columns = implode(', ', array_keys($values));
     $questionMarkString = implode(',', array_fill(0, count($values), '?'));
     $sql = "INSERT INTO $table ($columns)
