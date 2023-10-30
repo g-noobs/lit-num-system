@@ -11,22 +11,21 @@
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="first_name">Enter First Name:</label>
                                     <input type="text" name="first_name" class="form-control" placeholder="First Name"
-                                        required autocomplete="given-name" />
+                                        required/>
                                 </div>
+                            </div>
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
                                     <input type="text" name="last_name" class="form-control" placeholder="Last Name"
                                         required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="last_name">Enter Last Name:</label>
-                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name"
-                                        required>
-                                </div>
+                            </div>
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="middle_initial">Middle Initial
                                         <span><small>*optional</small></span></label>
@@ -48,32 +47,30 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
+                                <div class="form-group">
+                                    <label>Phone:</label>
                                     <input type="text" class="form-control"
                                         data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']"
                                         data-mask="">
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="email">Enter Email Address:</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required
-                                        autocomplete="off" />
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email">Enter Email Address:</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Email"
+                                            required autocomplete="off" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="modal-footer">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success pull-left">Add User</button>
-                            <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
+                        <!-- /.box-body -->
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success pull-left">Add User</button>
+                                <button type="reset" class="btn btn-default pull-right"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
                         </div>
                     </div>
-                </div>
             </form>
         </div>
         <!-- /.modal-content -->
