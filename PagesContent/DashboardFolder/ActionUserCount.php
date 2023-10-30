@@ -18,5 +18,5 @@ $response = array(
     'student' => $studentCount
 );
 
-echo json_response($response);
+echo json_encode($response);
 ?>
