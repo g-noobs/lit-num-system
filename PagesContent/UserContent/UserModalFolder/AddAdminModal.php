@@ -27,9 +27,9 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="middle_initial">Middle Initial
-                                        <span><small>*optional</small></span></label>
-                                    <select name="middle_initial" id="teacher_middle_initial" class="form-control input-sm">
+                                    <label for="user_middle_initial">Middle Initial
+                                        <span><p class="help-block">*optional</p></span></label>
+                                    <select name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
                                         <option value="">-</option>
                                     </select>
                                 </div>
@@ -66,7 +66,7 @@
                     <!-- /.box-body -->
                     <div class="modal-footer">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success pull-left">Add User</button>
+                            <button type="submit" class="btn btn-success pull-left">Add Admin</button>
                             <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
