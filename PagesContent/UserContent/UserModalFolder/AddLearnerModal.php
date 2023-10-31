@@ -114,6 +114,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </form>
         </div>
         <!-- /.modal-content -->
