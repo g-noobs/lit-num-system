@@ -16,6 +16,8 @@ class DisplayAllTableClass extends Connection{
                     $password = str_repeat("*", strlen($row["password"]));
                     $modalTarget = "";
                     $editColor = "gray";
+                    $data_target = "";
+                    $iconColor = "gray";
                 }
                 else{
                     $username = $row["personal_id"];
