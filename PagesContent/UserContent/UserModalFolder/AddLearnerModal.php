@@ -74,7 +74,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-10">
-                                <h3>Address:</h3>
+                                <h4><strong>Address:</strong></h4>
                             </div>
                             <div class="col-sm-2"></div>
                         </div>
