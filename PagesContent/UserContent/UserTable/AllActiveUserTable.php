@@ -5,9 +5,6 @@
                 <h3>All Active User</h3>
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
-                            <i class="fa fa-plus"></i> <span> Add User</span>
-                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
