@@ -14,14 +14,14 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
-                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name"
+                                    <input type="text" name="last_name" class="form-control input-sm" placeholder="Last Name"
                                         required>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="first_name">Enter First Name:</label>
-                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"
+                                    <input type="text" name="first_name" class="form-control input-sm" placeholder="First Name"
                                         required autocomplete="given-name" />
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 <div class="form-group">
                                     <label for="middle_initial">Middle Initial
                                         <span><small>*optional</small></span></label>
-                                    <select name="middle_initial" id="teacher_middle_initial" class="form-control">
+                                    <select name="middle_initial" id="teacher_middle_initial" class="form-control input-sm">
                                         <option value="">-</option>
                                     </select>
                                 </div>
@@ -39,7 +39,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="gender">Select Gender:</label>
-                                    <select class="form-control" name="gender" placeholder="Gender" required>
+                                    <select class="form-control input-sm" name="gender" placeholder="Gender" required>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>None</option>
@@ -49,7 +49,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Phone:</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control input-sm"
                                         data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']"
                                         data-mask="">
                                 </div>
@@ -57,7 +57,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="email">Enter Email Address:</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required
+                                    <input type="email" name="email" class="form-control input-sm" placeholder="Email" required
                                         autocomplete="off" />
                                 </div>
                             </div>
