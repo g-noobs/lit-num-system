@@ -86,7 +86,7 @@
             </label> -->
             </section>
             <!-- All Modal for user-->
-            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddUserModal.php");?>
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddAdminModal.php");?>
 
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
