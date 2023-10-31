@@ -1,4 +1,4 @@
-<div class="modal fade" id="add-user">
+<div class="modal fade" id="add_admin_modal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
