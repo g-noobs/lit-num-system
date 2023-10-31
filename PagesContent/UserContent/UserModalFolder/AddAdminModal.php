@@ -28,7 +28,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="user_middle_initial">Middle Initial
-                                        <span><p class="help-block">*optional</p></span></label>
+                                        <p class="help-block">*optional</p></label>
                                     <select name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
                                         <option value="">-</option>
                                     </select>
