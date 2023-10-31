@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
                                     <input type="text" name="last_name" class="form-control" placeholder="Last Name"
