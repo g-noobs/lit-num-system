@@ -11,24 +11,23 @@
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-5">
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
                                     <input type="text" name="last_name" class="form-control input-sm" placeholder="Last Name"
                                         required>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-5">
                                 <div class="form-group">
                                     <label for="first_name">Enter First Name:</label>
                                     <input type="text" name="first_name" class="form-control input-sm" placeholder="First Name"
                                         required autocomplete="given-name" />
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    <label for="user_middle_initial">Middle Initial
-                                        <span class="help-block">*optional</span></label>
+                                    <label for="user_middle_initial">Middle Initial</label>
                                     <select name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
                                         <option value="">-</option>
                                     </select>
