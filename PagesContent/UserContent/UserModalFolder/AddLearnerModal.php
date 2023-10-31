@@ -11,13 +11,14 @@
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-10">
                                 <div class="form-group">
                                     <label for="personal_id">Enter Student:</label>
                                     <input type="text" name="personal_id" class="form-control input-sm"
                                         placeholder="Student ID" required>
                                 </div>
                             </div>
+                            <div class="col-sm-2"></div>
                         </div>
                         <div class="row">
                             <div class="col-sm-5">
@@ -72,9 +73,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-10">
                                 <h3>Address:</h3>
                             </div>
+                            <div class="col-sm-2"></div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
