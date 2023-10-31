@@ -11,6 +11,13 @@
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="row">
+                            <div class="form-group">
+                                <label for="personal_id">Enter Last Name:</label>
+                                <input type="text" name="personal_id" class="form-control input-sm"
+                                    placeholder="Student ID" required>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-sm-5">
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
@@ -76,8 +83,8 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="Barangay">Baranggay</label>
-                                    <input type="text" name="barangay_address" class="form-control input-sm" 
-                                    placeholder="Barangay"/>
+                                    <input type="text" name="barangay_address" class="form-control input-sm"
+                                        placeholder="Barangay" />
                                 </div>
                             </div>
                         </div>
@@ -97,15 +104,16 @@
                                 <input type="text" name="zip_code_address" class="form-control input-sm"
                                     placeholder="Zip Code" required autocomplete="postal-code" />
                             </div>
-                    </div>
-                    <!-- /.box-body -->
-                    <div class="modal-footer">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success pull-left">Add Admin</button>
-                            <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success pull-left">Add Admin</button>
+                                <button type="reset" class="btn btn-default pull-right"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
                         </div>
                     </div>
-                </div>
             </form>
         </div>
         <!-- /.modal-content -->
