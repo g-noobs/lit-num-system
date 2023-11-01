@@ -29,8 +29,6 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'first_name' => trim($row[1]),
                     'last_name' => trim($row[2]),
                     'gender' => trim($row[3]), // Set this value appropriately
-                    'email' => $row[4],
-                    'birthdate' => $row[5], // Assuming 'date' corresponds to birthdate
                     'status_id' => 1,
                     'user_level_id' => 1, // Set this value appropriately
                     'added_byID' => '',
