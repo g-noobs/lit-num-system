@@ -44,7 +44,7 @@ class ColumnCountClass extends Connection{
             } else {
                 $count = 0;
             }
-            $value = str_pad($count + 100000, 6, '0', STR_PAD_LEFT);
+            $value = str_pad($count + 100001, 6, '0', STR_PAD_LEFT);
             return $value;
         } else {
             // Handle the query execution error here.
