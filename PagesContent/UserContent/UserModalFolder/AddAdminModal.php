@@ -48,9 +48,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="phone_num">Phone:</label>
-                                    <input type="text" class="form-control input-sm" name="phone_num" id="phone_num"
-                                        data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']"
-                                        data-mask="">
+                                    <input type="text" class="form-control input-sm" name="phone_num" id="phone_num" requried>
                                 </div>
                             </div>
                             <div class="col-sm-4">
