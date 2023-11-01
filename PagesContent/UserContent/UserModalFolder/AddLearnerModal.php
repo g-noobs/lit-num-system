@@ -13,7 +13,7 @@
                         <div class="form-group row">
                             <div class="col-xs-10">
                                 <label for="personal_id">Enter Student:</label>
-                                <input type="text" name="personal_id" class="form-control input-xs"
+                                <input type="text" name="personal_id"
                                     placeholder="Student ID" required>
                             </div>
                             <div class="col-xs-2"></div>
@@ -21,18 +21,18 @@
                         <div class="form-group row">
                             <div class="col-xs-5">
                                 <label for="last_name">Enter Last Name:</label>
-                                <input type="text" name="last_name" class="form-control input-xs"
+                                <input type="text" name="last_name"
                                     placeholder="Last Name" required>
                             </div>
                             <div class="col-xs-5">
                                 <label for="first_name">Enter First Name:</label>
-                                <input type="text" name="first_name" class="form-control input-xs"
+                                <input type="text" name="first_name"
                                     placeholder="First Name" required autocomplete="given-name" />
                             </div>
                             <div class="col-xs-2">
                                 <label for="user_middle_initial">Middle Initial</label>
                                 <select name="user_middle_initial" id="user_middle_initial"
-                                    class="form-control input-xs">
+                                >
                                     <option value="">-</option>
                                 </select>
                             </div>
@@ -40,7 +40,7 @@
                         <div class="form-group row">
                             <div class="col-xs-4">
                                 <label for="gender">Select Gender:</label>
-                                <select class="form-control input-xs" name="gender" placeholder="Gender" required>
+                                <select name="gender" placeholder="Gender" required>
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>None</option>
@@ -48,13 +48,13 @@
                             </div>
                             <div class="col-xs-4">
                                 <label>Phone:</label>
-                                <input type="text" class="form-control input-xs"
+                                <input type="text"
                                     data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']"
                                     data-mask="">
                             </div>
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>
-                                <input type="email" name="email" class="form-control input-xs" placeholder="Email"
+                                <input type="email" name="email" placeholder="Email"
                                     required autocomplete="off" />
                             </div>
                         </div>
@@ -67,29 +67,29 @@
                         <div class="form-group row">
                             <div class="col-xs-6">
                                 <label for="street_address">Street</label>
-                                <input type="text" name="street_address" class="form-control input-xs"
+                                <input type="text" name="street_address"
                                     placeholder="Street" required autocomplete="street-address" />
                             </div>
                             <div class="col-xs-6">
                                 <label for="Barangay">Baranggay</label>
-                                <input type="text" name="barangay_address" class="form-control input-xs"
+                                <input type="text" name="barangay_address"
                                     placeholder="Barangay" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-4">
                                 <label for="city">City</label>
-                                <input type="text" name="city_address" class="form-control input-xs" placeholder="City"
+                                <input type="text" name="city_address" placeholder="City"
                                     required autocomplete="address-level2" />
                             </div>
                             <div class="col-xs-4">
                                 <label for="province">Province</label>
-                                <input type="text" name="province_address" class="form-control input-xs"
+                                <input type="text" name="province_address"
                                     placeholder="Province" required autocomplete="address-level1" />
                             </div>
                             <div class="col-xs-4">
                                 <label for="zip_code">Zip Code</label>
-                                <input type="text" name="zip_code_address" class="form-control input-xs"
+                                <input type="text" name="zip_code_address"
                                     placeholder="Zip Code" required autocomplete="postal-code" />
                             </div>
                         </div>
