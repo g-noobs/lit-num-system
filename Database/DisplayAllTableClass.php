@@ -57,6 +57,11 @@ class DisplayAllTableClass extends Connection{
         }
     }
 
+    function displayAdmin(){
+        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Admin' AND status = 'Active'";
+        $this->userTable($sql);
+    }
+
     function lessonTable($sql){
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){

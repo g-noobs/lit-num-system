@@ -51,11 +51,8 @@
                     <tbody>
                         <?php 
                         include_once("../Database/DisplayAllTableClass.php");
-
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Admin' AND status = 'Active'";
                         $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
+                        $userT->displayAdmin();
                         ?>
                     </tbody>
                 </table>
