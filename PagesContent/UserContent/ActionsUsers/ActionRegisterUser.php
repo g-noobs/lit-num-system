@@ -16,8 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'first_name' => trim($_POST['first_name']),
             'last_name' =>trim($_POST['last_name']),
             'gender' => $_POST['gender'],
-
-            'contact_id' => '',
             'status_id' => '1',
             'user_level_id' => '0',
             'added_byID'=>'',
@@ -29,19 +27,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $columnCountClass = new ColumnCountClass();
         $values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("user_info_id",$table);
         
-        //set contact id
-        $values['contact_id'] = "CNT". $columnCountClass->columnCountWhere("contact_id","tbl_contact_info");
-        //adding data for user_level_id
-        if ($_POST['user_level']=== "Admin") {
-            // Set personal-id same with user_info_id
-            // $values['personal_id']= $values['user_info_id'];
-            // $username = $values['email'];
-            $values['user_level_id'] = '0';
-        } else if ($_POST['user_level'] === "Teacher") {
-            $values['user_level_id'] = '1';
-        } else if ($_POST['user_level']=== "Learner") {
-            $values['user_level_id'] = '2';
-        }
         //adding data for added_byID
         $values['added_byID']= $_SESSION['id'];
 
@@ -92,7 +77,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     if($addNewCreds->getLastError() === null){
                         $table = 'tbl_contact_info';
                         //set contact id
-                        $contact_id = $values['contact_id'];
+                        $contact_id = "CNT". $columnCountClass->columnCountWhere("contact_id","tbl_contact_info");
                         //set contact num
                         $contact_nunm = $_POST['phone_num'];
                         $email = $_POST['email'];
