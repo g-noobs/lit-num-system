@@ -9,7 +9,7 @@ include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
 include_once "../../../Database/SanitizeCrudClass.php";
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+// if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['last_name']) || isset($_POST['first_name']) || isset($_POST['gender']) || isset($_POST['phone_num']) || isset($_POST['email'])){
         $values = array(
             'user_info_id'=>'',
@@ -140,8 +140,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $response = array('error' => 'One or more fields are empty');
         echo json_encode($response);
     }
-}else{
-    $response = array('error' => 'POSSIBLE POST ISSUE');
-    echo json_encode($response);
-}
+// }else{
+//     $response = array('error' => 'POSSIBLE POST ISSUE');
+//     echo json_encode($response);
+// }
 ?>

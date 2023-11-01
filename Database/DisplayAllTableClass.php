@@ -13,7 +13,7 @@ class DisplayAllTableClass extends Connection{
             while($row = $result->fetch_assoc()){
                 if($row["user_level_description"] === "Admin"){
                     $username = $row['email'];
-                    $password = str_repeat("*", strlen($row["password"]));
+                    $password = str_repeat("*", strlen($row["pass"]));
                     $modalTarget = "";
                     $editColor = "gray";
                     $data_target = "";
