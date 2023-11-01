@@ -82,9 +82,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         $contact_num = $_POST['phone_num'];
                         $email = $_POST['email'];
                         //set query
-                        $query = "INSERT INTO $table(contact_id,contact_num,email) VALUES(?,?,?);";
+                        $query = "INSERT INTO $table(contact_id,contact_num,email,user_info_id) VALUES(?,?,?.?);";
                         //set parameters
-                        $params = array($contact_id,$contact_num,$email);
+                        $params = array($contact_id,$contact_num,$email, $values['user_info_id']);
                         //set the sanitize class
                         $addNewContact = new SanitizeCrudClass();
                         $addNewContact->executePreState($query, $params);
