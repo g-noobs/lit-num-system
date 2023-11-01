@@ -13,7 +13,7 @@
                         <div class="form-group row">
                             <div class="col-xs-10">
                                 <label for="personal_id">Enter Student:</label>
-                                <input type="text" name="personal_id" class="form-control input-xs"
+                                <input type="text" name="personal_id" class="form-control input-sm"
                                     placeholder="Student ID" required>
                             </div>
                             <div class="col-xs-2"></div>
