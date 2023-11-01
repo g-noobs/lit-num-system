@@ -1,9 +1,10 @@
 <style>
-    .table thead {
-        position: sticky;
-        top: 0;
-        background-color: #fff; /* Set your preferred background color */
-    }
+.table thead {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    /* Set your preferred background color */
+}
 </style>
 
 <div class="row">
@@ -14,7 +15,8 @@
 
                 <div class="row">
                     <div class="col-xs-6">
-                        <button id="btnAddAdmin" type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_user_modal">
+                        <button id="btnAddAdmin" type="button" class="btn btn-warning" data-toggle="modal"
+                            data-target="#add_user_modal">
                             <i class="fa fa-plus"></i> <span>Add Admin</span>
                         </button>
                     </div>
@@ -35,7 +37,14 @@
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <?php include_once "AllTableHeader.php";?>
+                            <th></th>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>User Type</th>
+                            <th>Account Status</th>
+                            <th>Actions</th>
 
                         </tr>
                     </thead>
@@ -61,4 +70,3 @@
 
 <!-- Jquery-- on user.php DOM> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
