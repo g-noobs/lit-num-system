@@ -85,8 +85,7 @@
                 </a>
             </label> -->
             </section>
-            <!-- All Modal for user-->
-            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddAdminModal.php");?>
+            
 
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
@@ -102,6 +101,8 @@
                 </form>
             </section>
 
+            <!-- All Admin Modal-->
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/AddAdminModal.php");?>
 
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
@@ -120,9 +121,11 @@
 
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
+
+
         
         <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/AllUserScript/AddNewUserScript.php");?>
         
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>

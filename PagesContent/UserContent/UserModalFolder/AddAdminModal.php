@@ -1,4 +1,4 @@
-<div class="modal fade" id="add_admin_modal">
+<div class="modal fade" id="add_user_modal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -65,7 +65,7 @@
                     <!-- /.box-body -->
                     <div class="modal-footer">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success pull-left">Add Admin</button>
+                            <button type="submit" class="btn btn-success pull-left"  data-user-level="Admin">Add Admin</button>
                             <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
