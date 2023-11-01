@@ -6,7 +6,7 @@ $(function() {
 
         var btn_user_level = $(this).data('user-level');
         var formData = new FormData(this);
-        formData.append("btn_user_level", btn_user_level);
+        formData.append("user_level", btn_user_level);
 
         var $hideModal = $('#add_user_modal');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';

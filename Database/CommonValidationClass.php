@@ -40,7 +40,6 @@ class CommonValidationClass extends Connection{
         }
     
         $count = $result->fetch_row()[0];
-      
         if($count > 0){
             return false;
         }
