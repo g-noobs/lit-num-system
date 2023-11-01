@@ -35,7 +35,7 @@ class ColumnCountClass extends Connection{
 
     function columnCountWhere($col,$tableName){
         $query = "SELECT COUNT($col) as count FROM $tableName";// Replace with your table name
-        $result = $this->conn->query($query);
+        $result = $this->getConnection()->query($query);
     
         if ($result) {
             if ($result->num_rows > 0) {
@@ -44,7 +44,7 @@ class ColumnCountClass extends Connection{
             } else {
                 $count = 0;
             }
-            $value = str_pad($count + 1, 5, '0', STR_PAD_LEFT);
+            $value = str_pad($count + 10000, 6, '0', STR_PAD_LEFT);
             return $value;
         } else {
             // Handle the query execution error here.

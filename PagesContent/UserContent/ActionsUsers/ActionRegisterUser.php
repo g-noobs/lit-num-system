@@ -9,7 +9,7 @@ include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
 include_once "../../../Database/SanitizeCrudClass.php";
 
-// if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['last_name']) || isset($_POST['first_name']) || isset($_POST['gender']) || isset($_POST['phone_num']) || isset($_POST['email'])){
         $values = array(
             'user_info_id'=>'',
@@ -19,7 +19,7 @@ include_once "../../../Database/SanitizeCrudClass.php";
 
             'contact_id' => '',
             'status_id' => '1',
-            'user_level_id' => '',
+            'user_level_id' => '0',
             'added_byID'=>'',
             'date_added' => ''
         );
@@ -57,7 +57,7 @@ include_once "../../../Database/SanitizeCrudClass.php";
 
         if ($isValid) {
             //collect all comlumns
-            $columnse = implode(', ', array_keys($values));
+            $columns = implode(', ', array_keys($values));
             //set number of question marks
             $questionMarkString = implode(',', array_fill(0, count($values), '?'));
             //set sql
@@ -65,7 +65,7 @@ include_once "../../../Database/SanitizeCrudClass.php";
             // set parameters
             $params = array_values($values);
             //set sanitize class
-            $addUser = new SanitizeCrudClass();
+            $addNewUser = new SanitizeCrudClass();
             try{
                 $addNewUser->executePreState($sql, $params);
                 //!if adding user is correct then procced with creating credentials
@@ -94,8 +94,8 @@ include_once "../../../Database/SanitizeCrudClass.php";
                         //set contact id
                         $contact_id = $values['contact_id'];
                         //set contact num
-                        $contact_nunm = $values['phone_num'];
-                        $email = $values['email'];
+                        $contact_nunm = $_POST['phone_num'];
+                        $email = $_POST['email'];
                         //set query
                         $query = "INSERT INTO $table(contact_id,contact_num,email) VALUES(?,?,?);";
                         //set parameters
@@ -140,8 +140,8 @@ include_once "../../../Database/SanitizeCrudClass.php";
         $response = array('error' => 'One or more fields are empty');
         echo json_encode($response);
     }
-// }else{
-//     $response = array('error' => 'POSSIBLE POST ISSUE');
-//     echo json_encode($response);
-// }
+}else{
+    $response = array('error' => 'POSSIBLE POST ISSUE');
+    echo json_encode($response);
+}
 ?>

@@ -6,14 +6,13 @@ $(function() {
 
         var btn_user_level = $(this).data('user-level');
         var formData = new FormData(this);
-        formData.append("user_level", btn_user_level);
 
         var $hideModal = $('#add_user_modal');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
         $.ajax({
             url: actionUrl,
             type: "POST",
-            data: {formData},
+            data: formData,
             processData: false,
             contentType: false,
             success: function(response) {
