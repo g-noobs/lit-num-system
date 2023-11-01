@@ -36,7 +36,7 @@ $(function() {
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        location.reload();
+                        // location.reload();
                     }, 1500);
                 }
             },
