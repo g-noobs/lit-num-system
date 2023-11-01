@@ -79,12 +79,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         //set contact id
                         $contact_id = "CNT". $columnCountClass->columnCountWhere("contact_id","tbl_contact_info");
                         //set contact num
-                        $contact_nunm = $_POST['phone_num'];
+                        $contact_num = $_POST['phone_num'];
                         $email = $_POST['email'];
                         //set query
                         $query = "INSERT INTO $table(contact_id,contact_num,email) VALUES(?,?,?);";
                         //set parameters
-                        $params = array($contact_id,$contact_nunm,$email);
+                        $params = array($contact_id,$contact_num,$email);
                         //set the sanitize class
                         $addNewContact = new SanitizeCrudClass();
                         $addNewContact->executePreState($query, $params);
