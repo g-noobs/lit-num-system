@@ -10,7 +10,7 @@ include_once "../../../Database/CommonValidationClass.php";
 include_once "../../../Database/SanitizeCrudClass.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(isset($_POST['last_name']) || isset( $_POST['first_name']) || isset( $_POST['gender']) || isset( $_POST['phone_num']) || isset( $_POST['email'])){
+    if(isset($_POST['last_name']) || isset($_POST['first_name']) || isset($_POST['gender']) || isset($_POST['phone_num']) || isset($_POST['email'])){
         $values = array(
             'user_info_id'=>'',
             'first_name' => trim($_POST['first_name']),
