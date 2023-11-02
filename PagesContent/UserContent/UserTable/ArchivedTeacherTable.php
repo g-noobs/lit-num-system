@@ -27,10 +27,9 @@
                     <tbody>
                         <?php 
                         include_once("../../../Database/DisplayAllTableClass.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher' AND status = 'Inactive'";
-                        $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
+                        $teacherTable = new DisplayAllTableClass();
+                        $status = "Inactive";
+                        $teacherTable->displayTeacher($status);
                         ?>
                     </tbody>
                 </table>

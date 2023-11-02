@@ -5,7 +5,8 @@
                 <h3>Teacher</h3>
                 <div class="row">
                     <div class="col-xs-6">
-                        <button id="btnAddTeacher" data-user-level="Teacher" type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-user">
+                        <button id="btnAddTeacher" data-user-level="Teacher" type="button" class="btn btn-warning"
+                            data-toggle="modal" data-target="#add-user">
                             <i class="fa fa-plus"></i> <span>Add Teacher</span>
                         </button>
                     </div>
@@ -20,22 +21,24 @@
             <!-- /.box-header -->
 
             <div class="box-body">
-                <table id="example2" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <?php include_once "AllTableHeader.php";?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                <div class="table-responsive">
+                    <table id="example2" class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <?php include_once "AllTableHeader.php";?>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../Database/DisplayAllTableClass.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher' AND status = 'Active';";
-                        $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
+                        
+                        $teacherTable = new DisplayAllTableClass();
+                        $status = "Active";
+                        $teacherTable->displayTeacher($status);
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
