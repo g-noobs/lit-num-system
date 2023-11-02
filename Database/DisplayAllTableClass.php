@@ -56,6 +56,43 @@ class DisplayAllTableClass extends Connection{
             }
         }
     }
+    function displayStudent($status){
+        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Learner' AND status = '$status'";
+        $result = $this->getConnection()->query($sql);
+    
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<tr>";
+
+                echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
+                echo "</td>";
+
+                if ($row["status"] === "Active") {
+                    $statusColor = "text-success";
+                    $iconColor = "text-danger";
+                    $actionIcon = "<span class='glyphicon glyphicon-trash'></span>";
+                    $data_target = "#archiveUserModal";
+                    $icnBtnClass = "archIconBtn";
+                } else {
+                    $statusColor = "text-danger";
+                    $iconColor = "text-success";
+                    $actionIcon = "<span class='glyphicon glyphicon-ok'></span>";
+                    $data_target = "#activateUserModal";
+                    $icnBtnClass = "actvIconBtn";
+                }   
+
+                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
+                
+                echo "<td>";
+                echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
+                
+                echo " <a href='#' class='".$icnBtnClass." ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='".$row["user_info_id"]."'> ".$actionIcon ."</a>";
+                echo "</td>";
+
+                echo "</tr>";
+            }
+        }
+    }
 
     function displayTeacher($status){
         $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Teacher' AND status = '$status'";

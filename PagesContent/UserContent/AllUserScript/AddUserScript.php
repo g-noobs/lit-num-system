@@ -4,7 +4,7 @@ $(function() {
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
         var formData = new FormData(this);
-        var $hideModal = $('#add-user');
+        var $hideModal = $('#add_user_modal');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
         $.ajax({
             url: actionUrl,

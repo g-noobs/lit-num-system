@@ -6,7 +6,7 @@
                 
                 <div class="row">
                     <div class="col-xs-6">
-                        <button id="btnAddLearner" data-user-level="Learner" type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_learner_modal">
+                        <button id="btnAddLearner" data-user-level="Learner" type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_user_modal">
                             <i class="fa fa-plus"></i> <span> Add Learner</span>
                         </button>
                     </div>
@@ -31,10 +31,9 @@
                     <tbody>
                         <?php 
                         include_once("../Database/DisplayAllTableClass.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner' AND status = 'Active';";
-                        $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
+                        $status = "Active";
+                        $studentTable = new DisplayAllTableClass();
+                        $studentTable->displayStudent($status);
                         ?>
                     </tbody>
                 </table>
