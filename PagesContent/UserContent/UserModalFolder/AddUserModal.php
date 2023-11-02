@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-xs-4">
                                 <label for="zip_code">Zip Code</label>
-                                <input type="text" name="zip_code_address" class="form-control input-xs"
+                                <input type="number" name="zip_code_address" class="form-control input-xs"
                                     placeholder="Zip Code" required autocomplete="postal-code" />
                             </div>
                         </div>
