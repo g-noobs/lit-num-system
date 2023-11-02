@@ -90,6 +90,12 @@
                                     placeholder="Zip Code" required autocomplete="postal-code" />
                             </div>
                         </div>
+                        <div class="row">
+                            <h4>Guardian Infformation:</h4>
+                        </div>
+                        <div class="form-group row">
+                            <div class=""></div>
+                        </div>
                         <!-- /.box-body -->
                         <div class="modal-footer">
                             <div class="form-group">

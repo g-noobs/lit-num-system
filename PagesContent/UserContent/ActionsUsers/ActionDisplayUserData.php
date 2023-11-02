@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'birthdate_data' => $row['birthdate'],
                     'user_type_data' => $row['user_level_description'],
                     'user_status_data' => $row['status'],
-                    'username_data' => $row['username'],
-                    'password_data' => $row['password']
+                    'username_data' => $row['uname'],
+                    'password_data' => $row['pass']
                 );
             }
             echo json_encode($response);
