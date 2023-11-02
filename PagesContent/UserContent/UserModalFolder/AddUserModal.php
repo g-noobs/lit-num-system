@@ -44,10 +44,8 @@
                                 </select>
                             </div>
                             <div class="col-xs-4">
-                                <label>Phone:</label>
-                                <input type="text" class="form-control input-xs"
-                                    data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']"
-                                    data-mask="">
+                                <label for="phone_num">Phone:</label>
+                                <input type="tel" class="form-control input-xs" name="phone_num">
                             </div>
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>
