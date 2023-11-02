@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <button id="btnAddTeacher" data-user-level="Teacher" type="button" class="btn btn-warning"
-                            data-toggle="modal" data-target="#add-user">
+                            data-toggle="modal" data-target="#add_user_modal">
                             <i class="fa fa-plus"></i> <span>Add Teacher</span>
                         </button>
                     </div>
