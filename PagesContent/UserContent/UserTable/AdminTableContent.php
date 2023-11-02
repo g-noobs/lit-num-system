@@ -34,7 +34,7 @@
             <!-- /.modal for Edit User-->
 
             <div class="box-body">
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="example2" class="table table-bordered table-hover text-center">
                     <thead>
                         <tr>
                             <th></th>
