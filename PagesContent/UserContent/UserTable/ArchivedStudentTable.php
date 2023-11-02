@@ -16,12 +16,9 @@
                 </div>
             </div>
             <!-- /.box-header -->
-
-
-
-
             <div class="box-body">
-                <table id="example2" class="table table-bordered table-hover">
+                <div class="table-responsive">
+                <table id="example2" class="table table-bordered table-hover text-center">
                     <thead>
                         <tr>
                             <?php include_once "AllTableHeader.php";?>
@@ -37,6 +34,7 @@
                         ?>
                     </tbody>
                 </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
