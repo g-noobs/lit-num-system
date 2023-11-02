@@ -3,11 +3,11 @@
 $(function() {
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
-        var responseCount = 0; // Initialize the response count
+
         var formData = new FormData(this);
 
         var $hideModal = $('#add_learner_modal');
-        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionAddStudent.php';
+        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
         $.ajax({
             url: actionUrl,
             type: "POST",
@@ -16,20 +16,10 @@ $(function() {
             contentType: false,
             success: function(response) {
                 var responseData = JSON.parse(response);
-
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
                     $hideModal.modal('hide');
-                    responseCount++; //increment the response count
-
                     $('#successAlert').text(responseData.success);
-                    if (responseCount > 1) {
-                        $('#successBanner').text('Re-add'); // Change the banner text
-                    } else {
-                        $('#successBanner').text('Success');
-                    }
-
-
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
@@ -50,12 +40,13 @@ $(function() {
             },
             error: function() {
                 $hideModal.modal('hide');
-                // Show alert banner id = errorBanner
+                //show alert banner id = errorBanner
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-                });
+                    location.reload();
+                }, 1500);
             }
 
         });
