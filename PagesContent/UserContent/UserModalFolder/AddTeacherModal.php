@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-xs-4">
                                 <label for="phone_num">Phone:</label>
-                                <input type="tel" class="form-control input-xs" name="phone_num">
+                                <input type="tel" class="form-control input-xs" name="phone_num" required placeholder="Phone Number">
                             </div>
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>
