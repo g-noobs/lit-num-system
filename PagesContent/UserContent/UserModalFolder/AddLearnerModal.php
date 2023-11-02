@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <h4>Guardian Infformation:</h4>
+                            <h4>Guardian Information:</h4>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-5">
@@ -111,6 +111,13 @@
                                     class="form-control input-xs">
                                     <option value="">-</option>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-xs-5">
+                                <label for="guardian_phone_num">Phone Number:</label>
+                                <input type="tel" name="guardian_phone_num" class="form-control input-xs"
+                                    placeholder="Phone Number" required />
                             </div>
                         </div>
                         <!-- /.box-body -->
