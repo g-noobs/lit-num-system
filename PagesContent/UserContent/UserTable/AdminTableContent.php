@@ -34,29 +34,31 @@
             <!-- /.modal for Edit User-->
 
             <div class="box-body">
-                <table id="example2" class="table table-bordered table-hover text-center">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Gender</th>
-                            <th>User Type</th>
-                            <th>Account Status</th>
-                            <!-- <th>Actions</th> -->
+                <div class="table-responsive">
+                    <table id="example2" class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>User Type</th>
+                                <th>Account Status</th>
+                                <!-- <th>Actions</th> -->
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../Database/DisplayAllTableClass.php");
                         $adminTable = new DisplayAllTableClass();
                         $status = "Active";
                         $adminTable->displayAdmin($status);
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>

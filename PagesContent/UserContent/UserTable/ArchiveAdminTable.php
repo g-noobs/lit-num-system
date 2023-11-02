@@ -18,26 +18,28 @@
             <!-- /.box-header -->
 
             <div class="box-body">
-                <table id="example2" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Gender</th>
-                            <th>User Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                <div class="table-responsieve">
+                    <table id="example2" class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>User Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../../../Database/DisplayAllTableClass.php");
                         $adminTable = new DisplayAllTableClass();
                         $status = "Inactive";
                         $adminTable->displayAdmin($status);
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
