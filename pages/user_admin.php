@@ -125,7 +125,7 @@
 
         
         <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/AllUserScript/AddNewUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/AllUserScript/AddAdminUserScript.php");?>
         
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
