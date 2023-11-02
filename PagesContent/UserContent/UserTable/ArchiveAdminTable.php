@@ -2,10 +2,10 @@
     <div class="col-xs-12">
         <div class="box container">
             <div class="box-header">
-            <h3 >Archived Admin List</h3>
+                <h3>Archived Admin List</h3>
                 <div class="row">
                     <div class="col-xs-6">
-                        
+
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
@@ -21,16 +21,20 @@
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <?php include_once "AllTableHeader.php";?>
+                            <th></th>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>User Type</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php 
                         include_once("../../../Database/DisplayAllTableClass.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Admin' AND status = 'Inactive'";
-                        $userT = new DisplayAllTableClass();
-                        $userT->userTable($sql);
+                        $adminTable = new DisplayAllTableClass();
+                        $status = "Inactive";
+                        $adminTable->displayAdmin($status);
                         ?>
                     </tbody>
                 </table>

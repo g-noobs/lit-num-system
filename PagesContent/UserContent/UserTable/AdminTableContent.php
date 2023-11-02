@@ -51,8 +51,9 @@
                     <tbody>
                         <?php 
                         include_once("../Database/DisplayAllTableClass.php");
-                        $userT = new DisplayAllTableClass();
-                        $userT->displayAdmin();
+                        $adminTable = new DisplayAllTableClass();
+                        $status = "Active";
+                        $adminTable->displayAdmin($status);
                         ?>
                     </tbody>
                 </table>
