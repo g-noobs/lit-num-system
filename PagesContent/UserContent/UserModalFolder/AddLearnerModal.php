@@ -106,9 +106,11 @@
                             </div>
 
                             <div class="col-xs-2">
-                                <label for="guardian_middle_name">Middle Name:</label>
-                                <input type="text" name="guardian_middle_name" class="form-control input-xs"
-                                    placeholder="Guardina Name" required />
+                                <label for="guardian_middle_name">Middle Initial</label>
+                                <select name="guardian_middle_name" id="guardian_middle_name"
+                                    class="form-control input-xs">
+                                    <option value="">-</option>
+                                </select>
                             </div>
                         </div>
                         <!-- /.box-body -->
