@@ -15,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'user_info_id'=>'',
             'first_name' => trim($_POST['first_name']),
             'last_name' =>trim($_POST['last_name']),
+            'middle_name' => $_POST['user_middle_initial'],
             'gender' => $_POST['gender'],
             'status_id' => '1',
             'user_level_id' => '0',
