@@ -93,9 +93,9 @@
                         <!-- /.box-body -->
                         <div class="modal-footer">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success pull-left">Add Admin</button>
+                                <button type="submit" class="btn btn-success pull-left">Add Learner</button>
                                 <button type="reset" class="btn btn-default pull-right"
-                                    data-dixsiss="modal">Cancel</button>
+                                    data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
                     </div>
