@@ -94,7 +94,22 @@
                             <h4>Guardian Infformation:</h4>
                         </div>
                         <div class="form-group row">
-                            <div class=""></div>
+                            <div class="col-xs-5">
+                                <label for="guardian_last_name">Last Name:</label>
+                                <input type="text" name="guardian_last_name" class="form-control input-xs"
+                                    placeholder="Last Name" required />
+                            </div>
+                            <div class="col-xs-5">
+                                <label for="guardian_first_name">Last Name:</label>
+                                <input type="text" name="guardian_first_name" class="form-control input-xs"
+                                    placeholder="First Name" required />
+                            </div>
+
+                            <div class="col-xs-2">
+                                <label for="guardian_middle_name">Middle Name:</label>
+                                <input type="text" name="guardian_middle_name" class="form-control input-xs"
+                                    placeholder="Guardina Name" required />
+                            </div>
                         </div>
                         <!-- /.box-body -->
                         <div class="modal-footer">
