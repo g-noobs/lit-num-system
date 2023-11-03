@@ -31,7 +31,7 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th><input type='checkbox' id="#select-all" class='checkbox'></th>
+                                <th><input type='checkbox' id="select-all" class='checkbox'></th>
                                 <th>ID</th>
                                 <th>Student ID</th>
                                 <th>First Name</th>
