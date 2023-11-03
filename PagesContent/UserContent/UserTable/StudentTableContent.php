@@ -39,7 +39,6 @@
                                 <th>Gender</th>
                                 <th>User Type</th>
                                 <th>Account Status</th>
-                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
