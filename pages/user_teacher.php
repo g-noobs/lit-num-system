@@ -111,6 +111,9 @@
             <!-- All Modal for user-->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AddTeacherModal.php");?>
 
+            <!-- Confirmation Modal -->
+            <?php include_once "../PagesContent/UserContent/UserModalFolder/ConfirmationModal.php"?>
+
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
 
@@ -134,7 +137,7 @@
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
         
         <!-- Script for Archive and Activate a user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
+        <?php include_once "../PagesContent/UserContent/AllUserScript/ActivateUserScript.php" ?>
         
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
