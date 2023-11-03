@@ -4,13 +4,18 @@
             <div class="box-header">
                 <h3>Teacher</h3>
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-xs-4">
                         <button id="btnAddTeacher" data-user-level="Teacher" type="button" class="btn btn-warning"
                             data-toggle="modal" data-target="#add_user_modal">
                             <i class="fa fa-plus"></i> <span>Add Teacher</span>
                         </button>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="cols-xs-4">
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal" modal-target="">
+                        <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
+                        </button>
+                    </div>
+                    <div class="col-xs-4">
                         <div class="search-box">
                             <i class="fa fa-search"></i>
                             <input type="text" id="userInput" class="form-control" placeholder="Search..">

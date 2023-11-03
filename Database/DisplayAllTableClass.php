@@ -128,7 +128,6 @@ class DisplayAllTableClass extends Connection{
                 echo "<td>";
                 echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
                 
-                echo " <a href='#' class='".$icnBtnClass." ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='".$row["user_info_id"]."'> ".$actionIcon ."</a>";
                 echo "</td>";
 
                 echo "</tr>";
