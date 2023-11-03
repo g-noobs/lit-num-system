@@ -62,12 +62,6 @@ class DisplayAllTableClass extends Connection{
     
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                echo "<tr>";
-
-                echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
-                echo "</td>";
-                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
-
                 if ($row["status"] === "Active") {
                     $statusColor = "text-success";
                     $iconColor = "text-danger";
@@ -81,14 +75,17 @@ class DisplayAllTableClass extends Connection{
                     $data_target = "#activateUserModal";
                     $icnBtnClass = "actvIconBtn";
                 }   
+                echo "<tr>";
+                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
+
+                echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
+                echo "</td>";
+
+                echo "<td> <a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a> </td>";
+
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
                 
-                echo "<td>";
-                echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
-                
-                echo " <a href='#' class='".$icnBtnClass." ".$iconColor."' data-toggle='modal' data-target='".$data_target."' data-id='".$row["user_info_id"]."'> ".$actionIcon ."</a>";
-                echo "</td>";
 
                 echo "</tr>";
             }
@@ -103,11 +100,12 @@ class DisplayAllTableClass extends Connection{
             while($row = $result->fetch_assoc()){
                 echo "<tr>";
                 
-
+                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
                 echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
                 echo "</td>";
-                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
-
+                echo "<td>";
+                echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
+                echo "</td>";
 
                 if ($row["status"] === "Active") {
                     $statusColor = "text-success";
@@ -125,10 +123,7 @@ class DisplayAllTableClass extends Connection{
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
                 
-                echo "<td>";
-                echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
                 
-                echo "</td>";
 
                 echo "</tr>";
             }
