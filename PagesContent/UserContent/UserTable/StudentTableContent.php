@@ -10,6 +10,10 @@
                             data-toggle="modal" data-target="#add_user_modal">
                             <i class="fa fa-plus"></i> <span> Add Learner</span>
                         </button>
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
+                            modal-target="">
+                            <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
