@@ -17,20 +17,22 @@
             <br>
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-                <table id="example2" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <?php include_once "QuizTableHeader.php";?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                <div class="table-responsive">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <?php include_once "QuizTableHeader.php";?>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../Database/QuizDisplayClass.php");
                         $quiztable = new QuizDisplayClass();
                         $quiztable->displayQuestions();
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
