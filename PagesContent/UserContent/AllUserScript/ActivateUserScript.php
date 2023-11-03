@@ -17,7 +17,7 @@ $(document).ready(function() {
             // Show a modal if no checkboxes are selected
             $('#no_data_selected_modal').modal('show');
         } else {
-            $('#confirm_archive, #activate_modal').modal('show');
+            $('#archive_modal, #activate_modal').modal('show');
             $("#confirm_activate, #confirm_archive").on("click", function(){
                 //Ajax code
                 var action_url = "";
