@@ -24,8 +24,7 @@
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th><input type='checkbox' id="select-all" class='checkbox'></th>
-                            <th colspan="2"></th>
+                            <th colspan="3"><input type='checkbox' id="select-all" class='checkbox'></th>
                             <th>ID</th>
                             <th>Personal ID</th>
                             <th>First Name</th>

@@ -25,8 +25,7 @@
                         <thead>
                             <tr>
 
-                                <th><input type='checkbox' id="select-all" class='checkbox'></th>
-                                <th colspan="2"></th>
+                                <th colspan="3"><input type='checkbox' id="select-all" class='checkbox'></th>
                                 <th>ID</th>
                                 <th>Student ID</th>
                                 <th>First Name</th>
