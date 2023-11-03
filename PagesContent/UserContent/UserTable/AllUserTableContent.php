@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-xs-12">
         <div class="box container">
@@ -29,7 +28,14 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <?php include_once "AllTableHeader.php";?>
+                            <th></th>
+                            <th>ID</th>
+                            <th>Personal ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>User Type</th>
+                            <th>Account Status</th>
                         </tr>
                     </thead>
                     <tbody>
