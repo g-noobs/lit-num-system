@@ -25,29 +25,31 @@
 
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>ID</th>
-                            <th>Personal ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Gender</th>
-                            <th>User Type</th>
-                            <th>Account Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                <div class=table-responsive>
+                    <table class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>ID</th>
+                                <th>Personal ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>User Type</th>
+                                <th>Account Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../Database/DisplayAllTableClass.php");
                         $query = "SELECT * FROM user_info_view";
 
                         $userT = new DisplayAllTableClass();
                         $userT->userTable($query);
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
