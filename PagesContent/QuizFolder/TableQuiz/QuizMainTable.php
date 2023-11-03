@@ -18,7 +18,7 @@
             <!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <div class="table-responsive">
-                    <table id="example2" class="table table-bordered table-hover">
+                    <table id="example2" class="table table-bordered table-hover text-center">
                         <thead>
                             <tr>
                                 <?php include_once "QuizTableHeader.php";?>
