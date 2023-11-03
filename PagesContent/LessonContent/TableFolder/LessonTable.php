@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="box container">
         <div class="box-header">
@@ -6,13 +5,14 @@
             <br>
             <div class="row">
                 <div class="col-xs-6">
-                    <button type="button" class="btn btn-warning btn-sm" data-toggle='modal' data-target="#addLessonModal">
+                    <button type="button" class="btn btn-warning btn-sm" data-toggle='modal'
+                        data-target="#addLessonModal">
                         <i class="fa fa-plus"></i> <span> Add Lesson</span>
                     </button>
                 </div>
                 <div class="col-xs-6">
                     <div class="search-box">
-                        <i class="fa fa-search"></i> 
+                        <i class="fa fa-search"></i>
                         <input type="text" id="userInput" class="form-control" placeholder="Search..">
                     </div>
                 </div>
@@ -24,7 +24,12 @@
             <table id="example2" class="table table-bordered table-hover text-center">
                 <thead>
                     <tr>
-                        <?php include_once "LessonTableHeader.php";?>
+                        <th><input type='checkbox' id="select-all" class='checkbox'></th>
+                        <th>Lesson ID</th>
+                        <th>Lesson</th>
+                        <th>Category Name</th>
+                        <th>Module Name</th>
+                        <th colspan="3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
