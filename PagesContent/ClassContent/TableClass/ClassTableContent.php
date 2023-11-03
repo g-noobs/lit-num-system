@@ -54,7 +54,7 @@ table {
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="table-responsive">
-                                <table id="example2" class="table table-bordered table-hover dataTable">
+                                <table id="example2" class="table table-bordered table-hover dataTable text-center">
                                     <thead>
                                         <tr>
                                             <th colspan="2"><input type='checkbox' id="select-all" class='checkbox'></th>
