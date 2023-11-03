@@ -25,7 +25,16 @@
                     <table id="example2" class="table table-bordered table-hover text-center">
                         <thead>
                             <tr>
-                                <?php include_once "AllTableHeader.php";?>
+                            <th></th>
+                            <th><input type='checkbox' id="#select-all" class='checkbox'></th>
+                            <th>ID</th>
+                            <th>Personal ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>User Type</th>
+                            <th>Account Status</th>
+                            <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>

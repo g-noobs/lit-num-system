@@ -5,7 +5,7 @@
                 <h3>Archived Learner's List</h3>
                 <div class="row">
                     <div class="col-xs-6">
-                        
+
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
@@ -18,21 +18,30 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <div class="table-responsive">
-                <table id="example2" class="table table-bordered table-hover text-center">
-                    <thead>
-                        <tr>
-                            <?php include_once "AllTableHeader.php";?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                    <table id="example2" class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th><input type='checkbox' id="#select-all" class='checkbox'></th>
+                                <th>ID</th>
+                                <th>Student ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>User Type</th>
+                                <th>Account Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../../../Database/DisplayAllTableClass.php");
                         $status = "Inactive";
                         $studentTable = new DisplayAllTableClass();
                         $studentTable->displayStudent($status);
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- /.box-body -->

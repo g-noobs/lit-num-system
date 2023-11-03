@@ -29,7 +29,7 @@
                                 <th></th>
                                 <th><input type='checkbox' id="#select-all" class='checkbox'></th>
                                 <th>ID</th>
-                                <th>Personal ID</th>
+                                <th>Student ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Gender</th>
