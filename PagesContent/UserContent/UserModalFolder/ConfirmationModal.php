@@ -10,8 +10,8 @@
                 <p>Click Activate button to confirm!</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" id="confirm_activate">Activate</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success pull-left" id="confirm_activate">Activate</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -29,8 +29,8 @@
                 <p>Click Archive button to confirm!</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" id="confirm_archive">Archive</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger pull-left" id="confirm_archive">Archive</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
                 <h3>No data selected.</h3>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
