@@ -138,7 +138,8 @@
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
         
         <!-- Script for Archive and Activate a user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
         
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
