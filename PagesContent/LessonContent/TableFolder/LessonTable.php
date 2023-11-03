@@ -21,25 +21,27 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-            <table id="example2" class="table table-bordered table-hover text-center">
-                <thead>
-                    <tr>
-                        <th><input type='checkbox' id="select-all" class='checkbox'></th>
-                        <th>Lesson ID</th>
-                        <th>Lesson</th>
-                        <th>Category Name</th>
-                        <th>Module Name</th>
-                        <th colspan="3">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php 
+            <div class="table-responsive">
+                <table id="example2" class="table table-bordered table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th><input type='checkbox' id="select-all" class='checkbox'></th>
+                            <th>Lesson ID</th>
+                            <th>Lesson</th>
+                            <th>Category Name</th>
+                            <th>Module Name</th>
+                            <th colspan="3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
                         include_once("../Database/LessonDisplayClass.php");
                         $userT = new LessonDisplayClass();
                         $userT->lessonTable();
                         ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- /.box-body -->
     </div>
