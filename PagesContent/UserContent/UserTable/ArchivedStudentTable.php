@@ -5,9 +5,9 @@
                 <h3>Archived Learner's List</h3>
                 <div class="row">
                     <div class="col-xs-6">
-                        <button id="activate_btn" type="button" class="btn btn-danger" data-toggle="modal"
+                        <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal"
                             modal-target="">
-                            <i class="fa-trash"></i> <span>Activate</span>
+                            <i class="fa fa-trash"></i> <span>Activate</span>
                         </button>
                     </div>
                     <div class="col-xs-6">
