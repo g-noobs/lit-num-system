@@ -13,8 +13,7 @@
                         <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
                         </button>
                     </div>
-
-                    <div class="col-xs-4">
+                    <div class="col-xs-6">
                         <div class="search-box">
                             <i class="fa fa-search"></i>
                             <input type="text" id="userInput" class="form-control" placeholder="Search..">
