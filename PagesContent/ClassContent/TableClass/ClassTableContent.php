@@ -53,26 +53,27 @@ table {
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="example2" class="table table-bordered table-hover dataTable">
-                                <thead>
-                                    <tr>
-                                        <th style='white-space: nowrap;'></th>
-                                        <th>Class ID</th>
-                                        <th>Class Name</th>
-                                        <th>School Year</th>
-                                        <th>Status</th>
-                                        <th colspan="2">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php 
+                            <div class="table-responsive">
+                                <table id="example2" class="table table-bordered table-hover dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><input type='checkbox' id="select-all" class='checkbox'></th>
+                                            <th>Class ID</th>
+                                            <th>Class Name</th>
+                                            <th>School Year</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php 
                                         include_once("../Database/ClassEssentialsClass.php");
                                         $classTable = new ClassEssentialsClass();
                                         $sql = "SELECT * FROM class_view;";
                                         $classTable->classTable($sql);
                                     ?>
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
