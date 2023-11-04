@@ -77,21 +77,21 @@
                 <div class="container-fluid">
                     <button href="#" id="csvUploadIcon" data-toggle="tooltip" title="Upload Multiple User"
                         style="color:green">
-                        <i class="fa fa-file-excel-o"></i>
+                        <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
+                                title="Download Template">
+                                <i class="fa fa-file-excel-o"></i>
+                            </a>
+                        </label>
                     </button>
                 </div>
-                <!-- <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
-                    title="Download Template">
-                    <i class="fa fa-file-excel-o"></i>
-                </a>
-            </label> -->
+
             </section>
 
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
-                        <input type="file" name="user_file" id="user_file"/>
+                        <input type="file" name="user_file" id="user_file" />
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
@@ -114,10 +114,10 @@
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AddStudentModal.php");?>
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
-            
+
             <!-- Confirmation Modal -->
             <?php include_once "../PagesContent/UserContent/UserModalFolder/ConfirmationModal.php"?>
-            
+
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
@@ -125,25 +125,25 @@
             </section>
         </div>
 
-        
+
 
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
 
-        
+
         <!-- Script for Adding a new user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/AddUserScript.php");?>
-        
+
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
-        
+
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
         <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
-        
+
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
-        
+
         <!-- Script contain the Dropdown and Search -->
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
 
@@ -182,7 +182,7 @@
         }
         </script>
     </div>
-    
+
 </body>
 
 </html>
