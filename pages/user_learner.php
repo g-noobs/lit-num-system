@@ -85,7 +85,8 @@
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
-                        <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template" style="color:green">
+                        <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template"
+                                style="color:green">
                                 <i class="fa fa-download"></i>
                             </a>
                         </label>
@@ -93,7 +94,8 @@
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
-                        <button type="submit" name="upload" id="upload" class="btn btn-success pull-left" style="margin-right:15px;">Upload</button>
+                        <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
+                            style="margin-right:15px;">Upload</button>
                         <button type="reset" class="btn btn-default">Clear</button>
                     </div>
                 </form>
@@ -110,9 +112,6 @@
                 </div> -->
             <!-- All Modal for user-->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AddStudentModal.php");?>
-
-            <!-- add new student script -->
-            <?php include_once("../PagesContent/UserContent/AllUserScript/AddStudentScript.php");?>
 
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
@@ -133,8 +132,8 @@
         <?php include_once("../bootstrap/js.php");?>
 
 
-        <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/ActionsUsers/ActionAddStudent.php");?>
+        <!-- add new student script -->
+        <?php include_once("../PagesContent/UserContent/AllUserScript/AddStudentScript.php");?>
 
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
