@@ -18,8 +18,15 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
             $worksheet = $spreadsheet->getActiveSheet();
             $worksheet_arr = $worksheet->toArray();
 
+            //remove empty rows
+            $$worksheet_arr = array_filter($worksheet_arr, function ($row) {
+                return !empty(array_filter($row));
+            });
+
             // Remove header row
             unset($worksheet_arr[0]);
+
+            
 
             // Loop through each row in the spreadsheet
             foreach ($worksheet_arr as $row) {
@@ -29,7 +36,8 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'last_name' => trim($row[1]),
                     'first_name' => trim($row[2]),
                     'middle_name' => trim($row[3]),
-                    'gender' => trim($row[4]), 
+                    'gender' => trim($row[4]),
+                    'user_level_id' => '1',
                     'added_byID' => '',
                     'date_added' => ''
                 );
