@@ -5,7 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="modal-title">Enter Student Information</h4>
+                <h4 class="modal-title" id="modal-title">Enter Teacher Information</h4>
             </div>
             <form id="addUserForm">
                 <div class="modal-body">
