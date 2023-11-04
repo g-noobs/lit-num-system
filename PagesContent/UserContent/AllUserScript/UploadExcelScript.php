@@ -7,6 +7,7 @@ $(document).ready(function() {
 
         // Display a loading spinner
         $("#loadingSpinner").show();
+        $('#response').hide();
 
         $.ajax({
             type: 'POST',
@@ -26,7 +27,7 @@ $(document).ready(function() {
                         var successBanner = $('<div class="success-banner">')
                             .text(responseData[i].success)
                             .hide()
-                            .appendTo('#successBanners')
+                            .appendTo('#successBanner')
                             .show()
                             .delay(1500)
                             .fadeOut("slow");
@@ -38,6 +39,12 @@ $(document).ready(function() {
                         }, 1500);
                     }
                 }
+                location.reload();
+                $('#response').text('Successfullt uploaded data');
+                $('#response').show();
+                setTimeout(function() {
+                    $("#response").fadeOut("slow");
+                }, 3500);
             },
             error: function(xhr, status, error) {
                 console.log('AJAX error:', status, error);
@@ -51,6 +58,12 @@ $(document).ready(function() {
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
                 }, 1500);
+                location.reload();
+                $('#response').text('Seomething went wrong');
+                $('#response').show();
+                setTimeout(function() {
+                    $("#response").fadeOut("slow");
+                }, 3500);
             }
         });
     });
