@@ -15,31 +15,26 @@ $(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                // Split the response into separate JSON objects
-                var responses = response.split('}{');
-                responses = responses.map(function (item, index) {
-                    // Add curly braces to each JSON object to make them valid
-                    if (index > 0) {
-                        item = '{' + item;
-                    }
-                    if (index < responses.length - 1) {
-                        item = item + '}';
-                    }
-                    return item;
-                });
+                // Split the response into separate JSON objects based on newlines
+                var responses = response.split('\n');
 
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
 
                 responses.forEach(function (responseData) {
                     try {
+                        responseData = responseData.trim();
+                        if (responseData === "") {
+                            return; // Skip empty lines
+                        }
+
                         var parsedResponse = JSON.parse(responseData);
                         if (parsedResponse.hasOwnProperty('success')) {
                             // Create a new success banner for each success message
                             var successBanner = $('<div class="success-banner">')
                                 .text(parsedResponse.success)
                                 .hide()
-                                .appendTo('#successBanner')
+                                .appendTo('#successBanners')
                                 .show()
                                 .delay(1500)
                                 .fadeOut("slow");
@@ -75,5 +70,6 @@ $(document).ready(function () {
         $("#loadingSpinner").hide();
     });
 });
+
 
 </script>
