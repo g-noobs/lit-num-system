@@ -16,10 +16,9 @@ $(document).ready(function() {
             contentType: false,
             processData: false,
             success: function(response) {
-                var responseData = JSON.parse(response);
-
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
+                var responseData = JSON.parse(response);
 
                 for (var i = 0; i < responseData.length; i++) {
                     if (responseData[i].hasOwnProperty('success')) {
@@ -39,8 +38,9 @@ $(document).ready(function() {
                         }, 1500);
                     }
                 }
+
                 location.reload();
-                $('#response').text('Successfullt uploaded data');
+                $('#response').text('Successfully uploaded data');
                 $('#response').show();
                 setTimeout(function() {
                     $("#response").fadeOut("slow");
