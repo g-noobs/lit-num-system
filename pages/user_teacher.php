@@ -82,7 +82,6 @@
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="user_file">Upload User</label>
                         <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template"
                                 style="color:green">
                                 <i class="fa fa-download"></i>
