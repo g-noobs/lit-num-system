@@ -93,7 +93,7 @@
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
-                        <input type="submit" name="upload" id="upload" value="Upload" class="btn btn-info pull-left" />
+                        <input type="submit" name="upload" id="upload" value="Upload" class="btn btn-info pull-left" style="margin: right 15px;"/>
                         <button type="reset" class="btn btn-default">Clear</button>
                     </div>
                 </form>
