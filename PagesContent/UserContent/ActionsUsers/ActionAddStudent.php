@@ -130,7 +130,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         $table = 'tbl_learner';
                                         $learner = array(
                                             'learner_id'=> '',
-                                            'learner_personal_id'=> $valus['personal_id'],
+                                            'learner_personal_id'=> $values['personal_id'],
                                             'teacher_id' => '',
                                             'user_info_id' => $values['user_info_id'],
                                         );
