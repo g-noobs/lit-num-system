@@ -100,16 +100,6 @@
                     </div>
                 </form>
             </section>
-
-
-            <!-- <div class="form-group">
-                    <input type="file" name="file" id="file" class="file">
-                </div>
-                <div class></div>
-                <div class="import">
-                    <button type="submit" id="submit" name="import" class="btn btn-success">Import
-                        CSV and Save Data</button>
-                </div> -->
             <!-- All Modal for user-->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AddStudentModal.php");?>
 

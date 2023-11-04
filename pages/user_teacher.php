@@ -78,36 +78,27 @@
                         <i class="fa fa-file-excel-o"></i>
                     </button>
                 </div>
-                <!-- <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
-                    title="Download Template">
-                    <i class="fa fa-file-excel-o"></i>
-                </a>
-            </label> -->
             </section>
 
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
-                        <input type="file" name="file" id="user_file"/>
+                        <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template"
+                                style="color:green">
+                                <i class="fa fa-download"></i>
+                            </a>
+                        </label>
+                        <input type="file" name="user_file" id="user_file" />
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
-                        <input type="submit" class="btn btn-info" name="upload_excel" id="upload_excel" value="Import" >
-                        <button type="reset" class="btn btn-default pull-left">Clear</button>
+                        <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
+                            style="margin-right:15px;">Upload</button>
+                        <button type="reset" class="btn btn-default">Clear</button>
                     </div>
                 </form>
             </section>
-
-
-            <!-- <div class="form-group">
-                    <input type="file" name="file" id="file" class="file">
-                </div>
-                <div class></div>
-                <div class="import">
-                    <button type="submit" id="submit" name="import" class="btn btn-success">Import
-                        CSV and Save Data</button>
-                </div> -->
             <!-- All Modal for user-->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AddTeacherModal.php");?>
 
@@ -124,25 +115,25 @@
             </section>
         </div>
 
-        
+
 
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php");?>
 
-        
+
         <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
-        
+        <?php include_once("../PagesContent/UserContent/CommonUser/AddTeacherScript.php");?>
+
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
-        
+
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
         <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
-        
+
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
-        
+
         <!-- Script contain the Dropdown and Search -->
         <?php include_once("../PagesContent/UserContent/CommonUser/JQueryUser.php");?>
 
@@ -151,7 +142,7 @@
 
         <!-- Batch Upload Script -->
         <?php include_once "../PagesContent/UserContent/CommonUser/UploadExcelScript.php";?>
-        
+
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
