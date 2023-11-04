@@ -53,11 +53,8 @@
                                     required autocomplete="off" />
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-xs-10">
-                                <h4><strong>Address:</strong></h4>
-                            </div>
-                            <div class="col-xs-2"></div>
+                        <div class="container row">
+                            <h4><strong>Address:<</strong>/h4>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-6">
@@ -89,7 +86,7 @@
                             </div>
                         </div>
                         <div class="container row">
-                            <h4>Guardian Information:</h4>
+                            <h4><strong>Guardian Information:<</strong>/h4>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-5">
