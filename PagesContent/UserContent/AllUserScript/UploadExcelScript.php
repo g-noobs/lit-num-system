@@ -1,6 +1,6 @@
 <script>
-$(document).ready(function() {
-    $('#uploadCSVForm').on('submit', function(e) {
+$(document).ready(function () {
+    $('#uploadCSVForm').on('submit', function (e) {
         e.preventDefault();
 
         var formData = new FormData(this);
@@ -14,32 +14,48 @@ $(document).ready(function() {
             data: formData,
             contentType: false,
             processData: false,
-            success: function(response) {
-                var responseData = JSON.parse(response);
+            success: function (response) {
+                // Split the response into separate JSON objects
+                var responses = response.split('}{');
+                responses = responses.map(function (item, index) {
+                    // Add curly braces to each JSON object to make them valid
+                    if (index > 0) {
+                        item = '{' + item;
+                    }
+                    if (index < responses.length - 1) {
+                        item = item + '}';
+                    }
+                    return item;
+                });
 
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
 
-                for (var i = 0; i < responseData.length; i++) {
-                    if (responseData[i].hasOwnProperty('success')) {
-                        // Create a new success banner for each success message
-                        var successBanner = $('<div class="success-banner">')
-                            .text(responseData[i].success)
-                            .hide()
-                            .appendTo('#successBanners')
-                            .show()
-                            .delay(1500)
-                            .fadeOut("slow");
-                    } else if (responseData[i].hasOwnProperty('error')) {
-                        $('#errorAlert').text(responseData[i].error);
-                        $('#errorBanner').show();
-                        setTimeout(function() {
-                            $("#errorBanner").fadeOut("slow");
-                        }, 1500);
+                responses.forEach(function (responseData) {
+                    try {
+                        var parsedResponse = JSON.parse(responseData);
+                        if (parsedResponse.hasOwnProperty('success')) {
+                            // Create a new success banner for each success message
+                            var successBanner = $('<div class="success-banner">')
+                                .text(parsedResponse.success)
+                                .hide()
+                                .appendTo('#successBanners')
+                                .show()
+                                .delay(1500)
+                                .fadeOut("slow");
+                        } else if (parsedResponse.hasOwnProperty('error')) {
+                            $('#errorAlert').text(parsedResponse.error);
+                            $('#errorBanner').show();
+                            setTimeout(function () {
+                                $("#errorBanner").fadeOut("slow");
+                            }, 1500);
+                        }
+                    } catch (error) {
+                        console.error('Error parsing JSON:', error);
                     }
-                }
+                });
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.log('AJAX error:', status, error);
 
                 // Hide the loading spinner
@@ -48,15 +64,16 @@ $(document).ready(function() {
                 // Show an error message
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
-                setTimeout(function() {
+                setTimeout(function () {
                     $("#errorBanner").fadeOut("slow");
                 }, 1500);
             }
         });
     });
-    $('#uploadCSVForm').on('reset', function(e) {
+    $('#uploadCSVForm').on('reset', function (e) {
         // Hide the loading spinner
         $("#loadingSpinner").hide();
     });
 });
+
 </script>
