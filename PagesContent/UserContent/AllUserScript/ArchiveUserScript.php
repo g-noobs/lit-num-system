@@ -16,13 +16,13 @@ $(document).ready(function() {
         if (selectedIds.length === 0) {
             // Show a modal if no checkboxes are selected
             $('#no_data_selected_modal').modal('show');
-        } else {
-            $("#confirm_archive").on("click", function(){
-                //Ajax code
-                var action_url = "../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
-                <?php include_once "ActivateArchiveAjax.php";?>
-            });
         }
+        $("#confirm_archive").on("click", function() {
+            //Ajax code
+            var action_url =
+            "../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
+            <?php include_once "ActivateArchiveAjax.php";?>
+        });
     });
 });
 </script>
