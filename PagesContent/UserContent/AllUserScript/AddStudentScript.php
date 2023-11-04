@@ -7,7 +7,7 @@ $(function() {
         var formData = new FormData(this);
 
         var $hideModal = $('#add_user_modal');
-        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionAddUser.php';
+        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionAddStudent.php';
 
         <?php include_once("CommonFormAjax.php");?>
     });
