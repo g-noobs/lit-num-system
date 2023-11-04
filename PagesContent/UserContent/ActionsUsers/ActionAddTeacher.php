@@ -126,6 +126,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                     }else{
                                         $response = array('error' => "Error adding on teacher table");
                                         echo json_encode($response);
+                                        
                                     }
                                 }else{
                                     $response = array('error' => "Error adding on contact table");
