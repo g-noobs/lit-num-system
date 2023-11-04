@@ -88,7 +88,7 @@
                                     placeholder="Zip Code" required autocomplete="postal-code" />
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="container row">
                             <h4>Guardian Information:</h4>
                         </div>
                         <div class="form-group row">

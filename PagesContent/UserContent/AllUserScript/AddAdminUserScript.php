@@ -1,4 +1,4 @@
-<!-- Manage addinng user -->
+
 <script>
 $(function() {
     $("#addUserForm").on("submit", function(e) {
@@ -8,7 +8,7 @@ $(function() {
         var formData = new FormData(this);
 
         var $hideModal = $('#add_user_modal');
-        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
+        var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterAdmin.php';
 
         <?php include_once("CommonFormAjax.php");?>
     });
