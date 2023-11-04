@@ -76,21 +76,19 @@
             <section>
                 <div class="container-fluid">
                     <button href="#" id="csvUploadIcon" data-toggle="tooltip" title="Upload Multiple User"
-                        style="color:green">
+                        style="color:green"> BATCH UPLOAD
                     </button>
-                    <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
-                            title="Download Template">
-                            <i class="fa fa-file-excel-o"></i>
-                        </a>
-                    </label>
                 </div>
-
             </section>
 
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
+                        <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template" style="color:green">
+                                <i class="fa fa-file-excel-o"></i>
+                            </a>
+                        </label>
                         <input type="file" name="user_file" id="user_file" />
                     </div>
                     <div id="response"></div>
