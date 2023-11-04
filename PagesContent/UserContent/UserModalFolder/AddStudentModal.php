@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="container row">
-                            <h4><strong>Guardian Information:<</strong>/h4>
+                            <h4><strong>Guardian Information:</strong></h4>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-5">
