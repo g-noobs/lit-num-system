@@ -75,8 +75,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             $addNewCreds = new SanitizeCrudClass();
                             $addNewCreds->executePreState($query, $params);
                             
-                            //!if adding credentials is correct then procced with creating student
+                            //!if adding credentials is correct then procced with cadding cotnact info
                             if($addNewCreds->getLastError()=== null){
+                                $contactTable = "tbl_contact_info";
                                 $table = 'tbl_contact_info';
                                 $contact = array(
                                     'contact_id' => '',
@@ -89,7 +90,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                     'postalcode'=>$_POST['zip_code'],
                                     'user_info_id'=> $values['user_info_id']
                                 );
-                                //set contact id
+                                 //set contact id
                                 $contact['contact_id'] = "CNT". $columnCountClass->columnCountWhere("contact_id", $table);
                                 $columns = implode(', ', array_keys($contact));
                                 //set number of question marks
@@ -101,74 +102,41 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                 //set sanitize class
                                 $addNewContact = new SanitizeCrudClass();
                                 $addNewContact->executePreState($sql, $params);
-                                //!if adding contact is correct then procced with creating student
                                 if($addNewContact->getLastError()=== null){
-                                    $table = 'tbl_guardian';
-                                    $guardian = array(
-                                        'guardian_id'=> '',
-                                        'guardian_fname'=> $_POST['guardian_first_name'],
-                                        'guardian_lname'=> $_POST['guardian_last_name'],
-                                        'guardian_mname'=> $_POST['guardian_middle_name'],
-                                        'guardian_number'=> $_POST['guardian_phone_num'],
-                                        'user_info_id'=> $values['user_info_id']
+                                    $table = "tbl_teacher";
+                                    $teacher = array(
+                                        'teacher_id' => '',
+                                        'teacher_personal_id' => $values['personal_id'],
+                                        'user_info_id' => $values['user_info_id']
                                     );
-                                    //set guardian id
-                                    $guardian['guardian_id'] = "GDN". $columnCountClass->columnCountWhere("guardian_id", $table);
+                                    //set teacher id
+                                    $teacher['teacher_id'] = "TCH". $columnCountClass->columnCountWhere("teacher_id", $table);
                                     //set columns
-                                    $columns = implode(', ', array_keys($guardian));
+                                    $columns = implode(', ', array_keys($teacher));
                                     //set number of question marks
-                                    $questionMarkString = implode(',', array_fill(0, count($guardian), '?'));
+                                    $questionMarkString = implode(',', array_fill(0, count($teacher), '?'));
                                     //set sql
                                     $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
                                     // set parameters
-                                    $params = array_values($guardian);
+                                    $params = array_values($teacher);
                                     //set sanitize class
-                                    $addNewGuardian = new SanitizeCrudClass();
-                                    $addNewGuardian->executePreState($sql, $params);
-                                    //!if adding guardian is correct then procced with creating entry for student table
-                                    if($addNewGuardian->getLastError()=== null){
-                                        $table = 'tbl_learner';
-                                        $learner = array(
-                                            'learner_id'=> '',
-                                            'learner_personal_id'=> $values['personal_id'],
-                                            'teacher_id' => '',
-                                            'user_info_id' => $values['user_info_id'],
-                                        );
-                                        //set learner id
-                                        $learner['learner_id'] = "LRN". $columnCountClass->columnCountWhere("learner_id", $table);
-                                        //set columns
-                                        $columns = implode(', ', array_keys($learner));
-                                        //set number of question marks
-                                        $questionMarkString = implode(',', array_fill(0, count($learner), '?'));
-                                        //set sql
-                                        $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
-                                        // set parameters
-                                        $params = array_values($learner);
-                                        //set sanitize class
-                                        $addNewLearner = new SanitizeCrudClass();
-                                        $addNewLearner->executePreState($sql, $params);
-                                        //!if adding learner is correct then procced with creating entry for student table
-                                        if($addNewLearner->getLastError()=== null){
-                                            $response = array('success' => 'Successfully added new student');
-                                            echo json_encode($response);
-
-                                        }else{
-                                            $response = array('error' => "Error adding a new Learner");
-                                            echo json_encode($response);
-                                        }
+                                    $addNewTeacher = new SanitizeCrudClass();
+                                    $addNewTeacher->executePreState($sql, $params);
+                                    if($addNewTeacher->getLastError()=== null){
+                                        $response = array('success' => "Successfully added new teacher");
+                                        echo json_encode($response);
                                     }else{
-                                        $response = array('error' => "Error adding on guardian");
+                                        $response = array('error' => "Error adding on teacher table");
                                         echo json_encode($response);
                                     }
                                 }else{
-                                    $response = array('error' => "Error adding on contact");
+                                    $response = array('error' => "Error adding on contact table");
                                     echo json_encode($response);
                                 }
-                                
                             }else{
-                                $response = array('error' => "Error adding on credentials");
-                                echo json_encode($response);
-                            }
+                                $response = array('error' => "Error adding on credentials table");
+                                echo json_encode($response);}
+
                             
                         }else{
                             $response = array('error' => "Erro adding on user_info_table");
