@@ -33,17 +33,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'added_byID' => '',
                     'date_added' => ''
                 );
-                $contact = array(
-                    'contact_id' => '',
-                    'contact_num'=> trim($row[5]),
-                    'email'=> trim($row[6]),
-                    'street'=> trim($row[7]),
-                    'barangay'=> trim($row[8]),
-                    'municipal_city'=> trim($row[9]),
-                    'province'=> trim($row[10]),
-                    'postalcode'=>trim($row[11]),
-                    'user_info_id'=> $values['user_info_id']
-                );
+                
 
                 // Database table for user information
                 // Include necessary libraries and set up the database configuration
@@ -100,6 +90,17 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                 // !if no error create a contact info
                                 if($addNewCreds->getLastError()=== null){
                                     $table = 'tbl_contact_info';
+                                    $contact = array(
+                                        'contact_id' => '',
+                                        'contact_num'=> trim($row[5]),
+                                        'email'=> trim($row[6]),
+                                        'street'=> trim($row[7]),
+                                        'barangay'=> trim($row[8]),
+                                        'municipal_city'=> trim($row[9]),
+                                        'province'=> trim($row[10]),
+                                        'postalcode'=>trim($row[11]),
+                                        'user_info_id'=> $values['user_info_id']
+                                    );
                                     $contact['contact_id'] = "CNT".$columnCountClass->columnCountWhere("contact_id",$table);
                                     $columns = implode(', ', array_keys($contact));
                                     $questionMarkString = implode(',', array_fill(0, count($contact), '?'));
