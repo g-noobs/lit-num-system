@@ -88,8 +88,8 @@
                             </a>
                         </label>
                         <input type="file" name="user_file" id="user_file" />
-                        
-                        <div class="overlay" style="display:none">
+
+                        <div class="overlay" style="display:none" id="loadingSpinner">
                         <i class="fa fa-refresh fa-spin"></i>
                     </div>
                     </div>
