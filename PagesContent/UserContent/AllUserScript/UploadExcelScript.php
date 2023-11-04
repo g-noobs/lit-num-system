@@ -54,5 +54,11 @@ $(document).ready(function() {
             }
         });
     });
+    $('#uploadCSVForm').on('reset', function(e) {
+        // Hide the loading spinner
+        $("#loadingSpinner").hide();
+    });
 });
 </script>
+
+
