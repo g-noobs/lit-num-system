@@ -113,7 +113,7 @@
 
             <!-- add new student script -->
             <?php include_once("../PagesContent/UserContent/AllUserScript/AddStudentScript.php");?>
-            
+
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
 
@@ -134,7 +134,7 @@
 
 
         <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/AllUserScript/AddUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/ActionsUsers/ActionAddStudent.php");?>
 
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
