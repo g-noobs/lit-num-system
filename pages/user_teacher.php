@@ -88,10 +88,12 @@
                             </a>
                         </label>
                         <input type="file" name="user_file" id="user_file" />
-                    </div>
-                    <div class="overlay">
+                        
+                        <div class="overlay" style="display:none">
                         <i class="fa fa-refresh fa-spin"></i>
                     </div>
+                    </div>
+                    
                     <div id="response"></div>
                     <div class="form-group">
                         <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
