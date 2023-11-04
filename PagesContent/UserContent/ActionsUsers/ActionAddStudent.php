@@ -99,7 +99,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                 // set parameters
                                 $params = array_values($contact);
                                 //set sanitize class
-                                $addnewContact = new SanitizeCrudClass();
+                                $addNewContact = new SanitizeCrudClass();
                                 $addNewContact->executePreState($sql, $params);
                                 //!if adding contact is correct then procced with creating student
                                 if($addNewContact->getLastError()=== null){
@@ -184,7 +184,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         echo json_encode($response);
                     }
                 }else{
-                    $response = array('error' => 'Stduent or name has Duplicate or invalid.. isIdvalid: ='.$isIdvalid.' isValid: ='.$isValid);
+                    $response = array('error' => 'Stduent or name has Duplicate or invalid.. isIdvalid: ='.$isIdvalid.', isValid: ='.$isValid);
                     echo json_encode($response);
                 }
     }else{
