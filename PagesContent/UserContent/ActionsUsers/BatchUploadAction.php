@@ -139,56 +139,57 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                         $addNewTeacher->executePreState($sql, $params);
                                         if($addNewTeacher->getLastError()=== null){
                                             $response = array('success' => "Successfully added new teacher");
-                                            echo json_encode($response);
+                                            
                                         }else{
                                             $response = array('error' => "Error adding on teacher table");
-                                            echo json_encode($response);
+                                            
                                             break;
                                         }
 
                                     }else{
                                         $response = array('error' => 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!');
-                                        echo json_encode($response);
+                                        
                                         break;
                                     }
                                 }else{
                                     $response = array('error' => 'Error Adding Credentials for'.$values['first_name'].' '.$values['last_name'].'!');
-                                    echo json_encode($response);
+                                    
                                     break;
                                 }
                                 
                             } catch (mysqli_sql_exception $e) {
                                 // Handle any errors during insertion
                                 $response = array('error'=> $e->getMessage());
-                                echo json_encode($response);
+                                
                                 break;
                             }
                         }else{
                             $response = array('error' => 'Error Adding user info!'.$values['first_name'].' '.$values['last_name'].'!');
-                            echo json_encode($response);
+                            
                             break;
                         }
                     } catch (mysqli_sql_exception $e) {
                         // Handle any errors during insertion
                         $response = array('error'=> $e->getMessage());
-                        echo json_encode($response);
+                        
                         break;
                     }
                 }
                 else{
                     $response = array('error' => 'Error uploading file! Possible Duplicate');
-                    echo json_encode($response);
+                    
                     break;
                 }
             }
         } else {
             $response = array('error' => 'Error uploading file!');
-            echo json_encode($response);
+            
             
         }
     } else {
         $response = array('error' => 'Please upload a valid Excel file!');
     }
+    echo json_encode($response);
 // }else{
 //     $response = array('error' => 'Possible POST ISSUE');
 //     echo json_encode($response);
