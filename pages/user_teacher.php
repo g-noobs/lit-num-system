@@ -120,10 +120,7 @@
 
 
         <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/AddTeacherScript.php");?>
-
-        <!-- Script for Editing a user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/AllUserScript/AddTeacherScript.php");?>
 
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
