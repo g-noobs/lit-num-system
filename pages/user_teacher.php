@@ -87,7 +87,7 @@
                                 <i class="fa fa-download"></i>
                             </a>
                         </label>
-                        <input type="file" name="user_file" id="user_file" />
+                        <input type="file" name="file" id="file" />
 
                         <div class="overlay" style="display:none" id="loadingSpinner">
                         <i class="fa fa-refresh fa-spin"></i>
