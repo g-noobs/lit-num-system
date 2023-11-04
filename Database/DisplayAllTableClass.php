@@ -99,7 +99,7 @@ class DisplayAllTableClass extends Connection{
                 echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
                 echo "</td>";
                 echo "<td>";
-                echo "<a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
+                echo "<a href='#' class='edit' data-toggle='modal' data-target='#add_user_modal' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a>";
                 echo "</td>";
 
                 if ($row["status"] === "Active") {
