@@ -134,6 +134,9 @@
         <!-- Batch Upload Script -->
         <?php include_once "../PagesContent/UserContent/AllUserScript/UploadExcelScript.php";?>
 
+        <!-- Edit Teacher Script -->
+        <?php include_once "../PagesContent/UserContent/AllUserScript/EditUserScipt.php";?>
+
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
