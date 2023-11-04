@@ -12,9 +12,9 @@
                     <div class="box-body box-warning">
                         <div class="form-group row">
                             <div class="col-xs-3">
-                                <label for="personal_id">Enter Student:</label>
+                                <label for="personal_id">Enter Teacher ID:</label>
                                 <input type="text" name="personal_id" class="form-control input-xs"
-                                    placeholder="Student ID" required>
+                                    placeholder="Teacher ID" required>
                             </div>
                             <div class="col-xs-3">
                                 <label for="last_name">Enter Last Name:</label>
@@ -45,7 +45,8 @@
                             </div>
                             <div class="col-xs-4">
                                 <label for="phone_num">Phone:</label>
-                                <input type="tel" class="form-control input-xs" name="phone_num" required placeholder="Phone Number">
+                                <input type="tel" class="form-control input-xs" name="phone_num" required
+                                    placeholder="Phone Number">
                             </div>
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>
@@ -53,22 +54,19 @@
                                     required autocomplete="off" />
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-xs-10">
-                                <h4><strong>Address:</strong></h4>
-                            </div>
-                            <div class="col-xs-2"></div>
+                        <div class="container row">
+                            <h4><strong>Address:</strong></h4>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-6">
                                 <label for="street_address">Street</label>
                                 <input type="text" name="street_address" class="form-control input-xs"
-                                    placeholder="Street" required/>
+                                    placeholder="Street" required />
                             </div>
                             <div class="col-xs-6">
                                 <label for="Barangay">Baranggay</label>
                                 <input type="text" name="barangay_address" class="form-control input-xs"
-                                    placeholder="Barangay" required/>
+                                    placeholder="Barangay" required />
                             </div>
                         </div>
                         <div class="form-group row">
@@ -80,12 +78,12 @@
                             <div class="col-xs-4">
                                 <label for="province">Province</label>
                                 <input type="text" name="province_address" class="form-control input-xs"
-                                    placeholder="Province" required autocomplete="address-level1" />
+                                    placeholder="Province" required />
                             </div>
                             <div class="col-xs-4">
-                                <label for="zip_code_address">Zip Code</label>
-                                <input type="number" name="zip_code_address" class="form-control input-xs"
-                                    placeholder="Zip Code" required autocomplete="postal-code" />
+                                <label for="zip_code">Zip Code</label>
+                                <input type="number" name="zip_code" class="form-control input-xs"
+                                    placeholder="Zip Code" required/>
                             </div>
                         </div>
                         <!-- /.box-body -->
