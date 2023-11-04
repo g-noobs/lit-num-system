@@ -34,7 +34,7 @@ $(document).ready(function () {
                             var successBanner = $('<div class="success-banner">')
                                 .text(parsedResponse.success)
                                 .hide()
-                                .appendTo('#successBanners')
+                                .appendTo('#successBanner')
                                 .show()
                                 .delay(1500)
                                 .fadeOut("slow");
