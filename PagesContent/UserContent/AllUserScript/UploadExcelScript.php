@@ -7,7 +7,6 @@ $(document).ready(function() {
 
         // Display a loading spinner
         $("#loadingSpinner").show();
-        $('#response').hide();
 
         $.ajax({
             type: 'POST',
@@ -20,15 +19,17 @@ $(document).ready(function() {
 
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
-                
 
                 for (var i = 0; i < responseData.length; i++) {
                     if (responseData[i].hasOwnProperty('success')) {
-                        $('#successAlert').text(responseData[i].success);
-                        $('#successBanner').show();
-                        setTimeout(function() {
-                            $("#successBanner").fadeOut("slow");
-                        }, 1500);
+                        // Create a new success banner for each success message
+                        var successBanner = $('<div class="success-banner">')
+                            .text(responseData[i].success)
+                            .hide()
+                            .appendTo('#successBanners')
+                            .show()
+                            .delay(1500)
+                            .fadeOut("slow");
                     } else if (responseData[i].hasOwnProperty('error')) {
                         $('#errorAlert').text(responseData[i].error);
                         $('#errorBanner').show();
@@ -37,8 +38,6 @@ $(document).ready(function() {
                         }, 1500);
                     }
                 }
-                $('#response').text('Successfully uploaded the CSV file.');
-                $('#response').show();
             },
             error: function(xhr, status, error) {
                 console.log('AJAX error:', status, error);
