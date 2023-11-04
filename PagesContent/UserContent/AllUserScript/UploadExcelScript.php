@@ -7,6 +7,7 @@ $(document).ready(function() {
 
         // Display a loading spinner
         $("#loadingSpinner").show();
+        $('#response').hide();
 
         $.ajax({
             type: 'POST',
@@ -19,25 +20,25 @@ $(document).ready(function() {
 
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
+                
 
-                if (responseData.hasOwnProperty('success')) {
-                    $('#successAlert').text(responseData.success);
-                    $('#successBanner').show();
-                    setTimeout(function() {
-                        $("#successBanner").fadeOut("slow");
-                    }, 1500);
-
-                    // Clear the form input after a successful submission
-                    $('#file').val(''); // Assuming the input field has the ID 'file'
-
-                    // You can redirect to a different page or perform other actions here
-                } else if (responseData.hasOwnProperty('error')) {
-                    $('#errorAlert').text(responseData.error);
-                    $('#errorBanner').show();
-                    setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
-                    }, 1500);
+                for (var i = 0; i < responseData.length; i++) {
+                    if (responseData[i].hasOwnProperty('success')) {
+                        $('#successAlert').text(responseData[i].success);
+                        $('#successBanner').show();
+                        setTimeout(function() {
+                            $("#successBanner").fadeOut("slow");
+                        }, 1500);
+                    } else if (responseData[i].hasOwnProperty('error')) {
+                        $('#errorAlert').text(responseData[i].error);
+                        $('#errorBanner').show();
+                        setTimeout(function() {
+                            $("#errorBanner").fadeOut("slow");
+                        }, 1500);
+                    }
                 }
+                $('#response').text('Successfully uploaded the CSV file.');
+                $('#response').show();
             },
             error: function(xhr, status, error) {
                 console.log('AJAX error:', status, error);
@@ -60,5 +61,3 @@ $(document).ready(function() {
     });
 });
 </script>
-
-
