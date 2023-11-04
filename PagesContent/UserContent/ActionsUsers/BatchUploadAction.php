@@ -25,26 +25,26 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
             foreach ($worksheet_arr as $row) {
                 $values = array(
                     'user_info_id' => '',
-                    'personal_id' => trim($row[0]), // Set this value appropriately
-                    'first_name' => trim($row[1]),
-                    'last_name' => trim($row[2]),
-                    'gender' => trim($row[3]), // Set this value appropriately
-                    'user_level_id' => 1, // Set this value appropriately
+                    'personal_id' => trim($row[0]), 
+                    'last_name' => trim($row[1]),
+                    'first_name' => trim($row[2]),
+                    'middle_name' => trim($row[3]),
+                    'gender' => trim($row[4]), 
                     'added_byID' => '',
                     'date_added' => ''
                 );
                 $contact = array(
                     'contact_id' => '',
-                    'contact_num'=> $_POST['phone_num'],
-                    'email'=> $_POST['email'],
-                    'street'=> $_POST['street_address'],
-                    'barangay'=> $_POST['barangay_address'],
-                    'municipal_city'=> $_POST['city_address'],
-                    'province'=> $_POST['province_address'],
-                    'postalcode'=>$_POST['zip_code'],
+                    'contact_num'=> trim($row[5]),
+                    'email'=> trim($row[6]),
+                    'street'=> trim($row[7]),
+                    'barangay'=> trim($row[8]),
+                    'municipal_city'=> trim($row[9]),
+                    'province'=> trim($row[10]),
+                    'postalcode'=>trim($row[11]),
                     'user_info_id'=> $values['user_info_id']
                 );
-                
+
                 // Database table for user information
                 // Include necessary libraries and set up the database configuration
                 include_once("../../../Database/ColumnCountClass.php");
@@ -69,10 +69,9 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                 $column = array('first_name', 'last_name');
                 $validate = new CommonValidationClass();
                 $isValid = $validate->validateColumns($table, $column, $data);
-
                 $isIdvalid = $validate->validateOneColumn($table, 'personal_id', $values['personal_id']);
 
-                if ($isIdvalid) {
+                if ($isIdvalid && $isValid) {
                     $columns = implode(', ', array_keys($values));
                     $questionMarkString = implode(',', array_fill(0, count($values), '?'));
                     $sql = "INSERT INTO $table ($columns) VALUES($questionMarkString);";
@@ -97,15 +96,64 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                             
                             try {
                                 $addNewCreds->executePreState($query, $params);
+
+                                // !if no error create a contact info
+                                if($addNewCreds->getLastError()=== null){
+                                    $table = 'tbl_contact_info';
+                                    $contact['contact_id'] = "CNT".$columnCountClass->columnCountWhere("contact_id",$table);
+                                    $columns = implode(', ', array_keys($contact));
+                                    $questionMarkString = implode(',', array_fill(0, count($contact), '?'));
+                                    $sql = "INSERT INTO $table ($columns) VALUES($questionMarkString);";
+                                    $params = array_values($contact);
+                                    //set the sanitize class
+                                    $addNewContact = new SanitizeCrudClass();
+                                    $addNewContact->executePreState($sql, $params);
+                                    
+                                    // !if contact adding is successfull
+                                    if($addNewContact->getLastError()=== null){
+                                        $table = "tbl_teacher";
+                                        $teacher = array(
+                                            'teacher_id' => '',
+                                            'teacher_personal_id' => $values['personal_id'],
+                                            'user_info_id' => $values['user_info_id']
+                                        );
+                                        //set teacher id
+                                        $teacher['teacher_id'] = "TCH". $columnCountClass->columnCountWhere("teacher_id", $table);
+                                        //set columns
+                                        $columns = implode(', ', array_keys($teacher));
+                                        //set number of question marks
+                                        $questionMarkString = implode(',', array_fill(0, count($teacher), '?'));
+                                        //set sql
+                                        $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
+                                        // set parameters
+                                        $params = array_values($teacher);
+                                        //set sanitize class
+                                        $addNewTeacher = new SanitizeCrudClass();
+                                        $addNewTeacher->executePreState($sql, $params);
+                                        if($addNewTeacher->getLastError()=== null){
+                                            $response = array('success' => "Successfully added new teacher");
+                                            echo json_encode($response);
+                                        }else{
+                                            $response = array('error' => "Error adding on teacher table");
+                                            echo json_encode($response);
+                                        }
+
+                                    }else{
+                                        $response = array('error' => 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!');
+                                        echo json_encode($response);
+                                    }
+                                }else{
+                                    $response = array('error' => 'Error Adding Credentials for'.$values['first_name'].' '.$values['last_name'].'!');
+                                    echo json_encode($response);
+                                }
                                 
                             } catch (mysqli_sql_exception $e) {
                                 // Handle any errors during insertion
                                 $response = array('error'=> $e->getMessage());
                                 echo json_encode($response);
                             }
-
-
-                            $response = array('success' => 'Successfully added new user!');
+                        }else{
+                            $response = array('error' => 'Error Adding user info!'.$values['first_name'].' '.$values['last_name'].'!');
                             echo json_encode($response);
                         }
                     } catch (mysqli_sql_exception $e) {
