@@ -76,7 +76,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             
                             //!if adding credentials is correct then procced with cadding cotnact info
                             if($addNewCreds->getLastError()=== null){
-                                $contactTable = "tbl_contact_info";
                                 $table = 'tbl_contact_info';
                                 $contact = array(
                                     'contact_id' => '',

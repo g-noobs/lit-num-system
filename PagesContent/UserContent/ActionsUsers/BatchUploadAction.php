@@ -29,11 +29,22 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'first_name' => trim($row[1]),
                     'last_name' => trim($row[2]),
                     'gender' => trim($row[3]), // Set this value appropriately
-                    'status_id' => 1,
                     'user_level_id' => 1, // Set this value appropriately
                     'added_byID' => '',
                     'date_added' => ''
                 );
+                $contact = array(
+                    'contact_id' => '',
+                    'contact_num'=> $_POST['phone_num'],
+                    'email'=> $_POST['email'],
+                    'street'=> $_POST['street_address'],
+                    'barangay'=> $_POST['barangay_address'],
+                    'municipal_city'=> $_POST['city_address'],
+                    'province'=> $_POST['province_address'],
+                    'postalcode'=>$_POST['zip_code'],
+                    'user_info_id'=> $values['user_info_id']
+                );
+                
                 // Database table for user information
                 // Include necessary libraries and set up the database configuration
                 include_once("../../../Database/ColumnCountClass.php");

@@ -126,6 +126,9 @@
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
         <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
 
+        <!-- Batch Upload Script -->
+        <?php include_once "../PagesContent/UserContent/AllUserScript/UploadExcelScript.php";?>
+
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
@@ -134,10 +137,7 @@
 
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
-
-        <!-- Batch Upload Script -->
-        <?php include_once "../PagesContent/UserContent/CommonUser/UploadExcelScript.php";?>
-
+<!-- 
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
@@ -169,7 +169,7 @@
                 $("#mainContent").load(contentPath);
             }
         }
-        </script>
+        </script> -->
     </div>
 </body>
 
