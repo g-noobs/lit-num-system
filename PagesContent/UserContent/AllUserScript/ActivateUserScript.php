@@ -17,8 +17,8 @@ $(document).ready(function() {
             // Show a modal if no checkboxes are selected
             $('#no_data_selected_modal').modal('show');
         } else {
-            $('#activate_modal').modal('show');
-            $("#confirm_activate, #confirm_archive").on("click", function(){
+            $('#archive_modal').modal('show');
+            $("#confirm_archive").on("click", function(){
                 //Ajax code
                 var action_url = "";
                 <?php include_once "CommonAjax.php" ?>

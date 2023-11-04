@@ -41,7 +41,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php 
+                        <?php 
                         include_once("../Database/DisplayAllTableClass.php");
                         $status = "Active";
                         $studentTable = new DisplayAllTableClass();
