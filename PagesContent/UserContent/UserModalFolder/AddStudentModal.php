@@ -63,7 +63,7 @@
                                     placeholder="Street" required autocomplete="street-address" />
                             </div>
                             <div class="col-xs-6">
-                                <label for="Barangay">Baranggay</label>
+                                <label for="barangay_address">Baranggay</label>
                                 <input type="text" name="barangay_address" class="form-control input-xs"
                                     placeholder="Barangay" />
                             </div>
@@ -72,12 +72,12 @@
                             <div class="col-xs-4">
                                 <label for="city">City</label>
                                 <input type="text" name="city_address" class="form-control input-xs" placeholder="City"
-                                    required autocomplete="address-level2" />
+                                    required/>
                             </div>
                             <div class="col-xs-4">
-                                <label for="province">Province</label>
+                                <label for="province_address">Province</label>
                                 <input type="text" name="province_address" class="form-control input-xs"
-                                    placeholder="Province" required autocomplete="address-level1" />
+                                    placeholder="Province"/>
                             </div>
                             <div class="col-xs-4">
                                 <label for="zip_code">Zip Code</label>
