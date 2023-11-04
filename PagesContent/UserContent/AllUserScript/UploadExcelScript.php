@@ -18,7 +18,7 @@ $(document).ready(function() {
             success: function(response) {
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
-                var responseData = JSON.parse(response);
+                var responseData = response;
 
                 for (var i = 0; i < responseData.length; i++) {
                     if (responseData[i].hasOwnProperty('success')) {
