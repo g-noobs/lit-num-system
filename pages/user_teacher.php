@@ -74,8 +74,7 @@
             <section>
                 <div class="container-fluid">
                     <button href="#" id="csvUploadIcon" data-toggle="tooltip" title="Upload Multiple User"
-                        style="color:green">
-                        <i class="fa fa-file-excel-o"></i>
+                        style="color:green"> BATCH UPLOAD
                     </button>
                 </div>
             </section>
