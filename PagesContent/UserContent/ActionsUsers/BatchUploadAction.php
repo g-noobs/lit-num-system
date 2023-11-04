@@ -19,7 +19,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
             $worksheet_arr = $worksheet->toArray();
 
             //remove empty rows
-            $$worksheet_arr = array_filter($worksheet_arr, function ($row) {
+            $worksheet_arr = array_filter($worksheet_arr, function ($row) {
                 return !empty(array_filter($row));
             });
 
