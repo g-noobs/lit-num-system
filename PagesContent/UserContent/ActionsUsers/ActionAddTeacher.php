@@ -18,8 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'last_name' =>trim($_POST['last_name']),
             'middle_name' => trim($_POST['user_middle_initial']),
             'gender' => $_POST['gender'],
-            'status_id' => '1',
-            'user_level_id' => '2',
+            'user_level_id' => '1',
             'added_byID'=>'',
             'date_added' => ''
         );
