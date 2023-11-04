@@ -17,14 +17,14 @@ $.ajax({
                     }, 1500);
 
 
-                    // You can redirect to a different page or perform other actions here
+
                 } else if (responseData.hasOwnProperty('error')) {
                     $hideModal.modal('hide');
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        // location.reload();
+
                     }, 1500);
                 }
             },
