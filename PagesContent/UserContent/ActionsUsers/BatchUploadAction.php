@@ -18,15 +18,13 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
             $worksheet = $spreadsheet->getActiveSheet();
             $worksheet_arr = $worksheet->toArray();
 
+            // Remove header row
+            unset($worksheet_arr[0]);
+
             //remove empty rows
             $worksheet_arr = array_filter($worksheet_arr, function ($row) {
                 return !empty(array_filter($row));
             });
-
-            // Remove header row
-            unset($worksheet_arr[0]);
-
-            
 
             // Loop through each row in the spreadsheet
             foreach ($worksheet_arr as $row) {
