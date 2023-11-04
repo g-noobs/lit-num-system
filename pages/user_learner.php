@@ -86,7 +86,7 @@
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
                         <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template" style="color:green">
-                                <i class="fa fa-file-excel-o"></i>
+                                <i class="fa fa-download"></i>
                             </a>
                         </label>
                         <input type="file" name="user_file" id="user_file" />
