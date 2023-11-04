@@ -1,6 +1,6 @@
 
 <script>
-$(function() {
+$(function(){
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
 
