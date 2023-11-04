@@ -89,6 +89,9 @@
                         </label>
                         <input type="file" name="user_file" id="user_file" />
                     </div>
+                    <div class="overlay">
+                        <i class="fa fa-refresh fa-spin"></i>
+                    </div>
                     <div id="response"></div>
                     <div class="form-group">
                         <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
@@ -137,7 +140,7 @@
 
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
-<!-- 
+        <!-- 
         <script>
         // Check for saved user type
         var userType = localStorage.getItem('userType');
