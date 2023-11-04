@@ -70,3 +70,6 @@
 
 <!-- Script to see all user data -->
 <?php include_once "../CommonUser/ScriptViewUserData.php";?>
+
+<!-- Activate User Script -->
+<?php include_once "../AllUserScript/ActivateUserScript.php";?>

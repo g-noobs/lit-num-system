@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 
     // Handle the update button click event
-    $("#archive_btn").click(function() {
+    $("#activate_btn").click(function() {
         var selectedIds = [];
         // Iterate through all checked checkboxes and collect their values
         $(".checkbox:checked").each(function() {

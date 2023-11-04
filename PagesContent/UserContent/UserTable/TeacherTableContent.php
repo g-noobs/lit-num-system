@@ -35,6 +35,7 @@
                             <th>Last Name</th>
                             <th>Gender</th>
                             <th>User Type</th>
+                            <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
