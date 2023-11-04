@@ -73,12 +73,12 @@
             <br>
             <br>
             <section>
-                <div class="container-fluid">
+                <!-- <div class="container-fluid">
                     <button href="#" id="csvUploadIcon" data-toggle="tooltip" title="Upload Multiple User"
                         style="color:green">
                         <i class="fa fa-file-excel-o"></i>
                     </button>
-                </div>
+                </div> -->
                 <!-- <label>Download Template:<a href="Template/import-template.xlsx" download data-toggle="tooltip"
                     title="Download Template">
                     <i class="fa fa-file-excel-o"></i>

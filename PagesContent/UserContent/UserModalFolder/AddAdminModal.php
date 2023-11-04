@@ -48,7 +48,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="phone_num">Phone:</label>
-                                    <input type="text" class="form-control input-sm" name="phone_num" id="phone_num" requried>
+                                    <input type="text" class="form-control input-sm" name="phone_num" id="phone_num" required>
                                 </div>
                             </div>
                             <div class="col-sm-4">
