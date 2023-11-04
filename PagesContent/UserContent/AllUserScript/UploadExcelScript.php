@@ -12,8 +12,7 @@ $(document).ready(function() {
             contentType: false,
             processData: false,
             success: function(response) {
-                try {
-                    var responseData = JSON.parse(response);
+                var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
                         $('#successAlert').text(responseData.success);
@@ -31,10 +30,6 @@ $(document).ready(function() {
                             // location.reload();
                         }, 1500);
                     }
-                }
-                catch (e) {
-                    console.log('Error parsing JSON:', e);
-                }
             },error: function(xhr, status, error) {
                 console.log('AJAX error:', status, error);
             //     $hideModal.modal('hide');
