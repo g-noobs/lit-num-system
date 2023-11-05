@@ -21,7 +21,8 @@
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="dataTable" class="table table-bordered table-hover">
+                <div class="table-responsive">
+                <table id="dataTable" class="table table-bordered table-hover tex-center">
                     <thead>
                         <tr>
                             <th>Module ID</th>
@@ -39,6 +40,7 @@
                         ?>
                     </tbody>
                 </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
