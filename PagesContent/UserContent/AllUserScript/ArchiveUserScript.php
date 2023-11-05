@@ -1,6 +1,6 @@
 <script>
 $(document).ready(function() {
-    
+
     var $modalControl = $('#archive_modal');
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").click(function() {
@@ -23,7 +23,8 @@ $(document).ready(function() {
             $modalControl.modal('show');
             $("#confirm_archive").on("click", function() {
                 //Ajax code
-                var action_url ="../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
+                var action_url =
+                    "../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
                 $.ajax({
                     type: "POST",
                     url: action_url,
@@ -34,9 +35,10 @@ $(document).ready(function() {
                         $modalControl.modal('hide');
                         alert(response); // Display a response message
                     },
-                    error: function() {
+                    error: function(xhr, status, error) {
                         $modalControl.modal('hide');
-                        alert('Error');
+                        alert('Error: ' +
+                        error); // Display the specific error message
                     }
                 });
             });
