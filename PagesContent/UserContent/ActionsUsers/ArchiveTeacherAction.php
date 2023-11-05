@@ -1,6 +1,6 @@
 <?php
 
-include_once "../../../Database/SanitizeCrudClass.php";
+include_once "../../../Database/Connection.php";
 
 $table = "tbl_user_info";
 
@@ -10,20 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Update the status for the selected IDs
     $updateQuery = "UPDATE $table SET status_id = ? WHERE user_info_id IN (" . implode(",", $selectedIds) . ")";
 
-    $params = array(0);
+    $conn= new Connection();
     
-    // Execute the prepared statement
-    $updateData = new SanitizeCrudClass();
-    $updateData->executePreState($updateQuery, $params);
-
-    // Check for errors during execution
-    if ($updateData->getLastError() === null) {
+    $result = $conn->getConnection()->query($updateQuery);
+    if ($result === TRUE) {
         $response = array(
-            'success' => 'Update successful'
+            'success' => 'Data updated successfully.'
         );
-    } else {
+    }
+    else {
         $response = array(
-            'error' => 'Error during execution: ' . $updateData->getLastError()
+            'error' => 'Error updating data.'
         );
     }
 } else {
