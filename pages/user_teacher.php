@@ -82,7 +82,7 @@
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template"
+                        <label>Download Template:<a href="../PagesContent/UserContent/ExcelTemplates/import-teacher-template.xlsx" download data-toggle="tooltip" title="Download Template"
                                 style="color:green">
                                 <i class="fa fa-download"></i>
                             </a>
