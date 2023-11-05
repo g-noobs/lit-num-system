@@ -1,3 +1,4 @@
+<script src="jquery-3.7.1.min.js"></script>
 <script>
 $(function() {
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
