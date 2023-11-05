@@ -1,3 +1,4 @@
+<?php include_once "../UserModalFolder/ConfirmationModal.php"?>
 <div class="row">
     <div class="col-xs-12">
         <div class="box container">
