@@ -24,11 +24,11 @@
                 <table id="dataTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>Student ID</th>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>Gender</th>
-                            <th>Birthdate</th>
+                            <th>Topic ID</th>
+                            <th>Topic Name</th>
+                            <th>Topic Description</th>
+                            <th>Lesson ID Source</th>
+                            <th>Added by (ID)</th>
                             <th>Date Added</th>
                         </tr>
                     </thead>

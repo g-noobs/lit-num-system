@@ -60,18 +60,13 @@ class ReportsDisplay extends Connection{
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                if($row['topic_status'] == 1){
-                    $status = "Active";
-                }
-                else{
-                    $status = "Inactive";
-                }
                 echo "<tr>";
                 echo "<td>".$row['topic_id']."</td>";
                 echo "<td>".$row['topic_name']. "</td>";
                 echo "<td>".$row['topic_description']."</td>";
-                echo "<td>".$status."</td>";
                 echo "<td>".$row['lesson_id']."</td>";
+                echo "<td>".$row['added_byID']."</td>";
+                echo "<td>".$row['date_added']."</td>";
                 echo "</tr>";
             }
         }
