@@ -127,9 +127,9 @@
         <!-- Script for Adding a new user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/AddTeacherScript.php");?>
 
-       
 
         <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
+        <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
 
         <!-- Batch Upload Script -->
         <?php include_once "../PagesContent/UserContent/AllUserScript/UploadExcelScript.php";?>

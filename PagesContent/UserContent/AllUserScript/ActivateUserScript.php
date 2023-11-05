@@ -1,5 +1,7 @@
 <script>
 $(document).ready(function() {
+
+    var $modalControl = $('#activate_modal');
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").click(function() {
         $(".checkbox").prop("checked", $(this).prop("checked"));
@@ -7,6 +9,7 @@ $(document).ready(function() {
 
     // Handle the update button click event
     $("#activate_btn").click(function() {
+
         var selectedIds = [];
         // Iterate through all checked checkboxes and collect their values
         $(".checkbox:checked").each(function() {
@@ -17,10 +20,28 @@ $(document).ready(function() {
             // Show a modal if no checkboxes are selected
             $('#no_data_selected_modal').modal('show');
         } else {
-            $("#confirm_activate").on("click", function(){
+            $modalControl.modal('show');
+            $("#confirm_archive").on("click", function() {
                 //Ajax code
-                var action_url = "../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
-                <?php include_once "ActivateArchiveAjax.php";?>
+                var action_url =
+                    "../PagesContent/UserContent/ActionsUsers/ActivateArchiveTeacherAction.php";
+                $.ajax({
+                    type: "POST",
+                    url: action_url,
+                    data: {
+                        selectedIds: selectedIds,
+                        status: 1
+                    },
+                    success: function(response) {
+                        $modalControl.modal('hide');
+                        
+                    },
+                    error: function(xhr, status, error) {
+                        $modalControl.modal('hide');
+                        alert('Error: ' +
+                        error); // Display the specific error message
+                    }
+                });
             });
         }
     });
