@@ -16,7 +16,7 @@ table {
 }
 </style>
 
-<?php include_once ("../PagesContent/ClassContent/ClassEssentials/ModalClass.php");?>
+<?php include_once ("../PagesContent/ClassContent/ClassModal/AddArchiveEditModal.php");?>
 <?php include_once ("../CommonPHPClass/ModifiedSearchStyle.php");?>
 
 

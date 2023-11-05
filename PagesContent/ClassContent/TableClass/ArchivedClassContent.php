@@ -16,7 +16,7 @@ table {
 }
 </style>
 
-<?php include_once ("../ClassEssentials/ModalClass.php");?>
+<?php include_once ("../ClassModal/AddArchiveEditModal.php");?>
 <?php include_once ("../../../CommonPHPClass/ModifiedSearchStyle.php");?>
 
 
@@ -90,5 +90,5 @@ table {
     <!-- /.col -->
 </div>
 
-<?php include_once("../ClassEssentials/ClassJquery.php");?>
+<?php include_once("../AllClassScript/ClassJquery.php");?>
 <?php include_once("../../../CommonContent/CommonAllScript.php");?>

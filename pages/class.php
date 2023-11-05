@@ -72,7 +72,7 @@ body {
         <!-- ./wrapper -->
 
         <?php include_once("../bootstrap/js.php");
-            include_once("../PagesContent/ClassContent/ClassEssentials/ClassJquery.php");
+            include_once("../PagesContent/ClassContent/AllClassScript/ClassJquery.php");
         ?>
         <?php include_once "../CommonContent/ErrorModal.php"?>
         <?php include_once "../CommonContent/CommonAllScript.php"?>
