@@ -10,7 +10,7 @@ $(document).ready(function() {
         } else if (dataType === 'teacher-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/TeacherData.php';
         } else if (dataType === 'subject-data') {
-            contentPath = '../PagesContent/ReportsFolder/TableReportFolder/SubjectData.php';
+            contentPath = '../PagesContent/ReportsFolder/TableReportFolder/ModuleData.php';
         } else if (dataType === 'lesson-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/LessonData.php';
         } else if (dataType === 'topic-data') {

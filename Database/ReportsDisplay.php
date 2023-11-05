@@ -21,23 +21,17 @@ class ReportsDisplay extends Connection{
             }
         }
     }
-    function displaySubject(){
-        $sql = "SELECT * FROM tbl_subject;";
+    function displayModule(){
+        $sql = "SELECT * FROM tbl_module;";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                if($row['subj_status'] == 1){
-                    $status = "Active";
-                }
-                else{
-                    $status = "Inactive";
-                }
                 echo "<tr>";
-                echo "<td>".$row['subj_id']."</td>";
-                echo "<td>".$row['subj_name']. "</td>";
-                echo "<td>".$row['subj_description']."</td>";
-                echo "<td>".$status."</td>";
+                echo "<td>".$row['module_id']."</td>";
+                echo "<td>".$row['module_name']. "</td>";
+                echo "<td>".$row['module_description']."</td>";
                 echo "<td>".$row['date_added']."</td>";
+                echo "<td>".$row['added_by_id']."</td>";
                 echo "</tr>";
             }
         }

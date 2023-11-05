@@ -24,18 +24,18 @@
                 <table id="dataTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>Subject ID</th>
-                            <th>Subject Name</th>
-                            <th>Subject Description</th>
-                            <th>Subject Status</th>
+                            <th>Module ID</th>
+                            <th>Module Name</th>
+                            <th>Module Description</th>
                             <th>Date Added</th>
+                            <th>Added (by ID)</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php 
                         include_once("../../../Database/ReportsDisplay.php");
                         $subjectData = new ReportsDisplay();
-                        $subjectData->displaySubject();
+                        $subjectData->displayModule();
                         ?>
                     </tbody>
                 </table>
