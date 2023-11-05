@@ -6,6 +6,10 @@
                     selectedIds: selectedIds
                 },
                 success: function(response) {
+                    $modalControl.modal('hide');
                     alert(response); // Display a response message
+                },
+                error: function() {
+                    alert('Error');
                 }
             });
