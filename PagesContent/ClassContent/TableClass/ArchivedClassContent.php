@@ -16,8 +16,9 @@ table {
 }
 </style>
 
-<?php include_once ("../PagesContent/ClassContent/ClassEssentials/ModalClass.php");?>
-<?php include_once ("../CommonPHPClass/ModifiedSearchStyle.php");?>
+<?php include_once ("../ClassEssentials/ModalClass.php");?>
+<?php include_once ("../../../CommonPHPClass/ModifiedSearchStyle.php");?>
+
 
 
 <div class="row">
@@ -88,3 +89,6 @@ table {
     </div>
     <!-- /.col -->
 </div>
+
+<?php include_once("../ClassEssentials/ClassJquery.php");?>
+<?php include_once("../../../CommonContent/CommonAllScript.php");?>
