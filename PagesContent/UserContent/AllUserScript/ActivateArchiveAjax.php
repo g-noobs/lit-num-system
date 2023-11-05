@@ -10,6 +10,7 @@
                     alert(response); // Display a response message
                 },
                 error: function() {
+                    $modalControl.modal('hide');
                     alert('Error');
                 }
             });
