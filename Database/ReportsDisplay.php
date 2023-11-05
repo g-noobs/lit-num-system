@@ -10,13 +10,16 @@ class ReportsDisplay extends Connection{
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
+                $address = $row['street']. " ". $row['barangay']. " ". $row['municipal_city']. " ". $row['province']. " ". $row['psotalcode'];   
+
                 echo "<tr>";
                 echo "<td>".$row['personal_id']. "</td>";
                 echo "<td>".$row['last_name']. "</td>";
                 echo "<td>".$row['first_name']. "</td>";
                 echo "<td>".$row['gender']. "</td>";
-                echo "<td>".$row['birthdate']. "</td>";
-                echo "<td>".$row['date_added']. "</td>";
+                echo "<td>".$row['contact_num']. "</td>";
+                echo "<td>".$row['email']. "</td>";
+                echo "<td>".$address. "</td>";
                 echo "</tr>";
             }
         }

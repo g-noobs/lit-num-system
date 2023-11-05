@@ -21,15 +21,18 @@
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="dataTable" class="table table-bordered table-hover">
+                <table id="dataTable" class="table table-bordered table-hover text-center">
                     <thead>
                         <tr>
                             <th>Student ID</th>
                             <th>Last Name</th>
                             <th>First Name</th>
+                            <th>Middle Initial</th>
                             <th>Gender</th>
-                            <th>Birthdate</th>
-                            <th>Date Added</th>
+                            <th>Status</th>
+                            <th>Phone#</th>
+                            <th>Email</th>
+                            <th>Address</th>
                         </tr>
                     </thead>
                     <tbody>
