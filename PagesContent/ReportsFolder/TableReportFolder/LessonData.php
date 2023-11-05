@@ -21,22 +21,24 @@
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="dataTable" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Lesson ID</th>
-                            <th>Lesson Name</th>
-                            <th>Module Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php 
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th>Lesson ID</th>
+                                <th>Lesson Name</th>
+                                <th>Module Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../../../Database/ReportsDisplay.php");
                         $lessonData = new ReportsDisplay();
                         $lessonData->displayLesson();
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
