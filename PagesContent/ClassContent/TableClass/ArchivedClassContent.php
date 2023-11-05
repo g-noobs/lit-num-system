@@ -30,9 +30,9 @@ table {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-class">
-                            <i class="fa fa-plus"></i> <span> New Class</span>
-                        </button> -->
+                    <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal" modal-target="">
+                        <i class="fa fa-check-circle"></i> <span>Archive</span>
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
