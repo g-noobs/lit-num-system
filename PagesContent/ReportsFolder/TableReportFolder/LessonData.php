@@ -25,9 +25,8 @@
                     <thead>
                         <tr>
                             <th>Lesson ID</th>
-                            <th>lesson Name</th>
-                            <th>Category Name</th>
-                            <th>Subject Name</th>
+                            <th>Lesson Name</th>
+                            <th>Module Source</th>
                         </tr>
                     </thead>
                     <tbody>
