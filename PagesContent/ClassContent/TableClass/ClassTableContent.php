@@ -1,20 +1,3 @@
-<style>
-/* Custom class for navbar */
-.btn-li {
-    margin-top: 10.5px;
-    /* Center items vertically */
-
-}
-
-table {
-    overflow-y: scroll;
-}
-
-table {
-    height: 150px;
-    overflow-y: scroll;
-}
-</style>
 
 <?php include_once ("../PagesContent/ClassContent/ClassModal/AddArchiveEditModal.php");?>
 <?php include_once ("../PagesContent/ClassContent/ClassModal/ConfirmationModal.php");?>
@@ -34,8 +17,9 @@ table {
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-class">
                             <i class="fa fa-plus"></i> <span> New Class</span>
                         </button>
-                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal" modal-target="">
-                        <i class="glyphicon glyphicon-trash"></i>
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
+                            modal-target="">
+                            <i class="glyphicon glyphicon-trash"></i>
                         </button>
                     </div>
                     <div class="col-xs-6">
@@ -82,14 +66,11 @@ table {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
             <!-- /.box-body -->
         </div>
         <!-- /.box -->
-
     </div>
     <!-- /.col -->
 </div>
