@@ -27,9 +27,12 @@
                             <th>Teacher ID</th>
                             <th>Last Name</th>
                             <th>First Name</th>
+                            <th>Middle Initial</th>
                             <th>Gender</th>
-                            <th>Birthdate</th>
-                            <th>Date Added</th>
+                            <th>Contact #</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
