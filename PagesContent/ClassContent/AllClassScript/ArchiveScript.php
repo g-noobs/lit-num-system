@@ -2,7 +2,7 @@
 <script>
 $(document).ready(function() {
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
-    $("#select-all").ont('click',function(e) {
+    $("#select-all").on('click',function(e) {
         e.preventDefault();
         $(".checkbox").prop("checked", $(this).prop("checked"));
     });
