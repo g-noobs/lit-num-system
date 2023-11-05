@@ -60,6 +60,7 @@
 <?php include_once("../CommonUser/EditUserScript.php");?>
 
 
+
 <!-- Script contain the Dropdown and Search -->
 <?php include_once("../CommonUser/JQueryUser.php");?>
 
@@ -70,4 +71,4 @@
 <?php include_once "../CommonUser/ScriptViewUserData.php";?>
 
 <!-- Activate User Script -->
-<?php include_once "../AllUserScript/ArchiveUserScript.php";?>
+<?php include_once "../AllUserScript/ActivateUserScript.php";?>
