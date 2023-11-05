@@ -1,5 +1,3 @@
-
-
 <div class="modal fade" id="add-class">
     <div class="modal-dialog">
         <div class="modal-content">
