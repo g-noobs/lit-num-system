@@ -8,9 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $selectedIds = $_POST['selectedIds'];
 
     // Update the status for the selected IDs
-    $updateQuery = "UPDATE $table SET status_id = 0 WHERE user_info_id IN (" . implode(",", $selectedIds) . ")";
+    $updateQuery = "UPDATE $table SET status_id = ? WHERE user_info_id IN (" . implode(",", $selectedIds) . ")";
 
-    $params = [];
+    $params = array(0);
     
     // Execute the prepared statement
     $updateData = new SanitizeCrudClass();
