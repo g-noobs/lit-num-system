@@ -1,6 +1,5 @@
 
-<?php include_once ("../PagesContent/ClassContent/ClassModal/AddArchiveEditModal.php");?>
-<?php include_once ("../PagesContent/ClassContent/ClassModal/ConfirmationModal.php");?>
+
 
 <?php include_once ("../CommonPHPClass/ModifiedSearchStyle.php");?>
 
@@ -30,9 +29,6 @@
                     </div>
                 </div>
             </div>
-
-
-
             <!-- /.box-header -->
             <div class="box-body">
                 <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
