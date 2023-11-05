@@ -21,30 +21,32 @@
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="dataTable" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Teacher ID</th>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>Middle Initial</th>
-                            <th>Gender</th>
-                            <th>Contact #</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Teacher ID</th>
+                                <th>Last Name</th>
+                                <th>First Name</th>
+                                <th>Middle Initial</th>
+                                <th>Gender</th>
+                                <th>Contact #</th>
+                                <th>Email</th>
+                                <th>Address</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../../../Database/ReportsDisplay.php");
                         $table = "user_info_view";
                         $stduentData = new ReportsDisplay();
                         $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher';";
                         $stduentData->displayUserData($sql);
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
