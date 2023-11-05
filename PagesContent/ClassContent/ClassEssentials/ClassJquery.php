@@ -11,7 +11,7 @@ $(function() {
         if(classType === 'active-class'){
             location.reload();
         }else if(classType === 'archive-class'){
-            contentPath = '../PagesContent/ClassContent/TableClass/ArchiveClassTableContent.php';
+            contentPath = '../PagesContent/ClassContent/TableClass/ArchivedClassContent.php';
         }
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
