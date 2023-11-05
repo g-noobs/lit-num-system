@@ -68,7 +68,7 @@ table {
                                     </thead>
                                     <tbody>
                                         <?php 
-                                        include_once("../Database/ClassEssentialsClass.php");
+                                        include_once("../../../Database/ClassEssentialsClass.php");
                                         $classTable = new ClassEssentialsClass();
                                         $sql = "SELECT * FROM class_view WHERE class_status = 0;";
                                         $classTable->classTable($sql);
