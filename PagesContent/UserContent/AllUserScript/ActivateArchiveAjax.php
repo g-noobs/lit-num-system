@@ -1,7 +1,7 @@
 
             $.ajax({
                 type: "POST",
-                url: action_url, // Update this with the correct URL
+                url: action_url, 
                 data: {
                     selectedIds: selectedIds
                 },

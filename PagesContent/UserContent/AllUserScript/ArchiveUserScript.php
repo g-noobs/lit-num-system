@@ -18,17 +18,29 @@ $(document).ready(function() {
 
         if (selectedIds.length === 0) {
             // Show a modal if no checkboxes are selected
-            $modalControl.modal('show');
+            $('#no_data_selected_modal').modal('show');
         } else {
-            $('#archive_modal').modal('show');
+            $modalControl.modal('show');
             $("#confirm_archive").on("click", function() {
                 //Ajax code
-                var action_url =
-                    "../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
-                <?php include_once "ActivateArchiveAjax.php";?>
+                var action_url ="../PagesContent/UserContent/ActionsUsers/ArchiveTeacherAction.php";
+                $.ajax({
+                    type: "POST",
+                    url: action_url,
+                    data: {
+                        selectedIds: selectedIds
+                    },
+                    success: function(response) {
+                        $modalControl.modal('hide');
+                        alert(response); // Display a response message
+                    },
+                    error: function() {
+                        $modalControl.modal('hide');
+                        alert('Error');
+                    }
+                });
             });
         }
-
     });
 });
 </script>
