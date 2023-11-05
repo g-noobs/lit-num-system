@@ -91,4 +91,5 @@ table {
 </div>
 
 <?php include_once("../AllClassScript/ClassJquery.php");?>
+<?php include_once("../AllClassScript/ArchiveScript.php");?>
 <?php include_once("../../../CommonContent/CommonAllScript.php");?>

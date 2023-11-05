@@ -73,6 +73,9 @@ body {
 
         <?php include_once("../bootstrap/js.php");
             include_once("../PagesContent/ClassContent/AllClassScript/ClassJquery.php");
+
+            //Archive Script
+            include_once("../PagesContent/ClassContent/AllClassScript/ArchiveScript.php");
         ?>
         <?php include_once "../CommonContent/ErrorModal.php"?>
         <?php include_once "../CommonContent/CommonAllScript.php"?>
