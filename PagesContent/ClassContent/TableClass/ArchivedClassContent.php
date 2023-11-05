@@ -17,7 +17,7 @@ table {
 </style>
 
 <?php include_once ("../ClassModal/AddArchiveEditModal.php");?>
-<?php include_once ("../ClassModal/NoDataModal.php");?>
+<?php include_once ("../ClassModal/ConfirmationModal.php");?>
 
 <?php include_once ("../../../CommonPHPClass/ModifiedSearchStyle.php");?>
 
