@@ -21,27 +21,29 @@
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="dataTable" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Question ID</th>
-                            <th>Question</th>
-                            <th>Correct Answer</th>
-                            <th>Option 1</th>
-                            <th>Option 2</th>
-                            <th>Option 3</th>
-                            <th>Option 4</th>
-                            <th>Topic ID</th>
-                            <th>Date Create</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php include_once("../../../Database/ReportsDisplay.php");
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th>Question ID</th>
+                                <th>Question</th>
+                                <th>Correct Answer</th>
+                                <th>Option 1</th>
+                                <th>Option 2</th>
+                                <th>Option 3</th>
+                                <th>Option 4</th>
+                                <th>Topic ID Source</th>
+                                <th>Date CreateD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php include_once("../../../Database/ReportsDisplay.php");
                         $quizData = new ReportsDisplay();
                         $quizData->displayQuiz();
                     ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
