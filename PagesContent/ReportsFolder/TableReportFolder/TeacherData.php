@@ -22,7 +22,7 @@
                 <br>
                 <!-- Table Data -->
                 <div class="table-responsive">
-                    <table id="dataTable" class="table table-bordered table-hover">
+                    <table id="dataTable" class="table table-bordered table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Teacher ID</th>
