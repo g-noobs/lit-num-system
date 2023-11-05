@@ -32,7 +32,6 @@ body {
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
-            <?php include_once "../PagesContent/ClassContent/ClassModal/ConfirmationModal.php"?>
 
             <!-- Content Header (Page header) -->
             <section class="content-header">
@@ -64,6 +63,8 @@ body {
             </section>
             <br>
             <br>
+            <?php include_once "../PagesContent/ClassContent/ClassModal/ConfirmationModal.php"?>
+
             <!-- Main content -->
             <section class="content" id="classTable">
                 <?php include_once("../PagesContent/ClassContent/TableClass/ClassTableContent.php"); ?>
@@ -73,8 +74,11 @@ body {
         <!-- ./wrapper -->
 
         <?php include_once("../bootstrap/js.php");?>
-        <?php include_once("../PagesContent/ClassContent/AllClassScript/ClassJquery.php");?>
+        
         <?php include_once("../PagesContent/ClassContent/AllClassScript/ArchiveScript.php");?>
+
+        <?php include_once("../PagesContent/ClassContent/AllClassScript/ClassJquery.php");?>
+        
 
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>
