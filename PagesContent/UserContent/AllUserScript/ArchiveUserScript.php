@@ -1,5 +1,6 @@
 <script>
 $(document).ready(function() {
+    var selectedIds = [];
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").click(function() {
         $(".checkbox").prop("checked", $(this).prop("checked"));
@@ -7,7 +8,7 @@ $(document).ready(function() {
 
     // Handle the update button click event
     $("#archive_btn").click(function() {
-        var selectedIds = [];
+        
         // Iterate through all checked checkboxes and collect their values
         $(".checkbox:checked").each(function() {
             selectedIds.push($(this).val());
