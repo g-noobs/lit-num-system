@@ -5,6 +5,7 @@ $(function() {
         $(".checkbox").prop("checked", $(this).prop("checked"));
     });
 
+    // Handle the update button click event
     $("#archive_btn").click(function() {
 
         var selectedIds = [];
