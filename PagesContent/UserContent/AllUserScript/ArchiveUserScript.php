@@ -1,7 +1,6 @@
 <script>
 $(document).ready(function() {
-    var selectedIds = [];
-
+    
     var $modalControl = $('#archive_modal');
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").click(function() {
@@ -11,6 +10,7 @@ $(document).ready(function() {
     // Handle the update button click event
     $("#archive_btn").click(function() {
 
+        var selectedIds = [];
         // Iterate through all checked checkboxes and collect their values
         $(".checkbox:checked").each(function() {
             selectedIds.push($(this).val());
