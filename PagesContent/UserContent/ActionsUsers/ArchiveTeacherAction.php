@@ -6,9 +6,10 @@ $table = "tbl_user_info";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $selectedIds = $_POST['selectedIds'];
+    $status = $_POST['status'];
 
     // Update the status for the selected IDs
-    $updateQuery = "UPDATE $table SET status_id = 0 WHERE user_info_id IN ('" . implode("','", $selectedIds) . "')";
+    $updateQuery = "UPDATE $table SET status_id = '$status' WHERE user_info_id IN ('" . implode("','", $selectedIds) . "')";
 
     
 

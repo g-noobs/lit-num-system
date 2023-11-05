@@ -29,7 +29,8 @@ $(document).ready(function() {
                     type: "POST",
                     url: action_url,
                     data: {
-                        selectedIds: selectedIds
+                        selectedIds: selectedIds,
+                        status: 0
                     },
                     success: function(response) {
                         $modalControl.modal('hide');
