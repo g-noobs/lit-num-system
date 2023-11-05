@@ -25,7 +25,7 @@ table {
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h2 class="box-title">All Class List</h2>
+                <!-- <h2 class="box-title">All Class List</h2> -->
             </div>
             <div class="container-fluid">
                 <div class="row">
