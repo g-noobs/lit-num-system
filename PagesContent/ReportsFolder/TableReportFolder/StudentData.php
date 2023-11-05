@@ -29,7 +29,6 @@
                             <th>First Name</th>
                             <th>Middle Initial</th>
                             <th>Gender</th>
-                            <th>Status</th>
                             <th>Phone#</th>
                             <th>Email</th>
                             <th>Address</th>

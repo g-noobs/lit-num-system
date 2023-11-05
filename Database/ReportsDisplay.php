@@ -16,6 +16,7 @@ class ReportsDisplay extends Connection{
                 echo "<td>".$row['personal_id']. "</td>";
                 echo "<td>".$row['last_name']. "</td>";
                 echo "<td>".$row['first_name']. "</td>";
+                echo "<td>".$row['middle_name']."</td>";
                 echo "<td>".$row['gender']. "</td>";
                 echo "<td>".$row['contact_num']. "</td>";
                 echo "<td>".$row['email']. "</td>";
