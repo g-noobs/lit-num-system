@@ -21,25 +21,27 @@
                 <br>
                 <br>
                 <!-- Table Data -->
-                <table id="dataTable" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Topic ID</th>
-                            <th>Topic Name</th>
-                            <th>Topic Description</th>
-                            <th>Lesson ID Source</th>
-                            <th>Added by (ID)</th>
-                            <th>Date Added</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php 
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Topic ID</th>
+                                <th>Topic Name</th>
+                                <th>Topic Description</th>
+                                <th>Lesson ID Source</th>
+                                <th>Added by (ID)</th>
+                                <th>Date Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
                         include_once("../../../Database/ReportsDisplay.php");
                         $topicData = new ReportsDisplay();
                         $topicData->displayTopic();
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>
