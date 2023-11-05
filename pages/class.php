@@ -53,7 +53,7 @@ body {
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
                                 <li><a href="#" data-class-type="active-class"><b>Active Class</b></a></li>
-                                <li><a href="#" data-class-type="arch-class"><b>Archived Class</b></a></li>
+                                <li><a href="#" data-class-type="archive-class"><b>Archived Class</b></a></li>
                             </ul>
                         </div>
                     </div>

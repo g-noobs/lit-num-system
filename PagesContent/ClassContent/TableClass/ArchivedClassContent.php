@@ -29,9 +29,9 @@ table {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-class">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-class">
                             <i class="fa fa-plus"></i> <span> New Class</span>
-                        </button> -->
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
@@ -69,7 +69,7 @@ table {
                                         <?php 
                                         include_once("../Database/ClassEssentialsClass.php");
                                         $classTable = new ClassEssentialsClass();
-                                        $sql = "SELECT * FROM class_view;";
+                                        $sql = "SELECT * FROM class_view WHERE class_status = 0;";
                                         $classTable->classTable($sql);
                                     ?>
                                     </tbody>
