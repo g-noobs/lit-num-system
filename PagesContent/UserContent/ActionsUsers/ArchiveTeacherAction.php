@@ -8,17 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $selectedIds = $_POST['selectedIds'];
 
     // Update the status for the selected IDs
-    $updateQuery = "UPDATE $table SET status_id = 0 WHERE user_info_id IN (";
+    $updateQuery = "UPDATE $table SET status_id = 0 WHERE user_info_id IN (" . implode(",", $selectedIds) . ")";
 
-    // Build the parameter array for the IN clause
-    $params = array();
-    foreach ($selectedIds as $id) {
-        $params[] = (int)$id;
-        $updateQuery .= "?,";
-    }
-    // Remove the trailing comma and close the parentheses
-    $updateQuery = rtrim($updateQuery, ',') . ")";
-
+    $params = [];
+    
     // Execute the prepared statement
     $updateData = new SanitizeCrudClass();
     $updateData->executePreState($updateQuery, $params);
@@ -26,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check for errors during execution
     if ($updateData->getLastError() === null) {
         $response = array(
-            'error' => 'Error during execution: ' . $updateData->getLastError()
+            'success' => 'Update successful'
         );
     } else {
         $response = array(
-            'success' => 'Update successful'
+            'error' => 'Error during execution: ' . $updateData->getLastError()
         );
     }
 } else {

@@ -1,6 +1,8 @@
 <script>
 $(document).ready(function() {
     var selectedIds = [];
+
+    var $modalControl = $('#archive_modal');
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").click(function() {
         $(".checkbox").prop("checked", $(this).prop("checked"));
@@ -16,7 +18,7 @@ $(document).ready(function() {
 
         if (selectedIds.length === 0) {
             // Show a modal if no checkboxes are selected
-            $('#no_data_selected_modal').modal('show');
+            $modalControl.modal('show');
         }
         $('#archive_modal').modal('show');
         $("#confirm_archive").on("click", function() {

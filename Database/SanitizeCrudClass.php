@@ -73,7 +73,7 @@ class SanitizeCrudClass extends Connection{
             
         }
         
-         $stmt->close();
+        $stmt->close();
     }
     public function getLastError() {
         return $this->lastError;
