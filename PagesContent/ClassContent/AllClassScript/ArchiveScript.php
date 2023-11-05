@@ -1,6 +1,6 @@
 
 <script>
-$(function() {
+$(document).ready(function() {
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").click(function() {
         $(".checkbox").prop("checked", $(this).prop("checked"));
