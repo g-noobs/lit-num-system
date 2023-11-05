@@ -6,8 +6,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role="form" action="../PagesContent/ClassContent/ActionFolder/AddClassAction.php"
-                onsubmit="return validateForm()" method="post">
+            <form role="form" method="post" id="add_class-form">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
