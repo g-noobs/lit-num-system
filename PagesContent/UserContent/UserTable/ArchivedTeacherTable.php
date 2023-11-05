@@ -59,8 +59,6 @@
 <!-- Script for Editing a user -->
 <?php include_once("../CommonUser/EditUserScript.php");?>
 
-<!-- Script for Archive and Activate a user -->
-<?php include_once("../CommonUser/ArchiveActivateUserScript.php");?>
 
 <!-- Script contain the Dropdown and Search -->
 <?php include_once("../CommonUser/JQueryUser.php");?>
