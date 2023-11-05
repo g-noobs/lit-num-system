@@ -18,6 +18,8 @@ $(function() {
         if (selectedIds.length === 0) {
             // Show a modal if no checkboxes are selected
             $('#no_data_selected_modal').modal('show');
+        }else{
+            $('#archive_modal').modal('show');
         }
     });
 });
