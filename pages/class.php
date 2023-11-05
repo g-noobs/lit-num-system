@@ -32,6 +32,7 @@ body {
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
+            <?php include_once "../PagesContent/ClassContent/ClassModal/ConfirmationModal.php"?>
 
             <!-- Content Header (Page header) -->
             <section class="content-header">
