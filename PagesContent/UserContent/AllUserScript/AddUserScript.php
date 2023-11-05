@@ -4,7 +4,7 @@ $(function() {
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
         var formData = new FormData(this);
-        var $hideModal = $('#add_user_modal');
+        var $modalControl = $('#activate_modal');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterUser.php';
         $.ajax({
             url: actionUrl,
@@ -16,7 +16,7 @@ $(function() {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
-                    $hideModal.modal('hide');
+                    $modalControl.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
@@ -27,7 +27,7 @@ $(function() {
 
                     // You can redirect to a different page or perform other actions here
                 } else if (responseData.hasOwnProperty('error')) {
-                    $hideModal.modal('hide');
+                    $modalControl.modal('hide');
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
@@ -37,7 +37,7 @@ $(function() {
                 }
             },
             error: function() {
-                $hideModal.modal('hide');
+                $modalControl.modal('hide');
                 //show alert banner id = errorBanner
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();

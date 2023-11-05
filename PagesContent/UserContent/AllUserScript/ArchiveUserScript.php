@@ -33,13 +33,39 @@ $(document).ready(function() {
                         status: 0
                     },
                     success: function(response) {
-                        $modalControl.modal('hide');
-                        
+                        var responseData = JSON.parse(response);
+                        // Check if the form submission was successful
+                        if (responseData.hasOwnProperty('success')) {
+                            $modalControl.modal('hide');
+                            $('#successAlert').text(responseData.success);
+                            $('#successBanner').show();
+                            setTimeout(function() {
+                                $("#successBanner").fadeOut("slow");
+                                location.reload();
+                            }, 1500);
+
+
+                            // You can redirect to a different page or perform other actions here
+                        } else if (responseData.hasOwnProperty('error')) {
+                            $modalControl.modal('hide');
+                            $('#errorAlert').text(responseData.error);
+                            $('#errorBanner').show();
+                            setTimeout(function() {
+                                $("#errorBanner").fadeOut("slow");
+                                location.reload();
+                            }, 1500);
+                        }
                     },
-                    error: function(xhr, status, error) {
+                    error: function() {
                         $modalControl.modal('hide');
-                        alert('Error: ' +
-                        error); // Display the specific error message
+                        //show alert banner id = errorBanner
+                        $('#errorAlert').text(
+                            'An error occurred during the AJAX request.');
+                        $('#errorBanner').show();
+                        setTimeout(function() {
+                            $("#errorBanner").fadeOut("slow");
+                            location.reload();
+                        }, 1500);
                     }
                 });
             });
