@@ -38,7 +38,7 @@
 
 <!-- no data checked modal -->
 <!-- Modal -->
-<div class="modal fade" id="no_data_selected_modal" role="dialog">
+<div class="modal fade" id="no_data_selected_modal">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
