@@ -1,4 +1,3 @@
-
 <script>
 $(document).ready(function() {
     var maxOptions = $(".assign_class option").length; // Get the total number of options
