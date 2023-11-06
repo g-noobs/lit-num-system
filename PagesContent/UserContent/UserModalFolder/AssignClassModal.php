@@ -15,13 +15,14 @@
                             <div class="col-xs-2"></div>
                             <div class="col-xs-8">
                                 <label for="assign_class_id">Choose a Class to Assign</label>
-                                <select name="assign_class_id" id="assign_class_id"
-                                    class="form-control input-xs">
+                                <select name="assign_class_id" class="form-control input-xs assign_class">
                                     <?php include_once "../Database/DisplayAssignClass.php";
                                         $classlist = new DisplayAssignClass();
                                         $classlist->displayClassList();
                                     ?>
                                 </select>
+                                <a href="#" id="assign_more_class" type="button" data-toggle="tooltip" title="Add More Class"
+                                    class="text-success"><i class="fa fa-plus"></i></a>
                             </div>
                             <div class="col-xs-2"></div>
                         </div>
