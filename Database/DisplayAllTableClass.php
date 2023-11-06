@@ -137,17 +137,9 @@ class DisplayAllTableClass extends Connection{
                 echo "</td>";
 
                 if ($row["status"] === "Active") {
-                    $statusColor = "text-success";
-                    $iconColor = "text-danger";
-                    $actionIcon = "<span class='glyphicon glyphicon-trash'></span>";
-                    $data_target = "#archiveUserModal";
-                    $icnBtnClass = "archIconBtn";
+                    $statusColor = "text-success";     
                 } else {
                     $statusColor = "text-danger";
-                    $iconColor = "text-success";
-                    $actionIcon = "<span class='glyphicon glyphicon-ok'></span>";
-                    $data_target = "#activateUserModal";
-                    $icnBtnClass = "actvIconBtn";
                 }   
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
