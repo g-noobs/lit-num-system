@@ -37,6 +37,7 @@
                             <th>User Type</th>
                             <th>Status</th>
                             <th>Assign Class</th>
+                            <th>Assign Module</th>
                             </tr>
                         </thead>
                         <tbody>
