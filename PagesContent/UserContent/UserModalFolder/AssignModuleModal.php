@@ -19,7 +19,7 @@
                                     class="form-control input-xs">
                                     <?php include_once "../Database/DisplayAssignClass.php";
                                         $moduleList = new DisplayAssignClass();
-                                        $moduleList->displayClassList();
+                                        $moduleList->displayModuleList();
                                     ?>
                                 </select>
                             </div>
