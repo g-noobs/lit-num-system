@@ -12,20 +12,15 @@
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="form-group row">
-                            <div class="col-xs-2"></div>
-                            <div class="col-xs-8">
-                                <label for="assign_module_id">Choose a Class to Assign</label>
-                                <select name="assign_module_id"
-                                    class="form-control input-xs assign_module">
-                                    <?php include_once "../Database/DisplayAssignClass.php";
+                            <label for="assign_module_id">Choose a Class to Assign</label>
+                            <select name="assign_module_id" class="form-control input-xs assign_module">
+                                <?php include_once "../Database/DisplayAssignClass.php";
                                         $moduleList = new DisplayAssignClass();
                                         $moduleList->displayModuleList();
                                     ?>
-                                </select>
-                                <a href="#" id="assign_more_nodule" type="button" data-toggle="tooltip" title="Add More MOdule"
-                                    class="text-success"><i class="fa fa-plus"></i></a>
-                            </div>
-                            <div class="col-xs-2"></div>
+                            </select>
+                            <a href="#" id="assign_more_nodule" type="button" data-toggle="tooltip"
+                                title="Add More MOdule" class="text-success"><i class="fa fa-plus"></i></a>
                         </div>
                     </div>
                     <!-- /.box-body -->
