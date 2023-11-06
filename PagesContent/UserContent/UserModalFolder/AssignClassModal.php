@@ -14,8 +14,8 @@
                         <div class="form-group row">
                             <div class="col-xs-2"></div>
                             <div class="col-xs-8">
-                                <label for="user_middle_initial">Choose a Class to Assign</label>
-                                <select name="user_middle_initial" id="user_middle_initial"
+                                <label for="assign_class_id">Choose a Class to Assign</label>
+                                <select name="assign_class_id" id="assign_class_id"
                                     class="form-control input-xs">
                                     <option value="">-</option>
                                 </select>

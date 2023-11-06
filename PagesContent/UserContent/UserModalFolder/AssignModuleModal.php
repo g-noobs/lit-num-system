@@ -8,14 +8,14 @@
                 <h4 class="modal-title" id="modal-title">Assign Class to Teacher</h4>
                 <small id=user_teacher_id></small>
             </div>
-            <form id="assign_class_form">
+            <form id="assign_module_form">
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="form-group row">
                             <div class="col-xs-2"></div>
                             <div class="col-xs-8">
-                                <label for="user_middle_initial">Choose a Class to Assign</label>
-                                <select name="user_middle_initial" id="user_middle_initial"
+                                <label for="assign_module_id">Choose a Class to Assign</label>
+                                <select name="assign_module_id" id="assign_module_id"
                                     class="form-control input-xs">
                                     <option value="">-</option>
                                 </select>
