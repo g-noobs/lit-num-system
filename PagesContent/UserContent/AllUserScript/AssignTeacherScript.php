@@ -1,7 +1,5 @@
 <script>
 $(document).ready(function() {
-    var maxOptions = $(".assign_class option").length; // Get the total number of options
-
     // Function to add a new select input
     $("#assign_more_class_btn").on("click", function(e) {
         e.preventDefault();
@@ -25,15 +23,7 @@ $(document).ready(function() {
         checkEnableButton(); // Check button state after removal
     });
 
-    // Function to check and enable/disable the button
-    function checkEnableButton() {
-        var selectedOptions = $(".assign_class option:selected").length;
-        if (selectedOptions >= maxOptions) {
-            $("#assign_more_class_btn").prop("disabled", true);
-        } else {
-            $("#assign_more_class_btn").prop("disabled", false);
-        }
-    }
+
 
     // Initial check for button state
     checkEnableButton();
