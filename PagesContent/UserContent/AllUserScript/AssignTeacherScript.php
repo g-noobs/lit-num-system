@@ -1,38 +1,30 @@
 <script>
 $(document).ready(function() {
-    // Function to handle adding additional select elements
-    $("#assign_more_class_btn").click(function(e) {
+    var $assignClassSelect = $('.assign_class');
+    var $assignMoreClassBtn = $('#assign_more_class_btn');
+
+    $assignMoreClassBtn.on('click', function(e) {
         e.preventDefault();
 
-        // Clone the original select element
-        var originalSelect = $(".assign_class").eq(0);
-        var clonedSelect = originalSelect.clone();
+        var selectedOption = $assignClassSelect.find('option:selected');
+        if (selectedOption.length === 0) {
+            // All options are selected, disable the button
+            $assignMoreClassBtn.prop('disabled', true);
+        } else {
+            // Enable the button
+            $assignMoreClassBtn.prop('disabled', false);
 
-        // Remove the selected option from the cloned select element
-        clonedSelect.find("option:selected").prop("disabled", true);
+            // Remove the selected option from other select elements
+            $('.assign_class option').show();
+            selectedOption.each(function() {
+                var value = $(this).val();
+                $('.assign_class option[value="' + value + '"]').hide();
+            });
+        }
 
-        // Append the cloned select element to the form
-        $(".modal-body .form-group.row").append(clonedSelect);
-    });
-
-    // Function to handle form submission
-    $("#assign_class_form").submit(function(e) {
-        e.preventDefault();
-
-        // Add your form submission logic here
-
-        // For example, you can use AJAX to submit the form data
-        $.ajax({
-            url: "your_server_endpoint",
-            type: "POST",
-            data: $(this).serialize(),
-            success: function(response) {
-                // Handle success response
-            },
-            error: function(error) {
-                // Handle error response
-            }
-        });
+        // Clone the original select and append it
+        var clonedSelect = $assignClassSelect.clone();
+        $assignClassSelect.after(clonedSelect);
     });
 });
 </script>
