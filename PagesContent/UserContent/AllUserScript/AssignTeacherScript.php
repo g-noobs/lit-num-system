@@ -29,21 +29,53 @@ $(document).ready(function() {
         $('.assign_class').each(function() {
             assign_class_id.push($(this).val());
         });
+        // Create a data object with key-value pairs
+        var data = {
+            assign_class_id: assign_class_id,
+            user_teacher_id: user_teacher_id
+        };
 
         $.ajax({
-            url: "../Database/AssignClass.php",
+            url: "../PagesContent/UserContent/ActionsUsers/ActionAssignTeacherClass.php",
             method: "POST",
             data: assign_class_id, user_teacher_id,
-            success: function(data) {
-                $('#assign_class_form')[0].reset();
+            success: function(response) {
+                var responseData = JSON.parse(response);
+                // Check if the form submission was successful
+                if (responseData.hasOwnProperty('success')) {
+                    $('#assign_class_form')[0].reset();
+                    $('#assign_class_modal').modal('hide');
+
+                    $('#successAlert').text(responseData.success);
+                    $('#successBanner').show();
+                    setTimeout(function() {
+                        $("#successBanner").fadeOut("slow");
+
+                    }, 1500);
+
+
+
+                } else if (responseData.hasOwnProperty('error')) {
+                    $('#assign_class_modal').modal('hide');
+                    $('#assign_class_form')[0].reset();
+                    $('#errorAlert').text(responseData.error);
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+
+                    }, 1500);
+                }
+            },
+            error: function() {
                 $('#assign_class_modal').modal('hide');
-                $('#response').html(data);
-                $('#response').fadeIn('slow');
-                $('#response').fadeOut('slow');
+                $('#assign_class_form')[0].reset();
+                //show alert banner id = errorBanner
+                $('#errorAlert').text('An error occurred during the AJAX request.');
+                $('#errorBanner').show();
                 setTimeout(function() {
-                    $('#response').html('');
-                }, 5000);
-                $('#mainContent').load('../PagesContent/UserContent/UserTable/TeacherTableContent.php');
+                    $("#errorBanner").fadeOut("slow");
+
+                }, 1500);
             }
         });
     });
