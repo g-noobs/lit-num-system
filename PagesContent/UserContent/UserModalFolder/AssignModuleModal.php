@@ -20,7 +20,7 @@
                                     ?>
                             </select>
                         </div>
-                        <a href="#" id="assign_more_module" type="button" data-toggle="tooltip"
+                        <a href="#" id="assign_more_module_btn" type="button" data-toggle="tooltip"
                                 title="Add More MOdule" class="text-success"><i class="fa fa-plus"></i></a>
                     </div>
                     <!-- /.box-body -->
