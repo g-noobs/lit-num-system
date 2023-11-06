@@ -4,9 +4,9 @@ $(document).ready(function() {
     var selectCounter = 1;
 
     // When the "Assign More Module" button is clicked
-    $('#assign_more_module').on('click', function(e) {
+    $('#assign_more_module_btn').on('click', function(e) {
         e.preventDefault();
-        
+
         // Clone the original select element
         var originalSelect = $('.assign_module').first();
         var clonedSelect = originalSelect.clone();
