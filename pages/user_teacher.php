@@ -143,6 +143,10 @@
         <!-- Edit Teacher Script -->
         <?php include_once "../PagesContent/UserContent/AllUserScript/EditUserScipt.php";?>
 
+        <!-- Assign teacher to a class script -->
+        <?php include_once "../PagesContent/UserContent/AllUserScript/AssignTeacherClass.php"?>
+
+
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
@@ -151,6 +155,7 @@
 
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
+
         <!-- 
         <script>
         // Check for saved user type
