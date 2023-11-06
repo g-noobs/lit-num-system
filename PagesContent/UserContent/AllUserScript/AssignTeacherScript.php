@@ -1,39 +1,34 @@
-
 <script>
 $(document).ready(function() {
     // Counter to keep track of added selects
-    var selectCounter = 1;
+    var selectCount = 1;
 
-    // Add a new select when the "Add More Class" button is clicked
-    $('#assign_more_class_btn').click(function(e) {
+    // Click event for the "assign_more_class_btn" button
+    $("#assign_more_class_btn").on("click", function(e) {
         e.preventDefault();
 
-        // Clone the original select element
-        var $newSelect = $('.assign_class').first().clone();
+        // Create a new select element based on the existing select
+        var newSelect = $(".assign_class").clone();
 
-        // Generate a unique ID for the new select element
-        var newSelectId = 'assign_class_id_' + selectCounter;
+        // Change the name and ID attributes to make them unique
+        newSelect.attr("name", "assign_class_id_" + selectCount);
+        newSelect.attr("id", "assign_class_id_" + selectCount);
 
-        // Update the attributes of the cloned select
-        $newSelect.attr('id', newSelectId);
-        $newSelect.attr('name', newSelectId);
+        // Create a remove button next to the new select
+        var removeButton = $("<a href='#' class='remove_select' data-toggle='tooltip' title='Remove Class'><i class='fa fa-times text-danger'></i></a>");
 
-        // Create a remove button for the new select
-        var $removeButton = $(
-            '<a href="#" class="remove_class" data-toggle="tooltip" title="Remove Class"><i class="fa fa-minus text-danger"></i></a>'
-            );
+        // Add the new select and remove button to the modal
+        $(".modal-body .form-group:last").after(newSelect);
+        newSelect.after(removeButton);
 
-        // Append the new select and remove button to the modal body
-        $('.modal-body .form-group:last').append($newSelect).append($removeButton);
+        // Increment the selectCount
+        selectCount++;
 
-        selectCounter++;
-    });
-
-    // Remove a select when the remove button is clicked
-    $('.modal-body').on('click', '.remove_class', function(e) {
-        e.preventDefault();
-        $(this).prev('select').remove(); // Remove the select
-        $(this).remove(); // Remove the remove button
+        // Click event for the remove button
+        removeButton.on("click", function() {
+            newSelect.remove();
+            removeButton.remove();
+        });
     });
 });
 </script>
