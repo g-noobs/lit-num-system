@@ -19,9 +19,9 @@
                                         $moduleList->displayModuleList();
                                     ?>
                             </select>
-                            <a href="#" id="assign_more_nodule" type="button" data-toggle="tooltip"
-                                title="Add More MOdule" class="text-success"><i class="fa fa-plus"></i></a>
                         </div>
+                        <a href="#" id="assign_more_nodule" type="button" data-toggle="tooltip"
+                                title="Add More MOdule" class="text-success"><i class="fa fa-plus"></i></a>
                     </div>
                     <!-- /.box-body -->
                 </div>
