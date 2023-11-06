@@ -1,45 +1,21 @@
 <script>
 $(document).ready(function() {
-    // Counter to keep track of the number of added selects
-    var selectCounter = 0;
+    $("#assign_more_class_btn").on("click", function() {
+        // Clone the select element and remove the selected options
+        var newSelect = $(".assign_class").first().clone();
+        newSelect.find("option:selected").prop("selected", false);
+        newSelect.find("option[value='']").prop("selected", true); // Select an empty option
 
-    // Function to create a new select element
-    function createSelect() {
-        selectCounter++;
-        var newSelect = $('<select>')
-            .attr('name', 'assign_class_id_' + selectCounter)
-            .addClass('form-control input-xs assign_class')
-            .append($('<option>', {
-                value: '',
-                text: 'Select a class'
-            }));
+        // Add the cloned select to the modal
+        newSelect.appendTo($(".assign_class").parent());
 
-        // Clone and append the options from the original select to the new select
-        $('.assign_class option').not(':selected').clone().appendTo(newSelect);
-
-        return newSelect;
-    }
-
-    // Click event handler for the "assign_more_class" button
-    $('#assign_more_class').click(function(e) {
-        e.preventDefault();
-
-        // Create a new select element
-        var newSelect = createSelect();
-
-        // Append the new select to the form
-        $('.form-group.row:last').append(newSelect);
-    });
-
-    // Change event handler for the original select
-    $(document).on('change', '.assign_class', function() {
-        var selectedValue = $(this).val();
-
-        // Disable the selected option in all other selects
-        $('.assign_class').not(this).find('option').prop('disabled', false);
-        $('.assign_class').not(this).each(function() {
-            $(this).find('option[value="' + selectedValue + '"]').prop('disabled', true);
+        // Disable the previously selected option in other selects
+        $(".assign_class").not(newSelect).each(function() {
+            var selectedValue = newSelect.find("option:selected").val();
+            $(this).find("option[value='" + selectedValue + "']").prop("disabled", true);
         });
     });
+
+    // Handle form submission and validation here
 });
 </script>
