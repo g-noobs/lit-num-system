@@ -31,7 +31,7 @@ body {
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
-            <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
+            <?php include_once "../CommonContent/ModifiedAlert.php"?>
 
             <!-- Content Header (Page header) -->
             <section class="content-header">
@@ -63,7 +63,7 @@ body {
             </section>
             <br>
             <br>
-            <?php include_once "../PagesContent/ClassContent/ClassModal/ConfirmationModal.php"?>
+            <?php include_once ("../PagesContent/ClassContent/ClassModal/ConfirmationModal.php"); ?>
 
             <?php include_once ("../PagesContent/ClassContent/ClassModal/AddArchiveEditModal.php");?>
 
