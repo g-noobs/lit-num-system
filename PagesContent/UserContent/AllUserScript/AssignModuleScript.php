@@ -1,4 +1,3 @@
-
 <script>
 $(document).ready(function() {
     // Initialize a counter to keep track of the number of added selects
