@@ -19,9 +19,9 @@
                                         $classlist->displayClassList();
                                     ?>
                             </select>
-                            <a href="#" id="assign_more_class" type="button" data-toggle="tooltip"
-                                title="Add More Class" class="text-success"><i class="fa fa-plus"></i></a>
                         </div>
+                        <a href="#" id="assign_more_class" type="button" data-toggle="tooltip" title="Add More Class"
+                            class="text-success"><i class="fa fa-plus"></i></a>
                     </div>
                     <!-- /.box-body -->
                 </div>
