@@ -46,6 +46,7 @@ class DisplayAllTableClass extends Connection{
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
                 
+                echo "<td><a href='#' class='addBtn text-success' type='button' data-toggle='tooltip' title='Add Lesson' data-id='".$row["user_info_id"]."'><i class='fa fa-plus'></i></a></td>";
 
                 echo "</tr>";
             }
