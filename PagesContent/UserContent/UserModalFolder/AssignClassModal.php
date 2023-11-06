@@ -8,8 +8,8 @@
                 <h4 class="modal-title" id="modal-title">Assign Class to Teacher</h4>
                 <small id=user_teacher_id></small>
             </div>
-            <div class="modal-body">
-                <form id="assign_class_form">
+            <form id="assign_class_form">
+                <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="form-group row">
                             <div class="col-xs-2"></div>
@@ -24,10 +24,15 @@
                         </div>
                     </div>
                     <!-- /.box-body -->
-                    
-                </form>
-                <!-- /.end of form -->
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success pull-left">Assign Teacher</button>
+                        <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /.end of form -->
         </div>
         <!-- /.modal-content -->
     </div>
