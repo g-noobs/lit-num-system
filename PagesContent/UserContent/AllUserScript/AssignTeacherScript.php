@@ -1,34 +1,23 @@
 <script>
-$(document).ready(function() {
-    // Counter to keep track of added selects
-    var selectCount = 1;
-
-    // Click event for the "assign_more_class_btn" button
-    $("#assign_more_class_btn").on("click", function(e) {
+$(document).ready(function () {
+    $("#assign_more_class_btn").click(function (e) {
         e.preventDefault();
+        var select = $(".assign_class").clone();
 
-        // Create a new select element based on the existing select
-        var newSelect = $(".assign_class").clone();
-
-        // Change the name and ID attributes to make them unique
-        newSelect.attr("name", "assign_class_id_" + selectCount);
-        newSelect.attr("id", "assign_class_id_" + selectCount);
-
-        // Create a remove button next to the new select
-        var removeButton = $("<a href='#' class='remove_select' data-toggle='tooltip' title='Remove Class'><i class='fa fa-times text-danger'></i></a>");
-
-        // Add the new select and remove button to the modal
-        $(".modal-body .form-group:last").after(newSelect);
-        newSelect.after(removeButton);
-
-        // Increment the selectCount
-        selectCount++;
-
-        // Click event for the remove button
-        removeButton.on("click", function() {
-            newSelect.remove();
-            removeButton.remove();
+        // Add a remove button to the new select element
+        var removeButton = $("<a href='#' class='remove-class'><i class='fa fa-times'></i></a>");
+        removeButton.click(function (e) {
+            e.preventDefault();
+            $(this).closest('.form-group').remove();
         });
+        select.after(removeButton);
+
+        // Append the new select element to the container
+        $(".assigned-classes").append(select);
+
+        // Reset the selected option in the original select
+        $(".assign_class").val($(".assign_class option:first").val());
     });
 });
+
 </script>
