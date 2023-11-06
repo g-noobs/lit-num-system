@@ -6,6 +6,7 @@ $(document).ready(function() {
     var user_teacher_id = 0;
 
     $('.assign_class_btn text-success').on().click(function() {
+        $('#assign_class_modal').modal('show');
         user_teacher_id = $(this).data('id');
     });
 
