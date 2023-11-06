@@ -144,7 +144,7 @@
         <?php include_once "../PagesContent/UserContent/AllUserScript/EditUserScipt.php";?>
 
         <!-- Assign teacher to a class script -->
-        <?php include_once "../PagesContent/UserContent/AllUserScript/AssignTeacherClass.php"?>
+        <?php include_once "../PagesContent/UserContent/AllUserScript/AssignTeacherScript.php"?>
 
 
         <!-- Common Script with other pages -->
