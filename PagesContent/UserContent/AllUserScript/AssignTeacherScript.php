@@ -5,7 +5,7 @@ $(document).ready(function() {
     var selectCounter = 1;
     var user_teacher_id = 0;
 
-    $('.assign_class_btn').on().click(function() {
+    $('.assign_class_btn').on('click',function() {
         $('#assign_class_modal').modal('show');
         user_teacher_id = $(this).data('id');
     });
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     });
 
-    $('#assign_class_form').on().submit(function(e) {
+    $('#assign_class_form').submit(function(e) {
         e.preventDefault();
         var assign_class_id = [];
         //push all the selected values into an array that contains the name from class as assign_class_id
@@ -38,7 +38,7 @@ $(document).ready(function() {
         $.ajax({
             url: "../PagesContent/UserContent/ActionsUsers/ActionAssignTeacherClass.php",
             method: "POST",
-            data: assign_class_id, user_teacher_id,
+            data: data,
             success: function(response) {
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
