@@ -1,54 +1,41 @@
-<!-- Add this code to your HTML file, preferably just before the closing </body> tag -->
+<!-- Add this script tag to include jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
 $(document).ready(function() {
-    // Counter to keep track of added selects
-    var selectCount = 1;
+    // Counter to keep track of the number of added selects
+    var selectCounter = 1;
 
-    // Function to disable selected options in other selects
-    function disableSelectedOptions() {
-        var selectedValues = [];
-        $('.assign_class').each(function() {
-            var selectedValue = $(this).val();
-            if (selectedValue) {
-                selectedValues.push(selectedValue);
-            }
-        });
-
-        $('.assign_class').find('option').prop('disabled', false);
-
-        selectedValues.forEach(function(value) {
-            $('.assign_class').not(':eq(' + (selectCount - 1) + ')').find('option[value="' + value +
-                '"]').prop('disabled', true);
-        });
-    }
-
-    // Add an additional select when the button is clicked
-    $('#assign_more_class_btn').click(function(e) {
+    // Handle the "assign_more_class_btn" button click event
+    $("#assign_more_class_btn").on("click", function(e) {
         e.preventDefault();
 
-        var newSelect = $('<select>').attr({
-            'name': 'assign_class_id_' + selectCount,
-            'class': 'form-control input-xs assign_class'
-        });
+        // Clone the original select element
+        var $originalSelect = $(".assign_class:first");
+        var $newSelect = $originalSelect.clone();
 
-        $('.assign_class').each(function() {
-            var selectedValue = $(this).val();
-            if (selectedValue) {
-                newSelect.append($('<option>', {
-                    value: selectedValue,
-                    text: $(this).find('option:selected').text()
-                }));
-            }
-        });
+        // Update the ID and name attributes to ensure uniqueness
+        var newSelectId = "assign_class_" + selectCounter;
+        var newSelectName = "assign_class_id_" + selectCounter;
+        $newSelect.attr("id", newSelectId);
+        $newSelect.attr("name", newSelectName);
 
-        $('#assign_class_form .form-group').append(newSelect);
-        selectCount++;
+        // Append the new select to the form
+        $(".modal-body .form-group:last").before($newSelect);
 
-        disableSelectedOptions();
+        selectCounter++;
+
+        // Disable or remove selected options in other select elements
+        $(".assign_class").not($newSelect).find("option:selected").prop("disabled", true);
     });
 
-    // Initial setup to disable selected options
-    disableSelectedOptions();
+    // Handle change event for select elements to re-enable selected options
+    $(".assign_class").on("change", function() {
+        var selectedValue = $(this).val();
+        $(".assign_class").not(this).find("option").prop("disabled", false);
+        $(".assign_class").not(this).each(function() {
+            $(this).find('option[value="' + selectedValue + '"]').prop("disabled", true);
+        });
+    });
 });
 </script>
