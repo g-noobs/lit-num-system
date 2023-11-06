@@ -17,7 +17,10 @@
                                 <label for="assign_class_id">Choose a Class to Assign</label>
                                 <select name="assign_class_id" id="assign_class_id"
                                     class="form-control input-xs">
-                                    <option value="">-</option>
+                                    <?php include_once "../Database/DisplayAssignClass.php";
+                                        $classlist = new DisplayAssignClass();
+                                        $classlist->displayClassList();
+                                    ?>
                                 </select>
                             </div>
                             <div class="col-xs-2"></div>
