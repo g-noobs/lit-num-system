@@ -37,7 +37,8 @@
                         <div class="form-group row">
                             <div class="col-xs-4">
                                 <label for="gender">Select Gender:</label>
-                                <select class="form-control input-xs" id="gender "name="gender" placeholder="Gender" required>
+                                <select class="form-control input-xs" id="gender " name="gender" placeholder="Gender"
+                                    required>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                     <option value="None">None</option>
@@ -83,17 +84,16 @@
                             <div class="col-xs-4">
                                 <label for="zip_code">Zip Code</label>
                                 <input type="number" name="zip_code" class="form-control input-xs"
-                                    placeholder="Zip Code" required/>
+                                    placeholder="Zip Code" required />
                             </div>
                         </div>
                         <!-- /.box-body -->
-                        <div class="modal-footer">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success pull-left">Add Teacher</button>
-                                <button type="reset" class="btn btn-default pull-right"
-                                    data-dismiss="modal">Cancel</button>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success pull-left">Add Teacher</button>
+                        <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </form>
