@@ -1,34 +1,42 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-$(document).ready(function() {
-    // Counter for dynamically created selects
-    var selectCounter = 1;
-
-    // Assign More Class button click event
-    $("#assign_more_class_btn").on("click", function() {
-        // Clone the original select
-        var $originalSelect = $(".assign_class").first();
-        var $clonedSelect = $originalSelect.clone();
-
-        // Update the name and id attributes of the cloned select to make them unique
-        var selectName = "assign_class_id_" + selectCounter;
-        var selectId = "assign_class_" + selectCounter;
-
-        $clonedSelect.attr("name", selectName);
-        $clonedSelect.attr("id", selectId);
-
-        // Disable or remove options that are already selected in other selects
-        $(".assign_class").each(function() {
-            var selectedValue = $(this).val();
-            $clonedSelect.find('option[value="' + selectedValue + '"]').remove();
-        });
-
-        // Append the cloned select to the modal body
-        $(".modal-body").append($clonedSelect);
-
-        // Increment the select counter
-        selectCounter++;
-    });
-});
-</script>
+<div class="modal fade" id="assign_class_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modal-title">Assign Class to Teacher</h4>
+                <small id=user_teacher_id></small>
+            </div>
+            <form id="assign_class_form">
+                <div class="modal-body">
+                    <div class="box-body box-warning">
+                        <div class="form-group row">
+                            <label for="assign_class_id">Choose a Class to Assign</label>
+                            <select name="assign_class_id" class="form-control input-xs assign_class">
+                                <option value=""></option>
+                                <?php include_once "../Database/DisplayAssignClass.php";
+                                        $classlist = new DisplayAssignClass();
+                                        $classlist->displayClassList();
+                                    ?>
+                            </select>
+                        </div>
+                        <a href="#" id="assign_more_class_btn" type="button" data-toggle="tooltip" title="Add More Class"
+                            class="text-success"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success pull-left">Assign Teacher</button>
+                        <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /.end of form -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal assign class to teacher -->
