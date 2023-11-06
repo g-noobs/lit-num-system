@@ -5,7 +5,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         // Clone the select element and append it to the form
-        var originalSelect = $(".form-group.row select");
+        var originalSelect = $(".assign_c select");
         var newSelect = originalSelect.clone();
         $(".form-group.row").append(newSelect);
     });
