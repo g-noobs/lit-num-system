@@ -1,21 +1,54 @@
+<!-- Add this code to your HTML file, preferably just before the closing </body> tag -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-    $("#assign_more_class_btn").on("click", function() {
-        // Clone the select element and remove the selected options
-        var newSelect = $(".assign_class").first().clone();
-        newSelect.find("option:selected").prop("selected", false);
-        newSelect.find("option[value='']").prop("selected", true); // Select an empty option
+    // Counter to keep track of added selects
+    var selectCount = 1;
 
-        // Add the cloned select to the modal
-        newSelect.appendTo($(".assign_class").parent());
-
-        // Disable the previously selected option in other selects
-        $(".assign_class").not(newSelect).each(function() {
-            var selectedValue = newSelect.find("option:selected").val();
-            $(this).find("option[value='" + selectedValue + "']").prop("disabled", true);
+    // Function to disable selected options in other selects
+    function disableSelectedOptions() {
+        var selectedValues = [];
+        $('.assign_class').each(function() {
+            var selectedValue = $(this).val();
+            if (selectedValue) {
+                selectedValues.push(selectedValue);
+            }
         });
+
+        $('.assign_class').find('option').prop('disabled', false);
+
+        selectedValues.forEach(function(value) {
+            $('.assign_class').not(':eq(' + (selectCount - 1) + ')').find('option[value="' + value +
+                '"]').prop('disabled', true);
+        });
+    }
+
+    // Add an additional select when the button is clicked
+    $('#assign_more_class_btn').click(function(e) {
+        e.preventDefault();
+
+        var newSelect = $('<select>').attr({
+            'name': 'assign_class_id_' + selectCount,
+            'class': 'form-control input-xs assign_class'
+        });
+
+        $('.assign_class').each(function() {
+            var selectedValue = $(this).val();
+            if (selectedValue) {
+                newSelect.append($('<option>', {
+                    value: selectedValue,
+                    text: $(this).find('option:selected').text()
+                }));
+            }
+        });
+
+        $('#assign_class_form .form-group').append(newSelect);
+        selectCount++;
+
+        disableSelectedOptions();
     });
 
-    // Handle form submission and validation here
+    // Initial setup to disable selected options
+    disableSelectedOptions();
 });
 </script>
