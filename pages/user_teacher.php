@@ -111,8 +111,11 @@
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
 
-            <!-- Assign teacher modal -->
+            <!-- Assign class to teacher modal -->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignClassModal.php");?>
+            
+            <!-- Assign module to teacher modal -->
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignModuleModal.php");?>
 
             <!-- Main content -->
             <section class="content" id="mainContent">
