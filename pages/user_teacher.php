@@ -146,6 +146,9 @@
         <!-- Assign teacher to a class script -->
         <?php include_once "../PagesContent/UserContent/AllUserScript/AssignTeacherScript.php"?>
 
+        <!-- Assign module to teacher  -->
+        <?php include_once "../PagesContent/UserContent/AllUserScript/AssignModuleScript.php"?>
+
 
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
