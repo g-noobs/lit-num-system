@@ -116,7 +116,7 @@ class DisplayAllTableClass extends Connection{
                 }   
 
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
-                echo "<td><a href='#' class='assign_class_btn text-success' type='button' data-toggle='modal' data-target='#assign_class_modal' data-toggle='tooltip' title='Assign Class' data-id='".$row["user_info_id"]."'><i class='fa fa-plus'></i></a></td>";
+                echo "<td><a href='#' class='assign_class_btn text-success' type='button' data-toggle='modal' data-target='' data-toggle='tooltip' title='Assign Class' data-id='".$row["user_info_id"]."'><i class='fa fa-plus'></i></a></td>";
                 
                 echo "<td><a href='#' class='assign_module_btn text-warning' type='button' data-toggle='modal' data-target='#assign_module_modal' data-toggle='tooltip' title='Assign Module' data-id='".$row["user_info_id"]."'><i class='fa fa-file-text-o'></i></a></td>";
 
