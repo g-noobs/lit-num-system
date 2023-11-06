@@ -1,43 +1,45 @@
 <script>
 $(document).ready(function() {
-    var $assignClassSelect = $('.assign_class');
-    var $assignMoreClassButton = $('#assign_more_class');
+    // Counter to keep track of the number of added selects
+    var selectCounter = 0;
 
-    $assignMoreClassButton.click(function() {
-        var availableOptions = $assignClassSelect.find('option:not(:disabled)').clone();
+    // Function to create a new select element
+    function createSelect() {
+        selectCounter++;
+        var newSelect = $('<select>')
+            .attr('name', 'assign_class_id_' + selectCounter)
+            .addClass('form-control input-xs assign_class')
+            .append($('<option>', {
+                value: '',
+                text: 'Select a class'
+            }));
 
-        if (availableOptions.length === 0) {
-            return; // No available options left
-        }
+        // Clone and append the options from the original select to the new select
+        $('.assign_class option').not(':selected').clone().appendTo(newSelect);
 
-        var $newAssignClassSelect = $(
-            '<select name="assign_class_id" class="form-control input-xs assign_class"></select>');
-        $newAssignClassSelect.append(availableOptions);
+        return newSelect;
+    }
 
-        // Disable the selected option in other selects
-        $assignClassSelect.each(function() {
-            var selectedOptionValue = $(this).val();
-            if (selectedOptionValue) {
-                $newAssignClassSelect.find('option[value="' + selectedOptionValue + '"]').prop(
-                    'disabled', true);
-            }
-        });
+    // Click event handler for the "assign_more_class" button
+    $('#assign_more_class').click(function(e) {
+        e.preventDefault();
 
-        // Append the new select to the modal body
-        $('.modal-body').find('.form-group.row').append($('<div class="col-xs-8"></div>').append(
-            $newAssignClassSelect));
+        // Create a new select element
+        var newSelect = createSelect();
 
-        // Check if there are still available options to decide whether to disable the button
-        availableOptions = $assignClassSelect.find('option:not(:disabled)').clone();
-        if (availableOptions.length === 0) {
-            $assignMoreClassButton.prop('disabled', true);
-        }
+        // Append the new select to the form
+        $('.form-group.row:last').append(newSelect);
     });
 
-    // Handle form submission
-    $('#assign_class_form').on('submit', function(e) {
-        e.preventDefault();
-        // Handle the form submission logic here
+    // Change event handler for the original select
+    $(document).on('change', '.assign_class', function() {
+        var selectedValue = $(this).val();
+
+        // Disable the selected option in all other selects
+        $('.assign_class').not(this).find('option').prop('disabled', false);
+        $('.assign_class').not(this).each(function() {
+            $(this).find('option[value="' + selectedValue + '"]').prop('disabled', true);
+        });
     });
 });
 </script>
