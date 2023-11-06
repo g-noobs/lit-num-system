@@ -11,7 +11,7 @@
             <form id="assign_module_form">
                 <div class="modal-body">
                     <div class="box-body box-warning">
-                        <div class="form-group row">
+                        <div class="form-group row assign_m">
                             <label for="assign_module_id">Choose a Class to Assign</label>
                             <select name="assign_module_id" class="form-control input-xs assign_module">
                                 <?php include_once "../Database/DisplayAssignClass.php";

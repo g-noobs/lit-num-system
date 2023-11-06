@@ -1,5 +1,4 @@
 
-
 <script>
 $(document).ready(function() {
     // Initialize a counter to keep track of the number of added selects
@@ -20,7 +19,7 @@ $(document).ready(function() {
         clonedSelect.attr('id', newSelectId);
 
         // Append the cloned select to the form
-        $('.assign_module_form').append(clonedSelect);
+        $('.assign_m').append(clonedSelect);
 
         // Increment the counter
         selectCounter++;
