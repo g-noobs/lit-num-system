@@ -1,35 +1,47 @@
+
 <script>
 $(document).ready(function() {
-    var $assignClassForm = $('#assign_class_form');
-    var $assignClassSelect = $assignClassForm.find('.assign_class');
-    var $assignMoreClassBtn = $('#assign_more_class_btn');
-    
-    // Disable the "Assign Teacher" button initially
-    $assignClassForm.find('button[type="submit"]').prop('disabled', true);
+    var maxOptions = $(".assign_class option").length; // Get the total number of options
 
-    // Add an additional select when the "Assign More Class" button is clicked
-    $assignMoreClassBtn.on('click', function() {
-        var $newSelect = $assignClassSelect.clone();
-        var $removeButton = $('<a href="#" class="remove-class-btn" data-toggle="tooltip" title="Remove Class"><i class="fa fa-times text-danger"></i></a>');
-        
-        // Add a new select and remove button
-        $newSelect.appendTo($assignClassForm.find('.form-group.row'));
-        $removeButton.appendTo($newSelect.parent());
-        
-        // Enable the "Assign Teacher" button if at least one select is added
-        $assignClassForm.find('button[type="submit"]').prop('disabled', false);
-        
-        // Add a click event to the remove button
-        $removeButton.on('click', function(e) {
-            e.preventDefault();
-            $newSelect.remove();
-            $removeButton.remove();
-            
-            // Check if there are any selects left, and disable the button if none
-            if ($assignClassForm.find('.assign_class').length === 1) {
-                $assignClassForm.find('button[type="submit"]').prop('disabled', true);
-            }
-        });
+    // Function to add a new select input
+    $("#assign_more_class_btn").on("click", function(e) {
+        e.preventDefault();
+
+        // Clone the original select input
+        var $newSelect = $(".assign_class").clone();
+
+        // Add a remove button next to the new select
+        $newSelect.addClass("form-control input-xs");
+        $newSelect.prepend(
+            "<a href='#' class='remove_class' title='Remove Class'><i class='fa fa-times'></i></a>");
+
+        // Append the new select to the form
+        $(".modal-body .form-group.row:last").after($newSelect);
+    });
+
+    // Function to remove a select input
+    $(document).on("click", ".remove_class", function(e) {
+        e.preventDefault();
+        $(this).parent(".form-group").remove();
+        checkEnableButton(); // Check button state after removal
+    });
+
+    // Function to check and enable/disable the button
+    function checkEnableButton() {
+        var selectedOptions = $(".assign_class option:selected").length;
+        if (selectedOptions >= maxOptions) {
+            $("#assign_more_class_btn").prop("disabled", true);
+        } else {
+            $("#assign_more_class_btn").prop("disabled", false);
+        }
+    }
+
+    // Initial check for button state
+    checkEnableButton();
+
+    // Trigger button state check on select change
+    $(".assign_class").on("change", function() {
+        checkEnableButton();
     });
 });
 </script>
