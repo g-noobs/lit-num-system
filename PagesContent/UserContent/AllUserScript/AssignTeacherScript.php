@@ -1,36 +1,39 @@
+
 <script>
 $(document).ready(function() {
-    // Function to add a new select input
-    $("#assign_more_class_btn").on("click", function(e) {
+    // Counter to keep track of added selects
+    var selectCounter = 1;
+
+    // Add a new select when the "Add More Class" button is clicked
+    $('#assign_more_class_btn').click(function(e) {
         e.preventDefault();
 
-        // Clone the original select input
-        var $newSelect = $(".assign_class").clone();
+        // Clone the original select element
+        var $newSelect = $('.assign_class').first().clone();
 
-        // Add a remove button next to the new select
-        $newSelect.addClass("form-control input-xs");
-        $newSelect.prepend(
-            "<a href='#' class='remove_class' title='Remove Class'><i class='fa fa-times'></i></a>");
+        // Generate a unique ID for the new select element
+        var newSelectId = 'assign_class_id_' + selectCounter;
 
-        // Append the new select to the form
-        $(".modal-body .form-group.row:last").after($newSelect);
+        // Update the attributes of the cloned select
+        $newSelect.attr('id', newSelectId);
+        $newSelect.attr('name', newSelectId);
+
+        // Create a remove button for the new select
+        var $removeButton = $(
+            '<a href="#" class="remove_class" data-toggle="tooltip" title="Remove Class"><i class="fa fa-minus text-danger"></i></a>'
+            );
+
+        // Append the new select and remove button to the modal body
+        $('.modal-body .form-group:last').append($newSelect).append($removeButton);
+
+        selectCounter++;
     });
 
-    // Function to remove a select input
-    $(document).on("click", ".remove_class", function(e) {
+    // Remove a select when the remove button is clicked
+    $('.modal-body').on('click', '.remove_class', function(e) {
         e.preventDefault();
-        $(this).parent(".form-group").remove();
-        checkEnableButton(); // Check button state after removal
-    });
-
-
-
-    // Initial check for button state
-    checkEnableButton();
-
-    // Trigger button state check on select change
-    $(".assign_class").on("change", function() {
-        checkEnableButton();
+        $(this).prev('select').remove(); // Remove the select
+        $(this).remove(); // Remove the remove button
     });
 });
 </script>
