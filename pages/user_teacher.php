@@ -111,6 +111,9 @@
             <!-- Modal to view User data -->
             <?php include_once("../PagesContent/UserContent/CommonUser/ViewUserDataModal.php");?>
 
+            <!-- Assign teacher modal -->
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignClassModal.php");?>
+
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
