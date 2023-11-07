@@ -6,7 +6,7 @@ $(function(){
         var formData = new FormData(this);
 
         var $hideModal = $('#add_class_modal');
-        var actionUrl = '../PagesContent/ClassContent/ActionsClass/ActionAddClass.php';
+        var actionUrl = '../PagesContent/ClassContent/ActionFolder/ActionAddClass.php';
 
         $.ajax({
             url: actionUrl,
