@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $assignTeacher = new SanitizeCrudClass();
                 $assignTeacher->executePreState($sql, $params);
 
-                if($assignTeacher->getLastError() == null){
+                if($assignTeacher->getLastError() === null){
                     $response = array('success' => "Class Assigned Successfully");
                 }
                 else{
