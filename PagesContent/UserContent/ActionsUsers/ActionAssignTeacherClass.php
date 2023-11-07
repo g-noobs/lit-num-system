@@ -11,7 +11,7 @@ $conn = new Connection();
 $resposne = array();
 
 // Check if the request is a POST request
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve the data from the Ajax request
     $assign_class_id = $_POST["assign_class_id"];
     $user_teacher_id = $_POST["user_teacher_id"];
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         }else{
-            $response = array('error' =>"Error Assigning Class or connection issue");
+            $response = array('error' =>"Error Assigning Class or Query issue");
             break;
         }
     }
