@@ -35,6 +35,17 @@ class ClassEssentialsClass extends Connection{
             }
         }
     }
+    function schoolYearSelect(){
+        $sql = "SELECT sy_id, sy_start, sy_end FROM tbl_schoolyear;";
+        $result = $this->conn->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<option value='{$row['sy_id']}'>";
+                echo $row['sy_start'] ." - ".$row['sy_end'];
+                echo "</option>";
+            }
+        }
+    }
 
     function teacherSelect(){
         $sql = "SELECT user_info_id, first_name, last_name FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
