@@ -14,10 +14,8 @@ $response = array();
     // Retrieve the data from the Ajax request
     $assign_class_id = $_POST["assign_class_id"];
     $user_teacher_id = $_POST["user_teacher_id"];
-    $table = 'tbl_class_assign_teacher';
+    $table = 'tbl_teacher_class_assignment';
 
-    // Now you can process the data as needed
-    // For example, you can loop through the $assign_class_id array and perform actions with it
     foreach ($assign_class_id as $class_id) {
         // Check if the combination of user_info_id and class_id exists
     $sql = "SELECT COUNT(*) FROM $table WHERE user_info_id = '$user_teacher_id' AND class_id = '$class_id';";
@@ -64,7 +62,7 @@ $response = array();
                 }
                 else{
                     $response = array('error' =>"Error Assigning Class");
-                    break;
+                    
                 }
             }
 

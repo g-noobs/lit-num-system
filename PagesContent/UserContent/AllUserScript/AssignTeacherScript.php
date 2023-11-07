@@ -1,8 +1,6 @@
 
 <script>
 $(document).ready(function() {
-    // Initialize a counter to keep track of the number of added selects
-    var selectCounter = 1;
     var user_teacher_id = 0;
 
     $('.assign_class_btn').on('click',function() {
