@@ -1,25 +1,6 @@
-<style>
-/* Custom class for navbar */
-.btn-li {
-    margin-top: 10.5px;
-    /* Center items vertically */
-
-}
-
-table {
-    overflow-y: scroll;
-}
-
-table {
-    height: 150px;
-    overflow-y: scroll;
-}
-</style>
-
-
 <?php include_once ("../../../CommonPHPClass/ModifiedSearchStyle.php");?>
 
-<?php include_once ("../ClassModal/AddArchiveEditModal.php");?>
+
 <?php include_once ("../ClassModal/ConfirmationModal.php");?>
 
 
@@ -34,9 +15,10 @@ table {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                    <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal" modal-target="">
-                        <i class="fa fa-check-circle"></i> <span>Activate</span>
-                        </button>
+                        <!-- <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal"
+                            modal-target="">
+                            <i class="fa fa-check-circle"></i> <span>Activate</span>
+                        </button> -->
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">

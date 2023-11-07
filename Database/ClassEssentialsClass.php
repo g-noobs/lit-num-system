@@ -20,7 +20,7 @@ class ClassEssentialsClass extends Connection{
                 echo "<tr>";
                 echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['class_id'] . "'></td>";
 
-                echo "<td> <a href='#' class='edit text-primary' data-toggle='modal' data-target='#edit-class'><span class='glyphicon glyphicon-edit'></span></a></td>";
+                echo "<td> <a href='#' class='edit text-primary' data-id='" . $row['class_id'] . "'><span class='glyphicon glyphicon-edit'></span></a></td>";
 
                 
                 echo "<td>".$row['class_id']."</td>";
