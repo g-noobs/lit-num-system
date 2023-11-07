@@ -1,4 +1,4 @@
-<div class="modal fade" id="add-class">
+<div class="modal fade" id="add_class_modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -6,7 +6,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role="form" method="post" id="add_class-form">
+            <form role="form" method="post" id="add_class_form">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
@@ -15,8 +15,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="class_name">Schoole Year</label>
-                            <select name="school_yr_class" id="school_yr_class" class="form-control">
+                            <label for="sy_id">Schoole Year</label>
+                            <select name="sy_id" id="sy_id" class="form-control">
                                 <?php include_once "../Database/ClassEssentialsClass.php";
                                     $syOption = new ClassEssentialsClass();
                                     $syOption->schoolYearSelect();

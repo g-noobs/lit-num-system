@@ -78,6 +78,10 @@ body {
 
         <?php include_once("../bootstrap/js.php");?>
 
+        <!-- Scipt for adding class -->
+        <?php include_once("../PagesContent/ClassContent/AllClassScript/AddClassScript.php");?>
+
+AddClassScript.php
         <?php include_once("../PagesContent/ClassContent/AllClassScript/ArchiveScript.php");?>
 
         <?php include_once("../PagesContent/ClassContent/AllClassScript/ClassJquery.php");?>
