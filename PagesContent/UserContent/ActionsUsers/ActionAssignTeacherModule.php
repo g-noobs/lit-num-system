@@ -67,5 +67,6 @@ foreach($assign_module_id as $module_id){
         }
     }
 }
+echo json_encode($response);
 
 ?>
