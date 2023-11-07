@@ -20,13 +20,17 @@ $response = array();
     // For example, you can loop through the $assign_class_id array and perform actions with it
     foreach ($assign_class_id as $class_id) {
         // Check if the combination of user_info_id and class_id exists
-    $sql = "SELECT COUNT(class_assign_teacher_id) AS count FROM $table WHERE user_info_id = '$user_teacher_id' AND class_id = '$class_id';";
+    $sql = "SELECT COUNT(*) FROM $table WHERE user_info_id = '$user_teacher_id' AND class_id = '$class_id';";
     $result = $conn->getConnection()->query($sql);
-        if ($result) {
-            $row = $result->fetch_row();
-            $count = $row['count'];
-            
-            if ($count === 0) {
+    //set count variable
+    $count = $result->fetch_row()[0];
+        if ($result === false) {
+            $response = array('error' =>"Error executing query: " . $conn->getConnection()->error);
+            break;            
+        }else{
+            if ($count > 0) {
+                $response = array('error' =>"The combination of user and class already exists.");
+            }else{
                 $values = array(
                     'class_assign_teacher_id' => '',
                     'class_id' => $class_id,
@@ -63,9 +67,7 @@ $response = array();
                     break;
                 }
             }
-        }else{
-            $response = array('error' =>"Error Assigning Class or Query issue");
-            break;
+
         }
     }
 
