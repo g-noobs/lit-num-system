@@ -11,7 +11,7 @@ $conn = new Connection();
 $response = array();
 
 // Check if the request is a POST request
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve the data from the Ajax request
     $assign_class_id = $_POST["assign_class_id"];
     $user_teacher_id = $_POST["user_teacher_id"];
