@@ -52,9 +52,6 @@ $(document).ready(function() {
                         $("#successBanner").fadeOut("slow");
 
                     }, 1500);
-
-
-
                 } else if (responseData.hasOwnProperty('error')) {
                     $('#assign_class_modal').modal('hide');
                     $('#assign_class_form')[0].reset();
