@@ -31,7 +31,7 @@ foreach($assign_module_id as $module_id){
             $response = array('error' =>"The combination of user and module already exists.");
         }else{
             $values = array(
-                'module_assign_id ' => '',
+                'module_assign_id' => '',
                 'module_id' => $module_id,
                 'user_info_id' => $user_teacher_id,
                 'assign_date' => '',
