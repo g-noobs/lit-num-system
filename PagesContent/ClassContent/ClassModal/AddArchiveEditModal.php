@@ -6,7 +6,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role="form" method="post" id="add_class_form">
+            <form method="post" id="add_class_form">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">

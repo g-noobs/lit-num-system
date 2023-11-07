@@ -1,6 +1,6 @@
 <script>
 $(function(){
-    $("#addClassForm").on("submit", function(e){
+    $("#add_class_form").on("submit", function(e){
         e.preventDefault();
 
         var formData = new FormData(this);
