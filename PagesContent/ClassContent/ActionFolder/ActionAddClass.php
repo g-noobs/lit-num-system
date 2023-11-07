@@ -42,11 +42,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }catch(mysqli_sql_exception $e){
                 $response = array('error' => $e->getMessage());
                 echo json_encode($response);
-                exit();
             }catch(Exception $e){
                 $response = array('error' => $e->getMessage());
                 echo json_encode($response);
-                exit();
             }
 
             if($addClass->getLastError() == null){
@@ -60,7 +58,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }else{
         $response = array('error' => 'One or More Data is missing');
         echo json_encode($response);
-        exit();
     }
     
 
