@@ -18,34 +18,37 @@ $(function(){
                 var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
+                    $("#add_class_form")[0].reset();
                     $hideModal.modal('hide');
                     $('#successAlert').text(responseData.success);
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
-    
+                        location.reload();
                     }, 1500);
 
 
 
                 } else if (responseData.hasOwnProperty('error')) {
+                    $("#add_class_form")[0].reset();
                     $hideModal.modal('hide');
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-
+                        location.reload();
                     }, 1500);
                 }
             },
             error: function() {
+                $("#add_class_form")[0].reset();
                 $hideModal.modal('hide');
                 //show alert banner id = errorBanner
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-
+                    location.reload();
                 }, 1500);
             }
 

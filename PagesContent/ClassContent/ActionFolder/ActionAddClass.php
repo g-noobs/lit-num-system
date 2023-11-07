@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $table = "tbl_class";
         //for adding modified class id
         $columnCount = new ColumnCountClass();
-        $values['class_id'] = $columnCount->columnCountWhere('class_id',$table);
+        $values['class_id'] = 'CLS' . $columnCount->columnCountWhere('class_id',$table);
 
         //date added
         $values['date_added'] = date("Y-m-d");
