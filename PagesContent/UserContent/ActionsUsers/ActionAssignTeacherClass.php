@@ -8,7 +8,7 @@ include_once "../../../Database/SanitizeCrudClass.php";
 include_once "../../../Database/Connection.php";
 $conn = new Connection();
 
-$resposne = array();
+$response = array();
 
 // Check if the request is a POST request
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
