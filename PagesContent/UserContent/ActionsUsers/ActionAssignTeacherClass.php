@@ -11,7 +11,6 @@ $conn = new Connection();
 $response = array();
 
 // Check if the request is a POST request
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve the data from the Ajax request
     $assign_class_id = $_POST["assign_class_id"];
     $user_teacher_id = $_POST["user_teacher_id"];
@@ -69,10 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         }
     }
-} else {
-    // Handle non-POST requests (optional)
-    $response = array('error' =>"Invalid request method");
-}
+
 
 echo json_encode($response);
 ?>
