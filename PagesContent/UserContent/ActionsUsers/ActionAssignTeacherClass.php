@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // For example, you can loop through the $assign_class_id array and perform actions with it
     foreach ($assign_class_id as $class_id) {
         // Check if the combination of user_info_id and class_id exists
-    $query = "SELECT COUNT(*) AS count FROM your_table WHERE user_info_id = '$user_teacher_id' AND class_id = '$class_id';";
+    $query = "SELECT COUNT(*) AS count FROM $table WHERE user_info_id = '$user_teacher_id' AND class_id = '$class_id';";
     $result = $conn->getConnection()->query($sql);
         if ($result) {
             $row = $result->fetch_row();
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $values = array(
                     'class_assign_teacher_id' => '',
                     'class_id' => $class_id,
-                    'user_info_id' => $user_info_id,
+                    'user_info_id' => $user_teacher_id,
                     'assign_date' => '',
                     'assign_by_id' => '',
                 );
