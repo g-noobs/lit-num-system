@@ -28,7 +28,7 @@
                         <label for="first_name">First Name:</label>
                         <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-2">
                         <label for="middle_name">Middle Initial <span>*optional</span></label>
                         <select name="middle_name" id="middle_name" class="form-control">
                             <option value="-">-</option>
