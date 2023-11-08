@@ -23,8 +23,7 @@ $(document).ready(function() {
         } else {
             $('#archive_modal').modal('show');
 
-            $('#confirm_archive').on('click', function(e) {
-                e.preventDefault();
+            $('#confirm_archive').on('click', function() {
                 //Ajax code
                 var action_url =
                     "../PagesContent/ClassContent/ActionFolder/ActivateArchiveClassAction.php";
