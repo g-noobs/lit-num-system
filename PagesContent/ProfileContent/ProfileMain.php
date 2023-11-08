@@ -13,7 +13,7 @@
                 </button> -->
             </div>
         </div>
-        <div class="box-body container">
+        <div class="box-body fluid-container">
             <div class="row">
                 <a href='#' id="edit-icon"><span class='glyphicon glyphicon-edit'></span></a>
             </div>
