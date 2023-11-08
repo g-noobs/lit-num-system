@@ -51,7 +51,7 @@
                                         <?php 
                                         include_once("../Database/ClassEssentialsClass.php");
                                         $classTable = new ClassEssentialsClass();
-                                        $sql = "SELECT * FROM class_view;";
+                                        $sql = "SELECT * FROM class_view WHERE class_status = 1;";
                                         $classTable->classTable($sql);
                                     ?>
                                     </tbody>
