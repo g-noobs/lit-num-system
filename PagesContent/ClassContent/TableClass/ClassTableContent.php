@@ -14,8 +14,7 @@
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_class_modal">
                             <i class="fa fa-plus"></i> <span> New Class</span>
                         </button>
-                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
-                            modal-target="">
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="tooltip" title="Archive"
                             <i class="glyphicon glyphicon-trash"></i>
                         </button>
                     </div>

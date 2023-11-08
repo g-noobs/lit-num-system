@@ -1,6 +1,8 @@
 
 <script>
 $(document).ready(function() {
+    
+    var $modalControl = $('#archive_modal');
     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
     $("#select-all").on('click',function() {
 
