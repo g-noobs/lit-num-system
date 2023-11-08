@@ -76,7 +76,7 @@
                     <!-- /.box-body -->
                     <div class="modal-footer">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary pull-left" id="update-btn'">Update Profile</button>
+                            <button type="submit" class="btn btn-primary pull-left" id="update-btn">Update Profile</button>
                         </div>
                     </div>
                 </div>
