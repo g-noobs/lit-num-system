@@ -28,7 +28,7 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
-             <!-- Banner Alert -->
+            <!-- Banner Alert -->
             <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
             <!-- Content Header (Page header) -->
             <section class="content-header">
@@ -46,41 +46,8 @@
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
-
-
-        <!-- Modal HTML -->
-        <div id="messageModal" class="modal fade">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title"></h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <p><?= urldecode($_GET['msg']) ?></p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
         <?php include_once("../bootstrap/js.php")?>
-        <script>
-        // Check for message
-        var msg = <?= json_encode($_GET['msg'] ?? '') ?>;
-        if (msg == 'Profile updated!') {
-            $('errorAlert').hide();
-            $('#successAlert').text(msg);
-            $('#successBanner').show();
-            setTimeout(function(){
-                $('#successBanner').fadeOut();
-            }, 2500);
 
-            
-        }
-        </script>
         <?php include_once("../PagesContent/ProfileContent/JqueryProfile.php");?>
 
         <?php include_once "../CommonContent/CommonAllScript.php"?>
