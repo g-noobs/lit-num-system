@@ -74,6 +74,7 @@
 
                         <div class="row">
                             <div class="input-group col-sm-5">
+                                <label for="Password:"></label>
                                 <input type="password" name="password" id="password" required class="form-control"
                                     placeholder="Password">
                                 <span class="input-group-btn">
