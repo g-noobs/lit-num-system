@@ -13,9 +13,10 @@
                 </button> -->
             </div>
         </div>
-        <div class="box-body" style="">
-            <div class="row" style="margin-left:20px;"><a href='#' id="edit-icon"><span
-                        class='glyphicon glyphicon-edit'></span></a></div>
+        <div class="box-body container">
+            <div class="row">
+                <a href='#' id="edit-icon"><span class='glyphicon glyphicon-edit'></span></a>
+            </div>
 
             <form id="edit_profile_form" method="post">
 
