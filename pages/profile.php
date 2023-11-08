@@ -33,7 +33,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <b style="color:#3D3848;">Admin Profile</b>
+                    
 
                 </h1>
             </section>
