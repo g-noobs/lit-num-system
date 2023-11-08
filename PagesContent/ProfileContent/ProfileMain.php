@@ -17,54 +17,69 @@
             <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
                     class='glyphicon glyphicon-edit'></span></a>
 
-            <form id="edit_profile_form" method="post">
-
-                <div class="form-group row">
-                    <div class="col-xs-5">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+            <form id="addUserForm">
+                <div class="modal-body">
+                    <div class="box-body box-warning">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <label for="last_name">Enter Last Name:</label>
+                                    <input type="text" name="last_name" class="form-control input-sm"
+                                        placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <label for="first_name">Enter First Name:</label>
+                                    <input type="text" name="first_name" class="form-control input-sm"
+                                        placeholder="First Name" required autocomplete="given-name" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label for="user_middle_initial">Middle Initial</label>
+                                    <select name="user_middle_initial" id="user_middle_initial"
+                                        class="form-control input-sm">
+                                        <option value="">-</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="gender">Select Gender:</label>
+                                    <select class="form-control input-sm" name="gender" placeholder="Gender" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="None">None</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="phone_num">Phone:</label>
+                                    <input type="text" class="form-control input-sm" name="phone_num" id="phone_num"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="email">Enter Email Address:</label>
+                                    <input type="email" name="email" class="form-control input-sm" placeholder="Email"
+                                        required autocomplete="off" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-5">
-                        <label for="first_name">First Name:</label>
-                        <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
-                    </div>
-                    <div class="col-xs-2">
-                        <label for="middle_name">Middle Initial <span>*optional</span></label>
-                        <select name="middle_name" id="middle_name" class="form-control">
-                            <option value="-">-</option>
-                        </select>
+                    <!-- /.box-body -->
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success pull-left">Update Profile</button>
+                            <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-
-                </div>
-                <div class="form-group">
-                    <label for="gender">Select Gender:</label>
-                    <select class="form-control" name="gender">
-                        <option>MALE</option>
-                        <option>FEMALE</option>
-                        <option>None</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="email">Enter Email Address:</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputPassword1"
-                        placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="date">Select Birthday:</label>
-                    <input type="date" name="date" class="form-control" id="exampleInputPassword1"
-                        placeholder="Birthdate">
-                </div>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password: </label>
-                    <input type="text" name="password" class="form-control" placeholder="Passoword">
-                </div>
-                <button class="btn btn-primary pull-left" id="update-btn" type="submit">Update Profile</button>
             </form>
         </div>
     </div>
