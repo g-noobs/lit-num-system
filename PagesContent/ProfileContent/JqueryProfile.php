@@ -51,19 +51,22 @@ $(function() {
 });
 </script>
 
-<script>
-document.getElementById('togglePassword').addEventListener('click', function() {
-    var passwordInput = document.getElementById('password');
-    var passwordIcon = document.getElementById('password-icon');
 
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        passwordIcon.classList.remove('glyphicon-eye-open');
-        passwordIcon.classList.add('glyphicon-eye-close');
-    } else {
-        passwordInput.type = 'password';
-        passwordIcon.classList.remove('glyphicon-eye-close');
-        passwordIcon.classList.add('glyphicon-eye-open');
-    }
+<!-- hide password srcript -->
+<script>
+$(document).ready(function() {
+    passwordInput.attr('type', 'password');
+    $('#togglePassword').click(function() {
+        var passwordInput = $('#password');
+        var passwordIcon = $('#password-icon');
+
+        if (passwordInput.attr('type') === 'password') {
+            passwordInput.attr('type', 'text');
+            passwordIcon.removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
+        } else {
+            passwordInput.attr('type', 'password');
+            passwordIcon.removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
+        }
+    });
 });
 </script>
