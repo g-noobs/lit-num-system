@@ -15,10 +15,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <!-- <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal"
-                            modal-target="">
+                        <button id="activate_btn" type="button" class="btn btn-success">
                             <i class="fa fa-check-circle"></i> <span>Activate</span>
-                        </button> -->
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
