@@ -75,7 +75,7 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <div class="input-group">
-                                    <label for="Password:"></label>
+                                    <label for="Password:">Password: </label>
                                     <input type="password" name="password" id="password" required class="form-control"
                                         placeholder="Password">
                                     <span class="input-group-btn">
