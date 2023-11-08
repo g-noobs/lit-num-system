@@ -20,11 +20,11 @@
             <form id="edit_profile_form" method="post">
 
                 <div class="form-group row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-5">
                         <label for="last_name">Last Name:</label>
                         <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-5">
                         <label for="first_name">First Name:</label>
                         <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
                     </div>
