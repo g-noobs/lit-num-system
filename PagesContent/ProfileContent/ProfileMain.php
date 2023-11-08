@@ -72,7 +72,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="row">
                             <div class="input-group col-sm-5">
                                 <input type="password" name="password" id="password" required class="form-control"
                                     placeholder="Password">
