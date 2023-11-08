@@ -84,6 +84,7 @@
 
                         <div class="row">
                             <div class="col-sm-6 form-group">
+                                <label for="password">Password</label>
                                 <div class="input-group">
                                     <input type="password" name="password" id="password" required
                                         class="form-control" placeholder="Password">
@@ -97,6 +98,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6 form-group">
+                                <label for="confirm_pass">Confirm Password</label>
                                 <div class="input-group">
                                     <input type="password" name="confirmPassword" id="confirmPassword" required
                                         class="form-control" placeholder="Confirm Password">
