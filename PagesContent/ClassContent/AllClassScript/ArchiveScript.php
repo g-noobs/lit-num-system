@@ -21,7 +21,6 @@ $(document).ready(function() {
             $('#no_data_selected_modal').modal('show');
         } else {
             $modalControl.modal('show');
-
             $('#confirm_archive').on('click', function() {
                 //Ajax code
                 var action_url =
