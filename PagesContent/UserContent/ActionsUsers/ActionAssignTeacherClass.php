@@ -38,7 +38,7 @@ $response = array();
                 );
                 //adding data for class_assign_teacher_id
                 $columnCountClass = new ColumnCountClass();
-                $values['class_assign_teacher_id'] = "CLS" . $columnCountClass->columnCountWhere("class_assign_teacher_id", $table);
+                $values['class_assign_teacher_id'] = "CAT" . $columnCountClass->columnCountWhere("class_assign_teacher_id", $table);
                 //assign date
                 $currentDate = new DateTime();
                 $values['assign_date'] = $currentDate->format('Y-m-d H:i:s');
