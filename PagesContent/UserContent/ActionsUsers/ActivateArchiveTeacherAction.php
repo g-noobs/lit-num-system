@@ -1,5 +1,4 @@
 <?php
-
 include_once "../../../Database/Connection.php";
 
 $table = "tbl_user_info";

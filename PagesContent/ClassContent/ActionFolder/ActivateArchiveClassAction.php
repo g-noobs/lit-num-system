@@ -1,8 +1,8 @@
 <?php 
 include_once "../../../Database/Connection.php";
 
-
 $table = "tbl_class";
+
 if($_SERVER['REQUEST_METHOD'] === "POST"){
     $selectedIds = $_POST['selectedIds'];
     $status = $_POST['status'];
