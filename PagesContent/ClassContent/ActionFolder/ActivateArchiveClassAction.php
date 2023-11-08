@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 
     //update the status for the selected IDs
     $updateQuery = "UPDATE $table SET class_status = '$status' WHERE class_id IN ('" . implode("','", $selectedIds) . "')";
-    $conn = new Connect();
+    $conn = new Connection();
 
     $result = $conn->getConnection()->query($updateQuery);
     if ($result === TRUE) {
