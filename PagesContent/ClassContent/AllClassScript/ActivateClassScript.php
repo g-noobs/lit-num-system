@@ -42,7 +42,7 @@ $(document).ready(function() {
                             $('#successBanner').show();
                             setTimeout(function() {
                                 $("#successBanner").fadeOut("slow");
-                                // location.reload();
+                                location.reload();
                             }, 1500);
 
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
                             $('#errorBanner').show();
                             setTimeout(function() {
                                 $("#errorBanner").fadeOut("slow");
-                                // location.reload();
+                                location.reload();
                             }, 1500);
                         }
                     },
