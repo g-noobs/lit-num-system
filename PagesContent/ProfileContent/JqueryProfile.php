@@ -37,24 +37,17 @@ $(document).ready(function() {
 
 
 <script>
-$(document).ready(function() {
-    // Click event for the edit icon
-    $('#edit-icon').click(function() {
-        // Get the row data
-        var userId = $(this).closest('tr').find('td:eq(1)')
-            .text(); // Assuming the user_info_Id is in the second column (index 1)
-        var name = $(this).closest('tr').find('td:eq(2)').text();
-        var gender = $(this).closest('tr').find('td:eq(3)').text();
-        var email = $(this).closest('tr').find('td:eq(4)').text();
-        var date = $(this).closest('tr').find('td:eq(5)').text();
-        var user = $(this).closest('tr').find('td:eq(6)').text();
+$(function() {
+    // jQuery to populate the select element with uppercase letters of the alphabet
+    var selectElement = $("#user_middle_initial, #guardian_middle_name");
 
-        // Populate the modal fields with the data
-        $('#activate-user').find('[name="userId"]').val(userId);
-        $('#archive-user').find('[name="userId"]').val(userId);
-
-        // Show the modal
-        $('#activate-user').modal('show');
-    });
+    // Loop to add uppercase letters A to Z
+    for (var i = 65; i <= 90; i++) {
+        var letter = String.fromCharCode(i);
+        selectElement.append($("<option>", {
+            value: letter,
+            text: letter
+        }));
+    }
 });
 </script>

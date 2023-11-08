@@ -65,7 +65,6 @@
                     <input type="text" name="password" class="form-control" placeholder="Passoword">
                 </div>
                 <button class="btn btn-primary pull-left" id="update-btn" type="submit">Update Profile</button>
-                <button class="btn btn-default pull-right" id="cancel_btn" type="cancel">Cancel</button>
             </form>
         </div>
     </div>
