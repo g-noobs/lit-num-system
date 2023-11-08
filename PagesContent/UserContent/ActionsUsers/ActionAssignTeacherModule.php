@@ -39,7 +39,7 @@ foreach($assign_module_id as $module_id){
             );
             //adding data for module_assign_teacher_id
             $columnCountClass = new ColumnCountClass();
-            $values['module_assign_id'] = "MOD" . $columnCountClass->columnCountWhere("module_assign_id", $table);
+            $values['module_assign_id'] = "MAT" . $columnCountClass->columnCountWhere("module_assign_id", $table);
             //assign date
             $currentDate = new DateTime();
             $values['assign_date'] = $currentDate->format('Y-m-d H:i:s');
