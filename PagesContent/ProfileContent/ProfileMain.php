@@ -29,7 +29,7 @@
                         <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
                     </div>
                     <div class="col-xs-4">
-                        <label for="middle_name">Middle Initial <span class="help-block">*optional</span></label>
+                        <label for="middle_name">Middle Initial <span>*optional</span></label>
                         <select name="middle_name" id="middle_name">
                             <option value="-">-</option>
                         </select>
