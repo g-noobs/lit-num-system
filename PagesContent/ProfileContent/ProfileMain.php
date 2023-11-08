@@ -72,14 +72,16 @@
                             </div>
                         </div>
 
-                        <div class="input-group">
-                            <input type="password" name="password" id="password" required class="form-control"
-                                placeholder="Password">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button" id="togglePassword">
-                                    <span class="glyphicon glyphicon-eye-open" id="password-icon"></span>
-                                </button>
-                            </span>
+                        <div class="form-group row">
+                            <div class="input-group col-sm-5">
+                                <input type="password" name="password" id="password" required class="form-control"
+                                    placeholder="Password">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" id="togglePassword">
+                                        <span class="glyphicon glyphicon-eye-open" id="password-icon"></span>
+                                    </button>
+                                </span>
+                            </div>
                         </div>
 
                     </div>
