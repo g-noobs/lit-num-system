@@ -50,3 +50,20 @@ $(function() {
     }
 });
 </script>
+
+<script>
+document.getElementById('togglePassword').addEventListener('click', function() {
+    var passwordInput = document.getElementById('password');
+    var passwordIcon = document.getElementById('password-icon');
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordIcon.classList.remove('glyphicon-eye-open');
+        passwordIcon.classList.add('glyphicon-eye-close');
+    } else {
+        passwordInput.type = 'password';
+        passwordIcon.classList.remove('glyphicon-eye-close');
+        passwordIcon.classList.add('glyphicon-eye-open');
+    }
+});
+</script>

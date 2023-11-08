@@ -67,16 +67,28 @@
                                 <div class="form-group">
                                     <label for="email">Enter Email Address:</label>
                                     <input type="email" name="email" class="form-control input-sm" placeholder="Email"
-                                        required autocomplete="off"/>
+                                        required autocomplete="off" />
                                 </div>
                             </div>
                         </div>
+
+                        <div class="input-group">
+                            <input type="password" name="password" id="password" required class="form-control"
+                                placeholder="Password">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="togglePassword">
+                                    <span class="glyphicon glyphicon-eye-open" id="password-icon"></span>
+                                </button>
+                            </span>
+                        </div>
+
                     </div>
-                    
+
                     <!-- /.box-body -->
                     <div class="modal-footer">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary pull-left" id="update-btn">Update Profile</button>
+                            <button type="submit" class="btn btn-primary pull-left" id="update-btn">Update
+                                Profile</button>
                         </div>
                     </div>
                 </div>
