@@ -83,9 +83,8 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-6 form-group">
+                            <div class="form-group">
                                 <div class="input-group">
-                                    <label for="Password:">Password: </label>
                                     <input type="password" name="password" id="password" required class="form-control"
                                         placeholder="Password">
                                     <span class="input-group-btn">
@@ -97,14 +96,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 form-group">
+                            <div class="form-group">
                                 <div class="input-group">
                                     <label for="confirmPassword:">Confirm Password: </label>
-                                    <input type="password" name="confirmPassword" id="confirmPassword" required class="form-control"
-                                        placeholder="Confirm Password">
+                                    <input type="password" name="confirmPassword" id="confirmPassword" required
+                                        class="form-control" placeholder="Confirm Password">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="button" id="toggleConfirmPassword">
-                                            <span class="glyphicon glyphicon-eye-open" id="confirm-password-icon"></span>
+                                            <span class="glyphicon glyphicon-eye-open"
+                                                id="confirm-password-icon"></span>
                                         </button>
                                     </span>
                                 </div>
