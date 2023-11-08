@@ -57,7 +57,7 @@
                     value="'.$row['password'].'">
             </div>
             <button class="btn btn-primary pull-left" id="update-btn" type="submit">Update Profile</button>
-            <button class="btn btn-default pull-left" id="cancel_btn">Cancel</button>
+            <button class="btn btn-default pull-right" id="cancel_btn">Cancel</button>
         </form>
 
 
