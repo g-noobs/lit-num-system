@@ -55,7 +55,6 @@ $(function() {
 <!-- hide password srcript -->
 <script>
 $(document).ready(function() {
-    passwordInput.attr('type', 'password');
     $('#togglePassword').click(function() {
         var passwordInput = $('#password');
         var passwordIcon = $('#password-icon');
