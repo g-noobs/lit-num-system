@@ -2,7 +2,7 @@
 include_once "../../../Database/Connection.php";
 
 $table = "tbl_class";
-if($_SERVER['REQUEST_METHOD'] === "POST"){
+// if($_SERVER['REQUEST_METHOD'] === "POST"){
     $selectedIds = $_POST['selectedIds'];
     $status = $_POST['status'];
 
@@ -22,8 +22,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         );
     }
 
-}else{
-    $response = array('error' => 'POSSIBLE POST ISSUE');
-}
+// }else{
+//     $response = array('error' => 'POSSIBLE POST ISSUE');
+// }
 echo json_encode($response);
 ?>
