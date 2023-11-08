@@ -14,9 +14,8 @@
             </div>
         </div>
         <div class="box-body">
-            <div class="container">
-                <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span class='glyphicon glyphicon-edit'></span></a>
-            </div>
+            <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
+                    class='glyphicon glyphicon-edit'></span></a>
 
             <form id="edit_profile_form" method="post">
 
