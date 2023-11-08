@@ -73,15 +73,17 @@
                         </div>
 
                         <div class="row">
-                            <div class="input-group col-sm-5">
-                                <label for="Password:"></label>
-                                <input type="password" name="password" id="password" required class="form-control"
-                                    placeholder="Password">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" id="togglePassword">
-                                        <span class="glyphicon glyphicon-eye-open" id="password-icon"></span>
-                                    </button>
-                                </span>
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                    <label for="Password:"></label>
+                                    <input type="password" name="password" id="password" required class="form-control"
+                                        placeholder="Password">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="togglePassword">
+                                            <span class="glyphicon glyphicon-eye-open" id="password-icon"></span>
+                                        </button>
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
