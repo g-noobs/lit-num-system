@@ -17,6 +17,9 @@
             </div>
         </div>
         <div class="box-body" style="">
+            <div class="row" style="margin-left:20px;"><a href='#' id="edit-icon"><span
+                        class='glyphicon glyphicon-edit'></span></a></div>
+
             <form role="form" action="../PagesContent/ProfileContent/ActionProfile.php" onsubmit="return validateForm()"
                 method="post">
 
@@ -60,6 +63,8 @@
                         placeholder="Passoword" value="'.$row['password'].'">
                 </div>
             </form>
+
+            <button class="btn btn-primary" id="update-btn" type="submit">Update Profile</button>
         </div>
 
         <div class="box-footer" style="">
