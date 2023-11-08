@@ -79,6 +79,7 @@
                                         placeholder="Username">
                                 </div>
                             </div>
+                            <div class="col-sm-6"></div>
                         </div>
 
                         <div class="row">
