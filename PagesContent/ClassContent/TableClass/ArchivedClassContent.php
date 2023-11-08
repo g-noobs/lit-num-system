@@ -15,7 +15,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <button id="activate_btn" type="button" class="btn btn-success">
+                        <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal" data-target="">
                             <i class="fa fa-check-circle"></i> <span>Activate</span>
                         </button>
                     </div>
@@ -76,5 +76,7 @@
 </div>
 
 <?php include_once("../AllClassScript/ClassJquery.php");?>
-<?php include_once("../AllClassScript/ArchiveScript.php");?>
+
+<?php include_once("../AllClassScript/ActivateClassScript.php");?>
+
 <?php include_once("../../../CommonContent/CommonAllScript.php");?>
