@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="box-body">
-            <div class="row">
+            <div class="container">
                 <a href='#' id="edit-icon"><span class='glyphicon glyphicon-edit'></span></a>
             </div>
 
