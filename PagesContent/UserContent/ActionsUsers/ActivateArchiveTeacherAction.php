@@ -10,9 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update the status for the selected IDs
     $updateQuery = "UPDATE $table SET status_id = '$status' WHERE user_info_id IN ('" . implode("','", $selectedIds) . "')";
-
-    
-
     $conn= new Connection();
     
     $result = $conn->getConnection()->query($updateQuery);
