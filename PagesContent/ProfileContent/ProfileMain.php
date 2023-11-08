@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="box">
+    <div class="box box-warning container">
         <div class="box-header with-border">
             <h3 class="box-title"><b style="color:#3D3848;">Admin Profile</b></h3>
             <div class="box-tools pull-right">
@@ -13,7 +13,7 @@
                 </button> -->
             </div>
         </div>
-        <div class="box-body fluid-container">
+        <div class="box-body">
             <div class="row">
                 <a href='#' id="edit-icon"><span class='glyphicon glyphicon-edit'></span></a>
             </div>
