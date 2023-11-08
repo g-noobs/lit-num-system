@@ -65,7 +65,7 @@ body {
             <br>
             <?php include_once ("../PagesContent/ClassContent/ClassModal/ConfirmationModal.php"); ?>
 
-            <?php include_once ("../PagesContent/ClassContent/ClassModal/AddArchiveEditModal.php");?>
+            <?php include_once ("../PagesContent/ClassContent/ClassModal/AddEditModal.php");?>
 
 
             <!-- Main content -->

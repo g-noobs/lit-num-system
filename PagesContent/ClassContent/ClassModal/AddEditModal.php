@@ -41,7 +41,7 @@
 
 
 
-<div class="modal fade" id="edit-class">
+<div class="modal fade" id="edit_class_modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -49,8 +49,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form role="form" action="../PagesContent/ClassContent/ActionFolder/EditClassAction.php"
-                onsubmit="return validateForm()" method="post">
+            <form id="edit_class_form" method="post">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
