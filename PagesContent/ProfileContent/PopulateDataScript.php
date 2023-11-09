@@ -12,6 +12,7 @@ $confirm_password = $('input[name="confirmPassword"]');
 $.ajax({
     type: "post",
     url: "../PagesContent/ProfileContent/ActionPopulateAdminEdit.php",
+    data: 1,
     success: function(response){
         var responseData = JSON.parse(response);
 
