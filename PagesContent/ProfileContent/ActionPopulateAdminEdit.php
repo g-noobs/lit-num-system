@@ -2,12 +2,12 @@
 session_start();
 include_once "../../Database/Connection.php";
 $connection = new Connection();
-$conn = $connection->getConnection();
+
 $table = "user_info_view";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_SESSION['id'];
     $sql = "SELECT * FROM $table WHERE user_info_id = '$id'";
-    $result = $conn->query($sql);
+    $result = $connection->getConnection()->query($sql);
     
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()) {
