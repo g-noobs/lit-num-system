@@ -17,11 +17,11 @@ $(function(){
                 $('select[name="gender"]').val(responseData.gender);
                 $('input[name="phone_num"]').val(responseData.phone_num);
                 $('input[name="email"]').val(responseData.email);
-                $('input[name="street_address"]').val(responseData.street_address);
-                $('input[name="barangay_address"]').val(responseData.barangay_address);
-                $('input[name="city_address"]').val(responseData.city_address);
-                $('input[name="province_address"]').val(responseData.province_address);
-                $('input[name="zip_code"]').val(responseData.zip_code);
+                $('input[name="street_address"]').val(responseData.street);
+                $('input[name="barangay_address"]').val(responseData.barangay);
+                $('input[name="city_address"]').val(responseData.municipal_city);
+                $('input[name="province_address"]').val(responseData.province);
+                $('input[name="zip_code"]').val(responseData.postal_code);
             },
             error:function(){
                 console.log('error');
