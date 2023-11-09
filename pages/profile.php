@@ -49,6 +49,9 @@
         <?php include_once("../bootstrap/js.php")?>
 
         <?php include_once("../PagesContent/ProfileContent/JqueryProfile.php");?>
+        
+        //populate data script
+        <?php include_once("../PagesContent/ProfileContent/PopulateDataScript.php");?>
 
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>

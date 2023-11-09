@@ -21,11 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'gender' => $row['gender'],
                     'phone_num' => $row['contact_num'],
                     'email' => $row['email'],
-                    'street' => $row['street_address'],
-                    'barangay' => $row['barangay_address'],
-                    'municipal_city' => $row['city_address'],
-                    'province' => $row['province_address'],
-                    'postal_code' => $row['zip_code'],
+                    'street' => $row['street'],
+                    'barangay' => $row['barangay'],
+                    'municipal_city' => $row['municipal_city'],
+                    'province' => $row['province'],
+                    'postal_code' => $row['postalcode'],
                 );
             }
             echo json_encode($response);

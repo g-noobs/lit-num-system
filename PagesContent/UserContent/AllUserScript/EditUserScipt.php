@@ -13,8 +13,8 @@ $(function(){
                 $('input[name="personal_id"]').val(responseData.personal_id);
                 $('input[name="last_name"]').val(responseData.last_name);
                 $('input[name="first_name"]').val(responseData.first_name);
-                $('#user_middle_initial').val(responseData.middle_initial);
-                $('#gender').val(responseData.gender);
+                $('select[name="user_middle_initial"]').val(responseData.middle_initial);
+                $('select[name="gender"]').val(responseData.gender);
                 $('input[name="phone_num"]').val(responseData.phone_num);
                 $('input[name="email"]').val(responseData.email);
                 $('input[name="street_address"]').val(responseData.street_address);
