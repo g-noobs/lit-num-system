@@ -17,7 +17,7 @@
             <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
                     class='glyphicon glyphicon-edit'></span></a>
 
-            <form id="addUserForm">
+            <form id="editUserForm">
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="row">
