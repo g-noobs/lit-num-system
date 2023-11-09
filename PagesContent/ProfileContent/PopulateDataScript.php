@@ -27,9 +27,25 @@ $(function() {
             $password.val(responseData.password);
             $confirm_password.val(responseData.password);
 
+            if (responseData.hasOwnProperty('error')) {
+                $('#errorAlert').text(responseData.error);
+                $('#errorBanner').show();
+                setTimeout(function() {
+                    $("#errorBanner").fadeOut("slow");
+                    location.reload();
+                }, 1500);
+            }
+
         },
         error: function() {
             console.log('error');
+            $('#errorAlert').text(
+                'An error occurred during the AJAX request.');
+            $('#errorBanner').show();
+            setTimeout(function() {
+                $("#errorBanner").fadeOut("slow");
+                location.reload();
+            }, 1500);
         }
     });
 });

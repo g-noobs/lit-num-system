@@ -6,7 +6,7 @@ $connection = new Connection();
 $table = "user_info_view";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_SESSION['id'];
-    $sql = "SELECT * FROM $table WHERE user_info_id = '$id'";
+    $sql = "SELECT * FROM $table WHERE user_info_id = '$id';";
     $result = $connection->getConnection()->query($sql);
     
     if($result->num_rows > 0){
@@ -26,5 +26,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }else{
     $response = array('error' => 'Possible post issue');
 }
-echo json_decode($resonse);
+echo json_encode($resonse);
 ?>
