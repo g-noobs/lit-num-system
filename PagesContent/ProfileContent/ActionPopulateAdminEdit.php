@@ -26,5 +26,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }else{
     $response = array('error' => 'Possible post issue');
 }
-echo json_encode($resonse);
+echo json_encode($response);
 ?>
