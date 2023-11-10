@@ -1,5 +1,10 @@
 <script>
 $(document).ready(function() {
+
+    // Add custom validation method for numbers and letters only
+    $.validator.addMethod("alphanumeric", function(value, element) {
+        return this.optional(element) || /^[a-zA-Z0-9]+$/.test(value);
+    }, "Please enter only letters and numbers.");
     // Add custom validation method for names without numbers
     $.validator.addMethod("noNumbers", function(value, element) {
         return this.optional(element) || /^[^\d]+$/.test(value);
@@ -20,7 +25,7 @@ $(document).ready(function() {
                 noNumbers: true
             },
             personal_id: {
-                onlyNumbers: true
+                alphanumeric: true
             },
             phone_num: {
                 onlyNumbers: true
@@ -40,6 +45,11 @@ $(document).ready(function() {
         },
         messages: {
             // Custom error messages can be added here if needed
+        },
+        errorPlacement: function(error, element) {
+            // Display error messages in the div with the corresponding id
+            var errorId = element.attr('name') + "_error";
+            error.appendTo("#formError");
         },
         submitHandler: function(form) {
             // Form submission logic goes here
