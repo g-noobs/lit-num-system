@@ -6,6 +6,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title" id="modal-title">Enter Student Information</h4>
+                <div id="formError" style="background-color: red; display:none;"></div>
             </div>
             <form id="addUserForm">
                 <div class="modal-body">
@@ -27,11 +28,8 @@
                                     placeholder="First Name" required autocomplete="given-name" />
                             </div>
                             <div class="col-xs-3">
-                                <label for="user_middle_initial">Middle Initial</label>
-                                <select name="user_middle_initial" id="user_middle_initial"
-                                    class="form-control input-xs">
-                                    <option value="">-</option>
-                                </select>
+                                <label for="user_middle_initial">Middle Initial (*optionale)</label>
+                                <input type="text" name="user_middle_initial" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
