@@ -49,7 +49,7 @@ $(document).ready(function() {
         errorPlacement: function(error, element) {
             // Display error messages in the div with the corresponding id
             var errorId = element.attr('name') + "_error";
-            error.appendTo("#formError");
+            error.appendTo("#" + errorId);
         },
         submitHandler: function(form) {
             // Form submission logic goes here
