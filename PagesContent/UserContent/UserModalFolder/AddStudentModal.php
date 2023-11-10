@@ -28,8 +28,8 @@
                                     placeholder="First Name" required autocomplete="given-name" />
                             </div>
                             <div class="col-xs-3">
-                                <label for="user_middle_initial">Middle Initial (*optionale)</label>
-                                <input type="text" name="user_middle_initial" class="form-control">
+                                <label for="user_middle_initial">Middle Initial (*optional)</label>
+                                <input type="text" name="user_middle_initial" class="form-control input-xs">
                             </div>
                         </div>
                         <div class="form-group row">
