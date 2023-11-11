@@ -5,9 +5,10 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">Assigned Class
-                    <span id="user_id_data"></span>
+                <h4 class="modal-title">Assigned Class:
+                    <span id="user_id_data_class"></span>
                 </h4>
+                <code class="text-warning" id="assign_class_error" style="display: none;"></code>
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
@@ -39,8 +40,8 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">Assigned Module
-                    <span id="user_id_data"></span>
+                <h4 class="modal-title">Assigned Module:
+                    <span id="user_id_data_module"></span>
                 </h4>
             </div>
             <!-- /.modal-header -->

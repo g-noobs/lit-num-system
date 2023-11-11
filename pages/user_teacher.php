@@ -117,6 +117,9 @@
             <!-- Assign module to teacher modal -->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignModuleModal.php");?>
 
+            <!-- View Assigned Modal -->
+            <?php include_once("../PagesContent/UserContent/UserModalFolder/ViewAssignedModal.php");?>
+
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <!-- Small boxes (Stat box) -->
@@ -159,6 +162,8 @@
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
 
+        <!-- Script view for viewing assigned data and modal -->
+        <?php include_once "../PagesContent/UserContent/AllUserScript/ViewModuleClassScript.php";?>
         <!-- 
         <script>
         // Check for saved user type
