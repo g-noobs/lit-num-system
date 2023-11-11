@@ -38,6 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 if (strlen($data) !== 1) {
                     return false; // Validation failed
                 }
+            }
             return true;
         }
         // Validate and sanitize form data
