@@ -8,6 +8,16 @@
                 <h4 class="modal-title" id="modal-title">Enter Student Information</h4>
                 <div id="formError" style="background-color: red; display:none;"></div>
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert"
+                        style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        <span id="add_user_modal_alert_text"></span>
+                    </div>
+                </div>
+            </div>
             <form id="addUserForm">
                 <div class="modal-body">
                     <div class="box-body box-warning">
@@ -43,7 +53,8 @@
                             </div>
                             <div class="col-xs-4">
                                 <label for="phone_num">Phone:</label>
-                                <input type="tel" class="form-control input-xs" name="phone_num" required placeholder="Phone Number">
+                                <input type="tel" class="form-control input-xs" name="phone_num" required
+                                    placeholder="Phone Number">
                             </div>
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>
@@ -70,12 +81,12 @@
                             <div class="col-xs-4">
                                 <label for="city">City</label>
                                 <input type="text" name="city_address" class="form-control input-xs" placeholder="City"
-                                    required/>
+                                    required />
                             </div>
                             <div class="col-xs-4">
                                 <label for="province_address">Province</label>
                                 <input type="text" name="province_address" class="form-control input-xs"
-                                    placeholder="Province"/>
+                                    placeholder="Province" />
                             </div>
                             <div class="col-xs-4">
                                 <label for="zip_code">Zip Code</label>

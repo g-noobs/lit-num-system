@@ -9,121 +9,177 @@ include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
 include_once "../../../Database/SanitizeCrudClass.php";
 
+function test_input($data, $type) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    if ($type == 'name') {
+        // Allow only letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/", $data)) {
+            return "Invalid characters in $type.";
+        }
+    } elseif ($type == 'address') {
+        // Allow alphanumeric and whitespace
+        if (!preg_match("/^[a-zA-Z0-9 ]*$/", $data)) {
+            return "Invalid characters in $type.";
+        }
+    } elseif ($type == 'phone') {
+        // Allow only numbers
+        if (!preg_match("/^[0-9]*$/", $data)) {
+            return "Invalid characters in $type.";
+        }
+    }
+    return $data;
+}
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['last_name']) || isset($_POST['first_name']) || isset($_POST['gender']) || isset($_POST['phone_num']) || isset($_POST['email'])){
-        $values = array(
-            'user_info_id'=>'',
-            'first_name' => trim($_POST['first_name']),
-            'last_name' =>trim($_POST['last_name']),
-            'middle_name' => $_POST['user_middle_initial'],
-            'gender' => $_POST['gender'],
-            'status_id' => '1',
-            'user_level_id' => '0',
-            'added_byID'=>'',
-            'date_added' => ''
-        );
-        $table = "tbl_user_info";
+        // Validate and sanitize form data
+        $last_name = test_input($_POST["last_name"], 'name');
+        $first_name = test_input($_POST["first_name"], 'name');
+        $user_middle_initial = test_input($_POST["user_middle_initial"], 'name');//possible No validation for select
+        $gender = test_input($_POST["gender"], 'name'); //possible No validation for select
+        $phone_num = test_input($_POST["phone_num"], 'phone');
+        $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 
-        //adding data for user_info_id
-        $columnCountClass = new ColumnCountClass();
-        $values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("user_info_id",$table);
-        
-        //adding data for added_byID
-        $values['added_byID']= $_SESSION['id'];
+        //check for validation errors
+        $errors = array();
+        if ($last_name === false) {
+            $errors[] = "Invalid characters in Last Name.";
+        }
+        if ($first_name === false) {
+            $errors[] = "Invalid characters in First Name.";
+        }
+        if($user_middle_initial === false){
+            $errors[] = "Invalid characters in Middle Initial.";
+        }
+        if($gender === false){
+            $errors[] = "Invalid characters in Gender.";
+        }
+        if ($phone_num === false) {
+            $errors[] = "Invalid characters in Phone.";
+        }
+        if ($email === false) {
+            $errors[] = "Invalid email format.";
+        }
+        if (!empty($errors)) {
+            echo json_encode(['error' => $errors]);
+            exit();
+        }else{    
+            $values = array(
+                'user_info_id'=>'',
+                'first_name' => trim($_POST['first_name']),
+                'last_name' =>trim($_POST['last_name']),
+                'middle_name' => $_POST['user_middle_initial'],
+                'gender' => $_POST['gender'],
+                'status_id' => '1',
+                'user_level_id' => '0',
+                'added_byID'=>'',
+                'date_added' => ''
+            );
+            $table = "tbl_user_info";
 
-        //adding data for date_added
-        $currentDate = new DateTime();
-        $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
+            //adding data for user_info_id
+            $columnCountClass = new ColumnCountClass();
+            $values['user_info_id'] = "USR". $columnCountClass->columnCountWhere("user_info_id",$table);
 
-        //setting validation class
-        $validate = new CommonValidationClass();
-        $data = array($values['first_name'], $values['last_name']);
-        $column = array('first_name', 'last_name');
-        $isValid = $validate -> validateColumns($table, $column, $data);
+            //adding data for added_byID
+            $values['added_byID']= $_SESSION['id'];
 
-        if ($isValid) {
-            //collect all comlumns
-            $columns = implode(', ', array_keys($values));
-            //set number of question marks
-            $questionMarkString = implode(',', array_fill(0, count($values), '?'));
-            //set sql
-            $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
-            // set parameters
-            $params = array_values($values);
-            //set sanitize class
-            $addNewUser = new SanitizeCrudClass();
-            try{
-                $addNewUser->executePreState($sql, $params);
-                //!if adding user is correct then procced with creating credentials
-                if($addNewUser->getLastError() === null){
-                    $table = "tbl_credentials";
-                    //set credential id
-                    $credentials_id = "CRED".$columnCountClass->columnCountWhere("credentials_id",$table);
-                    //set username
-                    $username = $_POST['email'];
-                    //set password
-                    $phpClass = new PHPClass();
-                    $password = $phpClass->generatePassword(10);
-                    //set user_info_id
-                    $user_info_id = $values['user_info_id'];
-                    //set query
-                    $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) VALUES(?,?,?,?);";
-                    //set parameters
-                    $params = array($credentials_id,$username,$password,$user_info_id);
-                    //set the sanitize class
-                    $addNewCreds = new SanitizeCrudClass();
-                    $addNewCreds->executePreState($query, $params);
+            //adding data for date_added
+            $currentDate = new DateTime();
+            $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 
-                    //!if adding credentials is correct then procced with creating contact
-                    if($addNewCreds->getLastError() === null){
-                        $table = 'tbl_contact_info';
-                        //set contact id
-                        $contact_id = "CNT". $columnCountClass->columnCountWhere("contact_id", $table);
-                        //set contact num
-                        $contact_num = $_POST['phone_num'];
-                        $email = $_POST['email'];
+            //setting validation class
+            $validate = new CommonValidationClass();
+            $data = array($values['first_name'], $values['last_name']);
+            $column = array('first_name', 'last_name');
+            $isValid = $validate -> validateColumns($table, $column, $data);
+
+            if ($isValid) {
+                //collect all comlumns
+                $columns = implode(', ', array_keys($values));
+                //set number of question marks
+                $questionMarkString = implode(',', array_fill(0, count($values), '?'));
+                //set sql
+                $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
+                // set parameters
+                $params = array_values($values);
+                //set sanitize class
+                $addNewUser = new SanitizeCrudClass();
+                try{
+                    $addNewUser->executePreState($sql, $params);
+                    //!if adding user is correct then procced with creating credentials
+                    if($addNewUser->getLastError() === null){
+                        $table = "tbl_credentials";
+                        //set credential id
+                        $credentials_id = "CRED".$columnCountClass->columnCountWhere("credentials_id",$table);
+                        //set username
+                        $username = $_POST['email'];
+                        //set password
+                        $phpClass = new PHPClass();
+                        $password = $phpClass->generatePassword(10);
                         //set user_info_id
                         $user_info_id = $values['user_info_id'];
                         //set query
-                        $query = "INSERT INTO $table(contact_id,contact_num,email,user_info_id) VALUES(?,?,?,?);";
+                        $query = "INSERT INTO $table(credentials_id,uname,pass,user_info_id) VALUES(?,?,?,?);";
                         //set parameters
-                        $params = array($contact_id,$contact_num,$email, $user_info_id);
+                        $params = array($credentials_id,$username,$password,$user_info_id);
                         //set the sanitize class
-                        $addNewContact = new SanitizeCrudClass();
-                        $addNewContact->executePreState($query, $params);
+                        $addNewCreds = new SanitizeCrudClass();
+                        $addNewCreds->executePreState($query, $params);
 
-                        //if adding contact is correct then procced with creating user
-                        if($addNewContact->getLastError() === null){
-                            $response = array('success' => $data[0]." ".$data[1]." has been added");
-                            echo json_encode($response);}
+                        //!if adding credentials is correct then procced with creating contact
+                        if($addNewCreds->getLastError() === null){
+                            $table = 'tbl_contact_info';
+                            //set contact id
+                            $contact_id = "CNT". $columnCountClass->columnCountWhere("contact_id", $table);
+                            //set contact num
+                            $contact_num = $_POST['phone_num'];
+                            $email = $_POST['email'];
+                            //set user_info_id
+                            $user_info_id = $values['user_info_id'];
+                            //set query
+                            $query = "INSERT INTO $table(contact_id,contact_num,email,user_info_id) VALUES(?,?,?,?);";
+                            //set parameters
+                            $params = array($contact_id,$contact_num,$email, $user_info_id);
+                            //set the sanitize class
+                            $addNewContact = new SanitizeCrudClass();
+                            $addNewContact->executePreState($query, $params);
+
+                            //if adding contact is correct then procced with creating user
+                            if($addNewContact->getLastError() === null){
+                                $response = array('success' => $data[0]." ".$data[1]." has been added");
+                                echo json_encode($response);}
+                        }else{
+                            $response = array('error' => 'Something went wrong on adding credentials');
+                            echo json_encode($response);
+                        }
                     }else{
-                        $response = array('error' => 'Something went wrong on adding credentials');
+                        $response = array('error' => 'Something went wrong on adding user');
                         echo json_encode($response);
                     }
-                }else{
-                    $response = array('error' => 'Something went wrong on adding user');
-                    echo json_encode($response);
-                }
-            }catch(mysqli_sql_exception $e){
-                if ($e->getCode() == 1062){
-                    //Duplicate entry
-                    $response = array('error' => "Duplicate. Please try again");
-                    echo json_encode($response);
-                }else{
+                }catch(mysqli_sql_exception $e){
+                    if ($e->getCode() == 1062){
+                        //Duplicate entry
+                        $response = array('error' => "Duplicate. Please try again");
+                        echo json_encode($response);
+                    }else{
+                        $response = array('error' => $e->getMessage());
+                        echo json_encode($response);
+                        throw $e;
+                    }
+                }catch(Exception $e){
                     $response = array('error' => $e->getMessage());
                     echo json_encode($response);
-                    throw $e;
                 }
-            }catch(Exception $e){
-                $response = array('error' => $e->getMessage());
+
+            }else{
+                $response = array('error' => 'The Name '.$data[0].' '.$data[1].' already exists. Please try again');
                 echo json_encode($response);
             }
-
-        }else{
-            $response = array('error' => 'The Name '.$data[0].' '.$data[1].' already exists. Please try again');
-            echo json_encode($response);
         }
-
+        // end of adding user
     }else{
         $response = array('error' => 'One or more fields are empty');
         echo json_encode($response);

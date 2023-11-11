@@ -7,6 +7,17 @@
                 </button>
                 <h4 class="modal-title" id="modal-title">Enter user Information</h4>
             </div>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert" style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        <span id="add_user_modal_alert_text"></span>
+                    </div>
+                </div>
+            </div>
+            
             <form id="addUserForm">
                 <div class="modal-body">
                     <div class="box-body box-warning">
@@ -27,10 +38,8 @@
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    <label for="user_middle_initial">Middle Initial</label>
-                                    <select name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
-                                        <option value="">-</option>
-                                    </select>
+                                    <label for="user_middle_initial">Middle Initial (**optional)</label>
+                                    <input type="text" name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
                                 </div>
                             </div>
                         </div>
@@ -48,7 +57,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="phone_num">Phone:</label>
-                                    <input type="text" class="form-control input-sm" name="phone_num" id="phone_num" required>
+                                    <input type="tel" class="form-control input-sm" name="phone_num" id="phone_num" required>
                                 </div>
                             </div>
                             <div class="col-sm-4">
