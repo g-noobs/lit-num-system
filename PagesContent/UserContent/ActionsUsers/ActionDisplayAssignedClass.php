@@ -9,7 +9,7 @@ $table = "view_teacher_class_info";
 // condition to check that get for id is not empty
 if(!empty($_GET['id'])){
     $id = $_GET['id'];
-    $sql = "SELECT * FROM $table WHERE user_info_id = '$id'";
+    $sql = "SELECT * FROM $table WHERE user_info_id = '$id';";
     $result = $conn->query($sql);
 
 
