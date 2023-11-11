@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //set input validation class
         $inputValidation = new InputValidationClass();
         // Validate and sanitize form data
-        $teacher_id = $inputValidation->test_input($_POST["personal_id"], 'name');
+        $teacher_id = $inputValidation->test_input($_POST["personal_id"], 'address');
         $last_name = $inputValidation->test_input($_POST["last_name"], 'name');
         $first_name = $inputValidation->test_input($_POST["first_name"], 'name');
         $user_middle_initial = $inputValidation->test_input($_POST["user_middle_initial"], 'middle_initial');//possible No validation for select
