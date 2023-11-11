@@ -55,7 +55,7 @@
                         <div class="form-group row">
                             <div class="col-xs-4">
                                 <label for="gender">Select Gender:</label>
-                                <select class="form-control input-xs" id="gender " name="gender" placeholder="Gender"
+                                <select class="form-control input-xs" id="gender" name="gender" placeholder="Gender"
                                     required>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -70,7 +70,7 @@
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>
                                 <input type="email" name="email" class="form-control input-xs" placeholder="Email"
-                                    required autocomplete="off" />
+                                    required>
                             </div>
                         </div>
                         <div class="container row">
