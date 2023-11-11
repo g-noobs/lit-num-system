@@ -14,17 +14,17 @@ $(function() {
             dataType: 'json',
             success: function(response) {
                 if (Array.isArray(response)) {
-                    $("#assign_class_name").empty();
-                    $('#assign_class_date').empty();
+                    $("#assign_class_name_data").empty();
+                    $('#assign_class_date_data').empty();
                     $('#assign_class_error').empty();
                     
                     // Update the element with the received errors
                     $.each(response, function(index, data) {
-                        $("#assign_class_name").append(
+                        $("#assign_class_name_data").append(
                             "<p class='data_clas_name'>" +
                             data.class_name +
                             "</p>");
-                        $("#assign_class_date").append(
+                        $("#assign_class_date_data").append(
                             "<p class='data_clas_date'>" +
                             data.assign_date +
                             "</p>");
