@@ -46,22 +46,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //check for validation errors
         $errors = array();
-        if ($last_name === false) {
+        if ($last_name == false) {
             $errors[] = "Invalid characters in Last Name.";
         }
-        if ($first_name === false) {
+        if ($first_name == false) {
             $errors[] = "Invalid characters in First Name.";
         }
-        if($user_middle_initial === false){
+        if($user_middle_initial == false){
             $errors[] = "Invalid characters in Middle Initial.";
         }
-        if($gender === false){
+        if($gender == false){
             $errors[] = "Invalid characters in Gender.";
         }
-        if ($phone_num === false) {
+        if ($phone_num == false) {
             $errors[] = "Invalid characters in Phone.";
         }
-        if ($email === false) {
+        if ($email == false) {
             $errors[] = "Invalid email format.";
         }
         //check for empty fields
