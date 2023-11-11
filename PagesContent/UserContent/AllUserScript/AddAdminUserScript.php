@@ -34,7 +34,6 @@ $(function() {
 
                     }, 3500);
                 } else {
-                    var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
                         $hideModal.modal('hide');
