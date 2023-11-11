@@ -9,44 +9,20 @@ include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
 include_once "../../../Database/SanitizeCrudClass.php";
 
-
+//input validation class
+include_once "../../../CommonPHPClass/InputValidationClass.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (!empty($_POST['last_name']) && !empty($_POST['first_name']) && !empty($_POST['gender']) && !empty($_POST['phone_num']) && !empty($_POST['email'])) {
         
-        function test_input($data, $type) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            if ($type == 'name') {
-                // Allow only letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]*$/", $data)) {
-                    return false;
-                }
-            } elseif ($type == 'address') {
-                // Allow alphanumeric and whitespace
-                if (!preg_match("/^[a-zA-Z0-9 ]*$/", $data)) {
-                    return false;
-                }
-            } elseif ($type == 'phone') {
-                // Allow only numbers
-                if (!preg_match("/^[0-9+-]*$/", $data)) {
-                    return false;
-                }
-            }elseif ($type == 'middle_initial') {
-                // Allow only one character
-                if (strlen($data) !== 1) {
-                    return false; // Validation failed
-                }
-            }
-            return true;
-        }
+        //set input validation class
+        $inputValidation = new InputValidationClass();
         // Validate and sanitize form data
-        $last_name = test_input($_POST["last_name"], 'name');
-        $first_name = test_input($_POST["first_name"], 'name');
-        $user_middle_initial = test_input($_POST["user_middle_initial"], 'middle_initial');//possible No validation for select
-        $gender = test_input($_POST["gender"], 'name'); //possible No validation for select
-        $phone_num = test_input($_POST["phone_num"], 'phone');
+        $last_name = $inputValidation->test_input($_POST["last_name"], 'name');
+        $first_name = $inputValidation->test_input($_POST["first_name"], 'name');
+        $user_middle_initial = $inputValidation->test_input($_POST["user_middle_initial"], 'middle_initial');//possible No validation for select
+        $gender = $inputValidation->test_input($_POST["gender"], 'name'); //possible No validation for select
+        $phone_num = $inputValidation->test_input($_POST["phone_num"], 'phone');
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 
         //check for validation errors
