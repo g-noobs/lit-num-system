@@ -16,7 +16,7 @@
                     <div class="box-footer no-padding">
                         <div class="row">
                             <div class="col-sm-6" id="assign_class_name"><strong>Class Name:</strong></div>
-                            <div class="col-sm-6" id="assigne_class_date"><strong>Assign Date:</strong></div>
+                            <div class="col-sm-6" id="assign_class_date"><strong>Assign Date:</strong></div>
                         </div>
                     </div>
                 </div>
