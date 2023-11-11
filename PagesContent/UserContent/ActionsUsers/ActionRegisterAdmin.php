@@ -21,20 +21,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if ($type == 'name') {
                 // Allow only letters and whitespace
                 if (!preg_match("/^[a-zA-Z ]*$/", $data)) {
-                    return "Invalid characters in $type.";
+                    return false;
                 }
             } elseif ($type == 'address') {
                 // Allow alphanumeric and whitespace
                 if (!preg_match("/^[a-zA-Z0-9 ]*$/", $data)) {
-                    return "Invalid characters in $type.";
+                    return false;
                 }
             } elseif ($type == 'phone') {
                 // Allow only numbers
-                if (!preg_match("/^[0-9]*$/", $data)) {
-                    return "Invalid characters in $type.";
+                if (!preg_match("/^[0-9+-]*$/", $data)) {
+                    return false;
                 }
             }
-            return $data;
+            return true;
         }
         // Validate and sanitize form data
         $last_name = test_input($_POST["last_name"], 'name');
@@ -46,22 +46,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //check for validation errors
         $errors = array();
-        if ($last_name == false) {
+        if ($last_name === false) {
             $errors[] = "Invalid characters in Last Name.";
         }
-        if ($first_name == false) {
+        if ($first_name === false) {
             $errors[] = "Invalid characters in First Name.";
         }
-        if($user_middle_initial == false){
+        if($user_middle_initial === false){
             $errors[] = "Invalid characters in Middle Initial.";
         }
-        if($gender == false){
+        if($gender === false){
             $errors[] = "Invalid characters in Gender.";
         }
-        if ($phone_num == false) {
+        if ($phone_num === false) {
             $errors[] = "Invalid characters in Phone.";
         }
-        if ($email == false) {
+        if ($email === false) {
             $errors[] = "Invalid email format.";
         }
         //check for empty fields
