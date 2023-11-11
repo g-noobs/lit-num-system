@@ -80,29 +80,29 @@
                             <div class="col-xs-6">
                                 <label for="street_address">Street</label>
                                 <input type="text" name="street_address" class="form-control input-xs"
-                                    placeholder="Street" required />
+                                    placeholder="Street" required>
                             </div>
                             <div class="col-xs-6">
                                 <label for="Barangay">Baranggay</label>
                                 <input type="text" name="barangay_address" class="form-control input-xs"
-                                    placeholder="Barangay" required />
+                                    placeholder="Barangay" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-4">
                                 <label for="city_address">City /Municipal</label>
                                 <input type="text" name="city_address" class="form-control input-xs" placeholder="City"
-                                    required autocomplete="address-level2" />
+                                    required>
                             </div>
                             <div class="col-xs-4">
                                 <label for="province">Province</label>
                                 <input type="text" name="province_address" class="form-control input-xs"
-                                    placeholder="Province" required />
+                                    placeholder="Province" required>
                             </div>
                             <div class="col-xs-4">
                                 <label for="zip_code">Zip Code</label>
                                 <input type="number" name="zip_code" class="form-control input-xs"
-                                    placeholder="Zip Code" required />
+                                    placeholder="Zip Code" required>
                             </div>
                         </div>
                         <!-- /.box-body -->
