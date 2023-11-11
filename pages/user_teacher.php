@@ -117,8 +117,7 @@
             <!-- Assign module to teacher modal -->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignModuleModal.php");?>
 
-            <!-- View Assigned Modal -->
-            <?php include_once("../PagesContent/UserContent/UserModalFolder/ViewAssignClassModuleModal.php");?>
+           
 
             <!-- Main content -->
             <section class="content" id="mainContent">
