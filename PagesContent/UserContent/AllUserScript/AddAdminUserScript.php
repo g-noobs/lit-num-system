@@ -9,9 +9,11 @@ $(function() {
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionRegisterAdmin.php';
 
         $.ajax({
+            url: actionUrl,
             type: "POST",
-            url: "process_form.php", // Adjust the URL to your PHP script
             data: formData,
+            processData: false,
+            contentType: false,
             dataType: "json", // Expect JSON response
             success: function(response) {
                 // Check if the response contains an array of errors
