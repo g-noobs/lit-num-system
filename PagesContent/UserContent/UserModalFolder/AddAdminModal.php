@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    <label for="user_middle_initial">Middle Initial (**optional)</label>
+                                    <label for="user_middle_initial">M.I. (**optional)</label>
                                     <input type="text" name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
                                 </div>
                             </div>
