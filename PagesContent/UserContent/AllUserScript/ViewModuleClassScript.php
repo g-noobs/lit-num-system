@@ -3,6 +3,8 @@ $(function() {
     $('.view_assign_class_btn').on("click", function(e) {
         var btn_id = $(this).data('id');
         $('#user_id_data_class').text(btn_id);
+
+        $('#view_assign_class').modal('show');
         $.ajax({
             type: "GET",
             url: "../PagesContent/UserContent/ActionsUsers/ActionDisplayAssignedClass.php",
@@ -23,7 +25,7 @@ $(function() {
                             data.assign_date +
                             "</p>");
                     });
-                    $('#assign_class_error').show();
+                    
                 } else {
                     if (response.hasOwnProperty('error')) {
                         $('#assign_class_error').text(response.error);
