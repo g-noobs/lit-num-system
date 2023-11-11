@@ -24,8 +24,8 @@ $(function() {
 
                     // Update the element with the received errors
                     $.each(response, function(index, error) {
-                        $("#add_user_modal_alert_text").append("<div class='error'>" + error +
-                            "</div><br>");
+                        $("#add_user_modal_alert_text").append("<p class='error'>" + error +
+                            "</p><br>");
                         console.log(error);
                     });
 
