@@ -26,6 +26,12 @@ class InputValidationClass{
                 return false; // Validation failed
             }
         }
+        elseif ($type == 'number') {
+            // Allow only numbers
+            if (!preg_match("/^[0-9]*$/", $data)) {
+                return false;
+            }
+        }
         return true;
     }
 }
