@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
         //check for empty fields
         if (!empty($errors)) {
-            echo json_encode(['error' => $errors]);
+            echo json_encode($errors);
             exit();
             //start adding if no error catched
         }else{    
