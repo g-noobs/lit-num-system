@@ -14,7 +14,6 @@ $(function() {
             data: formData,
             processData: false,
             contentType: false,
-            dataType: "json", // Expect JSON response
             success: function(response) {
                 // Check if the response contains an array of errors
                 if (Array.isArray(response)) {
