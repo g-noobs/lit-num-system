@@ -13,6 +13,16 @@
                         style="display: none;">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        <span id="add_user_modal_alert_text">test alerttext</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert"
+                        style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
                         <span id="add_user_modal_alert_text"></span>
                     </div>
                 </div>
@@ -38,7 +48,8 @@
                             </div>
                             <div class="col-xs-3">
                                 <label for="user_middle_initial">Middle Initial (**optional)</label>
-                                <input type="text" name="user_middle_initial" class="form-control input-xs">
+                                <input type="text" name="user_middle_initial" class="form-control input-xs"
+                                    maxlength="1">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -54,7 +65,7 @@
                             <div class="col-xs-4">
                                 <label for="phone_num">Phone:</label>
                                 <input type="tel" class="form-control input-xs" name="phone_num" required
-                                    placeholder="Phone Number">
+                                    placeholder="Phone Number" maxlength="13">
                             </div>
                             <div class="col-xs-4">
                                 <label for="email">Enter Email Address:</label>

@@ -8,6 +8,8 @@ include_once("../../../CommonPHPClass/PHPClass.php");
 include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
 include_once "../../../Database/SanitizeCrudClass.php";
+//input validation class
+include_once "../../../CommonPHPClass/InputValidationClass.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['personal_id']) || isset($_POST['last_name']) || isset($_POST['first_name']) || isset($_POST['phone_num']) || isset($_POST['email']) || isset($_POST['street_address'])){
@@ -16,7 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'personal_id' => trim($_POST['personal_id']),
             'first_name' => trim($_POST['first_name']),
             'last_name' =>trim($_POST['last_name']),
-            'middle_name' => trim($_POST['user_middle_initial']),
+            //have the middle_initial intp uppercase
+            'middle_name' => strtoupper($_POST['user_middle_initial']),
             'gender' => $_POST['gender'],
             'user_level_id' => '1',
             'added_byID'=>'',
