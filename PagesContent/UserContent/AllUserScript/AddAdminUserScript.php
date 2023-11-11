@@ -35,9 +35,9 @@ $(function() {
                     }, 3500);
                 } else {
                     // Check if the form submission was successful
-                    if (responseData.hasOwnProperty('success')) {
+                    if (response.hasOwnProperty('success')) {
                         $hideModal.modal('hide');
-                        $('#successAlert').text(responseData.success);
+                        $('#successAlert').text(response.success);
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
@@ -46,9 +46,9 @@ $(function() {
 
 
 
-                    } else if (responseData.hasOwnProperty('error')) {
+                    } else if (response.hasOwnProperty('error')) {
                         $hideModal.modal('hide');
-                        $('#errorAlert').text(responseData.error);
+                        $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
