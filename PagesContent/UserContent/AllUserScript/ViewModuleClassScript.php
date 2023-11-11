@@ -1,6 +1,7 @@
 <script>
 $(function() {
     $('.view_assign_class_btn').on("click", function(e) {
+        e.preventDefault();
         var btn_id = $(this).data('id');
         $('#user_id_data_class').text(btn_id);
 
