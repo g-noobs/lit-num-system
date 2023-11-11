@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Validate and sanitize form data
         $last_name = test_input($_POST["last_name"], 'name');
         $first_name = test_input($_POST["first_name"], 'name');
-        $user_middle_initial = test_input($_POST["user_middle_initial"], 'name');//possible No validation for select
+        $user_middle_initial = test_input($_POST["user_middle_initial"], 'middle_initial');//possible No validation for select
         $gender = test_input($_POST["gender"], 'name'); //possible No validation for select
         $phone_num = test_input($_POST["phone_num"], 'phone');
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
