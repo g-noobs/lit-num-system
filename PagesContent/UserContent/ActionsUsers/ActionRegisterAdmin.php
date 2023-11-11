@@ -33,7 +33,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 if (!preg_match("/^[0-9+-]*$/", $data)) {
                     return false;
                 }
-            }
+            }elseif ($type == 'middle_initial') {
+                // Allow only one character
+                if (strlen($data) !== 1) {
+                    return false; // Validation failed
+                }
             return true;
         }
         // Validate and sanitize form data

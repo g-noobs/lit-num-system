@@ -39,7 +39,7 @@
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     <label for="user_middle_initial">M.I. (**optional)</label>
-                                    <input type="text" name="user_middle_initial" id="user_middle_initial" class="form-control input-sm">
+                                    <input type="text" name="user_middle_initial" id="user_middle_initial" class="form-control input-sm"  >
                                 </div>
                             </div>
                         </div>
@@ -63,8 +63,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="email">Enter Email Address:</label>
-                                    <input type="email" name="email" class="form-control input-sm" placeholder="Email" required
-                                        autocomplete="off" />
+                                    <input type="email" name="email" class="form-control input-sm" placeholder="Email" />
                                 </div>
                             </div>
                         </div>
