@@ -26,6 +26,7 @@ $(function() {
                     $.each(response, function(index, error) {
                         $("#add_user_modal_alert_text").append("<div class='error'>" + error +
                             "</div><br>");
+                        console.log(error);
                     });
 
                     setTimeout(function() {

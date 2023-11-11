@@ -33,7 +33,7 @@ function test_input($data, $type) {
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(isset($_POST['last_name']) || isset($_POST['first_name']) || isset($_POST['gender']) || isset($_POST['phone_num']) || isset($_POST['email'])){
+    if (!empty($_POST['last_name']) && !empty($_POST['first_name']) && !empty($_POST['gender']) && !empty($_POST['phone_num']) && !empty($_POST['email'])) {
         // Validate and sanitize form data
         $last_name = test_input($_POST["last_name"], 'name');
         $first_name = test_input($_POST["first_name"], 'name');
@@ -65,7 +65,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //check for empty fields
         if (!empty($errors)) {
             echo json_encode($errors);
-            exit();
+
             //start adding if no error catched
         }else{    
             $values = array(
