@@ -22,7 +22,6 @@ if(!empty($_GET['id'])){
         }
     }else{
         $response = array('error' => 'No Assigned Class yet!');
-        
     }
 } else{
     $response = array('error' => 'GET ISSUE');

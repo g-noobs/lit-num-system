@@ -18,7 +18,7 @@ $(function() {
                     $("#assign_class_name_data").empty();
                     $('#assign_class_date_data').empty();
                     $('#assign_class_error').empty();
-                    
+
                     // Update the element with the received errors
                     $.each(response, function(index, data) {
                         $("#assign_class_name_data").append(
@@ -30,11 +30,13 @@ $(function() {
                             data.assign_date +
                             "</p>");
                     });
-                    
+
                 } else {
                     if (response.hasOwnProperty('error')) {
                         $('#assign_class_error').text(response.error);
                         $('#assign_class_error').show();
+                        $("#assign_class_name_data").empty();
+                        $('#assign_class_date_data').empty();
                     }
                 }
             },
