@@ -12,8 +12,6 @@ if(!empty($_GET['id'])){
     $sql = "SELECT * FROM $table WHERE user_info_id = '$id'";
     $result = $conn->query($sql);
 
-    $class_name = array();
-    $assign_date = array();
 
     if($result->num_rows > 0){
         $response[] = array(
@@ -24,12 +22,9 @@ if(!empty($_GET['id'])){
         $response = array('error' => 'No Assigned Class yet!');
         
     }
+} else{
+    $response = array('error' => 'GET ISSUE');
+}
 
-    if(!empty($class_name) && !empty($assign_date)){
-        echo json_encode($class_name);
-        echo json_encode($assign_date);
-    }else{
-        echo json_encode($response);
-    }
-} 
+echo json_encode($response);
 ?>
