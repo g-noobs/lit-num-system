@@ -56,13 +56,13 @@
                     <!-- /.box-body -->
                 </div>
                 <!-- /.modal-body -->
-                <div class="modal-footer">
-                    <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-                </div>
-                <!-- /.modal-footer -->
             </div>
-            <!-- /.modal-content -->
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+            </div>
+            <!-- /.modal-footer -->
         </div>
-        <!-- /.modal-dialog -->
+        <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
 </div>
