@@ -36,8 +36,8 @@
                             <th>Gender</th>
                             <th>User Type</th>
                             <th>Status</th>
-                            <th colspan="2">Assign Class</th>
-                            <th colspan="3">Assign Module</th>
+                            <th colspan="2">Class Assignment</th>
+                            <th colspan="3">Module Assignment</th>
                             </tr>
                         </thead>
                         <tbody>
