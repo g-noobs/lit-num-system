@@ -4,6 +4,7 @@ $(function() {
         e.preventDefault();
 
         var formData = new FormData(this);
+        console.log(this);
 
         var $hideModal = $('#add_user_modal');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionAddTeacher.php';
@@ -24,7 +25,8 @@ $(function() {
 
                     // Update the element with the received errors
                     $.each(response, function(index, error) {
-                        $("#add_user_modal_alert_text").append("<p class='error'>" + error +
+                        $("#add_user_modal_alert_text").append("<p class='error'>" +
+                            error +
                             "</p><br>");
                         console.log(error);
                     });
