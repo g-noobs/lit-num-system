@@ -23,7 +23,7 @@ $(function() {
                             data.assign_date +
                             "</p>");
                     });
-
+                    $('#assign_class_error').show();
                 } else {
                     if (response.hasOwnProperty('error')) {
                         $('#assign_class_error').text(response.error);
