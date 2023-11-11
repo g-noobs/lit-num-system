@@ -62,9 +62,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if ($email === false) {
             $errors[] = "Invalid email format.";
         }
+        //check for empty fields
         if (!empty($errors)) {
             echo json_encode(['error' => $errors]);
             exit();
+            //start adding if no error catched
         }else{    
             $values = array(
                 'user_info_id'=>'',
@@ -72,7 +74,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 'last_name' =>trim($_POST['last_name']),
                 'middle_name' => $_POST['user_middle_initial'],
                 'gender' => $_POST['gender'],
-                'status_id' => '1',
                 'user_level_id' => '0',
                 'added_byID'=>'',
                 'date_added' => ''
