@@ -9,31 +9,33 @@ include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
 include_once "../../../Database/SanitizeCrudClass.php";
 
-function test_input($data, $type) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    if ($type == 'name') {
-        // Allow only letters and whitespace
-        if (!preg_match("/^[a-zA-Z ]*$/", $data)) {
-            return "Invalid characters in $type.";
-        }
-    } elseif ($type == 'address') {
-        // Allow alphanumeric and whitespace
-        if (!preg_match("/^[a-zA-Z0-9 ]*$/", $data)) {
-            return "Invalid characters in $type.";
-        }
-    } elseif ($type == 'phone') {
-        // Allow only numbers
-        if (!preg_match("/^[0-9]*$/", $data)) {
-            return "Invalid characters in $type.";
-        }
-    }
-    return $data;
-}
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (!empty($_POST['last_name']) && !empty($_POST['first_name']) && !empty($_POST['gender']) && !empty($_POST['phone_num']) && !empty($_POST['email'])) {
+        
+        function test_input($data, $type) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            if ($type == 'name') {
+                // Allow only letters and whitespace
+                if (!preg_match("/^[a-zA-Z ]*$/", $data)) {
+                    return "Invalid characters in $type.";
+                }
+            } elseif ($type == 'address') {
+                // Allow alphanumeric and whitespace
+                if (!preg_match("/^[a-zA-Z0-9 ]*$/", $data)) {
+                    return "Invalid characters in $type.";
+                }
+            } elseif ($type == 'phone') {
+                // Allow only numbers
+                if (!preg_match("/^[0-9]*$/", $data)) {
+                    return "Invalid characters in $type.";
+                }
+            }
+            return $data;
+        }
         // Validate and sanitize form data
         $last_name = test_input($_POST["last_name"], 'name');
         $first_name = test_input($_POST["first_name"], 'name');
