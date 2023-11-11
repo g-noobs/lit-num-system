@@ -24,14 +24,14 @@ $(function() {
 
                     // Update the element with the received errors
                     $.each(response, function(index, error) {
-                        $("#errorMessages").append("<div class='error'>" + error +
-                            "</div>");
+                        $("#add_user_modal_alert_text").append("<div class='error'>" + error +
+                            "</div><br>");
                     });
 
                     setTimeout(function() {
-                    $("#add_user_modal_alert").fadeOut("slow");
+                        $("#add_user_modal_alert").fadeOut("slow");
 
-                }, 3500);
+                    }, 3500);
                 } else {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
