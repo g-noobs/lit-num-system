@@ -19,7 +19,7 @@ $(function() {
                 // Check if the response contains an array of errors
                 if (Array.isArray(response)) {
                     // Clear previous error messages
-                    $("#add_user_modal_alert").empty();
+                    $("#add_user_modal_alert_text").empty();
                     $("#add_user_modal_alert").show();
 
                     // Update the element with the received errors
