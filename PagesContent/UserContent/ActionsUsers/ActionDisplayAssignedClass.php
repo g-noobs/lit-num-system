@@ -14,10 +14,12 @@ if(!empty($_GET['id'])){
 
 
     if($result->num_rows > 0){
-        $response[] = array(
-            'class_name' => $row['class_name'],
-            'assign_date' => $row['assign_date']
-        );
+        while ($row = $result->fetch_assoc()) {
+            $response[] = array(
+                'class_name' => $row['class_name'],
+                'assign_date' => $row['assign_date']
+            );
+        }
     }else{
         $response = array('error' => 'No Assigned Class yet!');
         
