@@ -43,14 +43,16 @@
                 <h4 class="modal-title">Assigned Module:
                     <span id="user_id_data_module"></span>
                 </h4>
+                <code class="text-warning" id="assign_module_error" style="display: none;"></code>
+
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <div class="row">
-                            <div class="col-sm-6" id="assign_module_name"><strong>Module Name:</strong></div>
-                            <div class="col-sm-6" id="assigne_module_date"><strong>Assign Date:</strong></div>
+                            <div class="col-sm-6" id="assign_module_name"><strong>Module Name:</strong><p id="assign_module_name_data">/p></div>
+                            <div class="col-sm-6" id="assigne_module_date"><strong>Assign Date:</strong><p id="assign_module_date_data"></p></div>
                         </div>
                     </div>
                     <!-- /.box-body -->
