@@ -35,21 +35,6 @@ $(document).ready(function() {
 
 
 
-<script>
-$(function() {
-    // jQuery to populate the select element with uppercase letters of the alphabet
-    var selectElement = $("#user_middle_initial, #guardian_middle_name");
-
-    // Loop to add uppercase letters A to Z
-    for (var i = 65; i <= 90; i++) {
-        var letter = String.fromCharCode(i);
-        selectElement.append($("<option>", {
-            value: letter,
-            text: letter
-        }));
-    }
-});
-</script>
 
 
 <!-- hide password srcript -->

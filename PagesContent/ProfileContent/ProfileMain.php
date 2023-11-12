@@ -37,11 +37,8 @@
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    <label for="user_middle_initial">Middle Initial</label>
-                                    <select name="user_middle_initial" id="user_middle_initial"
-                                        class="form-control ">
-                                        <option value="">-</option>
-                                    </select>
+                                    <label for="user_middle_initial">Middle Initial (**optional)</label>
+                                    <input type="text" name="user_middle_initial" class="form-control>
                                 </div>
                             </div>
                         </div>
