@@ -4,7 +4,7 @@ include_once "../../../Database/Connection.php";
 
 $connection = new Connection();
 $conn = $connection->getConnection();
-$table = "view_teacher_class_info";
+$table = "view_teacher_module_info";
 
 // condition to check that get for id is not empty
 if(!empty($_GET['id'])){
@@ -16,7 +16,7 @@ if(!empty($_GET['id'])){
     if($result->num_rows > 0){
         while ($row = $result->fetch_assoc()) {
             $response[] = array(
-                'class_name' => $row['class_name'],
+                'module_name' => $row['module_name'],
                 'assign_date' => $row['assign_date']
             );
         }

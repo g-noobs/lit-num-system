@@ -62,7 +62,7 @@ $(function() {
 
         $.ajax({
             type: "GET",
-            url: "../PagesContent/UserContent/ActionsUsers/ActionDisplayAssignedClass.php",
+            url: "../PagesContent/UserContent/ActionsUsers/ActionDisplayAssignedModule.php",
             data: {
                 id: btn_id
             },
