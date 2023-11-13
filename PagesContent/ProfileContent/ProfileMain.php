@@ -14,17 +14,16 @@
             </div>
         </div>
         <div class="box-body">
-            <code id="error_admin" style="display: none;"></code>
             <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
                     class='glyphicon glyphicon-edit'></span></a>
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert"
+                    <div class="alert alert-danger alert-dismissible" id="edit_user_validate_alert" role="alert"
                         style="display: none;">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                         <h4><i class="icon fa fa-ban"></i> Alert!</h4>
-                        <span id="add_user_modal_alert_text">test alerttext</span>
+                        <span id="edit_user_validate_alert_text">test alerttext</span>
                     </div>
                 </div>
             </div>

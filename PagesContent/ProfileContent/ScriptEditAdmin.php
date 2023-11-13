@@ -16,18 +16,18 @@ $(function() {
                 // Check if the response contains an array of errors
                 if (Array.isArray(response)) {
                     // Clear previous error messages
-                    $("#add_user_modal_alert_text").empty();
-                    $("#add_user_modal_alert").show();
+                    $("#edit_user_validate_alert_text").empty();
+                    $("#edit_user_validate_alert").show();
 
                     // Update the element with the received errors
                     $.each(response, function(index, error) {
-                        $("#add_user_modal_alert_text").append("<p class='error'>" + error +
+                        $("#edit_user_validate_alert_text").append("<p class='error'>" + error +
                             "</p><br>");
                         console.log(error);
                     });
 
                     setTimeout(function() {
-                        $("#add_user_modal_alert").fadeOut("slow");
+                        $("#edit_user_validate_alert").fadeOut("slow");
 
                     }, 3500);
                 }
