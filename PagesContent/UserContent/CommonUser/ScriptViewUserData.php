@@ -15,9 +15,10 @@ $(function(){
                 $('#full_name_data').text(responseData.full_name_data);
                 $('#gender_data').text(responseData.gender_data);
                 $('#email_data').text(responseData.email_data);
-                $('#birthdate_data').text(responseData.birthdate_data);
-                $('#user_type_data').text(responseData.user_type_data);
-                $('#user_status_data').text(responseData.user_status_data);
+
+                $('#phone_num_data').text(responseData.phone_num_data);
+                $('#full_address_data').text(responseData.full_address_data);
+                
                 $('#username_data').text(responseData.username_data);
                 $('#password_data').text(responseData.password_data);
             },

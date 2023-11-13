@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'full_name_data' => $row['first_name'] . " ". $row['last_name'],
                     'gender_data' => $row['gender'],
                     'email_data' => $row['email'],
-                    'birthdate_data' => $row['birthdate'],
-                    'user_type_data' => $row['user_level_description'],
-                    'user_status_data' => $row['status'],
+                    'phone_num_data' => $row['contact_num'],
+                    'full_address_data' => $row['street'] ." ".$row['barangay']." ". $row['municipal_city'] ." ". $row['province'] ." ".
+                    $row['postalcode'],
                     'username_data' => $row['uname'],
                     'password_data' => $row['pass']
                 );
