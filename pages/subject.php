@@ -43,7 +43,7 @@
 
                             <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
                                 style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                <b>Active Subject</b> <!-- Updated the button text -->
+                                <b>Active Module</b> <!-- Updated the button text -->
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
