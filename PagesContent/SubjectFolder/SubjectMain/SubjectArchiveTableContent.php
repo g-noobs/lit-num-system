@@ -50,3 +50,9 @@
     </div>
     <!-- /.col -->
 </div>
+
+<!-- pop up confirmation -->
+<?php include_once "../EssentialsSubj/ConfirmationModal.php";?>
+
+<!-- script to activate  -->
+<?php include_once "../ScriptSubj/ActivateScript.php"?>
