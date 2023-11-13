@@ -8,7 +8,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once "../bootstrap/css.php"?>
-    
+
     <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php"?>
 </head>
 
@@ -47,8 +47,8 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
-                                <li><a href="#" data-subjec-type="active-subject"><b> Active Subject</b></a></li>
-                                <li><a href="#" data-subject-type="arch-subject"><b> Archive Subject</b></a></li>
+                                <li><a href="#" data-module-type="active-subject"><b> Active Module</b></a></li>
+                                <li><a href="#" data-module-type="arch-subject"><b> Archive Module</b></a></li>
                             </ul>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
             <br>
             <?php include_once "../PagesContent/SubjectFolder/EssentialsSubj/ModalSubj.php"?>
             <!-- Main content -->
-            <section class="content">
+            <section class="content" id="mainContent">
                 <?php include_once "../PagesContent/SubjectFolder/SubjectMain/SubjectMainContent.php"?>
             </section>
             <!-- /.content-wrapper -->
