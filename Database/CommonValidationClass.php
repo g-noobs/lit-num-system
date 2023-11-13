@@ -63,7 +63,7 @@ class CommonValidationClass extends Connection{
         }
     }
 
-    function updateValidateColumns($table, $column, $value, $id) {
+    function updatevalidateColumns($table, $column, $value) {
         // Convert column and value to arrays if they are not already
         if (!is_array($column)) {
             $column = [$column];
@@ -83,11 +83,9 @@ class CommonValidationClass extends Connection{
     
         // Loop through columns and values to build the WHERE clause
         for ($i = 0; $i < count($column); $i++) {
-
             $conditions[] = "$column[$i] = '" . addslashes($value[$i]) . "'";
         }
-        $conditions[] = "user_info_id != '$id'"; // Exclude the current record
-
+    
         $conditionString = implode(" AND ", $conditions);
         $sql = "SELECT COUNT(*) FROM $table WHERE $conditionString";
     
@@ -100,13 +98,11 @@ class CommonValidationClass extends Connection{
         }
     
         $count = $result->fetch_row()[0];
-        // Return true if duplicate exists, false otherwise
-        if($count === 0){
-            return true;
+        if($count > 1){
+            return false;
         }
         else{
-            return false;
-
+            return true;
         }
     }
 
