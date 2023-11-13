@@ -14,15 +14,13 @@
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <ul class="nav nav-stacked">
-                            <li><strong>Personal ID:</strong><p id="personal_id_data"></p> </li>
-                            <li><strong>Full Name:</strong><p id="full_name_data"></p> </li>
-                            <li><strong>Gender:</strong><p id="gender_data"></p></li>
-                            <li><strong>Email:</strong><p id="email_data"></p></li>
-                            <li><strong>Birthday:</strong><p id="birthdate_data"></p></li>
-                            <li><strong>User Type:</strong><p id="user_type_data"></p></li>
-                            <li><strong>User Status:</strong><p id="user_status_data"></p></li>
-                            <li><strong>Username:</strong><p id="username_data"></p></li>
-                            <li><strong>Password:</strong><p id="password_data"></p></li>
+                            <li><strong>Personal ID:</strong><span id="personal_id_data"></span></li>
+                            <li><strong>Full Name:</strong><span id="full_name_data"></span> </li>
+                            <li><strong>Gender:</strong><span id="gender_data"></span></li>
+                            <li><strong>Email:</strong><span id="email_data"></span></li>
+                            <li><strong>Address:</strong> <span id="Address"></span></li>
+                            <li><strong>Username:</strong><span id="username_data"></span></li>
+                            <li><strong>Password:</strong><span id="password_data"></span></li>
                         </ul>
                     </div>
                 </div>
