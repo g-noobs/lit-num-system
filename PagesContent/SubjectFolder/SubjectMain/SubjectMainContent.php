@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-xs-12">
         <div class="box container">
@@ -7,9 +6,16 @@
                 <br>
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-subj">
-                            <i class="fa fa-plus"></i> <span>Add Module</span>
-                        </button>
+                        <div class="col-xs-6">
+                            <button type="button" class="btn btn-warning pull-left" data-toggle="modal" data-target="#add-subj">
+                                <i class="fa fa-plus"></i> <span>Add Module</span>
+                            </button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button>
+                                Archive
+                            </button>
+                        </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
