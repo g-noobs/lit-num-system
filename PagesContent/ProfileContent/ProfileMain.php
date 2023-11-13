@@ -18,6 +18,17 @@
             <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
                     class='glyphicon glyphicon-edit'></span></a>
 
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert"
+                        style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        <span id="add_user_modal_alert_text">test alerttext</span>
+                    </div>
+                </div>
+            </div>
+            
             <form id="editUserForm">
                 <div class="modal-body">
                     <div class="box-body box-warning">
@@ -25,15 +36,15 @@
                             <div class="col-sm-5">
                                 <div class="form-group">
                                     <label for="last_name">Enter Last Name:</label>
-                                    <input type="text" name="last_name" class="form-control"
-                                        placeholder="Last Name" required>
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-sm-5">
                                 <div class="form-group">
                                     <label for="first_name">Enter First Name:</label>
-                                    <input type="text" name="first_name" class="form-control"
-                                        placeholder="First Name" required autocomplete="given-name" />
+                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"
+                                        required autocomplete="given-name" />
                                 </div>
                             </div>
                             <div class="col-sm-2">
@@ -47,7 +58,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="gender">Select Gender:</label>
-                                    <select class="form-control" name="gender" placeholder="Gender">
+                                    <select class="form-control" name="gender" placeholder="Gender" required>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="None">None</option>
@@ -57,15 +68,15 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="phone_num">Phone:</label>
-                                    <input type="text" class="form-control" name="phone_num" id="phone_num"
-                                        required maxlength="1">
+                                    <input type="text" class="form-control" name="phone_num" id="phone_num" required
+                                        maxlength="1">
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="email">Enter Email Address:</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Email"
-                                        required autocomplete="off" />
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required
+                                        autocomplete="off" />
                                 </div>
                             </div>
                         </div>
@@ -84,8 +95,8 @@
                             <div class="col-sm-6 form-group">
                                 <label for="password">Password</label>
                                 <div class="input-group">
-                                    <input type="password" name="password" id="password" required
-                                        class="form-control" placeholder="Password">
+                                    <input type="password" name="password" id="password" required class="form-control"
+                                        placeholder="Password">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="button" id="togglePassword">
                                             <span class="glyphicon glyphicon-eye-open" id="password-icon"></span>

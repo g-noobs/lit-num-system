@@ -13,6 +13,24 @@ $(function() {
             contentType: false,
             dataType: 'json',
             success: function(response) {
+                // Check if the response contains an array of errors
+                if (Array.isArray(response)) {
+                    // Clear previous error messages
+                    $("#add_user_modal_alert_text").empty();
+                    $("#add_user_modal_alert").show();
+
+                    // Update the element with the received errors
+                    $.each(response, function(index, error) {
+                        $("#add_user_modal_alert_text").append("<p class='error'>" + error +
+                            "</p><br>");
+                        console.log(error);
+                    });
+
+                    setTimeout(function() {
+                        $("#add_user_modal_alert").fadeOut("slow");
+
+                    }, 3500);
+                }
                 // Check if the form submission was successful
                 if (response.hasOwnProperty('success')) {
                     $('#successAlert').text(response.success);
