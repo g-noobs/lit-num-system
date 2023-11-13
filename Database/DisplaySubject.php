@@ -7,7 +7,7 @@ class DisplaySubject extends Connection{
     }
 
     function displaySubjectList(){
-        $sql = "SELECT * FROM tbl_module;";
+        $sql = "SELECT * FROM tbl_module WHERE module_status = 1;";
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
