@@ -78,6 +78,10 @@
 
         <!-- Adding Subject Script -->
         <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/AddSubjScript.php"?>
+
+        <!-- Main Script -->
+        <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/MainSubjSript.php"?>
+
 </body>
 
 </html>
