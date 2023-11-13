@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     $status = $_POST['status'];
 
     //update the status for the selected IDs
-    $updateQuery = "UPDATE $table SET module_status = '$status' WHERE class_id IN ('" . implode("','", $selectedIds) . "')";
+    $updateQuery = "UPDATE $table SET module_status = '$status' WHERE module_id IN ('" . implode("','", $selectedIds) . "')";
     $conn = new Connection();
 
     $result = $conn->getConnection()->query($updateQuery);
