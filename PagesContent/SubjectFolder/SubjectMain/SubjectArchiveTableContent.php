@@ -6,9 +6,11 @@
                 <br>
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-subj">
-                            <i class="fa fa-plus"></i> <span>Add Module</span>
+                        <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal"
+                            data-target="">
+                            <i class="fa fa-check-circle"></i> <span>Activate</span>
                         </button>
+
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
