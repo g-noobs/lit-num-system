@@ -11,7 +11,7 @@
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
-                <div class="box box-solid">
+                <div class="box">
                     <div class="box-body">
                         <dl class="dl-horizontal">
                             <dt>Personal ID: </dt>
