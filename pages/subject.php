@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin | Subject</title>
+    <title>Admin | Module</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include_once "../bootstrap/css.php"?>
@@ -35,7 +35,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <b style="color:#3D3848;">Manage Subjects</b>
+                    <b style="color:#3D3848;">Manage Module</b>
                 </h1>
             </section>
             <br>
