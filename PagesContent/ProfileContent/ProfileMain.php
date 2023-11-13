@@ -47,7 +47,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="gender">Select Gender:</label>
-                                    <select class="form-control" name="gender" placeholder="Gender" required>
+                                    <select class="form-control" name="gender" placeholder="Gender">
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="None">None</option>
