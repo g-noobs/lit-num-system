@@ -78,8 +78,14 @@
         <!-- Adding Subject Script -->
         <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/AddSubjScript.php"?>
 
+        <!-- archive script -->
+        <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/ArchiveScript.php"?>
+
+        <!-- Activate Script -->
+
         <!-- Main Script -->
         <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/MainSubjSript.php"?>
+
 
 </body>
 
