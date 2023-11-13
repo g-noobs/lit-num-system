@@ -22,7 +22,7 @@
 
                             <dt>Gender: </dt>
                             <dd id="gender_data"></dd>
-
+                            
                             <dt>Email: </dt>
                             <dd id="email_data"></dd>
 
@@ -52,3 +52,15 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+
+<!-- <div class="box-footer no-padding">
+                        <ul class="nav nav-stacked">
+                            <li><strong>Personal ID: </strong><span id="personal_id_data"></span></li>
+                            <li><strong>Full Name: </strong><span id="full_name_data"></span> </li>
+                            <li><strong>Gender: </strong><span id="gender_data"></span></li>
+                            <li><strong>Email: </strong><span id="email_data"></span></li>
+                            <li><strong>Address: </strong> <span id="Address"></span></li>
+                            <li><strong>Username: </strong><span id="username_data"></span></li>
+                            <li><strong>Password: </strong><span id="password_data"></span></li>
+                        </ul>
+                    </div> -->
