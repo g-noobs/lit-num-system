@@ -53,6 +53,10 @@
         <!-- populate data script -->
         <?php include_once("../PagesContent/ProfileContent/PopulateDataScript.php");?>
 
+        <!-- Edit admin button -->
+        <?php include_once("../PagesContent/ProfileContent/ScriptEditAdmin.php");?>
+
+
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 </body>
 

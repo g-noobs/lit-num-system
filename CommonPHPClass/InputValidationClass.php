@@ -22,7 +22,7 @@ class InputValidationClass{
             }
         }elseif ($type == 'middle_initial') {
             // Allow only one character
-            if (strlen($data) !== 1) {
+            if (strlen($data) !== 1 && !preg_match("/^[a-zA-Z ]*$/", $data)) {
                 return false; // Validation failed
             }
         }

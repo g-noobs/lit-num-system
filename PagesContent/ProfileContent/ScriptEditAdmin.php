@@ -11,8 +11,8 @@ $(function() {
             data: formData,
             processData: false,
             contentType: false,
+            dataType: 'json',
             success: function(response) {
-                var responseData = JSON.parse(response);
                 // Check if the form submission was successful
                 if (responseData.hasOwnProperty('success')) {
                     $('#successAlert').text(responseData.success);
@@ -21,9 +21,6 @@ $(function() {
                         $("#successBanner").fadeOut("slow");
                         //location.reload();
                     }, 2500);
-
-
-
                 } else if (responseData.hasOwnProperty('error')) {
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
