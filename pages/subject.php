@@ -64,19 +64,19 @@
             <?php include_once "../PagesContent/SubjectFolder/EssentialsSubj/ModalSubj.php"?>
             <!-- Main content -->
             <section class="content">
-               <?php include_once "../PagesContent/SubjectFolder/SubjectMain/SubjectMainContent.php"?> 
+                <?php include_once "../PagesContent/SubjectFolder/SubjectMain/SubjectMainContent.php"?>
             </section>
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
-       
-        
+
+
         <?php include_once("../bootstrap/js.php")?>
 
         <!-- Script for search bar and other common Script use accross the page -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
-         <!-- Adding Subject Script -->
+        <!-- Adding Subject Script -->
         <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/AddSubjScript.php"?>
 </body>
 

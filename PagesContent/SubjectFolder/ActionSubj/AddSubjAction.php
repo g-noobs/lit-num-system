@@ -11,7 +11,7 @@ $table = "tbl_module";
 include_once("../../../Database/ColumnCountClass.php");
 $columnCountClass = new ColumnCountClass();
 
-$values['module_id'] = "SBJ". $columnCountClass->columnCountWhere("module_id",$table);
+$values['module_id'] = "MOD". $columnCountClass->columnCountWhere("module_id",$table);
 
 //insert subject name validation
 include_once "../../../Database/CommonValidationClass.php";
@@ -41,12 +41,12 @@ if($isValid){
             //Duplicate entry
             $response = array('error' => 'Subject '.$values['module_name']. ' already exists. Please try again');
             echo json_encode($response);
-          }
-          else{
-              throw $e;
-              $response = array('error' => $e);
-              echo json_encode($response);
-          }
+        }
+        else{
+            throw $e;
+            $response = array('error' => $e);
+            echo json_encode($response);
+        }
     }
 } else {
     $response = array('error' => 'Subject '.$values['module_name']. ' already exists. Please try again');
