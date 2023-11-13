@@ -43,7 +43,7 @@ class DisplaySubject extends Connection{
                 }
                 echo "<tr>";
 
-                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
+                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['module_id'] . "'></td>";
 
                 echo "<td>".$row["module_id"]."</td>";
                 echo "<td>".$row["module_name"]."</td>";
