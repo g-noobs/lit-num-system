@@ -6,19 +6,12 @@
                 <br>
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="col-xs-6">
-                            <button type="button" class="btn btn-warning pull-left" data-toggle="modal" data-target="#add-subj">
-                                <i class="fa fa-plus"></i> <span>Add Module</span>
-                            </button>
-                        </div>
-                        <div class="col-xs-6">
-                            <button>
-                                Archive
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-subj">
+                            <i class="fa fa-plus"></i> <span>Add Module</span>
+                        </button>
                     </div>
                     <div class="col-xs-6">
-                        <div class="search-box">
+                        <div class="search-box pull-right">
                             <i class="fa fa-search"></i>
                             <input type="text" id="userInput" class="form-control" placeholder="Search..">
                         </div>
