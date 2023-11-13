@@ -4,8 +4,8 @@ $(document).ready(function() {
 
     // Hide the update button initially
     $('#update-btn').hide();
-    $('input, select').prop('readonly', true).prop('disabled', false);
-
+    $('input').prop('readonly', true).prop('disabled', true);
+    $('select').prop('readonly', true).prop('disabled', false);
     // Function to toggle the edit mode
     function toggleEditMode() {
         if (editMode) {
