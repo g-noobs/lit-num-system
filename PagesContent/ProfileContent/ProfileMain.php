@@ -14,8 +14,9 @@
             </div>
         </div>
         <div class="box-body">
-            <button id="edit-icon" type="button" class="btn btn-primary"><i
-                    class='glyphicon glyphicon-edit'></i><span>Edit</span></button>
+            <button id="edit-icon" type="button" class="btn btn-primary">
+                <i class='glyphicon glyphicon-edit'></i><span>Edit</span>
+            </button>
 
             <div class="row">
                 <div class="col-sm-12">
@@ -27,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <form id="editUserForm">
                 <div class="modal-body">
                     <div class="box-body box-warning">
