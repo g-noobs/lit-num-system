@@ -59,6 +59,8 @@
             <br>
             <br>
             <?php include_once "../PagesContent/SubjectFolder/EssentialsSubj/ModalSubj.php"?>
+            <?php include_once "../PagesContent/SubjectFolder/EssentialsSubj/ConfirmationModal.php"?>
+
             <!-- Main content -->
             <section class="content" id="mainContent">
                 <?php include_once "../PagesContent/SubjectFolder/SubjectMain/SubjectMainContent.php"?>

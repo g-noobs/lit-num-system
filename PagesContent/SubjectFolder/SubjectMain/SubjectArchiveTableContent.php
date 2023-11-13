@@ -2,8 +2,10 @@
     <div class="col-xs-12">
         <div class="box container">
             <div class="box-header">
-                <h3>Module List</h3>
                 <br>
+            </div>
+            <!-- /.box-header -->
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
                         <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal"
@@ -20,8 +22,7 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box-header -->
-            <!-- /.modal for Edit User-->
+
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
                 <table id="example2" class="table table-bordered table-hover text-center">
                     <thead>
