@@ -3,12 +3,12 @@
     <div class="col-xs-12">
         <div class="box container">
             <div class="box-header">
-                <h3>Subject List</h3>
+                <h3>Module List</h3>
                 <br>
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-subj">
-                            <i class="fa fa-plus"></i> <span>Add Subject</span>
+                            <i class="fa fa-plus"></i> <span>Add Module</span>
                         </button>
                     </div>
                     <div class="col-xs-6">

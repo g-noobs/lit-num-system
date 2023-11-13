@@ -12,7 +12,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="subj_name_add">Enter Module Name:</label>
-                            <input type="text" name="subj_name_add" class="form-control" placeholder="Subject Name" required>
+                            <input type="text" name="subj_name_add" class="form-control" placeholder="Module Name" required>
                         </div>
                         <div class="form-group">
                             <label for="subj_add_desc">Module Description:</label>
