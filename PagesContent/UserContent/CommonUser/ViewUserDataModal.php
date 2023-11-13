@@ -11,35 +11,31 @@
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
-                <div class="box">
-                    <div class="box-body">
-                        <dl class="dl-horizontal">
-                            <dt>Personal ID: </dt>
-                            <dd id="personal_id_data"></dd>
+                <dl class="dl-horizontal">
+                    <dt>Personal ID: </dt>
+                    <dd id="personal_id_data"></dd>
 
-                            <dt>Full Name: </dt>
-                            <dd id="full_name_data"></dd>
+                    <dt>Full Name: </dt>
+                    <dd id="full_name_data"></dd>
 
-                            <dt>Gender: </dt>
-                            <dd id="gender_data"></dd>
-                            
-                            <dt>Email: </dt>
-                            <dd id="email_data"></dd>
+                    <dt>Gender: </dt>
+                    <dd id="gender_data"></dd>
 
-                            <dt>Phone#: </dt>
-                            <dd id="phone_num_data"></dd>
+                    <dt>Email: </dt>
+                    <dd id="email_data"></dd>
 
-                            <dt>Addres:</dt>
-                            <dd id="full_address_data"></dd>
+                    <dt>Phone#: </dt>
+                    <dd id="phone_num_data"></dd>
 
-                            <dt>Username:</dt>
-                            <dd id="username_data"></dd>
+                    <dt>Addres:</dt>
+                    <dd id="full_address_data"></dd>
 
-                            <dt>Password</dt>
-                            <dd id="password_data"></dd>
-                        </dl>
-                    </div>
-                </div>
+                    <dt>Username:</dt>
+                    <dd id="username_data"></dd>
+
+                    <dt>Password</dt>
+                    <dd id="password_data"></dd>
+                </dl>
                 <!-- /.box-body -->
             </div>
             <!-- /.modal-body -->
