@@ -14,8 +14,8 @@
             </div>
         </div>
         <div class="box-body">
-            <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
-                    class='glyphicon glyphicon-edit'></span></a>
+            <a href='#' id="edit-icon" type="button" class="btn btn-primary"><i
+                    class='glyphicon glyphicon-edit'></i><span>Edit</span></a>
 
             <div class="row">
                 <div class="col-sm-12">

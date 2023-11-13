@@ -9,6 +9,10 @@
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-subj">
                             <i class="fa fa-plus"></i> <span>Add Module</span>
                         </button>
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="tooltip"
+                            title="Archive Class">
+                            <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box pull-right">
