@@ -1,12 +1,14 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="box container">
-            <div class="box-header">
+            <div class="box-header"> </div>
+
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-subj">
                             <i class="fa fa-plus"></i> <span>Add Module</span>
-                        </button> 
+                        </button>
                         <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="tooltip"
                             title="Archive Class">
                             <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
@@ -19,7 +21,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- /.box-header -->
 
