@@ -47,8 +47,8 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu custom-dropdown-menu">
-                                <li><a href="#" data-module-type="active-subject"><b> Active Module</b></a></li>
-                                <li><a href="#" data-module-type="arch-subject"><b> Archive Module</b></a></li>
+                                <li><a href="#" data-module-type="active-module"><b> Active Module</b></a></li>
+                                <li><a href="#" data-module-type="arch-module"><b> Archive Module</b></a></li>
                             </ul>
                         </div>
                     </div>

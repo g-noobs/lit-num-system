@@ -15,10 +15,10 @@ $(document).ready(function() {
         var userType = $(this).data('module-type');
         var contentPath = '';
 
-        if (userType === 'active-subject') {
+        if (userType === 'active-module') {
             location.reload();
-        } else if (userType === 'arch-subject') {
-            contentPath = '../PagesContent/SubjectMain/SubjectArchiveTableContent.php';
+        } else if (userType === 'arch-module') {
+            contentPath = '../PagesContent/SubjectFolder/SubjectMain/SubjectArchiveTableContent.php';
         } 
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
