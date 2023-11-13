@@ -20,7 +20,6 @@ $(function() {
             $last_name.val(responseData.last_name);
             $first_name.val(responseData.first_name);
             $middle_initial.val(responseData.middle_name);
-            $gender.text(responseData.gender);
             $gender.val(responseData.gender);
             $contact.val(responseData.contact_num);
             $email.val(responseData.email);
