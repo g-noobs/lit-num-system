@@ -26,7 +26,6 @@ class DisplaySubject extends Connection{
                 echo "<td><b>".$status."</b></td>";
 
                 
-                echo "<td><a href='#' type='button' id='archiveBtn-".$row['module_id']."' data-toggle='modal' data-target='#archiveSubjModal' style='color:red';> <span class='glyphicon glyphicon-trash'></span></a></td>";
                 echo "</tr>";
             }
         }
