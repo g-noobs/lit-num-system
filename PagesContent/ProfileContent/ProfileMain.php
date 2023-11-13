@@ -14,6 +14,7 @@
             </div>
         </div>
         <div class="box-body">
+            <code id="error_admin" style="display: none;"></code>
             <a href='#' id="edit-icon" type="button" class="btn btn-primary">Edit<span
                     class='glyphicon glyphicon-edit'></span></a>
 
@@ -37,8 +38,8 @@
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    <label for="user_middle_initial">Middle Initial (**optional)</label>
-                                    <input type="text" name="user_middle_initial" class="form-control">
+                                    <label for="user_middle_initial">M.I. (**optional)</label>
+                                    <input type="text" name="user_middle_initial" class="form-control" maxlength="1">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +58,7 @@
                                 <div class="form-group">
                                     <label for="phone_num">Phone:</label>
                                     <input type="text" class="form-control" name="phone_num" id="phone_num"
-                                        required>
+                                        required maxlength="1">
                                 </div>
                             </div>
                             <div class="col-sm-4">
