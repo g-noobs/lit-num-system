@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="box container">
-            <div class="box-header"> </div>
+            <div class="box-header"> <br></div>
 
             <div class="container-fluid">
                 <div class="row">
