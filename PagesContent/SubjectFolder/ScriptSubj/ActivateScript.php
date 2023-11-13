@@ -23,8 +23,7 @@ $(document).ready(function() {
             $modalControl.modal('show');
             $('#confirm_activate').on('click', function() {
                 //Ajax code
-                var action_url =
-                    "../PagesContent/ClassContent/ActionFolder/ActivateArchiveClassAction.php";
+                var action_url ="../PagesContent/SubjectFolder/ActionSubj/ArchiveActivateModule.php";
 
                 $.ajax({
                     type: "POST",
