@@ -19,12 +19,12 @@ class DisplaySubject extends Connection{
                 }
                 echo "<tr>";
                 echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
+                echo "<td><a href='#' type='button' id='editBtn-".$row['module_id']."' data-toggle='modal' data-target='#editSubjModal' style='margin-right:10px; color: blue;'><span class='glyphicon glyphicon-edit' ></span></a></td>";
                 echo "<td>".$row["module_id"]."</td>";
                 echo "<td>".$row["module_name"]."</td>";
                 echo "<td>".$row["module_description"]."</td>";
                 echo "<td><b>".$status."</b></td>";
 
-                echo "<td><a href='#' type='button' id='editBtn-".$row['module_id']."' data-toggle='modal' data-target='#editSubjModal' style='margin-right:10px; color: blue;'><span class='glyphicon glyphicon-edit' ></span></a></td>";
                 
                 echo "<td><a href='#' type='button' id='archiveBtn-".$row['module_id']."' data-toggle='modal' data-target='#archiveSubjModal' style='color:red';> <span class='glyphicon glyphicon-trash'></span></a></td>";
                 echo "</tr>";
