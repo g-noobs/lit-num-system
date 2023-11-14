@@ -14,11 +14,11 @@
 
 <?php include_once "../CommonPHPClass/ModifiedSearchStyle.php";?>
 
-<style>
+<!-- <style>
 /* body {
     overflow: hidden;
 } */
-</style>
+</style> -->
 
 <body class="sidebar-mini skin-yellow fixed" style="height: 100%; min-height: 100%;">
 
@@ -82,18 +82,19 @@
             <section id="frmCsvGroup" class="container-fluid">
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Download Template:<a href="../PagesContent/UserContent/ExcelTemplates/import-teacher-template.xlsx" download data-toggle="tooltip" title="Download Template"
-                                style="color:green">
+                        <label>Download Template:<a
+                                href="../PagesContent/UserContent/ExcelTemplates/import-teacher-template.xlsx" download
+                                data-toggle="tooltip" title="Download Template" style="color:green">
                                 <i class="fa fa-download"></i>
                             </a>
                         </label>
                         <input type="file" name="file" id="file" />
 
                         <div class="overlay" style="display:none" id="loadingSpinner">
-                        <i class="fa fa-refresh fa-spin"></i>
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </div>
                     </div>
-                    </div>
-                    
+
                     <div id="response"></div>
                     <div class="form-group">
                         <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
@@ -113,7 +114,7 @@
 
             <!-- Assign class to teacher modal -->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignClassModal.php");?>
-            
+
             <!-- Assign module to teacher modal -->
             <?php include_once("../PagesContent/UserContent/UserModalFolder/AssignModuleModal.php");?>
 
@@ -138,6 +139,7 @@
 
 
         <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
+        
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
 
         <!-- Batch Upload Script -->
@@ -164,39 +166,6 @@
 
         <!-- Script view for viewing assigned data and modal -->
         <?php include_once "../PagesContent/UserContent/AllUserScript/ViewModuleClassScript.php";?>
-        <!-- 
-        <script>
-        // Check for saved user type
-        var userType = localStorage.getItem('userType');
-
-        if (userType) {
-
-            // Update dropdown 
-            $('.custom-dropdown-toggle').text('Teacher');
-
-            // Load content
-            loadContent(userType);
-
-            // Clear saved selection from dashboard.php
-            localStorage.removeItem('userType');
-
-        }
-
-        function loadContent(userType) {
-
-            var contentPath;
-
-            if (userType === 'teacher') {
-                contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
-            }
-
-            // ... other user types
-
-            if (contentPath) {
-                $("#mainContent").load(contentPath);
-            }
-        }
-        </script> -->
     </div>
 </body>
 
