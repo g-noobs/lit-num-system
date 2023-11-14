@@ -1,6 +1,6 @@
 <script>
 $(function() {
-    $('#adduserForm').on('submit', function() {
+    $('#addUserForm').on('submit', function() {
 
         var formData = new FormData(this);
         console.log(this);

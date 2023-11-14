@@ -108,7 +108,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($guardian_phone_num === false){
             $errors[] = "Invalid phone number";
         }
-        if($$class_assign === false){
+        if($class_assign === false){
             $errors[] = "Invalid characters in Class Assign.";
         }
         //check for empty fields
