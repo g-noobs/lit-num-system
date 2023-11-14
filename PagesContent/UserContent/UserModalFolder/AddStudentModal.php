@@ -124,7 +124,7 @@
                             </div>
                             <div class="col-xs-6">
                                 <label for="class_assign">Class</label>
-                                <select name="class_assign" id="class_assign" class="form-control input-xs">
+                                <select name="class_assign" id="class_assign" class="form-control input-xs" required>
                                     <?php include_once "../Database/DisplayAllTableClass.php";
                                     $classTable = new DisplayAllTableClass();
                                     $classTable->assignClass();
