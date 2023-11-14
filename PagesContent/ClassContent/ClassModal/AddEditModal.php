@@ -15,13 +15,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="sy_id">Schoole Year</label>
-                            <select name="sy_id" id="sy_id" class="form-control">
-                                <?php include_once "../Database/ClassEssentialsClass.php";
-                                    $syOption = new ClassEssentialsClass();
-                                    $syOption->schoolYearSelect();
-                                ?>
-                            </select>
+                            <label for="sy_date">Schoole Year</label>
+                            <input type="text" name="sy_date" class="form-control" placeholder="School Year" required>
                         </div>
                     </div>
                 </div>
