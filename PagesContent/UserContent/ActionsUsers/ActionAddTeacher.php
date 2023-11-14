@@ -65,6 +65,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if ($email === false) {
             $errors[] = "Invalid email format.";
         }
+        if($street_address === false){
+            $errors[] = "Invalid characters in Street Address.";
+
+        }
+        if($barangay_address === false){
+            $errors[] = "Invalid characters in Barangay Address.";
+
+        }
+        if($city_address === false){
+            $errors[] = "Invalid characters in City Address.";
+
+        }
+        if($province_address === false){
+            $errors[] = "Invalid characters in Province Address.";
+
+        }
+        if($zip_code === false){
+            $errors[] = "Invalid characters in Zip Code.";
+
+        }
         //check for empty fields
         if (!empty($errors)) {
             echo json_encode($errors);
