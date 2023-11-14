@@ -24,7 +24,7 @@
             <br>
 
             <div class="box-body" style="overflow-y: scroll; max-height: 400px;">
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="example2" class="table table-bordered table-hover text-center">
                     <thead>
                         <tr>
                             <?php include_once("TableHeader.php");?>
