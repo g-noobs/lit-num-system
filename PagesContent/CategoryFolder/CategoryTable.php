@@ -37,7 +37,7 @@
                     <tbody>
                         <?php include_once("../Database/TableCategoryClass.php");
                         $display = new TableCategoryClass();
-                        $query = "SELECT * FROM tbl_category";
+                        $query = "SELECT * FROM tbl_category WHERE category_status = 1;";
                         $display->tableCategory($query);
                     ?>
                     </tbody>
