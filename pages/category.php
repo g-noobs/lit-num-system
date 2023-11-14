@@ -85,7 +85,7 @@ body {
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
         <!-- activate user script -->
-        <?php include_once "../PagesContent/CategoryFolder/CategoryScript/ActivateScript.php"; ?>
+        <?php include_once "../PagesContent/CategoryFolder/CategoryScript/ArchiveScript.php"; ?>
 
 </body>
 
