@@ -130,7 +130,6 @@
 
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
-        <?php include_once("../PagesContent/UserContent/AllUserScript/ArchiveUserScript.php");?>
 
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
@@ -140,38 +139,6 @@
 
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
-        <script>
-        // Check for saved user type
-        var userType = localStorage.getItem('userType');
-
-        if (userType) {
-
-            // Update dropdown 
-            $('.custom-dropdown-toggle').text('Teacher');
-
-            // Load content
-            loadContent(userType);
-
-            // Clear saved selection from dashboard.php
-            localStorage.removeItem('userType');
-
-        }
-
-        function loadContent(userType) {
-
-            var contentPath;
-
-            if (userType === 'teacher') {
-                contentPath = '../PagesContent/UserContent/UserTable/TeacherTableContent.php';
-            }
-
-            // ... other user types
-
-            if (contentPath) {
-                $("#mainContent").load(contentPath);
-            }
-        }
-        </script>
     </div>
 
 </body>
