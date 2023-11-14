@@ -31,8 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         isset($_POST['guardian_last_name']) && !empty($_POST['guardian_last_name']) &&
         isset($_POST['guardian_first_name']) && !empty($_POST['guardian_first_name']) &&
         isset($_POST['guardian_middle_name']) && !empty($_POST['guardian_middle_name']) &&
-        isset($_POST['guardian_phone_num']) && !empty($_POST['guardian_phone_num']) &&
-        isset($_POST['class_assign']) && !empty($_POST['class_assign'])
+        isset($_POST['guardian_phone_num']) && !empty($_POST['guardian_phone_num'])
     ) {   
         //set input validation class
         $inputValidation = new InputValidationClass();
