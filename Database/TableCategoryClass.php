@@ -18,7 +18,7 @@ class TableCategoryClass extends Connection{
                 }
                 
                 echo "<tr>";
-                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
+                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['category_id'] . "'></td>";
                 echo "<td><a href='#' class='edit' data-toggle='modal' data-target='#archive-category' style='margin-right:10px; color:#f0ad4e'><span class='glyphicon glyphicon-edit' ></span></a></td>";
 
                 echo "<td>".$row['category_id']."</td>";
