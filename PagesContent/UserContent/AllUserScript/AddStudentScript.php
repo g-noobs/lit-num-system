@@ -1,5 +1,5 @@
 <script>
-$(document).ready(function() {
+$(function() {
     $('#adduserForm').on('submit', function(e) {
         e.preventDefault();
         var formData = new FormData(this);
