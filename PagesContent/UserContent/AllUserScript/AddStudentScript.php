@@ -1,7 +1,7 @@
 <script>
 $(function() {
-    $('#adduserForm').on('submit', function(e) {
-        e.preventDefault();
+    $('#adduserForm').on('submit', function() {
+
         var formData = new FormData(this);
         console.log(this);
 
