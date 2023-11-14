@@ -13,26 +13,47 @@ $(document).ready(function() {
             data: formData,
             processData: false,
             contentType: false,
+            dataType: 'json',
+
             success: function(response) {
-                var responseData = JSON.parse(response);
-                // Check if the form submission was successful
-                if (responseData.hasOwnProperty('success')) {
-                    $hideModal.modal('hide');
-                    $('#successAlert').text(responseData.success);
-                    $('#successBanner').show();
-                    setTimeout(function() {
-                        $("#successBanner").fadeOut("slow");
+                if (Array.isArray(response)) {
+                    // Clear previous error messages
+                    $("#add_user_modal_alert_text").empty();
+                    $("#add_user_modal_alert").show();
 
-                    }, 1500);
-                } else if (responseData.hasOwnProperty('error')) {
-                    $hideModal.modal('hide');
-                    $('#errorAlert').text(responseData.error);
-                    $('#errorBanner').show();
-                    setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
+                    // Update the element with the received errors
+                    $.each(response, function(index, error) {
+                        $("#add_user_modal_alert_text").append("<p class='error'>" +
+                            error +
+                            "</p><br>");
+                        console.log(error);
+                    });
 
-                    }, 1500);
+                    setTimeout(function() {
+                        $("#add_user_modal_alert").fadeOut("slow");
+
+                    }, 3500);
+                } else {
+                    // Check if the form submission was successful
+                    if (response.hasOwnProperty('success')) {
+                        $hideModal.modal('hide');
+                        $('#successAlert').text(response.success);
+                        $('#successBanner').show();
+                        setTimeout(function() {
+                            $("#successBanner").fadeOut("slow");
+
+                        }, 1500);
+                    } else if (response.hasOwnProperty('error')) {
+                        $hideModal.modal('hide');
+                        $('#errorAlert').text(response.error);
+                        $('#errorBanner').show();
+                        setTimeout(function() {
+                            $("#errorBanner").fadeOut("slow");
+
+                        }, 1500);
+                    }
                 }
+
             },
             error: function() {
                 $hideModal.modal('hide');
