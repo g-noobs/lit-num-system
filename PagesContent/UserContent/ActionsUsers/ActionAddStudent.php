@@ -19,7 +19,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         isset($_POST['personal_id']) && !empty($_POST['personal_id']) &&
         isset($_POST['last_name']) && !empty($_POST['last_name']) &&
         isset($_POST['first_name']) && !empty($_POST['first_name']) &&
-        isset($_POST['user_middle_initial']) && !empty($_POST['user_middle_initial']) &&
         isset($_POST['phone_num']) && !empty($_POST['phone_num']) &&
         isset($_POST['gender']) && !empty($_POST['gender']) &&
         isset($_POST['email']) && !empty($_POST['email']) &&
@@ -30,7 +29,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         isset($_POST['zip_code']) && !empty($_POST['zip_code']) &&
         isset($_POST['guardian_last_name']) && !empty($_POST['guardian_last_name']) &&
         isset($_POST['guardian_first_name']) && !empty($_POST['guardian_first_name']) &&
-        isset($_POST['guardian_middle_name']) && !empty($_POST['guardian_middle_name']) &&
         isset($_POST['guardian_phone_num']) && !empty($_POST['guardian_phone_num'])
     ) {   
         //set input validation class
