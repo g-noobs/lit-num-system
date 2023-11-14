@@ -55,9 +55,8 @@
 <!-- dropdown query -->
 <?php include_once "CategoryCommon/CategoryJquery.php";?>
 
-<!-- all script -->
-<?php include_once "../../CommonContent/CommonAllScript.php"; ?>
-
+<!-- input search -->
+<?php include_once "../../CommonContent/CommonAllScript.php"?>
 
 <!-- activate script -->
 <?php include_once "CategoryScript/ActivateScript.php";?>
