@@ -106,7 +106,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $errors[] = "Invalid characters in Guardian Middle Initial.";
         }
         if($guardian_phone_num === false){
-            $errors[] = "Invalid phone number";
+            $errors[] = "Invalid Guardian phone number";
         }
         if($class_assign === false){
             $errors[] = "Invalid characters in Class Assign.";
