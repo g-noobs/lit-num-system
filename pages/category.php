@@ -67,6 +67,10 @@ body {
                 $modal->addNewCategory();
                 $modal->archiveCategory();
             ?>
+
+            <!-- Confirmation Modal -->
+            <?php include_once("../PagesContent/CategoryFolder/CategoryCommon/ConfirmationModal.php"); ?>
+
             <!-- Main content -->
             <section class="content" id="categoryMainCont">
                 <?php include_once("../PagesContent/CategoryFolder/CategoryTable.php");?>
@@ -79,6 +83,10 @@ body {
         <?php include_once "../PagesContent/CategoryFolder/CategoryCommon/CategoryJquery.php"; ?>
         <?php include_once "../CommonContent/ErrorModal.php"?>
         <?php include_once "../CommonContent/CommonAllScript.php"?>
+
+        <!-- activate user script -->
+        <?php include_once "../PagesContent/CategoryFolder/CategoryScript/ActivateScript.php"; ?>
+
 </body>
 
 </html>
