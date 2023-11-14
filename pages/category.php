@@ -51,7 +51,7 @@ body {
 
 
                         <div class="col-xs-3">
-                            
+
                         </div>
                         <div class="col-xs-2">
 
@@ -71,6 +71,29 @@ body {
             <!-- Confirmation Modal -->
             <?php include_once("../PagesContent/CategoryFolder/CategoryCommon/ConfirmationModal.php"); ?>
 
+            <br>
+            <section>
+                <div class="align-items-start">
+                    <div class="col-sm-2">
+                        <div class="custom-dropdown">
+
+                            <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
+                                style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
+                                <b>Active Class</b> <!-- Updated the button text -->
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a href="#" data-category-type="active-category"><b>Active Category</b></a></li>
+                                <li><a href="#" data-category-type="archive-category"><b>Archived Category</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
             <!-- Main content -->
             <section class="content" id="categoryMainCont">
                 <?php include_once("../PagesContent/CategoryFolder/CategoryTable.php");?>
