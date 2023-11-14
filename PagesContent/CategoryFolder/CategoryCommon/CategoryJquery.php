@@ -17,13 +17,13 @@
 $(function() {
     $('.custom-dropdown-menu a').click(function(e) {
         e.preventDefault();
-        var classType = $(this).data('class-type');
+        var categoryType = $(this).data('category-type');
         var contentPath = '';
 
-        if(classType === 'active-class'){
+        if(categoryType === 'active-category'){
             location.reload();
-        }else if(classType === 'archive-class'){
-            contentPath = '../PagesContent/ClassContent/TableClass/ArchivedClassContent.php';
+        }else if(categoryType === 'archive-category'){
+            contentPath = '../PagesContent/CategoryFolder/CategoryArchiveTable.php';
         }
         $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
         if (contentPath !== '') {
