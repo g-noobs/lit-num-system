@@ -25,9 +25,6 @@ class TableCategoryClass extends Connection{
                 echo "<td>".$row['category_name']."</td>";
                 echo "<td>".$row['category_info']."</td>";
                 echo "<td>". $status ."</td>";
-
-                
-                
                 echo "</tr>";
             }
         }
