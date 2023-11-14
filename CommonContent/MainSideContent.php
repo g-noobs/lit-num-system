@@ -116,20 +116,20 @@
             </a>
         </li>
         <li>
-            <!-- <a href="category.php">
+            <a href="category.php">
                 <i class="glyphicon glyphicon-level-up"></i><span>Category</span>
-            </a> -->
+            </a>
         </li>
         <li>
             <a href="class.php">
                 <i class="fa fa-sticky-note-o"></i> <span>Class</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="schoolyr.php">
                 <i class="fa fa-calendar-check-o"></i> <span> School Year</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="reports.php">
                 <i class="fa fa-bar-chart"></i> <span>Reports</span>
