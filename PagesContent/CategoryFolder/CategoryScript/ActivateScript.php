@@ -24,7 +24,7 @@ $(document).ready(function() {
             $("#confirm_activate").on("click", function() {
                 //Ajax code
                 var action_url =
-                    "../PagesContent/UserContent/ActionsUsers/ActivateArchiveTeacherAction.php";
+                    "../PagesContent/CategoryFolder/ActionCategory/ActionRegisterCategory.php";
                 $.ajax({
                     type: "POST",
                     url: action_url,

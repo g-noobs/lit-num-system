@@ -1,4 +1,4 @@
-<?php include_once ("../CommonPHPClass/ModifiedSearchStyle.php");?>
+<?php include_once ("../../CommonPHPClass/ModifiedSearchStyle.php");?>
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
@@ -13,10 +13,10 @@
                             modal-target="">
                             <i class="fa fa-trash"></i> <span>Activate</span>
                         </button>
-                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
+                        <!-- <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
                             modal-target="">
                             <i class="glyphicon glyphicon-trash"></i> <span></span>
-                        </button>
+                        </button> -->
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
