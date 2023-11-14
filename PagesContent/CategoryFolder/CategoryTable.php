@@ -12,6 +12,10 @@
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_area">
                             <i class="fa fa-plus"></i> <span> New Category</span>
                         </button>
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
+                            modal-target="">
+                            <i class="glyphicon glyphicon-trash"></i> <span></span>
+                        </button>
                     </div>
                     <div class="col-xs-6">
                         <div class="search-box">
