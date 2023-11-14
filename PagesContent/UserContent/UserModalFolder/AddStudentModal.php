@@ -106,7 +106,7 @@
                             <div class="col-xs-5">
                                 <label for="guardian_first_name">First Name:</label>
                                 <input type="text" name="guardian_first_name" class="form-control input-xs"
-                                    placeholder="First Name" required />sd
+                                    placeholder="First Name" required />
                             </div>
 
                             <div class="col-xs-2">
