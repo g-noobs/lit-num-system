@@ -15,8 +15,8 @@ $(function() {
             processData: false,
             contentType: false,
             dataType: 'json',
-
             success: function(response) {
+                // Check if the response contains an array of errors
                 if (Array.isArray(response)) {
                     // Clear previous error messages
                     $("#add_user_modal_alert_text").empty();
@@ -42,30 +42,31 @@ $(function() {
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
-
+                            location.reload();
                         }, 1500);
+
+
+
                     } else if (response.hasOwnProperty('error')) {
                         $hideModal.modal('hide');
                         $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
-
+                            location.reload();
                         }, 1500);
                     }
                 }
-
             },
             error: function(xhr, status, error) {
                 console.error(xhr.responseText);
-
                 $hideModal.modal('hide');
                 //show alert banner id = errorBanner
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-
+                    location.reload();
                 }, 1500);
             }
         });
