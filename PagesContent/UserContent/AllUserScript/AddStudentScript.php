@@ -2,7 +2,8 @@
 $(document).ready(function() {
     $('#adduserForm').on('submit', function(e) {
         e.preventDefault();
-        var formData = new FormData(form);
+        var formData = new FormData(this);
+        console.log(this);
 
         var $hideModal = $('#add_user_modal');
         var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionAddStudent.php';
