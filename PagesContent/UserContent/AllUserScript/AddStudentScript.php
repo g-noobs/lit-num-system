@@ -1,8 +1,8 @@
 <script>
 $(function() {
-    $('#addUserForm').on('submit', function() {
+    $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
-        
+
         var formData = new FormData(this);
         console.log(this);
 
