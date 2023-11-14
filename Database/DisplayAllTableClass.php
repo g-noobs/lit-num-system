@@ -123,6 +123,40 @@ class DisplayAllTableClass extends Connection{
         }
     }
 
+    function displayArchivedTeacher($status){
+        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Teacher' AND status = '$status'";
+        $result = $this->getConnection()->query($sql);
+    
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<tr>";
+                
+                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
+                echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a></td>";
+
+
+                if ($row["status"] === "Active") {
+                    $statusColor = "text-success";
+                } else {
+                    $statusColor = "text-danger";
+                }   
+
+                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
+                
+                echo "<td><a href='#' class='assign_class_btn text-success' type='button' data-toggle='tooltip' title='Assign a Class' data-id='".$row["user_info_id"]."'><i class='fa fa-plus'></i></a></td>";
+                
+                echo "<td><a href='#' class='view_assign_class_btn text-primary' type='button' data-toggle='tooltip' title='View Assigned Class' data-id='".$row["user_info_id"]."'><i class='fa fa-info'></i></a></td>";
+                
+
+                echo "<td><a href='#' class='assign_module_btn text-warning' type='button' data-toggle='tooltip' title='Assign a Module' data-id='".$row["user_info_id"]."'><i class='fa fa-file-text-o'></i></a></td>";
+                
+                echo "<td><a href='#' class='view_assign_module_btn text-warning' type='button' data-toggle='tooltip' title='View Assigned Module' data-id='".$row["user_info_id"]."'><i class='fa fa-info'></i></a></td>";
+
+                echo "</tr>";
+            }
+        }
+    }
+
     function displayAdmin($status){
         $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Admin' AND status = '$status'";
         $result = $this->getConnection()->query($sql);
