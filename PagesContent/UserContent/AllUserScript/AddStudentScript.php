@@ -12,8 +12,6 @@ $(function() {
             url: actionUrl,
             type: "POST",
             data: formData,
-            processData: false,
-            contentType: false,
             dataType: 'json',
 
             success: function(response) {
