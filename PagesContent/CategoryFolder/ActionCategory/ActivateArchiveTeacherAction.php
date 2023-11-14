@@ -1,14 +1,14 @@
 <?php
 include_once "../../../Database/Connection.php";
 
-$table = "tbl_user_info";
+$table = "tbl_category";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $selectedIds = $_POST['selectedIds'];
     $status = $_POST['status'];
 
     // Update the status for the selected IDs
-    $updateQuery = "UPDATE $table SET status_id = '$status' WHERE user_info_id IN ('" . implode("','", $selectedIds) . "')";
+    $updateQuery = "UPDATE $table SET category_status = '$status' WHERE category_id IN ('" . implode("','", $selectedIds) . "')";
     $conn= new Connection();
     
     $result = $conn->getConnection()->query($updateQuery);
