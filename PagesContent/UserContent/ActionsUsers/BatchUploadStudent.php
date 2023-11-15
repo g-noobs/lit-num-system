@@ -165,7 +165,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                             $addNewGuardian = new SanitizeCrudClass();
                                             $addNewGuardian->executePreState($sql, $params);
 
-                                            if($$addNewGuardian->getLastError()=== null){
+                                            if($addNewGuardian->getLastError()=== null){
                                                 // $response = array('success' => 'Successfully added '.$values['first_name'].' '.$values['last_name'].'!');
                                             }
 
