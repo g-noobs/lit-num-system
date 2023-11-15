@@ -39,7 +39,8 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'gender' => trim($row[4]),
                     'user_level_id' => '2',
                     'added_byID' => '',
-                    'date_added' => ''
+                    'date_added' => '',
+                    'class_id' => $_POST['class_id']
                 );
                 
                 // Database table for user information
