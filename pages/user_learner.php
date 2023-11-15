@@ -92,14 +92,16 @@
                         </label>
                         <input type="file" name="user_file" id="user_file" />
                     </div>
-                    <div class="form-group">
-                        <label for="class_id">Select Class</label>
-                        <select name="class_id" id="class_id" class="form-control">
-                            <?php include_once "../Database/DisplayAllTableClass.php";
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="class_id">Select Class:</label>
+                            <select name="class_id" id="class_id" class="form-control">
+                                <?php include_once "../Database/DisplayAllTableClass.php";
                                 $classList = new DisplayAllTableClass();
                                 $classList->assignClass();
                             ?>
-                        </select>
+                            </select>
+                        </div>
                     </div>
                     <div id="response"></div>
                     <div class="form-group">
