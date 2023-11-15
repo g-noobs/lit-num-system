@@ -122,7 +122,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                         $student = array(
                                             'student_id' => '',
                                             'user_info_id' => $values['user_info_id'],
-                                            'class_id' => ''
+                                            'class_id' => $_POST['class_id']
                                         );
                                         //set student id
                                         $student['student_id'] = "TCH". $columnCountClass->columnCountWhere("student_id", $table);
@@ -137,15 +137,41 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                         //set sanitize class
                                         $addNewStudent = new SanitizeCrudClass();
                                         $addNewStudent->executePreState($sql, $params);
+
                                         if($addNewStudent->getLastError()=== null){
-                                            $response = array('success' => "Successfully added new student");
-                                            echo json_encode($response);
+                                            $guardian = array(
+                                                'guardian_id' => '',
+                                                
+                                                'guardian_lname' => trim($row[12]),
+                                                'guardian_fname' => trim($row[13]),
+                                                'guardian_mname' => trim($row[14]),
+                                                'guardian_number' => trim($row[15]),
+                                                'user_info_id' => $values['user_info_id'],
+                                            );
+                                            //set guardian id
+                                            $guardian['guardian_id'] = "GDN".$columnCountClass->columnCountWhere("guardian_id", "tbl_guardian");
+                                            //set columns
+                                            $columns = implode(', ', array_keys($guardian));
+                                            //set number of question marks
+                                            $questionMarkString = implode(',', array_fill(0, count($guardian), '?'));
+                                            //set sql
+                                            $sql = "INSERT INTO tbl_guardian($columns)VALUES($questionMarkString);";
+                                            // set parameters
+                                            $params = array_values($guardian);
+                                            //set sanitize class
+                                            $addNewGuardian = new SanitizeCrudClass();
+                                            $addNewGuardian->executePreState($sql, $params);
+
+                                            if($$addNewGuardian->getLastError()=== null){
+                                                $response = array('success' => 'Successfully added '.$values['first_name'].' '.$values['last_name'].'!');
+                                                echo json_encode($response);
+                                            }
+
                                         }else{
                                             $response = array('error' => "Error adding on student table");
                                             echo json_encode($response);
                                             break;
                                         }
-
                                     }else{
                                         $response = array('error' => 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!');
                                         echo json_encode($response);

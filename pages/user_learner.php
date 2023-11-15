@@ -153,6 +153,9 @@
 
         <!-- Script to see all user data -->
         <?php include_once "../PagesContent/UserContent/CommonUser/ScriptViewUserData.php";?>
+
+        <!-- Script batch upload student -->
+        <?php include_once "../PagesContent/UserContent/AllUserScript/UploadStudentExcelScript.php";?>
     </div>
 
 </body>
