@@ -19,7 +19,6 @@ $(document).ready(function() {
             success: function(response) {
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
-                var response = response;
 
                 for (var i = 0; i < response.length; i++) {
                     if (response[i].hasOwnProperty('success')) {
