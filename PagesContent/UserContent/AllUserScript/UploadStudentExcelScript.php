@@ -40,7 +40,7 @@ $(document).ready(function() {
                     }
                 }
 
-                location.reload();
+                // location.reload();
                 $('#response').text('Successfully uploaded data');
                 $('#response').show();
                 setTimeout(function() {
@@ -59,7 +59,7 @@ $(document).ready(function() {
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
                 }, 1500);
-                location.reload();
+                // location.reload();
                 $('#response').text('Seomething went wrong');
                 $('#response').show();
                 setTimeout(function() {
