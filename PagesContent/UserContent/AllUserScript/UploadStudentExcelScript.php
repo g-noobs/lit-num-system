@@ -28,22 +28,22 @@ $(document).ready(function() {
                             // location.reload();
                         }, 1500);
                     });
-                } else {
-                    if (response.hasOwnProperty('success')) {
-                        $('#successAlert').text(response.success);
-                        $('#successBanner').show();
-                        setTimeout(function() {
-                            $("#successBanner").fadeOut("slow");
-                            // location.reload();
-                        }, 1500);
-                    } else if (response.hasOwnProperty('error')) {
-                        $('#errorAlert').text(response.error);
-                        $('#errorBanner').show();
-                        setTimeout(function() {
-                            $("#errorBanner").fadeOut("slow");
-                            // location.reload();
-                        }, 1500);
-                    }
+                }
+
+                if (response.hasOwnProperty('success')) {
+                    $('#successAlert').text(response.success);
+                    $('#successBanner').show();
+                    setTimeout(function() {
+                        $("#successBanner").fadeOut("slow");
+                        // location.reload();
+                    }, 1500);
+                } else if (response.hasOwnProperty('error')) {
+                    $('#errorAlert').text(response.error);
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+                        // location.reload();
+                    }, 1500);
                 }
                 $("#loadingSpinner").hide();
             },
