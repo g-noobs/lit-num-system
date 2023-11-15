@@ -26,7 +26,7 @@ $(document).ready(function() {
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
                             // location.reload();
-                        }, 1500);
+                        }, 11500);
                     });
                 }
 
@@ -36,14 +36,14 @@ $(document).ready(function() {
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
                         // location.reload();
-                    }, 1500);
+                    }, 11500);
                 } else if (response.hasOwnProperty('error')) {
                     $('#errorAlert').text(response.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
                         // location.reload();
-                    }, 1500);
+                    }, 11500);
                 }
                 $("#loadingSpinner").hide();
             },
