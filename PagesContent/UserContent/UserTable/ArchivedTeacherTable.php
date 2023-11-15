@@ -8,7 +8,7 @@
                     <div class="col-sm-6">
                         <button id="activate_btn" type="button" class="btn btn-success" data-toggle="modal"
                             modal-target="">
-                            <i class="fa fa-trash"></i> <span>Activate</span>
+                            <i class="fa fa-check-square"></i> <span>Activate</span>
                         </button>
                     </div>
                     <div class="col-sm-6">
