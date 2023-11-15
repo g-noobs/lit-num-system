@@ -57,18 +57,12 @@ $(document).ready(function() {
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
 
-                // Show an error message
-                $('#errorAlert').text('An error occurred during the AJAX request.');
+                $('#errorAlert').text(xhr.responseText);
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
+                    // location.reload();
                 }, 1500);
-                // location.reload();
-                $('#response').text('Seomething went wrong');
-                $('#response').show();
-                setTimeout(function() {
-                    $("#response").fadeOut("slow");
-                }, 3500);
             }
         });
     });
