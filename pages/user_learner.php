@@ -92,6 +92,15 @@
                         </label>
                         <input type="file" name="user_file" id="user_file" />
                     </div>
+                    <div class="form-group">
+                        <label for="class_id">Select Class</label>
+                        <select name="class_id" id="class_id">
+                            <?php include_once "../Database/DisplayAllTableClass.php";
+                                $classList = new DisplayAllTableClass();
+                                $classList->assignClass();
+                            ?>
+                        </select>
+                    </div>
                     <div id="response"></div>
                     <div class="form-group">
                         <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
