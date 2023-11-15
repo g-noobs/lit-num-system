@@ -35,7 +35,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     'first_name' => trim($row[2]),
                     'middle_name' => trim($row[3]),
                     'gender' => trim($row[4]),
-                    'user_level_id' => '1',
+                    'user_level_id' => '2',
                     'added_byID' => '',
                     'date_added' => ''
                 );
