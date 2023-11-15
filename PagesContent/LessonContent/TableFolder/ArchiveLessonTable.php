@@ -1,4 +1,5 @@
 <?php include_once "../../../CommonCode/ModifiedSearchStyle.php";?>
+<?php include_once "../../../CommonPHPClass/ModifiedSearchStyle.php";?>
 <div class="row">
     <div class="box container">
         <div class="box-header">
