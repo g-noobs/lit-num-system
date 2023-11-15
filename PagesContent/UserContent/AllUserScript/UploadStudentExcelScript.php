@@ -21,26 +21,22 @@ $(document).ready(function() {
                 if (Array.isArray(response)) {
                     // Update the element with the received errors
                     $.each(response, function(index, error) {
-                        console.log(error);
+                        $('#errorAlert').text(error);
+                        $('#errorBanner').show();
+                        setTimeout(function() {
+                            $("#errorBanner").fadeOut("slow");
+                            // location.reload();
+                        }, 1500);
                     });
-                    // setTimeout(function() {
-                    //     $("#errorBanner").fadeOut("slow");
-                    // }, 3500);
-                    // return;
                 } else {
                     if (response.hasOwnProperty('success')) {
-                        $hideModal.modal('hide');
                         $('#successAlert').text(response.success);
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
                             // location.reload();
                         }, 1500);
-
-
-
                     } else if (response.hasOwnProperty('error')) {
-                        $hideModal.modal('hide');
                         $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
