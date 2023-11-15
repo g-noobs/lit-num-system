@@ -24,3 +24,28 @@ $(function() {
     });
 });
 </script>
+
+<!-- dropdown config -->
+<script>
+$(function() {
+    $('.custom-dropdown-menu a').click(function(e) {
+        e.preventDefault();
+        var lessonType = $(this).data('lesson-type');
+        var contentPath = '';
+
+        if (lessonType === 'active-lesson') {
+            location.reload();
+        } else if (lessonType === 'archive-lesson') {
+            contentPath = '../PagesContent/LessonContent/TableFolder/ArchiveLessonTable.php';
+        }
+        $('.custom-dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+        if (contentPath !== '') {
+            $("#lesson-table").fadeOut(400, function() {
+                $(this).load(contentPath, function() {
+                    $(this).fadeIn(400);
+                });
+            });
+        }
+    });
+});
+</script>

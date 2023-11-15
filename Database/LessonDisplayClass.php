@@ -63,6 +63,24 @@ class LessonDisplayClass extends Connection{
             }
         }   
     }
+    function archivelessonTable(){
+        $table = "lesson_view"; //archive_lesson_view
+        $sql = "SELECT * FROM $table WHERE module_status = 1 AND lesson_status = 0";
+        $result = $this->getConnection()->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<tr>";
+                
+                echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['lesson_id'] . "'></td>";
+
+                echo "<td>" . $row["lesson_id"] . "</td>";
+                echo "<td>" . $row["lesson_name"] . "</td>";
+                echo "<td>" . $row["category_name"] . "</td>";
+                echo "<td>" . $row["module_name"] . "</td>";
+                echo "</tr>";
+            }
+        }   
+    }
     function topicTable($lessonId){
         $sql = "SELECT * FROM tbl_topic WHERE lesson_id = '".$lessonId."';";
         $result = $this->getConnection()->query($sql);
