@@ -94,7 +94,7 @@
                     </div>
                     <div class="form-group">
                         <label for="class_id">Select Class</label>
-                        <select name="class_id" id="class_id">
+                        <select name="class_id" id="class_id" class="form-control">
                             <?php include_once "../Database/DisplayAllTableClass.php";
                                 $classList = new DisplayAllTableClass();
                                 $classList->assignClass();
