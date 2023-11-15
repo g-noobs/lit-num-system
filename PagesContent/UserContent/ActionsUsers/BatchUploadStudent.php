@@ -9,6 +9,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
     // Allowed mime types for Excel files
     $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
+    $errors = array();
     // Validate whether a selected file is an Excel file
     if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelMimes)) {
         // If the file is uploaded
@@ -25,6 +26,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
             $worksheet_arr = array_filter($worksheet_arr, function ($row) {
                 return !empty(array_filter($row));
             });
+
 
             // Loop through each row in the spreadsheet
             foreach ($worksheet_arr as $row) {
@@ -163,60 +165,59 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                                             $addNewGuardian->executePreState($sql, $params);
 
                                             if($$addNewGuardian->getLastError()=== null){
-                                                $response = array('success' => 'Successfully added '.$values['first_name'].' '.$values['last_name'].'!');
-                                                echo json_encode($response);
+                                                // $response = array('success' => 'Successfully added '.$values['first_name'].' '.$values['last_name'].'!');
                                             }
 
                                         }else{
-                                            $response = array('error' => "Error adding on student table");
-                                            echo json_encode($response);
+                                            $errors[] = 'Error Adding on student table for '.$values['first_name'].' '.$values['last_name'].'!';
                                             break;
                                         }
                                     }else{
-                                        $response = array('error' => 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!');
-                                        echo json_encode($response);
+                                        $errors[] = 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!';
                                         break;
                                     }
                                 }else{
-                                    $response = array('error' => 'Error Adding Credentials for'.$values['first_name'].' '.$values['last_name'].'!');
-                                    echo json_encode($response);
+                                    $errors[] = 'Error Adding Credentials for'.$values['first_name'].' '.$values['last_name'].'!';
                                     break;
                                 }
                                 
                             } catch (mysqli_sql_exception $e) {
                                 // Handle any errors during insertion
-                                $response = array('error'=> $e->getMessage());
-                                echo json_encode($response);
+                                $errors[] = $e->getMessage();
                                 break;
                             }
                         }else{
-                            $response = array('error' => 'Error Adding user info!'.$values['first_name'].' '.$values['last_name'].'!');
-                            echo json_encode($response);
+                            $errors[] = 'Error adding '.$values['first_name'].' '.$values['last_name'].'! Possible Duplicate or Invalid Data!';
                             break;
                         }
                     } catch (mysqli_sql_exception $e) {
                         // Handle any errors during insertion
-                        $response = array('error'=> $e->getMessage());
-                        echo json_encode($response);
+                        $errors[] = $e->getMessage();
                         break;
                     }
                 }
                 else{
-                    $response = array('error' => 'Error uploading file! Possible Duplicate');
-                    echo json_encode($response);
+                    $errors[] = 'Error adding '.$values['first_name'].' '.$values['last_name'].'! Possible Duplicate or Invalid Data!';
                     break;
                 }
             }
         } else {
-            $response = array('error' => 'Error uploading file!');
-            echo json_encode($response);
+            $errors[] = 'Error uploading file!';
             
         }
     } else {
-        $response = array('error' => 'Please upload a valid Excel file!');
+        $errors[] = "Please upload a valid Excel file!";
     }
 // }else{
 //     $response = array('error' => 'Possible POST ISSUE');
 //     echo json_encode($response);
 // }
+
+if (!empty($errors)) {
+    echo json_encode($errors);
+    //start adding if no error catched
+}else{
+    $response = array('success' => 'Successfully added all students from excel!');
+    echo json_encode($response);
+}
 ?>

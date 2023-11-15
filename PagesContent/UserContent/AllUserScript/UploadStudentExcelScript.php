@@ -17,34 +17,39 @@ $(document).ready(function() {
             processData: false,
             dataType: 'json',
             success: function(response) {
-                // Hide the loading spinner
-                $("#loadingSpinner").hide();
+                // Check if the response contains an array of errors
+                if (Array.isArray(response)) {
+                    // Update the element with the received errors
+                    $.each(response, function(index, error) {
+                        console.log(error);
+                    });
+                    // setTimeout(function() {
+                    //     $("#errorBanner").fadeOut("slow");
+                    // }, 3500);
+                    // return;
+                } else {
+                    if (response.hasOwnProperty('success')) {
+                        $hideModal.modal('hide');
+                        $('#successAlert').text(response.success);
+                        $('#successBanner').show();
+                        setTimeout(function() {
+                            $("#successBanner").fadeOut("slow");
+                            // location.reload();
+                        }, 1500);
 
-                for (var i = 0; i < response.length; i++) {
-                    if (response[i].hasOwnProperty('success')) {
-                        // Create a new success banner for each success message
-                        var successBanner = $('<div class="success-banner">')
-                            .text(response[i].success)
-                            .hide()
-                            .appendTo('#successBanner')
-                            .show()
-                            .delay(1500)
-                            .fadeOut("slow");
-                    } else if (response[i].hasOwnProperty('error')) {
-                        $('#errorAlert').text(response[i].error);
+
+
+                    } else if (response.hasOwnProperty('error')) {
+                        $hideModal.modal('hide');
+                        $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
+                            // location.reload();
                         }, 1500);
                     }
                 }
-
-                // location.reload();
-                $('#response').text('Successfully uploaded data');
-                $('#response').show();
-                setTimeout(function() {
-                    $("#response").fadeOut("slow");
-                }, 3500);
+                $("#loadingSpinner").hide();
             },
             error: function(xhr, status, error) {
                 console.log('AJAX error:', status, error);
