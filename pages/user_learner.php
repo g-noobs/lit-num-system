@@ -85,7 +85,7 @@
                 <form id="uploadCSVForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="user_file">Upload User</label>
-                        <label>Download Template:<a href="#" download data-toggle="tooltip" title="Download Template"
+                        <label>Download Template:<a  href="../PagesContent/UserContent/ExcelTemplates/student-upload-template.xlsx" download data-toggle="tooltip" title="Download Template"
                                 style="color:green">
                                 <i class="fa fa-download"></i>
                             </a>
