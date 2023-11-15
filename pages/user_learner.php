@@ -90,9 +90,9 @@
                                 <i class="fa fa-download"></i>
                             </a>
                         </label>
-                        <input type="file" name="user_file" id="user_file" />
+                        <input type="file" name="file" id="file" />
                     </div>
-                    <!-- <div class="form-group row">
+                    <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="class_id">Select Class:</label>
                             <select name="class_id" id="class_id" class="form-control">
@@ -102,7 +102,7 @@
                             ?>
                             </select>
                         </div>
-                    </div> -->
+                    </div>
                     <div id="response"></div>
                     <div class="form-group">
                         <button type="submit" name="upload" id="upload" class="btn btn-success pull-left"
