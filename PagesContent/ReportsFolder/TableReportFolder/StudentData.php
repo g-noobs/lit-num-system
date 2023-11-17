@@ -32,15 +32,16 @@
                             <th>Phone#</th>
                             <th>Email</th>
                             <th>Address</th>
+                            <th>Guardian Last Name</th>
+                            <th>Guardian First Name</th>
+                            <th>Guardian Contact Number</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php 
                         include_once("../Database/ReportsDisplay.php");
-                        $table = "user_info_view";
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Learner'";
                         $stduentData = new ReportsDisplay();
-                        $stduentData->displayUserData($sql);
+                        $stduentData->fullStudentData();
                     ?>
                     </tbody>
                 </table>
