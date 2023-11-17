@@ -89,7 +89,7 @@
         </li>
 
         <!-- //Tree view for Lesson -->
-        <li class="treeview" style="height: auto;">
+        <!-- <li class="treeview" style="height: auto;">
             <a href="#">
                 <i class="fa fa-book"></i> <span>Manage Lesson</span>
                 <span class="pull-right-container">
@@ -108,7 +108,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
         <li>
             <!-- subject will now be named as module -->
             <a href="subject.php">
