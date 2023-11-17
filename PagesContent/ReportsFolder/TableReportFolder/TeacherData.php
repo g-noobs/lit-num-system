@@ -33,16 +33,15 @@
                                 <th>Contact #</th>
                                 <th>Email</th>
                                 <th>Address</th>
-
                             </tr>
                         </thead>
                         <tbody>
-                            <?php 
-                        include_once("../../../Database/ReportsDisplay.php");
-                        $table = "user_info_view";
-                        $stduentData = new ReportsDisplay();
-                        $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher';";
-                        $stduentData->displayUserData($sql);
+                        <?php 
+                            include_once("../../../Database/ReportsDisplay.php");
+                            $table = "user_info_view";
+                            $stduentData = new ReportsDisplay();
+                            $sql = "SELECT * FROM $table WHERE user_level_description = 'Teacher';";
+                            $stduentData->displayUserData($sql);
                         ?>
                         </tbody>
                     </table>
