@@ -1,4 +1,4 @@
-displayStudent<?php 
+<?php 
 include_once("Connection.php");
 class DisplayAllTableClass extends Connection{
     public $conn; 
