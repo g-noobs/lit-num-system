@@ -37,6 +37,7 @@
                                 <th>Last Name</th>
                                 <th>Gender</th>
                                 <th>User Type</th>
+                                <th>Assigned Class</th>
                                 <th>Account Status</th>
                             </tr>
                         </thead>

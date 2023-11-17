@@ -1,4 +1,4 @@
-<?php 
+displayStudent<?php 
 include_once("Connection.php");
 class DisplayAllTableClass extends Connection{
     public $conn; 
@@ -51,23 +51,15 @@ class DisplayAllTableClass extends Connection{
         }
     }
     function displayStudent($status){
-        $sql = "SELECT * FROM user_info_view WHERE user_level_description = 'Learner' AND status = '$status'";
+        $sql = "SELECT * FROM student_full_view WHERE user_level_description = 'Learner' AND status = '$status'";
         $result = $this->getConnection()->query($sql);
     
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
                 if ($row["status"] === "Active") {
                     $statusColor = "text-success";
-                    $iconColor = "text-danger";
-                    $actionIcon = "<span class='glyphicon glyphicon-trash'></span>";
-                    $data_target = "#archiveUserModal";
-                    $icnBtnClass = "archIconBtn";
                 } else {
                     $statusColor = "text-danger";
-                    $iconColor = "text-success";
-                    $actionIcon = "<span class='glyphicon glyphicon-ok'></span>";
-                    $data_target = "#activateUserModal";
-                    $icnBtnClass = "actvIconBtn";
                 }   
                 echo "<tr>";
                 echo "<td><input type='checkbox' class='checkbox' name='selected[]' value='" . $row['user_info_id'] . "'></td>";
@@ -78,9 +70,9 @@ class DisplayAllTableClass extends Connection{
                 echo "<td> <a href='#' class='edit' data-toggle='modal' data-target='#edit-user' data-id='".$row["user_info_id"]."' style='margin-right:10px; color:'blue';'><span class='glyphicon glyphicon-edit' ></span></a> </td>";
 
 
-                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
-                
-
+                echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td>";
+                echo "<td>" .$row['class_name']. "</td>";
+                echo "<td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
                 echo "</tr>";
             }
         }
