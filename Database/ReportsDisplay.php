@@ -44,7 +44,6 @@ class ReportsDisplay extends Connection{
                 echo "<td>".$address. "</td>";
                 echo "<td>".$row['guardian_lname']. "</td>";
                 echo "<td>".$row['guardian_fname']. "</td>";
-                echo "<td>".$row['guardian_mname']. "</td>";
                 echo "<td>".$row['guardian_number']. "</td>";
                 echo "</tr>";
             }
