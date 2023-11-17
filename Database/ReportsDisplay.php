@@ -57,6 +57,7 @@ class ReportsDisplay extends Connection{
                 echo "<td>".$row['class_name']. "</td>";
                 echo "<td>".$row['schoolyear']. "</td>";
                 echo "<td>".$row['date_added']."</td>";
+                echo "<td> TO ADD </td>";
                 echo "</tr>";
             }
         }
