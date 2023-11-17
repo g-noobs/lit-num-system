@@ -11,6 +11,8 @@ $(document).ready(function() {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/TeacherData.php';
         } else if (dataType === 'subject-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/ModuleData.php';
+        }else if (dataType === 'class-data') {
+            contentPath = '../PagesContent/ReportsFolder/TableReportFolder/ClassData.php';
         } else if (dataType === 'lesson-data') {
             contentPath = '../PagesContent/ReportsFolder/TableReportFolder/LessonData.php';
         } else if (dataType === 'topic-data') {

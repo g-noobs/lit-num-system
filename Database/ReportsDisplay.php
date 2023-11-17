@@ -46,6 +46,21 @@ class ReportsDisplay extends Connection{
             }
         }
     }
+    function displayClass(){
+        $table = "class_view";
+        $sql = "SELECT * FROM $table";
+        $result = $this->getConnection()->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "<tr>";
+                echo "<td>".$row['class_id']."</td>";
+                echo "<td>".$row['class_name']. "</td>";
+                echo "<td>".$row['schoolyear']. "</td>";
+                echo "<td>".$row['date_added']."</td>";
+                echo "</tr>";
+            }
+        }
+    }
     function displayModule(){
         $sql = "SELECT * FROM tbl_module;";
         $result = $this->getConnection()->query($sql);

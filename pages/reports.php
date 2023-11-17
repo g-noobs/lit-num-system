@@ -64,6 +64,7 @@
                                 <ul class="dropdown-menu custom-dropdown-menu">
                                     <li><a href="#" data-report-type="student-data"><b>Students Data</b></a></li>
                                     <li><a href="#" data-report-type="teacher-data"><b>Teachers Data</b></a></li>
+                                    <li><a href="" data-report-type="class-data"><b>Class Data</b></a></li>
                                     <li><a href="#" data-report-type="subject-data"><b>Module Data</b></a></li>
                                     <li><a href="#" data-report-type="lesson-data"><b>Lesson Data</b></a></li>
                                     <li><a href="#" data-report-type="topic-data"><b>Topic Data</b></a></li>
