@@ -6,7 +6,7 @@ class ReportsDisplay extends Connection{
     function __construct(){
         parent :: __construct();
     }
-    function displayUserData($sql){
+    function fullTeacherData($sql){
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
