@@ -9,8 +9,9 @@
                             data-toggle="modal" data-target="#add_user_modal">
                             <i class="fa fa-plus"></i> <span>Add Teacher</span>
                         </button>
-                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal" modal-target="">
-                        <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
+                            modal-target="">
+                            <i class="glyphicon glyphicon-trash"></i> <span>Archive</span>
                         </button>
                     </div>
                     <div class="col-xs-6">
@@ -28,16 +29,16 @@
                     <table id="example2" class="table table-bordered table-hover text-center">
                         <thead>
                             <tr>
-                            <th colspan="3"><input type='checkbox' id="select-all" class='checkbox'></th>
-                            <th>ID</th>
-                            <th>Personal ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Gender</th>
-                            <th>User Type</th>
-                            <th>Status</th>
-                            <th colspan="2">Class Assignment</th>
-                            <th colspan="3">Module Assignment</th>
+                                <th colspan="3"><input type='checkbox' id="select-all" class='checkbox'></th>
+                                <th>ID</th>
+                                <th>Personal ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>User Type</th>
+                                <th>Status</th>
+                                <th colspan="2">Class Assignment</th>
+                                <th colspan="3">Module Assignment</th>
                             </tr>
                         </thead>
                         <tbody>
