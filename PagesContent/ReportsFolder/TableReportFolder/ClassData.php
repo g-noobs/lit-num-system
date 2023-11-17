@@ -29,7 +29,7 @@
                             <th>Class Name</th>
                             <th>Schoo Year</th>
                             <th>Date Added</th>
-                            <table>Assigned Teacher</table>
+                            <th>Assigned Teacher</th>
                         </tr>
                     </thead>
                     <tbody>
