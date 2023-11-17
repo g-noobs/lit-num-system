@@ -8,7 +8,7 @@ class DisplayAssignClass extends Connection{
     function displayClassList(){
         $sql = "SELECT class_id, class_name FROM tbl_class WHERE class_status = 1 AND 
             NOT EXISTS 
-            ( SELECT 1 FROM tbl_teacher_class_assignment WHERE tbl_teacher_class_assignment.class_id = tbl_class.class_id AND status = 1);";
+            ( SELECT 1 FROM tbl_teacher_class_assignment WHERE tbl_teacher_class_assignment.class_id = tbl_class.class_id AND status = 0);";
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
