@@ -104,7 +104,7 @@ class ReportsDisplay extends Connection{
                 echo "<td>".$row['topic_id']."</td>";
                 echo "<td>".$row['topic_name']. "</td>";
                 echo "<td>".$row['topic_description']."</td>";
-                echo "<td>".$row['lesson_id']."</td>";
+                echo "<td>".$row['lesson_name']."</td>";
                 echo "<td>".$row['added_byID']."</td>";
                 echo "<td>".$row['date_added']."</td>";
                 echo "</tr>";
