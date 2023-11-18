@@ -96,7 +96,7 @@ class ReportsDisplay extends Connection{
     }
 
     function displayTopic(){
-        $sql = "SELECT * FROM tbl_topic;";
+        $sql = "SELECT t.topic_id, t.topic_name, t.topic_description, l.lesson_name, t.added_byID, t.date_added FROM tbl_topic t JOIN tbl_lesson l ON t.lesson_id = l.lesson_id;";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
