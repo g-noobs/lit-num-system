@@ -32,8 +32,8 @@
                                 <th>Option 2</th>
                                 <th>Option 3</th>
                                 <th>Option 4</th>
-                                <th>Topic ID Source</th>
-                                <th>Date CreateD</th>
+                                <th>Topic Source</th>
+                                <th>Date Created</th>
                             </tr>
                         </thead>
                         <tbody>

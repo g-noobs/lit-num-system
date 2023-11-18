@@ -113,7 +113,7 @@ class ReportsDisplay extends Connection{
     }
 
     function displayQuiz(){
-        $sql = "SELECT * FROM tbl_quiz;";
+        $sql = "SELECT q.quiz_id, q.quiz_question, q.quiz_selectionA, q.quiz_selectionB, q.quiz_selectionC, q.quiz_selectionD, t.topic_name, q.date_created FROM tbl_quiz q JOIN tbl_topic t ON q.topic_id = t.topic_id;;";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -127,7 +127,7 @@ class ReportsDisplay extends Connection{
                 echo "<td>".$row['quiz_selectionB']."</td>";
                 echo "<td>".$row['quiz_selectionC']."</td>";
                 echo "<td>".$row['quiz_selectionD']."</td>";
-                echo "<td>".$row['topic_id']."</td>";
+                echo "<td>".$row['topic_name']."</td>";
                 echo "<td>".$row['date_created']."</td>";
                 echo "</tr>";
             }
