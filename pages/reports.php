@@ -48,6 +48,7 @@
 
             <!-- Modified Style for dropdown -->
             <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
+            <br>
             <!-- Dropdown Section -->
             <section>
                 <div class="align-items-start">
