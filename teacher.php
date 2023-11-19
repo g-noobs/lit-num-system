@@ -3,6 +3,9 @@
 <?php session_start(); 
 $_SESSION['admin'] = false;
 $_SESSION['teacher'] = false;
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
 
 <head>
