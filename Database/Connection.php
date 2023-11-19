@@ -8,10 +8,11 @@ class Connection{
 
     public function __construct(){
         //! Online deployment
+        // $this->host = "156.67.222.1";  
         $this->host = "localhost";
-        $this->username = "u170333284_admin";
-        $this->password = "Capstone1!";
-        $this->database = "u170333284_db_tagakaulo";
+        $this->username = "u170333284_admin";  
+        $this->password = "Capstone1!";  
+        $this->database = "u170333284_db_tagakaulo";  
         $this->connect();
 
         //! Local deployment
