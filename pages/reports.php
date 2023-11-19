@@ -37,59 +37,58 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 1744.3px;">
-            <div class="container">
-                <!-- Banner Alert -->
-                <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        <b style="color:#3D3848;">Reports</b>
-                    </h1>
-                </section>
+            <!-- Banner Alert -->
+            <?php include_once "../CommonContent/ModifiedAlert.php"; ?>
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    <b style="color:#3D3848;">Reports</b>
+                </h1>
+            </section>
 
-                <!-- Modified Style for dropdown -->
-                <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
-                <br>
-                <!-- Dropdown Section -->
-                <section>
-                    <div class="align-items-start">
-                        <div class="col-sm-2">
-                            <div class="custom-dropdown">
+            <!-- Modified Style for dropdown -->
+            <?php include_once "../CommonPHPClass/ModifiedDropdown.php";?>
+            <br>
+            <!-- Dropdown Section -->
+            <section>
+                <div class="align-items-start">
+                    <div class="col-sm-2">
+                        <div class="custom-dropdown">
 
-                                <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
-                                    style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
-                                    <b>Students Data</b> <!-- Updated the button text -->
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li><a href="#" data-report-type="student-data"><b>Students Data</b></a></li>
-                                    <li><a href="#" data-report-type="teacher-data"><b>Teachers Data</b></a></li>
-                                    <li><a href="" data-report-type="class-data"><b>Class Data</b></a></li>
-                                    <li><a href="#" data-report-type="subject-data"><b>Module Data</b></a></li>
-                                    <li><a href="#" data-report-type="lesson-data"><b>Lesson Data</b></a></li>
-                                    <li><a href="#" data-report-type="topic-data"><b>Topic Data</b></a></li>
-                                    <li><a href="#" data-report-type="quiz-data"><b>Quiz Data</b></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-10">
+                            <button class="custom-dropdown-toggle btn" type="button" data-toggle="dropdown"
+                                style="width:150px; border: 2px solid #E58A00; border-radius:10px; color: #E58A00;">
+                                <b>Students Data</b> <!-- Updated the button text -->
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a href="#" data-report-type="student-data"><b>Students Data</b></a></li>
+                                <li><a href="#" data-report-type="teacher-data"><b>Teachers Data</b></a></li>
+                                <li><a href="" data-report-type="class-data"><b>Class Data</b></a></li>
+                                <li><a href="#" data-report-type="subject-data"><b>Module Data</b></a></li>
+                                <li><a href="#" data-report-type="lesson-data"><b>Lesson Data</b></a></li>
+                                <li><a href="#" data-report-type="topic-data"><b>Topic Data</b></a></li>
+                                <li><a href="#" data-report-type="quiz-data"><b>Quiz Data</b></a></li>
+                            </ul>
                         </div>
                     </div>
-                </section>
-                <br>
-                <br>
-                <br>
-                <!-- Main content -->
-                <section class="content" id="mainContent">
-                    <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
-                </section>
-            </div>
+
+                    <div class="col-sm-10">
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <!-- Main content -->
+            <section class="content" id="mainContent">
+                <?php include_once "../PagesContent/ReportsFolder/TableReportFolder/StudentData.php"?>
+            </section>
+
         </div>
     </div>
     <!-- Script From the template -->
     <?php include_once("../bootstrap/js.php");?>
-<!-- Dropdown Script and Navigation-->
+    <!-- Dropdown Script and Navigation-->
     <?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/DropdownScript.php"?>
     <!-- Modified Script for Search -->
     <?php include_once "../CommonContent/CommonAllScript.php"?>
