@@ -17,6 +17,12 @@ class DisplayAllTableClass extends Connection{
                 echo "<td><a href='#' class='data_info_btn' data-id='".$row["user_info_id"]."' data-toggle='modal' data-target='#user_data_modal'><span class='glyphicon glyphicon-info-sign' style = 'padding-left: 10px;'></span></a>";
                 echo "</td>";
 
+                if ($row["status"] === "Active") {
+                    $statusColor = "text-success";
+                } else {
+                    $statusColor = "text-danger";
+                }   
+
                 echo "<td>" . $row["user_info_id"] . "</td><td>".$row["personal_id"]."</td><td>" . $row["first_name"] ."</td><td>". $row["last_name"] ."</td><td>". $row["gender"]. "</td><td>" . $row["user_level_description"]. "</td><td><b><span class='".$statusColor."'>" . $row["status"] ."</b></span></td>";
 
                 echo "</tr>";
