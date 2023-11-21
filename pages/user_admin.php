@@ -129,8 +129,6 @@
         <!-- Script for Adding a new user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/AddAdminUserScript.php");?>
         
-        <!-- Script for Editing a user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
         
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/ArchiveActivateUserScript.php");?>
