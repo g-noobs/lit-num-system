@@ -56,4 +56,4 @@
 
 <!-- Common Script with other pages -->
 <?php include_once "../CommonContent/CommonAllScript.php"?>
-<?php include_once "..PagesContent/ReportsFolder/ScriptReportFolder/ExportScript.php"?>
+<?php include_once "../PagesContent/ReportsFolder/ScriptReportFolder/ExportScript.php"?>
