@@ -103,9 +103,6 @@
         <!-- Common Script with other pages -->
         <?php include_once "../CommonContent/CommonAllScript.php"?>
         
-        <!-- Script for Adding a new user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/AddUserScript.php");?>
-        
         <!-- Script for Editing a user -->
         <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
         
