@@ -59,5 +59,3 @@
     <!-- /.col -->
 </div>
 
-<!-- Script to see all user data -->
-<?php include_once "../CommonUser/ScriptViewUserData.php";?>
