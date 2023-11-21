@@ -16,7 +16,7 @@
                         </div>
                         <div class="form-group">
                             <label for="subj_add_desc">Module Description:</label>
-                            <textarea  type="text" name="subj_add_desc" class="form-control" rows="10" cols="30" placeholder="Description" required>
+                            <input type="text" name="subj_add_desc" class="form-control" placeholder="Description" required>
                         </div>
                     </div>
                 </div>
