@@ -136,8 +136,6 @@
         <!-- add new student script -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/AddStudentScript.php");?>
 
-        <!-- Script for Editing a user -->
-        <?php include_once("../PagesContent/UserContent/CommonUser/EditUserScript.php");?>
 
         <!-- Script for Archive and Activate a user -->
         <?php include_once("../PagesContent/UserContent/AllUserScript/ActivateUserScript.php");?>
