@@ -2,7 +2,7 @@
 $(function() {
     $last_name = $('input[name="last_name"]');
     $first_name = $('input[name="first_name"]');
-    $middle_initial = $('select[name="user_middle_initial"]');
+    $middle_initial = $('input[name="user_middle_initial"]');
     $gender = $('select[name="gender"]');
     $contact = $('input[name="phone_num"]');
     $email = $('input[name="email"]');
