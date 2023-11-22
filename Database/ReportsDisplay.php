@@ -50,17 +50,20 @@ class ReportsDisplay extends Connection{
         }
     }
     function displayClass(){
-        $table = "class_view";
+        $table = "view_report_class_teacher_info";
         $sql = "SELECT * FROM $table";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
+
+                $schoolyear = $row['sy_start'] .'-'. $row['sy_end'];
+                $teacher_name = $row['first_name']. ' '. $row['last_name'];
                 echo "<tr>";
                 echo "<td>".$row['class_id']."</td>";
                 echo "<td>".$row['class_name']. "</td>";
-                echo "<td>".$row['schoolyear']. "</td>";
+                echo "<td>".$schoolyear. "</td>";
                 echo "<td>".$row['date_added']."</td>";
-                echo "<td> TO ADD </td>";
+                echo "<td>" .$teacher_name. "</td>";
                 echo "</tr>";
             }
         }
