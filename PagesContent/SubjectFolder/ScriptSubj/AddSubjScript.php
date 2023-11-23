@@ -62,11 +62,11 @@ $(function() {
                 $('#errorAlert').text(msg);
                 $('#errorBanner').show();
 
-                setTimeout(function() {
-                    $("#errorBanner").fadeOut(
-                        "slow"); // Hide the .alert element after 3 seconds
-                    location.reload();
-                }, 1500);
+                // setTimeout(function() {
+                //     $("#errorBanner").fadeOut(
+                //         "slow"); // Hide the .alert element after 3 seconds
+                //     location.reload();
+                // }, 1500);
             }
         });
 
