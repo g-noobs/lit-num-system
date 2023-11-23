@@ -34,8 +34,11 @@ $(document).ready(function() {
                                 item.error + "</span></div>");
                             console.log(item.error);
                         } else if (item.hasOwnProperty('success')) {
-                            $('#successAlert').text(item.success);
-                            $('#successBanner').show();
+                            $("#alert_container").append(
+                                "<div class='alert alert-success alert-dismissible fade in successBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>" +
+                                item.error + "</span></div>"
+                            );
+                            console.log(item.success);
                         }
                     });
 
