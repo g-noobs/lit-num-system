@@ -34,19 +34,19 @@ $(function() {
 
                     }, 8500);
                 } else {
-                    if (responseData.hasOwnProperty('success')) {
+                    if (response.hasOwnProperty('success')) {
                         $("#add_class_form")[0].reset();
                         $hideModal.modal('hide');
-                        $('#successAlert').text(responseData.success);
+                        $('#successAlert').text(response.success);
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
                             location.reload();
                         }, 1500);
-                    } else if (responseData.hasOwnProperty('error')) {
+                    } else if (response.hasOwnProperty('error')) {
                         $("#add_class_form")[0].reset();
                         $hideModal.modal('hide');
-                        $('#errorAlert').text(responseData.error);
+                        $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
