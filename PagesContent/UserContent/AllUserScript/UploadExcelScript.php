@@ -25,6 +25,12 @@ $(document).ready(function() {
                     $("#alert_container").empty();
                     $("#alert_container").show();
 
+                    // Update the element with the received errors
+                    $.each(response, function(index, error) {
+                        $("#alert_container").append("<div class='alert alert-danger alert-dismissible fade in errorBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>"+ error +"</span></div>");
+                        $('.errorBanner').show();
+                        console.log(error);
+                    });
                     $.each(response, function(index, item) {
                         if (item.hasOwnProperty('error')) {
                             $("#alert_container").append(
@@ -41,9 +47,10 @@ $(document).ready(function() {
                         }
                     });
 
+
                     setTimeout(function() {
                         $("#alert_container").fadeOut("slow");
-                        $('.errorBanner').fadeOut();
+                        $('.errorBanner').fadeout();
                     }, 6500);
                 } else {
                     // Check if the form submission was successful
