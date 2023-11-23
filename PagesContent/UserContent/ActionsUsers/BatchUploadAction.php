@@ -5,67 +5,115 @@ session_start();
 require '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
-// if (isset($_POST['upload_excel'])) {
-    // Allowed mime types for Excel files
-    $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
-    // Validate whether a selected file is an Excel file
-    if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelMimes)) {
-        // If the file is uploaded
-        if (is_uploaded_file($_FILES['file']['tmp_name'])) {
-            $reader = new Xlsx();
-            $spreadsheet = $reader->load($_FILES['file']['tmp_name']);
-            $worksheet = $spreadsheet->getActiveSheet();
-            $worksheet_arr = $worksheet->toArray();
+$excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
-            // Remove header row
-            unset($worksheet_arr[0]);
+// Validate whether a selected file is an Excel file
+if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelMimes)) {
+    // If the file is uploaded
+    if (is_uploaded_file($_FILES['file']['tmp_name'])) {
+        $reader = new Xlsx();
+        $spreadsheet = $reader->load($_FILES['file']['tmp_name']);
+        $worksheet = $spreadsheet->getActiveSheet();
+        $worksheet_arr = $worksheet->toArray();
 
-            //remove empty rows
-            $worksheet_arr = array_filter($worksheet_arr, function ($row) {
-                return !empty(array_filter($row));
-            });
+        // Remove header row
+        unset($worksheet_arr[0]);
 
-            // Loop through each row in the spreadsheet
-            foreach ($worksheet_arr as $row) {
-                $values = array(
-                    'user_info_id' => '',
-                    'personal_id' => trim($row[0]), 
-                    'last_name' => trim($row[1]),
-                    'first_name' => trim($row[2]),
-                    'middle_name' => trim($row[3]),
-                    'gender' => trim($row[4]),
-                    'user_level_id' => '1',
-                    'added_byID' => '',
-                    'date_added' => ''
-                );
-                
+        //remove empty rows
+        $worksheet_arr = array_filter($worksheet_arr, function ($row) {
+            return !empty(array_filter($row));
+        });
 
-                // Database table for user information
-                // Include necessary libraries and set up the database configuration
-                include_once("../../../Database/ColumnCountClass.php");
-                include_once("../../../Database/CommonValidationClass.php");
-                include_once("../../../Database/SanitizeCrudClass.php");
-                include_once("../../../CommonPHPClass/PHPClass.php");
-                include_once "../../../CommonPHPClass/InputValidationClass.php";
+        // Loop through each row in the spreadsheet
+        foreach ($worksheet_arr as $row) {
+            $values = array(
+                'user_info_id' => '',
+                'personal_id' => trim($row[0]), 
+                'last_name' => trim($row[1]),
+                'first_name' => trim($row[2]),
+                'middle_name' => trim($row[3]),
+                'gender' => trim($row[4]),
+                'user_level_id' => '1',
+                'added_byID' => '',
+                'date_added' => ''
+            );
+            
 
-                //set input validation class
-                $inputValidation = new InputValidationClass();
-                $teacher_id = $inputValidation->test_input(trim($row[0]), 'alphanum');
-                $last_name = $inputValidation->test_input(trim($row[1]), 'name');
-                $first_name = $inputValidation->test_input(trim($row[2]), 'name');
-                $middle_name = $inputValidation->test_input(trim($row[3]), 'name');
-                $gender = $inputValidation->test_input(trim($row[4]), 'name');
-                $phone_num = $inputValidation->test_input(trim($row[5]), 'phone');
-                $email = filter_var(trim($row[6]), FILTER_SANITIZE_EMAIL);
-                // !! to resume
+            // Database table for user information
+            // Include necessary libraries and set up the database configuration
+            include_once("../../../Database/ColumnCountClass.php");
+            include_once("../../../Database/CommonValidationClass.php");
+            include_once("../../../Database/SanitizeCrudClass.php");
+            include_once("../../../CommonPHPClass/PHPClass.php");
+            include_once "../../../CommonPHPClass/InputValidationClass.php";
 
+            //set input validation class
+            $inputValidation = new InputValidationClass();
+            $teacher_id = $inputValidation->test_input(trim($row[0]), 'alphanum');
+            $last_name = $inputValidation->test_input(trim($row[1]), 'name');
+            $first_name = $inputValidation->test_input(trim($row[2]), 'name');
+            $middle_name = $inputValidation->test_input(trim($row[3]), 'name');
+            $gender = $inputValidation->test_input(trim($row[4]), 'name');
+            $phone_num = $inputValidation->test_input(trim($row[5]), 'phone');
+            $email = filter_var(trim($row[6]), FILTER_SANITIZE_EMAIL);
+            $street = $inputValidation->test_input(trim($row[7]), 'address');
+            $baranggay = $inputValidation->test_input(trim($row[8]), 'address');
+            $municipal_city = $inputValidation->test_input(trim($row[9]), 'address');
+            $province = $inputValidation->test_input(trim($row[10]), 'address');
+            $postal_code = $inputValidation->test_input(trim($row[11]), 'number');
+
+
+            $errors =array();
+            if($teacher_id === false){
+                $errors[] = "Invalid characters in Teacher ID.";
+            }
+            if($last_name === false){
+                $errors[] = "Invalid characters in Last Name.";
+            }
+            if($first_name === false){
+                $errors[] = "Invalid characters in First Name.";
+            }
+            if($middle_name === false){
+                $errors[] = "Invalid characters in Middle Initial.";
+            }
+            if($gender === false){
+                $errors[] = "Invalid characters in gender.";
+            }
+            if($phone_num === false){
+                $errors[] = "Invalid phone number";
+            }
+            if($email === false){
+                $errors[] = "Invalid email address";
+            }
+            if($street === false){
+                $errors[] = "Invalid characters in Street Address.";
+            }
+            if($baranggay === false){
+                $errors[] = "Invalid characters in Barangay Address.";
+            }
+            if($municipal_city === false){
+                $errors[] = "Invalid characters in City Address.";
+            }
+            if($province === false){
+                $errors[] = "Invalid characters in Province Address.";
+            }
+            if($postal_code === false){
+                $errors[] = "Invalid characters in Zip Code.";
+            }
+            //send the error if error array is not empty
+            if (!empty($errors)) {
+                echo json_encode($errors);
+    
+                //start adding if no error catched
+            }else{
                 $table = "tbl_user_info";   
                 // Set user_info_id
                 $columnCountClass = new ColumnCountClass();
                 $values['user_info_id'] = "USR" . $columnCountClass->columnCountWhere("user_info_id", $table);
                 // Set added_byID from the session
                 $values['added_byID'] = $_SESSION['id'];
+
                 // Set the current date
                 $currentDate = new DateTime();
                 $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
@@ -191,16 +239,12 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                     break;
                 }
             }
-        } else {
-            $response = array('error' => 'Error uploading file!');
-            echo json_encode($response);
-            
         }
-    } else {
-        $response = array('error' => 'Please upload a valid Excel file!');
+    }else{
+        $response = array('error' => 'Error uploading file!');
+        echo json_encode($response);
     }
-// }else{
-//     $response = array('error' => 'Possible POST ISSUE');
-//     echo json_encode($response);
-// }
+} else {
+    $response = array('error' => 'Please upload a valid Excel file!');
+}
 ?>

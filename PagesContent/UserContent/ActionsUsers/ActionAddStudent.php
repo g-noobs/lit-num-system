@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $errors[] = "Invalid characters in Middle Initial.";
         }
         if($gender === false){
-            $errors[] = "Invalid characters in Guardian Last Name.";
+            $errors[] = "Invalid characters in gender.";
         }
         if($phone_num === false){
             $errors[] = "Invalid phone number";
