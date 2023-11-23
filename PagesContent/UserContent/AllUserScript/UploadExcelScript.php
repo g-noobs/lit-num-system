@@ -26,7 +26,7 @@ $(document).ready(function() {
                     $("#alert_container").show();
 
                     // Update the element with the received errors
-                    $.each(response, function(index, error) {
+                    $.each(response.errors, function(index, error) {
                         $("#alert_container").append("<div class='alert alert-danger alert-dismissible fade in'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>"+ error +"</span></div>");
                         console.log(error);
                     });
