@@ -62,11 +62,7 @@ body {
                 </div>
             </section>
 
-            <?php include_once("../PagesContent/CategoryFolder/CategoryCommon/ModalCategory.php");
-                $modal = new ModalCategory();
-                $modal->addNewCategory();
-                $modal->archiveCategory();
-            ?>
+            <?php include_once("../PagesContent/CategoryFolder/CategoryCommon/ModalCategory.php");?>
 
             <!-- Confirmation Modal -->
             <?php include_once("../PagesContent/CategoryFolder/CategoryCommon/ConfirmationModal.php"); ?>
