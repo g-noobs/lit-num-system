@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Geenrate Subject ID
 include_once("../../../Database/ColumnCountClass.php");
 //insert subject name validation
@@ -10,7 +11,7 @@ $values = array(
     'module_id' => '',
     'module_name' => $_POST['subj_name_add'],
     'module_description	' => $_POST['subj_add_desc'],
-    'date_added' => '',
+    'date_added' => $_SESSION['id'],
     'added_by_id'=> '',
 );
 $table = "tbl_module";
@@ -33,6 +34,9 @@ if(!empty($errors)){
     $columnCountClass = new ColumnCountClass();
     $values['module_id'] = "MOD". $columnCountClass->columnCountWhere("module_id",$table);
 
+    // assign date added
+    $currentDate - new DateTime();
+    $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 
     $validate = new CommonValidationClass();
     $isValid = $validate -> validateOneColumn($table, 'module_name', $values['module_name']);

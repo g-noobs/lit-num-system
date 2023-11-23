@@ -10,7 +10,6 @@ $values = array(
     'category_info' => $_POST['category_info'],
     'addedby_ID' => '',
     'date_added' => '',
-    'category_status' => '1'
 );
 
 $values['addedby_ID'] = $added_byID;
