@@ -50,7 +50,7 @@ $(document).ready(function() {
 
                     setTimeout(function() {
                         $("#alert_container").fadeOut("slow");
-                        $('.errorBanner').fadeout();
+                        $('.errorBanner, .successBanner').fadeOut();
                     }, 6500);
                 } else {
                     // Check if the form submission was successful
