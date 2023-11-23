@@ -30,20 +30,20 @@ $(document).ready(function() {
                             $("#alert_container").append(
                                 "<div class='alert alert-danger alert-dismissible fade in errorBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>" +
                                 item.error + "</span></div>");
-                            $('.errorBanner').fadein();
+                            $('.errorBanner').fadeIn();
                             console.log(item.error);
                         } else if (item.hasOwnProperty('success')) {
                             $("#alert_container").append(
                                 "<div class='alert alert-success alert-dismissible fade in errorBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>" +
                                 item.success + "</span></div>");
-                            $('.successBanner').fadein();
+                            $('.successBanner').fadeIn();
                             
                         }
                     });
 
                     setTimeout(function() {
                         $("#alert_container").fadeOut("slow");
-                        $('.errorBanner').fadeout();
+                        $('.errorBanner').fadeOut();
                     }, 6500);
                 } else {
                     // Check if the form submission was successful
