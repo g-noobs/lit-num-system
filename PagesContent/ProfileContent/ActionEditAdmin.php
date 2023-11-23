@@ -80,7 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $column = array('first_name', 'last_name');
             $isValid = $validate -> updatevalidateColumns($table, $column, $data);
 
-            if($isValid ){
+            if($isValid){
                 $sql = "UPDATE $table SET last_name = ?, first_name = ?, middle_name = ?, gender = ? WHERE user_info_id = '$id'";
                 $params = array_values($values);
                 $updateUser = new SanitizeCrudClass();
