@@ -17,8 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $phone_num = $inputValidation->test_input($_POST["phone_num"], 'phone');
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $username = $inputValidation->test_input($_POST['username'], 'name');
-    $pasword = $_POST['password'];
-    $confirmPassword = $_POST['confirmPassword'];
+    $pasword = trim($_POST['password']);
+    $confirmPassword = trim($_POST['confirmPassword']);
 
     $errors = array();
         if ($last_name === false) {
@@ -45,9 +45,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             echo json_encode($errors);
 
             //start adding if no error catched
-        }else if($pasword == $confirmPassword){
+        }elseif($pasword === $confirmPassword){
             $response = array('error' => 'Password does not match!');
             echo json_encode($response);
+            exit();
         }else{
             //tables
             $table = "tbl_user_info";
