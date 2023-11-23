@@ -238,8 +238,9 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                 else{
                     $response = array('error' => 'Error uploading file! Possible Duplicate');
                     echo json_encode($response);
-                    break;
                     exit();
+                    break;
+                    
                 }
             }
         }
