@@ -27,7 +27,7 @@
                         <tr>
                             <th colspan="2"><input type='checkbox' id="select-all" class='checkbox'></th>
                             <th>ID</th>
-                            <th>Personal ID</th>
+                            <th>Teacher ID</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Gender</th>
