@@ -250,5 +250,6 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
     $response = array('error' => 'Please upload a valid Excel file!');
     echo json_encode($response);
 }
+$response = array('success' => "Successfully added new teacher");
 echo json_encode($response);
 ?>
