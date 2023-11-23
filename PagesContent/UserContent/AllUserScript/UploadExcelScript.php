@@ -15,36 +15,49 @@ $(document).ready(function() {
             data: formData,
             contentType: false,
             processData: false,
+            dataType: 'json',
             success: function(response) {
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
-                var responseData = response;
 
-                for (var i = 0; i < responseData.length; i++) {
-                    if (responseData[i].hasOwnProperty('success')) {
-                        // Create a new success banner for each success message
-                        var successBanner = $('<div class="success-banner">')
-                            .text(responseData[i].success)
-                            .hide()
-                            .appendTo('#successBanner')
-                            .show()
-                            .delay(1500)
-                            .fadeOut("slow");
-                    } else if (responseData[i].hasOwnProperty('error')) {
-                        $('#errorAlert').text(responseData[i].error);
+                if (Array.isArray(response)) {
+                    // Clear previous error messages
+                    $("#alert_container").empty();
+                    $("#alert_container").show();
+
+                    // Update the element with the received errors
+                    $.each(response, function(index, error) {
+                        $("#alert_container").append("<div class='alert alert-danger alert-dismissible fade in'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>"+ error +"</span></div>");
+                        console.log(error);
+                    });
+
+                    setTimeout(function() {
+                        $("#alert_container").fadeOut("slow");
+
+                    }, 6500);
+                } else {
+                    // Check if the form submission was successful
+                    if (response.hasOwnProperty('success')) {
+                        $hideModal.modal('hide');
+                        $('#successAlert').text(response.success);
+                        $('#successBanner').show();
+                        setTimeout(function() {
+                            $("#successBanner").fadeOut("slow");
+                            location.reload();
+                        }, 1500);
+
+
+
+                    } else if (response.hasOwnProperty('error')) {
+                        $hideModal.modal('hide');
+                        $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
+                            location.reload();
                         }, 1500);
                     }
                 }
-
-                location.reload();
-                $('#response').text('Successfully uploaded data');
-                $('#response').show();
-                setTimeout(function() {
-                    $("#response").fadeOut("slow");
-                }, 3500);
             },
             error: function(xhr, status, error) {
                 console.log('AJAX error:', status, error);

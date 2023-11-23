@@ -1,6 +1,6 @@
 <style>
 /* Style for the alert */
-#errorBanner, #successBanner, .success-banner{
+#errorBanner, #successBanner, .success-banner, #alert_container{
     display: none;
     opacity: 0.75;
     position: fixed;
@@ -15,6 +15,8 @@
     /* Set a high z-index to ensure it's on top of other elements */
 }
 </style>
+
+<div id="alert_container"></div>
 
 <div class="alert alert-danger alert-dismissible fade in" id="errorBanner">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

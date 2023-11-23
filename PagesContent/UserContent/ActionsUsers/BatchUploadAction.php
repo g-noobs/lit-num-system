@@ -47,15 +47,25 @@ use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
                 include_once("../../../Database/CommonValidationClass.php");
                 include_once("../../../Database/SanitizeCrudClass.php");
                 include_once("../../../CommonPHPClass/PHPClass.php");
+                include_once "../../../CommonPHPClass/InputValidationClass.php";
+
+                //set input validation class
+                $inputValidation = new InputValidationClass();
+                $teacher_id = $inputValidation->test_input(trim($row[0]), 'alphanum');
+                $last_name = $inputValidation->test_input(trim($row[1]), 'name');
+                $first_name = $inputValidation->test_input(trim($row[2]), 'name');
+                $middle_name = $inputValidation->test_input(trim($row[3]), 'name');
+                $gender = $inputValidation->test_input(trim($row[4]), 'name');
+                $phone_num = $inputValidation->test_input(trim($row[5]), 'phone');
+                $email = filter_var(trim($row[6]), FILTER_SANITIZE_EMAIL);
+                // !! to resume
 
                 $table = "tbl_user_info";   
                 // Set user_info_id
                 $columnCountClass = new ColumnCountClass();
                 $values['user_info_id'] = "USR" . $columnCountClass->columnCountWhere("user_info_id", $table);
-
                 // Set added_byID from the session
                 $values['added_byID'] = $_SESSION['id'];
-
                 // Set the current date
                 $currentDate = new DateTime();
                 $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
