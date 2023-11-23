@@ -11,7 +11,7 @@ $values = array(
     'module_id' => '',
     'module_name' => $_POST['subj_name_add'],
     'module_description	' => $_POST['subj_add_desc'],
-    'date_added' => $_SESSION['id'],
+    'date_added' => '',
     'added_by_id'=> '',
 );
 $table = "tbl_module";
@@ -38,8 +38,12 @@ if(!empty($errors)){
     $currentDate - new DateTime();
     $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 
+    $values['added_by_id'] = $_SESSION['id'];
+
     $validate = new CommonValidationClass();
     $isValid = $validate -> validateOneColumn($table, 'module_name', $values['module_name']);
+
+
 
     if($isValid){
         //set columns
