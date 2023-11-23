@@ -78,9 +78,9 @@ if(!empty($errors)){
                 echo json_encode($response);
             }
             else{
-                throw $e;
-                $response = array('error' => $e);
+                $response = array('error' => $e->getMessage());
                 echo json_encode($response);
+                throw $e;
             }
         }
     } else {

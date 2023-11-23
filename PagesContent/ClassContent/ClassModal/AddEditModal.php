@@ -6,6 +6,17 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <!-- alert that will show if error occurs -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert"
+                        style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        <span id="add_user_modal_alert_text"></span>
+                    </div>
+                </div>
+            </div>
             <form method="post" id="add_class_form">
                 <div class="modal-body">
                     <div class="box-body">
@@ -27,7 +38,7 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary pull-left">Add New Class</button>
+                    <button type="submit" class="btn btn-warning pull-left">Add New Class</button>
                     <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                 </div>
             </form>

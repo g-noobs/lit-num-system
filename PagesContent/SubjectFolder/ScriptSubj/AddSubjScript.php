@@ -27,7 +27,7 @@ $(function() {
                     setTimeout(function() {
                         $("#add_user_modal_alert").fadeOut("slow");
 
-                    }, 3500);
+                    }, 8500);
                 } else {
                     if (response.hasOwnProperty('success')) {
                         var msg = response.success;
