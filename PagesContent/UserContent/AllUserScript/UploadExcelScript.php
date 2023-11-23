@@ -20,7 +20,7 @@ $(document).ready(function() {
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
 
-                if (Array.isArray(response)) {
+                if (response.errors && Array.isArray(response.errors)) {
                     // Clear previous error messages
                     $("#alert_container").empty();
                     $("#alert_container").show();
