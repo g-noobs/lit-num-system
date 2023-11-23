@@ -41,10 +41,10 @@ $(document).ready(function() {
                         $hideModal.modal('hide');
                         $('#successAlert').text(response.success);
                         $('#successBanner').show();
-                        setTimeout(function() {
-                            $("#successBanner").fadeOut("slow");
-                            location.reload();
-                        }, 1500);
+                        // setTimeout(function() {
+                        //     $("#successBanner").fadeOut("slow");
+                        //     location.reload();
+                        // }, 1500);
 
 
 
@@ -52,10 +52,10 @@ $(document).ready(function() {
                         $hideModal.modal('hide');
                         $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
-                        setTimeout(function() {
-                            $("#errorBanner").fadeOut("slow");
-                            location.reload();
-                        }, 1500);
+                        // setTimeout(function() {
+                        //     $("#errorBanner").fadeOut("slow");
+                        //     location.reload();
+                        // }, 1500);
                     }
                 }
             },
@@ -68,10 +68,10 @@ $(document).ready(function() {
                 // Show an error message
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
-                setTimeout(function() {
-                    $("#errorBanner").fadeOut("slow");
-                }, 1500);
-                location.reload();
+                // setTimeout(function() {
+                //     $("#errorBanner").fadeOut("slow");
+                // }, 1500);
+                // location.reload();
                 $('#response').text('Seomething went wrong');
                 $('#response').show();
                 setTimeout(function() {
