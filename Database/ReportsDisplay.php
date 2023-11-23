@@ -102,16 +102,29 @@ class ReportsDisplay extends Connection{
     }
 
     function displayTopic(){
-        $sql = "SELECT t.topic_id, t.topic_name, t.topic_description, l.lesson_name, t.added_byID, t.date_added FROM tbl_topic t JOIN tbl_lesson l ON t.lesson_id = l.lesson_id;";
+        $sql = "SELECT
+        t.topic_id,
+        t.topic_name,
+        t.topic_description,
+        l.lesson_name,
+        u.first_name,
+        u.last_name,
+        t.date_added
+    FROM
+        tbl_topic t
+        JOIN tbl_lesson l ON t.lesson_id = l.lesson_id
+        JOIN tbl_user_info u ON t.added_byID = u.user_info_id;";
+        
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
+                $teacher_name = $row['first_name']. ' '.$row['last_name']; 
                 echo "<tr>";
                 echo "<td>".$row['topic_id']."</td>";
                 echo "<td>".$row['topic_name']. "</td>";
                 echo "<td>".$row['topic_description']."</td>";
                 echo "<td>".$row['lesson_name']."</td>";
-                echo "<td>".$row['added_byID']."</td>";
+                echo "<td>".$teacher_name."</td>";
                 echo "<td>".$row['date_added']."</td>";
                 echo "</tr>";
             }

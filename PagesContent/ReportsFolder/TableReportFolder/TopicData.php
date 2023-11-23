@@ -29,7 +29,7 @@
                                 <th>Topic Name</th>
                                 <th>Topic Description</th>
                                 <th>Lesson Source</th>
-                                <th>Added by (ID)</th>
+                                <th>Added by (Teacher)</th>
                                 <th>Date Added</th>
                             </tr>
                         </thead>
