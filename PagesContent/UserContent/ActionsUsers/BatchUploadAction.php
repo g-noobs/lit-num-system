@@ -199,7 +199,7 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                                         $addNewTeacher->executePreState($sql, $params);
                                         if($addNewTeacher->getLastError()=== null){
                                             $response = array('success' => "Successfully added new teacher");
-                                            echo json_encode($response);
+                                            
                                         }else{
                                             $response = array('error' => "Error adding on teacher table");
                                             echo json_encode($response);
@@ -250,4 +250,5 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
     $response = array('error' => 'Please upload a valid Excel file!');
     echo json_encode($response);
 }
+echo json_encode($response);
 ?>
