@@ -23,6 +23,7 @@ $(document).ready(function() {
                 if (Array.isArray(response)) {
                     // Clear previous error messages
                     $("#alert_container").empty();
+                    $("#alert_container").show();
                     $(".errorBanner").show();
 
                     // Update the element with the received errors
