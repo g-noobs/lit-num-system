@@ -39,7 +39,7 @@ if(!empty($errors)){
     $values['module_id'] = "MOD". $columnCountClass->columnCountWhere("module_id",$table);
 
     // assign date added
-    $currentDate - new DateTime();
+    $currentDate = new DateTime();
     $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 
     $values['added_by_id'] = $_SESSION['id'];
