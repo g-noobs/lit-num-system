@@ -39,7 +39,6 @@ $(document).ready(function() {
                 } else {
                     // Check if the form submission was successful
                     if (response.hasOwnProperty('success')) {
-                        $hideModal.modal('hide');
                         $('#successAlert').text(response.success);
                         $('#successBanner').show();
                         // setTimeout(function() {
@@ -47,10 +46,7 @@ $(document).ready(function() {
                         //     location.reload();
                         // }, 1500);
 
-
-
                     } else if (response.hasOwnProperty('error')) {
-                        $hideModal.modal('hide');
                         $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         // setTimeout(function() {
