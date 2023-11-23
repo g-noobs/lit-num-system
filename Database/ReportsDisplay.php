@@ -84,15 +84,18 @@ class ReportsDisplay extends Connection{
         }
     }
     function displayLesson(){
-        $sql = "SELECT * FROM lesson_view;";
+        $sql = "SELECT * FROM view_lesson_details;";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
-                
+                $teacher_name = $row['first_name'] ." ". $row['last_name'];
                 echo "<tr>";
                 echo "<td>".$row['lesson_id']."</td>";
                 echo "<td>".$row['lesson_name']. "</td>";
+                echo "<td>".$row['lesson_description']."</td>";
+                echo "<td>".$row['category_name']."</td>";
                 echo "<td>".$row['module_name']."</td>";
+                echo "<td>".$teacher_name ."</td>";
                 echo "</tr>";
             }
         }

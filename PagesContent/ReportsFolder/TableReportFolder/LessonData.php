@@ -27,7 +27,10 @@
                             <tr>
                                 <th>Lesson ID</th>
                                 <th>Lesson Name</th>
+                                <th>Lesson Description</th>
+                                <th>Category</th>
                                 <th>Module Source</th>
+                                <th>Created by (Teacher)</th>
                             </tr>
                         </thead>
                         <tbody>
