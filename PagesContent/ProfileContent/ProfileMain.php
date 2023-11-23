@@ -69,7 +69,7 @@
                                 <div class="form-group">
                                     <label for="phone_num">Phone:</label>
                                     <input type="text" class="form-control" name="phone_num" id="phone_num" required
-                                        maxlength="1">
+                                        maxlength="13">
                                 </div>
                             </div>
                             <div class="col-sm-4">
