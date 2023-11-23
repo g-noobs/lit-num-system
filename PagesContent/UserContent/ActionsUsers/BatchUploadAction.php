@@ -203,17 +203,20 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                                         }else{
                                             $response = array('error' => "Error adding on teacher table");
                                             echo json_encode($response);
+                                            exit();
                                             break;
                                         }
 
                                     }else{
                                         $response = array('error' => 'Error Adding Contact Info for'.$values['personal_id'].'!');
                                         echo json_encode($response);
+                                        exit();
                                         break;
                                     }
                                 }else{
                                     $response = array('error' => 'Error Adding Credentials for'.$values['personal_id'].'!');
                                     echo json_encode($response);
+                                    exit();
                                     break;
                                 }
                                 
@@ -221,17 +224,20 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                                 // Handle any errors during insertion
                                 $response = array('error'=> $e->getMessage());
                                 echo json_encode($response);
+                                exit();
                                 break;
                             }
                         }else{
                             $response = array('error' => 'Error Adding user info! '.$values['personal_id'].'!');
                             echo json_encode($response);
+                            exit();
                             break;
                         }
                     } catch (mysqli_sql_exception $e) {
                         // Handle any errors during insertion
                         $response = array('error'=> $e->getMessage());
                         echo json_encode($response);
+                        exit();
                         break;
                     }
                 }
@@ -244,6 +250,7 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                 }
             }
         }
+        //!end spreadsheet loop
         $response = array('success' => 'Successfully added new teachers');
         echo json_encode($response);
     }else{
