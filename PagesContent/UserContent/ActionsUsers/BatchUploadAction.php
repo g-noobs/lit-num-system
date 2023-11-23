@@ -118,6 +118,7 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                 $values['added_byID'] = $_SESSION['id'];
 
                 // Set the current date
+                date_default_timezone_set('Asia/Kuala_Lumpur');
                 $currentDate = new DateTime();
                 $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 

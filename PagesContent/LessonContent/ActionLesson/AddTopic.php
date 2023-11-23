@@ -18,6 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $topic_count = new ColumnCountClass();
         $topic_id = "TPC". $topic_count->columnCountWhere("topic_id","tbl_topic");
 
+        date_default_timezone_set('Asia/Kuala_Lumpur');
         $currentDate = new DateTime();
         $date_added = $currentDate->format('Y-m-d H:i:s');
 
@@ -122,6 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 // !This will be the saved directory path to the database where file can be access
                 $file_access_path = "https://tagakauloedu.com/Media/".$subDirectoryFolder ."/". $fileName;
 
+                date_default_timezone_set('Asia/Kuala_Lumpur');
                 $currentDate = new DateTime();
                 $updloadDate  = $currentDate->format('Y-m-d H:i:s');
 

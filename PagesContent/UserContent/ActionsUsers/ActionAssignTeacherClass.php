@@ -40,6 +40,7 @@ $response = array();
                 $columnCountClass = new ColumnCountClass();
                 $values['class_assign_teacher_id'] = "CAT" . $columnCountClass->columnCountWhere("class_assign_teacher_id", $table);
                 //assign date
+                date_default_timezone_set('Asia/Kuala_Lumpur');
                 $currentDate = new DateTime();
                 $values['assign_date'] = $currentDate->format('Y-m-d H:i:s');
                 //assign by id

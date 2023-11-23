@@ -41,6 +41,7 @@ foreach($assign_module_id as $module_id){
             $columnCountClass = new ColumnCountClass();
             $values['module_assign_id'] = "MAT" . $columnCountClass->columnCountWhere("module_assign_id", $table);
             //assign date
+            date_default_timezone_set('Asia/Kuala_Lumpur');
             $currentDate = new DateTime();
             $values['assign_date'] = $currentDate->format('Y-m-d H:i:s');
             //assign by id

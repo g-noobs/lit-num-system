@@ -19,6 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $values['quiz_added_by'] = $_SESSION['id'];
         
         //create an object for current date
+        date_default_timezone_set('Asia/Kuala_Lumpur');
         $currentDate = new DateTime();
         $values['quiz_creation_date'] = $currentDate->format('Y-m-d H:i:s');
         

@@ -48,6 +48,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $values['quiz_id'] = "QZ". $columnCountClass->columnCountWhere("quiz_id","tbl_quiz");
         
         // Set the date values
+        date_default_timezone_set('Asia/Kuala_Lumpur');
         $currentDate = new DateTime();
         $values['date_created'] = $currentDate->format('Y-m-d H:i:s');
 
