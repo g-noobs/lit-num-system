@@ -66,44 +66,46 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
 
             $errors =array();
             if($teacher_id === false){
-                $errors[] = "Invalid characters in Teacher ID.";
+                $errors[] = "Invalid characters in Teacher ID. on " . $values['personal_id'];
             }
             if($last_name === false){
-                $errors[] = "Invalid characters in Last Name.";
+                $errors[] = "Invalid characters in Last Name on " . $values['personal_id'];
             }
             if($first_name === false){
-                $errors[] = "Invalid characters in First Name.";
+                $errors[] = "Invalid characters in First Name on ". $values['personal_id'];
             }
             if($middle_name === false){
-                $errors[] = "Invalid characters in Middle Initial.";
+                $errors[] = "Invalid characters in Middle Initial." . $values['personal_id'];
             }
             if($gender === false){
-                $errors[] = "Invalid characters in gender.";
+                $errors[] = "Invalid characters in gender." . $values['personal_id'];
             }
             if($phone_num === false){
-                $errors[] = "Invalid phone number";
+                $errors[] = "Invalid phone number. " . $values['personal_id'];
             }
             if($email === false){
-                $errors[] = "Invalid email address";
+                $errors[] = "Invalid email address. ". $values['personal_id'];
             }
             if($street === false){
-                $errors[] = "Invalid characters in Street Address.";
+                $errors[] = "Invalid characters in Street Address. ". $values['personal_id'];
             }
             if($baranggay === false){
-                $errors[] = "Invalid characters in Barangay Address.";
+                $errors[] = "Invalid characters in Barangay Address. ". $values['personal_id'];
             }
             if($municipal_city === false){
-                $errors[] = "Invalid characters in City Address.";
+                $errors[] = "Invalid characters in City Address. ". $values['personal_id'];
             }
             if($province === false){
-                $errors[] = "Invalid characters in Province Address.";
+                $errors[] = "Invalid characters in Province Address. ". $values['personal_id'];
             }
             if($postal_code === false){
-                $errors[] = "Invalid characters in Zip Code.";
+                $errors[] = "Invalid characters in Zip Code. ". $values['personal_id'];
             }
             //send the error if error array is not empty
             if (!empty($errors)) {
                 echo json_encode($errors);
+                break;
+                exit();
     
                 //start adding if no error catched
             }else{
