@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             echo json_encode($errors);
 
             //start adding if no error catched
-        }else if($pasword === $confirmPassword){
+        }else if($pasword == $confirmPassword){
             $response = array('error' => 'Password does not match!');
             echo json_encode($response);
         }else{
