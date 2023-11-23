@@ -35,7 +35,7 @@ $(document).ready(function() {
                         } else if (item.hasOwnProperty('success')) {
                             $("#alert_container").append(
                                 "<div class='alert alert-success alert-dismissible fade in errorBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>" +
-                                item.success + "</span></div>";
+                                item.success + "</span></div>");
                                 $('.successBanner').fadein();
                             );
                         }
