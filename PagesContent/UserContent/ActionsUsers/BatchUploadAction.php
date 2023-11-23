@@ -104,8 +104,9 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
             //send the error if error array is not empty
             if (!empty($errors)) {
                 echo json_encode($errors);
-                break;
                 exit();
+                break;
+                
     
                 //start adding if no error catched
             }else{
