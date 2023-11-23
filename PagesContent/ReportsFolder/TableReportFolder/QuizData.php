@@ -33,6 +33,7 @@
                                 <th>Option 3</th>
                                 <th>Option 4</th>
                                 <th>Topic Source</th>
+                                <th>Created by (Teacher)</th>
                                 <th>Date Created</th>
                             </tr>
                         </thead>

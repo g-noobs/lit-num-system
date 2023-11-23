@@ -132,12 +132,18 @@ class ReportsDisplay extends Connection{
     }
 
     function displayQuiz(){
-        $sql = "SELECT q.quiz_id, q.quiz_question, q.quiz_selectionA, q.quiz_selectionB, q.quiz_selectionC, q.quiz_selectionD, t.topic_name, q.date_created FROM tbl_quiz q JOIN tbl_topic t ON q.topic_id = t.topic_id;;";
+        $sql = "SELECT q.quiz_id, q.quiz_question, q.quiz_selectionA, q.quiz_selectionB, q.quiz_selectionC, q.quiz_selectionD, t.topic_name, q.date_created, u.first_name, u.last_name
+        FROM tbl_quiz q
+        JOIN
+            tbl_topic t ON q.topic_id = t.topic_id
+        JOIN
+            tbl_user_info u ON q.added_byID = u.user_info_id;";
+
         $result = $this->getConnection()->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
                 $correctAnswer = $row['quiz_selectionA'];
-
+                $teacher_name = $row['first_name']." ".$row['last_name'];
                 echo "<tr>";
                 echo "<td>".$row['quiz_id']."</td>";
                 echo "<td>".$row['quiz_question']. "</td>";
@@ -147,6 +153,7 @@ class ReportsDisplay extends Connection{
                 echo "<td>".$row['quiz_selectionC']."</td>";
                 echo "<td>".$row['quiz_selectionD']."</td>";
                 echo "<td>".$row['topic_name']."</td>";
+                echo "<td>".$teacher_name."</td>";
                 echo "<td>".$row['date_created']."</td>";
                 echo "</tr>";
             }
