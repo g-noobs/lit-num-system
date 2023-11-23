@@ -6,8 +6,7 @@ if ($_SESSION['admin'] !== true || $_SESSION['teacher'] !== false) {
     header('Location: ../admin.php');
     exit;
 }
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 
 ?>
 <!--Logo -->

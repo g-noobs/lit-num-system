@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 //Geenrate Subject ID
 include_once("../../../Database/ColumnCountClass.php");
 //insert subject name validation
