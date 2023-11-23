@@ -34,7 +34,7 @@ $(document).ready(function() {
                     setTimeout(function() {
                         $("#alert_container").fadeOut("slow");
 
-                    }, 6500);
+                    }, 10500);
                 } else {
                     // Check if the form submission was successful
                     if (response.hasOwnProperty('success')) {
