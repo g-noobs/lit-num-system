@@ -39,6 +39,7 @@ if(!empty($errors)){
     $values['module_id'] = "MOD". $columnCountClass->columnCountWhere("module_id",$table);
 
     // assign date added
+    date_default_timezone_set('Asia/Kuala_Lumpur');
     $currentDate = new DateTime();
     $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
 
