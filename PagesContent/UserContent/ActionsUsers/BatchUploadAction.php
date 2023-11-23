@@ -207,12 +207,12 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                                         }
 
                                     }else{
-                                        $response = array('error' => 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!');
+                                        $response = array('error' => 'Error Adding Contact Info for'.$values['personal_id'].'!');
                                         echo json_encode($response);
                                         break;
                                     }
                                 }else{
-                                    $response = array('error' => 'Error Adding Credentials for'.$values['first_name'].' '.$values['last_name'].'!');
+                                    $response = array('error' => 'Error Adding Credentials for'.$values['personal_id'].'!');
                                     echo json_encode($response);
                                     break;
                                 }
@@ -224,7 +224,7 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                                 break;
                             }
                         }else{
-                            $response = array('error' => 'Error Adding user info!'.$values['first_name'].' '.$values['last_name'].'!');
+                            $response = array('error' => 'Error Adding user info! '.$values['personal_id'].'!');
                             echo json_encode($response);
                             break;
                         }
