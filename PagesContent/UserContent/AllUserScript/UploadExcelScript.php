@@ -31,6 +31,7 @@ $(document).ready(function() {
                         $('.errorBanner').show();
                         console.log(error);
                     });
+                    
                     $.each(response, function(index, item) {
                         if (item.hasOwnProperty('error')) {
                             $("#alert_container").append(
