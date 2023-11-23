@@ -20,13 +20,13 @@ $(document).ready(function() {
                 // Hide the loading spinner
                 $("#loadingSpinner").hide();
 
-                if(response.errors || Array.isArray(response.errors)) {
+                if (Array.isArray(response)) {
                     // Clear previous error messages
                     $("#alert_container").empty();
                     $("#alert_container").show();
 
                     // Update the element with the received errors
-                    $.each(response.errors, function(index, error) {
+                    $.each(response, function(index, error) {
                         $("#alert_container").append("<div class='alert alert-danger alert-dismissible fade in errorBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>"+ error +"</span></div>");
                         console.log(error);
                     });
