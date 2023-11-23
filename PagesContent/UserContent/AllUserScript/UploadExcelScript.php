@@ -34,7 +34,7 @@ $(document).ready(function() {
 
                     setTimeout(function() {
                         $(".errorBanner").fadeOut("slow");
-
+                        $("#alert_container").empty();
                     }, 10500);
                 } else {
                     // Check if the form submission was successful

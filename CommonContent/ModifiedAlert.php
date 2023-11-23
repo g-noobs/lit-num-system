@@ -1,6 +1,6 @@
 <style>
 /* Style for the alert */
-#errorBanner, #successBanner, .success-banner, .errorBanner, {
+#errorBanner, #successBanner, .success-banner, .errorBanner {
     display: none;
     opacity: 0.75;
     position: fixed;
