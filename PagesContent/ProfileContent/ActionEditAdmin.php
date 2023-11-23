@@ -103,7 +103,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                         // check if adding contact info is successfull
                         if($updateCred->getLastError() === null){
-                            $response = array('success' => 'Error Successfully edited Admin Data');
+                            $response = array('success' => 'Successfully edited Admin Data');
                             echo json_encode($response);
                             
                         }else{
