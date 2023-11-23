@@ -23,7 +23,7 @@ $(document).ready(function() {
                 if (Array.isArray(response)) {
                     // Clear previous error messages
                     $("#alert_container").empty();
-                    $("#errorBanner").show();
+                    $(".errorBanner").show();
 
                     // Update the element with the received errors
                     $.each(response, function(index, error) {
@@ -32,7 +32,7 @@ $(document).ready(function() {
                     });
 
                     setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
+                        $(".errorBanner").fadeOut("slow");
 
                     }, 10500);
                 } else {
