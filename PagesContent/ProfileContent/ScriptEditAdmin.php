@@ -28,8 +28,8 @@ $(function() {
 
                     setTimeout(function() {
                         $("#edit_user_validate_alert").fadeOut("slow");
-
-                    }, 3500);
+                        location.reload();
+                    }, 5500);
                 }
                 // Check if the form submission was successful
                 if (response.hasOwnProperty('success')) {
@@ -37,15 +37,15 @@ $(function() {
                     $('#successBanner').show();
                     setTimeout(function() {
                         $("#successBanner").fadeOut("slow");
-                        //location.reload();
-                    }, 2500);
+                        location.reload();
+                    }, 5500);
                 } else if (response.hasOwnProperty('error')) {
                     $('#errorAlert').text(response.error);
                     $('#errorBanner').show();
                     setTimeout(function() {
                         $("#errorBanner").fadeOut("slow");
-                        //location.reload();
-                    }, 2500);
+                        location.reload();
+                    }, 5500);
                 }
             },
             error: function() {
@@ -54,8 +54,8 @@ $(function() {
                 $('#errorBanner').show();
                 setTimeout(function() {
                     $("#errorBanner").fadeOut("slow");
-                        //location.reload();
-                }, 2500);
+                        location.reload();
+                }, 5500);
             }
 
         });
