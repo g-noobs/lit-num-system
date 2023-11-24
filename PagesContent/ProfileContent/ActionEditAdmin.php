@@ -93,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     // check if updating basic data is successfull
                     if($updateContact->getLastError() === null){
                         $table_creds = "tbl_credentials";
-                        $sql = "UPDATE $table_creds SET uname = ?, pass = ? WHERE user_info_id = '$id'";
+                        $sql = "UPDATE $table_creds SET pass = ? WHERE user_info_id = '$id'";
                         $params = array_values($credential);
                         $updateCred = new SanitizeCrudClass();
                         $updateCred->executePreState($sql, $params);
