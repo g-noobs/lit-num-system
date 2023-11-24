@@ -16,7 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $gender = $inputValidation->test_input($_POST["gender"], 'name'); //possible No validation for select
     $phone_num = $inputValidation->test_input($_POST["phone_num"], 'phone');
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-    $username = $inputValidation->test_input($_POST['username'], 'name');
     $pasword = trim($_POST['password']);
     $confirmPassword = trim($_POST['confirmPassword']);
 
@@ -69,7 +68,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             );
 
             $credential = array(
-                'uname' => $_POST['username'],
                 'pass' => $_POST['password']
             );
             
