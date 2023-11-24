@@ -2,7 +2,6 @@
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include_once "../../Database/Connection.php";
 include_once "../../CommonPHPClass/InputValidationClass.php";
 include_once "../../Database/CommonValidationClass.php";
 include_once "../../Database/SanitizeCrudClass.php";
