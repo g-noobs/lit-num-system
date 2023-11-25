@@ -41,7 +41,7 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                 'personal_id' => trim($row[0]), 
                 'last_name' => trim($row[1]),
                 'first_name' => trim($row[2]),
-                'middle_name' => trim($row[3]),
+                'middle_name' => $row[3],
                 'gender' => trim($row[4]),
                 'user_level_id' => '1',
                 'added_byID' => '',
@@ -53,7 +53,7 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
             $teacher_id = $inputValidation->test_input(trim($row[0]), 'alphanum');
             $last_name = $inputValidation->test_input(trim($row[1]), 'name');
             $first_name = $inputValidation->test_input(trim($row[2]), 'name');
-            $middle_name = $inputValidation->test_input(trim($row[3]), 'middle_initial');
+            $middle_name = $inputValidation->test_input($row[3], 'middle_initial');
             $gender = $inputValidation->test_input(trim($row[4]), 'name');
             $phone_num = $inputValidation->test_input(trim($row[5]), 'phone');
             $email = filter_var(trim($row[6]), FILTER_SANITIZE_EMAIL);

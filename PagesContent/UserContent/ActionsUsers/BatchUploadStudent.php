@@ -44,7 +44,7 @@ include_once "../../../CommonPHPClass/InputValidationClass.php";
                     'personal_id' => trim($row[0]), 
                     'last_name' => trim($row[1]),
                     'first_name' => trim($row[2]),
-                    'middle_name' => trim($row[3]),
+                    'middle_name' => $row[3],
                     'gender' => trim($row[4]),
                     'user_level_id' => '2',
                     'added_byID' => '',
