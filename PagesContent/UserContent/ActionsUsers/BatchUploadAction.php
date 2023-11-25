@@ -5,6 +5,13 @@ session_start();
 require '../../../vendor/autoload.php'; // Include PhpSpreadsheet library autoloader
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
+// Database table for user information
+// Include necessary libraries and set up the database configuration
+include_once("../../../Database/ColumnCountClass.php");
+include_once("../../../Database/CommonValidationClass.php");
+include_once("../../../Database/SanitizeCrudClass.php");
+include_once("../../../CommonPHPClass/PHPClass.php");
+include_once "../../../CommonPHPClass/InputValidationClass.php";
 
 $excelMimes = array('text/xls', 'text/xlsx', 'application/excel', 'application/vnd.msexcel', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
@@ -39,21 +46,12 @@ if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $excelM
                 'date_added' => ''
             );
             
-
-            // Database table for user information
-            // Include necessary libraries and set up the database configuration
-            include_once("../../../Database/ColumnCountClass.php");
-            include_once("../../../Database/CommonValidationClass.php");
-            include_once("../../../Database/SanitizeCrudClass.php");
-            include_once("../../../CommonPHPClass/PHPClass.php");
-            include_once "../../../CommonPHPClass/InputValidationClass.php";
-
             //set input validation class
             $inputValidation = new InputValidationClass();
             $teacher_id = $inputValidation->test_input(trim($row[0]), 'alphanum');
             $last_name = $inputValidation->test_input(trim($row[1]), 'name');
             $first_name = $inputValidation->test_input(trim($row[2]), 'name');
-            $middle_name = $inputValidation->test_input(trim($row[3]), 'name');
+            $middle_name = $inputValidation->test_input(trim($row[3]), 'middle_initial');
             $gender = $inputValidation->test_input(trim($row[4]), 'name');
             $phone_num = $inputValidation->test_input(trim($row[5]), 'phone');
             $email = filter_var(trim($row[6]), FILTER_SANITIZE_EMAIL);
