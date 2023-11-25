@@ -2,9 +2,11 @@
 
 class InputValidationClass{
     function test_input($data, $type) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
+        if(!empty($data)){
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+        }
         if ($type == 'name') {
             // Allow only letters and whitespace
             if (!preg_match("/^[a-zA-Z ]*$/", $data)) {
