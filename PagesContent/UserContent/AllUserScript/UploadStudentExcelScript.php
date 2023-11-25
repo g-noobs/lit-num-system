@@ -37,13 +37,13 @@ $(document).ready(function() {
 
                     $.each(response, function(index, item) {
                         if (item.hasOwnProperty('error')) {
-                            $("#alert_container, .errorBanner").after(
+                            $("#alert_container").after(
                                 "<div class='alert alert-danger alert-dismissible fade in errorBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>" +
                                 item.error + "</span></div>");
                             $('.errorBanner').fadeIn();
                             console.log(item.error);
                         } else if (item.hasOwnProperty('success')) {
-                            $("#alert_container, successBanner").append(
+                            $("#alert_container").after(
                                 "<div class='alert alert-success alert-dismissible fade in successBanner'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Error!</b><span>" +
                                 item.success + "</span></div>");
                             $('.successBanner').fadeIn();
