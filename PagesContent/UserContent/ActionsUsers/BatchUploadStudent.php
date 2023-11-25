@@ -54,22 +54,22 @@ include_once "../../../CommonPHPClass/InputValidationClass.php";
                 
                 //set variable fro input validation
                 $inputValidation = new InputValidationClass();
-                $student_id = $inputValidation->test_input(trim($row[0]), 'alphanum');
-                $last_name = $inputValidation->test_input(trim($row[1]), 'name');
-                $first_name = $inputValidation->test_input(trim($row[2]), 'name');
-                $middle_name = $inputValidation->test_input(trim($row[3]), 'middle_initial');
-                $gender = $inputValidation->test_input(trim($row[4]), 'name');
-                $phone_num = $inputValidation->test_input(trim($row[5]), 'phone');
+                $student_id = $inputValidation->test_input($row[0], 'alphanum');
+                $last_name = $inputValidation->test_input($row[1], 'name');
+                $first_name = $inputValidation->test_input($row[2], 'name');
+                $middle_name = $inputValidation->test_input($row[3], 'middle_initial');
+                $gender = $inputValidation->test_input($row[4], 'name');
+                $phone_num = $inputValidation->test_input($row[5], 'phone');
                 $email = filter_var(trim($row[6]), FILTER_SANITIZE_EMAIL);
-                $street = $inputValidation->test_input(trim($row[7]), 'address');
-                $baranggay = $inputValidation->test_input(trim($row[8]), 'address');
-                $municipal_city = $inputValidation->test_input(trim($row[9]), 'address');
-                $province = $inputValidation->test_input(trim($row[10]), 'address');
-                $postal_code = $inputValidation->test_input(trim($row[11]), 'number');
-                $guardian_last_name = $inputValidation->test_input(trim($row[12]), 'name');
-                $guardian_first_name = $inputValidation->test_input(trim($row[13]), 'name');
-                $guardian_middle_initial = $inputValidation->test_input(trim($row[14]), 'middle_initial');
-                $guardian_number = $inputValidation->test_input(trim($row[15]), 'phone');
+                $street = $inputValidation->test_input($row[7], 'address');
+                $baranggay = $inputValidation->test_input($row[8], 'address');
+                $municipal_city = $inputValidation->test_input($row[9], 'address');
+                $province = $inputValidation->test_input($row[10], 'address');
+                $postal_code = $inputValidation->test_input($row[11], 'number');
+                $guardian_last_name = $inputValidation->test_input($row[12], 'name');
+                $guardian_first_name = $inputValidation->test_input($row[13], 'name');
+                $guardian_middle_initial = $inputValidation->test_input($row[14], 'middle_initial');
+                $guardian_number = $inputValidation->test_input($row[15], 'phone');
 
                 $errors = array();
                 if($student_id === false){
