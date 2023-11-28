@@ -48,7 +48,7 @@
                                 <?php 
                                     include_once "../Database/ColumnCountClass.php";
                                     $columnCountClass = new ColumnCountClass();
-                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 0;";
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE user_level_id = 0;";
                                     echo $columnCountClass->columnCountNum($sql);
                                 ?>
                             </small>
@@ -63,7 +63,7 @@
                                 <?php 
                                     include_once "../Database/ColumnCountClass.php";
                                     $columnCountClass = new ColumnCountClass();
-                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 1;";
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE user_level_id = 1;";
                                     echo $columnCountClass->columnCountNum($sql);
                                 ?>
                             </small>
@@ -78,7 +78,7 @@
                                 <?php 
                                     include_once "../Database/ColumnCountClass.php";
                                     $columnCountClass = new ColumnCountClass();
-                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE status_id = 1 AND user_level_id = 2;";
+                                    $sql = "SELECT COUNT(user_info_id) as count FROM tbl_user_info WHERE user_level_id = 2;";
                                     echo $columnCountClass->columnCountNum($sql);
                                 ?>
                             </small>
