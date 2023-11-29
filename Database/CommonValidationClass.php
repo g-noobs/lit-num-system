@@ -106,8 +106,8 @@ class CommonValidationClass extends Connection{
         }
     }
 
-    function updateValidateOneColumn($table, $column, $data, $id){
-        $sql = "SELECT COUNT($column) as count FROM $table WHERE $column = '$data' AND user_info_id != '$id';";
+    function updateValidateOneColumn($table, $column, $data){
+        $sql = "SELECT COUNT($column) as count FROM $table WHERE $column = '$data';";
         $result = $this->getConnection()->query($sql);
         if($result->num_rows >0){
             $row = $result->fetch_assoc();

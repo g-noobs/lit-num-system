@@ -146,7 +146,7 @@
         <?php include_once "../PagesContent/UserContent/AllUserScript/UploadExcelScript.php";?>
 
         <!-- Edit Teacher Script -->
-        <?php include_once "../PagesContent/UserContent/AllUserScript/EditUserScipt.php";?>
+        <?php include_once "../PagesContent/UserContent/AllUserScript/EditUserScript.php";?>
 
         <!-- Assign teacher to a class script -->
         <?php include_once "../PagesContent/UserContent/AllUserScript/AssignTeacherScript.php"?>
