@@ -20,7 +20,7 @@ $(function() {
                 $('input[name="last_name"]').val(responseData.last_name);
                 $('input[name="first_name"]').val(responseData.first_name);
                 $('input[name="user_middle_initial"]').val(responseData.middle_initial);
-                $('input[name="user_middle_initial"]').find('option').each(function() {
+                $('select[name="gender"]').find('option').each(function() {
                     if ($(this).val() === response.gender) {
                         $(this).prop('selected', true);
                         return false;
