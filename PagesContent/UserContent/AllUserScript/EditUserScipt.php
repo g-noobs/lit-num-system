@@ -35,10 +35,10 @@
                 }
             });
         });
-
+        $('#submit_btn').text('Update');
         $('#add_user_modal').on('submit', function(e) {
             e.preventDefault();
-            $('#submit_btn').text('Update');
+            
             var formData = new FormData(this);
             var $hideModal = $('#add_user_modal');
             var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionEditUserData.php';
