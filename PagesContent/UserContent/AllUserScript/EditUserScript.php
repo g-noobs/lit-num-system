@@ -72,20 +72,20 @@ $(function() {
                             console.log(error);
                         });
 
-                        // setTimeout(function() {
-                        //     $("#add_user_modal_alert").fadeOut("slow");
+                        setTimeout(function() {
+                            $("#add_user_modal_alert").fadeOut("slow");
 
-                        // }, 3500);
+                        }, 8500);
                     } else {
                         // Check if the form submission was successful
                         if (response.hasOwnProperty('success')) {
                             $hideModal.modal('hide');
                             $('#successAlert').text(response.success);
                             $('#successBanner').show();
-                            // setTimeout(function() {
-                            //     $("#successBanner").fadeOut("slow");
-                            //     location.reload();
-                            // }, 1500);
+                            setTimeout(function() {
+                                $("#successBanner").fadeOut("slow");
+                                location.reload();
+                            }, 8500);
 
 
 
@@ -93,10 +93,10 @@ $(function() {
                             $hideModal.modal('hide');
                             $('#errorAlert').text(response.error);
                             $('#errorBanner').show();
-                            // setTimeout(function() {
-                            //     $("#errorBanner").fadeOut("slow");
-                            //     location.reload();
-                            // }, 1500);
+                            setTimeout(function() {
+                                $("#errorBanner").fadeOut("slow");
+                                location.reload();
+                            }, 8500);
                         }
                     }
                 },
@@ -107,10 +107,10 @@ $(function() {
                     $('#errorAlert').text(
                         'An error occurred during the AJAX request.');
                     $('#errorBanner').show();
-                    // setTimeout(function() {
-                    //     $("#errorBanner").fadeOut("slow");
-                    //     location.reload();
-                    // }, 1500);
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+                        location.reload();
+                    }, 8500);
                 }
             });
         });

@@ -182,7 +182,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 exit();
             }
         }else{
-            $response = array('error' => 'Teacher or name has Duplicate for'.$values['user_info_id']);
+            $response = array('error' => 'Teacher or name has Duplicate for user: '.$values['user_info_id']);
             echo json_encode($response);
             exit();
         }
