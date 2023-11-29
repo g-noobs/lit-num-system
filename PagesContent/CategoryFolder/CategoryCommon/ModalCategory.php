@@ -5,7 +5,7 @@
                 <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
                     <span aria-hidden='true'>&times;</span>
                 </button>
-                <h4 class='modal-title'>Enter Area's Information</h4>
+                <h4 class='modal-title'>Enter Category's Information</h4>
             </div>
             <form role='form' action='../PagesContent/CategoryFolder/ActionCategory/ActionRegisterCategory.php'
                 onsubmit='return validateForm()' method='post'>
@@ -15,9 +15,10 @@
                             <label for='category_name'>Enter Category Name: </label>
                             <input type='text' name='category_name' class='form-control' placeholder='Category Name'>
                         </div>
-                        <div class='form-group' id='ctgy_info'>
-                            <label for='category_info'>Category Information: </label>
-                            <input type='text' name='category_info' class='form-control' placeholder='Information'>
+
+                        <div class="form-group" id='ctgy_info'>
+                            <label for="comment">Category Information: </label>
+                            <textarea class="form-control w-100" name='category_info' rows="5" placeholder='Information' id="comment"></textarea>
                         </div>
                     </div>
                     <!-- /.box-body -->
