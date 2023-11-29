@@ -22,8 +22,6 @@
                             return false;
                         }
                     });
-                    
-                    $('select[name="gender"]').val(responseData.gender);
                     $('input[name="phone_num"]').val(responseData.phone_num);
                     $('input[name="email"]').val(responseData.email);
                     $('input[name="street_address"]').val(responseData.street);
