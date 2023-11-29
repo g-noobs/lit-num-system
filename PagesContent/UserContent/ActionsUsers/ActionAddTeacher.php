@@ -1,5 +1,7 @@
 <?php 
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // This will be used to get the column count of the table for naming id
 include_once("../../../Database/ColumnCountClass.php");
 //Password generation
