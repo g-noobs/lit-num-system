@@ -1,5 +1,6 @@
 <script>
 $(function() {
+    // modify button
     $('.edit').on('click', function(e) {
         e.preventDefault();
         $('#submit_btn').text('Update');
