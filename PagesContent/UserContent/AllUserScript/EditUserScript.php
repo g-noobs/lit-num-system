@@ -1,11 +1,5 @@
 <script>
 $(function() {
-    // modify button name
-    $('#btnAddTeacher').on('click', function(e) {
-        e.preventDefault();
-        $('#submit_btn').text('Add Teacher');
-    });
-
     $('.edit').on('click', function(e) {
         e.preventDefault();
 
