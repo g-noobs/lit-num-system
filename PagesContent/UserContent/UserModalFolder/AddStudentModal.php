@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <form id="addUserForm">
+            <form id="addUserForm" class="addUserForm">
                 <div class="modal-body">
                     <div class="box-body box-warning">
                         <div class="form-group row">
