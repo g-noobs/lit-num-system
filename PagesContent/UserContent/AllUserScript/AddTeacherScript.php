@@ -2,7 +2,7 @@
 $(function() {
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
-
+        $('#submit_btn').text('Add Teacher');
         var formData = new FormData(this);
         console.log(this);
 
