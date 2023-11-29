@@ -1,6 +1,5 @@
 <script>
 $(function() {
-    $('#submit_btn').text('Add Teacher');
     $("#addUserForm").on("submit", function(e) {
         e.preventDefault();
         
