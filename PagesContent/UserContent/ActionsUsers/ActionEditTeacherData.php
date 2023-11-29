@@ -142,6 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             'user_info_id' => $values['user_info_id']
                         );
                         
+                        
                         //set sql
                         $sql = "UPDATE $table 
                         SET teacher_personal_id = ?
@@ -153,9 +154,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $updateTeacherPersonalData->executePreState($sql, $params);
                         
                         if($updateTeacherPersonalData->getLastError()=== null){
-                            $response = array('success' => "Successfully updated Teacher Data");
-                            echo json_encode($response);
-                            exit();
+                            $table = 'tbl_credentials';
+                            $credential = array(
+                                'uname' => trim($_POST['personal_id']),
+                                'user_info_id' => $values['user_info_id']
+                            );
+                            $sql = "UPDATE $table 
+                            SET uname = ? 
+                            WHERE user_info_id = ?";
+                            $params = array_values($credential);
+                            $updateCreds = new SanitizeCrudClass();
+                            $updateCreds->executePreState($sql, $params);
+
+                            if($updateCreds->getLastError() === null){
+                                $response = array('success' => "Successfully updated Teacher Data");
+                                echo json_encode($response);
+                                exit();
+                            }else{
+                                $response = array('error => Error on updating username');
+                                echo json_encode($response);
+                                exit();
+                            }
                         }else{
                             $response = array('error' => "Error updating on teacher table");
                             echo json_encode($response);
