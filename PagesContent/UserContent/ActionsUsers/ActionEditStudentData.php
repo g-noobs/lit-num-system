@@ -113,11 +113,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 gender = ?
             WHERE user_info_id = ?";
             $params = array_values($values);
-            $updateStduentData = new SanitizeCrudClass();
+            $updateStdntData = new SanitizeCrudClass();
             try{
-                $updateStduentData->executePreState($sql, $params);
+                $updateStdntData->executePreState($sql, $params);
 
-                if($updateTeacherData->getLastError() === null){
+                if($updateStdntData->getLastError() === null){
                     $table = "tbl_contact_info";
                     $contact = array(
                         'contact_num'=> $_POST['phone_num'],
