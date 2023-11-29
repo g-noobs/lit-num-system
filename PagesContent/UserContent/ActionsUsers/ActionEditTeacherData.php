@@ -182,7 +182,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 exit();
             }
         }else{
-            $response = array('error' => 'Stduent or name has Duplicate or invalid.. isIdvalid: ='.$isIdvalid.', isValid: ='.$isValid);
+            $response = array('error' => 'Stduent or name has Duplicate or'.$values['user_info_id']);
             echo json_encode($response);
             exit();
         }
