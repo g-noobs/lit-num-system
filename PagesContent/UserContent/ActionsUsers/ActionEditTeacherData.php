@@ -1,10 +1,7 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-// This will be used to get the column count of the table for naming id
-include_once("../../../Database/ColumnCountClass.php");
-//Password generation
-include_once("../../../CommonPHPClass/PHPClass.php");
+
 //insert validation
 include_once "../../../Database/CommonValidationClass.php";
 // Sanitize insert
@@ -21,13 +18,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $user_middle_initial = $inputValidation->test_input($_POST["user_middle_initial"], 'middle_initial');//possible No validation for select
     $gender = $inputValidation->test_input($_POST["gender"], 'name'); //possible No validation for select
     $phone_num = $inputValidation->test_input($_POST["phone_num"], 'phone');
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 
     $street_address = $inputValidation->test_input($_POST["street_address"], 'address');
     $barangay_address = $inputValidation->test_input($_POST["barangay_address"], 'address');
     $city_address = $inputValidation->test_input($_POST["city_address"], 'address');
     $province_address = $inputValidation->test_input($_POST["province_address"], 'address');
     $zip_code = $inputValidation->test_input($_POST["zip_code"], 'number');
-    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    
 
     //check for validation errors
     $errors = array();
@@ -74,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //check for empty fields
     if (!empty($errors)) {
         echo json_encode($errors);
-
+        exit();
         //start Editing if no error catched
     }else{
         $values = array(
