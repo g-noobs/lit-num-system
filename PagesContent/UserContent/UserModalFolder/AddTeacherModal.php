@@ -100,7 +100,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success pull-left">Add Teacher</button>
+                        <button type="submit" class="btn btn-success pull-left" id="submit_btn">Add Teacher</button>
                         <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
