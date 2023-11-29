@@ -95,7 +95,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $isIdvalid = $validate -> updateValidateOneColumn($table, 'personal_id', $values['personal_id']);
     
         if($isIdvalid && $isValid){
-            $id = $_POST['id'];
             $sql = "UPDATE tbl_user_info 
             SET personal_id = ?,
                 first_name = ?,
@@ -150,9 +149,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         // set parameters
                         $params = array_values($teacher);
                         //set sanitize class
-                        $addNewTeacher = new SanitizeCrudClass();
-                        $addNewTeacher->executePreState($sql, $params);
-                        if($addNewTeacher->getLastError()=== null){
+                        $updateTeacherPersonalData = new SanitizeCrudClass();
+                        $updateTeacherPersonalData->executePreState($sql, $params);
+                        
+                        if($updateTeacherPersonalData->getLastError()=== null){
                             $response = array('success' => "Successfully updated Teacher Data");
                             echo json_encode($response);
                             exit();
