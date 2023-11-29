@@ -45,7 +45,7 @@ $(function() {
             }
         });
 
-        $('#add_user_modal').on('submit', function(e) {
+        $('#addUserForm').on('submit', function(e) {
             e.preventDefault();
 
             var formData = new FormData(this);
