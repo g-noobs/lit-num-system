@@ -53,7 +53,7 @@ $(function() {
             formData.append('id', btn_id);
 
             var $hideModal = $('#add_user_modal');
-            var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionEditUserData.php';
+            var actionUrl = '../PagesContent/UserContent/ActionsUsers/ActionEditTeacherData.php.php';
 
             $.ajax({
                 url: actionUrl,
