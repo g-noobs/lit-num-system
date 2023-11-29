@@ -91,8 +91,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $validate = new CommonValidationClass();
         $data = array($values['first_name'], $values['last_name']);
         $column = array('first_name', 'last_name');
-        $isValid = $validate -> updatevalidateColumns($table, $column, $data);
-        $isIdvalid = $validate -> updateValidateOneColumn($table, 'personal_id', $values['personal_id']);
+        $isValid = $validate -> updatevalidateColumns($table, $column, $data, $values['user_info_id']);
+        $isIdvalid = $validate -> updateValidateOneColumn($table, 'personal_id', $values['personal_id'], $values['user_info_id']);
     
         if($isIdvalid && $isValid){
             $sql = "UPDATE tbl_user_info 
@@ -106,8 +106,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $updateTeacherData = new SanitizeCrudClass();
             try{
                 $updateTeacherData -> executePreState($sql, $params);
-                //!if Editing user is correct then procced with creating credentials
-                if($updateTeacherData->getLastError()=== null){
+                //!if Editing user is correct then procced with editing contact
+                if($updateTeacherData->getLastError() === null){
                     $table = 'tbl_contact_info';
                     $contact = array(
                         'contact_num'=> $_POST['phone_num'],
