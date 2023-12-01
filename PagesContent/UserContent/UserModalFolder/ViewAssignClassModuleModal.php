@@ -24,7 +24,7 @@
                                 <p id="assign_class_date_data"></p>
                             </div>
                             <div class="col-sm-4"><strong>Remove Assignment:</strong>
-                                <p id="remove_assigned_class"></p>
+                                <p id="remove_assigned_class" class="text-center"></p>
                             </div>
                         </div>
                     </div>
