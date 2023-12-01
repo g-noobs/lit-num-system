@@ -82,22 +82,22 @@ $(function(){
                 }else if(response.hasOwnProperty('error')){
                     $modal.modal('hide');
                     $('#errorAlert').text(response.error);
-                    $('#errorBanner').show();
-                    setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
-                        location.reload();
-                    }, 8500);
+                    // $('#errorBanner').show();
+                    // setTimeout(function() {
+                    //     $("#errorBanner").fadeOut("slow");
+                    //     location.reload();
+                    // }, 8500);
                 }
             },
             error: function(xhr, status, error){
                 $modal.modal('hide');
                 console.error(xhr.responseText);
                 $('#errorAlert').text(xhr.responseText);
-                $('#errorBanner').show();
-                setTimeout(function() {
-                    $("#errorBanner").fadeOut("slow");
-                    location.reload();
-                }, 8500);
+                // $('#errorBanner').show();
+                // setTimeout(function() {
+                //     $("#errorBanner").fadeOut("slow");
+                //     location.reload();
+                // }, 8500);
             }
         });
     });
