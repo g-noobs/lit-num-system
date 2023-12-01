@@ -8,7 +8,7 @@ $class_assign_teacher_id = $_POST['id'];
 $table = "tbl_teacher_class_assignment";
 $values = array(
     'status' => 0,
-    'lass_assign_teacher_id' => $class_assign_teacher_id
+    'c lass_assign_teacher_id' => $class_assign_teacher_id
 );
 
 if(!empty($class_assign_teacher_id)){
