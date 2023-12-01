@@ -53,9 +53,10 @@ if($isValid) {
         } else {
     
           // Some other error
-          throw $e;
           $response = array("error" => $e);
           echo json_encode($response);
+          throw $e;
+          
         }
     }
 }
