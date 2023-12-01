@@ -55,10 +55,10 @@ $(document).ready(function() {
                     $('#assign_class_form')[0].reset();
                     $('#errorAlert').text(responseData.error);
                     $('#errorBanner').show();
-                    setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
-                        location.reload();
-                    }, 1500);
+                    // setTimeout(function() {
+                    //     $("#errorBanner").fadeOut("slow");
+                    //     location.reload();
+                    // }, 1500);
                 }
             },
             error: function() {
@@ -67,10 +67,10 @@ $(document).ready(function() {
                 //show alert banner id = errorBanner
                 $('#errorAlert').text('An error occurred during the AJAX request.');
                 $('#errorBanner').show();
-                setTimeout(function() {
-                    $("#errorBanner").fadeOut("slow");
-                    location.reload();
-                }, 1500);
+                // setTimeout(function() {
+                //     $("#errorBanner").fadeOut("slow");
+                //     location.reload();
+                // }, 1500);
             }
         });
     });
