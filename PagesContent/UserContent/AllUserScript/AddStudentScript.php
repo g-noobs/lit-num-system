@@ -1,6 +1,7 @@
 <script>
 $(function() {
     $('#btnAddLearner').on('click', function() {
+        $('#addUserForm')[0].reset();
         $('#add_user_modal').modal('show');
         $('#submit_btn').text('Add Learner');
         
