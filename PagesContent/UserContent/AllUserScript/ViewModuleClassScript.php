@@ -82,7 +82,7 @@ $(function(){
                 }else if(response.hasOwnProperty('error')){
                     $modal.modal('hide');
                     $('#errorAlert').text(response.error);
-                    // $('#errorBanner').show();
+                    $('#errorBanner').show();
                     // setTimeout(function() {
                     //     $("#errorBanner").fadeOut("slow");
                     //     location.reload();
@@ -93,7 +93,7 @@ $(function(){
                 $modal.modal('hide');
                 console.error(xhr.responseText);
                 $('#errorAlert').text(xhr.responseText);
-                // $('#errorBanner').show();
+                $('#errorBanner').show();
                 // setTimeout(function() {
                 //     $("#errorBanner").fadeOut("slow");
                 //     location.reload();
