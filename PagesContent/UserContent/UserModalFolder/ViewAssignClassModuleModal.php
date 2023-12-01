@@ -17,13 +17,13 @@
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <div class="row">
-                            <div class="col-sm-6" id="assign_class_name"><strong>Class Name:</strong>
+                            <div class="col-sm-4" id="assign_class_name"><strong>Class Name:</strong>
                                 <p id="assign_class_name_data"></p>
                             </div>
-                            <div class="col-sm-6" id="assign_class_date"><strong>Assign Date:</strong>
+                            <div class="col-sm-4" id="assign_class_date"><strong>Assign Date:</strong>
                                 <p id="assign_class_date_data"></p>
                             </div>
-                            <div class="col-sm-6"><strong>Assign Date:</strong>
+                            <div class="col-sm-4"><strong>Remove Assignment:</strong>
                                 <p id="remove_assigned_class"></p>
                             </div>
                         </div>
