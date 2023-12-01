@@ -58,7 +58,7 @@ $(function() {
 <script>
 $(function(){
     $(document).on('click', 'remove_assign_btn',function(){
-        $('view_assign_class').modal('hide');
+        $('#view_assign_class').modal('hide');
     });
 });
 </script>
