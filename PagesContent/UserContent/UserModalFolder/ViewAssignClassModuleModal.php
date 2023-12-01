@@ -23,6 +23,9 @@
                             <div class="col-sm-6" id="assign_class_date"><strong>Assign Date:</strong>
                                 <p id="assign_class_date_data"></p>
                             </div>
+                            <div class="col-sm-6"><strong>Assign Date:</strong>
+                                <p id="remove_assigned_class"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
