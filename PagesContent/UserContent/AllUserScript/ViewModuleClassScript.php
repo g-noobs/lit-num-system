@@ -1,3 +1,4 @@
+<!-- Script for view assigned class -->
 <script>
 $(function() {
     $('.view_assign_class_btn').on("click", function(e) {
@@ -53,7 +54,17 @@ $(function() {
     });
 });
 </script>
+<!-- script to remove assigned class -->
+<script>
+$(function(){
+    $(document).on('click', 'remove_assign_btn',function(){
+        $('view_assign_class').modal('hide');
+    });
+});
+</script>
 
+
+<!-- Script for viewing assigned module -->
 <script>
 $(function() {
     $('.view_assign_module_btn').on('click', function(e) {
