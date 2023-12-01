@@ -20,8 +20,6 @@
                                     ?>
                             </select>
                         </div>
-                        <!-- <a href="#" id="assign_more_class_btn" type="button" data-toggle="tooltip"
-                            title="Add More Class" class="text-success"><i class="fa fa-plus"></i></a> -->
                     </div>
                     <!-- /.box-body -->
                 </div>
