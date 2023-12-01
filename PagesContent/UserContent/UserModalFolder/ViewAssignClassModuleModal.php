@@ -16,7 +16,7 @@
             <div class=" modal-body">
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-sm-4" id="assign_class_name"><strong>Class Name:</strong>
                                 <p id="assign_class_name_data"></p>
                             </div>
