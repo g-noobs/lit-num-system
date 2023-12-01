@@ -58,7 +58,7 @@ $(function() {
 <script>
 $(function(){
     $(document).on('click', '.remove_assign_btn',function(){
-        var $modal = ('#view_assign_class');
+        var $modal = $('#view_assign_class');
         var assign_class_id = $(this).data('assign-id');
 
         var action_url = "../PagesContent/UserContent/ActionsUsers/ActionRemoveAssignedClass.php";
