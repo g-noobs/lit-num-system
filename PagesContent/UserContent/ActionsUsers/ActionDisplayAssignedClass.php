@@ -9,7 +9,7 @@ $table = "view_teacher_class_info";
 // condition to check that get for id is not empty
 if(!empty($_GET['id'])){
     $id = $_GET['id'];
-    $sql = "SELECT * FROM $table WHERE user_info_id = '$id';";
+    $sql = "SELECT * FROM $table WHERE class_assign_status = 1 AND user_info_id = '$id';";
     $result = $conn->query($sql);
 
 
@@ -17,7 +17,10 @@ if(!empty($_GET['id'])){
         while ($row = $result->fetch_assoc()) {
             $response[] = array(
                 'class_name' => $row['class_name'],
-                'assign_date' => $row['assign_date']
+                'assign_date' => $row['assign_date'],
+                'class_id' => '<a href="#" class="remove_assign_btn" data-assgn-id="' . $row['class_assign_teacher_id'] . '" type="button" data-toggle="tooltip"
+                title="Add More Class" class="text-danger"><i class="fa fa-remove"></i></a>'
+
             );
         }
     }else{
