@@ -16,45 +16,46 @@ $table = 'tbl_teacher_class_assignment';
     // Retrieve the data from the Ajax request
     $assign_class_id = $_POST["assign_class_id"];
     $user_teacher_id = $_POST["user_teacher_id"];
-    
-
-    $values = array(
-        'class_assign_teacher_id' => '',
-        'class_id' => $assign_class_id,
-        'user_info_id' => $user_teacher_id,
-        'assign_date' => '',
-        'assign_by_id' => '',
-    );
-    //adding data for class_assign_teacher_id
-    $columnCountClass = new ColumnCountClass();
-    $values['class_assign_teacher_id'] = "CAT" . $columnCountClass->columnCountWhere("class_assign_teacher_id", $table);
-    //assign date
-    date_default_timezone_set('Asia/Kuala_Lumpur');
-    $currentDate = new DateTime();
-    $values['assign_date'] = $currentDate->format('Y-m-d H:i:s');
-    //assign by id
-    $values['assign_by_id'] = $_SESSION['id'];
-
-    //set columns
-    $columns = implode(', ', array_keys($values));
-    //set number of question marks
-    $questionMarkString = implode(',', array_fill(0, count($values), '?'));
-    //set sql
-    $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
-    // set parameters
-    $params = array_values($values);
-    //set sanitize class
-    $assignTeacher = new SanitizeCrudClass();
-    $assignTeacher->executePreState($sql, $params);
-
-    if($assignTeacher->getLastError() === null){
-        $response = array('success' => "Class Assigned Successfully");
+    $table = 'tbl_teacher_class_assignment';
+    foreach ($assign_class_id as $class_id) {
+        if ($count > 0) {
+            $response = array('error' =>"The combination of user and class already exists.");
+        }else{
+            $values = array(
+                'class_assign_teacher_id' => '',
+                'class_id' => $class_id,
+                'user_info_id' => $user_teacher_id,
+                'assign_date' => '',
+                'assign_by_id' => '',
+            );
+            //adding data for class_assign_teacher_id
+            $columnCountClass = new ColumnCountClass();
+            $values['class_assign_teacher_id'] = "CAT" . $columnCountClass->columnCountWhere("class_assign_teacher_id", $table);
+            //assign date
+            date_default_timezone_set('Asia/Kuala_Lumpur');
+            $currentDate = new DateTime();
+            $values['assign_date'] = $currentDate->format('Y-m-d H:i:s');
+            //assign by id
+            $values['assign_by_id'] = $_SESSION['id'];
+            //set columns
+            $columns = implode(', ', array_keys($values));
+            //set number of question marks
+            $questionMarkString = implode(',', array_fill(0, count($values), '?'));
+            //set sql
+            $sql = "INSERT INTO $table($columns)VALUES($questionMarkString);";
+            // set parameters
+            $params = array_values($values);
+            //set sanitize class
+            $assignTeacher = new SanitizeCrudClass();
+            $assignTeacher->executePreState($sql, $params);
+            if($assignTeacher->getLastError() === null){
+                $response = array('success' => "Class Assigned Successfully");
+            }
+            else{
+                $response = array('error' =>"Error Assigning Class");
+                
+            }
+        }
     }
-    else{
-        $response = array('error' =>"Error Assigning Class " . $assignTeacher->getLastError());
-        
-    }
-
-
 echo json_encode($response);
 ?>
