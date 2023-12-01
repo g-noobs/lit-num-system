@@ -31,7 +31,7 @@ $(function() {
                             "<p class='data_class_date'>" +
                             data.assign_date +
                             "</p>");
-                        $("#remove_assigned_class").append(data.class_id);
+                        $("#remove_assigned_class").append("<p class='class_assign_id'>"+data.class_id+"</p>");
                     });
 
                 } else {
