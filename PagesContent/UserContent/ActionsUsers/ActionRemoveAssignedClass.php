@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include_once "../../../Database/SanitizeCrudClass.php";
-$conn = $connection->getConnection();
 
 $class_assign_teacher_id = $_POST['id'];
 $table = "tbl_teacher_class_assignment";
