@@ -9,14 +9,20 @@
                     <span id="user_id_data_class"></span>
                 </h4>
                 <code class="text-warning" id="assign_class_error" style="display: none;"></code>
+                <a href="#" id="assign_more_class_btn" type="button" data-toggle="tooltip" title="Remove Assigned Class"
+                    class="text-danger"><i class="fa fa-removes"></i></a>
             </div>
             <!-- /.modal-header -->
             <div class=" modal-body">
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <div class="row">
-                            <div class="col-sm-6" id="assign_class_name"><strong>Class Name:</strong><p id="assign_class_name_data">/p></div>
-                            <div class="col-sm-6" id="assign_class_date"><strong>Assign Date:</strong><p id="assign_class_date_data"></p></div>
+                            <div class="col-sm-6" id="assign_class_name"><strong>Class Name:</strong>
+                                <p id="assign_class_name_data"></p>
+                            </div>
+                            <div class="col-sm-6" id="assign_class_date"><strong>Assign Date:</strong>
+                                <p id="assign_class_date_data"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,8 +57,12 @@
                 <div class="box box-widget widget-user-2">
                     <div class="box-footer no-padding">
                         <div class="row">
-                            <div class="col-sm-6" id="assign_module_name"><strong>Module Name:</strong><p id="assign_module_name_data">/p></div>
-                            <div class="col-sm-6" id="assigne_module_date"><strong>Assign Date:</strong><p id="assign_module_date_data"></p></div>
+                            <div class="col-sm-6" id="assign_module_name"><strong>Module Name:</strong>
+                                <p id="assign_module_name_data">/p>
+                            </div>
+                            <div class="col-sm-6" id="assigne_module_date"><strong>Assign Date:</strong>
+                                <p id="assign_module_date_data"></p>
+                            </div>
                         </div>
                     </div>
                     <!-- /.box-body -->
