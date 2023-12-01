@@ -59,6 +59,7 @@ $(function() {
 $(function(){
     $(document).on('click', '.remove_assign_btn',function(){
         $('#view_assign_class').modal('hide');
+        var class_id = $(this).data();
     });
 });
 </script>
