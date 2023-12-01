@@ -58,8 +58,48 @@ $(function() {
 <script>
 $(function(){
     $(document).on('click', '.remove_assign_btn',function(){
-        $('#view_assign_class').modal('hide');
-        var class_id = $(this).data();
+        var $modal = ('#view_assign_class');
+        var assign_class_id = $(this).data('assign-id');
+
+        var action_url = "../PagesContent/UserContent/ActionsUsers/ActionRemoveAssignedClass.php";
+
+        $.ajax({
+            type: "POST",
+            url: action_url,
+            data: {
+                id: assign_class_id
+            },
+            dataType: 'json',
+            success:function(response){
+                if(response.hasOwnProperty('success')){
+                    $modal.modal('hide');
+                    $('#successAlert').text(response.success);
+                    $('#successBanner').show();
+                    setTimeout(function() {
+                        $("#successBanner").fadeOut("slow");
+                        location.reload();
+                    }, 8500);
+                }else if(response.hasOwnProperty('error')){
+                    $modal.modal('hide');
+                    $('#errorAlert').text(response.error);
+                    $('#errorBanner').show();
+                    setTimeout(function() {
+                        $("#errorBanner").fadeOut("slow");
+                        location.reload();
+                    }, 8500);
+                }
+            },
+            error: function(xhr, status, error){
+                $modal.modal('hide');
+                console.error(xhr.responseText);
+                $('#errorAlert').text(xhr.responseText);
+                $('#errorBanner').show();
+                setTimeout(function() {
+                    $("#errorBanner").fadeOut("slow");
+                    location.reload();
+                }, 8500);
+            }
+        });
     });
 });
 </script>
