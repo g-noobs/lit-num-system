@@ -18,7 +18,7 @@ if(!empty($_GET['id'])){
             $response[] = array(
                 'class_name' => $row['class_name'],
                 'assign_date' => $row['assign_date'],
-                'class_id' => '<a href="#" class="remove_assign_btn text-danger" data-assgn-id="' . $row['class_assign_teacher_id'] . '" type="button" data-toggle="tooltip"
+                'class_id' => '<a href="#" class="remove_assign_btn text-danger" data-assign-id="' . $row['class_assign_teacher_id'] . '" type="button" data-toggle="tooltip"
                 title="Removed this Assigned Class"><i class="fa fa-remove"></i></a>'
             );
         }

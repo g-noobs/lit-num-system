@@ -1,7 +1,5 @@
 <?php 
 include_once "../../../Database/SanitizeCrudClass.php";
-
-$connection = new Connection();
 $conn = $connection->getConnection();
 
 $class_assign_teacher_id = $_POST['id'];
