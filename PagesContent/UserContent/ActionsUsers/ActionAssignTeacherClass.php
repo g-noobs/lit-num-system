@@ -20,7 +20,7 @@ $table = 'tbl_teacher_class_assignment';
 
     $values = array(
         'class_assign_teacher_id' => '',
-        'class_id' => $class_id,
+        'class_id' => $assign_class_id,
         'user_info_id' => $user_teacher_id,
         'assign_date' => '',
         'assign_by_id' => '',
