@@ -57,7 +57,7 @@ $(function() {
 <!-- script to remove assigned class -->
 <script>
 $(function(){
-    $(document).on('click', 'remove_assign_btn',function(){
+    $(document).on('click', '.remove_assign_btn',function(){
         $('#view_assign_class').modal('hide');
     });
 });
