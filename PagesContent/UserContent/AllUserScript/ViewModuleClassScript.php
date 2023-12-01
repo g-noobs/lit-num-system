@@ -18,7 +18,7 @@ $(function() {
                     $("#assign_class_name_data").empty();
                     $('#assign_class_date_data').empty();
                     $('#assign_class_error').empty();
-                    $('#remove_class_btn').empty();
+                    $('#remove_assigned_class').empty();
 
                     // Update the element with the received errors
                     $.each(response, function(index, data) {
@@ -30,7 +30,7 @@ $(function() {
                             "<p class='data_class_date'>" +
                             data.assign_date +
                             "</p>");
-                        $("#remove_class_btn").append(data.class_id);
+                        $("#remove_assigned_class").append(data.class_id);
                     });
 
                 } else {

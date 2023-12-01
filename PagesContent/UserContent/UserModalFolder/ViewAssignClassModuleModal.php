@@ -23,7 +23,7 @@
                             <div class="col-sm-4" id="assign_class_date"><strong>Assign Date:</strong>
                                 <p id="assign_class_date_data"></p>
                             </div>
-                            <div class="col-sm-4" id="remove_class_btn"><strong>Remove Assignment:</strong>
+                            <div class="col-sm-4"><strong>Remove Assignment:</strong>
                                 <p id="remove_assigned_class"></p>
                             </div>
                         </div>
