@@ -1,6 +1,6 @@
 <script>
 $(function() {
-    $('.edit').on('click', function() {
+    $('.edit').on('click', function(e) {
         e.preventDefault();
         $('#submit_btn').text('Update Class');
         $modal = $('#add-subj');
