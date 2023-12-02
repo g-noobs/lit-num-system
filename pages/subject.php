@@ -78,6 +78,9 @@
         <!-- Adding Subject Script -->
         <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/AddSubjScript.php"?>
 
+        <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/EditSubjScript.php"?>
+
+
         <!-- archive script -->
         <?php include_once "../PagesContent/SubjectFolder/ScriptSubj/ArchiveScript.php"?>
 
