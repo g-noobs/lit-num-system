@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <form id="subjForm">
+            <form id="subjForm" class="subjForm">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
