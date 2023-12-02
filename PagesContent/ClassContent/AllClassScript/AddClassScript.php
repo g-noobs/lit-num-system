@@ -3,13 +3,13 @@ $(function() {
     $('#add_class_btn').on('click', function(e) {
         e.preventDefault();
         var $modal = $('#add_class_modal');
-            $moda.modal('show');
+        $moda.modal('show');
         $("#add_class_form").on("submit", function(e) {
             e.preventDefault();
 
             var formData = new FormData(this);
 
-            
+
             var actionUrl = '../PagesContent/ClassContent/ActionFolder/ActionAddClass.php';
 
             $.ajax({
@@ -79,4 +79,3 @@ $(function() {
 
 });
 </script>
-
