@@ -33,7 +33,7 @@
                 <!-- /.box-body -->
                 <div class="modal-footer">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-warning pull-left">Add Module</button>
+                        <button type="submit" class="btn btn-warning pull-left" id="submit_btn">Add Module</button>
                         <button type="reset" class="btn btn-default pull-right" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>

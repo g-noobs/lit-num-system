@@ -2,7 +2,9 @@
 $(function() {
     $('#add_module_btn').on('click', function(e) {
         e.preventDefault(e);
+        $('#submit_btn').text('Add Module');
         $('#add-subj').modal('show');
+        
         $("#subjForm").on("submit", function(e) {
             e.preventDefault();
             var formData = new FormData(this);

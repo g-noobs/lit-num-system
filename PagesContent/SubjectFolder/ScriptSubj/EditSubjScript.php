@@ -2,6 +2,7 @@
 $(function() {
     $('.edit').on('click', function(e){
         e.preventDefault();
+        $('#submit_btn').text('Update Module');
         $modal = $('#add-subj');
         
         var btn_id = $(this).data('id');
