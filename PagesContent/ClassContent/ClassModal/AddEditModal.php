@@ -38,7 +38,7 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-warning pull-left">Add New Class</button>
+                    <button type="submit" class="btn btn-warning pull-left" id="submit_btn">Add New Class</button>
                     <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                 </div>
             </form>
