@@ -11,7 +11,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_class_modal">
+                        <button type="button" class="btn btn-warning" id="add_class_btn">
                             <i class="fa fa-plus"></i> <span> New Class</span>
                         </button>
                         <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="tooltip" title="Archive Class">
