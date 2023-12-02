@@ -52,7 +52,7 @@ if(!empty($errors)){
                 exit();
             }
         }else{
-            $response = array('error' => 'Updated Data has Duplicate');
+            $response = array('error' => 'Data Duplicate. Please try again. . ');
             echo json_encode($response);
             exit();
         }
