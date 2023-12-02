@@ -9,7 +9,7 @@ include_once "../../../CommonPHPClass/InputValidationClass.php";
 $id = $_POST['id'];
 $values = array(
     'module_name' => $_POST['subj_name_add'],
-    'module_description	' => $_POST['subj_add_desc'],
+    'module_description' => $_POST['subj_add_desc'],
     'module_id' => $id
 );
 $table = 'tbl_module';
