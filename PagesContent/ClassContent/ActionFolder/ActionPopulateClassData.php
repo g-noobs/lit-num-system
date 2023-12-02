@@ -8,7 +8,7 @@ $conn = $connection->getConnection();
 $table = "tbl_class";
 $class_id = $_POST['id'];
 
-if(!empty($clas_id)){
+if(!empty($class_id)){
     $sql = "SELECT * FROM $table WHERE class_id = '$class_id';";
     $result = $conn->query($sql);
     
