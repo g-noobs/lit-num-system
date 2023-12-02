@@ -81,6 +81,10 @@ body {
         <!-- Scipt for adding class -->
         <?php include_once("../PagesContent/ClassContent/AllClassScript/AddClassScript.php");?>
 
+        <!-- script to edit class -->
+        <?php include_once("../PagesContent/ClassContent/AllClassScript//EditClassScript.php");?>
+
+
         <?php include_once("../PagesContent/ClassContent/AllClassScript/ArchiveScript.php");?>
 
         <?php include_once("../PagesContent/ClassContent/AllClassScript/ClassJquery.php");?>
