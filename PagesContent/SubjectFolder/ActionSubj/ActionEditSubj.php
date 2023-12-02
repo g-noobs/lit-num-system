@@ -30,7 +30,7 @@ if(!empty($errors)){
 }else{
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $validate = new CommonValidationClass();
-        $isValid = $validate -> updatevalidateColumns($table, 'module_name', $values['module_name'], $values['module_id']);
+        $isValid = $validate -> updateValidateOne($table, 'module_name', $values['module_name'], 'module_id',$values['module_id']);
         
         if($isValid){
             $sql = "UPDATE $table
