@@ -3,7 +3,7 @@ $(function() {
     $('#add_class_btn').on('click', function(e) {
         e.preventDefault();
         var $modal = $('#add_class_modal');
-        $moda.modal('show');
+        $modal.modal('show');
         $("#add_class_form").on("submit", function(e) {
             e.preventDefault();
 
