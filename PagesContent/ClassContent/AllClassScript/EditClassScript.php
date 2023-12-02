@@ -3,7 +3,7 @@ $(function() {
     $('.edit').on('click', function(e) {
         e.preventDefault();
         $('#submit_btn').text('Update Class');
-        $modal = $('#add-subj');
+        $modal = $('#add_class_modal');
         var btn_id = $(this).data('id');
 
         $class_name = $('input[name="class_name"]');
@@ -24,6 +24,7 @@ $(function() {
                         return false;
                     }
                 });
+                $modal.modal('show');
             },
             error: function() {
                 console.log('error');
