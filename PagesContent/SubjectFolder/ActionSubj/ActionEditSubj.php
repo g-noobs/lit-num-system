@@ -34,7 +34,7 @@ if(!empty($errors)){
         
         if($isValid){
             $sql = "UPDATE $table
-            SET module_name = ?
+            SET module_name = ?,
                 module_description = ?
             WHERE module_id = ?";
             $params = array_values($values);
