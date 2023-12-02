@@ -3,7 +3,7 @@ $(function() {
     $('.edit').on('click', function(e){
         e.preventDefault();
         $modal = $('#add-subj');
-        $modal.modal('show');
+        
         var btn_id = $(this).data('id');
         
         $module_name = $('input[name="subj_name_add"]');
@@ -19,6 +19,7 @@ $(function() {
             success: function(response) {
                 $module_name.val(response.module_name);
                 $module_descrip.val(response.module_descrip);
+                $modal.modal('show');
             },
             error: function() {
                 console.log('error');
