@@ -40,14 +40,14 @@ if(!empty($errors)){
             $params = array_values($values);
 
             $updateModule = new SanitizeCrudClass();
-            try{
-                $updateModule->executePreState($sql, $params);
+            $updateModule->executePreState($sql, $params);
+
+            if($updateModule->getLastError() === null){
                 $response = array('success' => 'Successfullt Update Module: '. $values['module_id']);
                 echo json_encode($response);
                 exit();
-            }
-            catch(Exception $e){
-                $response = array('error' => $e);
+            }else{
+                $response = array('error' => $updateModule->getLastError());
                 echo json_encode($response);
                 exit();
             }
