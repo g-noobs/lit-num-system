@@ -6,8 +6,8 @@ $(function() {
         $modal = $('#add_category_modal');
 
         var btn_id = $(this).data('id');
-        $category_name = $('input[name="category_name"]');
-        $category_description = $('select[name="category_description"]');
+        var $category_name = $('input[name="category_name"]');
+        var $category_description = $('input[name="category_description"]');
         
         $.ajax({
             type: "POST",
