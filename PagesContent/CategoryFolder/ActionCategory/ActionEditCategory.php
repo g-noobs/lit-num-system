@@ -17,12 +17,13 @@ $values = array(
 $table = 'tbl_category';
 $inputValidation = new InputValidationClass();
 $category_name = $inputValidation->test_input($_POST['category_name'], 'address');
+$category_description = $inputValidation->test_input($_POST['category_description'], 'address');
 
 $errors = array();
 if($category_name === false){
     $errors[] = "Invalid Character in Category Name";
 }
-if($category_name === false){
+if($category_description === false){
     $errors[] = "Invalid Character in Category Description";
 }
 
