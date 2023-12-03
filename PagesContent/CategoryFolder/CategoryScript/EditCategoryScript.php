@@ -25,8 +25,7 @@ $(function() {
                 console.log('error');
             }
         });
-    });
-    $('#add_category_form').on('submit', function(e) {
+        $('#add_category_form').on('submit', function(e) {
         e.preventDefault();
         var formData = new FormData(this);
         formData.append('id', btn_id);
@@ -94,6 +93,8 @@ $(function() {
             }
         });
     });
+    });
+    
 
 });
 </script>
