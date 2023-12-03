@@ -100,6 +100,7 @@ body {
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php")?>
         <?php include_once "../PagesContent/CategoryFolder/CategoryCommon/CategoryJquery.php"; ?>
+        
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
         <!-- activate user script -->

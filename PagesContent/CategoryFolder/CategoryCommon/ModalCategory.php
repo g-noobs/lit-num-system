@@ -7,8 +7,7 @@
                 </button>
                 <h4 class='modal-title'>Enter Category's Information</h4>
             </div>
-            <form role='form' action='../PagesContent/CategoryFolder/ActionCategory/ActionRegisterCategory.php'
-                onsubmit='return validateForm()' method='post'>
+            <form id="add_category_form">
                 <div class='modal-body'>
                     <div class='box-body'>
                         <div class='form-group' id='ctgy_name'>
