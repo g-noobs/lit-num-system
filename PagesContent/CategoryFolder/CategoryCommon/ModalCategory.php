@@ -33,25 +33,3 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal ADD User -->
-
-<div class="modal fade" id="archive-category">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Are you sure you wanted to ARCHIVE this user?</h4>
-                <form role="form" action="../AreaFolder/ActionArea/ArchiveCategory.php" onsubmit="return validateForm()"
-                    method="post">
-                    <div class="form-group">
-                        <input type="text" readonly name="category_input" class="form-control" id="exampleInputEmail1">
-                        <button type="submit" class="btn btn-danger pull-left">Archive</button>
-                        <button type="reset" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
