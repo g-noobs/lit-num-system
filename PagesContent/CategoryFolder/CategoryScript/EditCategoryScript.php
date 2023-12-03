@@ -3,6 +3,7 @@ $(function() {
     $('.edit').on('click', function(e) {
         e.preventDefault();
         $('#submit_btn').text('Update Category');
+        $modal = $('#add_category_modal');
 
         var btn_id = $(this).data('id');
         $category_name = $('input[name="category_name"]');
