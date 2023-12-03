@@ -9,11 +9,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add_area">
-                            <i class="fa fa-plus"></i> <span> New Category</span>
+                        <button type="button" class="btn btn-warning" id="add_category_btn" data-toggle="tooltip" title="Add new Category!">
+                            <i class="fa fa-plus"></i> <span></span>
                         </button>
-                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="modal"
-                            modal-target="">
+                        <button id="archive_btn" type="button" class="btn btn-danger" data-toggle="tooltip" title="Archive Category!">
                             <i class="glyphicon glyphicon-trash"></i> <span></span>
                         </button>
                     </div>

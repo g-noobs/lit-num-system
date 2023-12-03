@@ -1,4 +1,4 @@
-<div class='modal fade' id='add_area'>
+<div class='modal fade' id='add_category_modal'>
     <div class='modal-dialog'>
         <div class='modal-content'>
             <div class='modal-header'>
@@ -17,8 +17,8 @@
                         </div>
 
                         <div class="form-group" id='ctgy_info'>
-                            <label for="comment">Category Information: </label>
-                            <textarea class="form-control w-100" name='category_info' rows="5" placeholder='Information' id="comment"></textarea>
+                            <label for="comment">Category Description: </label>
+                            <textarea class="form-control w-100" name='category_description' rows="5" placeholder='Description'></textarea>
                         </div>
                     </div>
                     <!-- /.box-body -->
