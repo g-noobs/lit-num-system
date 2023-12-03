@@ -1,27 +1,39 @@
 <!DOCTYPE html>
+
 <html>
+<?php session_start(); 
+$_SESSION['loggedin'] = false; 
+$_SESSION['admin'] = false;
+$_SESSION['teacher'] = false;
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tagakaulo Edu</title>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.tagakauloedu.com/landingpage.css">
 </head>
+
 <body>
     <header>
-    <button type="button" class="btn btn-primary" id="header-btn" data-toggle="modal" data-target="#login-modal">
-        Login
-    </button>
-</header>
+        <button type="button" class="btn btn-primary" id="header-btn" data-toggle="modal" data-target="#login-modal">
+            Login
+        </button>
+    </header>
 
     <div class="page" id="first-page">
         <div id="left-first-page">
             <h1 id="h1-first-page"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
-            <p> Nurture yourself with the rich tribal language using Ka-ede <br> to seamlessly learn and understand the Tagakaulo language. </p>
-        
+            <p> Nurture yourself with the rich tribal language using Ka-ede <br> to seamlessly learn and understand the
+                Tagakaulo language. </p>
+
             <form method="post">
-                    <input id="download-btn" type="submit" name="download" value="Download Now"/>
+                <input id="download-btn" type="submit" name="download" value="Download Now" />
             </form>
         </div>
         <div id="right-first-page">
@@ -29,7 +41,7 @@
         </div>
     </div>
 
-    
+
     <div class="page" id="second-page">
         <h1>Benefits of Ka-Ede</h1>
         <div class="benefits">
@@ -58,12 +70,12 @@
     <div class="modal" id="login-modal">
         <div class="modal-dialog">
             <div class="modal-content">
-    
+
                 <div class="modal-header">
                     <h4 class="modal-title">What are you?</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-    
+
                 <div class="modal-body">
                     <form id="login-form" method="post">
                         <button type="submit" class="btn btn-danger" name="admin">Admin</button>
@@ -73,7 +85,7 @@
             </div>
         </div>
     </div>
-    
+
     <?php
         if (isset($_POST['download'])) {
             header("Location: https://www.tagakauloedu.com/Mobile/ka-ede.apk");
@@ -89,4 +101,5 @@
         }    
     ?>
 </body>
+
 </html>
