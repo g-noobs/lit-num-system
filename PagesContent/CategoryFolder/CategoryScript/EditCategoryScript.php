@@ -29,6 +29,7 @@ $(function() {
     $('add_category_form').on('submit', function(e) {
         e.preventDefault();
         var formData = new FormData(this);
+        formData.append('id', btn_id);
         var actionUrl = '../PagesContent/CategoryFolder/ActionCategory/ActionEditCategory.php';
     });
     $.ajax({
