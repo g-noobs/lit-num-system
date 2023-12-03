@@ -2,6 +2,7 @@
 $(function() {
     $('#add_category_btn').on('click', function(e) {
         e.preventDefault();
+        $('#submit_btn').text('Add Category');
         var $modal = $('#add_category_modal');
         $modal.modal('show');
 
