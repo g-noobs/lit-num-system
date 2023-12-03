@@ -30,10 +30,10 @@ $(function() {
         e.preventDefault();
         var formData = new FormData(this);
         formData.append('id', btn_id);
-        var actionUrl = '../PagesContent/CategoryFolder/ActionCategory/ActionEditCategory.php';
+        
     });
     $.ajax({
-        url: actionUrl,
+        url: '../PagesContent/CategoryFolder/ActionCategory/ActionEditCategory.php',
         type: "POST",
         data: formData,
         processData: false,
