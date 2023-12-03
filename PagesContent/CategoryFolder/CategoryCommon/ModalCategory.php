@@ -7,6 +7,16 @@
                 </button>
                 <h4 class='modal-title'>Enter Category's Information</h4>
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" id="add_user_modal_alert" role="alert"
+                        style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        <span id="add_user_modal_alert_text"></span>
+                    </div>
+                </div>
+            </div>
             <form id="add_category_form">
                 <div class='modal-body'>
                     <div class='box-body'>
@@ -17,7 +27,8 @@
 
                         <div class="form-group" id='ctgy_info'>
                             <label for="comment">Category Description: </label>
-                            <textarea class="form-control w-100" name='category_description' rows="5" placeholder='Description'></textarea>
+                            <textarea class="form-control w-100" name='category_description' rows="5"
+                                placeholder='Description'></textarea>
                         </div>
                     </div>
                     <!-- /.box-body -->
