@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         );
         $table = 'tbl_category';
         $columnCount = new ColumnCountClass();
-        $values['class_id'] = 'CTG' . $columnCount->columnCountWhere('category_id',$table);
+        $values['category_id'] = 'CTG' . $columnCount->columnCountWhere('category_id',$table);
 
         date_default_timezone_set('Asia/Kuala_Lumpur');
         $currentDate = new DateTime();
