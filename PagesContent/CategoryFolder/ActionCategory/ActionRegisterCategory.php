@@ -56,6 +56,34 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         date_default_timezone_set('Asia/Kuala_Lumpur');
         $currentDate = new DateTime();
         $values['date_added'] = $currentDate->format('Y-m-d H:i:s');
+
+        $values['addedby_ID'] = $_SESSION['id'];
+
+        $validation = new CommonValidationClass();
+        $isValid = $validation->validateOneColumn($table,'category_name', $values['category_name']);
+
+        if($isValid){
+            $columns = implode(', ', array_keys($values));
+            $masks = implode(', ', array_fill(0, count($values), '?'));
+            $sql = "INSERT INTO $table ($columns) VALUES ($masks)";
+            $params = array_values($values);
+            $addCategory = new SanitizeCrudClass();
+            try{
+                $addCategory->executePreState($sql,$params);
+            }catch(mysqli_sql_exception $e){
+                $response = array('error' => $e->getMessage());
+                echo json_encode($response);
+                exit();
+            }catch(Exception $e){
+                $response = array('error' => $e->getMessage());
+                echo json_encode($response);
+                exit();
+            }
+        }else{
+            $response = array('error' => 'Data Duplicate. Please try again. . ');
+            echo json_encode($response);
+            exit();
+        }
         
     }else{
         $response = array('error' => 'Please fill up all fields!');
@@ -68,33 +96,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     echo json_encode($response);
     exit();
 }
-
-
-
-
-$added_byID = $_SESSION['id'];
-$table = 'tbl_category';
-
-$values['addedby_ID'] = $added_byID;
-
-include_once("../../../Database/ColumnCountClass.php");
-$columnCount = new ColumnCountClass();
-$newCount = "CTG".(101 + $columnCount ->columnCount("category_id", $table));
-$values['category_id'] = $newCount;
-
-
-
-
-include_once("../../../CommonPHPClass/PHPClass.php");
-$date = new PHPClass();
-$currentDate = $date->getFormattedCurrentDate();
-
-
-
-$query = "INSERT INTO $table (category_id, category_name, category_info, addedby_ID, date_added, category_status) VALUES (?, ?, ?, ?, ?, ?);";
-$params =array_values($values);
-
-include_once("../../../Database/SanitizeCrudClass.php");
-$addNewData = new SanitizeCrudClass();
-$addNewData->executePreparedStatement($query, $params, "../../../pages/category.php")
 ?>
