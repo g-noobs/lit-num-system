@@ -9,7 +9,7 @@ $table = "tbl_category";
 $id = $_POST['id'];
 
 if(!empty($id)){
-    $sql = "SELECT * FROM $table WHERE category_id = '$class_id';";
+    $sql = "SELECT * FROM $table WHERE category_id = '$id';";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
