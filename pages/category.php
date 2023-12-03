@@ -100,11 +100,15 @@ body {
         <!-- ./wrapper -->
         <?php include_once("../bootstrap/js.php")?>
         <?php include_once "../PagesContent/CategoryFolder/CategoryCommon/CategoryJquery.php"; ?>
-        <?php include_once "../CommonContent/ErrorModal.php"?>
         <?php include_once "../CommonContent/CommonAllScript.php"?>
 
         <!-- activate user script -->
         <?php include_once "../PagesContent/CategoryFolder/CategoryScript/ArchiveScript.php"; ?>
+
+        <!-- add category script -->
+        <?php include_once "../PagesContent/CategoryFolder/CategoryScript/AddCategoryScript.php"; ?>
+        <!-- edit category -->
+        <?php include_once "../PagesContent/CategoryFolder/CategoryScript/EditCategoryScript.php"; ?>
 
 </body>
 
