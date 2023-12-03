@@ -11,7 +11,7 @@ $(function() {
         
         $.ajax({
             type: "POST",
-            url: "../PagesContent/CategoryFolder/ActionFolder/ActionPopulateCategoryData.php",
+            url: "../PagesContent/CategoryFolder/ActionCategory/ActionPopulateCategoryData.php",
             data: {
                 id: btn_id
             },
