@@ -125,7 +125,6 @@ include_once "../../../CommonPHPClass/InputValidationClass.php";
                 if(!empty($errors)){
                     echo json_encode($errors);
                     exit();
-                    break;
 
                 }else{
                     $table = "tbl_user_info";   
@@ -251,43 +250,36 @@ include_once "../../../CommonPHPClass/InputValidationClass.php";
                                             }else{
                                                 $response = array('error' => 'Error Adding on student table for '.$values['first_name'].' '.$values['last_name'].'!');
                                                 exit();
-                                                break;
                                             }
                                         }else{
                                             $response = array('error' => 'Error Adding Contact Info for'.$values['first_name'].' '.$values['last_name'].'!');
                                             exit();
-                                            break;
                                         }
                                     }else{
                                         $response = array('error' => 'Error Adding Credentials for'.$values['first_name'].' '.$values['last_name'].'!');
                                         exit();
-                                        break;
                                     }
                                     
                                 } catch (mysqli_sql_exception $e) {
                                     // Handle any errors during insertion
                                     $response = array('error' => $e->getMessage());
-                                    exit();
                                     break;
                                 }
                             }else{
                                 $response = array('error' => 'Error adding '.$values['first_name'].' '.$values['last_name'].'! Possible Duplicate or Invalid Data!');
                                 echo json_encode($response);
                                 break;
-                                exit();
                             }
                         } catch (mysqli_sql_exception $e) {
                             // Handle any errors during insertion
                             $response = array('error' => $e->getMessage());
                             exit();
-                            break;
                         }
                     }
                     else{
                         $response = array('error' => 'Error adding '.$values['first_name'].' '.$values['last_name'].'! Possible Duplicate or Invalid Data!');
                         echo json_encode($response);
                         exit();
-                        break;
                     }
                 }
                 
