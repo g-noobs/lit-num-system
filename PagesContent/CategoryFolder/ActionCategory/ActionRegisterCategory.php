@@ -70,6 +70,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $addCategory = new SanitizeCrudClass();
             try{
                 $addCategory->executePreState($sql,$params);
+                $response = array('success' => 'Successfully Added Category: '. $values['category_name']);
+                echo json_encode($response);
             }catch(mysqli_sql_exception $e){
                 $response = array('error' => $e->getMessage());
                 echo json_encode($response);
