@@ -22,6 +22,10 @@ $errors = array();
 if($category_name === false){
     $errors[] = "Invalid Character in Category Name";
 }
+if($category_name === false){
+    $errors[] = "Invalid Character in Category Description";
+}
+
 if(!empty($errors)){
     echo json_encode($errors);
     exit();
