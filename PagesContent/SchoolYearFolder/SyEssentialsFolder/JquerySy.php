@@ -139,21 +139,20 @@ $(document).ready(function() {
                         $modal.modal('hide');
                         $('#successAlert').text(response.success);
                         $('#successBanner').show();
-                        setTimeout(function() {
-                            $("#successBanner").fadeOut("slow");
-                            location
-                        .reload(); // Hide the .alert element after 3 seconds
-                        }, 1500);
+                        // setTimeout(function() {
+                        //     $("#successBanner").fadeOut("slow");
+                        //     location
+                        // .reload(); // Hide the .alert element after 3 seconds
+                        // }, 1500);
                     } else {
                         $modal.modal('hide');
                         //show alert banner id = errorBanner
                         $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
-                        setTimeout(function() {
-                            $("#errorBanner").fadeOut("slow");
-                            location
-                        .reload(); // Hide the .alert element after 3 seconds
-                        }, 1500);
+                    //     setTimeout(function() {
+                    //         $("#errorBanner").fadeOut("slow");
+                    //         location.reload(); // Hide the .alert element after 3 seconds
+                    //     }, 1500);
                     }
                 },
                 error: function() {
@@ -163,11 +162,10 @@ $(document).ready(function() {
                     $('#errorAlert').text(
                         'An error occurred during the AJAX request.');
                     $('#errorBanner').show();
-                    setTimeout(function() {
-                        $("#errorBanner").fadeOut("slow");
-                        location
-                    .reload(); // Hide the .alert element after 3 seconds
-                    }, 1500);
+                    // setTimeout(function() {
+                    //     $("#errorBanner").fadeOut("slow");
+                    //     location.reload(); // Hide the .alert element after 3 seconds
+                    // }, 1500);
                 }
             });
         });
