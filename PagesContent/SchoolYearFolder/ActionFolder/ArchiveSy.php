@@ -49,9 +49,15 @@ try{
     // Step 7: Archive the corresponding rows in tbl_quiz based on reference topic_id
     $archive_quiz_query = "UPDATE tbl_quiz SET quiz_status = 0 WHERE topic_id IN (SELECT topic_id FROM tbl_topic WHERE lesson_id IN (SELECT lesson_id FROM tbl_lesson WHERE module_id IN (SELECT module_id FROM tbl_module WHERE sy_id = ?)))";
 
-
-    $response = array("success" => "Successfully archived school year!". $sy_id);
+    // add a statment to check if no single error occured
+    if($archive->getLastError() === null){
+        $response = array("success" => "Successfully archived all entry under school year!". $sy_id);
+    
+    }else{
+        $response = array("error" => $archive->getLastError());
+    }
     echo json_encode($response);
+    
 }
 catch(Exception $e){
     $response = array("error" => $e);
