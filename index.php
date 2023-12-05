@@ -26,10 +26,10 @@ ini_set('display_errors', 1);
         </button>
     </header>
 
-    <div class="section">
+    <div class="section" id="first-page">
         <div class="row">
-            <div class="col-xs-6">
-                <h1"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
+            <div id="left-first-page" class="col-xs-6">
+                <h1 id="h1-first-page"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
                 <p> Nurture yourself with the rich tribal language using Ka-ede <br> to seamlessly learn and understand
                     the
                     Tagakaulo language. </p>
@@ -39,7 +39,7 @@ ini_set('display_errors', 1);
                 </form>
             </div>
 
-            <div class="col-xs-6">
+            <div id="right-first-page" class="col-xs-6">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" id="hero-image" class="pull-right">
             </div>
         </div>
