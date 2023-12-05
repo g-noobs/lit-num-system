@@ -9,6 +9,8 @@ $(function() {
         
         $module_name = $('input[name="subj_name_add"]');
         $module_descrip = $('textarea[name="subj_add_desc"]');
+        $sy_id = $('select[name="sy_id"]');
+
 
         $.ajax({
             type: "POST",
@@ -20,6 +22,12 @@ $(function() {
             success: function(response) {
                 $module_name.val(response.module_name);
                 $module_descrip.val(response.module_descrip);
+                $sy_id.find('option').each(function() {
+                    if ($(this).val() === response.sy_id) {
+                        $(this).prop('selected', true);
+                        return false;
+                    }
+                });
                 $modal.modal('show');
             },
             error: function() {

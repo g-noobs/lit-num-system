@@ -15,6 +15,7 @@ $values = array(
     'module_id' => '',
     'module_name' => $_POST['subj_name_add'],
     'module_description	' => $_POST['subj_add_desc'],
+    'sy_id' => $_POST['sy_id'],
     'date_added' => '',
     'added_by_id'=> '',
 );
@@ -63,9 +64,9 @@ if(!empty($errors)){
         try{
             $addSubj->executePreState($sql, $params);
             if($addSubj->getLastError() === null){
-                $response = array('success' => 'Subject '.$values['module_name']. ' has been Added');
+                $response = array('success' => 'Module '.$values['module_name']. ' has been Added');
             } else {
-                $response = array('error' => 'Subject '.$values['module_name']. ' has not been Added');
+                $response = array('error' => 'Module '.$values['module_name']. ' has not been Added');
             }
             echo json_encode($response);
         } catch (Exception $e) {
@@ -74,7 +75,7 @@ if(!empty($errors)){
         } catch (mysqli_sql_exception $e) {
             if ($e->getCode() == 1062){
                 //Duplicate entry
-                $response = array('error' => 'Subject '.$values['module_name']. ' already exists. Please try again');
+                $response = array('error' => 'Module '.$values['module_name']. ' already exists. Please try again');
                 echo json_encode($response);
             }
             else{
@@ -84,7 +85,7 @@ if(!empty($errors)){
             }
         }
     } else {
-        $response = array('error' => 'Subject '.$values['module_name']. ' already exists. Please try again');
+        $response = array('error' => 'Module '.$values['module_name']. ' already exists. Please try again');
         echo json_encode($response);
     }
 }

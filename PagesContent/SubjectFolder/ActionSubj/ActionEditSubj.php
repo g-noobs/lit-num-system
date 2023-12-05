@@ -10,6 +10,7 @@ $id = $_POST['id'];
 $values = array(
     'module_name' => $_POST['subj_name_add'],
     'module_description' => $_POST['subj_add_desc'],
+    'sy_id' => $_POST['sy_id'], // 'sy_id' => 'sy_id
     'module_id' => $id
 );
 $table = 'tbl_module';
@@ -35,7 +36,8 @@ if(!empty($errors)){
         if($isValid){
             $sql = "UPDATE $table
             SET module_name = ?,
-                module_description = ?
+                module_description = ?,
+                sy_id = ?
             WHERE module_id = ?";
             $params = array_values($values);
 

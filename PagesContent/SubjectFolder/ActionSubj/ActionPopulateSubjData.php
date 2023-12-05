@@ -16,7 +16,8 @@ if(!empty($module_id)){
         while ($row = $result->fetch_assoc()) {
             $response = array(
                 'module_name' => $row['module_name'],
-                'module_descrip' => $row['module_description']
+                'module_descrip' => $row['module_description'],
+                'sy_id' => $row['sy_id']
             );
         }
     }else{
