@@ -134,7 +134,6 @@ $(document).ready(function() {
                 },
                 success: function(response) {
                     console.log("Success response:", response);
-                    var response = JSON.parse(response);
                     // Check if the form submission was successful
                     if (response.hasOwnProperty('success')) {
                         $modal.modal('hide');
