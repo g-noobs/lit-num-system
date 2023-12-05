@@ -29,7 +29,7 @@ ini_set('display_errors', 1);
     <div class="section">
         <div class="row">
             <div class="col-xs-6">
-                <h1 id="h1-first-page"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
+                <h1"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
                 <p> Nurture yourself with the rich tribal language using Ka-ede <br> to seamlessly learn and understand
                     the
                     Tagakaulo language. </p>
