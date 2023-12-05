@@ -23,7 +23,7 @@ $isValid = $validCol -> validateColumns($table, $column, $data);
 include_once("../../../Database/SanitizeCrudClass.php");
 $updateSchoolYear = new SanitizeCrudClass();
 $query = "UPDATE $table 
-          SET sy_start =?, sy_end=? WHERE sy_id = ?";     
+          SET sy_start =?, sy_end=?, sy_status = 1 WHERE sy_id = ?";     
 $params = array_values($values);
 
 if($isValid){
@@ -40,9 +40,9 @@ if($isValid){
       
           } else {
             // Some other error
-            throw $e;
-            $response = array("error" => $e);
+            $response = array("error" => $e->getMessage());
             echo json_encode($response);
+            throw $e;
           }
     }
 }
