@@ -26,7 +26,7 @@ ini_set('display_errors', 1);
         </button>
     </header>
 
-    <div class="section" id="first-page">
+    <div class="container-fluid" id="first-page">
         <div class="row">
             <div id="left-first-page" class="col-xs-6">
                 <h1 id="h1-first-page"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
