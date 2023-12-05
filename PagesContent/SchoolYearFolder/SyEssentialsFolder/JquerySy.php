@@ -131,8 +131,8 @@ $(function() {
                 data: {
                     id: id
                 },
+                dataType: 'json',
                 success: function(response) {
-                    console.log("Success response:", response);
                     // Check if the form submission was successful
                     if (response.hasOwnProperty('success')) {
                         $modal.modal('hide');
