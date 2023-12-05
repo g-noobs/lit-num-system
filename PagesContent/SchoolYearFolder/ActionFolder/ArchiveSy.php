@@ -1,9 +1,7 @@
 <?php
 
-include_once("../../../Database/Connection.php");
-$connection = new Connection();
-
-$conn = $connection->getConnection();
+include_once("../../../Database/SanitizeCrudClass.php");
+$archive = new SanitizeCrudClass();
 // Retrieve values from POST or set default values
 $sy_id =  $_POST['id'];
 
@@ -13,13 +11,14 @@ $sy_id =  $_POST['id'];
 
 try{
     // Step 1: Archive the school year in tbl_school_year
-    // $archive_sy_query = "UPDATE tbl_schoolyear 
-    // SET 
-    //     sy_status = 0
-    // WHERE sy_id = ?";
-    // $archive_sy_stmt = $conn->prepare($archive_sy_query);
-    // $archive_sy_stmt->bind_param("i", $sy_id);
-    // $archive_sy_stmt->execute();
+    $archive_sy_query = "UPDATE tbl_schoolyear 
+    SET 
+        sy_status = 0
+    WHERE sy_id = ?";
+    $params = array($sy_id);
+    $archive->executePreState($archive_sy_query, $params);
+
+    
 
     // Step 2: Archive the class that has reference to the school year
     // $archive_class_query = "UPDATE tbl_class
