@@ -111,21 +111,20 @@ $(document).ready(function() {
 </script>
 
 <!-- Archiving individual sy -->
-<!-- <script>
+<script>
 $(function() {
     //Archive individually school year item
     $('.archiveBtn').on('click', function() {
         // Get the id from data attribute
         $modal = $('#archiveModal');
-        let id = $(this).data('id');
-        let name = $(this).closest('tr').find('td:eq(1)').text();
+        var id = $(this).data('id');
+        var name = $(this).closest('tr').find('td:eq(1)').text();
         // Populate the modal fields with the data
         $('#school_year').text(name);
         $modal.modal('show');
 
         $('#ArchBtnSubmit').click(function(e) {
             e.preventDefault();
-            console.log("Archive button clicked");
             $.ajax({
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
                 type: 'POST',
@@ -171,7 +170,7 @@ $(function() {
         });
     });
 });
-</script> -->
+</script>
 
 <script>
 $(document).ready(function() {
