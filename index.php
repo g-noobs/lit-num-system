@@ -26,8 +26,8 @@ ini_set('display_errors', 1);
         </button>
     </header>
 
-    <div class="page section" id="first-page">
-        <div id="left-first-page">
+    <div class="page row" id="first-page">
+        <div id="left-first-page" class="col-sm-6">
             <h1 id="h1-first-page"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
             <p> Nurture yourself with the rich tribal language using Ka-ede <br> to seamlessly learn and understand the
                 Tagakaulo language. </p>
@@ -36,7 +36,8 @@ ini_set('display_errors', 1);
                 <input id="download-btn" type="submit" name="download" value="Download Now" />
             </form>
         </div>
-        <div id="right-first-page">
+
+        <div id="right-first-page class="col-sm-6"">
             <img src="https://www.tagakauloedu.com/logo.png" alt="logo" id="hero-image">
         </div>
     </div>
