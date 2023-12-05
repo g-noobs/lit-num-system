@@ -107,9 +107,14 @@ $(document).ready(function() {
         $('#editModal').find('[name="sy_id"]').val(id);
         $('#editModal').find('[name="sy_name_edit"]').val(name);
     });
+});
+</script>
 
-    //Archive individually school year item
-    $('.archiveBtn').click(function() {
+<!-- Archiving individual sy -->
+<script>
+    $(function(){
+        //Archive individually school year item
+    $('.archiveBtn').on('click', function() {
         // Get the id from data attribute
         $modal = $('#archiveModal');
         let id = $(this).data('id');
@@ -129,11 +134,11 @@ $(document).ready(function() {
                 },
                 success: function(response) {
                     console.log("Success response:", response);
-                    var responseData = JSON.parse(response);
+                    var response = JSON.parse(response);
                     // Check if the form submission was successful
-                    if (responseData.hasOwnProperty('success')) {
+                    if (response.hasOwnProperty('success')) {
                         $modal.modal('hide');
-                        $('#successAlert').text(responseData.success);
+                        $('#successAlert').text(response.success);
                         $('#successBanner').show();
                         setTimeout(function() {
                             $("#successBanner").fadeOut("slow");
@@ -143,7 +148,7 @@ $(document).ready(function() {
                     } else {
                         $modal.modal('hide');
                         //show alert banner id = errorBanner
-                        $('#errorAlert').text(responseData.error);
+                        $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
                         setTimeout(function() {
                             $("#errorBanner").fadeOut("slow");
@@ -168,7 +173,7 @@ $(document).ready(function() {
             });
         });
     });
-});
+    });
 </script>
 
 <script>
