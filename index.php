@@ -51,17 +51,17 @@ ini_set('display_errors', 1);
         <div class="benefits row">
             <div id="first-benefits" class="col-xs-4">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
-                <h5 class="benefits-title">Personal Growth</h5>
+                <h4 class="benefits-title">Personal Growth</h4>
                 <p class="benefits-body">Build confidence and adaptability by learning another language.</p>
             </div>
             <div class="col-xs-4">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
-                <h5 class="benefits-title">Preserve Culture</h5>
+                <h4 class="benefits-title">Preserve Culture</h4>
                 <p class="benefits-body">Contributing on the preservation of indigenous knowledge.</p>
             </div>
             <div class="col-xs-4">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
-                <h5 class="benefits-title">Enhance Brain</h5>
+                <h4 class="benefits-title">Enhance Brain</h4>
                 <p class="benefits-body">Improves memory by challenging the brain in terms of mental agility.</p>
             </div>
         </div>
