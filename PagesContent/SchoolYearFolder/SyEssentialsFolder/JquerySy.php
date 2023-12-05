@@ -110,10 +110,12 @@ $(document).ready(function() {
     //Archive individually school year item
     $('.archiveBtn').click(function() {
         // Get the id from data attribute
+        $modal = $('#archiveModal');
         let id = $(this).data('id');
         let name = $(this).closest('tr').find('td:eq(1)').text();
         // Populate the modal fields with the data
         $('#school_year').text(name);
+        $modal.modal('show');
 
         $('#ArchBtnSubmit').click(function(e) {
             e.preventDefault();
@@ -129,7 +131,7 @@ $(document).ready(function() {
                     var responseData = JSON.parse(response);
                     // Check if the form submission was successful
                     if (responseData.hasOwnProperty('success')) {
-                        $('#archiveModal').modal('hide');
+                        $modal.modal('hide');
                         $('#successAlert').text(responseData.success);
                         $('#successBanner').show();
                         setTimeout(function() {
@@ -138,7 +140,7 @@ $(document).ready(function() {
                         .reload(); // Hide the .alert element after 3 seconds
                         }, 1500);
                     } else {
-                        $('#archiveModal').modal('hide');
+                        $modal.modal('hide');
                         //show alert banner id = errorBanner
                         $('#errorAlert').text(responseData.error);
                         $('#errorBanner').show();
@@ -151,7 +153,7 @@ $(document).ready(function() {
                 },
                 error: function() {
                     console.log("Error occurred during AJAX request.");
-                    $('#archiveModal').modal('hide');
+                    $modal.modal('hide');
                     //show alert banner id = errorBanner
                     $('#errorAlert').text(
                         'An error occurred during the AJAX request.');
