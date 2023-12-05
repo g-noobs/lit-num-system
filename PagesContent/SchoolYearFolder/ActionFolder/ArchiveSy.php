@@ -35,6 +35,19 @@ try{
 
 
     //step 4: Archive the module that has reference to the school year
+    $archive_module_query = "UPDATE tbl_module SET module_status = 0 WHERE sy_id = ?";
+    $archive->executePreState($archive_module_query, $params);
+
+    // Step 5: Archive the corresponding rows in tbl_lesson based on reference module_id
+    $archive_lesson_query = "UPDATE tbl_lesson SET lesson_status = 0 WHERE module_id IN (SELECT module_id FROM tbl_module WHERE sy_id = ?)";
+    $archive->executePreState($archive_lesson_query, $params);
+
+    //Step 6: Archive the corresponding rows in tbl_topic based on reference lesson_id
+    $archive_topic_query = "UPDATE tbl_topic SET topic_status = 0 WHERE lesson_id IN (SELECT lesson_id FROM tbl_lesson WHERE module_id IN (SELECT module_id FROM tbl_module WHERE sy_id = ?))";
+    $archive->executePreState($archive_topic_query, $params);
+
+    // Step 7: Archive the corresponding rows in tbl_quiz based on reference topic_id
+    $archive_quiz_query = "UPDATE tbl_quiz SET quiz_status = 0 WHERE topic_id IN (SELECT topic_id FROM tbl_topic WHERE lesson_id IN (SELECT lesson_id FROM tbl_lesson WHERE module_id IN (SELECT module_id FROM tbl_module WHERE sy_id = ?)))";
 
 
     $response = array("success" => "Successfully archived school year!". $sy_id);
