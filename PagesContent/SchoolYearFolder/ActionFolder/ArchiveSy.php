@@ -1,22 +1,42 @@
 <?php
-$table = "tbl_schoolyear";
 
-$values = array(
-    'sy_status' => 0,
-    'sy_id' => $_POST['sy_id'],
-);
-$query = "UPDATE $table 
-          SET sy_status = ?
-          WHERE sy_id = ?";
+include_once("../../../Database/Connection.php");
+$connection = new Connection();
 
-$params = array_values($values);
+$conn = $connection->getConnection();
+$sy_id = $_POST['sy_id'];
 
-include_once("../../../Database/SanitizeCrudClass.php");
-
-$archive=new SanitizeCrudClass();
 
 try{
-    $archive->executePreState($query, $params);
+    // Step 1: Archive the school year in tbl_school_year
+    $archive_sy_query = "UPDATE tbl_schoolyear 
+    SET 
+        sy_status = 0
+    WHERE sy_id = ?";
+    $archive_sy_stmt = $conn->prepare($archive_sy_query);
+    $archive_sy_stmt->bind_param("i", $sy_id);
+    $archive_sy_stmt->execute();
+
+    // Step 2: Archive the class that has reference to the school year
+    $archive_class_query = "UPDATE tbl_class
+    SET 
+        class_status = 0
+    WHERE sy_id = ?";
+    $archive_class_stmt = $conn->prepare($archive_class_query);
+    $archive_class_stmt->bind_param("i", $sy_id);
+    $archive_class_stmt->execute();
+
+    // Step 3: Archive the user that has reference to the of the archived class
+    $archive_user_query = "UPDATE tbl_user_info 
+    SET status_id = 0 WHERE 
+    class_id IN (SELECT class_id FROM tbl_class WHERE sy_id = ?)";
+    $archive_user_query = $conn->prepare($archive_user_query);
+    $archive_user_query->bind_param("i", $sy_id);
+    $archive_user_query->execute();
+
+    //step 4: Archive the module that has reference to the school year
+
+
     $response = array("success" => "Successfully archived school year!");
     echo json_encode($response);
 }
