@@ -28,7 +28,7 @@ ini_set('display_errors', 1);
 
     <div class="section" id="first-page">
         <div class="row">
-            <div id="left-first-page" class="col-sm-6">
+            <div id="left-first-page" class="col-xs-6">
                 <h1 id="h1-first-page"> Learn Tagakaulo <br> with <span class="emphasis">Ka-Ede</span> </h1>
                 <p> Nurture yourself with the rich tribal language using Ka-ede <br> to seamlessly learn and understand
                     the
@@ -39,7 +39,7 @@ ini_set('display_errors', 1);
                 </form>
             </div>
 
-            <div id="right-first-page" class="col-sm-6">
+            <div id="right-first-page" class="col-xs-6">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" id="hero-image">
             </div>
         </div>
@@ -49,19 +49,19 @@ ini_set('display_errors', 1);
     <div class="section" id="second-page">
         <h1>Benefits of Ka-Ede</h1>
         <div class="benefits row">
-            <div id="first-benefits" class="col-sm-4">
+            <div id="first-benefits" class="col-xs-4">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
-                <4 class="benefits-title">Personal Growth</4>
+                <h5 class="benefits-title">Personal Growth</h5>
                 <p class="benefits-body">Build confidence and adaptability by learning another language.</p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xs-4">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
-                <h4 class="benefits-title">Preserve Culture</h4>
+                <h5 class="benefits-title">Preserve Culture</h5>
                 <p class="benefits-body">Contributing on the preservation of indigenous knowledge.</p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xs-4">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
-                <h4 class="benefits-title">Enhance Brain</h4>
+                <h5 class="benefits-title">Enhance Brain</h5>
                 <p class="benefits-body">Improves memory by challenging the brain in terms of mental agility.</p>
             </div>
         </div>
