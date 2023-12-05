@@ -46,7 +46,7 @@ ini_set('display_errors', 1);
     </div>
 
 
-    <div class="section">
+    <div class="section" id="second-page">
         <h1>Benefits of Ka-Ede</h1>
         <div class="benefits row">
             <div id="first-benefits" class="col-xs-4">
