@@ -29,7 +29,7 @@ class SchoolYearClass extends Connection{
 
                 echo "<td><a href='#' type='button' id='editBtn-".$row['sy_id']."' data-toggle='modal' data-target='#editModal' style='margin-right:10px; color: blue;'><span class='glyphicon glyphicon-edit' ></span></a></td>";
                 
-                echo "<td><a href='#' type='button' class='.archiveBtn' data-id='".$row['sy_id']."' style='color:red';> <span class='glyphicon glyphicon-trash'></span></a></td>";
+                echo "<td><a href='#' type='button' class='archiveBtn' data-id='".$row['sy_id']."' style='color:red';> <span class='glyphicon glyphicon-trash'></span></a></td>";
                 
                 echo "</tr>";
 
