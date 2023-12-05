@@ -25,6 +25,15 @@
                             <input type="text" name="subj_name_add" class="form-control" placeholder="Module Name" required>
                         </div>
                         <div class="form-group">
+                            <label for="sy_date">Schoole Year</label>
+                            <select name="sy_id" id="sy_id" class="form-control">
+                                <?php include_once("../Database/ClassEssentialsClass.php"); 
+                                    $sy_options = new ClassEssentialsClass();
+                                    $sy_options->schoolYearSelect();
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="subj_add_desc">Module Description:</label>
                             <textarea  type="text" name="subj_add_desc" class="form-control" rows="10" cols="30" placeholder="Description" required></textarea>
                         </div>
