@@ -142,7 +142,7 @@ $(function() {
                         //     $("#successBanner").fadeOut("slow");
                         //     location
                         // .reload(); // Hide the .alert element after 3 seconds
-                        // }, 1500);
+                        // }, 5500);
                     } else {
                         $modal.modal('hide');
                         //show alert banner id = errorBanner
