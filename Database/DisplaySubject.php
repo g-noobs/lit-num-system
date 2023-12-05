@@ -30,7 +30,7 @@ class DisplaySubject extends Connection{
                 echo "<td>".$row["module_id"]."</td>";
                 echo "<td>".$row["module_name"]."</td>";
                 echo "<td>".$row["module_description"]."</td>";
-                echo "<td><b>".$row['sy_start']."-".$row['sy_end']."</b></td>";
+                echo "<td>".$row['sy_start']."-".$row['sy_end']."</td>";
                 echo "<td><b>".$status."</b></td>";
 
                 
