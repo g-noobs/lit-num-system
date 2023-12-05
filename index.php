@@ -46,20 +46,20 @@ ini_set('display_errors', 1);
     </div>
 
 
-    <div class="page" id="second-page">
+    <div class="section" id="second-page">
         <h1>Benefits of Ka-Ede</h1>
-        <div class="benefits">
-            <div id="first-benefits">
+        <div class="benefits row">
+            <div id="first-benefits" class="col-xs-6">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
                 <h5 class="benefits-title">Personal Growth</h5>
                 <p class="benefits-body">Build confidence and adaptability by learning another language.</p>
             </div>
-            <div>
+            <div class="col-xs-6">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
                 <h5 class="benefits-title">Preserve Culture</h5>
                 <p class="benefits-body">Contributing on the preservation of indigenous knowledge.</p>
             </div>
-            <div>
+            <div class="col-xs-6">
                 <img src="https://www.tagakauloedu.com/logo.png" alt="logo" class="benefits-image">
                 <h5 class="benefits-title">Enhance Brain</h5>
                 <p class="benefits-body">Improves memory by challenging the brain in terms of mental agility.</p>
