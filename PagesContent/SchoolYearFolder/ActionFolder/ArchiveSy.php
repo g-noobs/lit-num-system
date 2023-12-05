@@ -5,7 +5,7 @@ $connection = new Connection();
 
 $conn = $connection->getConnection();
 // Retrieve values from POST or set default values
-$sy_id = !empty($_POST['sy_id']) ? $_POST['sy_id'] : $_POST['id'];
+$sy_id = $_POST['id'];
 
 //if it came from $_POST['id'] then it would be an individual archive then if it came from $_POST['sy_id'] then it would be a
 // bulk archive or using radio button

@@ -107,6 +107,7 @@ $(document).ready(function() {
         $('#editModal').find('[name="sy_id"]').val(id);
         $('#editModal').find('[name="sy_name_edit"]').val(name);
     });
+
     //Archive individually school year item
     $('.archiveBtn').click(function() {
         // Get the id from data attribute
@@ -124,7 +125,7 @@ $(document).ready(function() {
                 url: '../PagesContent/SchoolYearFolder/ActionFolder/ArchiveSy.php',
                 type: 'POST',
                 data: {
-                    sy_id: id
+                    id: id
                 },
                 success: function(response) {
                     console.log("Success response:", response);
