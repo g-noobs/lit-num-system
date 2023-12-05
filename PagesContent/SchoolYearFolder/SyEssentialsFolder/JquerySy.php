@@ -111,9 +111,9 @@ $(document).ready(function() {
 </script>
 
 <!-- Archiving individual sy -->
-<script>
-    $(function(){
-        //Archive individually school year item
+<!-- <script>
+$(function() {
+    //Archive individually school year item
     $('.archiveBtn').on('click', function() {
         // Get the id from data attribute
         $modal = $('#archiveModal');
@@ -149,10 +149,10 @@ $(document).ready(function() {
                         //show alert banner id = errorBanner
                         $('#errorAlert').text(response.error);
                         $('#errorBanner').show();
-                    //     setTimeout(function() {
-                    //         $("#errorBanner").fadeOut("slow");
-                    //         location.reload(); // Hide the .alert element after 3 seconds
-                    //     }, 1500);
+                        //     setTimeout(function() {
+                        //         $("#errorBanner").fadeOut("slow");
+                        //         location.reload(); // Hide the .alert element after 3 seconds
+                        //     }, 1500);
                     }
                 },
                 error: function() {
@@ -170,8 +170,8 @@ $(document).ready(function() {
             });
         });
     });
-    });
-</script>
+});
+</script> -->
 
 <script>
 $(document).ready(function() {
