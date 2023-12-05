@@ -7,7 +7,14 @@ class DisplaySubject extends Connection{
     }
 
     function displaySubjectList(){
-        $sql = "SELECT * FROM tbl_module WHERE module_status = 1;";
+        $sql = "SELECT 
+        m.*,
+        sy.sy_start,
+        sy.sy_end
+    FROM 
+        tbl_module m
+    JOIN 
+        tbl_schoolyear sy ON m.sy_id = sy.sy_id;";
         $result = $this->conn->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -23,6 +30,7 @@ class DisplaySubject extends Connection{
                 echo "<td>".$row["module_id"]."</td>";
                 echo "<td>".$row["module_name"]."</td>";
                 echo "<td>".$row["module_description"]."</td>";
+                echo "<td><b>".$row['sy_start']."-".$row['sy_end']."</b></td>";
                 echo "<td><b>".$status."</b></td>";
 
                 

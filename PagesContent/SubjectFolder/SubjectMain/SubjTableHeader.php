@@ -3,5 +3,6 @@
 <th>Module ID</th>
 <th>Module</th>
 <th>Module Description</th>
+<th>School Year</th>
 <th>Module Status</th>
 
