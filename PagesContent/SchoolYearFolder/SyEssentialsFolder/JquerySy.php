@@ -108,9 +108,9 @@ $(document).ready(function() {
         $('#editModal').find('[name="sy_name_edit"]').val(name);
     });
     //Archive individually school year item
-    $('[id^="archiveBtn-"]').click(function() {
+    $('.archiveBtn').click(function() {
         // Get the id from data attribute
-        let id = this.id.split("-")[1];
+        let id = $(this).data('id');
         let name = $(this).closest('tr').find('td:eq(1)').text();
         // Populate the modal fields with the data
         $('#school_year').text(name);
