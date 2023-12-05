@@ -39,8 +39,8 @@ ini_set('display_errors', 1);
                 </form>
             </div>
 
-            <div id="right-first-page" class="col-xs-6 pull-right">
-                <img src="https://www.tagakauloedu.com/logo.png" alt="logo" id="hero-image">
+            <div id="right-first-page" class="col-xs-6">
+                <img src="https://www.tagakauloedu.com/logo.png" alt="logo" id="hero-image" class="pull-right">
             </div>
         </div>
     </div>
