@@ -51,7 +51,7 @@ try{
 
     // add a statment to check if no single error occured
     if($archive->getLastError() === null){
-        $response = array("success" => "Successfully archived all entry under school year!". $sy_id);
+        $response = array("success" => "Successfully archived all entry under school year! ". $sy_id);
     
     }else{
         $response = array("error" => $archive->getLastError());
